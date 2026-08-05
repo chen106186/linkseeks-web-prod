@@ -21,11 +21,11 @@
       justify-content: center;
       padding: 10px 16px;
       margin-bottom: 16px;
-      background-color: #F4F5F7;
-      border: 1px solid #F4F5F7;
+      background-color: $theme-surface-soft;
+      border: 1px solid $theme-border-light;
 
       &__active {
-        background-color: #EBF9F6;
+        background-color: $theme-primary-soft;
         border-color: $color-brand;
       }
 

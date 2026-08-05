@@ -1,7 +1,7 @@
 import React from 'react'
 import { getCurrentInstance, preload, pxTransform } from '@apps/mobile-services/utils/taro'
 import { useIntl } from '@linkseeks/i18n'
-import { themeLayout } from '@/constants/theme'
+import { THEME_COLORS, themeLayout } from '@/constants/theme'
 import MellowCard from '@/components/MellowCard'
 import Cell from '@/components/Cell'
 import AddressCard from '@/components/AddressCard'
@@ -108,7 +108,7 @@ const RepairAddress: React.FC<IProps> = (props: IProps) => {
           customHeadStyle={{
             alignItems: 'flex-start',
             borderBottomWidth: 1,
-            borderBottomColor: '#F5F6F7',
+            borderBottomColor: THEME_COLORS.borderLight,
           }}
           label={
             address.id ? (

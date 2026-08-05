@@ -3,7 +3,7 @@
 .refund-details {
   height: 100vh;
   display: flex;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 
   &-refundAmount {
     font-size: $font-size-lg;

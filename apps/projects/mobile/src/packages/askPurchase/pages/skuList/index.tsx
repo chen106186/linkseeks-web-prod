@@ -18,6 +18,7 @@ import {
 import styles from './index.module.scss'
 import useStores from '@/store/useStores'
 import { useMobileIntl } from '@apps/locales'
+import { THEME_COLORS } from '@/constants/theme'
 interface ListParams {
   /**
    * 每页行数
@@ -156,7 +157,7 @@ const SkuList = () => {
                   placeholder={translate('mobile.resource.askPurchase.skushangpin')}
                   onSearch={handleSearch}
                   onClear={(val) => setKeyword(val)}
-                  innerBackground="#F7F8FA"
+                  innerBackground={THEME_COLORS.page}
                   customClassName={styles['page-wrap-search-key']}
                   shape="round"
                   clearable

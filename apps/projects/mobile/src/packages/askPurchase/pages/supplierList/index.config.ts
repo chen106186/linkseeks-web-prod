@@ -1,6 +1,6 @@
 export default {
   navigationBarTitleText: '关联商品',
   navigationBarTextStyle: 'white',
-  navigationBarBackgroundColor: '#00a98f',
+  navigationBarBackgroundColor: '#D8612E',
   navigationStyle: 'custom',
 }

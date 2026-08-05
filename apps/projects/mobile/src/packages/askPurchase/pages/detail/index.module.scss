@@ -10,10 +10,9 @@
   flex: 1;
   overflow: hidden;
 
-  // background-color: #F4F5F7;
   &-scrollView {
     height: 100%;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
   }
 
   &-scrollBox {
@@ -97,7 +96,7 @@
 
   &-textCopyStyle {
     font-size: 12px;
-    background-color: #f4f5f7;
+    background-color: $theme-page-bg;
     padding: 2px 8px;
     overflow: hidden;
     border-radius: 8px;
@@ -120,7 +119,7 @@
     margin-right: 8px;
     overflow: hidden;
     border-radius: 4px;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
   }
 
   &-productImageItem {
@@ -230,7 +229,7 @@
     overflow: hidden;
     margin-bottom: 8px;
     border-radius: 4px;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
   }
 
   &-btnBox {
@@ -252,7 +251,7 @@
   &-defaultBtn {
     padding: 12px 0px;
     border-radius: 8px;
-    background-color: #F5F6F7;
+    background-color: $theme-page-bg;
     display: flex;
     justify-content: center;
   }
@@ -260,13 +259,13 @@
   &-primaryBtn {
     padding: 12px 0px;
     border-radius: 8px;
-    background-color: #00a98f;
+      background-color: $theme-primary;
 		color: #FFFFFF;
     display: flex;
     justify-content: center;
 
     &.disabled {
-      background-color: #F5F6F7;
+      background-color: $theme-page-bg;
       color: #91959B;
 
       .inquiryDetailContainer-primaryText {
@@ -276,7 +275,7 @@
   }
 
 	&-defaultBtn {
-		background-color: #F5F6F7;
+		background-color: $theme-page-bg;
 		color: #252D37;
 	}
 

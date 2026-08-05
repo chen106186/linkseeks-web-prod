@@ -2,7 +2,7 @@
 @import '@/styles/utils/text-overflow.scss';
 
 .EditRfqOrder-container {
-  background-color: #F5F6F7;
+  background-color: $theme-page-bg;
   position: relative;
   height: 100vh;
   overflow-x: hidden;
@@ -137,7 +137,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #F4F5F7;
+  border-bottom: 1px solid $theme-border-light;
   padding: 12px 0;
   font-size: 14px;
 	font-weight: bold;
@@ -185,7 +185,7 @@
   }
   &-textCopyStyle {
     font-size: 12px;
-    background-color: #f4f5f7;
+    background-color: $theme-page-bg;
     padding: 2px 8px;
     overflow: hidden;
     border-radius: 8px;

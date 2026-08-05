@@ -13,6 +13,7 @@ import Router from '@/utils/router'
 import { getMemberManagePlatformProviderPage, GetMemberManagePlatformProviderPageResponseDetail } from '@apps/apis'
 import styles from './index.module.scss'
 import { useMobileIntl } from '@apps/locales'
+import { THEME_COLORS } from '@/constants/theme'
 interface ListParams {
   /**
    * 每页行数
@@ -132,7 +133,7 @@ const SupplierList = () => {
                   placeholder={translate('mobile.resource.askPurchase.gongyingshang')}
                   onSearch={handleSearch}
                   onClear={(val) => setKeyword(val)}
-                  innerBackground="#F7F8FA"
+                  innerBackground={THEME_COLORS.page}
                   customClassName={styles['page-wrap-search-key']}
                   shape="round"
                   clearable

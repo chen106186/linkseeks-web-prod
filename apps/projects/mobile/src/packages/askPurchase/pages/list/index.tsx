@@ -23,6 +23,7 @@ import styles from './index.module.scss'
 import { FILTER_CONFIG_TYPE } from '@/store/searchStore/model'
 import { preload } from '@apps/mobile-services/utils/taro'
 import { RouterKeys } from '@/routes'
+import { THEME_COLORS } from '@/constants/theme'
 import { accAdd } from '@apps/utils/src/format'
 import { useMobileIntl } from '@apps/locales'
 interface ListParams {
@@ -212,7 +213,7 @@ const AskPurchaseList = () => {
       renderHeader={
         <>
           <NavBar
-            customStyle="background:#00a98f"
+            customStyle={`background:${THEME_COLORS.primary}`}
             backIconColor="#FFFFFF"
             title={
               <Text

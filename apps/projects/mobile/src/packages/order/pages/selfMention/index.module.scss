@@ -2,7 +2,7 @@
 @import '@/styles/variables.scss';
 
 .container{
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   display: flex;
   margin-bottom: 5px;
   flex: 1;

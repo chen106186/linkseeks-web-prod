@@ -26,6 +26,7 @@ import { getMemberMobileSecurityGet } from '@apps/apis'
 import { getOssUrlPath } from '@apps/constants'
 import Product from './components/Product'
 import SubmitBtn from './components/SubmitBtn'
+import { THEME_COLORS } from '@/constants/theme'
 import useFormatProduct, { OrderDataType } from './hooks/useFormatProduct'
 import useGetPoint from './hooks/useGetPoint'
 import PayPopupInput from './components/PaypopupInput'
@@ -646,7 +647,7 @@ const ConfrimIntegralOrder = () => {
                       />
                     )) || (
                       <View className={classNames(styles['check-icon'])}>
-                        {payMethod === _item.dataIndex && <Icons name="Right" size={14} color="#00A98F" />}
+                        {payMethod === _item.dataIndex && <Icons name="Right" size={14} color={THEME_COLORS.primary} />}
                       </View>
                     )}
                   </View>

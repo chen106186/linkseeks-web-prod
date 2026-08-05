@@ -36,7 +36,7 @@
   .scrollView {
     flex: 1;
     padding: $spacing-h-md $spacing-h-md;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
     // background-color: red;
 
     .card {
@@ -94,7 +94,7 @@
           margin-left: auto;
 
           .check-icon {
-            border: 1px solid #F4F5F7;
+            border: 1px solid $theme-border-light;
             border-radius: 50%;
             width: 16px * $hd;
             height: 16px * $hd;
@@ -109,8 +109,8 @@
           }
 
           .not-enough-label {
-            background-color: #F4F5F7;
-            border-color: #F4F5F7;
+            background-color: $theme-page-bg;
+            border-color: $theme-border-light;
           }
         }
       }

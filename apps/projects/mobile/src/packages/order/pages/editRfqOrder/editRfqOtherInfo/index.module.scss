@@ -2,7 +2,7 @@
 
 .EditRfqOtherInfo{
 	height: 100vh;
-  background-color: #F5F6F7;
+  background-color: $theme-page-bg;
 	display: flex;
 	flex-direction: column;
 	&-container{

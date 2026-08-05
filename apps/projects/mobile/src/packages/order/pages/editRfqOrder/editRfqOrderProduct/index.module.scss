@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .scrollWrap{
-  background-color: #F5F6F7;
+  background-color: $theme-page-bg;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;

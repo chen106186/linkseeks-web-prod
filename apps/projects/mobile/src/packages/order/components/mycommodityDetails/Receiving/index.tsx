@@ -4,6 +4,7 @@ import { View, Text, Image, Toast } from '@apps/mobile-ui'
 import { getOssUrlPath } from '@apps/constants'
 import { ScrollView } from '@tarojs/components'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 import { useIntl } from '@linkseeks/i18n'
 import styles from './index.module.scss'
 
@@ -51,7 +52,7 @@ const Receiving = (props: Iprops) => {
           isLogistics
             ? {
                 marginTop: pxTransform(0),
-                backgroundColor: '#00A98F',
+                backgroundColor: THEME_COLORS.primary,
                 padding: `${pxTransform(16)} ${pxTransform(0)}`,
                 display: 'flex',
                 flexDirection: 'column',
@@ -186,7 +187,7 @@ const Receiving = (props: Iprops) => {
                   style={{
                     width: `${(item.received / item.delivered) * 100}%`,
                     height: pxTransform(4),
-                    backgroundColor: '#00A98F',
+                    backgroundColor: THEME_COLORS.primary,
                     borderRadius: pxTransform(10),
                     position: 'relative',
                   }}

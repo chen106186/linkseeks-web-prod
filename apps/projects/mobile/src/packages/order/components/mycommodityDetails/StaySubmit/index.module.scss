@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 .container {
   flex: 1;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   display: flex;
   flex-direction: column;
 }
@@ -222,7 +222,7 @@ text-align: left;
   }
 
   &-code {
-    color: #00a98f;
+    color: $theme-primary;
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;

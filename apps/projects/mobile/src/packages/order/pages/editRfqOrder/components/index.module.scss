@@ -1,9 +1,11 @@
 
+@import '@/styles/variables.scss';
+
 .tabItem{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #F4F5F7;
+  border-bottom: 1px solid $theme-border-light;
   padding: 12px 0;
   font-size: 14px;
 	:global{
@@ -42,7 +44,7 @@
 	padding: 3px;
 	border-radius: 4px;
 	margin: 2px;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 }
 
 .product-item-name{

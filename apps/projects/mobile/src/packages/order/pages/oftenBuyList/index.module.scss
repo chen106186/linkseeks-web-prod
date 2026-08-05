@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 @import '@/styles/utils/text-overflow-multi-line.scss';
 .page {
-  background: #F4F5F7;
+  background: $theme-page-bg;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -89,7 +89,7 @@
           &_text {
             padding: 0 4px;
             border-radius: 4px;
-            background-color: #F4F5F7;
+            background-color: $theme-page-bg;
           }
         }
       }
@@ -136,5 +136,4 @@
     }
   }
 }
-
 

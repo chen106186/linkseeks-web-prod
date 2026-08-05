@@ -49,3 +49,7 @@ cache.json
 apps/projects/mall/logs
 
 basicConfig.json
+.github/
+.gitlab/
+.idea/
+.vscode/

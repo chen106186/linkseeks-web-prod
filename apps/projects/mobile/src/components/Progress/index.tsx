@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text } from '@apps/mobile-ui';
 // import classNames from 'classnames';
 import { circumference } from './utils';
+import { THEME_COLORS } from '@/constants/theme';
 import './index.scss';
 
 interface ProgressProps {
@@ -71,7 +72,7 @@ const Progress: React.FC<ProgressProps> = (props: ProgressProps) => {
   const [dashArray, setDashArray] = useState(type === 'circle' ? `${result}` : `${result / 2} ${result}`);
   // const [dashOffset, setDashOffset] = useState(parseFloat(dashArray));
 
-  const finalStrokeColor = strokeColor || '#00a98f';
+  const finalStrokeColor = strokeColor || THEME_COLORS.primary;
 
   const getFinalStrokeColor = (position = 0) => (Array.isArray(finalStrokeColor) ? finalStrokeColor[position] : finalStrokeColor);
 

@@ -5,6 +5,7 @@ import { CurrentCityType } from '@/store/locationStore/model'
 import cx from 'classnames'
 import Commodity from './components/Commodity'
 import styles from './index.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 
 export interface ItemType {
   num: number
@@ -129,7 +130,7 @@ const SuggestTabs: React.FC<SuggestProps> = (props) => {
         onClick={handleTabClick}
         transparentBg
         hideUnderLine
-        activeColor="#00A98F"
+        activeColor={THEME_COLORS.primary}
       />
       {renderTabPane}
     </View>

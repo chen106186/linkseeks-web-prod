@@ -11,7 +11,7 @@
           <mask id="mask-2" fill="white">
             <use xlink:href="#path-1"></use>
           </mask>
-          <use id="🎨-Icon-Сolor" fill="#00A98F" xlink:href="#path-1"></use>
+          <use id="🎨-Icon-Сolor" fill="#D8612E" xlink:href="#path-1"></use>
           <rect id="矩形" mask="url(#mask-2)" x="-3.33333333" y="-1.66666667" width="20" height="20"></rect>
         </g>
       </g>

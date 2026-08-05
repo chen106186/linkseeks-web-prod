@@ -1,12 +1,13 @@
+@import '@/styles/variables.scss';
+
 .TradingDetail{
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 	padding: 8px;
 	//padding: 10px;
-	//background: #F5F6F7;
   &-head{
     background:#fff;
     padding: 10px 20px;
@@ -40,7 +41,7 @@
     &-item{
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid #F5F6F7;
+      border-bottom: 1px solid $theme-border-light;
       padding: 10px 0;
 			&-text1 {
 				color: #91959b;

@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .eAccountRecord {
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   height: 100vh;
   display: flex;
   flex-direction: column;

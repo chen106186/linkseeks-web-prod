@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .eAccountRecordDetail {
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -59,7 +61,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #F4F5F7;
+        border-bottom: 1px solid $theme-border-light;
       }
       .listItemLast {
         border-bottom: 1px solid #FFF;

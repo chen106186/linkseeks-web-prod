@@ -29,6 +29,7 @@ import EvaluatedItem, { EvaluatedItemData } from './components/EvaluatedItem'
 import GenIndicator from './components/GenIndicator'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 const PAGE_SIZE = 10
 interface ListParams {
   /**
@@ -446,7 +447,7 @@ const EvaluatingManage: React.FC = () => {
               onRefresh={refreshNotEvaluated}
               refreshing={notEvaluatedRefreshing}
               style={{
-                backgroundColor: '#F4F5F7',
+                backgroundColor: THEME_COLORS.page,
               }}
             />
           </View>
@@ -467,7 +468,7 @@ const EvaluatingManage: React.FC = () => {
               onRefresh={refreshEvaluated}
               refreshing={evaluatedRefreshing}
               style={{
-                backgroundColor: '#F4F5F7',
+                backgroundColor: THEME_COLORS.page,
               }}
             />
           </View>
@@ -490,7 +491,7 @@ const EvaluatingManage: React.FC = () => {
               onRefresh={refreshSellerEvaluated}
               refreshing={sellerEvaluatedRefreshing}
               style={{
-                backgroundColor: '#F4F5F7',
+                backgroundColor: THEME_COLORS.page,
               }}
             />
           </View>

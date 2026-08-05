@@ -8,7 +8,7 @@
   justify-content: space-between;
   position:relative;
   .scroll-view {
-    background-color: #fff;
+    background-color: $theme-page-bg;
     padding-bottom: 30px * $hd;
     flex: 1;
 
@@ -34,12 +34,12 @@
             font-size: 14px * $hd;
             color: #303133;
             font-weight: "600";
-            background-color: #FAFBFC;
+            background-color: $theme-surface;
             border: 1px solid transparent;
           }
           .active {
             border: 1px solid $theme-color;
-            background-color: #EBF9F6;
+            background-color: $theme-primary-soft;
 
           }
         }
@@ -55,7 +55,7 @@
 
       .border {
         margin-bottom: 24px * $hd;
-        border: 1px dashed #F4F5F7;
+        border: 1px dashed $theme-border-light;
         // border-top-width: 1px * $hd;
         // border-top-color: #EEF0F3;
       }

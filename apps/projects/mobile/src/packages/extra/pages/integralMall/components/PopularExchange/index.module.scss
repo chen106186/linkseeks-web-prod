@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .popularExchange {
   position: relative;
   margin-bottom: 8px;
@@ -85,7 +87,7 @@
     position: relative;
     height: 4px;
     width: 100%;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
     border-radius: 2px;
   }
   &-soldRate {

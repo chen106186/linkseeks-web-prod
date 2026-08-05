@@ -1,8 +1,9 @@
+@import '@/styles/variables.scss';
 @import '@/styles/utils/text-overflow-multi-line.scss';
 .evaluatedItem {
   width: 100%;
   padding: 12px;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   &-evaluated-item-head {
     display: flex;
     flex-direction: row;
@@ -66,7 +67,7 @@
     width: 56px;
     height: 56px;
     border-radius: 4px;
-    background-color: #F7F8FA;
+    background-color: $theme-page-bg;
   }
   &-evaluated-item-pic-item-image {
     width: 56px;
@@ -81,7 +82,7 @@
     margin-top: 4px;
     padding: 8px;
     border-radius: 8px;
-    background-color: #F4F5F7;
+    background-color: $theme-surface;
   }
   &-evaluated-item-product-pic {
     width: 40px;

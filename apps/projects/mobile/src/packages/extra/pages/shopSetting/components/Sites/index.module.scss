@@ -9,14 +9,14 @@
     margin-bottom: 16px * $hd;
     border-width: 1px * $hd;
     border-radius: 8px * $hd;
-    background-color: #fafbfc;
+    background-color: $theme-surface;
     border-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: row;
   }
   .active {
-    background-color: #EBF9F6;
+    background-color: $theme-primary-soft;
     border: 1px solid $theme-color;
 
     // background-color: red;
@@ -52,5 +52,5 @@
 .active {
   border-width: 1px;
   border-color: $theme-color;
-  background-color: #E4F7EF;
+  background-color: $theme-primary-soft;
 }

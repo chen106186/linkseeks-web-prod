@@ -8,7 +8,7 @@
 
     .tab-nav {
       .tab-nav-itemWrap {
-        background-color: #f5f6f7;
+        background-color: $theme-page-bg;
 
         .tab-nav-item {
           padding-top: 14px;
@@ -49,7 +49,7 @@
         .tab-nav-item__active {
           padding-top: 14px;
           padding-bottom: 14px;
-          background-color: #f5f6f7;
+          background-color: $theme-page-bg;
           border-top-left-radius: 8px;
           border-bottom-left-radius: 8px;
           border-top-right-radius: 0;
@@ -71,7 +71,7 @@
 
   .tab-menuWrap {
     width: 77%;
-    background-color: #f5f6f7;
+    background-color: $theme-page-bg;
     display: flex;
 
     & > taro-view-core {
@@ -126,7 +126,7 @@
                   padding-bottom: 100%;
                   margin-bottom: 8px;
                   position: relative;
-                  background-color: #f4f5f7;
+                  background-color: $theme-page-bg;
 
                   .classify-list-box-content-img {
                     width: 100%;

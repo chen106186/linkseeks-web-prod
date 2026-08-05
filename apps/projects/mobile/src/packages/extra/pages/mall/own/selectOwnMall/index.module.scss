@@ -45,7 +45,7 @@
         }
 
         &.active {
-          background-color: #EBF9F6;
+        background-color: $theme-primary-soft;
 
           .name {
             font-weight: bold;
@@ -69,4 +69,3 @@
 
   }
 }
-

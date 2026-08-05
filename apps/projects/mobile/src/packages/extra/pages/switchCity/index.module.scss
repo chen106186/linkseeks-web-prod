@@ -3,7 +3,7 @@
 .switchCity {
   display: flex;
   flex-direction: column;
-  background-color: #fafbfc;
+  background-color: $theme-page-bg;
   height: 100vh;
 }
 
@@ -27,7 +27,7 @@
 .searchInputWrap {
   display: flex;
   align-items: center;
-  background-color: #F7F8FA;
+  background-color: $theme-surface-soft;
   padding: 0 8px;
   height: 32px;
   border-radius: 8px;
@@ -38,7 +38,7 @@
   padding: 0;
   width: 100%;
   font-size: 12px;
-  background-color: #F7F8FA;
+  background-color: $theme-surface-soft;
 	::placeholder{
 		color: #C8CACD;
 		font-size: 12px;
@@ -71,13 +71,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F5F6F7;
+  background-color: $theme-page-bg;
   border-radius: 4px;
   margin: 4px;
 }
 
 .sectionItemBottomBorder {
-  border-bottom: 1px solid #F4F5F7 solid;
+  border-bottom: 1px solid $theme-border-light;
 }
 
 .sectionListHeader {
@@ -106,7 +106,7 @@
 
   :global{
     .at-indexes__list-title {
-      background-color: #F4F5F7;
+      background-color: $theme-page-bg;
     }
   }
 }

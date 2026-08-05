@@ -2,7 +2,7 @@
 .evaluatingManage {
   height: 100vh;
   overflow: hidden;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   :global{
     .at-tabs__underline {
       width: 100% !important;
@@ -19,14 +19,14 @@
       .at-tabs__body {
         flex: 1;
         overflow: hidden;
-        background-color: #F5F6F7;
+        background-color: $theme-page-bg;
       }
     }
   }
   .tabs-pane__view {
     height: 100%;
     overflow: scroll;
-    background-color: #F7F8FA;
+    background-color: $theme-page-bg;
   }
   & .taro-empty {
     height: 100%;
@@ -79,7 +79,7 @@
     color: #FFFFFF;
   }
   &-tabBarStyle {
-    background-color: #FFFFFF;
+  background-color: $theme-surface;
     // elevation: 0; // 去掉阴影
   }
   &-labelStyle {

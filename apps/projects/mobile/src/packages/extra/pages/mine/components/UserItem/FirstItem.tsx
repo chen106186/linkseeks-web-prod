@@ -22,6 +22,7 @@ import { getOssUrlPath } from '@apps/constants'
 import styles from './index.module.scss'
 import { useEAccountMemberInfo } from '@apps/services/eAccount/hooks/useEAccountMemberInfo'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 
 const member = getOssUrlPath('/Images/member.svg')
 const balance = getOssUrlPath('/Images/balance.svg')
@@ -449,7 +450,7 @@ const FirstItem: React.FC<{}> = () => {
       </View>
       <View className={styles['userItem-card-content']}>
         {userData.map((item) => {
-          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#00a98f')
+          const xmlSvg = item.icon.replace(/#C0C4CC/g, THEME_COLORS.primary)
           return (
             <View
               className={styles['userItem-card-item']}

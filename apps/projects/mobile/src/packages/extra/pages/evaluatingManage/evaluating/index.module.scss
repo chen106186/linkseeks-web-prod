@@ -3,11 +3,11 @@
   flex: 1;
   height: 100vh;
   position: relative;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   &-scrollWrap {
     flex: 1;
     width: 100%;
-    background-Color: #F4F5F7;
+    background-color: $theme-page-bg;
   }
   &-btn {
     padding: 8px;
@@ -20,7 +20,7 @@
   &-wrap {
     margin: 8px;
     padding: 12px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     border-radius: 8px;
   }
   &-product {
@@ -85,7 +85,7 @@
     flex-direction: row;
     align-items: flex-start;
     padding-top: 15px;
-    border-top: 1px solid #f4f5f7;
+    border-top: 1px solid $theme-border-light;
   }
   &-input-icon {
     margin-right: 4px;

@@ -3,7 +3,7 @@
 .showcase {
   height: 100vh;
   &-header-scroll {
-    background-color: #F7F8FA;
+    background-color: $theme-page-bg;
   }
 
   .showcase-header {
@@ -122,4 +122,3 @@
   }
 
 }
-

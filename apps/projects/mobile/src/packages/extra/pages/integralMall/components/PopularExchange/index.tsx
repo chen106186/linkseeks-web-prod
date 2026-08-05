@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { pxTransform } from '@apps/mobile-services/utils/taro'
+import { THEME_COLORS } from '@/constants/theme'
 import { View, Text, Image } from '@apps/mobile-ui'
 import useStores from '@/store/useStores'
 import Skeleton from '@/components/Skeleton'
@@ -94,7 +95,7 @@ const PopularExchange = (props: PopularExchangePropsType) => {
                 height={104}
                 width={104}
                 source={item.mainPic}
-                style={{ border: `${pxTransform(1)} solid #F4F5F7`, borderRadius: pxTransform(4) }}
+                style={{ border: `${pxTransform(1)} solid ${THEME_COLORS.borderLight}`, borderRadius: pxTransform(4) }}
               />
               <View className={styles['popularExchange-commodityInfo']}>
                 <Text className={styles['popularExchange-name']}>{item.name}</Text>

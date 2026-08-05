@@ -11,6 +11,7 @@ import { observer } from 'mobx-react-lite'
 import GlobalWrapper from '@/components/GlobalWrapper'
 import { useMobileIntl } from '@apps/locales'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 
 const evaluate = getOssUrlPath('/Images/evaluate.svg')
 const collection = getOssUrlPath('/Images/collection.svg')
@@ -94,7 +95,7 @@ const MyMessage: React.FC<{}> = () => {
       </View>
       <View className={styles['userItem-card-content']}>
         {data.map((item) => {
-          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#00a98f')
+          const xmlSvg = item.icon.replace(/#C0C4CC/g, THEME_COLORS.primary)
           return (
             <View className={styles['userItem-card-item']} key={item.title} onClick={() => goJump(item.url)}>
               <Image src={xmlSvg} className={styles['userItem-card-svg']} />

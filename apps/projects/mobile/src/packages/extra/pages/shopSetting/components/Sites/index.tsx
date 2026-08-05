@@ -3,6 +3,7 @@ import cx from 'classnames'
 import { pxTransform } from '@apps/mobile-services/utils/taro'
 import { View, Text, Icons, Image } from '@apps/mobile-ui'
 import styles from './index.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 
 interface Iprops {
   options: SitesOption[]
@@ -49,7 +50,7 @@ const Sites: React.FC<Iprops> = (props: Iprops) => {
               />
               <Text className={styles['text']}>{item.label}</Text>
             </View>
-            {selected === item.value ? <Icons name="Right" size={16} color="#00A98F" /> : null}
+            {selected === item.value ? <Icons name="Right" size={16} color={THEME_COLORS.primary} /> : null}
           </View>
         </View>
       ))}

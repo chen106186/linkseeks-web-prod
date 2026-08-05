@@ -9,7 +9,7 @@ $padding-s: 16px;
   border-bottom-width: 0.5;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
 }
 .input-text {
   color: #c0c4cc;
@@ -18,7 +18,7 @@ $padding-s: 16px;
   border-width: 0px;
   border-bottom-width: 0.5;
   flex: 1;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
 }
 .error-style {
   display: none;

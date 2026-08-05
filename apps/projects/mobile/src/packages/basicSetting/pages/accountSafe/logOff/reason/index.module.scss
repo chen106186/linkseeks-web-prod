@@ -22,11 +22,11 @@
 		height: 244px;
 		display: flex;
 		flex-direction: column;
-		background-color: #F5F6F7;
+		background-color: $theme-page-bg;
 		border-radius: 8px;
 		taro-textarea-core, Textarea{
 			flex: 1;
-			background-color: #F5F6F7;
+			background-color: $theme-page-bg;
 		}
 	}
 	&-bottom{
@@ -39,8 +39,8 @@
 	}
 	&-bottom-item-pre{
 		margin-right: 8px;
-		background-color: #F5F6F7;
-		border-color: #F5F6F7;
+		background-color: $theme-page-bg;
+		border-color: $theme-border-light;
 		color: #252D37;
 	}
 }

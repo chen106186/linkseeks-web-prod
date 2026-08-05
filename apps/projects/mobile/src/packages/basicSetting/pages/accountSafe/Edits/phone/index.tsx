@@ -25,6 +25,7 @@ import styles from '../style.module.scss'
 import { useTelCode } from '@apps/services'
 import { useMobileIntl } from '@apps/locales'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 
 const caretdown = getOssUrlPath('/miniprogram/assets/images/arrow-down-fill@2x.png')
 const EditPassword: React.FC = (props: any) => {
@@ -331,7 +332,7 @@ const EditPassword: React.FC = (props: any) => {
                   })}
                   style={{
                     marginLeft: pxTransform(0),
-                    borderBottomColor: '#F4F5F7',
+                    borderBottomColor: THEME_COLORS.borderLight,
                   }}
                   onChange={(e) => changeInputValue('phone', e)}
                 />
@@ -351,7 +352,7 @@ const EditPassword: React.FC = (props: any) => {
                   width: '100%',
                   flex: 3,
                   marginLeft: pxTransform(0),
-                  borderBottomColor: '#F4F5F7',
+                    borderBottomColor: THEME_COLORS.borderLight,
                 }}
                 placeholderStyle="#C0C4CC"
                 onChange={(e) => changeInputValue('smsCode', e)}

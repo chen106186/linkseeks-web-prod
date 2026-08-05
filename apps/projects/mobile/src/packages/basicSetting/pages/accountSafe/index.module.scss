@@ -5,17 +5,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   height: 100vh;
 }
 .bar {
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 .safe-container {
   width: 100%;
   margin: 0;
   border-top-width: 1px;
-  border-color: #f4f5f7;
+  border-color: $theme-border-light;
   display: flex;
   flex-direction: column;
 }

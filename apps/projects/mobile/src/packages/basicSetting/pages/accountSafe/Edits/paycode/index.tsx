@@ -9,6 +9,7 @@ import { postMemberMobileSecurityPayUpdate } from '@apps/apis'
 import { getOssUrlPath } from '@apps/constants'
 import Layout from '../layout'
 import styles from '../style.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 const pad = getOssUrlPath('/miniprogram/assets/images/pad.png')
 const Padative = getOssUrlPath('/miniprogram/assets/images/padative.png')
 const PayCode: React.FC = () => {
@@ -115,7 +116,7 @@ const PayCode: React.FC = () => {
                 maxlength={6}
                 style={{
                   marginLeft: pxTransform(0),
-                  borderBottomColor: '#F4F5F7',
+                  borderBottomColor: THEME_COLORS.borderLight,
                 }}
                 onChange={(e) => changeInputValue('payPassword', e)}
                 className={styles['input-after']}
@@ -142,7 +143,7 @@ const PayCode: React.FC = () => {
                 maxlength={6}
                 style={{
                   marginLeft: pxTransform(0),
-                  borderBottomColor: '#F4F5F7',
+                  borderBottomColor: THEME_COLORS.borderLight,
                 }}
                 onChange={(e) => changeInputValue('payPassword1', e)}
                 className={styles['input-after']}

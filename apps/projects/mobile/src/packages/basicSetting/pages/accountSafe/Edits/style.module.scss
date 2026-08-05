@@ -8,7 +8,7 @@ $margin-m: 28px;
   flex: 1;
 }
 .header {
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   border-bottom-width: 0.5;
 }
 .scroll-view {
@@ -44,7 +44,7 @@ $margin-m: 28px;
   border-width: 0px;
   border-bottom-width: 0.5;
   flex: 1;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
 }
 .error-style {
   display: none;
@@ -88,7 +88,7 @@ $margin-m: 28px;
   width: 82px;
   margin-right: 16px;
   border-right-width: 0.5;
-  border-right-color: #f4f5f7;
+  border-right-color: $theme-border-light;
 }
 .country-code {
   font-size: 14px;
@@ -105,7 +105,7 @@ $margin-m: 28px;
   height: 16px;
 }
 .solid {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   width: 1px;
   height: 100%;
   margin-left: 8px;
@@ -116,7 +116,7 @@ $margin-m: 28px;
   line-height: 40px;
   text-align: center;
   border-left-width: 1px;
-  border-left-color: #f4f5f7;
+  border-left-color: $theme-border-light;
 }
 
 .fl-right {

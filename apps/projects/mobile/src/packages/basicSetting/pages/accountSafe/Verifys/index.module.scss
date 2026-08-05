@@ -1,15 +1,17 @@
+@import '@/styles/variables.scss';
+
 .page {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fff;
+  background-color: $theme-surface;
   height: 100vh;
 }
 .scroll-view {
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  border-color: #f4f5f7;
+  border-color: $theme-border-light;
   border-top-width: 1px;
 }
 .section {

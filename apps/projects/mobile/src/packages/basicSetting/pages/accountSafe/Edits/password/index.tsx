@@ -12,6 +12,7 @@ import { postMemberMobileSecurityPswUpdate } from '@apps/apis'
 import PasswordVerify from '@/components/PasswordVerify'
 import Layout from '../layout'
 import styles from '../style.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 const pad = getOssUrlPath('/miniprogram/assets/images/pad.png')
 const Padative = getOssUrlPath('/miniprogram/assets/images/padative.png')
 const EditPassword: React.FC = () => {
@@ -142,7 +143,7 @@ const EditPassword: React.FC = () => {
               style={{
                 alignItems: 'center',
                 marginLeft: pxTransform(0),
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: THEME_COLORS.borderLight,
               }}
               maxlength={20}
               onChange={(e) => changeInputValue('password', e)}
@@ -164,7 +165,7 @@ const EditPassword: React.FC = () => {
               style={{
                 alignItems: 'center',
                 marginLeft: pxTransform(0),
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: THEME_COLORS.borderLight,
               }}
               onChange={(e) => changeInputValue('password1', e)}
               className={styles['input-after']}

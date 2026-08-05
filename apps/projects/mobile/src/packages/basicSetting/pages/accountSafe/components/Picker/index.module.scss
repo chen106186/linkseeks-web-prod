@@ -36,7 +36,7 @@ $margin-m: 28px;
   padding-right: $padding-m;
   padding-top: $padding-m;
   padding-bottom: $padding-m;
-  border-bottom-color: #f7f8fa;
+  border-bottom-color: $theme-border-light;
   border-bottom-width: 0.5;
 }
 .country {

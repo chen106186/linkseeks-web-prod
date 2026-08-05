@@ -12,6 +12,7 @@ export const THEME_COLORS = {
   textSecondary: '#927462',
   placeholder: '#AD9585',
   surface: '#FCF6F0',
+  primarySoft: '#FFF0E4',
 }
 
 

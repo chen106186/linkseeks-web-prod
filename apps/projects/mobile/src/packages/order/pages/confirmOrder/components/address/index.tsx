@@ -5,6 +5,7 @@ import Router from '@/utils/router'
 import MellowCard from '@/components/MellowCard'
 import { useIntl } from '@linkseeks/i18n'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 const location = getOssUrlPath('/miniprogram/assets/images/location.png')
@@ -68,7 +69,7 @@ const Address = (props: Iprops) => {
               {intl.formatMessage({ id: 'confirmOrder_components_address_addressText' })}
             </Text>
           )}
-          <Icons name="ChevronRight" size={16} color="#CCCCCC" />
+          <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
         </View>
         <Image src={Dashed} className={styles['dashed']} />
       </View>

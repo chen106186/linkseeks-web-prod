@@ -13,7 +13,7 @@
   color: #fff;
 }
 .scrollView {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   display: flex;
   flex: 1;
 }
@@ -46,7 +46,7 @@
 }
 .btn-container{
 	padding: 8px;
-	background-color: #fff;
+	background-color: $theme-surface;
 }
 .contentMain {
   height: 488px;
@@ -59,9 +59,9 @@
   flex-direction: column;
   padding: 8px 12px;
   margin-top: 8px;
-  border-bottom: 1px solid #f7f7f9;
+  border-bottom: 1px solid $theme-border-light;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
 }
 .notBot {
   border-bottom-width: 0;
@@ -81,18 +81,18 @@
 }
 .name {
   font-size: 14px;
-  color: #252D37;
+  color: $theme-title;
   font-weight: 600;
 }
 .secondTitle {
   font-size: 12px;
-  color: #91959b;
+  color: $theme-text-secondary;
   margin-bottom: 8px;
 }
 .textMain {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   border-radius: 6px;
   margin-top: 8px;
   flex-direction: column;
@@ -104,11 +104,11 @@
 }
 .textTitle {
   font-weight: bold;
-  color: #252d37;
+  color: $theme-title;
   font-size: 14px;
 }
 .textValue {
-  color: #252d37;
+  color: $theme-title;
   font-size: 14px;
 }
 

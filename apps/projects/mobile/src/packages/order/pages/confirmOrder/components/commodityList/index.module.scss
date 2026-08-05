@@ -3,7 +3,7 @@
 
 .warp {
   display: flex;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
   flex-direction: column;
 }
 .title {
@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 .text {
-  color: #303133;
+  color: $theme-text;
   text-align: center;
   line-height: 48px;
   font-size: 16px;
@@ -28,7 +28,7 @@
   height: 16px;
 }
 .commodity-number {
-  color: #303133;
+  color: $theme-text;
   font-size: 16px;
   padding-right: 40px;
 }
@@ -65,16 +65,16 @@
 .money-main {
   padding: 8px;
   height: 400px;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
 }
 .card-main {
-  background-color: #ffffff;
+  background-color: $theme-surface;
   margin-bottom: 8px;
 }
 .money-warp {
   display: flex;
   padding: 8px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   align-items: center;
   border-radius: 3px;
   overflow: hidden;
@@ -95,18 +95,18 @@
 }
 .center-title {
   font-size: 12px;
-  color: #252d37;
+  color: $theme-title;
   font-weight: 400px;
   margin-bottom: 9px;
 }
 .center-title-sku {
   font-size: 12px;
-  color: #91959b;
+  color: $theme-text-secondary;
   margin-bottom: 12px;
 }
 .center-title-small {
   font-size: 12px;
-  color: #252d37;
+  color: $theme-title;
 }
 .product-warp {
   display: flex;
@@ -154,7 +154,7 @@
 	padding: 0 24px;
 
 	&-text {
-		color: #00A98F;
+		color: $theme-primary;
 		font-size: 12px;
 	}
 }

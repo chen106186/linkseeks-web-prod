@@ -33,6 +33,7 @@ import { postPayEAccountAllInPayConfirmPay } from '@apps/apis'
 import PayType from '@/components/PayType'
 import Header from '@/components/NavBar'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import CodeInput from '@/components/CodeInput'
 import styles from './index.module.scss'
 
@@ -648,7 +649,7 @@ const MyCommodityDetails = () => {
             />
           </View>
         }
-        customStyle="background:#00A98F"
+        customStyle={{ background: THEME_COLORS.primary }}
       />
       <ScrollView scrollY onScroll={Scroll} className={styles['scroll-style']}>
         <View className={styles['status']}>

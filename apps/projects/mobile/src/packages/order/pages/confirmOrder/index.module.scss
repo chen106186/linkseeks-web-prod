@@ -4,7 +4,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   flex: 1;
   height: 100vh;
   // padding-left: 12px;
@@ -14,7 +14,7 @@
   width: 100%;
 }
 .scroll-view {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   // padding-left: 12px;
   // padding-right: 12px;
   margin-top: 8px;
@@ -23,7 +23,7 @@
   display: flex;
   padding: 8px;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
   align-content: center;
   padding-top: 17px;
   padding-bottom: 17px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   border-bottom-width: 1px;
   padding-left: 4px;
   padding-right: 4px;
@@ -43,12 +43,12 @@
   align-items: center;
 }
 .content-text {
-  color: #252d37;
+  color: $theme-title;
   font-weight: 400;
   font-size: 14px;
 }
 .content-text-select {
-  color: #91959b;
+  color: $theme-text-secondary;
   font-size: 14px;
 }
 .content-item-no-bor-bo {
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   margin-top: 8px;
   margin-bottom: 8px;
   border-radius: 4px;
@@ -69,7 +69,7 @@
   flex-direction: column;
 }
 .contract-tips {
-  color: #252d37;
+  color: $theme-title;
   font-size: 14px;
   margin-bottom: 8px;
 }
@@ -81,7 +81,7 @@
   margin-top: 12px;
 }
 .remarks-warp {
-  background-color: #fafbfc;
+  background-color: $theme-surface-soft;
   border-radius: 4px;
   margin-right: 4px;
   margin-left: 4px;
@@ -89,7 +89,7 @@
   padding: 8px;
 }
 .remarks-tips {
-  color: #91959b;
+  color: $theme-text-secondary;
   font-size: 14px;
 }
 
@@ -104,7 +104,7 @@
 .self-pickup {
 	padding: 16px 12px 14px;
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 
 	&-item {
 		display: flex;
@@ -133,7 +133,7 @@
 	&-desc {
 		margin-top: 6px;
 		margin-left: 56px;
-		color: #91959B;
+		color: $theme-text-secondary;
 		font-size: 12px;
 		line-height: 16px;
 	}
@@ -212,7 +212,7 @@
 		font-size: 14px;
 
 		&-label {
-			color: #91959B;
+			color: $theme-text-secondary;
 		}
 
 		&-value {

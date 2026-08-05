@@ -33,12 +33,12 @@
   align-items: center;
 }
 .name {
-  color: $color-black-1;
+  color: $theme-title;
   font-size: 14px;
   margin-right: 12px;
 }
 .phone {
-  color: $color-black-1;
+  color: $theme-title;
   font-size: 14px;
   margin-right: 12px;
 }
@@ -53,12 +53,12 @@
 }
 .address-detail {
   font-size: 12px;
-  color: $color-black-1;
+  color: $theme-title;
   margin-top: 8px;
   margin-bottom: 8px;
 }
 .address-text {
-  color: $color-black-3;
+  color: $theme-text-secondary;
   line-height: 68px;
 }
 .dashed {

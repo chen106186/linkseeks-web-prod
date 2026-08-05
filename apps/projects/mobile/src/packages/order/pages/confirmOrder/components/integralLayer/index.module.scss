@@ -3,12 +3,12 @@
 .money-main {
   padding: 8px;
   height: 390px;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
 }
 
 .warp {
   display: flex;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
   flex-direction: column;
 }
 .title {
@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 .text {
-  color: #303133;
+  color: $theme-text;
   text-align: center;
   line-height: 48px;
   font-size: 16px;
@@ -47,13 +47,13 @@
   margin-top: 16px;
   margin-bottom: 40px;
   font-size: 14px;
-  color: $color-black-3;
+  color: $theme-text-secondary;
 }
 .box {
   display: flex;
 }
 .integral-warp{
-  background-color: #ffffff;
+  background-color: $theme-surface;
   font-size: 12px;
   margin: 8px 8px ;
   border-radius: 2px;
@@ -79,5 +79,5 @@
 }
 .integral-tips{
   font-size: 12px;
-  color: #91959B;
+  color: $theme-text-secondary;
 }

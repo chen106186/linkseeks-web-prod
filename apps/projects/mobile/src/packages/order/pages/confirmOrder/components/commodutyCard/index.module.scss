@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .card-main {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
 .card-warp {
   display: flex;
   padding: 12px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   flex-direction: column;
   border-radius: 4px;
   overflow: hidden;
@@ -30,7 +32,7 @@
 }
 .left-titlr {
   font-size: 14px;
-  color: #91959b;
+  color: $theme-text-secondary;
   width: 70px;
 }
 .textl {
@@ -100,7 +102,7 @@
   margin-right: 8px;
 }
 .only-title {
-  color: #252d37;
+  color: $theme-title;
   font-size: 12px;
   font-weight: 400px;
 }
@@ -203,7 +205,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   align-items: center;
   padding-bottom: 6px;
 }

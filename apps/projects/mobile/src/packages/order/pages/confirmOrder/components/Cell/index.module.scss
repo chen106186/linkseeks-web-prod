@@ -1,21 +1,23 @@
+@import '@/styles/variables.scss';
+
 .content-item {
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding-top: 17px;
   padding-bottom: 17px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   border-bottom-width: 1px;
   padding-left: 4px;
   padding-right: 4px;
 }
 
 .content-text {
-  color: #252d37;
+  color: $theme-title;
   font-weight: 400px;
   font-size: 14px;
 }
 .content-text-select {
-  color: #91959b;
+  color: $theme-text-secondary;
   font-size: 14px;
 }

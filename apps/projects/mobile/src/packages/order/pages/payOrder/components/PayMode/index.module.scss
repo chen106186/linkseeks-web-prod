@@ -17,18 +17,18 @@
   margin-right: 10px;
 }
 .name {
-  color: #303133;
+  color: $theme-text;
   font-size: 14px;
 }
 .extra {
   font-size: 12px;
-  color: #909399;
+  color: $theme-text-secondary;
   margin-left: 4px;
 }
 .status {
   width: 16px;
   height: 16px;
-  border-color: #f4f5f7;
+  border-color: $theme-border-light;
   border-width: 0.5px;
   border-radius: 8px;
   display: flex;
@@ -39,16 +39,16 @@
 .disappear {
   width: 16px;
   height: 16px;
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px;
-  border: 0.5px solid #EBECF0;
+  border: 0.5px solid $theme-border-light;
 }
 .helper {
   font-size: 12px;
-  color: #606266;
-  background-color: #F7F8FA;
+  color: $theme-text-secondary;
+  background-color: $theme-disabled-bg;
   padding: 2px 4px;
 }
 .disable {
-  color: #909399;
+  color: $theme-text-secondary;
 }

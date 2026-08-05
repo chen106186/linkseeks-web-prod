@@ -4,6 +4,7 @@ import { useIntl } from '@linkseeks/i18n'
 import { View, Text, Image, ScrollView } from '@apps/mobile-ui'
 import Router from '@/utils/router'
 import { pxTransform } from '@apps/mobile-services/utils/taro'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 import cs from 'classnames'
 
@@ -135,11 +136,11 @@ const CommodityCard = (props: Iprops) => {
         {Item.products.length === 1 ? first(Item.products[0]) : MultipleLayouts()}
         <View className={styles['Totalprice']}>
           <Text
-            style={{ fontSize: pxTransform(12), color: '#252D37', marginRight: pxTransform(5) }}
+            style={{ fontSize: pxTransform(12), color: THEME_COLORS.title, marginRight: pxTransform(5) }}
           >{`${intl.formatMessage({ id: 'order.gong', defaultMessage: '共' })}${
             Item.products.length
           }${intl.formatMessage({ id: 'order.jianshangpin', defaultMessage: '件商品' })}`}</Text>
-          <Text style={{ fontSize: pxTransform(12), color: '#252D37' }}>
+          <Text style={{ fontSize: pxTransform(12), color: THEME_COLORS.title }}>
             {intl.formatMessage({ id: 'order.shifu', defaultMessage: '实付：' })}
           </Text>
           {Item.orderMode === 10 || Item.orderMode === 11 ? null : (

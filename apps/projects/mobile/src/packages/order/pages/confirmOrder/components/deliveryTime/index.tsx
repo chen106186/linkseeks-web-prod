@@ -5,6 +5,7 @@ import { observer } from "mobx-react-lite";
 import Popup from "@/components/Popup";
 import { dateFormat } from "@/utils/date";
 import styles from "./index.module.scss";
+import { THEME_COLORS } from '@/constants/theme'
 
 /**
  * 商户下 商品下 对应选购的规格列表
@@ -124,7 +125,7 @@ const DeliveryTime: React.FC<Iprops> = (props: Iprops) => {
               >
                 <View className={styles["content-time"]}>
                   <Text>{fnGetDataTips()}</Text>
-                  <Icons name='ChevronRight' size={16} color='#CCCCCC' />
+                  <Icons name='ChevronRight' size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </Picker>
             ) : (
@@ -136,7 +137,7 @@ const DeliveryTime: React.FC<Iprops> = (props: Iprops) => {
                   onConfirm={value => handleSelectDatePicker(value)}
                 >
                   <Text>{fnGetDataTips()}</Text>
-                  <Icons name='ChevronRight' size={16} color='#CCCCCC' />
+                  <Icons name='ChevronRight' size={16} color={THEME_COLORS.textSecondary} />
                 </DateTimePicker>
               </View>
             )}

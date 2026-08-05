@@ -47,7 +47,7 @@
   align-items: center;
 }
 .tips-text {
-  color: $color-black-3;
+  color: $theme-text-secondary;
   font-size: 12px;
   margin-bottom: 12px;
 }
@@ -70,12 +70,12 @@
   flex-direction: column;
 }
 .strong {
-  color: $color-black-1;
+  color: $theme-title;
   font-size: 14px;
   margin-bottom: 12px;
 }
 .safe {
-  color: $color-black-3;
+  color: $theme-text-secondary;
   font-size: 12px;
 }
 .back {

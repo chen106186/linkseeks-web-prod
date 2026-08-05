@@ -2,6 +2,7 @@ import React from 'react'
 import { useIntl } from '@linkseeks/i18n'
 import { View, Text, ScrollView } from '@apps/mobile-ui'
 import MellowCard from '@/components/MellowCard'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 type dataSource = {
@@ -39,12 +40,12 @@ const StepLayout: React.FC<StepProps> = (props: StepProps) => {
               <View className={styles['statusLayout-dotLineBox']}>
                 <View
                   className={styles['statusLayout-dot']}
-                  style={{ backgroundColor: item.isExecute ? '#00A98F' : '#EBEDF0' }}
+                  style={{ backgroundColor: item.isExecute ? THEME_COLORS.primary : '#F3ECE5' }}
                 />
                 {index !== dataSource.length - 1 && (
                   <View
                     className={styles['statusLayout-line']}
-                    style={{ backgroundColor: item.isExecute ? '#00A98F' : '#EBEDF0' }}
+                    style={{ backgroundColor: item.isExecute ? THEME_COLORS.primary : '#F3ECE5' }}
                   />
                 )}
               </View>

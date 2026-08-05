@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .container {
-  background-color: #fff;
+  background-color: $theme-surface;
   padding-bottom: 34px;
   overflow: hidden;
 }
@@ -17,7 +19,7 @@ $swiper-item-height: 40px;
     transform: translate(-50%, -50%);
     width: calc(100% - 2 * 12px);
     height: 32px;
-    background-color: #F5F6F7;
+    background-color: $theme-page-bg;
     border-radius: 4px;
   }
 }
@@ -45,6 +47,6 @@ $swiper-item-height: 40px;
   text-align: center;
   line-height: 40px;
   border-radius: 8px;
-  background-color: #00A98F;
+  background-color: $theme-primary;
   color: #fff;
 }

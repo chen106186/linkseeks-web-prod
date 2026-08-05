@@ -7,6 +7,7 @@ import useStores from '@/store/useStores'
 import { dateFormat } from '@/utils/date'
 import { getLogisticsShipperAddressGet } from '@apps/apis'
 import { getOrderMobileCreateFindDeliveryDate } from '@apps/apis'
+import { THEME_COLORS } from '@/constants/theme'
 import { fnGetNewEstimatePrice } from '../../../../common/commonlyFn'
 import { fnKeepTwo } from '../../../../commonlyFn'
 import styles from './index.module.scss'
@@ -216,7 +217,7 @@ const CommodutyCard = (props: Iprops) => {
                 data: fnGetNumber(allDeliver[key]),
               })}
             </Text>
-            <Icons name="ChevronRight" size={16} color="#CCCCCC" />
+            <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
           </View>
           <View className={styles['logistics-warp']}>
             <Text className={styles['small-font']}>
@@ -231,7 +232,7 @@ const CommodutyCard = (props: Iprops) => {
               <Text className={styles['small-font']}>
                 {fnGetLogistics(allDeliver[key][0]?.logistics?.deliveryType, allDeliver[key][0])}
               </Text>
-              <Icons name="ChevronRight" size={16} color="#CCCCCC" />
+              <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
             </View>
           </View>
         </>
@@ -393,7 +394,7 @@ const CommodutyCard = (props: Iprops) => {
                   <Text className={styles['small-font']}>
                     {fnGetLogistics(thisShop[0]?.logistics?.deliveryType, thisShop[0])}
                   </Text>
-                  <Icons name="ChevronRight" size={16} color="#CCCCCC" />
+                  <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </View>
             </>
@@ -411,7 +412,7 @@ const CommodutyCard = (props: Iprops) => {
             </Text>
             <View className={styles['logistics-icon']}>
               <Text className={styles['small-font']}>{fnGetDeliveryTime(thisShop[0])}</Text>
-              <Icons name="ChevronRight" size={16} color="#CCCCCC" />
+              <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
             </View>
           </View>
         )}

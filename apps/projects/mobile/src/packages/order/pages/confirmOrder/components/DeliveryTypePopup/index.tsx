@@ -11,6 +11,7 @@ import Popup from '@/components/Popup'
 import styles from './index.module.scss'
 import cs from 'classnames'
 import { Swiper, SwiperItem } from '@tarojs/components'
+import { THEME_COLORS } from '@/constants/theme'
 
 interface IProps {
   /**
@@ -114,7 +115,7 @@ const DeliveryTypePopup: React.FC<IProps> = (props: IProps) => {
       })}
       onClose={handleClose}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
     >

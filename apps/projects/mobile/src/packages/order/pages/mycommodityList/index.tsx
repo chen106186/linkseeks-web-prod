@@ -16,6 +16,7 @@ import {
 } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import { useIntl } from '@linkseeks/i18n'
 import {
   getOrderMobileBuyerPage,
@@ -424,8 +425,8 @@ const MyCommodityList: React.FC = () => {
   }
 
   const actStyle = {
-    background: '#ebf9f6',
-    color: '#00A98F',
+    background: THEME_COLORS.primarySoft,
+    color: THEME_COLORS.primary,
   }
   const marginLeftStyle = {
     marginLeft: pxTransform(10),

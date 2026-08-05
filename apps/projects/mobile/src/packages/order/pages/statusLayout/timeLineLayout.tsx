@@ -5,6 +5,7 @@ import { View, Text, ScrollView } from '@apps/mobile-ui'
 import MellowCard from '@/components/MellowCard'
 import { useIntl } from '@linkseeks/i18n'
 import Empty from '@/components/Empty'
+import { THEME_COLORS } from '@/constants/theme'
 import { dateFormat } from '@/utils/date'
 import styles from './index.module.scss'
 
@@ -53,7 +54,7 @@ const TimeLineLayout: React.FC<TimeLineProps> = (props: TimeLineProps) => {
                 <View className={styles['statusLayout-timeLineDot']}>
                   <View
                     className={styles['statusLayout-timeLineIcon']}
-                    style={idx === 0 ? { backgroundColor: '#00A98F' } : {}}
+                    style={idx === 0 ? { backgroundColor: THEME_COLORS.primary } : {}}
                   />
                   {dataSource.length - 1 !== idx && <View className={styles['statusLayout-timeLine']} />}
                 </View>

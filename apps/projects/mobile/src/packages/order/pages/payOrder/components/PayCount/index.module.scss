@@ -6,7 +6,7 @@
   justify-content: 'center';
   align-items: center;
   padding: 24px 0;
-  background-color: #fff;
+  background-color: $theme-surface;
   width: 100%;
   border-radius: 8px;
 
@@ -18,12 +18,12 @@
 
   .time {
     font-size: 14px;
-    color: #909399;
+    color: $theme-text-secondary;
     margin-left: 4px;
   }
 
   .money {
-    color: #D32F2F;
+    color: $theme-primary;
     margin-top: 16px;
     font-size: 24px;
   }

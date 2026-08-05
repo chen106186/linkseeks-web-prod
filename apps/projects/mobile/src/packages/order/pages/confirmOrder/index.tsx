@@ -15,6 +15,7 @@ import Router from '@/utils/router'
 import { observer } from 'mobx-react-lite'
 import GlobalHeader from '@/components/NavBar'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import { DELIVERY_TYPE_ENUM } from '@/constants/const/product'
 import FullScreenLoading from '@/components/Loading/fullscreenLoading'
 import {
@@ -1034,7 +1035,7 @@ const ConfirmOrder: React.FC = () => {
                         id: 'confirmOrder_contentTextSelect_1',
                       })}
                   </Text>
-                  <Icons name="ChevronRight" size={16} color="#91959B" />
+                  <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </View>
             }
@@ -1066,7 +1067,7 @@ const ConfirmOrder: React.FC = () => {
                           data: fnGetselectCouponMoney(selectCoupon),
                         })}
                   </Text>
-                  <Icons name="ChevronRight" size={16} color="#91959B" />
+                  <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </View>
             )}
@@ -1094,7 +1095,7 @@ const ConfirmOrder: React.FC = () => {
                           data: fnGetselectIntegralMoney(selectIntegral),
                         })}
                   </Text>
-                  <Icons name="ChevronRight" size={16} color="#91959B" />
+                  <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </View>
             )} */}
@@ -1119,7 +1120,7 @@ const ConfirmOrder: React.FC = () => {
                         id: 'confirmOrder_contentTextSelect_3',
                       })}
                   </Text>
-                  <Icons name="ChevronRight" size={16} color="#91959B" />
+                  <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
                 </View>
               </View>
             )}

@@ -1,11 +1,12 @@
 @import '@/styles/utils/text-overflow.scss';
+@import '@/styles/variables.scss';
 .statusLayout {
   flex: 1;
   height: 100vh;
   overflow: hidden;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   &-tabBar {
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
   &-scrollView {
     // flex: 1;
@@ -64,7 +65,7 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: #EBEDF0;
+    background-color: $theme-disabled-bg;
     position: relative;
     z-index: 999;
   }
@@ -73,7 +74,7 @@
     flex-grow: 1;
     margin-top: -7px;
     margin-bottom: -11px;
-    background-color: #EBEDF0;
+    background-color: $theme-disabled-bg;
   }
   &-timeLineInfoBox {
     flex: 1;
@@ -97,11 +98,11 @@
   &-timeLineTitlebeforeStyle {
     font-size: 12px;
     // font-weight: 700;
-    color: #909399;
+    color: $theme-text-secondary;
   }
   &-timeLineTimeStyle {
     font-size: 12PX;
-    color: #909399;
+    color: $theme-text-secondary;
   }
   &-timeLineInfo {
     display: flex;
@@ -113,19 +114,19 @@
   }
   &-timeLineInfobeforeStyle {
     font-size: 12px;
-    color: #909399;
+    color: $theme-text-secondary;
   }
   &-auditOpinion {
     flex: 1;
     border-radius: 4px;
     padding: 6px 8px;
-    background-color: #F7F8FA;
+    background-color: $theme-disabled-bg;
   }
   :global{
     .at-tabs__body {
       flex: 1;
       overflow: hidden;
-      background-color: #F5F6F7;
+      background-color: $theme-page-bg;
     }
   }
 }

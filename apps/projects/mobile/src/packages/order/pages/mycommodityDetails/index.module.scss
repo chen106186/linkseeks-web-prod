@@ -2,7 +2,7 @@
 
 .container {
   height: 100vh;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   display: flex;
   flex-direction: column;
   .scroll-style {
@@ -116,7 +116,7 @@
 }
 .cell-text {
   font-size: 12px;
-  color: #303133;
+  color: $theme-text;
 }
 .modelWrap{
   background-color: #fff;
@@ -131,10 +131,10 @@
     font-family: PingFangSC-Medium;
     font-weight: Medium;
     font-size: 14px;
-    color: #303133;
+    color: $theme-text;
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid #F4F5F7;
+    border-bottom: 1px solid $theme-border-light;
     position: relative;
   }
   .modeCard{
@@ -157,7 +157,7 @@
     margin: 8px;
     padding: 12px;
     border-radius: 8px;
-    background: #ffffff;
+    background: $theme-surface;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
@@ -175,7 +175,7 @@
         flex: 1;
         overflow: hidden;
         &-name{
-          color: #252d37;
+          color: $theme-title;
 					display: -webkit-box;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 2;
@@ -187,7 +187,7 @@
         }
         &-spec{
           margin-top: 2px;
-          color: #91959b;
+          color: $theme-text-secondary;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -200,10 +200,10 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      color: #91959B;
+      color: $theme-text-secondary;
       &-num{
         margin-left: 8px;
-        color: #252D37;
+        color: $theme-title;
         font-weight: 500;
         vertical-align: baseline;
       }
@@ -213,14 +213,14 @@
       padding-right: 16px;
       height: 4px;
       border-radius: 4px;
-      background: #edeeef;
+      background: $theme-border-light;
       overflow: visible;
       &-active{
         position: relative;
         padding-right: 4px;
         height: 100%;
         box-sizing: content-box;
-        background: #00A98F;
+        background: $theme-primary;
         overflow: visible;
         .tag-img{
           position: absolute;
@@ -234,7 +234,7 @@
   }
   &-count{
     margin-top: 10px;
-    color: #91959b;
+    color: $theme-text-secondary;
     text-align: center;
     font-size: 12px;
     font-weight: 400;

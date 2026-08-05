@@ -32,6 +32,7 @@ yarn-error.log*
 # create-react-app
 dist
 docsDist
+
 # swc
 .swc
 
@@ -48,5 +49,3 @@ cache.json
 apps/projects/mall/logs
 
 basicConfig.json
-
-.vscode/

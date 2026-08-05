@@ -10,8 +10,9 @@
   },
   "scripts": {
     "test": "vitest",
-    "api": "node ./pullYapiToken --force && node ../../../node_modules/@linkseeks/yapi2ts/libs/cli.js",
-    "api-force": "node ./pullYapiToken --force && node ../../../node_modules/@linkseeks/yapi2ts/libs/cli.js",
+    "api": "cross-env no_proxy=192.168.110.15,192.168.110.137 http_proxy= https_proxy= HTTP_PROXY= HTTPS_PROXY= node ./syncYapiToken && cross-env no_proxy=192.168.110.15,192.168.110.137 http_proxy= https_proxy= HTTP_PROXY= HTTPS_PROXY= node ../../../node_modules/@linkseeks/yapi2ts/libs/cli.js",
+    "api-local": "cross-env no_proxy=192.168.110.15,192.168.110.137 http_proxy= https_proxy= HTTP_PROXY= HTTPS_PROXY= node ../../../node_modules/@linkseeks/yapi2ts/libs/cli.js",
+    "api-force": "cross-env no_proxy=192.168.110.15,192.168.110.137 http_proxy= https_proxy= HTTP_PROXY= HTTPS_PROXY= node ./syncYapiToken && cross-env no_proxy=192.168.110.15,192.168.110.137 http_proxy= https_proxy= HTTP_PROXY= HTTPS_PROXY= node ../../../node_modules/@linkseeks/yapi2ts/libs/cli.js",
     "deploy": "node ./scripts/deploy && pnpm api",
     "build": "rimraf -rf lib esm && npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --project tsconfig.build.json --outDir lib",

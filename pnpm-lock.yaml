@@ -745,7 +745,7 @@ importers:
         version: 2.3.1(@types/react@17.0.80)(date-fns@2.30.0)(i18next@23.16.8)(immer@9.0.21)(react-date-picker@9.3.0(@types/react-dom@18.2.0)(@types/react@17.0.80)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-i18next@12.3.1(i18next@23.16.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(tslib@2.8.1)
       babel-loader:
         specifier: ^8.2.3
-        version: 8.4.1(@babel/core@7.29.7)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+        version: 8.4.1(@babel/core@7.29.7)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       classnames:
         specifier: ^2.3.1
         version: 2.5.1
@@ -778,10 +778,10 @@ importers:
         version: 1.22.7
       terser-webpack-plugin:
         specifier: 4.x
-        version: 4.2.3(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+        version: 4.2.3(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       webpack:
         specifier: 5.89.0
-        version: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)
+        version: 5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)
     devDependencies:
       '@babel/core':
         specifier: ^7.8.0
@@ -794,161 +794,7 @@ importers:
         version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
       '@tarojs/webpack5-runner':
         specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
-      '@types/node':
-        specifier: ^20.11.6
-        version: 20.19.43
-      '@types/react':
-        specifier: ^17.0.0
-        version: 17.0.80
-      '@types/webpack-env':
-        specifier: ^1.13.6
-        version: 1.18.8
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^4.15.1
-        version: 4.33.0(@typescript-eslint/parser@4.33.0(eslint@6.8.0)(typescript@4.9.5))(eslint@6.8.0)(typescript@4.9.5)
-      '@typescript-eslint/parser':
-        specifier: ^4.15.1
-        version: 4.33.0(eslint@6.8.0)(typescript@4.9.5)
-      axios:
-        specifier: 1.3.5
-        version: 1.3.5
-      babel-plugin-import:
-        specifier: ^1.13.3
-        version: 1.13.8
-      babel-preset-taro:
-        specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)
-      case-sensitive-paths-webpack-plugin:
-        specifier: ^2.4.0
-        version: 2.4.0
-      chalk:
-        specifier: ^4.1.2
-        version: 4.1.2
-      clone:
-        specifier: ^2.1.2
-        version: 2.1.2
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      dotenv:
-        specifier: ^10.0.0
-        version: 10.0.0
-      eslint:
-        specifier: ^6.8.0
-        version: 6.8.0
-      eslint-config-taro:
-        specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)(eslint@6.8.0)(typescript@4.9.5)
-      eslint-plugin-import:
-        specifier: ^2.12.0
-        version: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@6.8.0)(typescript@4.9.5))(eslint@6.8.0)
-      eslint-plugin-react:
-        specifier: ^7.8.2
-        version: 7.37.5(eslint@6.8.0)
-      eslint-plugin-react-hooks:
-        specifier: ^4.2.0
-        version: 4.6.2(eslint@6.8.0)
-      fs-extra:
-        specifier: ^10.0.0
-        version: 10.1.0
-      json2ts:
-        specifier: ^0.0.7
-        version: 0.0.7
-      ora:
-        specifier: ^5.0.1
-        version: 5.4.1
-      stylelint:
-        specifier: 9.3.0
-        version: 9.3.0
-      ts-node:
-        specifier: ^10.9.1
-        version: 10.9.2(@swc/core@1.15.47)(@types/node@20.19.43)(typescript@4.9.5)
-      typescript:
-        specifier: ^4.1.0
-        version: 4.9.5
-
-  apps/projects/mobile-sale:
-    dependencies:
-      '@babel/runtime':
-        specifier: ^7.7.7
-        version: 7.29.7
-      '@tarojs/components':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1)
-      '@tarojs/plugin-framework-react':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(react@18.3.1)
-      '@tarojs/plugin-http':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))
-      '@tarojs/plugin-platform-h5':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
-      '@tarojs/plugin-platform-weapp':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))
-      '@tarojs/react':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(react@18.3.1)
-      '@tarojs/runtime':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/shared@3.6.23)
-      '@tarojs/shared':
-        specifier: 3.6.23
-        version: 3.6.23
-      '@tarojs/taro':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27)
-      '@tarojs/taro-loader':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27)
-      babel-loader:
-        specifier: ^8.2.3
-        version: 8.4.1(@babel/core@7.29.7)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
-      classnames:
-        specifier: ^2.3.1
-        version: 2.5.1
-      copy-to-clipboard:
-        specifier: ^3.3.1
-        version: 3.3.1
-      mobx:
-        specifier: ^6.0.4
-        version: 6.16.1
-      mobx-react:
-        specifier: ^7.0.5
-        version: 7.6.0(mobx@6.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      mobx-react-lite:
-        specifier: ^3.1.6
-        version: 3.4.3(mobx@6.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      pdfh5:
-        specifier: ^1.4.2
-        version: 1.4.9
-      postcss:
-        specifier: 8.4.27
-        version: 8.4.27
-      react-photo-view:
-        specifier: ^1.1.2
-        version: 1.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      terser-webpack-plugin:
-        specifier: 4.x
-        version: 4.2.3(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
-      use-immer:
-        specifier: 0.10.0
-        version: 0.10.0(immer@9.0.21)(react@18.3.1)
-    devDependencies:
-      '@babel/core':
-        specifier: ^7.8.0
-        version: 7.29.7
-      '@tarojs/cli':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/node@20.19.43)
-      '@tarojs/mini-runner':
-        specifier: 3.6.23
-        version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
-      '@tarojs/webpack5-runner':
-        specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.3.96)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
+        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.3.96)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       '@types/node':
         specifier: ^20.11.6
         version: 20.19.43
@@ -1021,9 +867,163 @@ importers:
       typescript:
         specifier: ^4.1.0
         version: 4.9.5
+
+  apps/projects/mobile-sale:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.7.7
+        version: 7.29.7
+      '@tarojs/components':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1)
+      '@tarojs/plugin-framework-react':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(react@18.3.1)
+      '@tarojs/plugin-http':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))
+      '@tarojs/plugin-platform-h5':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
+      '@tarojs/plugin-platform-weapp':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))
+      '@tarojs/react':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(react@18.3.1)
+      '@tarojs/runtime':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/shared@3.6.23)
+      '@tarojs/shared':
+        specifier: 3.6.23
+        version: 3.6.23
+      '@tarojs/taro':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27)
+      '@tarojs/taro-loader':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27)
+      babel-loader:
+        specifier: ^8.2.3
+        version: 8.4.1(@babel/core@7.29.7)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+      classnames:
+        specifier: ^2.3.1
+        version: 2.5.1
+      copy-to-clipboard:
+        specifier: ^3.3.1
+        version: 3.3.1
+      mobx:
+        specifier: ^6.0.4
+        version: 6.16.1
+      mobx-react:
+        specifier: ^7.0.5
+        version: 7.6.0(mobx@6.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      mobx-react-lite:
+        specifier: ^3.1.6
+        version: 3.4.3(mobx@6.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      pdfh5:
+        specifier: ^1.4.2
+        version: 1.4.9
+      postcss:
+        specifier: 8.4.27
+        version: 8.4.27
+      react-photo-view:
+        specifier: ^1.1.2
+        version: 1.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      terser-webpack-plugin:
+        specifier: 4.x
+        version: 4.2.3(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+      use-immer:
+        specifier: 0.10.0
+        version: 0.10.0(immer@9.0.21)(react@18.3.1)
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.8.0
+        version: 7.29.7
+      '@tarojs/cli':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/node@20.19.43)
+      '@tarojs/mini-runner':
+        specifier: 3.6.23
+        version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
+      '@tarojs/webpack5-runner':
+        specifier: 3.6.23
+        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+      '@types/node':
+        specifier: ^20.11.6
+        version: 20.19.43
+      '@types/react':
+        specifier: ^17.0.0
+        version: 17.0.80
+      '@types/webpack-env':
+        specifier: ^1.13.6
+        version: 1.18.8
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^4.15.1
+        version: 4.33.0(@typescript-eslint/parser@4.33.0(eslint@6.8.0)(typescript@4.9.5))(eslint@6.8.0)(typescript@4.9.5)
+      '@typescript-eslint/parser':
+        specifier: ^4.15.1
+        version: 4.33.0(eslint@6.8.0)(typescript@4.9.5)
+      axios:
+        specifier: 1.3.5
+        version: 1.3.5
+      babel-plugin-import:
+        specifier: ^1.13.3
+        version: 1.13.8
+      babel-preset-taro:
+        specifier: 3.6.23
+        version: 3.6.23(@babel/core@7.29.7)
+      case-sensitive-paths-webpack-plugin:
+        specifier: ^2.4.0
+        version: 2.4.0
+      chalk:
+        specifier: ^4.1.2
+        version: 4.1.2
+      clone:
+        specifier: ^2.1.2
+        version: 2.1.2
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      dotenv:
+        specifier: ^10.0.0
+        version: 10.0.0
+      eslint:
+        specifier: ^6.8.0
+        version: 6.8.0
+      eslint-config-taro:
+        specifier: 3.6.23
+        version: 3.6.23(@babel/core@7.29.7)(eslint@6.8.0)(typescript@4.9.5)
+      eslint-plugin-import:
+        specifier: ^2.12.0
+        version: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@6.8.0)(typescript@4.9.5))(eslint@6.8.0)
+      eslint-plugin-react:
+        specifier: ^7.8.2
+        version: 7.37.5(eslint@6.8.0)
+      eslint-plugin-react-hooks:
+        specifier: ^4.2.0
+        version: 4.6.2(eslint@6.8.0)
+      fs-extra:
+        specifier: ^10.0.0
+        version: 10.1.0
+      json2ts:
+        specifier: ^0.0.7
+        version: 0.0.7
+      ora:
+        specifier: ^5.0.1
+        version: 5.4.1
+      stylelint:
+        specifier: 9.3.0
+        version: 9.3.0
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@swc/core@1.15.47)(@types/node@20.19.43)(typescript@4.9.5)
+      typescript:
+        specifier: ^4.1.0
+        version: 4.9.5
       webpack:
         specifier: 5.89.0
-        version: 5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)
+        version: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)
 
   apps/projects/mobile-srm:
     dependencies:
@@ -1111,7 +1111,7 @@ importers:
         version: 3.6.23(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(postcss@8.4.27)
       '@tarojs/webpack5-runner':
         specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
       '@types/node':
         specifier: ^20.11.6
         version: 20.19.43
@@ -1807,7 +1807,7 @@ importers:
         version: 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.5.25)
       '@tarojs/webpack5-runner':
         specifier: 3.6.23
-        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.5.25)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.5.25))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.5.25)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
+        version: 3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.5.25)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.5.25))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.5.25)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
       '@types/prop-types':
         specifier: ^15.7.5
         version: 15.7.15
@@ -7074,6 +7074,9 @@ packages:
   '@types/react-helmet@6.1.11':
     resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
 
+  '@types/react-router-config@5.0.11':
+    resolution: {integrity: sha512-WmSAg7WgqW7m4x8Mt4N6ZyKz0BubSj/2tVUMsAHp+Yd2AMwcSbeFq9WympT19p5heCFmF97R9eD5uUR/t4HEqw==}
+
   '@types/react-router-config@5.0.2':
     resolution: {integrity: sha512-WOSetDV3YPxbkVJAdv/bqExJjmcdCi/vpCJh3NfQOy1X15vHMSiMioXIcGekXDJJYhqGUMDo9e337mh508foAA==}
 
@@ -7468,17 +7471,17 @@ packages:
     peerDependencies:
       vtils: ^2.26.0
 
-  '@vue/compiler-core@3.5.41':
-    resolution: {integrity: sha512-q0Xtv/F9w2YO/7htQhtiL+Ev2WCJbe5N2hc+XfgyKkEKqWpSxknmT8QOuGdEKNdjPq0c3F7rNpFkTo3Kfrm7pg==}
+  '@vue/compiler-core@3.5.40':
+    resolution: {integrity: sha512-39E8IgOhTbVDnoJFMKc2DvYnypcZwUqgUhQkccva/0m6FUwtIKSGV7n1hpVmYcFaoRAwf9pBcwnKlCEsN63ZEQ==}
 
-  '@vue/compiler-dom@3.5.41':
-    resolution: {integrity: sha512-oKacVfNglLvGjnS6BXOlGL7EyG2h8X03pqXCjzotRZUaXGjbrTJUnVAQjrCqUnS+lyu31nwQjZY/d817GmCnfw==}
+  '@vue/compiler-dom@3.5.40':
+    resolution: {integrity: sha512-pwkx4vqlqOspFstrcmzwkKLePVMD3PT65imRzLhanU2V1Fj4K13g6OXjanOyzw3aTAuRk84BOmY8f3rEHqPaVA==}
 
-  '@vue/compiler-sfc@3.5.41':
-    resolution: {integrity: sha512-XJhip7R2wy6vX3knCxdZN4KracFaZUef58s1KYewqluedHIJaPIVfXoYT7MF1F8nCvv6k8bWWxDC8opMkg1VTQ==}
+  '@vue/compiler-sfc@3.5.40':
+    resolution: {integrity: sha512-gIf497P4kpuALcvs5n3AEg1Vdn0pSY4XbjASIfHNYF1/MP3T2Mf2STERTubysBxCRxzJGJYtF/O7vwJrxFB3Vw==}
 
-  '@vue/compiler-ssr@3.5.41':
-    resolution: {integrity: sha512-U3v5OejKEGqOI0Wy0+Sz7hGuIFZHA4LSXzrNM3IMIeDyJEBBfTpX26n3SDgToRpP2bLc9FfI2j/kSgcJ8Emq5A==}
+  '@vue/compiler-ssr@3.5.40':
+    resolution: {integrity: sha512-rrE5xiXG663+vHCHa3J9p2z5OcBRjXmoqenprJxAFQxg5pSshzeBiCE6pu46axapRJ2Adk0YDA2BRZVjiHXnhg==}
 
   '@vue/component-compiler-utils@3.3.0':
     resolution: {integrity: sha512-97sfH2mYNU+2PzGrmK2haqffDpVASuib9/w2/noxiFi31Z54hW+q3izKQXXQZSNhtiUpAI36uSuYepeBe4wpHQ==}
@@ -7489,8 +7492,8 @@ packages:
   '@vue/shared@3.0.5':
     resolution: {integrity: sha512-gYsNoGkWejBxNO6SNRjOh/xKeZ0H0V+TFzaPzODfBjkAIb0aQgBuixC1brandC/CDJy1wYPwSoYrXpvul7m6yw==}
 
-  '@vue/shared@3.5.41':
-    resolution: {integrity: sha512-IOnwSCma8j+9xJT6b8H0dEYidC80NsYmNMlZxRsukYcSoGaDBohog5hDxzeUXdFeGWFA++vWvxqOmrr96VlqMA==}
+  '@vue/shared@3.5.40':
+    resolution: {integrity: sha512-WxnBtruIqOoV3rA4jeKDWzrYI5h7Cp4+pjwDi8kWGHz+IslhiN+wguLVVhtv2l8VoU02rzDCVfDjgCl1lNpZVg==}
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -28801,7 +28804,7 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))':
+  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))':
     dependencies:
       '@parcel/css': 1.14.0
       '@tarojs/helper': 3.6.23
@@ -28860,7 +28863,7 @@ snapshots:
       terser-webpack-plugin: 5.6.1(@swc/core@1.15.47)(csso@5.0.5)(esbuild@0.19.12)(lightningcss@1.33.0)(postcss@8.4.27)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
       url-loader: 4.1.0(file-loader@6.0.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)))(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
       vm2: 3.11.5
-      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
+      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
       webpack: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)
       webpack-chain: 6.5.1
       webpack-dev-server: 4.11.1(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
@@ -28950,7 +28953,7 @@ snapshots:
       - webpack-cli
       - whiskers
 
-  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.5.25)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.5.25))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.5.25)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))':
+  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.15.47)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.5.25)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.5.25))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.5.25)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))':
     dependencies:
       '@parcel/css': 1.14.0
       '@tarojs/helper': 3.6.23
@@ -29009,7 +29012,7 @@ snapshots:
       terser-webpack-plugin: 5.6.1(@swc/core@1.15.47)(csso@5.0.5)(esbuild@0.19.12)(lightningcss@1.33.0)(postcss@8.5.25)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
       url-loader: 4.1.0(file-loader@6.0.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)))(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
       vm2: 3.11.5
-      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
+      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
       webpack: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)
       webpack-chain: 6.5.1
       webpack-dev-server: 4.11.1(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
@@ -29099,7 +29102,7 @@ snapshots:
       - webpack-cli
       - whiskers
 
-  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.3.96)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))':
+  '@tarojs/webpack5-runner@3.6.23(@babel/core@7.29.7)(@swc/core@1.3.96)(@tarojs/components@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@types/react@17.0.80)(postcss@8.4.27)(react@18.3.1))(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@tarojs/shared@3.6.23)(@tarojs/taro@3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23(@tarojs/shared@3.6.23))(@types/react@17.0.80)(postcss@8.4.27))(@types/react@17.0.80)(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(handlebars@4.7.9)(lightningcss@1.33.0)(postcss@8.4.27)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@4.9.5)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))':
     dependencies:
       '@parcel/css': 1.14.0
       '@tarojs/helper': 3.6.23
@@ -29158,7 +29161,7 @@ snapshots:
       terser-webpack-plugin: 5.6.1(@swc/core@1.3.96)(csso@5.0.5)(esbuild@0.19.12)(lightningcss@1.33.0)(postcss@8.4.27)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       url-loader: 4.1.0(file-loader@6.0.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)))(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       vm2: 3.11.5
-      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
+      vue-loader: 15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
       webpack: 5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)
       webpack-chain: 6.5.1
       webpack-dev-server: 4.11.1(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
@@ -30534,6 +30537,12 @@ snapshots:
     dependencies:
       '@types/react': 17.0.80
 
+  '@types/react-router-config@5.0.11':
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.80
+      '@types/react-router': 5.1.20
+
   '@types/react-router-config@5.0.2':
     dependencies:
       '@types/history': 5.0.0
@@ -31088,7 +31097,7 @@ snapshots:
     dependencies:
       '@types/react': 16.14.70
       '@types/react-dom': 16.9.25(@types/react@16.14.70)
-      '@types/react-router-config': 5.0.2
+      '@types/react-router-config': 5.0.11
       '@umijs/runtime': 3.5.43(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -31258,35 +31267,35 @@ snapshots:
       dayjs: 1.11.21
       vtils: 2.59.0
 
-  '@vue/compiler-core@3.5.41':
+  '@vue/compiler-core@3.5.40':
     dependencies:
       '@babel/parser': 7.29.8
-      '@vue/shared': 3.5.41
+      '@vue/shared': 3.5.40
       entities: 7.0.1
       estree-walker: 2.0.2
       source-map-js: 1.2.1
 
-  '@vue/compiler-dom@3.5.41':
+  '@vue/compiler-dom@3.5.40':
     dependencies:
-      '@vue/compiler-core': 3.5.41
-      '@vue/shared': 3.5.41
+      '@vue/compiler-core': 3.5.40
+      '@vue/shared': 3.5.40
 
-  '@vue/compiler-sfc@3.5.41':
+  '@vue/compiler-sfc@3.5.40':
     dependencies:
       '@babel/parser': 7.29.8
-      '@vue/compiler-core': 3.5.41
-      '@vue/compiler-dom': 3.5.41
-      '@vue/compiler-ssr': 3.5.41
-      '@vue/shared': 3.5.41
+      '@vue/compiler-core': 3.5.40
+      '@vue/compiler-dom': 3.5.40
+      '@vue/compiler-ssr': 3.5.40
+      '@vue/shared': 3.5.40
       estree-walker: 2.0.2
       magic-string: 0.30.21
       postcss: 8.5.25
       source-map-js: 1.2.1
 
-  '@vue/compiler-ssr@3.5.41':
+  '@vue/compiler-ssr@3.5.40':
     dependencies:
-      '@vue/compiler-dom': 3.5.41
-      '@vue/shared': 3.5.41
+      '@vue/compiler-dom': 3.5.40
+      '@vue/shared': 3.5.40
 
   '@vue/component-compiler-utils@3.3.0(babel-core@6.26.3)(handlebars@4.7.9)(lodash@4.18.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)':
     dependencies:
@@ -31361,7 +31370,7 @@ snapshots:
 
   '@vue/shared@3.0.5': {}
 
-  '@vue/shared@3.5.41': {}
+  '@vue/shared@3.5.40': {}
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -35973,7 +35982,7 @@ snapshots:
     dependencies:
       '@babel/parser': 7.29.8
       '@babel/traverse': 7.29.8(supports-color@5.5.0)
-      '@vue/compiler-sfc': 3.5.41
+      '@vue/compiler-sfc': 3.5.40
       callsite: 1.0.0
       camelcase: 6.3.0
       cosmiconfig: 7.1.0
@@ -40601,7 +40610,7 @@ snapshots:
       jest-environment-jsdom: 26.6.2
       jest-environment-node: 26.6.2
       jest-get-type: 26.3.0
-      jest-jasmine2: 26.6.3(ts-node@10.9.2(@swc/core@1.15.47)(@types/node@20.19.43)(typescript@4.9.5))
+      jest-jasmine2: 26.6.3
       jest-regex-util: 26.0.0
       jest-resolve: 26.6.2
       jest-util: 26.6.2
@@ -40839,7 +40848,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jest-jasmine2@26.6.3(ts-node@10.9.2(@swc/core@1.15.47)(@types/node@20.19.43)(typescript@4.9.5)):
+  jest-jasmine2@26.6.3:
     dependencies:
       '@babel/traverse': 7.29.8(supports-color@5.5.0)
       '@jest/environment': 26.6.2
@@ -40860,11 +40869,7 @@ snapshots:
       pretty-format: 26.6.2
       throat: 5.0.0
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   jest-jasmine2@27.5.1:
     dependencies:
@@ -50670,7 +50675,7 @@ snapshots:
 
   vue-hot-reload-api@2.3.4: {}
 
-  vue-loader@15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)):
+  vue-loader@15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)):
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(babel-core@6.26.3)(handlebars@4.7.9)(lodash@4.18.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)
       css-loader: 6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27))
@@ -50680,7 +50685,7 @@ snapshots:
       vue-style-loader: 4.1.3
       webpack: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.4.27)
     optionalDependencies:
-      '@vue/compiler-sfc': 3.5.41
+      '@vue/compiler-sfc': 3.5.40
       prettier: 2.8.6
     transitivePeerDependencies:
       - arc-templates
@@ -50737,7 +50742,7 @@ snapshots:
       - walrus
       - whiskers
 
-  vue-loader@15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)):
+  vue-loader@15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)):
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(babel-core@6.26.3)(handlebars@4.7.9)(lodash@4.18.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)
       css-loader: 6.11.0(webpack@5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25))
@@ -50747,7 +50752,7 @@ snapshots:
       vue-style-loader: 4.1.3
       webpack: 5.89.0(@swc/core@1.15.47)(lightningcss@1.33.0)(postcss@8.5.25)
     optionalDependencies:
-      '@vue/compiler-sfc': 3.5.41
+      '@vue/compiler-sfc': 3.5.40
       prettier: 2.8.6
     transitivePeerDependencies:
       - arc-templates
@@ -50804,7 +50809,7 @@ snapshots:
       - walrus
       - whiskers
 
-  vue-loader@15.11.1(@vue/compiler-sfc@3.5.41)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)):
+  vue-loader@15.11.1(@vue/compiler-sfc@3.5.40)(babel-core@6.26.3)(css-loader@6.11.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)))(handlebars@4.7.9)(lodash@4.18.1)(prettier@2.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)):
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(babel-core@6.26.3)(handlebars@4.7.9)(lodash@4.18.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(underscore@1.13.8)
       css-loader: 6.11.0(webpack@5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27))
@@ -50814,7 +50819,7 @@ snapshots:
       vue-style-loader: 4.1.3
       webpack: 5.89.0(@swc/core@1.3.96)(lightningcss@1.33.0)(postcss@8.4.27)
     optionalDependencies:
-      '@vue/compiler-sfc': 3.5.41
+      '@vue/compiler-sfc': 3.5.40
       prettier: 2.8.6
     transitivePeerDependencies:
       - arc-templates

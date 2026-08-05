@@ -1,0 +1,12 @@
+{
+  //推荐安装的 VSCode 扩展列表
+  "recommendations": [
+    "lokalise.i18n-ally", // i18n Ally
+    "esbenp.prettier-vscode", // Prettier 扩展
+    "Gruntfuggly.todo-tree", // Todo Tree
+    "vscode-icons-team.vscode-icons", // vscode-icons,
+    "eamodio.gitlens", // GitLens
+    "xabikos.JavaScriptSnippets", // Javascirt(ES6) code snippets
+    "streetsidesoftware.code-spell-checker" // Code Spell Checker
+  ]
+}

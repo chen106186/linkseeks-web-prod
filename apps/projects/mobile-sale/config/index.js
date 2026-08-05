@@ -2,7 +2,6 @@ const path = require('path')
 const AppConfig = require('@apps/config')
 const defaultDefine = AppConfig.getEnvDefine()
 const BACK_GATEWAY = defaultDefine.OUT_BACK_GATEWAY
-const ENV_TYPE = process.env.ENV_TYPE || 'dev'
 console.log('代理的api网关：', BACK_GATEWAY)
 
 const config = {
@@ -29,7 +28,6 @@ const config = {
   ],
   defineConstants: {
     'process.env.BACK_GATEWAY': `"${BACK_GATEWAY}"`,
-    'process.env.ENV_TYPE': `"${ENV_TYPE}"`,
   },
   alias: {
     '@': path.resolve(__dirname, '..', 'src/'),

@@ -6,6 +6,7 @@ import { useIntl } from '@linkseeks/i18n'
 import Overlay from '@/components/Overlay'
 // import useCountDown from 'src/hooks/useCountDown';
 import styles from './index.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 
 interface Iprops {
   visible: boolean
@@ -55,7 +56,7 @@ const ShareModal: React.FC<Iprops> = (props: Iprops) => {
     <View className={styles['share-success']}>
       <View className={styles['share-success-title']}>
         <View className={styles['share-success-icon']}>
-          <Icons name="CheckFill" size={16} color="#00a98f" />
+          <Icons name="CheckFill" size={16} color={THEME_COLORS.primary} />
         </View>
         <Text className={styles['share-success-text']}>
           {intl.formatMessage({

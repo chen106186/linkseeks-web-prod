@@ -27,7 +27,7 @@
       flex-direction: row;
       background-color: #FFFFFF;
       border-radius: 4px;
-      @include border-thin(#F4F5F7);
+      @include border-thin($theme-border-light);
 
       &__active {
         border-color: $color-warning;
@@ -47,7 +47,7 @@
       &-img {
         width: 24px;
         height: 24px;
-        @include border-thin(#F4F5F7);
+        @include border-thin($theme-border-light);
       }
 
       &-name {

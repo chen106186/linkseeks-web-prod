@@ -4,7 +4,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 
   &-current {
     padding: 0 $spacing-v-md;
@@ -34,7 +34,7 @@
 
   &-list {
     padding: $spacing-v-md;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
 
     &-item {
       padding-top: $spacing-v-md;

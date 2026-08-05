@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .historical-analysis {
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 }
 .historical-analysis-container {
   display: flex;
@@ -59,8 +59,8 @@
   margin-right: 8px;
   padding: 4px 8px;
   border-radius: 4px;
-  border: 1px solid #F5F6F7;
-  background-color: #F5F6F7;
+  border: 1px solid $theme-border-light;
+  background-color: $theme-surface;
 }
 .tags-item__active {
   color: $theme-color;

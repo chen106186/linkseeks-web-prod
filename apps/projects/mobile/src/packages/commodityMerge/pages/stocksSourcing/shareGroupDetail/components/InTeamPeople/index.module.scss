@@ -37,7 +37,7 @@
     width: 240px * $hd;
 
     .empty-people {
-      background-color: #F5F6F7;
+      background-color: $theme-page-bg;
       width: 48px * $hd;
       height: 48px * $hd;
       border-radius: 24px * $hd;
@@ -59,7 +59,7 @@
         width: 48px * $hd;
         height: 48px * $hd;
         border-radius: 24px * $hd;
-        background-color: #F5F6F7;
+        background-color: $theme-page-bg;
       }
 
       .master {

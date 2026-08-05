@@ -2,6 +2,7 @@ import React from 'react'
 import { useIntl } from '@linkseeks/i18n'
 import { Icons, View, Text, Image } from '@apps/mobile-ui'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import './index.scss'
 
 interface Iprops {
@@ -35,7 +36,7 @@ const ActionStatus: React.FC<Iprops> = (props: Iprops) => {
       <View className="action-status-section">
         {(mode === 'fail' && <Image src={failImage} className="action-status-fail-icon" />) || (
           <View className="action-status-icon">
-            <Icons name="Right" color="#00a98f" size={16} />
+            <Icons name="Right" color={THEME_COLORS.primary} size={16} />
           </View>
         )}
         <Text>{STATUS_TEXT[mode]}</Text>

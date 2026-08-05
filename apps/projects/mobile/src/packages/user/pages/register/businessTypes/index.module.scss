@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .container {
-  background-color: #fff;
+  background-color: $theme-surface;
   padding: 0 16px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
       margin-bottom: 16px;
       font-size: 14px;
       text-align: center;
-      background: #F5F6F7;
+      background: $theme-disabled-bg;
       border: 1px solid transparent;
       border-radius: 8px;
       display: flex;
@@ -59,7 +59,7 @@
   .InfoName {
     font-size: 24px;
     font-family: PingFangSC-Regular;
-    color: #303133;
+    color: $theme-text;
     margin-bottom: 22px;
   }
 
@@ -85,7 +85,7 @@
 	font-family: PingFangSC-Regular;
 	font-size: 12px;
 	margin-top: 24px;
-	color: #909399;
+	color: $theme-text-secondary;
 	width: 100%;
 	text-align: center;
 }

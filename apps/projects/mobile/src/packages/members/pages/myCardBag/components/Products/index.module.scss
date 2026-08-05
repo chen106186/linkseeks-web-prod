@@ -10,11 +10,11 @@
       align-items: center;
       text-align: center;
       .font-black1 {
-        color: #303133;
+        color: $theme-text;
         font-weight: 800px;
       }
       .font-black2 {
-        color: #909399;
+        color: $theme-text-secondary;
       }
       .font-black3 {
         color: #ffffff;

@@ -6,14 +6,14 @@
 
 .loginConfirmText {
   font-size: 16px;
-  color: #303133;
+  color: $theme-text;
   font-weight: 900;
 }
 
 .loginConfirmTip {
   font-size: 12px;
   margin-top: 16px;
-  color: #909399;
+  color: $theme-text-secondary;
 }
 .foot {
   width: 100%;
@@ -35,12 +35,12 @@
   .cancelBtnText {
     width: 48%;
     margin-top: 10px;
-    background-color: #F5F6F7;
+    background-color: $theme-disabled-bg;
     // padding: 15px 0;
     border-radius: 10px;
     font-size: 14px;
-    color: #000;
-    border: 1px solid black;
+    color: $theme-title;
+    border: 1px solid $theme-border;
     text-align: center;
   }
 }

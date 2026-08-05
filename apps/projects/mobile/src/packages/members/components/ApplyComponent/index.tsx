@@ -7,6 +7,7 @@ import { Equity } from '../MemberPower/index'
 import ShopCreditInfo from '@/components/ShopCreditInfo'
 import Router from '@/utils/router'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import { ShopInfoType } from '@/store/templateStore/model'
 import { useIntl } from '@linkseeks/i18n'
 import {
@@ -262,7 +263,7 @@ const MemberApplyComponent = ({ shopInfo, applyState, noShop, updateApplyState }
               />
             )}
             <Text className={styles['shop-name']}>{shopInfoTop?.name}</Text>
-            {!noShop && <Icons name="ChevronRight" size={14} color="#303133" />}
+            {!noShop && <Icons name="ChevronRight" size={14} color={THEME_COLORS.title} />}
           </View>
           {!noShop && (
             <View style={{ marginTop: pxTransform(4) }}>
@@ -285,12 +286,12 @@ const MemberApplyComponent = ({ shopInfo, applyState, noShop, updateApplyState }
         </View>
         {!noShop && (
           <View className={styles['collect-style']} onClick={handleCollect}>
-            <Icons name={isCollected ? 'StarFill' : 'Star'} size={12} color={isCollected ? '#00A98F' : '#252D37'} />
+            <Icons name={isCollected ? 'StarFill' : 'Star'} size={12} color={isCollected ? THEME_COLORS.primary : THEME_COLORS.title} />
             <Text
               style={{
                 fontSize: pxTransform(10),
                 marginLeft: pxTransform(4),
-                color: isCollected ? '#00A98F' : '#252D37',
+                color: isCollected ? THEME_COLORS.primary : THEME_COLORS.title,
               }}
             >
               {intl.formatMessage({ id: 'member.components.apply_collect', defaultMessage: '收藏' })}

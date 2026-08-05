@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +24,7 @@
   .btn {
     text-align: center;
     font-size: 14px;
-    background-color: #F5F6F7;
+    background-color: $theme-disabled-bg;
     border-radius: 8px;
     width: 100%;
     margin-top: 10px;

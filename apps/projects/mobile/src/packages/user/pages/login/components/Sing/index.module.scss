@@ -36,14 +36,14 @@
 
     Input {
       flex: 1;
-      color: #303133;
+      color: $theme-text;
       font-size: 14px;
       border: none !important;
     }
 
     .fill {
       padding: 0 10px;
-      border-right: 1px solid #F4F5F7;
+      border-right: 1px solid $theme-border-light;
       display: flex;
       align-items: center;
       margin-right: 12px;
@@ -62,7 +62,7 @@
     margin-bottom: 40px;
 
     taro-text-core, Text {
-      border-left: 1px solid #F4F5F7;
+      border-left: 1px solid $theme-border-light;
       padding-left: 14px;
       width: 70px;
       text-align: center;

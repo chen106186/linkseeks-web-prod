@@ -1,8 +1,10 @@
+@import '@/styles/variables.scss';
+
 .page {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 }
 .padd {
   width: 100%;

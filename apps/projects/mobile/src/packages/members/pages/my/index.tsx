@@ -7,6 +7,7 @@ import { getMemberMobileInfoApplyCondition } from '@apps/apis'
 import Header from '@/components/NavBar'
 import ApplyComponent from '../../components/ApplyComponent/index'
 import MemberPower from '../../components/MemberPower/index'
+import { THEME_COLORS } from '@/constants/theme'
 type RouteParams = {
   upperMemberId: string
   upperRoleId: string
@@ -46,7 +47,7 @@ const MemberApply = () => {
     <View
       style={{
         height: '100vh',
-        backgroundColor: '#F5F6F7',
+        backgroundColor: THEME_COLORS.page,
       }}
     >
       {arr.includes(Number(applyState?.status)) && (

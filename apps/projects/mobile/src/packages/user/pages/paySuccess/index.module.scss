@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .paySuccess{
   padding: 24px;
-  background: #F5F6F7;
+  background: $theme-page-bg;
   &-container{
     padding: 16px;
     display: flex;
@@ -22,6 +24,6 @@
     color: #fff;
     text-align: center;
     border-radius: 8px;
-    background: #007BFC;
+    background: $theme-primary;
   }
 }

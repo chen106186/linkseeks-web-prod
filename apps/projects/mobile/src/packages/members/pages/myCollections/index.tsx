@@ -7,6 +7,7 @@ import BusinessCard from '@/components/BusinessCard'
 import MellowCard from '@/components/MellowCard'
 import Loading from '@/components/Loading'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import { useIntl } from '@linkseeks/i18n'
 import DeviceEventEmitter from '@/utils/lib/DeviceEventEmitter'
 import Router from '@/utils/router'
@@ -402,8 +403,8 @@ const MyCollections: React.FC = () => {
           display: 'flex',
           width: '100%',
           flexDirection: 'column',
-          backgroundColor: '#F4F5F7',
-          borderTopColor: '#F4F5F7',
+          backgroundColor: THEME_COLORS.page,
+          borderTopColor: THEME_COLORS.page,
           borderTopWidth: 0.5,
         }}
       >

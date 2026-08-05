@@ -9,6 +9,7 @@ import MallTabBottom from '@/components/MallTabBottom'
 import ApplyComponent from '../../components/ApplyComponent/index'
 import MemberPower from '../../components/MemberPower/index'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 const MemberApply = () => {
   const shopInfo: any = getCurrentInstance()?.router?.params
   const arr = [2, 4, 6, 7]
@@ -52,7 +53,7 @@ const MemberApply = () => {
       <View
         style={{
           height: '100vh',
-          backgroundColor: '#F5F6F7',
+          backgroundColor: THEME_COLORS.page,
           paddingTop: pxTransform(1),
         }}
       >

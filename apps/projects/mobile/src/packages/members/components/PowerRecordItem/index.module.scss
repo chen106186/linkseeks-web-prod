@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .list {
   width: 100%;
-  background-color: #ffffff;
+  background-color: $theme-surface;
 }
 .list-item {
   padding-left: 12px;
@@ -9,8 +11,8 @@
   padding-bottom: 8px;
   display: flex;
   align-items: center;
-  border-color: #f4f5f7;
-  background-color: #ffffff;
+  border-color: $theme-border-light;
+  background-color: $theme-surface;
 }
 .list-item-left {
   flex: 1;
@@ -20,14 +22,14 @@
 .list-item-name {
   margin-bottom: 8px;
   font-size: 14px;
-  color: #303133;
+  color: $theme-text;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .list-item-desc {
   font-size: 14px;
-  color: #909399;
+  color: $theme-text-secondary;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

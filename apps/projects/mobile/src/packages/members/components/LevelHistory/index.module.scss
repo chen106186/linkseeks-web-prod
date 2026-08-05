@@ -1,8 +1,10 @@
+@import '@/styles/variables.scss';
+
 .list {
   flex: 1;
   width: 100%;
   // padding-bottom: 96px;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   padding: 12px;
   overflow: hidden;
   display: flex;
@@ -17,9 +19,9 @@
   .actions-title {
     padding: 4px 8px;
     border-radius: 10px;
-    background: #fff;
+    background: $theme-surface;
     font-size: 12px;
-    color: #303133;
+    color: $theme-text;
   }
 }
 .scroll-list {

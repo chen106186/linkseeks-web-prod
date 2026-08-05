@@ -6,6 +6,7 @@ import { useIntl } from '@linkseeks/i18n'
 import { Button } from '@tarojs/components'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 const PaySuccess = () => {
   const { tradeCode }: any = getCurrentInstance()?.router?.params
   const intl = useIntl()
@@ -22,7 +23,7 @@ const PaySuccess = () => {
   return (
     <View className={styles['paySuccess']}>
       <View className={styles['paySuccess-container']}>
-        <Icons name="CheckFill" color="#00A98F" size={64} />
+        <Icons name="CheckFill" color={THEME_COLORS.primary} size={64} />
         <Text className={styles['paySuccess-content']}>
           {intl.formatMessage({
             id: 'pay.toast.success',

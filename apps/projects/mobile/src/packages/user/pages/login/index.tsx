@@ -9,6 +9,7 @@ import ModeMobile from '@/components/Modemobile'
 import { useSafeArea } from '@apps/mobile-services'
 import useStores from '@/store/useStores'
 import { REGISTER_STORE_DATA } from '@/constants/storage'
+import { THEME_COLORS } from '@/constants/theme'
 import useLogin from './services/hooks/useLogin'
 import { LoginContext, useLoginInit } from './services/contexts'
 import { loginSuccess } from './services/features'
@@ -148,7 +149,7 @@ const Login = () => {
               <View
                 className={styles['title']}
                 style={{
-                  color: '#909399',
+                  color: THEME_COLORS.textSecondary,
                 }}
               >
                 {intl.formatMessage({

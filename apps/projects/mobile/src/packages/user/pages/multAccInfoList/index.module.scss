@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .multWrapper {
   display: flex;
   justify-content: center;
@@ -40,7 +42,7 @@
     }
 
     &.active {
-      border: 1px solid #00a98f;
+      border: 1px solid $theme-primary;
       background-color: #ebf9f6;
       .multText {
         color: #5c626a;

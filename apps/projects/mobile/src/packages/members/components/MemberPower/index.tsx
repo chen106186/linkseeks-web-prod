@@ -10,6 +10,7 @@ import MellowCard from '@/components/MellowCard'
 import Router from '@/utils/router'
 import Header from '@/components/NavBar'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import { getMemberMobileInfoDetailLevelRightBasic, getMemberMobileInfoShopLevelRightBasic } from '@apps/apis'
 import { getMarketingMobileCouponDetailCount } from '@apps/apis'
 import { getCommodityMobileStoreMobileFindByMemberIdAndRoleId } from '@apps/apis'
@@ -248,7 +249,7 @@ export const Equity: React.FC<EquityProps> = (props: EquityProps) => {
               <View onClick={() => toEquityRecord()}>
                 <Text style={{ fontSize: pxTransform(12), color: '#91959B' }}>
                   {intl.formatMessage({ id: 'member.components.power_equity_extra', defaultMessage: '权益记录' })}
-                  <Icons customStyle={{ marginLeft: pxTransform(6) }} name="ChevronRight" size={14} color="#909399" />
+                  <Icons customStyle={{ marginLeft: pxTransform(6) }} name="ChevronRight" size={14} color={THEME_COLORS.textSecondary} />
                 </Text>
               </View>
             )
@@ -605,7 +606,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
               <Statistic
                 bodyStyle={statistic_bodyStyle}
                 titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                valueStyle={{ color: THEME_COLORS.primary, fontSize: pxTransform(20) }}
                 title={intl.formatMessage({
                   id: 'member.components.power_level_1',
                   defaultMessage: '累计返现金额(元)',
@@ -636,7 +637,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
               <Statistic
                 bodyStyle={statistic_bodyStyle}
                 titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                valueStyle={{ color: THEME_COLORS.primary, fontSize: pxTransform(20) }}
                 title={intl.formatMessage({ id: 'member.components.power_level_2', defaultMessage: '可用积分' })}
                 value={
                   powerInfo && powerInfo.currentPoint
@@ -661,7 +662,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
                 <Statistic
                   bodyStyle={statistic_bodyStyle}
                   titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                  valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                  valueStyle={{ color: THEME_COLORS.primary, fontSize: pxTransform(20) }}
                   title={intl.formatMessage({ id: 'member.components.power_coupon', defaultMessage: '优惠券' })}
                   value={couponNum}
                 />
@@ -674,7 +675,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
                 }}
                 style={{ position: 'absolute', right: pxTransform(12), bottom: pxTransform(16) }}
               >
-                <Icons name="ChevronRight" size={14} color="#909399" />
+                <Icons name="ChevronRight" size={14} color={THEME_COLORS.textSecondary} />
               </View>
             )}
           </Grid>
@@ -694,13 +695,13 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
                 })
               }}
             >
-              <Text style={{ fontSize: pxTransform(16), color: '#909399' }}>
+              <Text style={{ fontSize: pxTransform(16), color: THEME_COLORS.textSecondary }}>
                 {Number(moneyInfo?.accountBalance - moneyInfo?.lockBalance || 0)
                   .toFixed(2)
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </Text>
-              <Icons name="ChevronRight" size={14} color="#909399" customStyle={{ marginTop: pxTransform(4) }} />
+              <Icons name="ChevronRight" size={14} color={THEME_COLORS.textSecondary} customStyle={{ marginTop: pxTransform(4) }} />
             </View>
           </View>
         )}

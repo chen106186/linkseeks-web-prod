@@ -1,13 +1,13 @@
 @import "@/styles/variables.scss";
 
 .containers {
-  background: #f4f5f7;
+  background: $theme-page-bg;
   display: flex;
   flex-direction: column;
   height: 100vh;
 
 	.string-input {
-		background-color:  #F5F6F7;
+		background-color: $theme-disabled-bg;
 	}
 
   :global {
@@ -30,7 +30,7 @@
     }
 
     .at-input input {
-      color: #252d37;
+      color: $theme-title;
       font-size: 14px !important;
 
     }
@@ -50,7 +50,7 @@
       padding: 8px 14px;
       background-color: $theme-color;
       font-family: PingFangSC-Regular;
-      color: #303133;
+      color: $theme-text;
       height: 120px;
       padding-top: 16px;
 
@@ -76,12 +76,12 @@
 
       .List {
         padding: 8px 14px;
-        background-color: #fff;
+      background-color: $theme-surface;
         margin-bottom: 10px;
       }
       .Itemtitle {
         font-size: 16px;
-        color: #252d37;
+      color: $theme-title;
         font-weight: bold;
         display: flex;
         align-items: center;
@@ -133,7 +133,7 @@
 	font-family: PingFangSC-Regular;
 	font-size: 12px;
 	margin-top: 24px;
-	color: #909399;
+	color: $theme-text-secondary;
 	width: 100%;
 	text-align: center;
 }
@@ -151,7 +151,7 @@
 		font-size: 12px;
 		justify-content: center;
 		align-items: center;
-		background-color: #F5F6F7;
+		background-color: $theme-disabled-bg;
 		border-radius: 4px;
 		height: 32px;
 
@@ -168,7 +168,7 @@
 				border-color: transparent;
 
 				&__check {
-					border: 1px solid #00a98f;
+					border: 1px solid $theme-primary;
 				}
 				.icon {
 					visibility: hidden;
@@ -219,7 +219,7 @@
   .UploadWarpText {
     text-align: center;
     font-size: 14px;
-    color: #909399;
+    color: $theme-text-secondary;
   }
 }
 .Img {

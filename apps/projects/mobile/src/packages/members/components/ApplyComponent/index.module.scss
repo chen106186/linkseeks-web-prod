@@ -11,7 +11,7 @@
     padding: 12px;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: $theme-surface;
     border-radius: 8px;
     //
     display: flex;
@@ -27,14 +27,14 @@
         flex-direction: row;
         .shop-name {
           margin-right: 6px;
-          color: #303133;
+          color: $theme-text;
           font-weight: bold;
         }
       }
       .collect-style {
         display: flex;
         flex-direction: row;
-        background-color: #f5f6f7;
+        background-color: $theme-disabled-bg;
         border-radius: 4px;
         padding-left: 8px;
         padding-right: 8px;
@@ -49,7 +49,7 @@
     flex-direction: column;
     padding-bottom: 12px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: $theme-surface;
     .register-btn {
       flex: 1;
       display: flex;
@@ -72,11 +72,11 @@
       }
     }
     .agreement-tip {
-      color: #909399;
+      color: $theme-text-secondary;
       font-size: 12px;
     }
     .agreement-text {
-      color: #303133;
+      color: $theme-text;
       font-size: 12px;
     }
   }

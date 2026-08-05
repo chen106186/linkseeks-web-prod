@@ -18,11 +18,12 @@ import {
 } from '@apps/apis'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 let flag: boolean = true
 const DOC_COLOR = (TYPE: number) => {
   switch (TYPE) {
     case 4:
-      return '#00A98F'
+      return THEME_COLORS.primary
     case 5:
       return '#EF3346'
     default:
@@ -421,13 +422,13 @@ const InquiryListLayout: React.FC<{}> = () => {
             <View
               className={styles['inquiryQuotation-docIcon']}
               style={{
-                backgroundColor: '#EBF9F6',
+                backgroundColor: THEME_COLORS.primarySoft,
               }}
             >
               <Text
                 className={styles['inquiryQuotation-docIconText']}
                 style={{
-                  color: '#00A98F',
+                  color: THEME_COLORS.primary,
                 }}
               >
                 {intl.formatMessage({

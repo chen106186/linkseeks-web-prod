@@ -24,6 +24,7 @@ import {
 import useGetShareQRCodes from '../../hooks/useGetShareQRCodes'
 import Progress from '@/components/Progress'
 import NavBar from '@/components/NavBar'
+import { THEME_COLORS } from '@/constants/theme'
 import Taro from '@tarojs/taro'
 import ShareModal from '@/packages/distribution/components/ShareModal/invitationShare'
 
@@ -400,8 +401,8 @@ const DistributionApply = () => {
           </View>
           <View style={{ marginTop: pxTransform(8) }}>
             <Progress
-              strokeColor="#00A98F"
-              trailColor="rgba(0, 169, 143, 0.3)"
+              strokeColor={THEME_COLORS.primary}
+              trailColor="rgba(216, 97, 46, 0.3)"
               strokeWidth={6}
               percent={percentCount}
               customRenderText={

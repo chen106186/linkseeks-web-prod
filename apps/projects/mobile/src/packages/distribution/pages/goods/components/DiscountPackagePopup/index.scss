@@ -10,7 +10,7 @@
     z-index: 1;
     padding-right: $spacing-h-md;
     padding-left: $spacing-h-md;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
 
     &-item {
       margin-bottom: $spacing-v-md;
@@ -106,7 +106,7 @@
             align-items: center;
 
             .label-primary {
-              background-color: #EBF9F6;
+              background-color: $theme-primary-soft;
               color: $theme-color;
               border: none;
             }

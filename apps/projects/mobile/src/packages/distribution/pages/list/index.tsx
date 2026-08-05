@@ -11,6 +11,7 @@ import styles from './index.module.scss'
 import { getOrderMobileSocialDistributionDownline } from '@apps/apis'
 import { formatMoney, formatDateFromTimestamp } from '../../utils/formatter'
 import Loading from '@/components/Loading'
+import { THEME_COLORS } from '@/constants/theme'
 const logoIcon = 'http://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/miniprogram/assets/images/default_logo.png'
 
 const DistributorListPage = () => {
@@ -149,7 +150,7 @@ const DistributorListPage = () => {
             customClassName={styles['top-search']}
             customPlaceholderClass={styles['search-field-placeholder']}
             // customSearchFieldClass={styles['search-field']}
-            innerBackground="#F5F6F7"
+            innerBackground={THEME_COLORS.surface}
             shape="round"
             clearable
           />

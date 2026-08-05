@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .page {
-  background: #f7f8fa;
+  background: $theme-page-bg;
   height: 100vh;
   font-size: 14px;
   position: relative;
@@ -76,7 +76,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 8px;
-    background: #ebf9f6;
+    background: $theme-primary-soft;
     padding: 12px;
     color: #303133;
     font-size: 14px;
@@ -160,4 +160,3 @@
     border-radius: 8px;
   }
 }
-

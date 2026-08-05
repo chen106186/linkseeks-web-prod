@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .warp {
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
 }
 .title {
   text-align: center;
@@ -46,7 +48,7 @@
 .money-main {
   padding: 8px;
   height: 60vh;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
   overflow-y: scroll;
 }
 .money-warp {
@@ -71,7 +73,7 @@
   border-radius: 4px;
   font-size: 12px;
   text-align: center;
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 	color: #252D37;
 	padding: 4px 12px;
 }

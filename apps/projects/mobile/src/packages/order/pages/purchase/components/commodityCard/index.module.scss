@@ -177,7 +177,6 @@
   color: red;
 }
 .product-material {
-  // background-color: #F5F6F7;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 4px;
@@ -188,7 +187,7 @@
 .product-material-text {
   color: #91959b;
   font-size: 12px;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
 }
 .discount {
   display: flex;

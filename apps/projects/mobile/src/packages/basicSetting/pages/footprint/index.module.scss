@@ -13,7 +13,7 @@
     flex-direction: column;
     flex: 1;
     height: 100%;
-    background-color: #f7f8fa;
+    background-color: $theme-page-bg;
   }
   &-pageEdit {
     position: fixed;
@@ -73,7 +73,7 @@
   }
   &-iconWarp {
     width: 25px;
-    background-color: #ffffff;
+    background-color: $theme-surface;
     margin-right: $spacing-h-sm;
   }
   &-footWarp {
@@ -86,7 +86,7 @@
     padding-left: $spacing-h-md;
   }
   &-contentWarp {
-    background-color: #ffffff;
+    background-color: $theme-surface;
     border-radius: 6px;
     overflow: hidden;
     padding: $spacing-h-lg;

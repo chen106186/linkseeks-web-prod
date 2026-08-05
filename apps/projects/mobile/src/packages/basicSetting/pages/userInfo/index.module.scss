@@ -5,14 +5,14 @@ $middlesize: 14px;
 .userinfo-container {
   margin: 0;
   height: 100vh;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 .head {
-  background-color: #fff;
+  background-color: $theme-surface;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -73,7 +73,7 @@ $middlesize: 14px;
   font-size: $middlesize;
 }
 .mian {
-  background-color: #fff;
+  background-color: $theme-surface;
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 8px;
@@ -85,7 +85,7 @@ $middlesize: 14px;
   flex-direction: row;
   justify-content: space-between;
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   border-bottom-style: solid;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -101,11 +101,11 @@ $middlesize: 14px;
 .logout {
   margin-top: 5px;
   width: 100%;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
 }
 .logout-btn {
   width: 100%;
-  background-color: #fff;
+  background-color: $theme-surface;
   text-align: center;
   border-radius: 2px;
 }

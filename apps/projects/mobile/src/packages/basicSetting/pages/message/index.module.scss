@@ -1,9 +1,11 @@
+@import '@/styles/variables.scss';
+
 .page {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 
 .extra-text {
@@ -14,9 +16,9 @@
 .scroll-view {
   width: 100%;
   border-top-width: 1px;
-  border-top-color: #f4f5f7;
+  border-top-color: $theme-border-light;
   flex: 1;
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 
 .section {
@@ -30,8 +32,8 @@
   width: 100%;
   justify-content: center;
   border-bottom-width: 0.5;
-  border-bottom-color: #f4f5f7;
-  background-color: #fff;
+  border-bottom-color: $theme-border-light;
+  background-color: $theme-surface;
 }
 
 .msg-icon {

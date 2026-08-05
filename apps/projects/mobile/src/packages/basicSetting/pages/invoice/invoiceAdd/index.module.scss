@@ -12,7 +12,7 @@ $importmiddle: 14px;
   flex: 1;
   flex-direction: column;
   height: 100vh;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   width: 100%;
 }
 .main {
@@ -21,7 +21,7 @@ $importmiddle: 14px;
 }
 .warp {
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   border-radius: 2px;
   padding: 16px 12px;
   padding-bottom: 0px;
@@ -88,7 +88,7 @@ $importmiddle: 14px;
   color: $theme-color;
 }
 .tag-bg {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
 }
 .tag-bg-text {
   color: $sky-blue;
@@ -149,7 +149,7 @@ $importmiddle: 14px;
   padding: 5px;
   width: 150%;
   margin-left: -20;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
 }
 .enterprise {
   flex-direction: column;
@@ -157,7 +157,7 @@ $importmiddle: 14px;
 .invoicebtn-group {
   height: 90px;
   padding: 8px;
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 .button {
   margin-bottom: 20px;

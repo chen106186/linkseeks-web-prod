@@ -454,7 +454,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: '#F4F5F7',
+                      borderBottomColor: THEME_COLORS.borderLight,
                     }}
                     onChange={(e) =>
                       changeInputValue(
@@ -486,7 +486,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: '#F4F5F7',
+                      borderBottomColor: THEME_COLORS.borderLight,
                     }}
                     onChange={(e) => changeInputValue('phone', e)}
                   />
@@ -613,7 +613,7 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: '#F4F5F7',
+                          borderBottomColor: THEME_COLORS.borderLight,
                         }}
                         onChange={(e) => changeInputValue('postalCode', e)}
                       />
@@ -637,7 +637,7 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: '#F4F5F7',
+                          borderBottomColor: THEME_COLORS.borderLight,
                         }}
                         onChange={(e) => changeInputValue('tel', e)}
                       />

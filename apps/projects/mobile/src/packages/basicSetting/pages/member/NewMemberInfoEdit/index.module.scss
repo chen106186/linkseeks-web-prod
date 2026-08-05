@@ -4,7 +4,7 @@
 	height: 100vh;
 	display: flex;
   flex-direction: column;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
 	:global{
 		.radio-button-group {
 			width: 100% !important;
@@ -13,7 +13,7 @@
 }
 .page {
 	flex: 1;
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   padding-top: 16px;
 }
 .multi-picker {
@@ -32,7 +32,7 @@
   justify-content: center;
 }
 .container {
-  background-color: #fff;
+  background-color: $theme-surface;
   flex-direction: column;
   padding: 18px;
   margin-bottom: 10px;
@@ -41,7 +41,7 @@
   font-size: 24px;
   padding: 18px;
   padding-top: 50px;
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 .speed-item {
   height: 3px;
@@ -102,7 +102,7 @@
 }
 .input-container {
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   margin-bottom: 10px;
 }
 .input {
@@ -128,7 +128,7 @@
   font-size: 12px;
 }
 .submit {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -206,14 +206,14 @@
 }
 
 .long{
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 	height: 40px;
 	border-radius: 8px;
 	padding: 10px 8px;
 }
 
 .select-item{
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 	height: 40px;
 	border-radius: 8px;
 	padding: 10px 8px;

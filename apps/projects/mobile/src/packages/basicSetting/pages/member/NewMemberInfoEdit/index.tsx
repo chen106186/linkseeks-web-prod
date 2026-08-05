@@ -19,6 +19,7 @@ import uploadFileRequest from '@/utils/uploadFileRequest'
 import { useIntl } from '@linkseeks/i18n'
 import { getOssUrlPath } from '@apps/constants'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import {
   View,
   Button,
@@ -352,7 +353,7 @@ const NewMemberInfoEdit = () => {
           margin: pxTransform(0),
           padding: pxTransform(0),
           marginLeft: pxTransform(0),
-          borderBottomColor: '#F4F5F7',
+          borderBottomColor: THEME_COLORS.borderLight,
         }}
         className={styles['long']}
         type={isLong ? 'number' : 'text'}

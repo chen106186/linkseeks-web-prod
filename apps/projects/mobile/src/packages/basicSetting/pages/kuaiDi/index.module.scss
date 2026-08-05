@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .container {
-  background-color: "#F4F5F7";
+  background-color: $theme-page-bg;
   flex: 1;
   position: "relative";
   height: 100vh;

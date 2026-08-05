@@ -91,7 +91,7 @@ const InvoiceAdd = (props: any) => {
             value={formItems.bankOfDeposit}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: THEME_COLORS.borderLight,
             }}
             onChange={(e) => changeInputValue('bankOfDeposit', e)}
           />
@@ -115,7 +115,7 @@ const InvoiceAdd = (props: any) => {
             value={formItems.account}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: THEME_COLORS.borderLight,
             }}
             onChange={(e) => changeInputValue('account', e)}
           />
@@ -139,7 +139,7 @@ const InvoiceAdd = (props: any) => {
             maxlength={80}
             value={formItems.address}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: THEME_COLORS.borderLight,
             }}
             onChange={(e) => changeInputValue('address', e)}
           />
@@ -162,7 +162,7 @@ const InvoiceAdd = (props: any) => {
             value={formItems.tel}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: THEME_COLORS.borderLight,
             }}
             onChange={(e) => changeInputValue('tel', e)}
           />
@@ -474,7 +474,7 @@ const InvoiceAdd = (props: any) => {
               maxlength={40}
               value={formItems.invoiceTitle}
               style={{
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: THEME_COLORS.borderLight,
               }}
               onChange={(e) => changeInputValue('invoiceTitle', e)}
             />
@@ -498,7 +498,7 @@ const InvoiceAdd = (props: any) => {
               value={formItems.taxNo}
               className={cx(styles['title'], styles['input-wrap'])}
               style={{
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: THEME_COLORS.borderLight,
               }}
               onChange={(e) => changeInputValue('taxNo', e)}
             />

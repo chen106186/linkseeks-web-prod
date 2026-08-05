@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 .container {
   height: 100vh;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   padding: 8px;
   margin: 0;
   flex: 1;
@@ -33,7 +33,7 @@
   height: 100%;
 }
 .box {
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   flex-direction: row;
   align-items: center;
   padding-top: 5px;
@@ -44,7 +44,7 @@
 .boder {
   padding-left: 5px;
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
 }
 .textarea {
   border-bottom-width: 0px;
@@ -57,17 +57,17 @@
   flex: 0.9;
 }
 .address {
-  background-color: #fff;
+  background-color: $theme-surface;
   flex-direction: row;
   border-radius: 8px;
 }
 .addresslable {
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 .mianlable {
   padding-top: 16px;
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $theme-border-light;
   padding-bottom: 16px;
   padding-left: 6px;
   padding-right: 6px;
@@ -80,7 +80,7 @@
   padding-left: 5px;
   border-left-width: 1px;
   padding-right: 10px;
-  border-left-color: #f7f8fa;
+  border-left-color: $theme-border-light;
   justify-content: space-between;
 }
 .code {
@@ -117,7 +117,7 @@
   color: #909399;
   text-align: left;
   width: 100%;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
 }
 .address-list {
   height: 200px;
@@ -147,7 +147,7 @@
 .error {
   color: red;
   font-size: 14px;
-  background-color: #fff;
+  background-color: $theme-surface;
 }
 .button {
   margin-top: 40px;
@@ -155,7 +155,7 @@
   background-color: $theme-color;
 }
 .address-item {
-  background-color: #fff;
+  background-color: $theme-surface;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -271,4 +271,3 @@
   overflow: hidden;
   white-space: nowrap;
 }
-

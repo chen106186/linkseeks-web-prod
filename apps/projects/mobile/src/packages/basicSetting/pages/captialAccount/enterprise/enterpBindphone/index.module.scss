@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .page {
   width: 100%;
   height: 100vh;
@@ -26,7 +28,7 @@
       color: #fff;
       text-align: center;
       font-size: 14px;
-      background-color: #007bfc;
+      background-color: $theme-primary;
     }
   }
 }
@@ -40,5 +42,5 @@
 }
 
 .goSign {
-	color: #00a98f;
+	color: $theme-primary;
 }

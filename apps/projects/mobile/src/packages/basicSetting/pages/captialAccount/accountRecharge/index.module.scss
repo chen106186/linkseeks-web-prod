@@ -1,10 +1,12 @@
+@import '@/styles/variables.scss';
+
 .AccountRecharge{
   padding: 8px;
-  background: #F5F6F7;
+  background: $theme-page-bg;
   &-Container{
     padding: 20px;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: $theme-surface;
     &-title{
       font-family: PingFangSC-Regular;
       font-size: 14px;
@@ -16,12 +18,12 @@
     text-align: center;
     padding: 10px 0;
     border-radius: 7px;
-    background: #007BFC;
+    background: $theme-primary;
   }
 }
 
 .modelWrap{
-  background-color: #fff;
+  background-color: $theme-surface;
   width: 296px;
   border-radius: 16px;
   position: relative;

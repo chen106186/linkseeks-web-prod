@@ -19,6 +19,7 @@ import Cell from '@/components/Cell'
 import Bookshelf from '../../../components/Bookshelf'
 import AsProductsList from '../../../../afterTodo/components/AsProductsList'
 import styles from './index.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 
 export interface FileListItem {
   /**
@@ -344,7 +345,7 @@ const RefundList: React.FC<IProps> = (props: IProps) => {
                   </View>
                 </View>
                 <View className={styles['list-item-progress']}>
-                  <Progress percent={[30, 10]} strokeColor={['#00a98f', '#ef3346']} showInfo={false} />
+                  <Progress percent={[30, 10]} strokeColor={[THEME_COLORS.primary, '#ef3346']} showInfo={false} />
                 </View>
                 <View className={styles['list-item-tag']}>
                   <Text

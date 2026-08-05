@@ -3,12 +3,12 @@
   font-size: 14px;
 }
 .AccountWithdrawWarp{
-  background: #F5F6F7;
+  background: $theme-page-bg;
   padding: 8px;
   .AccountWithdraw{
     padding: 0px 10px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: $theme-surface;
     border-radius: 5px;
     &-title{
       padding: 15px 0;
@@ -40,7 +40,7 @@
         &-Payright{
           font-family: PingFangSC-Regular;
           font-size: 12px;
-          color: #007BFC;
+          color: $theme-primary;
         }
       }
       .boderNode{
@@ -57,7 +57,7 @@
     text-align: center;
     // padding: 10px 0;
     border-radius: 7px;
-    background: #007BFC;
+    background: $theme-primary;
   }
   .tip{
     margin-top: 20px;

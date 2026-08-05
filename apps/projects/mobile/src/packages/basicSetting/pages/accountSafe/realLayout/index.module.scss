@@ -1,9 +1,11 @@
+@import '@/styles/variables.scss';
+
 .realLayout {
   display: flex;
   height: 100vh;
   flex: 1;
   flex-direction: column;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 
   &-page {
     width: 100%;
@@ -16,7 +18,7 @@
     padding-bottom: 50px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    background-image: linear-gradient(to right, #00D4B0, #0091D2);
+    background-image: linear-gradient(to right, $theme-primary, $theme-accent);
   }
   &-backLayout {
     display: flex;
@@ -62,7 +64,7 @@
     margin: 0 8px;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     margin-top: -25px;
     z-index: 99;
   }

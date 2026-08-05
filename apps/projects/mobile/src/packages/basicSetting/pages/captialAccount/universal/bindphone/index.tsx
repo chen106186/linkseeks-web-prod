@@ -10,6 +10,7 @@ import { postPayAllInPayMemberRegAndBindPhoneApply, postPayAllInPayMemberRegAndB
 import styles from './index.module.scss'
 import { getAsyncStorage } from '@apps/mobile-services/utils/storage'
 import { USER_INFO } from '@/constants/storage'
+import { THEME_COLORS } from '@/constants/theme'
 import usePhoneVerify from '@apps/services/verify/usePhoneVerify'
 import LineCard from '../../components/LineCard'
 import AgreementLayout from '@/components/Agreement'
@@ -124,7 +125,7 @@ const BindPhoneBlock = () => {
           consentText="阅读并同意"
           customClassName={styles.agreementContent}
           columnType="2"
-          color={'#007bfc'}
+          color={THEME_COLORS.primary}
         />
       </View>
     </View>

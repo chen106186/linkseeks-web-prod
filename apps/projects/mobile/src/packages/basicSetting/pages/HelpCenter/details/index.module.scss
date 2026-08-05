@@ -1,10 +1,12 @@
+@import '@/styles/variables.scss';
+
 .help_details {
   padding: 12px;
   .help_title {
     font-size: 16px;
     line-height: 16px;
     padding-left: 8px;
-    border-left: 3px solid #00a98f;
+    border-left: 3px solid $theme-primary;
     margin-bottom: 24px;
     margin-top: 2px;
   }

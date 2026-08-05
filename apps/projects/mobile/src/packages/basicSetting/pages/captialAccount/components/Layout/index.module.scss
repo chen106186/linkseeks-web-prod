@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .page{
   display: flex;
   flex: 1;
@@ -28,11 +30,11 @@
        opacity: 0.45;
     }
     .at-steps__num{
-      color: #007BFC;
+      color: $theme-primary;
     }
   }
   .header{
-        background-color: #3877FF;
+        background-color: $theme-primary;
        .headerTitle {
           color: #fff
         }
@@ -42,7 +44,7 @@
     display: flex;
     position: relative;
     .step{
-      background-color: #3877FF;
+      background-color: $theme-primary;
       padding-top: 40px;
       padding-bottom: 40px;
 			margin-bottom: -20px;

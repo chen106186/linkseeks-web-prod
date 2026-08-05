@@ -6,7 +6,7 @@
   height: 100vh;
   flex: 1;
   flex-direction: column;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   :global {
     .at-tabs__item {
       width: 50%;
@@ -24,7 +24,7 @@
 }
 
 .page {
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   padding: 10px;
   width: 100%;
 }
@@ -45,7 +45,7 @@
 .address-list-item {
   display: flex;
   width: 100%;
-  background-color: #fff;
+  background-color: $theme-surface;
   padding: 14px 12px;
   flex-direction: row;
   align-items: center;
@@ -106,7 +106,7 @@
 }
 
 .flag {
-  background-color: #ebf9f6;
+  background-color: $theme-primary-soft;
   font-size: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -206,7 +206,7 @@
 			border-radius: 8px;
 			text-align: center;
 			color: #FFF;
-			background: #00a98f;
+			background: $theme-primary;
 
 			&.cancel {
 				color: #252D37;
@@ -215,4 +215,3 @@
 		}
 	}
 }
-

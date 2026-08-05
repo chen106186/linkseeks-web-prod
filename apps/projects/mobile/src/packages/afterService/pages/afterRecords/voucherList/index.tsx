@@ -13,6 +13,7 @@ import { getOssUrlPath } from '@apps/constants'
 import { useIntl } from '@linkseeks/i18n'
 import PageLayout from '@/components/PageLayout'
 import NavBar from '@/components/NavBar'
+import { THEME_COLORS } from '@/constants/theme'
 import ImageBox from '@/components/ImageBox'
 import styles from './index.module.scss'
 export type VoucherListItem = string
@@ -42,13 +43,13 @@ const ICON_NAME_MAP: {
   },
   '.xls': {
     name: getOssUrlPath('/Images/xls.png'),
-    color: '#00A98F',
-    bgColor: '#E4F7EF',
+    color: THEME_COLORS.primary,
+    bgColor: THEME_COLORS.primarySoft,
   },
   '.xlsx': {
     name: getOssUrlPath('/Images/xls.png'),
-    color: '#00A98F',
-    bgColor: '#E4F7EF',
+    color: THEME_COLORS.primary,
+    bgColor: THEME_COLORS.primarySoft,
   },
   '.pdf': {
     name: getOssUrlPath('/Images/pdf.png'),

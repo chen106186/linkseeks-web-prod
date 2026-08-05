@@ -6,6 +6,7 @@ import { View, Button, Text, Input, ScrollView, Switch, Form, Toast } from '@app
 import { getAsyncStorage } from '@apps/mobile-services/utils/storage'
 import { USER_INFO } from '@/constants/storage'
 import { PATTERN_MAPS } from '@/constants/regExp'
+import { THEME_COLORS } from '@/constants/theme'
 import Router from '@/utils/router'
 import { useIntl } from '@linkseeks/i18n'
 import { useMobileIntl } from '@apps/locales'
@@ -511,7 +512,7 @@ const InvoiceAdd = (props: any) => {
               })}
             </Text>
             <View className={cx(styles['switch-btn'], styles['fl-right'])}>
-              <Switch color="#00A98F" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
+              <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
             </View>
           </View>
         </Form>

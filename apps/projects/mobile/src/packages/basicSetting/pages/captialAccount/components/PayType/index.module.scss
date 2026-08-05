@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .warp {
   display: flex;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   flex-direction: column;
 }
 .title {
@@ -29,7 +31,7 @@
   padding-left: 12px;
   padding-right: 12px;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   overflow-y: scroll;
 }
 .content-warp {
@@ -69,7 +71,7 @@
 }
 .footer-btn-warp {
   display: flex;
-  background-color: #007BFC;
+  background-color: $theme-primary;
   height: 40px;
   line-height: 40px;
   align-items: center;

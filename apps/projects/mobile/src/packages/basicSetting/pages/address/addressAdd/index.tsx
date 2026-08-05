@@ -12,6 +12,7 @@ import { View, Button, Text, Input, Switch, ScrollView, Form, Toast, Image, Text
 import ModeMobile from '@/components/Modemobile'
 import { PATTERN_MAPS } from '@/constants/regExp'
 import { COUNTRY_PHONE_CODE, COUNTRY_PHONE_LENGTH } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import { combinationAddress } from '@/utils/dataMerge'
 import { useIntl } from '@linkseeks/i18n'
 import {
@@ -575,7 +576,7 @@ const AddressAdd = () => {
                     })}
                   </Text>
                   <View className={cx(styles['switch-btn'], styles['fl-right'])}>
-                    <Switch color="#00A98F" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
+                    <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
                   </View>
                 </View>
               </Form>

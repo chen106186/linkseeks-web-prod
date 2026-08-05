@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Icons } from '@apps/mobile-ui';
 import ActionSheet from '@/components/ActionSheet';
+import { THEME_COLORS } from '@/constants/theme';
 import styles from './index.module.scss';
 
 export type OptionType = {
@@ -42,7 +43,7 @@ const Picker: React.FC<Iprops> = (props: Iprops) => {
                 </View>
                 {
                   item.value === state
-                    && <Icons name="check" size={16} color="#3877FF" />
+                    && <Icons name="check" size={16} color={THEME_COLORS.primary} />
                 }
               </View>
             ))

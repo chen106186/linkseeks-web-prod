@@ -8,6 +8,7 @@ import { postPayAllInPayBindBankCardConfirm, postPayAllInPaySetRealName } from '
 import styles from './index.module.scss'
 import Layout from '../../components/Layout'
 import AgreementLayout from '@/components/Agreement'
+import { THEME_COLORS } from '@/constants/theme'
 import { AuthenticationProvider, useAuthenticationContext } from './context'
 import AuthStep from './AuthStep'
 import BindBankStep from './BindBankStep'
@@ -55,7 +56,7 @@ const AuthenticationPage = () => {
               consentText="阅读并同意"
               customClassName={styles.agreementContent}
               columnType="2"
-              color={'#007bfc'}
+              color={THEME_COLORS.primary}
             />
           </>
         )

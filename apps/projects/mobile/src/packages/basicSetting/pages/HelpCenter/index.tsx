@@ -9,6 +9,7 @@ import { getCommodityShopHelpInfoHelpInfoEnable, getCommodityShopHelpInfoTree } 
 import styles from './index.module.scss'
 import { ScrollView } from '@tarojs/components'
 import { useMobileIntl } from '@apps/locales'
+import { THEME_COLORS } from '@/constants/theme'
 interface HelpType {
   id: string
   parentId: string
@@ -61,7 +62,7 @@ const HelpCenter: React.FC<any> = () => {
             {translate('mobile.resource.basicSetting.woshinidezhuangshukefu')}
           </Text>
           <View className={styles['introduce_icon']}>
-            <Icons name="ChevronRight" size={12} color="#00A990" />
+            <Icons name="ChevronRight" size={12} color={THEME_COLORS.primary} />
           </View>
         </View>
       </View>

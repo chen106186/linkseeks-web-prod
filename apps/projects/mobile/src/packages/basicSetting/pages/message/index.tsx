@@ -12,6 +12,7 @@ import { big } from './common/images'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 const iconRight = getOssUrlPath('/miniprogram/assets/images/icon-right.svg')
 const Message = () => {
   const $router = getCurrentInstance()
@@ -82,7 +83,7 @@ const Message = () => {
     },
     {
       type: 2,
-      color: '#06CFC1',
+      color: THEME_COLORS.primary,
       dataIndex: 'purchase',
     },
     {

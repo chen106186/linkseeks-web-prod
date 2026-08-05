@@ -7,6 +7,7 @@ import { useIntl } from '@linkseeks/i18n'
 import { pxTransform, getCurrentInstance, setNavigationBarTitle } from '@apps/mobile-services/utils/taro'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 const paymentIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/payment.png'
 const extractIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/extract.png'
 const rebateIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/rebate.png'
@@ -25,7 +26,7 @@ const TradingDetail = () => {
       }),
       operator: '+',
       url: getOssUrlPath('/Images/Recharge.png'),
-      color: '#00A98F',
+      color: THEME_COLORS.primary,
     },
     2: {
       title: intl.formatMessage({
@@ -45,7 +46,7 @@ const TradingDetail = () => {
       operator: '-',
       // url: getOssUrlPath('/Images/orderIcon.png'),
 			url: paymentIcon,
-      color: '#00A98F',
+      color: THEME_COLORS.primary,
     },
     4: {
       title: intl.formatMessage({
@@ -54,7 +55,7 @@ const TradingDetail = () => {
       }),
       operator: '+',
       url: getOssUrlPath('/Images/pay%402x.png'),
-      color: '#3877FF',
+      color: THEME_COLORS.primary,
     },
     5: {
       title: intl.formatMessage({
@@ -64,7 +65,7 @@ const TradingDetail = () => {
       operator: '+',
       // url: getOssUrlPath('/Images/Rebate.png'),
 			url: rebateIcon,
-      color: '#00A98F',
+      color: THEME_COLORS.primary,
     },
 		6: {
 			title: intl.formatMessage({
@@ -73,7 +74,7 @@ const TradingDetail = () => {
 			}),
 			operator: '+',
 			url: rebateIcon,
-			color: '#00A98F',
+			color: THEME_COLORS.primary,
 		},
 		7: {
 			title: intl.formatMessage({
@@ -82,7 +83,7 @@ const TradingDetail = () => {
 			}),
 			operator: '+',
 			url: rebateIcon,
-			color: '#00A98F',
+			color: THEME_COLORS.primary,
 		},
   }
   const STATUS_MAP: any = {

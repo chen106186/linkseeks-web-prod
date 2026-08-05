@@ -4,6 +4,7 @@ import { useIntl } from '@linkseeks/i18n'
 import { View, Text, ScrollView, Image } from '@apps/mobile-ui'
 import { getManageAreaByPcode } from '@apps/apis'
 import { getOssUrlPath } from '@apps/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 const Tick = getOssUrlPath('/miniprogram/assets/images/tick.png')
@@ -230,7 +231,7 @@ const Provinces = (props: AddressPickerProps) => {
           ))}
           {tabList.length !== 4 && (
             <View>
-              <Text style={{ color: '#00A98F' }}>{intl.formatMessage({ id: 'addressPicker_select_btn' })}</Text>
+              <Text style={{ color: THEME_COLORS.primary }}>{intl.formatMessage({ id: 'addressPicker_select_btn' })}</Text>
             </View>
           )}
         </View>

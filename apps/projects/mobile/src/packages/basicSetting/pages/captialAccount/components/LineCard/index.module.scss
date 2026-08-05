@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .warp {
 	padding: 0px 12px;
 	background-color: #fff;
@@ -16,7 +18,7 @@
 		.wrap-line {
 			height: 20px;
 			width: 4px;
-			background-color: #007bfc;
+			background-color: $theme-primary;
 			margin-right: 12px;
 			border-radius: 8px;
 		}
@@ -61,7 +63,7 @@
 	}
 
 	.status-circle-success {
-		background-color: #00a98f;
+		background-color: $theme-primary;
 	}
 
 	.status-circle-error {
@@ -72,7 +74,7 @@
 		color: #5c626a;
 	}
 	.status-text-success {
-		color: #00a98f;
+		color: $theme-primary;
 	}
 	.status-text-error {
 		color: #ef3346;

@@ -5,6 +5,7 @@ import { getOssUrlPath } from '@apps/constants'
 import Router from '@/utils/router'
 import { pxTransform, getNetworkType, getCurrentPages } from '@apps/mobile-services/utils/taro'
 import { useIntl } from '@linkseeks/i18n'
+import { THEME_COLORS } from '@/constants/theme'
 const Network = () => {
   const intl = useIntl()
   const Liek = async () => {
@@ -51,7 +52,7 @@ const Network = () => {
         <View
           style={{
             fontSize: pxTransform(16),
-            color: '#1F2C3D',
+            color: THEME_COLORS.title,
           }}
         >
           {intl.formatMessage({
@@ -62,7 +63,7 @@ const Network = () => {
         <View
           style={{
             fontSize: pxTransform(12),
-            color: '#91959B',
+            color: THEME_COLORS.textSecondary,
           }}
         >
           {intl.formatMessage({
@@ -72,7 +73,7 @@ const Network = () => {
         </View>
         <View
           style={{
-            backgroundColor: '#00A98F',
+            backgroundColor: THEME_COLORS.primary,
             fontSize: pxTransform(12),
             color: '#fff',
             borderRadius: pxTransform(4),

@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .AccountDetail{
   height: 100vh;
-  background: #F5F6F7;
+  background: $theme-page-bg;
   .warp {
     display: flex;
     padding: 10px;
@@ -9,7 +11,7 @@
     .head {
       height: 188px;
       border-radius: 8px;
-      background-image: linear-gradient(134deg, #3877FF 0%, #3877FF 100%);
+      background-image: linear-gradient(134deg, $theme-primary-active 0%, $theme-primary 100%);
 
       &-title {
         display: flex;
@@ -55,7 +57,7 @@
         width: 120px;
         height: 30px;
         line-height: 30px;
-        color: #3877FF;
+        color: $theme-primary;
         background-color: #fff;
         border-radius: 18px;
         text-align: center;
@@ -94,8 +96,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px 7px;
-        border-bottom:1px solid #F5F6F7;
-        background: #fff;
+        border-bottom:1px solid $theme-border-light;
+        background: $theme-surface;
         &-left{
           display: flex;
           align-items: center;
@@ -127,7 +129,7 @@
       display: flex;
       padding: 12px;
       flex-direction: row;
-      background-color: #FFFFFF;
+      background-color: $theme-surface;
     }
 
     .recordIcon {

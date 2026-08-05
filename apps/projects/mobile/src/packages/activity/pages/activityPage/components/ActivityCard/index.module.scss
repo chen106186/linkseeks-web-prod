@@ -1,0 +1,22 @@
+@import '@/styles/variables.scss';
+
+.card {
+  padding: 0 $spacing-v-md;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px * $hd;
+
+  &-header {
+    margin-bottom: $spacing-v-md;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-title {
+      font-size: $font-size-xl;
+      font-weight: "600";
+      color: #fff
+    };
+  };
+
+};

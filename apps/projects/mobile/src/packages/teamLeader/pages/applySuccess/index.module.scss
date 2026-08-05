@@ -1,0 +1,39 @@
+.apply-success {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	background-color: #F4F5F7;
+}
+.apply-success-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #00A98F;
+	height: 140px;
+	box-sizing: border-box;
+}
+.apply-success-top {
+	display: flex;
+	align-items: center;
+	margin-top: 12px;
+}
+.apply-box-info-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.apply-box-info-text {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
+.apply-success-text1 {
+	color: #fff;
+	font-size: 14px;
+	margin: 9px 0 12px 0;
+}
+.apply-success-text2 {
+	color: #fff;
+	font-size: 12px;
+}

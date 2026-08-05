@@ -1,0 +1,64 @@
+@import "@/styles/variables.scss";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border-color: #f4f5f7;
+  border-width: 1px;
+}
+.button-text {
+  color: $color-black-1;
+  font-size: 14px;
+  text-align: center;
+}
+.button-small {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.button-small-text {
+  font-size: 12px;
+}
+.button-danger {
+  background-color: #ef3346;
+  border-color: #ef3346;
+}
+.button-danger-text {
+  color: #ffffff;
+}
+.button__round {
+  border-radius: 999px;
+}
+.button__plain {
+  background-color: #ffffff;
+}
+.button-danger-text__plain {
+  color: #ef3346;
+}
+.button-wrap__block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.button__block {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.button__disabled {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+}
+.button-text__disabled {
+  color: rgba(0, 0, 0, 0.25);
+}

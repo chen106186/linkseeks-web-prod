@@ -1,0 +1,25 @@
+.ui-dropdown {
+  border: none;
+
+  &:hover {
+    background-color: @dropdown-default-hover;
+  }
+}
+
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover,
+.ant-dropdown-menu-item.ant-dropdown-menu-item-active,
+.ant-dropdown-menu-item.ant-dropdown-menu-submenu-title-active,
+.ant-dropdown-menu-submenu-title.ant-dropdown-menu-item-active,
+.ant-dropdown-menu-submenu-title.ant-dropdown-menu-submenu-title-active {
+  background-color: @dropdown-default-hover;
+}
+
+.ant-dropdown-menu {
+  padding: @dropdown-menu-padding;
+}
+
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  padding: @dropdown-item-padding / 2 @dropdown-item-padding;
+}

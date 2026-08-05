@@ -1,0 +1,33 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.cp-upload-file {
+  .cp-upload-file-btn-wrap {
+    width: 104px;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // cursor: pointer;
+    // border: 1px dashed #ccc;
+  }
+}
+
+#components-upload-demo-drag-sorting .ant-upload-draggable-list-item {
+  border-top: 2px dashed rgb(0 0 0 / 0%);
+  border-bottom: 2px dashed rgb(0 0 0 / 0%);
+}
+
+#components-upload-demo-drag-sorting .ant-upload-draggable-list-item.drop-over-downward {
+  border-bottom-color: @color-primary;
+}
+
+#components-upload-demo-drag-sorting .ant-upload-draggable-list-item.drop-over-upward {
+  border-top-color: @color-primary;
+}
+
+.standard-upload-file-instance {
+  .ant-upload.ant-upload-select {
+    display: none;
+  }
+}

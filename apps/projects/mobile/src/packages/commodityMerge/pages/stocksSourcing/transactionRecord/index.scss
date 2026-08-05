@@ -1,0 +1,35 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.transaction-record {
+  background-color: $color-bg-grey;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &-scrollWrap {
+    flex: 1;
+    position: relative;
+  }
+
+  &-scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-record {
+    padding: $spacing-v-md $spacing-h-md 0;
+
+    &-item {
+      margin-bottom: $spacing-v-md;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.analysis {
+  &-tag {
+    display: flex;
+    align-items: center;
+
+    &-tofu {
+      padding: 1px 8px 1px 0;
+      border-radius: 4px;
+
+      &-up {
+        color: @color-primary;
+        background-color: #edfff3;
+      }
+
+      &-down {
+        color: @error-color;
+        background-color: #ffebe6;
+      }
+    }
+
+    &-desc {
+      margin-left: 10px;
+      font-size: 12px;
+      color: @text-color-secondary;
+    }
+  }
+}

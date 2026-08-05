@@ -1,0 +1,49 @@
+/*
+ * @Author: XieZhiXiong
+ * @Date: 2021-06-04 11:27:42
+ * @LastEditors: XieZhiXiong
+ * @LastEditTime: 2021-11-29 18:17:12
+ * @Description:
+ */
+import { getIntl } from '@linkseeks/i18n'
+import { ISchema } from '@apps/formily'
+
+const intl = getIntl()
+
+export const freezeSchema: ISchema = {
+  type: 'object',
+  properties: {
+    MEGA_LAYOUT: {
+      type: 'object',
+      'x-component': 'mega-layout',
+      'x-component-props': {
+        labelAlign: 'top',
+      },
+      properties: {
+        reason: {
+          type: 'string',
+          title: intl.formatMessage({ id: 'customerAbility.management.maintain.freeze.freeze.form.reason' }),
+          'x-component': 'Textarea',
+          'x-component-props': {
+            placeholder: intl.formatMessage({
+              id: 'customerAbility.management.maintain.freeze.freeze.form.reason.placeholder',
+            }),
+            rows: 5,
+          },
+          'x-rules': [
+            {
+              required: true,
+              message: intl.formatMessage({
+                id: 'customerAbility.management.maintain.freeze.freeze.form.reason.rules-required',
+              }),
+            },
+            {
+              limitByte: true, // 自定义校验规则
+              maxByte: 120,
+            },
+          ],
+        },
+      },
+    },
+  },
+}

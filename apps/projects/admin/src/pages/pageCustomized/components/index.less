@@ -1,0 +1,89 @@
+.allcomponents_container {
+  width: 340px;
+  background-color: #fff;
+
+  .header {
+    height: 48px;
+    padding: 0 20px;
+    color: #303133;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 48px;
+    border-bottom: 1px solid #eef0f3;
+  }
+
+  .components_list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+
+    .components_item {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      margin-bottom: 16px;
+      padding: 0 16px;
+      border: 1px solid #dcdfe6;
+      border-radius: 4px;
+
+      &.active {
+        background: #ebf7f2;
+        border: 1px solid #00a98f;
+      }
+
+      &:hover {
+        border: 1px solid #00a98f;
+        cursor: pointer;
+      }
+
+      &_text {
+        font-size: 14px;
+      }
+
+      &_icon {
+        margin-left: auto;
+        color: #666666;
+        font-size: 16px;
+
+        &.disable {
+          color: #999999;
+        }
+      }
+    }
+  }
+}
+
+.mobileDesignContainer {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 156px);
+
+  .mobileDesignWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 25px;
+    overflow: hidden;
+    background-color: #f7f8fa;
+  }
+
+  .appBottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    height: 30px;
+    margin-top: 0;
+    background-color: #fff;
+
+    .appBottomStrip {
+      position: relative;
+      top: 12px;
+      width: 134px;
+      height: 5px;
+      margin: 0 auto;
+      background: #000000;
+      border-radius: 100px;
+    }
+  }
+}

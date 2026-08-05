@@ -1,0 +1,44 @@
+.password-strength {
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+
+  &-body {
+    display: flex;
+  }
+
+  &-level {
+    &-list {
+      display: flex;
+
+      &-item {
+        text-align: center;
+        background: #f5f6f7;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 12px;
+        width: 48px;
+        padding: 2px 0;
+
+        &.low {
+          background: rgb(236 128 141 / 100%);
+          color: #fff;
+        }
+
+        &.middle {
+          background: rgb(2 167 240 / 100%);
+          color: #fff;
+        }
+
+        &.high {
+          background: #00a98f;
+          color: #fff;
+        }
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

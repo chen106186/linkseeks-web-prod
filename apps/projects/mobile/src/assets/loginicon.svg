@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="132px" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon</title>
+    <defs>
+        <linearGradient x1="0%" y1="8.67768595%" x2="100%" y2="91.322314%" id="linearGradient-1">
+            <stop stop-color="#D4D1D1" offset="0%"></stop>
+            <stop stop-color="#979797" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="扫码" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C.2-扫码授权" transform="translate(-122.000000, -189.000000)">
+            <g id="icon" transform="translate(122.000000, 189.000000)">
+                <rect id="矩形" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="132" height="132"></rect>
+                <path d="M121,17 L121,95 L69,95 L69,111 L103,111 L103,117 L29,117 L29,111 L63,111 L63,95 L11,95 L11,17 L121,17 Z M115,23 L17,23 L17,89 L115,89 L115,23 Z" id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

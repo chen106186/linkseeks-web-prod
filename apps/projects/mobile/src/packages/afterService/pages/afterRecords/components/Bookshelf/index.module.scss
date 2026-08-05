@@ -1,0 +1,72 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.bookshelf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+
+  &-left {
+    flex: 1;
+  }
+
+  &-right {
+    padding: 0 $spacing-h-md;
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-lg $spacing-h-lg $spacing-v-sm;
+
+    &-ribbon {
+      position: absolute;
+      top: 2px;
+      left: -$spacing-h-lg - 1;
+      width: 4px;
+      height: 14px;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      background-color: $color-brand;
+    }
+
+    &-titleWrap {
+      flex: 1;
+      position: relative;
+    }
+
+    &-title {
+      color: $color-grey-0;
+      font-size: $font-size-base;
+    }
+
+    &-extra {
+      flex-shrink: 0;
+      margin-left: $spacing-h-md;
+    }
+  }
+
+  &-body {
+    padding: $spacing-v-lg $spacing-h-lg;
+  }
+
+  &-foot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-lg - 2 $spacing-h-lg;
+    @include border-thin-top($color-bg-base);
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+  }
+}

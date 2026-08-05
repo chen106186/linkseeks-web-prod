@@ -1,0 +1,80 @@
+
+  @import "@/styles/variables.scss";
+  @mixin new-at-model {
+    :global {
+      .at-modal__container {
+        width: 80%;
+      }
+
+      .at-modal__header {
+        height: 80px;
+        line-height: 80px;
+        taro-text-core{
+          white-space: nowrap;
+        }
+      }
+
+      .at-modal__action,
+      .at-modal__footer .at-modal__action > button,
+      .at-modal__footer .at-modal__action > taro-button-core {
+        height: 40px;
+        line-height: 40px;
+        min-width: unset;
+        flex: 1;
+        margin: 0;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        border-radius: 0;
+      }
+
+      .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+      .at-modal__footer .at-modal__action > button:last-child,
+      .at-modal__footer .at-modal__action > taro-button-core:last-child {
+        background-color: $theme-color;
+        color: #fff;
+      }
+
+      .at-modal__footer .at-modal__action > taro-button-core::after{
+        border: 0;
+      }
+    }
+  }
+  @mixin new-index-at-model {
+    .at-modal__container {
+      width: 80%;
+    }
+
+    .at-modal__header {
+      height: 80px;
+      line-height: 80px;
+      taro-text-core{
+        white-space: nowrap;
+      }
+    }
+
+    .at-modal__action,
+    .at-modal__footer .at-modal__action > button,
+    .at-modal__footer .at-modal__action > taro-button-core {
+      height: 40px;
+      line-height: 40px;
+      min-width: unset;
+      flex: 1;
+      margin: 0;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      border-radius: 0;
+    }
+
+    .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+    .at-modal__footer .at-modal__action > button:last-child,
+    .at-modal__footer .at-modal__action > taro-button-core:last-child {
+      background-color: $theme-color;
+      color: #fff;
+    }
+
+    .at-modal__footer .at-modal__action > taro-button-core::after{
+      border: 0;
+    }
+  }

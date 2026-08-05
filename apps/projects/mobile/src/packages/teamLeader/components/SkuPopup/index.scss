@@ -1,0 +1,174 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+
+.sku {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+
+  &-product-card {
+    display: flex;
+    flex-direction: row;
+    padding: $spacing-v-lg $spacing-h-lg;
+    padding-right: 48px;
+    background-color: #FFFFFF;
+
+    &-left {
+      width: 88px;
+      height: 88px;
+      margin-right: $spacing-h-md;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background-color: #F4F5F7;
+    }
+
+    &-right {
+      flex: 1;
+      flex-direction: column;
+    }
+
+    &-name {
+      margin-bottom: $spacing-h-md - 2;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-grey-0;
+      @include text-overflow-multi-line(2);
+    }
+
+    &-extra {
+      position: relative;
+      left: -$spacing-h-sm - 1 + 2;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-error;
+    }
+
+    &-unit {
+      position: relative;
+      top: 1px;
+      margin-left: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-grey-1;
+      margin-right: $spacing-h-md;
+
+    }
+
+
+    &-final {
+      margin-top: $spacing-h-sm - 1;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-error;
+    }
+
+    &-merge {
+      margin-top: $spacing-h-sm - 1;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-checked {
+      margin-right: $spacing-h-md + 1;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-grey-1;
+    }
+
+    &-price__about {
+      font-size: 12px;
+      color: $color-grey-2;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 8px;
+    }
+
+    &-specs {}
+  }
+
+  &-stock {
+    // padding: $spacing-h-lg $spacing-v-xl + 1;
+    padding: $spacing-h-lg $spacing-h-lg;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-left {
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: $color-grey-0;
+    }
+
+    &-quota {
+      font-size: 12px;
+      color: $color-grey-2;
+    }
+
+    &-line {
+      margin: 0 $spacing-h-md;
+      width: 8px;
+      height: 8px;
+      font-size: 12px;
+      color: $color-grey-2;
+    }
+  }
+
+  &-scrollWrap {
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  &-scrollView {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF;
+  }
+
+  &-action {
+    width: 100%;
+    background-color: #FFFFFF;
+
+    &-inner {
+      padding: $spacing-v-md $spacing-h-md;
+    }
+
+    .at-button {
+      font-size: $font-size-base;
+      border-radius: 8px;
+    }
+  }
+}
+.sku-calculate {
+	display: flex;
+	flex-direction: column;
+	padding-left: 12px;
+	margin-bottom: 10px
+}
+.sku-calculate-rebate {
+	color: #d12e2e;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 4px;
+}

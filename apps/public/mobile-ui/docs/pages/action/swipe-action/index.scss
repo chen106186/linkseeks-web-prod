@@ -1,0 +1,17 @@
+.swipe-action-page {
+  .panel__controller {
+    text-align: center;
+  }
+
+  .normal {
+    padding: 0 12px;
+    line-height: 44px;
+  }
+
+  .example-item--border {
+    /* prettier-ignore */
+    border: 1PX solid #e2ecf4;
+    border-left: none;
+    border-right: none;
+  }
+}

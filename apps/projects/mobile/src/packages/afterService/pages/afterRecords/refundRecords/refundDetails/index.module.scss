@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+
+.refund-details {
+  height: 100vh;
+  display: flex;
+  background-color: #F4F5F7;
+
+  &-refundAmount {
+    font-size: $font-size-lg;
+    color: $color-error;
+  }
+}

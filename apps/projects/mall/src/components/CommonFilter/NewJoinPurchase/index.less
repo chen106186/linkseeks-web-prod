@@ -1,0 +1,54 @@
+@import url('@/theme/style/common.less');
+
+.new_join {
+  width: 240px;
+  margin-top: 20px;
+  background: #fff;
+  // border: 1px solid rgba(238, 238, 238, 1);
+
+  &_title {
+    position: relative;
+    font-weight: 500;
+    padding: 15px 12px;
+    font-size: 14px;
+    line-height: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto 0;
+      width: 4px;
+      height: 14px;
+      background-color: @mainColor;
+    }
+  }
+
+  .new_join_list {
+    padding: 0 16px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+
+      .new_join_info {
+        padding: 12px 0;
+        font-size: 12px;
+        border-bottom: 1px solid #f7f8fa;
+
+        &_name {
+          color: #303133;
+          line-height: 12px;
+        }
+
+        &_area {
+          color: #909399;
+          line-height: 12px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

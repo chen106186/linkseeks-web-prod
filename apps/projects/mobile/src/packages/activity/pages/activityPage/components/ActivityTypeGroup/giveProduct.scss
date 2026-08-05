@@ -1,0 +1,78 @@
+@import '@/styles/variables.scss';
+
+.give-product {
+  display: flex;
+  flex-direction: column;
+  /** 删除 **/
+  // margin: $spacing-h-lg;
+  // padding: $spacing-h-lg;
+  background-color: #fff;
+  border-radius: 8px * $hd;
+  padding: $spacing-h-lg;
+
+  &-main-commodity {
+    // display: ;
+    padding: 0;
+
+    .product-tag {
+      background-color: #EF3346;
+      color: #fff;
+      font-size: $font-size-sm;
+      padding: $spacing-h-sm $spacing-h-sm;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &-main-commodity-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-tabs {
+    margin-top: $spacing-v-md;
+    .at-tabs__header {
+      text-align: left;
+
+      .at-tabs__item {
+        font-size: 12px * $hd;
+        color: #252D37;
+        padding: 0 12px * $hd 8px * $hd 12px * $hd;
+        font-weight: 600;
+				text-align: center;
+      }
+
+      .at-tabs__item--active {
+        font-size: 14px * $hd;
+        .at-tabs__item-underline {
+          transform: scaleX(0.5);
+          height: 3px * $hd;
+          background-color: #ef3346;
+        }
+      }
+    }
+    .at-tabs__underline {
+      height: 0px;
+    }
+
+    &-tabpane-products {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-commodity-item {
+      margin-top: $spacing-h-lg;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0 0;
+    border-top: 1px solid #F4F5F7;
+    margin-top: 12px;
+  }
+}

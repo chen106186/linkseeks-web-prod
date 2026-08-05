@@ -1,0 +1,35 @@
+.forget-form-sms {
+  display: flex;
+
+  :global {
+    .ui-input {
+      height: 40px;
+    }
+  }
+
+  .sms-button {
+    border: none;
+    background: #f5f6f7;
+
+    &:hover {
+      background: rgba(37, 45, 55, 0.08);
+    }
+
+    &:active {
+      background: rgba(37, 45, 55, 0.12);
+    }
+  }
+}
+
+.descriptions-item {
+  :global {
+    .ant-descriptions-item-content {
+      display: flex;
+    }
+  }
+
+  &-switch {
+    cursor: pointer;
+    margin-left: auto;
+  }
+}

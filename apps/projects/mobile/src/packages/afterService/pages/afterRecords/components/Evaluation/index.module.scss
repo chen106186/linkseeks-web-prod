@@ -1,0 +1,15 @@
+@import '@/styles/variables.scss';
+
+.as-evaluation {
+  &-rate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-text {
+      font-size: $font-size-base;
+      color: $color-error;
+      margin-left: $spacing-h-lg;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.container-Head {
+  .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-warp {
+      padding: 24px 0;
+      .name {
+        font-size: 14px;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        font-size: 14px;
+        color: #252d37;
+      }
+      .account {
+        height: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: #91959b;
+      }
+    }
+    .Iocn {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+    .box-left {
+      width: 176px;
+      height: 112px;
+      border-radius: 8px;
+      padding: 12px;
+      color: #ffffff;
+      background-image: linear-gradient(134deg, #01baaa 0%, #00b89c 100%);
+    }
+    .box-right {
+      padding: 12px;
+      width: 176px;
+      height: 112px;
+      color: #ffffff;
+      border-radius: 8px;
+      background-image: linear-gradient(-45deg, #4d90ff 0%, #5394ff 100%);
+    }
+    .box-img {
+      width: 24px;
+      height: 24px;
+    }
+    .box-Price {
+      padding: 10px 0;
+      .Symbol {
+        font-size: 16px;
+      }
+      .PriceText {
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+    .Text {
+      font-size: 12px;
+    }
+  }
+}

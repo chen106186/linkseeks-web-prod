@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.delivery-info {
+  &-item {
+    &-title {
+      padding-left: $spacing-h-md;
+      margin: $spacing-v-lg * 2 $spacing-h-lg $spacing-v-md + 2;
+      font-size: $font-size-base;
+      line-height: $font-size-base + 2;
+      font-weight: 400;
+      color: $color-grey-0;
+      border-left-width: 2px;
+      border-left-color: $color-grey-0;
+      border-left-style: solid;
+    }
+
+    &-content {}
+  }
+}

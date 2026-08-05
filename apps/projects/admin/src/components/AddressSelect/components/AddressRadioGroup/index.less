@@ -1,0 +1,57 @@
+@import '@/global/styles/index.less';
+
+@addressList-prefix: addressList;
+
+.@{addressList-prefix} {
+  display: block;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @padding-sm - 2 @padding-md;
+    background-color: @background-color-base;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: @margin-md;
+    }
+
+    &:hover {
+      background-color: @white;
+      border-color: @primary-color;
+
+      .@{addressList-prefix}-item-actions {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+
+    &-default {
+      padding: @padding-xss - 2 @padding-xss;
+      font-size: 12px;
+      color: #5c626a;
+      background-color: #ebecf0;
+      border-radius: 2px;
+    }
+
+    &-actions {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+}

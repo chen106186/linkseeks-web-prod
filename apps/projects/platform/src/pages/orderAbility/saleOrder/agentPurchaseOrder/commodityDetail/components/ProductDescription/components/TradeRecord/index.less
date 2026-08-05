@@ -1,0 +1,79 @@
+@import '../../../../../common.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.trade_record {
+  margin-bottom: 20px;
+  background-color: #fff;
+
+  .trade_record_title {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .trade_record_container {
+    :global {
+      .ant-table-pagination.ant-pagination {
+        padding-right: 15px;
+      }
+      .ant-table-thead > tr > th {
+        background-color: #ffffff;
+      }
+      .ant-pagination-item {
+        &:hover,
+        &:active {
+          border-color: @color-primary;
+
+          & > a {
+            color: @color-primary;
+          }
+        }
+      }
+
+      .ant-pagination-item-active {
+        background-color: @color-primary;
+        border-color: @color-primary;
+
+        &:hover {
+          & > a {
+            color: #ffffff !important;
+          }
+        }
+
+        & > a {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .columns_item {
+      height: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &_member {
+        color: #f8edaf;
+        background-color: #303133;
+        height: 16px;
+        line-height: 16px;
+        width: 48px;
+        text-align: center;
+        margin-top: 4px;
+      }
+    }
+
+    .ant-table-tbody {
+      font-size: 12px;
+      color: #303133;
+    }
+
+    .ant-table-thead > tr > th {
+      background: #ffffff;
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+  }
+}

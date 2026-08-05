@@ -1,0 +1,963 @@
+{
+  "global": {
+    "imConfig": {
+      "paramConfigList": [
+        {
+          "code": "ee",
+          "value": "ee"
+        }
+      ],
+      "type": 1,
+      "id": 1,
+      "platformName": "\t瓴犀云信大客服服务IM系统"
+    },
+    "siteInfo": {
+      "siteUrl": "lingxi-www-test-1030.shushangyun.com:12880",
+      "languages": [
+        {
+          "nameEn": "CN",
+          "name": "中文",
+          "id": 1,
+          "state": 1
+        },
+        {
+          "nameEn": "JP",
+          "createTime": 1676628960144,
+          "name": "日文",
+          "id": 5,
+          "state": 1
+        },
+        {
+          "nameEn": "CHT",
+          "createTime": 1676628636860,
+          "name": "繁体中文",
+          "id": 4,
+          "state": 1
+        },
+        {
+          "nameEn": "EN",
+          "createTime": 1670478220131,
+          "name": "英文",
+          "id": 2,
+          "state": 1
+        },
+        {
+          "nameEn": "KOR",
+          "name": "韩文",
+          "id": 3,
+          "state": 1
+        }
+      ],
+      "language": "CN",
+      "enableMultiTenancy": 0,
+      "name": "中国站点",
+      "logo": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/中国国旗-小图eb0ccf30eaf7412486552efe80ca5e3b59f4058181024c66b377a468380f0d4c.jpg",
+      "id": 1
+    }
+  },
+  "web": {
+    "orderType": [
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "竞价订单",
+        "id": 21,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "招标订单",
+        "id": 20,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "询价订单",
+        "id": 19,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "框架合同订单",
+        "id": 18,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "商品样品订单",
+        "id": 17,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "物料样品订单",
+        "id": 16,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "手工物料订单",
+        "id": 15,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "请购单合同",
+        "id": 14,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "跨境电商进口",
+        "id": 13,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "请购单采购",
+        "id": 12,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "采购招标合同",
+        "id": 11,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "采购竞价合同",
+        "id": 10,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "采购询价合同",
+        "id": 9,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "渠道积分兑换",
+        "id": 8,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "积分兑换",
+        "id": 7,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "渠道现货",
+        "id": 6,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "渠道直采",
+        "id": 5,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "集采",
+        "id": 4,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "现货采购",
+        "id": 3,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "需求采购",
+        "id": 2,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "订单类型",
+        "platformType": 4,
+        "platformWayName": "询价采购",
+        "id": 1,
+        "isPitchOn": 1
+      }
+    ],
+    "shopInfo": [
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049607a9dfdc39c4e82bf3be4b56de01a4b.png",
+        "url": "/",
+        "environment": 4,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831357661,
+        "name": "建材自营APP",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 34,
+        "state": 1
+      },
+      {
+        "type": 9,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049fa55cd93e3a944e5bbdbc21c25346ed1.png",
+        "url": "lingxi-info-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "createTime": 1667831424789,
+        "name": "行情资讯",
+        "property": 1,
+        "memberOperate": 0,
+        "id": 35,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef0497b02e3a5e0c64b799fc366946fb94d21.png",
+        "url": "/",
+        "environment": 4,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831129988,
+        "name": "建材商城APP",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 30,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/DEMO体验版641e35ad530c464fb9c6367a802e5c73.jpg",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670921349671,
+        "name": "1213自营商城小程序端",
+        "property": 4,
+        "memberOperate": 1,
+        "self": 1,
+        "id": 68,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/店铺0fc76eed52dd4873bdc3c892c8d9725d.png",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670997869296,
+        "name": "1203联营商城小程序",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 71,
+        "state": 1
+      },
+      {
+        "type": 2,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/QQ截图2018051416555323e8d24e773f400fa54b4b419def0e29.png",
+        "url": "/",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "createTime": 1668568595942,
+        "name": "积分商城",
+        "property": 2,
+        "memberOperate": 0,
+        "id": 43,
+        "state": 1
+      },
+      {
+        "type": 6,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049f877d03d262942388a69ae2a188feae7.png",
+        "url": "lingxi-srm-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "createTime": 1667831544408,
+        "name": "采购门户",
+        "property": 1,
+        "memberOperate": 0,
+        "id": 36,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/Dingtalk_2022082916585784ef2147a6894f129ba1ae4b988887ab.jpg",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670047725499,
+        "name": "自营商城（小程序）",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 49,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/DEMO体验版68cf9c9403eb4c8ba434717f5cf1ad4a.jpg",
+        "url": "/",
+        "environment": 4,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670921464186,
+        "name": "1213自营商城APP端",
+        "property": 4,
+        "memberOperate": 1,
+        "self": 1,
+        "id": 70,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/Snipaste_2022-10-09_16-34-103134aa486ab846ed8a247fedfdeb9d01.png",
+        "url": "lx_b2b",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 1,
+        "currencyName": "USD",
+        "createTime": 1667873159837,
+        "name": "b2b建材测试",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 37,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/QQ截图201805141655340e9dfac5fb2e4e32baf15f94096ab94a.png",
+        "url": "www",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667889704948,
+        "name": "欧美老干妈商城",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 38,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/DEMO体验版68c8a23d25d04e1d8b8cef0e820ef822.jpg",
+        "url": "/",
+        "environment": 2,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670921425067,
+        "name": "1213自营商城H5端",
+        "property": 4,
+        "memberOperate": 1,
+        "self": 1,
+        "id": 69,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/QQ截图20180529111401325a3779a46e4c409bddeabfd29b7252.png",
+        "url": "www",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1667889869604,
+        "name": "欧美老干妈商城联营666",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 39,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/DEMO体验版7c5b63995de94add9dbf6740f4c79ae8.jpg",
+        "url": "lx-ownmall",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1670921196428,
+        "name": "1213自营商城PC端",
+        "property": 4,
+        "memberOperate": 1,
+        "self": 1,
+        "id": 67,
+        "describe": "自营商城",
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef0493989dabb2e0b4b7fafb3ad89df6c0eca.png",
+        "url": "lingxi-h5-test-1030",
+        "environment": 2,
+        "isDefault": 1,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831063330,
+        "name": "建材商城H5",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 28,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/捕虫少年be86907595e24a68ac599c42b9412a7a.jpg",
+        "url": "lingxi-LY",
+        "environment": 4,
+        "isDefault": 1,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670318704263,
+        "name": "1203联营商城app",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 65,
+        "describe": "1203联营商城app",
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04909e2967925d64d429291ae108cb72b7365e97f3525eb4bf4b4e8925f68625ab3.png",
+        "url": "lingxi-b2b-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1667962776142,
+        "name": "建材商城1",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 40,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/TIM截图20180815101515c44589e8182e49f2a2c049e4d248f629.png",
+        "url": "lingxi-h5-1-test-1030",
+        "environment": 2,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670488518847,
+        "name": "H5c端联营",
+        "property": 2,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 66,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/胡萝卜1beb743c4be640569a1c30a9a5e222df.png",
+        "url": "/go",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1670318529478,
+        "name": "OG专区",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 64,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04909e2967925d64d429291ae108cb72b730936f852034c4aa2b82aa91390ed450e.png",
+        "url": "lingxi-b2b-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1668994733479,
+        "name": "建材商城11",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 44,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04909e2967925d64d429291ae108cb72b73.png",
+        "url": "lingxi-b2b-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 1,
+        "currencyName": "RMB",
+        "createTime": 1667831027544,
+        "name": "建材商城",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 27,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04909e2967925d64d429291ae108cb72b735807060ac97e4a8f95436a336e60b85d.png",
+        "url": "lingxi-b2b-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1669000746370,
+        "name": "新联营商城",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 45,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/Snipaste_2022-10-09_16-34-10211908934be54340b0b09bf030d1d14e.png",
+        "url": "lingxi-self-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "RMB",
+        "createTime": 1675392414821,
+        "name": "0102自营商城",
+        "property": 4,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 74,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04909e2967925d64d429291ae108cb72b737100c1012ae74fa483c95aba3f5cca46.png",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1669196848829,
+        "name": "小程序B端自营商城",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 46,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef04963d1ced30abe4251b1c5da278cbbd284.png",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831104338,
+        "name": "建材商城小程序",
+        "property": 1,
+        "memberOperate": 0,
+        "self": 0,
+        "id": 29,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049eab5bc8e8f24472e938b4ba7fbd7babb.png",
+        "url": "lingxi-self-test-1030",
+        "environment": 1,
+        "isDefault": 0,
+        "openMro": 1,
+        "currencyName": "USD",
+        "createTime": 1667831219399,
+        "name": "建材自营商城",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 31,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/Dingtalk_2022082916585737320f8257b64a6aa2552db3b5022d1e.jpg",
+        "url": "/",
+        "environment": 4,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670040148783,
+        "name": "自营商城（APP）",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 48,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049a94015c8070e4f94b1b22218b5a05d27.png",
+        "url": "/",
+        "environment": 3,
+        "isDefault": 1,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831311434,
+        "name": "建材自营小程序",
+        "property": 4,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 33,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/demo logo 136x485c1637c713ad4ceab09af4dd290ef049e94b0165c4394526aa73f739c2f545ef.png",
+        "url": "/",
+        "environment": 2,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1667831274973,
+        "name": "建材自营H5",
+        "property": 4,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 32,
+        "state": 1
+      },
+      {
+        "type": 1,
+        "logoUrl": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/Dingtalk_20220829165857c0e68286ad7a49edaf9d6013b444e5db.jpg",
+        "url": "/",
+        "environment": 2,
+        "isDefault": 0,
+        "openMro": 0,
+        "currencyName": "USD",
+        "createTime": 1670040070749,
+        "name": "自营商城（H5）",
+        "property": 3,
+        "memberOperate": 0,
+        "self": 1,
+        "id": 47,
+        "state": 1
+      }
+    ],
+    "orderMode": [
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "竞价订单下单",
+        "id": 24,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "招标订单下单",
+        "id": 23,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "询价订单下单",
+        "id": 22,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "线下扫码购下单",
+        "id": 21,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "框架合同下单",
+        "id": 20,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "商品样品订单下单",
+        "id": 19,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "物料样品订单下单",
+        "id": 18,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "手工物料订单下单",
+        "id": 17,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "请购单合同下单",
+        "id": 16,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "请购单下单",
+        "id": 15,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "采购招标合同下单",
+        "id": 14,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "采购竞价合同下单",
+        "id": 13,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "采购询价合同下单",
+        "id": 12,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "渠道积分下单",
+        "id": 11,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "积分下单",
+        "id": 10,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "渠道现货手工下单",
+        "id": 9,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "渠道现货购物车下单",
+        "id": 8,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "渠道直采手工下单",
+        "id": 7,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "渠道直采购物车下单",
+        "id": 6,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "合并订单下单",
+        "id": 5,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "需求报价下单",
+        "id": 4,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "询价报价下单",
+        "id": 3,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "手工下单",
+        "id": 2,
+        "isPitchOn": 1
+      },
+      {
+        "platformTypeName": "下单模式",
+        "platformType": 3,
+        "platformWayName": "购物车下单",
+        "id": 1,
+        "isPitchOn": 1
+      }
+    ]
+  },
+  "userRegister": {
+    "useType": [
+      {
+        "memberTypeId": 1,
+        "businessTypes": [
+          {
+            "businessTypeId": 2,
+            "businessTypeName": "SRM供应商"
+          },
+          {
+            "businessTypeId": 3,
+            "businessTypeName": "SRM采购商"
+          },
+          {
+            "businessTypeId": 4,
+            "businessTypeName": "B2B供应商"
+          },
+          {
+            "businessTypeId": 5,
+            "businessTypeName": "B2B采购商"
+          },
+          {
+            "businessTypeId": 7,
+            "businessTypeName": "S2B供应商"
+          },
+          {
+            "businessTypeId": 8,
+            "businessTypeName": "测试"
+          },
+          {
+            "businessTypeId": 9,
+            "businessTypeName": " 物流服务商"
+          },
+          {
+            "businessTypeId": 10,
+            "businessTypeName": "1"
+          },
+          {
+            "businessTypeId": 12,
+            "businessTypeName": "全权限供应商"
+          },
+          {
+            "businessTypeId": 13,
+            "businessTypeName": "全权限采购商"
+          },
+          {
+            "businessTypeId": 14,
+            "businessTypeName": "供应商11"
+          },
+          {
+            "businessTypeId": 15,
+            "businessTypeName": "供应商12"
+          },
+          {
+            "businessTypeId": 17,
+            "businessTypeName": "供应商14"
+          },
+          {
+            "businessTypeId": 16,
+            "businessTypeName": "供应商13"
+          },
+          {
+            "businessTypeId": 20,
+            "businessTypeName": "测试050"
+          },
+          {
+            "businessTypeId": 21,
+            "businessTypeName": "企业商家"
+          },
+          {
+            "businessTypeId": 22,
+            "businessTypeName": "C端会员"
+          },
+          {
+            "businessTypeId": 23,
+            "businessTypeName": "TEST"
+          },
+          {
+            "businessTypeId": 24,
+            "businessTypeName": "角色22"
+          }
+        ],
+        "memberTypeName": "企业会员"
+      },
+      {
+        "memberTypeId": 2,
+        "businessTypes": [
+          {
+            "businessTypeId": 6,
+            "businessTypeName": "C端采购商"
+          }
+        ],
+        "memberTypeName": "个人会员"
+      },
+      {
+        "memberTypeId": 3,
+        "businessTypes": [],
+        "memberTypeName": "渠道企业会员"
+      },
+      {
+        "memberTypeId": 4,
+        "businessTypes": [],
+        "memberTypeName": "渠道个人会员"
+      }
+    ]
+  }
+}

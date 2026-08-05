@@ -1,0 +1,62 @@
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.school-card {
+  padding-top: $spacing-v-xl;
+  padding-left: $spacing-h-lg * 2;
+  padding-right: $spacing-h-lg;
+  padding-bottom: $spacing-v-lg;
+  background-color: $color-bg;
+  border-radius: 8px;
+
+  &-head {
+    position: relative;
+    margin-bottom: $spacing-v-lg;
+
+    &-ribbon {
+      position: absolute;
+      top: $spacing-v-xs / 2;
+      left: -$spacing-v-lg;
+      width: 4px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: $color-primary;
+    }
+  }
+
+  &-body {
+
+  }
+
+  &-name {
+    color: $color-black-1;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    @include text-overflow();
+  }
+
+  &-id {
+    display: inline-block;
+    color: $color-black-1;
+    font-size: $font-size-sm;
+  }
+  
+  &-status {
+    display: inline-block;
+    padding: 0 $spacing-h-sm;
+    margin-left: $spacing-h-lg;
+    font-size: $font-size-sm;
+    color: $color-black-2;
+    background-color: $color-grey-5;
+
+    &-normal {
+      color: $color-primary;
+      background-color: #EBF9F6;
+    }
+    
+    &-frezon {
+      color: $color-warning;
+      background-color: #FFF8E8;
+    }
+  }
+}

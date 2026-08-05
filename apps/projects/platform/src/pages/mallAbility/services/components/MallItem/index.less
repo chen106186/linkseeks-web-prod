@@ -1,0 +1,143 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.mall-item {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+  align-items: center;
+
+  &-tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &-main {
+    flex: 1;
+    display: flex;
+  }
+
+  &-body {
+    display: flex;
+    padding: 16px;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &-bottom {
+    border-top: 1px dashed #f5f6f7;
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+
+    &-actions {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &-status-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 18px solid @color-primary;
+    border-bottom: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-left: 18px solid @color-primary;
+    z-index: 2;
+
+    & > span {
+      position: absolute;
+      width: 32px;
+      left: -18px;
+      top: -18px;
+      color: #fff;
+      font-size: 12px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-info {
+    padding-left: 16px;
+
+    &-img {
+      background-color: #f5f6f7;
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #252d37;
+      margin-bottom: 12px;
+    }
+
+    &-link {
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-describe {
+      display: -webkit-box;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    &-line {
+      display: flex;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & > label {
+        color: #909399;
+      }
+
+      & > span {
+        color: #303133;
+      }
+    }
+
+    &-tag {
+      color: #5c626a;
+      height: 16px;
+      line-height: 14px;
+    }
+  }
+
+  &-actions {
+    &-dropdown-btn {
+      height: 32px;
+      display: flex;
+      padding: 5.6px 15px;
+      background-color: #f5f6f7;
+      align-items: center;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-typography-disabled {
+    color: #909399 !important;
+  }
+}

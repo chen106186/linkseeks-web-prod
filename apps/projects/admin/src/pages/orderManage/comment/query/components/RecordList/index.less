@@ -1,0 +1,85 @@
+@import '../../../../../../global/styles/utils.less';
+
+.record {
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    padding: 14px 16px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    background: #fafbfc;
+    color: #303133;
+    gap: 16px;
+
+    &-good {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+
+      &-name {
+        line-height: 14px;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      &-price {
+        margin-right: 16px;
+        font-weight: 500;
+      }
+
+      &-desc {
+        line-height: 12px;
+        font-weight: 400;
+        color: #909399;
+      }
+    }
+
+    &-extra {
+      width: 20%;
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        &-label {
+          flex: 0 0 60px;
+          line-height: 12px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #909399;
+        }
+
+        &-control {
+          flex: 1;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &-comment {
+      width: 40%;
+
+      &-main {
+        margin-top: 6px;
+        line-height: 14px;
+        font-weight: 400;
+        color: #303133;
+        .textOverflow();
+      }
+    }
+
+    &-actions {
+      flex: 1;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

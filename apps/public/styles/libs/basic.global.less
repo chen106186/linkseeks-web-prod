@@ -1,0 +1,43 @@
+@import url('antd/dist/antd.less');
+@import url('@linkseeks/ui/src/styles/antd/variables.less');
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+@import url('@linkseeks/ui/src/styles/index.less');
+@import url('./mixins.less');
+
+.generate-font-title(6);
+
+.flex {
+  display: flex;
+}
+
+.layout-container {
+  .flex-container;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// 公共的title伪类竖线
+.common-panel-title {
+  padding-left: 8px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.4267rem;
+    width: 2px;
+    height: 0.8533rem;
+    background-color: @color-primary;
+    box-shadow: 0 0.1493rem 0.256rem 0 rgb(97 144 232 / 20%);
+    border-radius: 1px;
+  }
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}

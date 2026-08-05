@@ -1,0 +1,76 @@
+
+@import '@/styles/variables.scss';
+
+.container{
+  margin-top: 80px;
+  padding: 16px 14px;
+  :global{
+    .at-input {
+      flex: 1 !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      background: #F4F4F4;
+    }
+  }
+  .Text{
+    color: #C0C4CC;
+    font-size: 14px;
+  }
+  .title{
+    font-size: 24px;
+    font-weight: 400;
+
+  }
+  .fromItem{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 12px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    .code{
+      font-size: 14px;
+      width: 30px;
+    }
+    .placeholderText{
+      @extend .Text;
+    }
+    Input{
+      // margin-left: 32px;
+      flex: 1;
+      color: #303133;
+      font-size: 14px;
+    }
+    .fill{
+      padding: 0 10px;
+
+      border-right: 1px solid #F4F5F7;
+      display: flex;
+      align-items: center;
+      margin-right: 14px;
+      Image ,taro-image-core {
+        width: 15px;
+        height: 16px;
+      }
+    }
+  }
+  .fomfoot{
+    margin-top: 40px;
+    .btn{
+      background-color: $theme-color;
+      color: #fff;
+      padding: 12px 0;
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .btnText{
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
+      margin-top: 20px;
+      color: #909399;
+    }
+  }
+}
+

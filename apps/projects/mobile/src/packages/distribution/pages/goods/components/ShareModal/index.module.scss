@@ -1,0 +1,124 @@
+@import '@/styles/variables.scss';
+
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+};
+.share-modal {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px * $hd 40px * $hd;
+  border-radius: 8px;
+};
+.share-modal-title {
+  font-size: 14px;
+  color: #252D37;
+  font-weight: "600";
+
+  &-special {
+    color: red;
+  }
+};
+.share-modal-timeout {
+  font-size: 14px * $hd;
+  color: #91959B;
+  margin-top: 8px * $hd;
+};
+.share-modal-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px * $hd;
+};
+.share-modal-actions-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  .share-modal-button {
+    background-color: #fff;
+    // opacity: 0.1;
+    border: none;
+
+    &::after {
+      border: none !important;
+    }
+  }
+};
+.share-modal-actions-item-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+};
+.share-modal-actions-item-text {
+  color: #5C626A;
+  font-size: 12px * $hd;
+};
+.share-modal-footer {
+  margin-top: 12px * $hd;
+  width: 32px * $hd;
+  height: 32px * $hd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px * $hd;
+  border: 1px solid #fff;
+  // zIndex: 666;
+};
+.share-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .share-success-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  };
+  .share-success-icon {
+    width: 24px * $hd;
+    height: 24px * $hd;
+    // : theme.colors.primary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px * $hd;
+  };
+  .share-success-text {
+    font-size: 16px * $hd;
+    font-weight: "600";
+  };
+  .share-success-tips {
+    font-size: 14px * $hd;
+    margin-bottom: 40px * $hd;
+    text-align: center;
+    color: #91959B;
+  };
+  .continue-share {
+    border-radius: 8px * $hd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 272px * $hd;
+    background-color: $theme-color;
+    padding: $spacing-h-lg 0;
+  };
+  .continue-share-text {
+    font-size: 14px * $hd;
+    color: #fff;
+    font-weight: "600";
+  }
+};
+

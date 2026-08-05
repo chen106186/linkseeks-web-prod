@@ -1,0 +1,70 @@
+@import '@/styles/variables.scss';
+
+.supplier-form {
+  padding-bottom: 100px;
+  
+  &-steps {
+    padding: 24px 18px 32px;
+    background-color: $color-brand;
+    
+    .at-steps {
+      display: block;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .at-steps__item {
+      display: inline-block;
+      width: 80px;
+      flex: 0 0 80px;
+      vertical-align: top;
+    }
+
+    .at-steps__circular {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+    }
+
+    .at-steps__desc {
+      white-space: normal;
+    }
+
+    .at-steps__item--active {
+      .at-steps__circular {
+        color: $color-brand;
+        background-color: $color-bg;
+      }
+      .at-steps__desc {
+        color: $color-white;
+      }
+    }
+    
+    .at-steps__item--inactive {
+      .at-steps__circular {
+        color: $color-brand;
+        background-color: rgba($color: $color-bg, $alpha: 0.45);
+      }
+    }
+  }
+
+  &-section {
+    margin-top: -$spacing-v-xl;
+    padding: 0 $spacing-h-md;
+  }
+
+  &-actions {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    padding: $spacing-v-md $spacing-h-md;
+    background-color: $color-bg;
+
+    .space-item {
+      flex: 1;
+    }
+  }
+}

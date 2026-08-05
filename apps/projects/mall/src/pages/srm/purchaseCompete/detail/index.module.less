@@ -1,0 +1,131 @@
+@import url('../../commonly.less');
+
+li {
+  list-style: none;
+}
+
+.inquiry-main {
+  display: flex;
+  width: 1200px;
+  margin: 16px auto;
+}
+
+.inquiry-warp {
+  flex: 1;
+
+  .shop-title-warp {
+    display: flex;
+    padding: @padding;
+    font-size: 12px;
+    background-image: linear-gradient(to right, #fff, #e4f7ef);
+    width: 100%;
+
+    .shop-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #303133;
+    }
+
+    .shop-title-tips {
+      display: inline-block;
+      color: #00a98f;
+      background: #e4f7ef;
+      padding: 6px 9px;
+      margin-top: 16px;
+    }
+
+    .shop-title-left {
+      flex: 1;
+    }
+
+    .shop-title-right {
+      width: 470px;
+      color: #00a98f;
+      text-align: right;
+      margin-right: 8px;
+
+      .shop-title-btn {
+        display: inline-block;
+        width: 108px;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 40px;
+        background: #00a98f;
+        color: #fff;
+      }
+
+      .shop-title-small-btn {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        background: #00a98f;
+        color: #fff;
+      }
+    }
+  }
+
+  .demand-warp {
+    border-top: 1px solid #f4f5f7;
+    padding: 24px;
+    font-size: 14px;
+    background: #fff;
+    margin-bottom: 16px;
+  }
+
+  .materiel-warp {
+    padding: 0 24px;
+    background: #fff;
+    margin-bottom: 16px;
+    padding-bottom: 24px;
+  }
+
+  .card-item {
+    margin-bottom: 24px;
+    display: flex;
+
+    .card-key {
+      color: #909399;
+      width: 104px;
+    }
+
+    .card-value {
+      color: #303133;
+    }
+
+    .card-filer {
+      color: #00a98f;
+    }
+
+    .card-value-tips {
+      color: #909399;
+      font-size: 12px;
+    }
+  }
+
+  .card-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-title {
+    line-height: 72px;
+    height: 72px;
+    color: #303133;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.inquiry-nav-main {
+  width: 240px;
+  margin-left: 16px;
+
+  .inquiry-tips {
+    color: #909399;
+    font-size: 14px;
+    padding: 14px 0 12px;
+  }
+}

@@ -1,0 +1,42 @@
+.billInfo {
+  :global {
+    .ant-tabs-top > 
+    .ant-tabs-nav {
+      .ant-tabs-ink-bar {
+        top: 0;
+      }
+
+      &::before {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.dateWrap {
+  padding: 10px 16px 22px;
+
+  .time {
+    margin-top: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #172B4D;
+  }
+}
+
+.content {
+  display: flex;
+
+  &-left {
+    flex-shrink: 0;
+    width: 300px;
+  }
+
+  &-right {
+    flex: 1;
+  }
+}
+
+.noData {
+  padding-top: 24px;
+}

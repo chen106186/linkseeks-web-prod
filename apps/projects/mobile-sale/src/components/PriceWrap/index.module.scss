@@ -1,0 +1,22 @@
+@import '@/styles/variables.scss';
+
+.price-wrap {
+  font-size: 12px;
+
+  .symbol {
+    color: $red-text-color;
+  }
+
+  .money-main {
+    font-size: 16px;
+    color: $red-text-color;
+  }
+
+  .money-secondary {
+    color: $red-text-color;
+  }
+
+  .unit {
+    color: $third-text-color;
+  }
+}

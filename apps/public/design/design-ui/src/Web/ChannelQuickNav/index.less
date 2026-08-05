@@ -1,0 +1,335 @@
+.quikc_nav {
+  position: relative;
+  height: 400px;
+  width: 240px;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #fff;
+
+  .quikc_nav_right {
+    background: #fff;
+    z-index: 8;
+    pointer-events: auto;
+
+    .member_card {
+      background-color: #fff;
+      padding: 24px 16px 0;
+
+      .shop_header_info {
+        position: relative;
+        display: flex;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #f4f5f7;
+
+        &_logo {
+          border-radius: 4px;
+          overflow: hidden;
+          width: 48px;
+          height: 48px;
+          margin-right: 8px;
+
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        &_content {
+          position: relative;
+
+          &_name {
+            font-size: 14px;
+            color: #303133;
+            font-weight: 500;
+          }
+
+          &_about {
+            display: flex;
+            margin-top: 4px;
+
+            &_item {
+              // flex: 1;
+              display: flex;
+              align-items: center;
+              margin-right: 16px;
+
+              & > span {
+                font-size: 14px;
+                color: #303133;
+                line-height: 20px;
+
+                &.red {
+                  color: #d32f2f;
+                  margin-right: 4px;
+                }
+              }
+
+              & > .icon {
+                position: relative;
+                top: -1px;
+                overflow: hidden;
+                margin-right: 5px;
+
+                & > img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+
+          &_icon {
+            color: #c0c4cc;
+            font-size: 12px;
+            margin-left: 6px;
+          }
+        }
+
+        .shop_info {
+          position: absolute;
+          display: none;
+          top: 48px;
+          width: 214px;
+          padding-top: 8px;
+          margin-bottom: 20px;
+          background-color: #fff;
+          z-index: 8;
+          left: 0;
+
+          .shop_info_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff8da;
+            height: 40px;
+            border: 1px solid rgb(245 245 245 / 100%);
+            border-bottom: none;
+
+            &_split {
+              width: 40px;
+              height: 1px;
+              background-color: #f2c17c;
+            }
+
+            &_text {
+              color: #ea8000;
+              margin: 0 15px;
+            }
+          }
+
+          &_body {
+            padding: 16px;
+            border: 1px solid rgb(245 245 245 / 100%);
+            border-top: none;
+          }
+
+          .shop_name {
+            font-size: 12px;
+            color: #303133;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+
+          .shop_about {
+            display: flex;
+
+            &_item {
+              flex: 1;
+              display: flex;
+              align-items: center;
+
+              & > span {
+                font-size: 14px;
+                color: #303133;
+                line-height: 20px;
+
+                &.red {
+                  color: #d32f2f;
+                  margin-right: 4px;
+                }
+              }
+
+              & > .icon {
+                position: relative;
+                top: -1px;
+                overflow: hidden;
+                margin-right: 5px;
+
+                & > img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+
+          .dashed_split {
+            margin: 15px 0;
+            width: 100%;
+            border-top: 1px dashed #f4f5f7;
+            height: 0;
+          }
+        }
+      }
+
+      .shop_info_list {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #f4f5f7;
+
+        &_item {
+          display: flex;
+          font-size: 12px;
+          line-height: 12px;
+          color: #303133;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+
+          .star {
+            font-size: 15px;
+            line-height: 15px;
+            margin-left: 4px;
+            color: #fca110 !important;
+
+            :global {
+              .ant-rate-star {
+                &:not(:last-child) {
+                  margin-right: 1px;
+                }
+              }
+            }
+          }
+
+          & > .breif {
+            white-space: nowrap;
+
+            .star {
+              font-size: 15px;
+              line-height: 15px;
+            }
+
+            .certified {
+              color: #3877ff;
+            }
+          }
+
+          & > .label {
+            width: 86px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+
+      .contact_box {
+        display: flex;
+        border-radius: 1px;
+        overflow: hidden;
+
+        .contact_icon {
+          width: 16px;
+          height: 16px;
+          background-color: #26e;
+          border-radius: 1px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > img {
+            width: 14px;
+            height: 12px;
+          }
+        }
+
+        .contack_text {
+          display: flex;
+          align-items: center;
+          height: 16px;
+          color: #26e;
+          font-size: 12px;
+          line-height: 12px;
+          border: 0.5px solid #c7e1ff;
+          border-left: none;
+          padding-right: 4px;
+          background-color: #f0f7ff;
+          padding-left: 2px;
+        }
+      }
+
+      .change_role_box {
+        &_title {
+          padding: 16px 0;
+          font-size: 12px;
+          color: #c0c4cc;
+          line-height: 12px;
+          text-align: center;
+        }
+
+        &_select {
+          display: block;
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+
+        .current_role {
+          height: 32px;
+          background-color: #f1f1f1;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+        }
+
+        :global {
+          .ant-select-selector {
+            border: none;
+            background-color: #f1f1f1;
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shopCredit {
+  position: relative;
+
+  .shopCreditIcon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 18px;
+    height: 16px;
+  }
+
+  .pointWrap {
+    background-color: #ffe6c8;
+    border-radius: 1px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #773100;
+    padding-right: 4px;
+    padding-left: 12px;
+    margin-left: 9px;
+  }
+}
+
+.yearbox {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 1px;
+  border: 1px solid #6a8dda;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #6a8dda;
+}

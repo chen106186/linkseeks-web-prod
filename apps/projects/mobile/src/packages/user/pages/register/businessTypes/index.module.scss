@@ -1,0 +1,91 @@
+@import '@/styles/variables.scss';
+
+.container {
+  background-color: #fff;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .Text {
+    color: #C0C4CC;
+    font-size: 14px;
+  }
+
+  .list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+    .item {
+      width: 48%;
+      margin-bottom: 16px;
+      font-size: 14px;
+      text-align: center;
+      background: #F5F6F7;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+    }
+
+    .itemAtive {
+      width: 48%;
+      margin-bottom: 16px;
+      font-size: 14px;
+      text-align: center;
+      background: rgba($theme-color, .04);
+      border: 1px solid $theme-color;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+    }
+
+    .memberTypeName {
+      font-size: 14px;
+      text-align: center;
+      padding: 0 4px;
+      flex: 1;
+      color: #5C626A;
+    }
+  }
+
+  .InfoName {
+    font-size: 24px;
+    font-family: PingFangSC-Regular;
+    color: #303133;
+    margin-bottom: 22px;
+  }
+
+  .foot {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+
+    .btn {
+      width: 100%;
+      padding: 16px 0;
+      color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      background: $theme-color;
+      border-radius: 8px;
+    }
+  }
+}
+
+.goBack {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	margin-top: 24px;
+	color: #909399;
+	width: 100%;
+	text-align: center;
+}

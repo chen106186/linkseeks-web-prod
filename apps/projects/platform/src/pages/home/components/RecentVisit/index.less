@@ -1,0 +1,39 @@
+.recentVisit {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  height: 235px;
+
+  .header {
+    .title {
+      font-size: 16px;
+      color: #303133;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    justify-content: space-between;
+    .item {
+      background: #F7F8FA;
+      // width: 157px;
+      width: 48%;
+      color: #303133;
+      padding: 6px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #303133;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-all;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.taro-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 32px 0px;
+  // background-color: $color-bg-grey;
+  background-color: transparent !important;
+  .taro-empty__image {
+    width: 160px;
+    height: 120px;
+    .image {
+      width: 100%;
+      height: 100%;
+      // background-color: $color-bg-grey;
+      background-color: transparent !important;
+    }
+  }
+  .taro-empty__description {
+    margin-top: 18px;
+    padding: 0 60px;
+    color: #969799;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .taro-empty__bottom {
+    margin-top: 24px;
+  }
+}

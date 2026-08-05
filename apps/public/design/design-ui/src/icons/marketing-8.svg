@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/赠商品</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E0B26C" offset="0%"></stop>
+            <stop stop-color="#F6CF85" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/赠商品" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="2" y="2" width="12" height="12"></rect>
+        <circle id="椭圆形" fill="url(#linearGradient-1)" cx="8" cy="8" r="8"></circle>
+        <path d="M3.91181982,9.15369477 C2.69606006,7.93793501 2.69606006,5.96679896 3.91181982,4.7510392 C5.02779142,3.6350676 6.77954787,3.8591266 8,4.79190286 C9.2190931,3.8591266 10.9722086,3.6350676 12.0881802,4.7510392 C13.3039399,5.96679896 13.3039399,7.93793501 12.0881802,9.15369477 L8.56568542,12.6761895 C8.25326599,12.988609 7.74673401,12.988609 7.43431458,12.6761895 L3.91181982,9.15369477 L3.91181982,9.15369477 Z" id="路径" fill="#FFFFFF"></path>
+    </g>
+</svg>

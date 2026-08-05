@@ -1,0 +1,26 @@
+// 生成字体大小
+.generate-font-title(@n, @i: 1) when (@i =< @n) {
+  @fontSize: ~'font-size-title-@{i}';
+  .h@{i} {
+    font-size: @@fontSize;
+    font-weight: 600;
+  }
+
+  .generate-font-title(@n, (@i + 1));
+}
+
+.flex-container(@direction: row, @justify: center, @align: center, @wrap: wrap) {
+  display: flex;
+  flex-flow: @direction @wrap;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.flex-item(@flex: 1, @margin: 0px) {
+  flex: @flex;
+  margin: @margin;
+}
+
+.flex-wrap(@wrap: wrap) {
+  flex-wrap: @wrap;
+}

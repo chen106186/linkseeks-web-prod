@@ -1,0 +1,47 @@
+@import "@/styles/variables.scss";
+
+.steps {
+  width: 100%;
+  flex-direction: row;
+  position: relative;
+  padding-left: 16px;
+}
+.steps-line {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  bottom: 12px;
+  width: 1px;
+  background-color: #ebecf0;
+}
+.steps-container {
+  display: flex;
+  flex-direction: column;
+}
+.steps-item {
+  padding: 6px;
+  padding-left: 0px;
+  position: relative;
+}
+.steps-item-circle {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 11px;
+  left: -15px;
+  border-width: 1px;
+  border-color: #ebecf0;
+  background-color: #ffffff;
+  border-radius: 999px;
+}
+.steps-item-circle__active {
+  border-color: $color-primary;
+  background-color: $color-primary;
+}
+.steps-item-title {
+  font-size: 12px;
+  color: $color-black-2;
+}
+.steps-item-title__active {
+  color: $color-black-1;
+}

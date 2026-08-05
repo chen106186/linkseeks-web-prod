@@ -1,0 +1,93 @@
+.card-list {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.card-list_title {
+  color: #909399;
+  font-size: 12px;
+}
+
+.paneTitle {
+  height: 14px;
+  margin: 16px 0 16px 0;
+  color: #909399;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  .longString {
+    height: 14px;
+    margin-right: 6px;
+    color: #00a98f;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+// 抽屉内部内容样式
+
+.drawerContainer {
+  .drawerNav {
+    position: fixed;
+    width: 160px;
+    height: 100%;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #f4f5f7;
+      content: '';
+    }
+    ul {
+      width: 160px;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      li {
+        width: 160px;
+        height: 48px;
+        line-height: 48px;
+        background: #ffffff;
+        a {
+          height: 24px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          padding-left: 16px;
+          color: #606266;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 24px;
+        }
+        .current {
+          color: #303133;
+          border-left: 2px solid #00a98f;
+        }
+      }
+    }
+  }
+  .drawerContent {
+    .drawerContentItem {
+      .drawerContentTitle {
+        p {
+          height: 14px;
+          margin: 16px 0 16px 0;
+          color: #909399;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 14px;
+          .longString {
+            height: 14px;
+            margin-right: 6px;
+            color: #00a98f;
+            font-weight: bolder;
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}

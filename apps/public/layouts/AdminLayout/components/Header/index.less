@@ -1,0 +1,50 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid @border-color-neutral;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.right-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.bellIcon {
+  margin-right: 24px;
+}
+
+.avatarWrap {
+  display: flex;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  color: @color-text-2;
+  font-size: @font-size-base;
+  line-height: 1em;
+
+  span {
+    margin-right: 4px;
+  }
+}

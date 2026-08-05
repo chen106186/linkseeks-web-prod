@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: $spacing-v-sm $spacing-h-lg;
+  box-sizing: border-box;
+
+  &-show-action {
+    padding-right: 0;
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    background-color: #F7F8FA;
+    border-radius: 8px;
+
+    &__round {
+      border-radius: 999px;
+    }
+  }
+
+  &-label {
+    padding: 0 $spacing-h-sm;
+    color: $color-grey-0;
+    line-height: 17px;
+    font-size: $font-size-base;
+  }
+
+  &-control {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: $spacing-h-sm 0;
+    padding-right: $spacing-h-md;
+    position: relative;
+
+    &-left-icon {
+      width: 20px;
+      height: 18px;
+      margin-right: 4px;
+    }
+
+    &-left-icon,
+    &-right-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-right-icon {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      background-color: $color-grey-4;
+      border-radius: 100%;
+    }
+  }
+
+  &-field-wrap {
+    flex: 1;
+    position: relative;
+  }
+
+  &-field {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+
+    &-placeholder {
+      color: $color-grey-2;
+    }
+
+    // 去掉下划线
+    &::after {
+      display: none;
+    }
+
+    input {
+      height: 24px;
+      padding: 0;
+      text-align: left;
+      font-size: $font-size-base;
+      font-weight: 400;
+    }
+  }
+
+  &-placeholder {
+    padding: $spacing-v-xs 0;
+    flex: 1;
+    font-size: $font-size-base;
+    color: $color-grey-2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-action {
+    padding: 0 $spacing-h-md;
+    color: $color-grey-0;
+    font-size: $font-size-base;
+    line-height: $font-size-base;
+  }
+}

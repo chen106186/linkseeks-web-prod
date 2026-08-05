@@ -1,0 +1,106 @@
+@import '@/styles/variables.scss';
+
+.order-item-card {
+  flex: 1;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #FFF;
+  font-size: 12px;
+}
+
+.card-header {
+  @include flexBetween;
+  padding-bottom: 12px;
+  color: $third-text-color;
+}
+
+.card-body {
+  display: flex;
+  padding-bottom: 16px;
+
+  .image-box {
+    display: flex;
+  }
+
+  .image-box-item {
+    height: 80px;
+  }
+
+  .image {
+    height: 80px;
+    width: 80px;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+
+  .card-body-info {
+    @include flexCol;
+    flex: 1;
+
+    .info-title {
+      min-height: 30px;
+      color: $main-text-color;
+      @include text-overflow-line(2);
+      margin-bottom: 6px;
+    }
+
+    .info-specs {
+      min-height: 15px;
+      color: $third-text-color;
+      margin-bottom: 10px;
+    }
+
+    .info-price-wrap {
+      @include flexBetween;
+      align-items: center;
+    }
+
+    .price-number {
+      display: flex;
+      align-items: flex-end;
+
+      > View:first-child,
+      > taro-view-core:first-child {
+        margin-right: 10px;
+      }
+    }
+
+    .edit-price-btn {
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: $theme-color;
+      background-color: #EBF9F6;
+    }
+  }
+}
+
+.card-footer {
+  @include flexBetween;
+
+  .order-type {
+    color: $second-text-color;
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 12px;
+
+  .btn {
+    margin-right: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $theme-color;
+    background-color: #EBF9F6;
+  }
+
+  .btn:last-child {
+    margin-right: 0;
+  }
+}

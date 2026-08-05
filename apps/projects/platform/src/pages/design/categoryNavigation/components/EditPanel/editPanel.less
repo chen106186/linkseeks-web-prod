@@ -1,0 +1,85 @@
+.editPanel {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: width 0.25s;
+  display: flex;
+  flex-direction: column;
+
+  &.hide {
+    width: 0;
+  }
+
+  &.show {
+    width: 400px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #f5f6f7;
+
+    .title {
+      font-size: 16px;
+      color: #252d37;
+    }
+  }
+
+  .content {
+    padding: 16px;
+    flex: 1;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 12px;
+    border-top: 1px solid #f5f6f7;
+  }
+
+  .image {
+    margin-top: 8px;
+    width: 100%;
+    background-color: #fafbfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    position: relative;
+    cursor: pointer;
+
+    .imageIcon {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .uploadImage {
+      position: absolute;
+      bottom: -34px;
+      left: 0;
+      right: 0;
+      padding: 4px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      text-align: center;
+      color: #fff;
+      transition: all 0.6s;
+    }
+    &:hover {
+      .uploadImage {
+        transform: translateY(-34px);
+      }
+    }
+  }
+}

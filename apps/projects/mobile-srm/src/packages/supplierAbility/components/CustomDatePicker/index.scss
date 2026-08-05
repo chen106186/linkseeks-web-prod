@@ -1,0 +1,75 @@
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.custom-date-picker {
+  padding-right: 20px;
+  position: relative;
+
+  &-selector {
+
+  }
+
+  &-content {
+    line-height: 28px;
+    font-size: $font-size-base;
+    color: $color-grey-3;
+    @include text-overflow();
+
+    &-text {
+      color: $color-black-1;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    top: 1px;
+    right: 0;
+  }
+
+  &-scroll {}
+
+  &-options {
+    padding-bottom: 40px;
+    background-color: $color-white;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: $spacing-v-lg $spacing-h-lg;
+      background-color: $color-white;
+
+      &-left {
+        display: flex;
+        align-self: flex-start;
+        margin-right: $spacing-h-md;
+      }
+
+      &-center {
+        flex: 1;
+      }
+
+      &-right {
+        margin-left: $spacing-h-lg;
+      }
+
+      &-title {
+        display: block;
+        font-size: $font-size-base;
+        color: $color-black-1;
+      }
+
+      &-desc {
+        margin-top: $spacing-v-md;
+        display: block;
+        font-size: $font-size-sm;
+        color: $color-black-3;
+      }
+    }
+  }
+
+  &-actions {
+    padding: $spacing-v-md $spacing-h-md;
+    background-Color: #FFFFFF;
+  }
+}

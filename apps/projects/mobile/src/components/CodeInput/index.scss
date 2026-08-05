@@ -1,0 +1,85 @@
+@import '@/styles/variables.scss';
+
+.codeInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 45px * $hd;
+  justify-content: center;
+  // overflow: hidden;
+
+  .code {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    .codeItem {
+      height: 100%;
+      margin-right: 16px * $hd;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+			background-color: #F5F6F7;
+			border-radius: 4px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      .codeNumber {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+        .encrypt {
+          width: 15px * $hd;
+          height: 15px * $hd;
+          background-color: #000;
+          border-radius: 50%;
+        }
+      }
+
+      .lightHeight {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #000;
+        width: 100%;
+
+        &::before {
+          content: "";
+          height: 55%;
+          width: 1px;
+          background-color: #000;
+        }
+      }
+    }
+
+  }
+
+  .password-input {
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-50%);
+    z-index: 99;
+    opacity: 0;
+  }
+
+}

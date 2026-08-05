@@ -1,0 +1,22 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include common-container;
+  padding: 8px;
+
+  .remark-wrap {
+    margin-bottom: 40px;
+    padding: 16px 12px;
+    border-radius: 8px;
+    background-color: #FFF;
+  }
+
+  .btn-wrap {
+    @include confirmBtn;
+  }
+
+  .btn-wrap-disable {
+    color: $second-text-color;
+    background-color: #EDEEEF;
+  }
+}

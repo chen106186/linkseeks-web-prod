@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.refund-delivery-details {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-color: #F4F5F7;
+
+  .logisticsTabWrap {
+    &-item {
+      flex: 1 0 0;
+
+      &-small {
+        flex: 0 0 327px;
+        padding-right: $spacing-h-md;
+      }
+    }
+  }
+}

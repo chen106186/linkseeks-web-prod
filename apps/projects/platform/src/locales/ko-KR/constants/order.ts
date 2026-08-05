@@ -1,0 +1,16 @@
+export default {
+  'constants.order.1': '구매 문의',
+  'constants.order.2': '구매 요청',
+  'constants.order.3': '현물 구매',
+  'constants.order.4': '중앙 구매',
+  'constants.order.5': '채널 직접 구매',
+  'constants.order.6': '채널 스팟',
+  'constants.order.7': '포인트 사용',
+  'constants.order.8': '채널 포인트 교환',
+  'constants.order.9': '견적 계약 구매 요청',
+  'constants.order.10': '구매 경매 계약',
+  'constants.order.11': '구매 입찰 계약',
+  'constants.order.12': '구매 요청',
+  'constants.order.13': '국경을 넘다',
+  'constants.order.14': '구매 요청 구매 계약',
+}

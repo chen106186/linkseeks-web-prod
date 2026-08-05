@@ -1,0 +1,91 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+
+.bill-products {
+  &-item {
+    margin-bottom: $spacing-v-md;
+
+    &-product {
+      display: flex;
+
+      &-left {
+        flex-shrink: 0;
+        margin-right: $spacing-h-md;
+      }
+
+      &-right {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-picWrap {
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      &-pic {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &-name {
+        margin-bottom: $spacing-v-md - 2;
+        font-size: $font-size-sm;
+        color: $color-grey-0;
+        @include text-overflow-multi-line(2);
+      }
+
+      &-description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-wrap {
+        display: flex;
+        align-items: center;
+      }
+
+      &-price {
+        margin-right: $spacing-h-sm;
+        font-size: $font-size-base;
+        font-weight: 600;
+        color: $color-error;
+      }
+
+      &-desc {
+        margin-right: $spacing-h-sm;
+        font-size: $font-size-xs;
+        color: $color-grey-2;
+      }
+    }
+
+    &-field {
+      &-input {
+        padding: $spacing-v-md 0;
+        font-size: $font-size-lg;
+        color: $color-grey-0;
+        @include border-thin-bottom($color-bg-grey);
+
+        .at-input {
+          padding: 0;
+          margin: 0;
+
+          &__input {
+            text-align: right;
+            padding: $spacing-v-sm $spacing-h-md + 2;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

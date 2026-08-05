@@ -1,0 +1,83 @@
+.appPayContainer {
+  background-color: #fafbfc;
+  padding: 24px 24px 0 24px;
+  .appPayContent {
+    margin-bottom: 24px;
+    padding: 26px 48px;
+    background-color: #ffffff;
+    .appPayTitle {
+      display: flex;
+      // margin-bottom: 30px;
+      align-items: center;
+
+      & > img {
+        width: 32px;
+        height: 32px;
+      }
+      h2 {
+        margin-left: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 16px;
+      }
+    }
+    .appPayMain {
+      .appPayCommodity {
+        display: flex;
+        margin-top: 30px;
+        .commodityImage {
+          margin-right: 8px;
+        }
+        .commodityDescription {
+          .commodityPrice {
+            font-size: 20px;
+            color: #ef3346;
+            span {
+              font-size: 12px;
+            }
+            .originPrice {
+              text-decoration: line-through;
+              color: #91959b;
+              margin-left: 5px;
+            }
+          }
+          & > p {
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+          }
+        }
+      }
+      .appPayQrCode {
+        text-align: center;
+        p {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .appPayContentLink {
+    display: block;
+    .appPayMain {
+      margin-top: 20px;
+    }
+  }
+  .bottomBtn {
+    margin-bottom: 20px;
+  }
+  p {
+    .listLabel {
+      color: #91959b;
+    }
+  }
+  & > p {
+    text-align: center;
+  }
+}
+
+.listLabel {
+  color: #91959b;
+}

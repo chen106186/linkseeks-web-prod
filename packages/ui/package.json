@@ -1,0 +1,12 @@
+{
+  "name": "@linkseeks/ui",
+  "version": "1.0.0",
+  "main": "./src/index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "dependencies": {
+    "antd": "4.24.10"
+  }
+}

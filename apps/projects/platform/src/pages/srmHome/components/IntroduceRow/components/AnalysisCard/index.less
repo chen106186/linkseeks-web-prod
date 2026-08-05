@@ -1,0 +1,22 @@
+@import '~antd/es/style/themes/default.less';
+
+.analysis-card {
+  &-content {
+    display: flex;
+    align-items: center;
+    padding: @padding-lg - 2 @padding-md @padding-lg @padding-md;
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+  }
+
+  &-foot {
+    padding: @padding-md + 2 @padding-md;
+    border-top: 1px dashed @border-color-split;
+  }
+}

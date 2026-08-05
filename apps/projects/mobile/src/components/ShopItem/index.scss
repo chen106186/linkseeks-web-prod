@@ -1,0 +1,117 @@
+@import "@/styles/variables.scss";
+
+.shop-item {
+  width: 100%;
+  padding-bottom: 0px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 8px;
+  .shop-header {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+    flex-direction: row;
+    .shop-logo {
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: #fff;
+      border-width: 0.1;
+      border-color: #eef0f3;
+      margin-right: 8px;
+      .logo {
+        height: 40px;
+        width: 100%;
+      }
+    }
+    .shop-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .shop-name-wrapper {
+        margin-bottom: 10px;
+
+        .shop-name {
+          font-size: 12px;
+          overflow: hidden;
+          color: #303133;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .enter-shop-btn {
+      display: flex;
+      border-width: 0.5;
+      // border: 1px solid $theme-color;
+      border-radius: 4px;
+      height: 24px;
+      min-width: 48px;
+      padding: 0 8px;
+      align-items: center;
+      justify-content: center;
+			background-color: #F4F5F7;
+      .enter-shop-btn-text {
+        font-size: 12px;
+				color: #252D37;
+        // color: $theme-color;
+      }
+    }
+  }
+  .goods-list {
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    .goods-item {
+      display: flex;
+      flex-direction: column;
+      margin-right: 8px;
+      .goods-name {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #303133;
+        width: 106px;
+        font-size: 12px;
+        margin-top: 6px;
+      }
+      .goods-price-wrap {
+        display: flex;
+        width: 100%;
+        margin-top: 8px;
+        align-items: center;
+        .goods-price-unit {
+          color: #303133;
+          font-size: 14px;
+        }
+        .goods-price {
+          color: #303133;
+          font-size: 14px;
+        }
+      }
+
+      .product-list-item-extra-left {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        margin-top: 8px;
+        .ask-commodity-price {
+          padding-left: 4px;
+          padding-right: 4px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          background-color: #f0f7ff;
+          border-radius: 2px;
+          display: inherit;
+          .ask-commodity-price-text {
+            color: $theme-color;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

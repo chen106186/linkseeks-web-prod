@@ -1,0 +1,89 @@
+{
+  "miniprogramRoot": "dist/weapp/",
+  "description": "业务员小程序",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": true,
+    "postcss": false,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false,
+    "ignoreUploadUnusedFiles": true
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "navigateToMiniProgramAppIdList": ["wx6885acbedba59c14"],
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "找现货",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "找现货商品详情",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/detail/index",
+          "query": "commodityId=0",
+          "scene": null
+        },
+        {
+          "name": "积分商品详情",
+          "pathName": "packages/commodityMerge/pages/pointsSourcing/detail/index",
+          "query": "commodityId=0",
+          "scene": null
+        },
+        {
+          "name": "售后退货列表",
+          "pathName": "packages/afterService/pages/afterRecords/refundRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请售后",
+          "pathName": "packages/afterService/pages/afterTodo/applyAs/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "srcMiniprogramRoot": "dist/weapp/",
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "libVersion": "3.0.1",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wx0fdee0cee86ec18e"
+}

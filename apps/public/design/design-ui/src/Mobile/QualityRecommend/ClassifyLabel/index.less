@@ -1,0 +1,53 @@
+.classify-label {
+  display: flex;
+
+  &-item {
+    flex: 1;
+
+    &.active {
+      .classify-label-item-wrap {
+        color: #00a98f;
+      }
+    }
+
+    &:not(:last-child) {
+      .classify-label-item-wrap {
+        &::after {
+          position: absolute;
+          content: '';
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          width: 1px;
+          height: 16px;
+          background-color: #ebedf0;
+        }
+      }
+    }
+
+    &-wrap {
+      position: relative;
+      display: flex;
+      height: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #303133;
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-explain {
+      font-size: 10px;
+    }
+  }
+
+  &-list-wrap {
+    position: relative;
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+.container-List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  .warp-item {
+    width: 175px;
+    height: 88px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .warp-img {
+      width: 24px;
+      height: 24px;
+      margin: 4px;
+    }
+    .warp-item-text {
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "canshuzhijinweilinghuoyi": "参数值仅为0或1",
+  "buzhichidewenjianleixing": "不支持的文件类型",
+  "shangchuantupianbuchaoguo": "上传图片不超过",
+  "canshuzhi": "参数值",
+  "wuxushenhe": "无需审核",
+  "xushenhe": "需审核",
+  "zhichijpgpngjpeg": "支持JPG/PNG/JPEG",
+  "zuidabuchaoguo": "最大不超过",
+  "chicun": "尺寸",
+  "quedingyaozhixingzheigecaozuo": "确定要执行这个操作？",
+  "canshubianhao": "参数编号",
+  "canshumingcheng": "参数名称",
+  "canshumiaoshu": "参数描述",
+  "bitianshuruzhi": "必填，输入值",
+  "liangweixiaoshu": "两位小数",
+  "shuruqujian": "输入区间",
+  "morenzhi": "默认值",
+  "zhanghaomingchengchangdubuchaoguoershi": "账号名称长度不超过20"
+}

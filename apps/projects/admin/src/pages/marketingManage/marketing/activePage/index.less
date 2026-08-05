@@ -1,0 +1,66 @@
+.page {
+  display: flex;
+  flex-direction: row;
+
+  .searchPannel {
+    width: 230px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .tablePanenl {
+    margin-left: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .search {
+        width: 256px;
+
+        :global {
+          .ant-input {
+            padding: 7px 11px;
+            border: none;
+
+            &:focus {
+              border-color: transparent;
+            }
+          }
+          .ant-input-search-button {
+            border-left: none;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .body {
+      flex: 1;
+    }
+
+    .table {
+      margin-top: 16px;
+      flex: 1;
+
+      .tableItem {
+        margin-bottom: 12px;
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .footer {
+      margin-top: 16px;
+      .pagination {
+        float: right;
+      }
+    }
+  }
+}

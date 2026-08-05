@@ -1,0 +1,74 @@
+@import '@/styles/utils/text-overflow-multi-line.scss';
+.popular-shops-container {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex-direction: column;
+  .title-wrap {
+    display: flex;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    align-items: center;
+    .title {
+      font-size: 16px;
+      color: #252d37;
+      font-weight: bold;
+      flex: 1;
+    }
+    .more-link {
+      color: #91959b;
+      font-size: 14px;
+    }
+  }
+
+  .shop-scroll-wrap {
+    margin-top: 8px;
+    border-radius: 8px;
+    .shop-list {
+      display: flex;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 112px;
+      margin-bottom: 8px;
+    }
+    .shop-item {
+      width: 152px;
+      padding: 12px;
+      background-color: #fff;
+      border-radius: 8px;
+      margin-right: 8px;
+      .shop-info {
+        flex: 1;
+        margin-top: 8px;
+        flex-direction: column;
+        .shopname {
+          font-size: 12px;
+          color: #303133;
+          font-weight: bold;
+          @include text-overflow-multi-line(1);
+        }
+        .start-wrap {
+          display: flex;
+          align-items: center;
+          background-color: #f4f5f7;
+          border-radius: 8px;
+          height: 16px;
+          margin-top: 4px;
+          width: 98px;
+          padding-left: 4px;
+          padding-right: 4px;
+          .avg-trade-comment-star {
+            font-size: 12px;
+            margin-right: 4px;
+          }
+          .start-wrap-container {
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}

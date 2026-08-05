@@ -1,0 +1,144 @@
+/*
+ * @Author: GHua
+ * @Date: 2022-03-25 14:20:25
+ * @LastEditTime: 2022-03-31 18:20:15
+ * @LastEditors: GHua
+ * @Description: 商品筛选组件
+ */
+import React, { useState, useEffect } from 'react'
+import { useLocation } from '@linkseeks/router-core'
+import { LAYOUT_TYPE } from '@/constants'
+import Category from './Category'
+import Brand from './Brand'
+import PriceRange from './PriceRange'
+import CarriageType from './CarriageType'
+import { AttributeType, FILTER_PARAM, FILTER_PARAM_KEY, FILTER_SEARCH_TYPE, FILTER_TYPE } from './types'
+import './index.less'
+
+interface filterConfigItemType {
+  /** 筛选类型 */
+  type: FILTER_TYPE
+  /** 筛选数据源 */
+  source?: any
+  attributeList?: AttributeType[]
+  onDelete?: (id: number) => void
+  onClick?: (values: any) => void
+}
+
+interface CommonFilterProps {
+  style?: React.CSSProperties
+  /** 筛选类型 url: 通过链接跳转； silence：无跳转，通过改变参数筛选  */
+  filterType?: FILTER_SEARCH_TYPE
+  layoutType?: LAYOUT_TYPE
+  filter?: string
+  filterParam?: FILTER_PARAM
+  filterConfig: filterConfigItemType[]
+  onFilter?: (values: FILTER_PARAM | undefined) => void
+}
+
+const CommonFilter: React.FC<CommonFilterProps> = (props) => {
+  const { style, filterParam, filterConfig, filterType, onFilter } = props
+  const [innerValue, setInnerValue] = useState<FILTER_PARAM>()
+  const { pathname, search } = useLocation()
+
+  useEffect(() => {
+    if (filterParam) {
+      setInnerValue(filterParam)
+    } else {
+      setInnerValue(undefined)
+    }
+  }, [filterParam])
+
+  const formatParam = (param: FILTER_PARAM | undefined) => {
+    if (!param) return param
+    const newParam: FILTER_PARAM = {}
+    Object.keys(param).forEach((key) => {
+      const item = param[key as FILTER_PARAM_KEY]
+      if (item !== undefined) {
+        if (Array.isArray(item)) {
+          if (item.length > 0) {
+            newParam[key as FILTER_PARAM_KEY] = item
+          }
+        } else {
+          newParam[key as FILTER_PARAM_KEY] = item
+        }
+      }
+    })
+    return newParam as FILTER_PARAM
+  }
+
+  const handleChange = (values: FILTER_PARAM) => {
+    if (filterType === 'silence' && onFilter) {
+      onFilter(formatParam(values))
+    }
+  }
+
+  const renderFilterItem = () => {
+    if (filterConfig && filterConfig.length > 0) {
+      const mergeProps = { ...props, pathname, search }
+      return filterConfig.map((filterItem) => {
+        switch (filterItem.type) {
+          // 品类
+          case FILTER_TYPE.category:
+            return (
+              <Category
+                key={filterItem.type}
+                innerValue={innerValue}
+                source={filterItem.source}
+                onChange={handleChange}
+                {...mergeProps}
+              />
+            )
+          case FILTER_TYPE.categoryAndAttr:
+            return (
+              <Category
+                key={filterItem.type}
+                innerValue={innerValue}
+                source={filterItem.source}
+                onChange={handleChange}
+                showAttrFilter
+                attributeList={filterItem.attributeList}
+                {...mergeProps}
+              />
+            )
+          // 品牌
+          case FILTER_TYPE.brand:
+            return (
+              <Brand
+                key={filterItem.type}
+                innerValue={innerValue}
+                source={filterItem.source}
+                onChange={handleChange}
+                {...mergeProps}
+              />
+            )
+          // 价格
+          case FILTER_TYPE.price:
+            return <PriceRange key={filterItem.type} innerValue={innerValue} onChange={handleChange} {...mergeProps} />
+          case FILTER_TYPE.carriageType:
+            return (
+              <CarriageType key={filterItem.type} innerValue={innerValue} onChange={handleChange} {...mergeProps} />
+            )
+          case FILTER_TYPE.nullFilter:
+            return null
+          default:
+            break
+        }
+      })
+    } else {
+      return null
+    }
+  }
+
+  return (
+    <div className="filter" style={style}>
+      {renderFilterItem()}
+    </div>
+  )
+}
+
+CommonFilter.defaultProps = {
+  filterType: FILTER_SEARCH_TYPE.url,
+}
+
+export default CommonFilter

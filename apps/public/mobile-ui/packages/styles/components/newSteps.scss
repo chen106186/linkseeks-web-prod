@@ -1,0 +1,178 @@
+@import '../variables/default.scss';
+
+$class-prefix-step: 'mobile-step';
+$class-prefix-steps: 'mobile-steps';
+
+.mobile-step {
+  --line-to-next-color: $color-border-base;
+  --icon-color: $color-icon-base;
+  position: relative;
+  z-index: 0;
+
+  .mobile-step-indicator {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      background-color: $color-border-base;
+    }
+    .mobile-step-icon-container {
+      position: absolute;
+      z-index: 1;
+      color: $color-icon-base;
+      > .antd-mobile-icon {
+        display: block;
+      }
+    }
+  }
+
+  &:last-child {
+    .mobile-step-indicator::after {
+      display: none;
+    }
+  }
+  &-status-finish {
+    --line-to-next-color: $color-brand;
+		.mobile-step-icon-dot {
+			background-color: $color-brand;
+		}
+		.mobile-step-title {
+      color: $color-text-base;
+    }
+		.mobile-step-indicator::after {
+			background-color: $color-brand;
+		}
+  }
+
+  &-status-wait {
+    --icon-color: $color-icon-base;
+    .mobile-step-title {
+      color: $color-grey-1;
+    }
+  }
+  &-status-process {
+    --icon-color: $color-brand;
+    .mobile-step-title {
+      color: $color-brand;
+    }
+  }
+  &-status-finish {
+    --icon-color: $color-brand;
+  }
+  &-status-error {
+    --icon-color: $color-error;
+    .mobile-step-title {
+      color: $color-error;
+    }
+  }
+}
+
+.#{$class-prefix-steps} {
+  --title-font-size: $font-size-base;
+  --description-font-size: $font-size-sm;
+  --indicator-margin-right: 0;
+  --icon-size: 18px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  &-horizontal {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+
+    .mobile-step {
+      flex: 1;
+
+      .mobile-step-indicator {
+        width: 100%;
+        height: 24px;
+        &::after {
+          left: 50%;
+          top: 50%;
+          height: 1px;
+          transform: translateY(-50%);
+          width: 100%;
+        }
+        .mobile-step-icon-container {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .mobile-step-content {
+      text-align: center;
+      font-size: $font-size-sm;
+      padding: 2px 8px 0;
+      .mobile-step-title {
+        font-size: $font-size-base;
+      }
+      .mobile-step-description {
+        margin-top: 4px;
+        color: $color-grey-1;
+      }
+    }
+  }
+
+  &-vertical {
+    padding: 8px 16px;
+
+    .mobile-step {
+      display: flex;
+      align-items: stretch;
+
+      .mobile-step-indicator {
+        flex: none;
+        width: 24px;
+        margin-right: 8px;
+
+        &::after {
+          left: 50%;
+          top: calc($font-size-base * 1.5 / 2);
+          width: 1px;
+          transform: translateX(-50%);
+          height: 100%;
+        }
+        .mobile-step-icon-container {
+          top: calc($font-size-base * 1.5 / 2);
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:last-child {
+        .mobile-step-content {
+          padding-bottom: 0;
+        }
+      }
+      .mobile-step-content {
+        flex: auto;
+        padding-bottom: 24px;
+        .mobile-step-title {
+          font-size: $font-size-base;
+          line-height: 1.5;
+        }
+        .mobile-step-description {
+          padding-top: 4px;
+          font-size: $font-size-sm;
+          color: $color-grey-1;
+        }
+      }
+    }
+  }
+}
+
+.mobile-step-icon-container {
+  font-size: $font-size-base;
+}
+
+.mobile-step-icon-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 4px;
+}

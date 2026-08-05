@@ -1,0 +1,161 @@
+@import url('../common.less');
+
+.@{prefixCls}-shop-header-nav {
+  position: relative;
+  height: 156px;
+  background: rgb(255 255 255 / 0%);
+  z-index: 1;
+  overflow: hidden;
+
+  &-bg-wrap {
+    filter: blur(16px);
+    height: 156px;
+  }
+
+  &-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .@{prefixCls}-header-search {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+
+    &-left {
+      & > img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-right {
+      & > img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-body {
+      flex: 1;
+      margin: 0 8px;
+      background: rgb(255 255 255 / 40%);
+      border-radius: 8px;
+      height: 32px;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      width: 0;
+    }
+
+    &-icon {
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    &-keyword {
+      font-size: 14px;
+      color: #fff;
+      margin-right: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .@{prefixCls}-header-shopheader {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    background-color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-top: 4px;
+
+    &-shoplogo {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #fff;
+      margin-right: 8px;
+    }
+
+    &-shopinfo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &-shopname {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #252d37;
+    }
+
+    &-shopdetail {
+      display: flex;
+      border-radius: 2px;
+      height: 16px;
+      align-items: center;
+
+      &-info {
+        background-color: rgb(255 255 255 / 8%);
+        margin-right: 16px;
+        padding-right: 4px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        &.year {
+          background: rgb(211 47 47 / 8%);
+          color: #d32f2f;
+        }
+
+        &-icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 4px;
+        }
+      }
+
+      &-rate {
+        font-size: 16px;
+        margin-left: auto;
+
+        .star {
+          font-size: 12px;
+          line-height: 12px;
+          margin-left: 4px;
+          color: #fca110 !important;
+
+          :global {
+            .ant-rate-star {
+              &:not(:last-child) {
+                margin-right: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-enterbtn {
+      background-color: @headerNavScienceColor;
+      border-radius: 34px;
+      height: 24px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+  }
+}

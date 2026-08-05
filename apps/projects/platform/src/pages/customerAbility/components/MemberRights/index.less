@@ -1,0 +1,106 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../../global/styles/utils.less';
+
+.equityInfo {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    padding: 0 24px;
+    height: 192px;
+    background: #ffffff;
+    border-radius: 8px;
+    
+    &-title {
+      margin-bottom: @margin-lg - 4px;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(23, 43, 77, 1);
+    }
+
+    &-content {}
+  }
+
+  .tofo {
+    display: flex;
+    padding: @padding-xs 0 0 0;
+    margin: 0;
+    overflow-x: auto;
+    .silkyScrollbar();
+
+    &-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      &-line {
+        margin-left: @margin-lg;
+        margin-right: @margin-md;
+        width: 1px;
+        height: 40px;
+        background-color: #F4F5F7;
+      }
+
+      &-logo {
+        width: 40px;
+        height: 40px;
+        margin-right: @margin-md;
+        text-align: center;
+
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-text {
+        flex: 1;
+        margin-right: @margin-md;
+      }
+
+      &-title {
+        margin-bottom: @margin-xss;
+        font-size: 12px;
+        font-weight: 500;
+        color: @text-color;
+      }
+      
+      &-desc {
+        font-size: 12px;
+        font-weight: 400;
+        color: @text-color-secondary;
+      }
+
+      &-extra {
+        margin-left: 16px;
+        text-align: center;
+      }
+
+      &-tag {
+        line-height: 22px;
+        padding: @padding-xss @padding-sm;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 4px;
+
+        &-price {
+          color: rgba(101, 84, 192, 1);
+          background: rgba(234, 230, 255, 1);
+        }
+        
+        &-recurrence {
+          color: rgba(230, 63, 59, 1);
+          background: rgba(255, 235, 230, 1);
+        }
+        
+        &-integral {
+          color: rgba(255, 153, 31, 1);
+          background: rgba(255, 250, 230, 1);
+        }
+      }
+    }
+  }
+}

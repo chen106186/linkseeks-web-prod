@@ -1,0 +1,11 @@
+{
+  "name": "@linkseeks/script",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "chalk": "4.1.2",
+    "commitizen": "^4.3.0",
+    "word-wrap": "^1.2.5"
+  }
+}

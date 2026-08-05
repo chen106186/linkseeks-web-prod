@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+
+.taxes-popup {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+
+  &-scrollView {
+    overflow-y: auto;
+  }
+
+  &-label {
+    font-weight: 500;
+    color: $color-black-1;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-titleWrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-title {
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $color-black-1;
+  }
+
+  &-fees {
+    margin-left: $spacing-h-sm;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $color-error;
+  }
+
+  &-description {
+    margin-top: $spacing-v-md;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $color-black-3;
+  }
+}

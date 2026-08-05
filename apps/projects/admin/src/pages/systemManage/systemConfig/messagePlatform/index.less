@@ -1,0 +1,40 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.card-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &-icon {
+    margin-right: 8px;
+    color: #252d37;
+  }
+
+  &-status {
+    margin-left: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    &-circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+
+    &.stop {
+      color: #e34d59;
+      .card-title-status-circle {
+        background-color: #e34d59;
+      }
+    }
+
+    &.use {
+      color: @color-primary;
+      .card-title-status-circle {
+        background-color: @color-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '@/styles/variables.scss';
+
+.tabs__item-underline {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2PX;
+  background-color: $theme-color;
+  transform: scaleX(0);
+  transition: all 0.15s;
+}
+.tabs {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .tabs__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #FFF;
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-none;
+    .tabs__item {
+      position: relative;
+      flex: 1;
+      padding: 12px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .tabs__item--active {
+      color: $theme-color;
+      .tabs__item-underline {
+        transform: scaleX(1);
+      }
+    }
+    .tabs__item--show{
+      overflow: visible;
+    }
+
+  }
+  .tabs__body {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    transition: all 0.3s;
+    will-change: transform, left, top;
+    overflow: visible;
+    .tabs-pane--active {
+      height: auto;
+    }
+    .tabs-pane {
+      width: 100%;
+      box-sizing: border-box;
+      white-space: initial;
+      vertical-align: top;
+    }
+  }
+}

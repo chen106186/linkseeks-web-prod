@@ -1,0 +1,31 @@
+{
+  "name": "@linkseeks/scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "mergeLocale": "ts-node ./src/mergeLocaleTsFile",
+    "mergeJson": "ts-node ./src/mergeJson",
+    "changeModule": "ts-node ./src/changeModuleFile",
+    "translate": "ts-node ./src/autoTranslate",
+    "getTitle": "ts-node ./src/getMobileTitleKey",
+    "preWorkInstall": "ts-node ./src/preWorkInstall",
+    "pushMenu": "node src/pushMenu.js",
+    "start:admin": "ts-node ./src/connectMenu admin",
+    "start:platform": "ts-node ./src/connectMenu platform",
+    "build": "vite build",
+    "addMenu": "ts-node ./src/addMenu",
+    "buildVersion": "ts-node ./src/buildVersion"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "glob": "^7.2.3",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.5"
+  }
+}

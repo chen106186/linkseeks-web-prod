@@ -1,0 +1,35 @@
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .progress {
+    background-color: #fff0f2;
+    position: relative;
+    height: 14px;
+    // width: 100%;
+    flex: 1;
+    border-radius: 7px;
+    overflow: hidden;
+
+    .progress-percent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      // width: 34%;
+      background-color: '#EF3346';
+      border-radius: 7px;
+    }
+
+    .progress-percent-text {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      margin-left: 8px;
+      color: #fff;
+      z-index: 99;
+      font-size: 12px;
+    }
+  }
+}

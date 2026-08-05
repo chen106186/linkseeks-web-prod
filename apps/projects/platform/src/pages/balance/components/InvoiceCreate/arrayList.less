@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 12px;
+      display: inline-block;
+      margin-right: 18px;
+    }
+    .ant-input,
+    .ant-picker {
+      background-color: #f5f6f7;
+      border-color: #f5f6f7;
+
+      &:focus {
+        border-color: #f5f6f7;
+        box-shadow: none;
+      }
+    }
+    .ant-input-focused,
+    .ant-picker-focused {
+      border-color: #f5f6f7;
+      box-shadow: none;
+    }
+  }
+
+  .remove {
+    background-color: #f5f6f7;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+}
+
+.add {
+  width: 100%;
+  background-color: #f5f6f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #5c626a;
+  padding: 8px;
+  cursor: pointer;
+
+  .addText {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,80 @@
+.sincerityInfo {
+  .tofo {
+    height: 100%;
+
+    :global {
+      .antd-card {
+        height: 100%;
+      }
+    }
+
+    &-item {
+      width: 50%;
+      padding: 55px 24px;
+
+      &-logo {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+}
+
+.contentBox {
+  position: relative;
+  padding-right: 72px;
+  background: #ffffff;
+
+  &-main {
+  }
+
+  &-extra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(107, 119, 140, 1);
+
+    :global {
+      .anticon {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .txt {
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(23, 43, 77, 1);
+  }
+}
+
+.record {
+  &-tabs {
+    :global {
+      .ant-tabs-nav::before {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-btns {
+    margin-bottom: 16px;
+  }
+
+  &-row {
+    :global {
+      .ant-table-cell:first-child {
+        background-color: rgba(250, 251, 252, 1);
+      }
+    }
+  }
+}

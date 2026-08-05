@@ -1,0 +1,68 @@
+// @统一处理 业务表格内不嵌套NiceForm组件的高级筛选 间距异常问题
+.god-schema-form {
+  & > .ant-form-item {
+    margin-bottom: 0 !important;
+  }
+  & > .ant-row-end {
+    margin-top: 24px !important;
+  }
+}
+.adjustFormItem {
+  :global {
+    .ant-radio-button-wrapper {
+      margin-right: 16px !important;
+    }
+  }
+}
+
+.appPayContainer {
+  background-color: #fafbfc;
+  padding: 24px 24px 0 24px;
+  .appPayContent {
+    margin-bottom: 24px;
+    padding: 48px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    .appPayLeft {
+      .leftTitle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        img {
+          margin-right: 12px;
+        }
+        h2 {
+          // height: 32px;
+          // line-height: 32px;
+        }
+      }
+    }
+    .appPayRight {
+      width: 160px;
+      margin-left: 12px;
+      p {
+        width: 160px;
+        color: #91959b;
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .appPayBottom {
+    display: flex;
+    justify-content: start;
+    & > p {
+      margin-right: 24px;
+    }
+  }
+  p {
+    .listLabel {
+      color: #91959b;
+    }
+  }
+  & > p {
+    text-align: center;
+  }
+}

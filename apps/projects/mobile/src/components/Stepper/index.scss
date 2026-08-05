@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+
+.stepper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-minus {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-h-sm - 1;
+
+    &__disable {
+      background-color: #EEF0F3;
+    }
+  }
+
+  &-plus {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: $spacing-h-sm - 1;
+
+    &__disable {
+      color: #C8C9CC;
+    }
+  }
+
+  &-input {
+    width: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .at-input {
+      padding: 0;
+      margin: 0;
+      background-color: #F5F6F7;
+
+      &__input {
+        text-align: center;
+        padding: $spacing-v-xs $spacing-h-sm;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .search-content {
+    flex: 1;
+    padding-left: $spacing-h-lg;
+    background-color: #F7F8FA;
+    border-radius: 2px;
+  }
+}

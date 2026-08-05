@@ -1,0 +1,19 @@
+@import '~antd/es/style/themes/default.less';
+
+.credit {
+  :global {
+    .ant-descriptions-item-container {
+      align-items: center;
+    }
+  }
+
+  .amount {
+    font-size: @font-size-lg;
+    font-weight: 500;
+
+    &-plus {
+      color: @error-color;
+      font-size: 24px;
+    }
+  }
+}

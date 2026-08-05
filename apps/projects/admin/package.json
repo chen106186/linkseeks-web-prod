@@ -1,0 +1,76 @@
+{
+  "name": "@projects/admin",
+  "version": "1.0.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "api": "cross-env PRO_ENV=v2-prod-ali god-ytt",
+    "scripts:build": "node scripts/run",
+    "scripts:init": "node scripts/init",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@antv/data-set": "^0.11.5",
+    "@antv/g2": "^4.2.2",
+    "antd-img-crop": "4.16.0",
+    "babel-plugin-import": "^1.13.3",
+    "bizcharts": "^4.1.10",
+    "copy-to-clipboard": "^3.3.1",
+    "chalk": "4",
+    "classnames": "^2.2.6",
+    "clone": "^2.1.2",
+    "core-js": "^3.6.5",
+    "fs-extra": "^11.1.1",
+    "lint-staged": "^10.0.7",
+    "lodash": "^4.17.21",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "mobx-react-lite": "^3.4.3",
+    "moment": "^2.29.4",
+    "prettier": "^2.3.2",
+    "query-string": "^6.13.1",
+    "interactjs": "1.10.17",
+    "ramda": "0.28.0",
+    "react-color": "^2.19.3",
+    "react-sortablejs": "^6.1.1",
+    "rxjs": "^6.5.1",
+    "sortablejs": "^1.12.0",
+    "shortid": "2.2.16",
+    "styled-components": "^5.2.1",
+    "umi-request": "^1.4.0",
+    "yorkie": "^2.0.0",
+    "prop-types": "15.8.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "@types/sortablejs": "^1.10.6",
+    "@types/ramda": "0.28.15",
+    "@types/prop-types": "^15.7.5",
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "commitlint": "^17.0.3",
+    "connect-history-api-fallback": "^1.6.0",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "http-proxy-middleware": "^1.0.5",
+    "husky": "^8.0.1",
+    "json2ts": "^0.0.7",
+    "ora": "^4.0.4",
+    "typescript": "^4.0.2"
+  }
+}

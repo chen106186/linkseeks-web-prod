@@ -1,0 +1,35 @@
+.my-button.at-button {
+  color: red;
+}
+
+.panel__content {
+  &.demo-button {
+    .at-form {
+      padding-left: 0;
+    }
+  }
+
+  .btn-demo-fab {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1100;
+  }
+
+  .btn-item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .subitem {
+      display: inline-block;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

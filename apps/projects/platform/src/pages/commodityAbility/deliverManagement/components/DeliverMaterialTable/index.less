@@ -1,0 +1,28 @@
+.teamMemberBtn {
+  margin-bottom: 20px;
+}
+
+.addBtn {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  :global {
+    .ant-form-item .ant-select,
+    .ant-form-item .ant-cascader-picker {
+      width: auto !important;
+    }
+  }
+}
+
+.megaLayoutContainer {
+  //重置掉mega-layout-container-content的 overflow: hidden;造成select、Cascader组件等getPopupContainer属性失效情况
+  :global {
+    .mega-layout-container-content {
+      overflow: unset;
+    }
+  }
+}

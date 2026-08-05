@@ -1,0 +1,78 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  // height: 56px;
+  .label {
+    flex: 0.2;
+    padding: 0 16px;
+    color: #00b37a;
+    background: linear-gradient(270deg, #ffffff 0%, #daf2e7 100%);
+  }
+  .text {
+    padding: 0px 0px;
+    flex: 1;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.deliverlyItem {
+  // width: 1616px;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+
+  .text {
+    a {
+      color: #252d37;
+    }
+  }
+
+  p {
+    height: 16px;
+    margin-right: 28px;
+  }
+
+  .idot {
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background-color: #00a98f;
+    border-radius: 50%;
+  }
+  .btn {
+    margin-top: 2px;
+  }
+}
+
+.deliveryDetailsBox {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #f5f6f7;
+  margin-bottom: 8px;
+
+  &-title {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &-batchNo {
+    font-size: 14px;
+  }
+
+  &-tag {
+    margin-left: 12px;
+    background-color: rgb(252, 239, 220);
+    color: rgb(234, 171, 87);
+    padding: 0 2px;
+    border-radius: 4px;
+
+    &.primary {
+      background-color: rgba(235, 249, 246, 1);
+      color: #00a98f;
+    }
+  }
+}

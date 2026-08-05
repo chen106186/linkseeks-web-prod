@@ -1,0 +1,65 @@
+@import "@/styles/variables.scss";
+
+.row-commodity {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: relative;
+  padding: $spacing-h-md;
+  border-radius: 8px * $hd;
+
+  &-productTag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // border-radius: ;
+    // width: 60px * $hd;
+    // height: 20px * $hd;
+    // background-color: red;
+  }
+
+  &-image {
+    width: 115px * $hd;
+    height: 115px * $hd;
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: $spacing-h-lg;
+
+    &-productName {
+      line-height: 20px * $hd;
+      font-size: $font-size-base;
+      color: #252D37;
+    }
+
+    &-middleArea {
+      margin-top: 6px * $hd;
+
+      .row-commodity-labels {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-tagItem {
+          margin-right: 4px * $hd;
+        }
+      }
+    }
+
+    &-footer {
+      margin-top: auto;
+
+      &-default {
+        display: flex;
+        flex-direction: row;
+
+        &-btn {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

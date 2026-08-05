@@ -1,0 +1,28 @@
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+
+  .tree {
+    min-width: 488px;
+    height: 100%;
+    margin-right: 16px;
+  }
+  .editPanel {
+    flex: 1;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+  }
+}
+
+.status-tip {
+  display: flex;
+  align-items: center;
+
+  & > span {
+    margin-right: 4px;
+  }
+}

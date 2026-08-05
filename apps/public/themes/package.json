@@ -1,0 +1,10 @@
+{
+  "name": "@apps/themes",
+  "version": "1.0.0",
+  "main": "./src/index.less",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "dependencies": {}
+}

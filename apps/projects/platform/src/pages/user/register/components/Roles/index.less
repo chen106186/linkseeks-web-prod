@@ -1,0 +1,57 @@
+.common-card {
+  border-radius: 8px;
+
+  :global {
+    .ant-card-head {
+      padding: 0 24px;
+      border: none;
+    }
+    .ant-card-head-title {
+      font-size: 16px;
+    }
+  }
+}
+
+.common-radio {
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  // margin: 0 -12px;
+
+  & label {
+    width: calc(50% - 6px);
+    // flex: 1;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    &:nth-of-type(2n-1) {
+      margin-right: 6px;
+    }
+    &:nth-of-type(2n) {
+      margin-left: 6px;
+    }
+    // margin: 12px 12px 0;
+  }
+
+  &.role {
+    & label {
+      height: 40px;
+    }
+  }
+
+  :global {
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      display: none;
+    }
+    .ant-radio-button-wrapper {
+      border-radius: 4px !important;
+      border-left-width: 1px;
+    }
+    .ant-radio-button-wrapper-checked {
+      background-color: rgba(0, 169, 143, 0.04);
+    }
+  }
+}

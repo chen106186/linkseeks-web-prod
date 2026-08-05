@@ -1,0 +1,247 @@
+.prompt_goods_wrap {
+  display: flex;
+}
+
+.prompt_goods {
+  flex: 1;
+  margin-top: 12px;
+  // border-bottom: 1px solid #F4F5F7;
+  padding-bottom: 17px;
+  background-color: #f5f6f7;
+  border-radius: 8px;
+  // overflow: hidden;
+
+  .price_symbol {
+    font-size: 12px;
+    font-style: normal;
+  }
+}
+
+.activity_header {
+  display: flex;
+  position: relative;
+  padding: 8px;
+  height: 40px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-image: linear-gradient(270deg, #f8627c 1%, #ef3346 100%);
+
+  .price_trend_btn {
+    background-color: rgb(25 34 45 / 8%);
+  }
+
+  .price_trend_btn_con_text {
+    color: #fff;
+  }
+
+  .price_trend_btn_con_icon {
+    color: #fff;
+  }
+
+  .activity_container {
+    flex: 1;
+    display: flex;
+    margin-right: 16px;
+    align-items: center;
+
+    .activity_tag {
+      font-size: 16px;
+      color: #fff;
+      margin-left: 8px;
+    }
+
+    .activity_right {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+    }
+
+    .activity_group_info {
+      font-size: 12px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+
+      &_member_list {
+        display: flex;
+        margin-right: 8px;
+
+        &_item {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          overflow: hidden;
+          // border: 0.5px solid #FFF;
+
+          &.more {
+            position: relative;
+            left: -3px;
+          }
+
+          .member_count {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            font-size: 12px;
+            background-color: rgb(0 0 0 / 50%);
+          }
+        }
+      }
+    }
+
+    .activity_end_time {
+      margin-left: 16px;
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+}
+
+.prompt_goods_price {
+  display: flex;
+  padding-top: 12px;
+
+  &.tax {
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  .label {
+    font-size: 12px;
+    color: #909399;
+    width: 110px;
+    line-height: 12px;
+    margin-left: 16px;
+
+    &.price {
+      line-height: 37px;
+    }
+
+    &.mprice {
+      margin-top: 12px;
+    }
+
+    &.count {
+      margin-top: 16px;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex: 1;
+    // justify-content: space-between;
+    padding-right: 90px;
+
+    .taxrate_question_icon {
+      color: #91959b;
+
+      &:hover {
+        cursor: pointer;
+        color: #252d37;
+      }
+    }
+
+    &_item {
+      // padding: 5px 6px;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+
+      &.ladder_price {
+        .price {
+          color: #303133;
+        }
+      }
+
+      &.active {
+        .price {
+          color: #ef3346;
+        }
+      }
+
+      .price {
+        font-size: 24px;
+        color: #ef3346;
+        line-height: 32px;
+
+        &.delete_line {
+          font-size: 12px;
+          color: #909399;
+          line-height: 24px;
+          text-decoration: line-through;
+        }
+      }
+
+      .subPrice {
+        font-size: 12px;
+        margin-top: 12px;
+        color: #252d37;
+      }
+
+      .member_price {
+        font-size: 16px;
+        color: #3a3a3a;
+        margin-top: 12px;
+        line-height: 16px;
+      }
+
+      .count {
+        color: #303133;
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.taxModal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+
+  .taxModal_line {
+    display: flex;
+    margin-bottom: 16px;
+
+    & > .taxModal_line_label {
+      margin-right: 12px;
+      min-width: 65px;
+    }
+
+    & > .taxModal_line_brief {
+      line-height: 16px;
+
+      .taxModal_line_brief_line {
+        margin-bottom: 8px;
+
+        span {
+          color: #252d37;
+          font-size: 12px;
+        }
+
+        &.sub_text {
+          span {
+            color: #91959b;
+          }
+        }
+      }
+    }
+  }
+
+  .taxConfirmBtn {
+    border-radius: 4px;
+  }
+}

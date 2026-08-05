@@ -1,0 +1,56 @@
+.shop-detail {
+  display: flex;
+  border-radius: 2px;
+}
+.shop-detail-info {
+  margin-left: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  // height: 12px;
+  line-height: 12px;
+  align-items: center;
+  position: relative;
+}
+.credit-bg {
+  background-color: #ffe6c8;
+  align-items: center;
+  border-radius: 1px;
+  padding-left: 7px;
+  padding-right: 2px;
+  justify-content: center;
+  width: fit-content;
+}
+
+.year-detail {
+  display: flex;
+  border-width: 1px;
+  border-color: #6a8dda;
+  border-style: solid;
+  margin-right: 8px;
+  overflow: hidden;
+  height: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70px;
+}
+
+.year-text {
+  color: #6a8dda !important;
+}
+
+.shop-icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  left: -6px;
+}
+.tag-text {
+  font-size: 10px;
+  text-align: center;
+  color: #773100;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

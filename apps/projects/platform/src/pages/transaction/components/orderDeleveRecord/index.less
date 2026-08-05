@@ -1,0 +1,338 @@
+.anchorWrap {
+  :global {
+    .ant-anchor {
+      display: flex;
+      align-items: center;
+      .ant-anchor-ink {
+        display: none;
+      }
+      .ant-anchor-link {
+        padding: 14px 0 !important;
+        margin: 0 16px;
+        .ant-anchor-link-title {
+          font-size: 14px;
+          color: #909399;
+        }
+      }
+      .ant-anchor-link-active {
+        position: relative;
+        border-bottom: 2px solid #00a98f;
+        box-sizing: border-box;
+        .ant-anchor-link-title {
+          font-weight: 500;
+          color: #303133;
+        }
+      }
+    }
+  }
+  .titleBox {
+    padding: 8px 16px;
+  }
+  .anchorBox {
+    display: flex;
+    padding: 0 16px;
+  }
+}
+/** 卡片样式 */
+.card {
+  margin: 24px;
+  :global {
+    .ant-card {
+      margin-bottom: 24px;
+      .ant-card-head {
+        > .ant-card-head-wrapper {
+          padding: 12px 0;
+        }
+      }
+      .ant-card-extra {
+        padding: 0 0;
+        .ant-radio-button-wrapper {
+          height: 24px;
+          line-height: 23px;
+        }
+        .ant-radio-button-wrapper:hover {
+          color: #606266;
+        }
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+          color: #fff;
+          background: #6b778c;
+          border-color: #6b778c;
+        }
+      }
+    }
+    .god-table-control {
+      margin-bottom: 0;
+    }
+  }
+  .list {
+    display: flex;
+    margin-bottom: 2em;
+    h5 {
+      // margin-bottom: 2em;
+    }
+    .listLable {
+      flex: 0 0 25%;
+      color: #909399;
+    }
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  // height: 56px;
+  .label {
+    flex: 0.2;
+    padding: 0 16px;
+    color: #00b37a;
+    background: linear-gradient(270deg, #ffffff 0%, #daf2e7 100%);
+  }
+  .text {
+    padding: 0px 0px;
+    flex: 1;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.deliverlyItem {
+  // width: 1616px;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+
+  .text {
+    a {
+      color: #252d37;
+    }
+  }
+
+  p {
+    height: 16px;
+    margin-right: 28px;
+  }
+
+  .status {
+  }
+  .idot {
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background-color: #00a98f;
+    border-radius: 50%;
+  }
+  .btn {
+    margin-top: 2px;
+  }
+}
+.warp {
+  display: flex;
+  width: 100%;
+  .warp_item {
+    width: 20%;
+    border: 1px solid #f4f5f7;
+    border-radius: 10px;
+    padding: 16px;
+    margin-right: 10px;
+    .title {
+      font-size: 12px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #909399;
+    }
+    .proportion {
+      font-size: 24px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #303133;
+      padding: 12px 0;
+    }
+    .Price {
+      font-size: 16px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #303133;
+    }
+    .warp_List {
+      margin-top: 32px;
+      .warp_ListItem {
+        display: flex;
+        margin-bottom: 16px;
+        .label {
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #909399;
+          flex: 0.5;
+        }
+        .text {
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #303133;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+.upload_item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .upload_left {
+    display: flex;
+    align-items: center;
+    color: #303133;
+    background-color: #fafbfc;
+    cursor: pointer;
+    :global {
+      .anticon-file-word {
+        color: #4279df;
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .upload_right {
+    color: #00b37a;
+    cursor: pointer;
+
+    :global {
+      .anticon-delete {
+        margin-left: 19px;
+        color: #c0c4cc;
+      }
+    }
+  }
+}
+
+.box {
+  :global {
+    .ant-table-expanded-row-level-1 .ant-table-cell {
+      padding: 0px !important;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.info {
+  .infoTitle {
+    border-left: 4px solid #00a98f;
+    padding-left: 8px;
+  }
+  .infoMian {
+    display: flex;
+    .item {
+      flex: 1;
+      .box {
+        display: flex;
+        margin-top: 15px;
+        .lalbel {
+          width: 80px;
+          text-align: left;
+          color: #909399;
+          font-size: 12px;
+        }
+        .text {
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #303133;
+        }
+      }
+    }
+  }
+}
+
+/**付款明细弹出样式*/
+.PopupTitle {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #909399;
+  position: relative;
+}
+.PopupTitle::before {
+  content: '';
+  position: absolute;
+  background-color: #00a98f;
+  width: 4px;
+  height: 17px;
+  left: -8px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .memuItem {
+    .menuCard {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      .menulabel {
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #909399;
+      }
+      .card {
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #303133;
+      }
+    }
+  }
+}
+
+.nowrap {
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.recordLyout {
+  :global {
+    .ant-card-head-title {
+      font-size: 14px !important;
+      font-weight: 500;
+      color: inherit;
+    }
+  }
+}
+
+.deliveryDetailsBox {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #f5f6f7;
+  margin-bottom: 8px;
+
+  &-title {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &-batchNo {
+    font-size: 14px;
+  }
+
+  &-tag {
+    margin-left: 12px;
+    background-color: rgb(252, 239, 220);
+    color: rgb(234, 171, 87);
+    padding: 0 2px;
+    border-radius: 4px;
+
+    &.primary {
+      background-color: rgba(235, 249, 246, 1);
+      color: #00a98f;
+    }
+  }
+}

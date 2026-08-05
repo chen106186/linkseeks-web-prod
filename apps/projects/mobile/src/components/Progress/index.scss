@@ -1,0 +1,69 @@
+@import '@/styles/variables.scss';
+
+.progressT {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-outer {
+    flex: 1;
+    border-radius: 100px;
+  }
+
+  &-inner {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 100px;
+    position: relative;
+    height: 4px * $hd;
+
+    &-text {
+      font-size: $font-size-sm;
+      color: #fff;
+      position: absolute;
+      left: 5px * $hd;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+  }
+
+  &-text {
+    padding: 0 $spacing-h-md;
+    color: $color-text-base;
+    font-size: $font-size-sm;
+  }
+
+  &-circle {
+    position: relative;
+    // backgroundColor: skyblue;
+
+    &-textWrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__semi {
+        justify-content: flex-end;
+      }
+    }
+
+    &-text {
+      font-size: $font-size-xxl;
+      font-weight: 500;
+      color: $color-grey-0;
+    }
+  }
+}

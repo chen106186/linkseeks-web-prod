@@ -1,0 +1,94 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.deposit-qualities {
+  &-list {
+    background-color: $color-bg-base;
+
+    &-item {
+      &-content {
+        display: flex;
+        align-items: center;
+        padding: $spacing-v-lg;
+        @include border-thin-bottom($color-bg-base);
+
+        &-left {
+          flex: 1;
+          overflow: hidden;
+        }
+
+        &-right {
+          margin-left: $spacing-h-xl;
+          flex-shrink: 0;
+        }
+
+        &__delete {
+          opacity: 0.35;
+        }
+      }
+
+      &-name {
+        margin-bottom: $spacing-v-md;
+        font-size: $font-size-base;
+        color: $color-black-1;
+        @include text-overflow();
+      }
+
+      &-date {
+        font-size: $font-size-sm;
+        color: $color-black-3;
+      }
+    }
+  }
+
+  &-modify {
+    font-size: $font-size-sm;
+    color: $third-text-color;
+
+    &-txt {
+      padding: $spacing-v-md $spacing-v-lg 0;
+    }
+
+    &-list-item {
+      opacity: 0.5;
+
+        &-content {
+          display: flex;
+          align-items: center;
+          padding: $spacing-v-lg;
+          @include border-thin-bottom($color-bg-base);
+
+          &-left {
+            flex: 1;
+            overflow: hidden;
+          }
+
+          &-right {
+            margin-left: $spacing-h-xl;
+            flex-shrink: 0;
+          }
+
+          &__delete {
+            opacity: 0.35;
+          }
+        }
+
+        &-name {
+          margin-bottom: $spacing-v-md;
+          font-size: $font-size-base;
+          @include text-overflow();
+        }
+
+        &-date {
+          font-size: $font-size-sm;
+        }
+    }
+  }
+
+  &-active {
+    font-size: $font-size-sm;
+    color: $color-brand;
+    padding: $spacing-v-md $spacing-v-lg 0;
+  }
+}

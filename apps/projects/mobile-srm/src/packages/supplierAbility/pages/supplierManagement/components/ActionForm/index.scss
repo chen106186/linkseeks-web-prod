@@ -1,0 +1,18 @@
+@import '@/styles/variables.scss';
+
+.supplier-action-form {
+  .at-textarea {
+    padding: 0;
+    border: none;
+
+    &__textarea {
+      height: 185px;
+      font-size: $font-size-base;
+      color: #C0C4CC;
+    }
+  }
+
+  &-action {
+    margin-top: 40px;
+  }
+}

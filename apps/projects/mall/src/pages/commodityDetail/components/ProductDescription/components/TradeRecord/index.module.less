@@ -1,0 +1,78 @@
+.trade_record {
+  margin-bottom: 20px;
+  background-color: #fff;
+
+  .trade_record_title {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .trade_record_container {
+    :global {
+      .ant-table-pagination.ant-pagination {
+        padding-right: 15px;
+      }
+
+      .ant-table-thead > tr > th {
+        background-color: #fff;
+      }
+
+      .ant-pagination-item {
+        &:hover,
+        &:active {
+          border-color: var(--mall-main-color);
+
+          & > a {
+            color: var(--mall-main-color);
+          }
+        }
+      }
+
+      .ant-pagination-item-active {
+        background-color: var(--mall-main-color);
+        border-color: var(--mall-main-color);
+
+        &:hover {
+          & > a {
+            color: #fff !important;
+          }
+        }
+
+        & > a {
+          color: #fff;
+        }
+      }
+    }
+
+    .columns_item {
+      height: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &_member {
+        color: #f8edaf;
+        background-color: #303133;
+        height: 16px;
+        line-height: 16px;
+        width: 48px;
+        text-align: center;
+        margin-top: 4px;
+      }
+    }
+
+    .ant-table-tbody {
+      font-size: 12px;
+      color: #303133;
+    }
+
+    .ant-table-thead > tr > th {
+      background: #fff;
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+  }
+}

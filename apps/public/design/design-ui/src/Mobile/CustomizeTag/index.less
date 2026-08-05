@@ -1,0 +1,52 @@
+@import url('../common.less');
+
+@colors: {
+  danger: @danger;
+  primary: @primary;
+  success: @success;
+  warn: @warn;
+  purple: @purple;
+  main: @main;
+};
+
+.@{prefixCls}-tag {
+  padding: 2px 4px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+
+  &-icon {
+    margin-right: 2px;
+    line-height: 14px;
+    height: 12px;
+
+    &-image {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &-children {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  each(@colors, {
+    &-monotone-@{key} {
+      color: @value;
+      border-color: @value
+    }
+    &-doubleColor-@{key} {
+      color: #fff;
+      // border-color: @value
+      background-color: @value;
+      border: 1px solid @value;
+    }
+  });
+}
+
+.noBorder {
+  border: none;
+}

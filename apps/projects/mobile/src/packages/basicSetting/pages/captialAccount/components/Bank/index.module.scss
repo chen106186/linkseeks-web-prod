@@ -1,0 +1,25 @@
+.title{
+  font-size:14px;
+  text-align: center;
+  padding: 10px 0;
+  text-align: center;
+}
+.BankList{
+  height: 450px;
+  padding: 10px 0;
+  .BankListItem{
+    padding: 5px 0;
+    border-bottom: 1px solid #F4F5F7;
+    .BankName{
+      font-size: 14px;
+    }
+  }
+}
+
+.input {
+	width: 100%;
+	font-size: 14px;
+	background-color: none;
+	height: 24px;
+	line-height: 24px;
+}

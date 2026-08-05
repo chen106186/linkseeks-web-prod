@@ -1,0 +1,194 @@
+.recommand {
+  margin-top: 24px;
+  padding: 0 8px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 12px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: rgb(239, 51, 70);
+    border-radius: 16px;
+    color: #fff;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.item {
+  margin-bottom: 8px;
+}
+
+.commodityGroupContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+
+  &.web {
+    padding: 16px;
+  }
+
+  .commodityGroupEmpty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 430px;
+    padding: 12px;
+    border: 1px dashed #c8cacd;
+
+    &.web {
+      padding: 0;
+    }
+  }
+
+  .tab {
+    // margin-bottom: 12px;
+    .mealGroupPaneWray {
+      position: relative;
+      z-index: 5;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .groupPane {
+      display: flex;
+      flex-direction: row;
+      margin-right: -12px;
+
+      &.meal {
+        position: relative;
+        display: block;
+        margin-right: 0;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+    }
+
+    .arrowButton {
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.32);
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.prev {
+        left: -18px;
+        padding-right: 6px;
+      }
+      &.next {
+        right: -18px;
+        justify-content: flex-start;
+        padding-left: 6px;
+      }
+    }
+
+    .groupCommodityItem {
+      // flex-basis: 33.3%;
+      width: 33.33%;
+      padding-right: 12px;
+      background-color: #fff;
+
+      &.meal {
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        margin-right: 16px;
+        padding-right: 0;
+        white-space: pre-wrap;
+      }
+
+      .productBottom {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+
+        .productImgPrice {
+          color: #e34d59;
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .productNum {
+          margin-left: auto;
+          color: #91959b;
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.groupWrap {
+  position: relative;
+
+  .commodityItem {
+    width: 50%;
+  }
+}
+
+.twoColumns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-right: -8px;
+
+  .commodityItem {
+    flex-basis: 50%;
+    padding-right: 8px;
+  }
+}
+
+.meal_price_wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  line-height: 16px;
+
+  .price_space {
+    margin: 0 4px;
+
+    .meal_price {
+      margin: 0 4px;
+      color: #e34d59;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  span {
+    color: #91959b;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}

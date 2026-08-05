@@ -1,0 +1,24 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@apps/mobile-ui/packages/styles/mixins/index.scss';
+
+.produtct-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-item {
+    margin-right: $spacing-h-sm - 1;
+    padding: 1px $spacing-h-sm - 2;
+    font-size: 9px;
+    color: $color-error;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: center;
+    @include border-thin($color-error);
+
+    &__large {
+      padding: 1px $spacing-h-sm;
+      font-size: $font-size-xs;
+    }
+  }
+}

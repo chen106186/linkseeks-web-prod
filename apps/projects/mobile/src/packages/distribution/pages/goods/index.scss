@@ -1,0 +1,149 @@
+@import '@/styles/variables.scss';
+
+.stocksSourcing-detail {
+  padding: $spacing-v-md 0;
+  position: relative;
+
+  &-anchor {
+    height: 100%;
+
+    &-item {
+      padding: 0 $spacing-h-md;
+    }
+  }
+
+  .product {
+    &-priceWrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      &-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacing-h-md;
+      }
+
+      &-right {}
+    }
+
+    &-price {
+      font-size: $font-size-xxl;
+      font-weight: 500;
+      color: $color-error;
+
+      &__original {
+        font-size: $font-size-sm;
+        color: $color-grey-2;
+        margin-left: 8px;
+      }
+
+      &__through {
+        text-decoration-line: line-through;
+      }
+
+      &__about {
+        position: relative;
+        top: 0.5px;
+        margin-left: $spacing-h-md + 1;
+        font-size: $font-size-sm;
+        color: $color-grey-2;
+      }
+    }
+
+    &-originWrap {
+      margin-bottom: $spacing-v-lg;
+    }
+
+    &-unit {
+      position: relative;
+      top: 0.5px;
+      margin-left: $spacing-h-sm - 3;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-grey-2;
+    }
+  }
+
+  &-fixedWrap {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+
+  &-fixedAction {
+    .at-button {
+      width: 100%;
+      font-size: $font-size-base;
+      border-radius: 8px;
+    }
+
+    .button-elegant {
+      background-color: $color-bg-lighter;
+      border-color: $color-bg-lighter;
+    }
+  }
+
+  .shop-volume {
+    font-size: $font-size-sm;
+    color: $color-grey-2;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px 0 12px;
+  flex: 1;
+
+  .reward {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #ffeaea;
+    width: 110px;
+    height: 40px;
+		color: #ef3346;
+		text-align: center;
+		font-size: 12px;
+		font-weight: 500;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    .btn {
+      width: 112px;
+      line-height: 40px;
+      border-radius: 8px;
+      margin-left: 8px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .wx-share-btn {
+      background: #ff9a39;
+    }
+
+		.wx-share-btn-text {
+			font-size: 14px;
+		}
+
+    .hb-share-btn {
+      background: $theme-color;
+    }
+  }
+}

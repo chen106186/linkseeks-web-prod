@@ -1,0 +1,290 @@
+#!groovy
+
+/**
+* 小程序使用的jenkinsfile
+* @author xujiamin
+*/
+
+pipeline {
+    // 声明Jenkins节点
+    agent {
+      node {
+            label "MAC"
+        }
+    }
+
+    // 每个阶段运行结束时的操作
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '7', artifactNumToKeepStr: '10', daysToKeepStr: '5'))
+        // 构建超时时间
+        timeout(time: 30, unit: 'MINUTES')
+        // 不允许同时执行流水线。 可被用来防止同时访问共享资源等
+        disableConcurrentBuilds()
+    }
+
+    // 声明变量
+    environment {
+        // 服务名称
+        SERVER_NAME = "小程序&h5"
+        // 当前环境
+        ENV_TEXT = "测试环境"
+        // 终端构建参数
+        BUILD_ENV = "v3-2023-test"
+        // 构建项目名
+        BUILD_NAME = "${SERVER_NAME}-${BUILD_ENV}-${ENV_TEXT}"
+    }
+
+    // 声明自定义变量
+    parameters {
+        choice(name: 'PROJECT_NAME', choices: ['weapp', 'h5'], description: '构建项目')
+        choice(name: 'TYPE', choices: [
+          'preview',
+          'upload',
+        ], description: "预览/上传")
+        choice(name: 'APPID', choices: [
+          'wxb3458d933c7676dd',
+          'wx7333a2706afe89ed',
+        ], description: "小程序appid")
+        string(name: 'VERSION', defaultValue: '1.13.1', description: '上传时的版本号(预览时不需要填)')
+        string(name: 'ROBOT', defaultValue: '1', description: '上传时的机器人(1-30)')
+        booleanParam(name: 'IS_API', defaultValue: true, description: '是否需要拉api接口')
+        booleanParam(name: 'IS_LOCALE', defaultValue: false, description: '是否需要上传国际化')
+    }
+
+    stages {
+        stage('init') {
+            steps {
+                script {
+                    // git提交信息
+                    env.GIT_COMMIT_MSG = sh (script: 'git log -1 --pretty=%B ${GIT_COMMIT}', returnStdout: true).trim()
+                    // git提交者
+                    env.GIT_COMMIT_USER = sh (script: 'git log -1 --pretty=%cn ${GIT_COMMIT}', returnStdout: true).trim()
+                    dingtalkActions('start','开始')
+                }
+            }
+        }
+
+        stage("NPM INSTALL") {
+            steps {
+                script {
+                    sh "yarn install"
+                }
+            }
+        }
+
+        stage("拉取yapi接口脚本") {
+            when {
+              expression { params.IS_API == true}
+            }
+            steps {
+                script {
+                    sh "yarn api"
+                }
+            }
+        }
+
+        stage("build") {
+            when {
+              expression { params.PROJECT_NAME == 'weapp'}
+            }
+            steps {
+                script {
+                    sh "yarn build"
+                }
+            }
+        }
+
+        stage("build:h5") {
+            when {
+              expression { params.PROJECT_NAME == 'h5'}
+            }
+            steps {
+                script {
+                    sh "yarn build:h5"
+                    sh "tar -czf h5.tar.gz  dist"
+                }
+            }
+        }
+
+        stage("生成国际化JSON") {
+            when {
+              expression { params.IS_LOCALE == true }
+            }
+            steps {
+                script {
+                    sh "yarn createLocalesJSON"
+                }
+            }
+        }
+
+        stage("上传国际化JSON") {
+            when {
+              expression { params.IS_LOCALE == true }
+            }
+            steps {
+                script {
+                    sh "yarn uploadLocalesJSON"
+                }
+            }
+        }
+
+        stage("预览小程序") {
+            when {
+                expression { params.TYPE == 'preview' && params.PROJECT_NAME == 'weapp' }
+            }
+            steps {
+                script {
+                  sh "sh ./scripts/preview.sh ${params.APPID} ${params.VERSION} ${params.ROBOT}"
+                }
+            }
+        }
+
+        stage("推送预览二维码到钉钉") {
+            when {
+                expression { params.TYPE == 'preview' && params.PROJECT_NAME == 'weapp' }
+            }
+            steps {
+                script {
+                  dingtalk (
+                    robot: "eae1b25c-6146-427a-aed1-31f4087f38db",
+                    type:'ACTION_CARD',
+                    title: "${BUILD_NAME}预览码",
+                    text: [
+                      "![qrcode](http://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/miniprogram/preview/x.jpg)",
+                      "## ${BUILD_NAME}预览码",
+                      "---",
+                      "- 作者: ${env.GIT_COMMIT_USER}",
+                      "- 更新内容: ${env.GIT_COMMIT_MSG}"
+                    ]
+                  )
+                }
+            }
+        }
+
+        stage("上传小程序") {
+            when {
+                expression { params.TYPE == 'upload' && params.PROJECT_NAME == 'weapp' }
+            }
+            steps {
+                script {
+                  sh "sh ./scripts/upload.sh ${params.APPID} ${params.VERSION} ${params.ROBOT}"
+                }
+            }
+        }
+
+        stage("ssh:h5") {
+            when {
+              expression { params.PROJECT_NAME == 'h5'}
+            }
+            steps {
+                script {
+                  sshPublisher(
+                    publishers: [
+                      sshPublisherDesc(
+                        configName: 'NGINX-TEST环境',
+                        transfers: [
+                          sshTransfer(
+                            cleanRemote: false,
+                            excludes: '',
+                            execCommand: '''
+                              source  /etc/profile
+                              rm  -fr /usr/local/nginx/html/lingxi-demo/h5/*
+                              tar -xf  /home/www/h5.tar.gz  -C  /usr/local/nginx/html/lingxi-demo/h5
+                            ''',
+                            execTimeout: 120000,
+                            flatten: false,
+                            makeEmptyDirs: false,
+                            noDefaultExcludes: false,
+                            patternSeparator: '[, ]+',
+                            remoteDirectory: '/home/www/',
+                            remoteDirectorySDF: false,
+                            sourceFiles: 'h5.tar.gz',
+                          )
+                        ],
+                        usePromotionTimestamp: false,
+                        useWorkspaceInPromotion: false,
+                        verbose: true
+                      )
+                    ]
+                  )
+                }
+            }
+        }
+
+    }
+
+    post {
+        always {
+            echo ' One way or another, I have finished'
+        }
+
+        // 构建成功执行逻辑
+        success {
+            echo ' I succeeeded!'
+            dingtalkActions('success','成功')
+            // 备份当前构建
+        }
+
+        // 构建不稳定执行逻辑
+        unstable {
+            dingtalkActions('error','流产')
+        }
+
+        // 构建失败
+        failure {
+            dingtalkActions('error','失败')
+        }
+
+        changed {
+            sh 'echo Things were different before...'
+        }
+    }
+}
+
+@NonCPS
+def getChanges() {
+    MAX_MSG_LEN = 1000
+    def changeString = ""
+    def changeLogSets = currentBuild.changeSets
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            change_msg = entry.msg.take(MAX_MSG_LEN)
+            changeString += " ${change_msg} \n"
+        }
+    }
+    return changeString
+}
+
+
+def dingtalkActions(statusType, statusText) {
+    def status = ''
+    switch(statusType) {
+        case 'success':
+            status = "<font color=#73d13d >${statusText}</font>"
+            break;
+        case 'error':
+            status = "<font color=#ff4d4f >${statusText}</font>"
+            break;
+        case 'start':
+            status = "<font color=#40a9ff >${statusText}</font>"
+            break;
+    }
+    return dingtalk (
+        robot: "eae1b25c-6146-427a-aed1-31f4087f38db",
+        type:'ACTION_CARD',
+        atAll: false,
+        title: "${SERVER_NAME}-${BUILD_ENV} 开始构建!",
+        messageUrl: "${JENKINS_URL}",
+        text: [
+            "### [${env.JOB_NAME}](${env.JOB_URL}) ",
+            '---',
+            "- 任务：[${BUILD_NAME}](${env.BUILD_URL})",
+            "- 状态：${status}",
+            "- 持续时间：${currentBuild.durationString}".split("and counting")[0],
+            "- 执行人：${currentBuild.buildCauses.shortDescription}",
+            "- 提交者: ${env.GIT_COMMIT_USER}"
+        ]
+    )
+}

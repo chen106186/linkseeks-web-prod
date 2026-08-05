@@ -1,0 +1,24 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.basic-layout {
+  :global {
+    .ant-input-search-button {
+      background-color: @color-primary !important;
+      height: 32.84px;
+    }
+  }
+  margin-bottom: 8px;
+  .digest {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    :global {
+      .ant-form-item {
+        width: 50% !important;
+      }
+      .ant-picker {
+        width: 100% !important;
+      }
+    }
+  }
+}

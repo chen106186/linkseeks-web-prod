@@ -1,0 +1,59 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.evaluate-record {
+  background-color: $color-bg-grey;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $spacing-v-lg - 2 $spacing-h-md - 2;
+    background-color: #FFFFFF;
+
+    &-item {
+      margin: $spacing-v-md - 2 $spacing-h-md - 2;
+      padding: $spacing-v-md - 2 $spacing-h-lg;
+      background-color: $color-bg-grey;
+      @include border-thin($color-bg-grey);
+
+      &__active {
+        background-color: #F0F7FF;
+        border-color: $color-brand;
+      }
+
+      &-title {
+        font-size: $font-size-sm;
+        color: $color-grey-1;
+
+        &__active {
+          color: $color-brand;
+        }
+      }
+    }
+  }
+
+  &-scrollWrap {
+    flex: 1;
+    position: relative;
+  }
+
+  &-scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-record {
+    padding: $spacing-v-md $spacing-h-md 0;
+
+    &-item {
+      margin-bottom: $spacing-v-md;
+    }
+  }
+}

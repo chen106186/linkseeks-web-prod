@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+
+.activity-image {
+  width: 100%;
+  height: 175px * $hd;
+
+  Image ,taro-image-core {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../global/styles/utils.less';
+
+.steps {
+  padding-top: 2px;
+  overflow: auto;
+
+  :global {
+    .ant-steps-item-title {
+      display: block;
+      .textOverflow();
+    }
+  }
+}
+.drawer_warp {
+  :global {
+    .ant-drawer-body {
+      padding-top: 0;
+    }
+  }
+}

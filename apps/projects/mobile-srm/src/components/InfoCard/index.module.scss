@@ -1,0 +1,23 @@
+.info-card {
+  @include card;
+}
+
+.card-header {
+  @include flexBetween;
+  align-items: center;
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    color: $main-text-color;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: $third-text-color;
+  }
+}
+
+.card-body {
+  margin-top: 12px;
+}

@@ -1,0 +1,90 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+@tagsPane-prefix-cls: ~'tagsPane';
+
+.@{tagsPane-prefix-cls} {
+  &-head {
+    display: flex;
+    margin-bottom: @margin-xs;
+
+    &-extra {
+      flex: none;
+    }
+  }
+
+  &-tags {
+    flex: auto;
+
+    &-item {
+      display: inline-block;
+      cursor: pointer;
+      padding-bottom: @padding-xs;
+
+      .ant-tag {
+        background: #f5f6f7;
+        border-color: #ebf9f6;
+        user-select: none;
+      }
+
+      &__active {
+        .ant-tag {
+          color: @color-primary;
+          background-color: #ebf9f6;
+        }
+      }
+
+      &-close-icon {
+        margin-left: @margin-xs;
+        font-size: @font-size-sm - 2;
+      }
+
+      &-drag-icon {
+        margin-right: @margin-xs;
+        font-size: @font-size-sm - 2;
+        position: relative;
+        top: -1px;
+      }
+
+      &__large {
+        .ant-tag {
+          padding: @padding-xss @padding-md;
+        }
+
+        .@{tagsPane-prefix-cls}-tags-item-close-icon {
+          font-size: @font-size-sm;
+        }
+
+        .@{tagsPane-prefix-cls}-tags-item-drag-icon {
+          font-size: @font-size-sm;
+        }
+
+        .@{tagsPane-prefix-cls}-tags-input {
+          padding-top: 5px;
+          padding-bottom: 4.6px;
+        }
+      }
+    }
+
+    &-input {
+      width: 78px;
+      margin-right: @margin-xs;
+    }
+
+    &-plus {
+      background: #fafbfc !important;
+      border-color: #edeeef !important;
+      border-style: dashed;
+    }
+
+    &-sortable {
+      display: inline-block;
+    }
+  }
+
+  &-content {
+  }
+
+  &-pane {
+  }
+}

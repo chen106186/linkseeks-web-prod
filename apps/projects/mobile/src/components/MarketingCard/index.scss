@@ -1,0 +1,12 @@
+.marketingCard-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 8px;
+  overflow: hidden;
+
+	&-wrap {
+		// padding: 8px 12px;
+	}
+}

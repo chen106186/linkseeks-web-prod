@@ -1,0 +1,47 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+$filter-tofu-prefix: 'filter-tofu';
+
+.filter-page {
+  &-popup {
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+
+  &-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  &-scroll {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &-actions {
+    flex-shrink: 0;
+    display: flex;
+    padding: 0 $spacing-h-lg;
+    margin: 0 (-($spacing-h-sm - 1));
+
+    &-item {
+      flex: 1;
+      padding: $spacing-v-md - 1 $spacing-h-sm - 1;
+    }
+  }
+
+  &-back {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: $spacing-h-sm - 1;
+    }
+  }
+
+
+}

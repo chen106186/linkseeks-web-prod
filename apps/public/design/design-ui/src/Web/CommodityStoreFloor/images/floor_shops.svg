@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 368" class="design-iconfont">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FFF" d="M0 0H288V368H0z"/>
+    <g transform="translate(24 309)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+    <g transform="translate(24 251)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+    <g transform="translate(24 193)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+    <g transform="translate(24 135)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+    <g transform="translate(24 77)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+    <g transform="translate(24 19)">
+      <rect fill="#F2F2F2" width="40" height="40" rx="20"/>
+      <rect fill="#F2F2F2" x="60" y="11" width="180" height="18" rx="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,596 @@
+import { getIntl } from '@linkseeks/i18n'
+
+const intl = getIntl()
+
+/**
+ * ****售后能力 相关常量****
+ */
+
+/**
+ *
+ * 其中包括：售后换货，售后退货，售后维修
+ *
+ */
+
+// 售后维修内部状态
+
+/**
+ * 待提交维修
+ */
+export const REPAIR_INNER_STATUS_UNCOMMITTED = 1
+/**
+ * 审核通过(提交)
+ */
+export const REPAIR_INNER_STATUS_COMMIT_SUCCESS = 2
+/**
+ * 一级审核通过
+ */
+export const REPAIR_INNER_STATUS_SUCCESS_1 = 3
+/**
+ * 二级审核通过
+ */
+export const REPAIR_INNER_STATUS_SUCCESS_2 = 4
+/**
+ * 二级审核不通过
+ */
+export const REPAIR_INNER_STATUS_FAILED_2 = 5
+/**
+ * 确认审核通过
+ */
+export const REPAIR_INNER_STATUS_CONFIRM_SUCCESS = 6
+/**
+ * 确认审核不通过
+ */
+export const REPAIR_INNER_STATUS_CONFIRM_FAILED = 7
+/**
+ * 确认售后完成
+ */
+export const REPAIR_INNER_STATUS_FINISHED = 8
+/**
+ * 审核不通过(提交)
+ */
+export const REPAIR_INNER_STATUS_COMMIT_FAILED = 9
+/**
+ * 审核不通过(一级)
+ */
+export const REPAIR_INNER_STATUS_FAILED_1 = 10
+export const REPAIR_INNER_STATUS = {
+  [REPAIR_INNER_STATUS_UNCOMMITTED]: '待提交',
+  [REPAIR_INNER_STATUS_COMMIT_SUCCESS]: '审核通过(提交)',
+  [REPAIR_INNER_STATUS_SUCCESS_1]: '一级审核通过',
+  [REPAIR_INNER_STATUS_SUCCESS_2]: '二级审核通过',
+  [REPAIR_INNER_STATUS_FAILED_2]: '二级审核不通过',
+  [REPAIR_INNER_STATUS_CONFIRM_SUCCESS]: '确认审核通过',
+  [REPAIR_INNER_STATUS_CONFIRM_FAILED]: '确认审核不通过',
+  [REPAIR_INNER_STATUS_FINISHED]: '确认售后完成',
+  [REPAIR_INNER_STATUS_COMMIT_FAILED]: '审核不通过(提交)',
+  [REPAIR_INNER_STATUS_FAILED_1]: '审核不通过(一级)',
+}
+
+// 售后维修外部状态
+
+/**
+ * 待提交申请单
+ */
+export const REPAIR_OUTER_STATUS_UNCOMMITTED = 1
+/**
+ * 待确认
+ */
+export const REPAIR_OUTER_STATUS_UNCONFIRMED = 2
+/**
+ * 不接受申请
+ */
+export const REPAIR_OUTER_STATUS_FAILED = 3
+/**
+ * 接受申请
+ */
+export const REPAIR_OUTER_STATUS_SUCCESS = 4
+/**
+ * 售后完成
+ */
+export const REPAIR_OUTER_STATUS_FINISHED = 5
+export const REPAIR_OUTER_STATUS = {
+  [REPAIR_OUTER_STATUS_UNCOMMITTED]: '待提交',
+  [REPAIR_OUTER_STATUS_UNCONFIRMED]: '待确认',
+  [REPAIR_OUTER_STATUS_FAILED]: '不接受申请',
+  [REPAIR_OUTER_STATUS_SUCCESS]: '接受申请',
+  [REPAIR_OUTER_STATUS_FINISHED]: '售后完成',
+}
+
+// 售后换货内部状态
+
+/**
+ * 待提交换货
+ */
+export const EXCHANGE_INNER_STATUS_UNCOMMITTED = 1
+/**
+ * 审核通过(提交)
+ */
+export const EXCHANGE_INNER_STATUS_COMMIT_SUCCESS = 2
+/**
+ * 一级审核通过
+ */
+export const EXCHANGE_INNER_STATUS_SUCCESS_1 = 3
+/**
+ * 二级审核通过
+ */
+export const EXCHANGE_INNER_STATUS_SUCCESS_2 = 4
+/**
+ * 审核不通过（不接受申请）
+ */
+export const EXCHANGE_INNER_STATUS_FAILED = 5
+/**
+ * 确认审核通过
+ */
+export const EXCHANGE_INNER_STATUS_CONFIRM_SUCCESS = 6
+/**
+ * 确认审核不通过
+ */
+export const EXCHANGE_INNER_STATUS_CONFIRM_FAILED = 7
+/**
+ * 待新增退货发货单
+ */
+export const EXCHANGE_INNER_STATUS_NOT_ADDED_RETURN_DELIVERY = 8
+/**
+ * 待审核退货发货单
+ */
+export const EXCHANGE_INNER_STATUS_UNREVIEWED_RETURN_DELIVERY = 9
+/**
+ * 采购商待新增物流单
+ */
+export const EXCHANGE_INNER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS = 10
+/**
+ * 采购商待确认物流单
+ */
+export const EXCHANGE_INNER_STATUS_CONSUMER_UNCONFIRMED_LOGISTICS = 11
+/**
+ * 待确认退货发货
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_DELIVERY = 12
+/**
+ * 待新增退货入库单
+ */
+export const EXCHANGE_INNER_STATUS_NOT_ADDED_RETURN_STORAGE = 13
+/**
+ * 待审核退货入库单
+ */
+export const EXCHANGE_INNER_STATUS_UNREVIEWED_RETURN_STORAGE = 14
+/**
+ * 待确认退货收货
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_RECEIVE = 15
+/**
+ * 待确认退货回单
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_RECEIPT = 16
+/**
+ * 待新增换货发货单
+ */
+export const EXCHANGE_INNER_STATUS_NOT_ADDED_REPLACE_DELIVERY = 17
+/**
+ * 待审核换货发货单
+ */
+export const EXCHANGE_INNER_STATUS_UNREVIEWED_REPLACE_DELIVERY = 18
+/**
+ * 供应商待新增物流单
+ */
+export const EXCHANGE_INNER_STATUS_SUPPLIER_NOT_ADDED_LOGISTICS = 19
+/**
+ * 供应商待确认物流单
+ */
+export const EXCHANGE_INNER_STATUS_SUPPLIER_UNCONFIRMED_LOGISTICS = 20
+/**
+ * 待确认换货发货
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_DELIVERY = 21
+/**
+ * 待新增换货入库单
+ */
+export const EXCHANGE_INNER_STATUS_NOT_ADDED_REPLACE_STORAGE = 22
+/**
+ * 待审核换货入库单
+ */
+export const EXCHANGE_INNER_STATUS_UNREVIEWED_REPLACE_STORAGE = 23
+/**
+ * 待确认换货收货
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_RECEIVE = 24
+/**
+ * 待确认换货回单
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_RECEIPT = 25
+/**
+ * 待确认售后完成
+ */
+export const EXCHANGE_INNER_STATUS_UNCONFIRMED_FINISHED = 26
+/**
+ * 已确认售后完成
+ */
+export const EXCHANGE_INNER_STATUS_FINISHED = 27
+/**
+ * 不接受退货物流单
+ */
+export const EXCHANGE_INNER_STATUS_UNACCEPTED_RETURN_LOGISTICS = 28
+/**
+ * 不接受换货物流单
+ */
+export const EXCHANGE_INNER_STATUS_UNACCEPTED_RETURN_EXCHANGE = 29
+/**
+ * 审核不通过(提交)
+ */
+export const EXCHANGE_INNER_STATUS_COMMIT_FAILED = 30
+/**
+ * 审核不通过(一级)
+ */
+export const EXCHANGE_INNER_STATUS_FAILED_1 = 31
+/**
+ * 审核不通过(二级)
+ */
+export const EXCHANGE_INNER_STATUS_FAILED_2 = 32
+export const EXCHANGE_INNER_STATUS = {
+  [EXCHANGE_INNER_STATUS_UNCOMMITTED]: '待提交',
+  [EXCHANGE_INNER_STATUS_COMMIT_SUCCESS]: '审核通过(提交)',
+  [EXCHANGE_INNER_STATUS_SUCCESS_1]: '一级审核通过',
+  [EXCHANGE_INNER_STATUS_SUCCESS_2]: '二级审核通过',
+  [EXCHANGE_INNER_STATUS_FAILED]: '审核不通过',
+  [EXCHANGE_INNER_STATUS_CONFIRM_SUCCESS]: '确认审核通过',
+  [EXCHANGE_INNER_STATUS_CONFIRM_FAILED]: '确认审核不通过',
+  [EXCHANGE_INNER_STATUS_NOT_ADDED_RETURN_DELIVERY]: '待新增退货发货单',
+  [EXCHANGE_INNER_STATUS_UNREVIEWED_RETURN_DELIVERY]: '待审核退货发货单',
+  [EXCHANGE_INNER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS]: '采购商待新增物流单',
+  [EXCHANGE_INNER_STATUS_CONSUMER_UNCONFIRMED_LOGISTICS]: '采购商待确认物流单',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_DELIVERY]: '待确认退货发货',
+  [EXCHANGE_INNER_STATUS_NOT_ADDED_RETURN_STORAGE]: '待新增退货入库单',
+  [EXCHANGE_INNER_STATUS_UNREVIEWED_RETURN_STORAGE]: '待审核退货入库单',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_RECEIVE]: '待确认退货收货',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_RETURN_RECEIPT]: '待确认退货回单',
+  [EXCHANGE_INNER_STATUS_NOT_ADDED_REPLACE_DELIVERY]: '待新增换货发货单',
+  [EXCHANGE_INNER_STATUS_UNREVIEWED_REPLACE_DELIVERY]: '待审核换货发货单',
+  [EXCHANGE_INNER_STATUS_SUPPLIER_NOT_ADDED_LOGISTICS]: '供应商待新增物流单',
+  [EXCHANGE_INNER_STATUS_SUPPLIER_UNCONFIRMED_LOGISTICS]: '供应商待确认物流单',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_DELIVERY]: '待确认换货发货',
+  [EXCHANGE_INNER_STATUS_NOT_ADDED_REPLACE_STORAGE]: '待新增换货入库单',
+  [EXCHANGE_INNER_STATUS_UNREVIEWED_REPLACE_STORAGE]: '待审核换货入库单',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_RECEIVE]: '待确认换货收货',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_REPLACE_RECEIPT]: '待确认换货回单',
+  [EXCHANGE_INNER_STATUS_UNCONFIRMED_FINISHED]: '待确认售后完成',
+  [EXCHANGE_INNER_STATUS_FINISHED]: '已确认售后完成',
+  [EXCHANGE_INNER_STATUS_UNACCEPTED_RETURN_LOGISTICS]: '不接受退货物流单',
+  [EXCHANGE_INNER_STATUS_UNACCEPTED_RETURN_EXCHANGE]: '不接受换货物流单',
+  [EXCHANGE_INNER_STATUS_COMMIT_FAILED]: '审核不通过(提交)',
+  [EXCHANGE_INNER_STATUS_FAILED_1]: '审核不通过(一级)',
+  [EXCHANGE_INNER_STATUS_FAILED_2]: '审核不通过(二级)',
+}
+
+// 售后换货外部状态
+
+/**
+ * 待提交
+ */
+export const EXCHANGE_OUTER_STATUS_UNCOMMITTED = 1
+/**
+ * 待确认申请单
+ */
+export const EXCHANGE_OUTER_UNCONFIRMED = 2
+/**
+ * 不接受申请
+ */
+export const EXCHANGE_OUTER_STATUS_FAILED = 3
+/**
+ * 接受申请
+ */
+export const EXCHANGE_OUTER_STATUS_SUCCESS = 4
+/**
+ * 待新增退货发货单
+ */
+export const EXCHANGE_OUTER_STATUS_NOT_ADDED_RETURN_DELIVERY = 5
+/**
+ * 采购商待新增物流单
+ */
+export const EXCHANGE_OUTER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS = 6
+/**
+ * 待退货发货
+ */
+export const EXCHANGE_OUTER_STATUS_RETURN_DELIVERY = 7
+/**
+ * 待新增退货入库单
+ */
+export const EXCHANGE_OUTER_STATUS_NOT_ADDED_RETURN_STORAGE = 8
+/**
+ * 待退货收货
+ */
+export const EXCHANGE_OUTER_STATUS_RETURN_RECEIVE = 9
+/**
+ * 待确认退货回单
+ */
+export const EXCHANGE_OUTER_STATUS_UNCONFIRMED_RETURN_RECEIPT = 10
+/**
+ * 待新增换货发货单
+ */
+export const EXCHANGE_OUTER_STATUS_NOT_ADDED_REPLACE_DELIVERY = 11
+/**
+ * 供应商待新增物流单
+ */
+export const EXCHANGE_OUTER_STATUS_SUPPLIER_NOT_ADDED_LOGISTICS = 12
+/**
+ * 待换货发货
+ */
+export const EXCHANGE_OUTER_STATUS_REPLACE_DELIVERY = 13
+/**
+ * 待新增换货入库单
+ */
+export const EXCHANGE_OUTER_STATUS_NOT_ADDED_REPLACE_STORAGE = 14
+/**
+ * 待换货收货
+ */
+export const EXCHANGE_OUTER_STATUS_REPLACE_RECEIVE = 15
+/**
+ * 待确认换货回单
+ */
+export const EXCHANGE_OUTER_STATUS_UNCONFIRMED_REPLACE_RECEIPT = 16
+/**
+ * 待确认售后完成
+ */
+export const EXCHANGE_OUTER_STATUS_UNCONFIRMED_FINISHED = 17
+/**
+ * 售后完成
+ */
+export const EXCHANGE_OUTER_STATUS_FINISHED = 18
+export const EXCHANGE_OUTER_STATUS = {
+  [EXCHANGE_OUTER_STATUS_UNCOMMITTED]: '待提交',
+  [EXCHANGE_OUTER_UNCONFIRMED]: '待确认申请单',
+  [EXCHANGE_OUTER_STATUS_FAILED]: '不接受申请',
+  [EXCHANGE_OUTER_STATUS_SUCCESS]: '接受申请',
+  [EXCHANGE_OUTER_STATUS_NOT_ADDED_RETURN_DELIVERY]: '待新增退货发货单',
+  [EXCHANGE_OUTER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS]: '采购商待新增物流单',
+  [EXCHANGE_OUTER_STATUS_RETURN_DELIVERY]: '待退货发货',
+  [EXCHANGE_OUTER_STATUS_NOT_ADDED_RETURN_STORAGE]: '待新增退货入库单',
+  [EXCHANGE_OUTER_STATUS_RETURN_RECEIVE]: '待退货收货',
+  [EXCHANGE_OUTER_STATUS_UNCONFIRMED_RETURN_RECEIPT]: '待确认退货回单',
+  [EXCHANGE_OUTER_STATUS_NOT_ADDED_REPLACE_DELIVERY]: '待新增换货发货单',
+  [EXCHANGE_OUTER_STATUS_SUPPLIER_NOT_ADDED_LOGISTICS]: '供应商待新增物流单',
+  [EXCHANGE_OUTER_STATUS_REPLACE_DELIVERY]: '待换货发货',
+  [EXCHANGE_OUTER_STATUS_NOT_ADDED_REPLACE_STORAGE]: '待新增换货入库单',
+  [EXCHANGE_OUTER_STATUS_REPLACE_RECEIVE]: '待换货收货',
+  [EXCHANGE_OUTER_STATUS_UNCONFIRMED_REPLACE_RECEIPT]: '待确认换货回单',
+  [EXCHANGE_OUTER_STATUS_UNCONFIRMED_FINISHED]: '待确认售后完成',
+  [EXCHANGE_OUTER_STATUS_FINISHED]: '售后完成',
+}
+
+// 售后退货内部状态
+
+/**
+ * 待提交退货
+ */
+export const RETURN_INNER_STATUS_UNCOMMITTED = 1
+/**
+ * 审核通过(提交)
+ */
+export const RETURN_INNER_STATUS_COMMIT_SUCCESS = 2
+/**
+ * 一级审核通过
+ */
+export const RETURN_INNER_STATUS_SUCCESS_1 = 3
+/**
+ * 二级审核通过
+ */
+export const RETURN_INNER_STATUS_SUCCESS_2 = 4
+/**
+ * 审核不通过(二级)
+ */
+export const RETURN_INNER_STATUS_FAILED_2 = 5
+/**
+ * 确认审核通过
+ */
+export const RETURN_INNER_STATUS_CONFIRM_SUCCESS = 6
+/**
+ * 确认审核不通过
+ */
+export const RETURN_INNER_STATUS_CONFIRM_FAILED = 7
+/**
+ * 待新增退货发货单
+ */
+export const RETURN_INNER_STATUS_NOT_ADDED_RETURN_DELIVERY = 8
+/**
+ * 待审核退货发货单
+ */
+export const RETURN_INNER_STATUS_UNREVIEWED_RETURN_DELIVERY = 9
+/**
+ * 采购商待新增物流单
+ */
+export const RETURN_INNER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS = 10
+/**
+ * 采购商待确认物流单
+ */
+export const RETURN_INNER_STATUS_CONSUMER_UNCONFIRMED_LOGISTICS = 11
+/**
+ * 待确认退货发货
+ */
+export const RETURN_INNER_STATUS_UNCONFIRMED_RETURN_DELIVERY = 12
+/**
+ * 待新增退货入库单
+ */
+export const RETURN_INNER_STATUS_NOT_ADDED_RETURN_STORAGE = 13
+/**
+ * 待审核退货入库单
+ */
+export const RETURN_INNER_STATUS_UNREVIEWED_RETURN_STORAGE = 14
+/**
+ * 待确认退货收货
+ */
+export const RETURN_INNER_STATUS_UNCONFIRMED_RETURN_RECEIVE = 15
+/**
+ * 待确认退货回单
+ */
+export const RETURN_INNER_STATUS_UNCONFIRMED_RETURN_RECEIPT = 16
+/**
+ * 待退款
+ */
+export const RETURN_INNER_STATUS_TO_BE_REFUNDED = 17
+/**
+ * 待确认退款
+ */
+export const RETURN_INNER_STATUS_UNCONFIRMED_REFUNDED = 18
+/**
+ * 退款失败
+ */
+export const RETURN_INNER_STATUS_REFUNDED_FAIL = 19
+/**
+ * 退款成功
+ */
+export const RETURN_INNER_STATUS_REFUNDED_SUCCESS = 20
+/**
+ * 待确认售后完成
+ */
+export const RETURN_INNER_STATUS_UNCONFIRMED_FINISHED = 21
+/**
+ * 已确认售后完成
+ */
+export const RETURN_INNER_STATUS_FINISHED = 22
+/**
+ * 不接受物流单
+ */
+export const RETURN_INNER_STATUS_UNACCEPTED_LOGISTICS = 23
+/**
+ * 审核不通过(提交)
+ */
+export const RETURN_INNER_STATUS_COMMIT_FAILED = 24
+/**
+ * 审核不通过(一级)
+ */
+export const RETURN_INNER_STATUS_FAILED_1 = 25
+export const RETURN_INNER_STATUS = {
+  [RETURN_INNER_STATUS_UNCOMMITTED]: '待提交',
+  [RETURN_INNER_STATUS_COMMIT_SUCCESS]: '审核通过(提交)',
+  [RETURN_INNER_STATUS_SUCCESS_1]: '一级审核通过',
+  [RETURN_INNER_STATUS_SUCCESS_2]: '二级审核通过',
+  [RETURN_INNER_STATUS_FAILED_2]: '二级审核不通过',
+  [RETURN_INNER_STATUS_CONFIRM_SUCCESS]: '确认审核通过',
+  [RETURN_INNER_STATUS_CONFIRM_FAILED]: '确认审核不通过',
+  [RETURN_INNER_STATUS_NOT_ADDED_RETURN_DELIVERY]: '待新增退货发货单',
+  [RETURN_INNER_STATUS_UNREVIEWED_RETURN_DELIVERY]: '待审核退货发货单',
+  [RETURN_INNER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS]: '采购商待新增物流单',
+  [RETURN_INNER_STATUS_CONSUMER_UNCONFIRMED_LOGISTICS]: '采购商待确认物流单',
+  [RETURN_INNER_STATUS_UNCONFIRMED_RETURN_DELIVERY]: '待确认退货发货',
+  [RETURN_INNER_STATUS_NOT_ADDED_RETURN_STORAGE]: '待新增退货入库单',
+  [RETURN_INNER_STATUS_UNREVIEWED_RETURN_STORAGE]: '待审核退货入库单',
+  [RETURN_INNER_STATUS_UNCONFIRMED_RETURN_RECEIVE]: '待确认退货收货',
+  [RETURN_INNER_STATUS_UNCONFIRMED_RETURN_RECEIPT]: '待确认退货回单',
+  [RETURN_INNER_STATUS_TO_BE_REFUNDED]: '待退款',
+  [RETURN_INNER_STATUS_UNCONFIRMED_REFUNDED]: '待确认退款',
+  [RETURN_INNER_STATUS_REFUNDED_FAIL]: '待确认退款',
+  [RETURN_INNER_STATUS_REFUNDED_SUCCESS]: '待确认退款',
+  [RETURN_INNER_STATUS_UNCONFIRMED_FINISHED]: '待确认售后完成',
+  [RETURN_INNER_STATUS_FINISHED]: '已确认售后完成',
+  [RETURN_INNER_STATUS_UNACCEPTED_LOGISTICS]: '不接受物流单',
+  [RETURN_INNER_STATUS_COMMIT_FAILED]: '审核不通过(提交)',
+  [RETURN_INNER_STATUS_FAILED_1]: '审核不通过(一级)',
+}
+
+// 售后退货外部状态
+
+/**
+ * 待提交
+ */
+export const RETURN_OUTER_STATUS_UNCOMMITTED = 1
+/**
+ * 待确认申请单
+ */
+export const RETURN_OUTER_UNCONFIRMED = 2
+/**
+ * 不接受申请
+ */
+export const RETURN_OUTER_STATUS_FAILED = 3
+/**
+ * 接受申请
+ */
+export const RETURN_OUTER_STATUS_SUCCESS = 4
+/**
+ * 待新增退货发货单
+ */
+export const RETURN_OUTER_STATUS_NOT_ADDED_RETURN_DELIVERY = 5
+/**
+ * 采购商待新增物流单
+ */
+export const RETURN_OUTER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS = 6
+/**
+ * 待退货发货
+ */
+export const RETURN_OUTER_STATUS_RETURN_DELIVERY = 7
+/**
+ * 待新增退货入库单
+ */
+export const RETURN_OUTER_STATUS_NOT_ADDED_RETURN_STORAGE = 8
+/**
+ * 待退货收货
+ */
+export const RETURN_OUTER_STATUS_RETURN_RECEIVE = 9
+/**
+ * 待确认退货回单
+ */
+export const RETURN_OUTER_STATUS_UNCONFIRMED_RETURN_RECEIPT = 10
+/**
+ * 待退款
+ */
+export const RETURN_OUTER_STATUS_TO_BE_REFUNDED = 11
+/**
+ * 待确认退款
+ */
+export const RETURN_OUTER_STATUS_UNCONFIRMED_REFUNDED = 12
+/**
+ * 确认退款未到账
+ */
+export const RETURN_OUTER_STATUS_NOT_RECEIVED = 13
+/**
+ * 待确认售后完成
+ */
+export const RETURN_OUTER_STATUS_UNCONFIRMED_FINISHED = 14
+/**
+ * 售后完成
+ */
+export const RETURN_OUTER_STATUS_FINISHED = 15
+export const RETURN_OUTER_STATUS = {
+  [RETURN_OUTER_STATUS_UNCOMMITTED]: '待提交',
+  [RETURN_OUTER_UNCONFIRMED]: '待确认申请单',
+  [RETURN_OUTER_STATUS_FAILED]: '不接受申请',
+  [RETURN_OUTER_STATUS_SUCCESS]: '接受申请',
+  [RETURN_OUTER_STATUS_NOT_ADDED_RETURN_DELIVERY]: '待新增退货发货单',
+  [RETURN_OUTER_STATUS_CONSUMER_NOT_ADDED_LOGISTICS]: '采购商待新增物流单',
+  [RETURN_OUTER_STATUS_RETURN_DELIVERY]: '待退货发货',
+  [RETURN_OUTER_STATUS_NOT_ADDED_RETURN_STORAGE]: '待新增退货入库单',
+  [RETURN_OUTER_STATUS_RETURN_RECEIVE]: '待退货收货',
+  [RETURN_OUTER_STATUS_UNCONFIRMED_RETURN_RECEIPT]: '待确认退货回单',
+  [RETURN_OUTER_STATUS_TO_BE_REFUNDED]: '待退款',
+  [RETURN_OUTER_STATUS_UNCONFIRMED_REFUNDED]: '待确认退款',
+  [RETURN_OUTER_STATUS_NOT_RECEIVED]: '确认退款未到账',
+  [RETURN_OUTER_STATUS_UNCONFIRMED_FINISHED]: '待确认售后完成',
+  [RETURN_OUTER_STATUS_FINISHED]: '售后完成',
+}
+
+/**
+ * 物流
+ */
+export const DELIVERY_TYPE_EXPRESS = 1
+/**
+ * 自提
+ */
+export const DELIVERY_TYPE_SELF_LIFTING = 2
+/**
+ * 无需配送
+ */
+export const DELIVERY_TYPE_NO_DISTRIBUTION = 3
+
+export const DELIVERY_TYPE_ENUM = [
+  {
+    label: intl.formatMessage({ id: 'afterService.constants.DELIVERY_TYPE_ENUM_1', defaultMessage: '物流' }),
+    value: DELIVERY_TYPE_EXPRESS,
+  },
+  {
+    label: intl.formatMessage({ id: 'afterService.constants.DELIVERY_TYPE_ENUM_2', defaultMessage: '自提' }),
+    value: DELIVERY_TYPE_SELF_LIFTING,
+  },
+  {
+    label: intl.formatMessage({ id: 'afterService.constants.DELIVERY_TYPE_ENUM_3', defaultMessage: '无需配送' }),
+    value: DELIVERY_TYPE_NO_DISTRIBUTION,
+  },
+]

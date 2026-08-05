@@ -1,0 +1,193 @@
+.platform_goods {
+  position: relative;
+  margin: -8px;
+
+  .setting_title {
+    margin-bottom: 24px;
+    padding-left: 6px;
+    color: #303133;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    border-left: 2px solid #00a98f;
+  }
+
+  .setting_line {
+    display: flex;
+    margin-bottom: 12px;
+    background-color: #fff;
+
+    &_main {
+      position: relative;
+      flex: 1;
+    }
+
+    &_addItem {
+      flex: 1;
+      margin-top: 16px;
+
+      &_input {
+        width: 100%;
+      }
+
+      &_line {
+        display: flex;
+        margin-bottom: 16px;
+
+        &_label {
+          width: 80px;
+          color: #909399;
+          font-size: 12px;
+
+          &.height32 {
+            display: flex;
+            align-items: center;
+            height: 32px;
+          }
+        }
+
+        &_brief {
+          flex: 1;
+
+          .select_line {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
+    &_sort {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      line-height: 32px;
+      text-align: center;
+      background-color: #fafbfc;
+    }
+
+    &_name {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      height: 32px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: #fafbfc;
+
+      & > .icon {
+        // width: 32px;
+        // height: 32px;
+        // line-height: 32px;
+        margin: 0 12px;
+        cursor: pointer;
+      }
+    }
+
+    &_operation {
+      height: 32px;
+      margin-left: auto;
+      background-color: #fafbfc;
+
+      &_btn {
+        width: 16px;
+        margin-left: 16px;
+
+        &_icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.selectDrawer {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.brand_item {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &_imgbox {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+
+    .brand_item_logo {
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+
+      & > img {
+        display: block;
+        width: auto;
+        // height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 0;
+    margin-left: 12px;
+
+    &_name {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #303133;
+      font-size: 12px;
+      line-height: 12px;
+
+      & > span {
+        display: block;
+        flex: 1;
+        width: 0;
+        margin-right: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .delete_icon {
+        width: 12px;
+        height: 12.5px;
+        margin-left: auto;
+      }
+    }
+
+    .text_area {
+      height: 58px;
+    }
+
+    &_price {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      color: #d32f2f;
+      font-size: 12px;
+
+      & > i {
+        margin-right: 4px;
+        font-size: 12px;
+        font-style: normal;
+      }
+    }
+
+    &_brief {
+      margin-top: 2px;
+      color: #909399;
+    }
+  }
+}

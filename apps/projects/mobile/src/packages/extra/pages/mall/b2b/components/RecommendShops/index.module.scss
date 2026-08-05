@@ -1,0 +1,22 @@
+
+.container {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+
+  .recommentTitleWrapper {
+    padding: 8px 4px 12px 4px;
+
+  }
+
+  .recommentTitle {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .shopList {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

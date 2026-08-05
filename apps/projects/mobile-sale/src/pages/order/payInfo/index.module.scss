@@ -1,0 +1,93 @@
+@import '@/styles/variables.scss';
+
+@mixin common-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.container {
+  @include common-container;
+  padding: 8px;
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    color: $main-text-color;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .card-tag {
+    margin-left: 4px;
+    padding: 1px 4px;
+    font-size: 10px;
+    color: $second-text-color;
+    background-color: $bg-color;
+    border-radius: 4px;
+  }
+
+  .info {
+    @include common-info;
+  }
+
+  .info-edit {
+    @include common-info;
+    justify-content: space-between;
+  }
+
+  .info-money {
+    @include common-info;
+    margin-bottom: 24px;
+  }
+
+  .money {
+    font-size: 14px;
+    color: $red-text-color;
+  }
+
+  .label {
+    min-width: 80px;
+    font-size: 12px;
+    color: $third-text-color;
+  }
+
+  .value {
+    flex: 1;
+    color: $main-text-color;
+  }
+
+  .info-img {
+    @include common-info;
+    align-items: flex-start;
+  }
+
+  .img {
+    width: 86px;
+    height: 56px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .edit {
+    display: flex;
+    align-items: center;
+  }
+
+  .edit-text {
+    margin-left: 2px;
+    font-size: 12px;
+    color: $theme-color;
+  }
+
+  .btn-wrap {
+    padding: 8px;
+    background-color: #FFF;
+
+    .btn {
+      @include confirmBtn;
+      margin-bottom: 0;
+    }
+  }
+}

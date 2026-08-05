@@ -1,0 +1,85 @@
+@import '@/styles/utils/text-overflow-multi-line.scss';
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  // background-color: #fff;
+  // padding: 12px;
+  margin-bottom: 8px;
+  // border-radius: 8px;
+  background: url('../../../assets/images/discountCoupon.png') no-repeat;
+  padding: 12px 0;
+  background-size:100% 100% ;
+  width: 316px;
+  height: 118px;
+  position: relative;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+.left {
+  margin-left: 13px;
+  min-width: 90px;
+  // flex: 1;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+.title {
+   font-size: 18px;
+  @include text-overflow-multi-line(1);
+  color: #ef3346;
+}
+.info {
+  font-size: 10px;
+  color: #303133;
+  @include text-overflow-multi-line(1);
+  margin-top:4px;
+  margin-bottom: 10px;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.money {
+  flex: 1;
+  font-size: 16px;
+  color: #ef3346;
+  @include text-overflow-multi-line(1);
+  text-align: center;
+}
+.moneyInner {
+   font-size: 60px;
+   color:#ef3346;
+}
+.btn {
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f87362 0%, #ef3346 100%);
+  margin-top:10px;
+}
+.btnText {
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 4px;
+
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f87362 0%, #ef3346 100%);
+
+}
+.right{
+  margin-left: 16px;
+  padding: 10px;
+}

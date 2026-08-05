@@ -1,0 +1,153 @@
+@import './mixins/layout.less';
+
+#root {
+  // 去除input type为number时的箭头
+  .ant-input-number-handler-wrap {
+    display: none;
+  }
+
+  .ant-pro-global-footer {
+    margin: 8px auto 32px auto;
+  }
+
+  .ant-page-header {
+    padding: 8px 24px;
+  }
+
+  .common_checkbox {
+    &:hover,
+    &:active,
+    &:focus {
+      .ant-checkbox-inner {
+        border-color: var(--mall-main-color);
+      }
+    }
+
+    .ant-checkbox-group-item {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .ant-checkbox {
+      &:hover,
+      &:active,
+      &:focus {
+        .ant-checkbox-inner {
+          border-color: var(--mall-main-color);
+        }
+      }
+    }
+
+    .ant-checkbox .ant-checkbox-indeterminate {
+      &:hover {
+        border-color: var(--mall-main-color);
+      }
+    }
+
+    .ant-checkbox-indeterminate.ant-checkbox-checked .ant-checkbox-inner {
+      background-color: transparent;
+    }
+
+    .ant-checkbox-indeterminate .ant-checkbox-inner {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: var(--mall-main-color);
+      }
+
+      &::after {
+        background-color: var(--mall-main-color);
+        border-color: var(--mall-main-color);
+      }
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: var(--mall-main-color);
+      border-color: var(--mall-main-color);
+    }
+  }
+
+  // 去除数字输入框的箭头
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .ant-pro-global-footer {
+    margin: 8px auto 32px auto;
+  }
+
+  .identityRadio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .make-center(text);
+    & label {
+      width: 320px;
+      height: 48px;
+      .make-center-space(margin, 12);
+      vertical-align: middle;
+      line-height: 48px;
+    }
+  }
+  .businessRadio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    .make-center(margin);
+    .make-center(text);
+    & label {
+      width: 148px;
+      height: 32px;
+      line-height: 32px;
+      margin: 8px 0;
+    }
+    & label:nth-child(odd) {
+      margin-right: 24px;
+    }
+  }
+
+  // 处理PageHeaderWrapper外边距冲突
+  .ant-pro-basicLayout-content .ant-pro-page-header-wrap {
+    margin: 0;
+  }
+  // 处理因为antd版本不同导致anchor的背景色不同
+  .ant-anchor-wrapper {
+    background-color: #fff;
+  }
+
+  // 覆写左边菜单
+  .ant-menu-item {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .ant-menu-submenu-title {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .anticon-border {
+    margin-right: 8px;
+  }
+}
+
+.ant-descriptions-item-label {
+  color: #909399 !important;
+}
+
+.mega-layout-container-content {
+  overflow: hidden;
+}
+
+.ant-form-item-label > label {
+  font-size: 12px !important;
+  color: #909399 !important;
+}
+
+// 隐藏表格头 td 的 竖线
+.ant-table-thead > tr > th::before {
+  display: none;
+}

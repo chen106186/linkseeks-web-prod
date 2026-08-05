@@ -1,0 +1,11 @@
+export default {
+  view: {
+    headerMeta: false,
+    paddingMeta: false,
+    authButtons: [
+      { name: '详情', key: 'detail' },
+      { name: '换货发货', key: 'deliver' },
+    ],
+    cache: true,
+  },
+}

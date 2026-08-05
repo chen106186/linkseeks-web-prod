@@ -1,0 +1,61 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+.detection-drawer {
+  :global {
+    .ant-drawer-body {
+      padding: 16px !important;
+    }
+
+    .ant-space-vertical {
+      width: 100%;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-input-number {
+      width: 100%;
+    }
+  }
+
+  .info {
+    span {
+      display: inline-block;
+
+      &:first-child {
+        color: #91959b;
+        font-size: 12px;
+        width: 144px;
+      }
+
+      &:last-child {
+        color: #303133;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .vertical {
+    color: #252d37;
+    font-size: 14px;
+    position: relative;
+    padding-left: 8px;
+
+    &::after {
+      content: '';
+      height: 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-left: 2px solid @color-primary;
+      transform: scaleY(1);
+      opacity: 1;
+      transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+        opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+}

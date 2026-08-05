@@ -1,0 +1,244 @@
+/********************************** 布局 ******************************************/
+@import './mixins/layout.less';
+@import './theme.less';
+@import './index.less';
+@import '../../theme/style/colors.less';
+
+@makeCenters: text, block, flex, flexAlign, flexJustify, absolute, fixed, margin;
+@makeCentersLen: length(@makeCenters);
+
+.loopCenter(@list, @i: 1, @val: extract(@list, @i)) when (@i < @makeCentersLen + 1) {
+  .center-@{val} {
+    .make-center(@val);
+  }
+
+  .loopCenter(@list, @i + 1);
+}
+
+.loopCenter(@makeCenters);
+
+// antd default
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #909399;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 6px;
+  background: #f0f2f5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  min-height: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.margin_content {
+  .center-margin;
+  width: 1190px;
+}
+
+.content1024 {
+  .center-margin;
+  width: 1024px;
+}
+
+// 公共的title伪类竖线
+.commonPanelTitle {
+  padding-left: 8px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.42667rem;
+    width: 2px;
+    height: 0.85333rem;
+    background-color: @primary-color;
+    box-shadow: 0 0.14933rem 0.256rem 0 rgba(97, 144, 232, 0.2);
+    border-radius: 1px;
+  }
+}
+
+// 公共显示隐藏处理
+.commonShowBlock {
+  display: block;
+}
+
+.commonShow {
+  display: inline-block;
+}
+
+.commonHide {
+  display: none;
+}
+
+// 公共着色 主体颜色
+.commonPickColor {
+  color: @main-color;
+}
+
+// 公共状态 圆点
+.commonStatus {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.commonStatusStop {
+  .commonStatus();
+  background-color: @status-stop; // 停用
+}
+
+.commonStatusModify {
+  .commonStatus();
+  background-color: @status-modify; // 已修改
+}
+
+.commonStatusValid {
+  .commonStatus();
+  background-color: @status-valid; // 已生成，有效、审核通过
+}
+
+.commonStatusInvalid {
+  .commonStatus();
+  background-color: @status-invalid; // 未生成，无效、待审核
+}
+
+.commonStatusNoPass {
+  .commonStatus();
+  background-color: @status-nopass; // 审核不通过
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.sc-fzpans {
+  display: block;
+  width: 100%;
+}
+
+.mr_t-40 {
+  margin-top: 40px;
+}
+
+#registerForm {
+  .ant-input-group-addon {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+}
+
+// 可编辑表格项公用样式
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  min-height: 32px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.editable-row .ant-form-item-explain {
+  position: absolute;
+  top: 100%;
+  font-size: 12px;
+}
+.rate_style {
+  .ant-rate-star {
+    margin-right: 0px !important;
+  }
+}
+
+// :global {
+.ant-input-search {
+  .ant-input {
+    padding: 6px 11px;
+  }
+}
+// }
+
+.ant-btn {
+  border-radius: 4px !important;
+}
+
+.use-custom-required {
+  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional) {
+    &::before {
+      content: '';
+    }
+    &::after {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 12px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+}
+
+.ant-layout {
+  .ant-layout-content {
+    .ant-pro-page-header-wrap-children-content {
+      margin: 16px 16px 0;
+    }
+  }
+  .ant-pro-basicLayout-content {
+    margin: 16px;
+  }
+  .ant-pro-basicLayout-content-disable-margin {
+    margin: 0;
+    .ant-pro-grid-content {
+      > .ant-card {
+        margin: 16px;
+      }
+    }
+  }
+  .ant-card {
+    border-radius: 8px;
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+}
+
+.ant-form {
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+}
+
+.god-standard-table {
+  .god-table-control {
+    margin-bottom: 0;
+  }
+}

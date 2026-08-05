@@ -1,0 +1,40 @@
+<view class="wxe-editor-container">
+	<!-- 工具栏区域 -->
+	<view class="wxe-editor-toolbar">
+
+		<!-- 标题（H2） -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/biaotizhengwenqiehuan.png"
+					 class="wxe-editor-icon" bindtap="formatHeader" />
+
+		<!-- 正文（清除 header） -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/zhengwen.png"
+					 class="wxe-editor-icon" bindtap="formatText" />
+
+		<!-- 居中 -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/juzhong.png"
+					 class="wxe-editor-icon" bindtap="formatCenter" />
+
+		<!-- 加粗 -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/zitijiacu.png"
+					 class="wxe-editor-icon" bindtap="formatBold" />
+
+		<!-- 插入图片 -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/charutupian.png"
+					 class="wxe-editor-icon" bindtap="insertImage" />
+
+		<!-- 保存内容 -->
+		<image src="https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/baocun.png"
+					 class="wxe-editor-icon" bindtap="emitContent" />
+	</view>
+
+	<!-- 编辑器区域 -->
+	<editor
+		id="innerEditor"
+		class="wxe-editor-content"
+		placeholder="请输入图文内容"
+		show-img-toolbar
+		show-img-size
+		show-img-resize
+		bindready="onEditorReady"
+	/>
+</view>

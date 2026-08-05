@@ -1,0 +1,63 @@
+@import '@/global/styles/global.less';
+
+.page {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+
+  .tablePanenl {
+    margin-left: @margin-md;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .search {
+        width: 256px;
+
+        :global {
+          .ant-input {
+            padding: 7px 11px;
+            border: none;
+
+            &:focus {
+              border-color: transparent;
+            }
+          }
+          .ant-input-search-button {
+            border-left: none;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .body {
+      flex: 1;
+    }
+
+    .table {
+      margin-top: @margin-md;
+      flex: 1;
+
+      .tableItem {
+        margin-bottom: @margin-sm;
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .footer {
+      margin-top: @margin-md;
+      .pagination {
+        float: right;
+      }
+    }
+  }
+}

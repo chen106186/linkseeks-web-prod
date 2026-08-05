@@ -1,0 +1,128 @@
+.lingxi-advert {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  background-color: #fff;
+
+  img {
+    width: 100%;
+  }
+}
+
+.lingxi-banner {
+  position: relative;
+  height: 288px;
+
+  .banner_list {
+    .banner_list_item {
+      height: 288px;
+
+      &_img {
+        height: 288px;
+      }
+    }
+  }
+
+  .banner_prev {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 148px;
+    left: 1px;
+    background: rgb(0 0 0 / 24%);
+    border-radius: 0 100px 100px 0;
+    color: rgb(255 255 255 / 60%);
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .banner_next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 148px;
+    right: 1px;
+    background: rgb(0 0 0 / 24%);
+    border-radius: 100px 0 0 100px;
+    color: rgb(255 255 255 / 60%);
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  :global {
+    .ant-carousel .slick-slide {
+      text-align: center;
+      height: 288px;
+      overflow: hidden;
+    }
+
+    .ant-carousel .slick-slide h3 {
+      color: #fff;
+    }
+  }
+}
+
+.link {
+  cursor: pointer;
+}
+
+.lingxi-interact_list {
+  display: flex;
+  // width: 1200px;
+  margin-top: 16px;
+  height: 96px;
+  margin-bottom: 0;
+  justify-content: space-between;
+
+  .interact_list_item {
+    width: 172px;
+    height: 96px;
+    overflow: hidden;
+
+    // &:first-child {
+    //   margin-right: 16px;
+    // }
+
+    & > a {
+      outline: none;
+      text-decoration: none;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.lingxi-service_list {
+  display: flex;
+  width: 1200px;
+  margin: 20px auto;
+  margin-bottom: 0;
+  height: 90px;
+
+  .service_list_item {
+    width: 588px;
+    height: 90px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    & > span {
+      outline: none;
+      text-decoration: none;
+
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

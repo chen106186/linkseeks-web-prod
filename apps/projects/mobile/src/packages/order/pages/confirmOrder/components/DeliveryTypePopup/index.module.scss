@@ -1,0 +1,50 @@
+.container {
+  background-color: #fff;
+  padding-bottom: 34px;
+  overflow: hidden;
+}
+
+$swiper-item-height: 40px;
+
+.swiper-wrapper {
+  position: relative;
+  margin: 23px 0 33px;
+
+  &-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2 * 12px);
+    height: 32px;
+    background-color: #F5F6F7;
+    border-radius: 4px;
+  }
+}
+
+.swiper {
+  height: calc(5 * $swiper-item-height);
+  background-color: transparent;
+
+  &-item {
+    text-align: center;
+    height: $swiper-item-height;
+    line-height: $swiper-item-height;
+    font-size: 14px;
+    background-color: transparent;
+
+    &-active {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.button {
+  margin: 0 12px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+  background-color: #00A98F;
+  color: #fff;
+}

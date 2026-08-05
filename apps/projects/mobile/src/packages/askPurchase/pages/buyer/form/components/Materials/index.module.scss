@@ -1,0 +1,105 @@
+@import "@/styles/variables.scss";
+
+.materia-title {
+	color: #252D37;
+	font-size: 14px;
+	font-weight: bold;
+	flex: 1;
+
+	&-wrap {
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
+
+	&-split {
+		width: 4px;
+		height: 16px;
+		border-radius: 2px;
+		background-color: $theme-color;
+		margin-right: 8px;
+	}
+
+}
+
+.time {
+	color: #252d37;
+	text-align: right;
+	font-size: 14px;
+
+	&.placeholderColor {
+		color: #C8CACD;
+	}
+}
+
+.form-input {
+	text-align: right;
+
+	&-placeholder {
+		font-size: 14px;
+		color: #C8CACD;
+		font-weight: 400;
+	}
+}
+
+.materia-button {
+	font-size: 14px;
+	margin-top: 8px;
+	display: flex;
+	height: 32px;
+	align-items: center;
+	justify-content: center;
+}
+
+.Upload {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+
+	.UploadList {
+		display: flex;
+
+		&-card {
+			width: 72px;
+			height: 72px;
+			background: rgba(255, 255, 255, 0.00);
+			border: 1px solid #EEF0F3;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			Image,
+			taro-image-core {
+				width: 15px;
+				height: 15px;
+			}
+		}
+
+		&-item {
+			margin-right: 10px;
+			width: 72px;
+			height: 72px;
+			position: relative;
+			border-radius: 4px;
+
+			Image,
+			taro-image-core,
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.remove {
+				position: absolute;
+				right: -8px;
+				top: -8px;
+				background-color: #FFFFFF;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

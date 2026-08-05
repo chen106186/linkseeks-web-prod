@@ -1,0 +1,18 @@
+@import '@/styles/variables.scss';
+
+.info-wrap {
+  @include flexBetween;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: $main-text-color;
+
+  .title {
+    min-width: 80px;
+    color: $third-text-color;
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+  }
+}

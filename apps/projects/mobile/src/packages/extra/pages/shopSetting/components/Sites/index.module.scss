@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+
+  .site-item {
+    margin-bottom: 16px * $hd;
+    border-width: 1px * $hd;
+    border-radius: 8px * $hd;
+    background-color: #fafbfc;
+    border-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .active {
+    background-color: #EBF9F6;
+    border: 1px solid $theme-color;
+
+    // background-color: red;
+  }
+
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.info {
+  align-items: center;
+  display: flex;
+  height: 56px;
+}
+.site-icon {
+  width: 24px;
+  height: 17px;
+  margin-right: 16px;
+}
+.selected {
+  width: 16px;
+  height: 16px;
+}
+.text {
+  color: #303133;
+  font-size: 14px;
+}
+.active {
+  border-width: 1px;
+  border-color: $theme-color;
+  background-color: #E4F7EF;
+}

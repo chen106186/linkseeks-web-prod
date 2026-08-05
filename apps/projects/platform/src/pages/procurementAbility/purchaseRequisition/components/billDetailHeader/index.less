@@ -1,0 +1,122 @@
+.titleAvator {
+  width: 48px;
+  height: 48px;
+  background: rgba(135, 119, 217, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(223, 225, 230, 1);
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  margin: 0 24px;
+}
+
+.titleAvatorText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #303133;
+  margin-left: 8px;
+}
+
+.detailHeader {
+  background: #fff;
+  padding: 24px 24px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  :global {
+    .ant-row {
+      .ant-col-2 {
+        .ant-btn {
+          position: fixed;
+          // top: 0;
+          right: 16px;
+        }
+      }
+    }
+    .ant-anchor-wrapper {
+      min-height: auto;
+    }
+    .ant-anchor {
+      display: flex;
+    }
+    .ant-anchor-ink {
+      display: none;
+    }
+    .ant-anchor-link {
+      padding: 0;
+      text-align: center;
+      a {
+        display: inline-block;
+        font-size: 14px;
+        color: #909399;
+        margin: 0 16px;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+    .ant-anchor-link-active {
+      a {
+        font-weight: 500;
+        color: #303133;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+}
+
+.detailCol {
+  display: flex;
+  margin-top: 20px;
+  color: #303133;
+}
+
+.colLabel {
+  color: #909399;
+  margin-right: 16px;
+}
+
+// tabs标签锚点
+.anchorTitle {
+  // height: 48px;
+  ul {
+    padding-left: 0;
+    display: flex;
+    li {
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      list-style: none;
+      a {
+        display: inline-block;
+        height: 48px;
+        font-size: 14px;
+        color: #909399;
+        line-height: 48px;
+        margin: 0 16px;
+      }
+      .current {
+        font-weight: 500;
+        color: #303133;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+}
+
+.anchorTitleFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  :global {
+    .ant-row {
+      .ant-col-2 {
+        .ant-btn {
+          position: fixed;
+          top: 16px;
+          right: 16px;
+        }
+      }
+    }
+  }
+}

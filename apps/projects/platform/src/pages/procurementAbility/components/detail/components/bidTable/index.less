@@ -1,0 +1,99 @@
+.card-list {
+  font-size: 12px;
+  p {
+    margin-bottom: 8px;
+  }
+}
+.card-list_title {
+  font-size: 12px;
+  color: #909399;
+}
+
+.bidConfirmWrapper {
+  overflow-x: scroll;
+  border-left: 4px solid #f4f5f7;
+  border-right: 4px solid #f4f5f7;
+  background: #f4f5f7;
+  .bidRowWrapper {
+    min-width: 1300px;
+  }
+  :global {
+    .ant-row {
+      .ant-col {
+        .ant-row {
+          .ant-col-4 {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 2px;
+            margin-top: 2px;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .bidTableHead {
+    height: 40px;
+    line-height: 32px;
+    background: #f4f5f7;
+    border: 4px solid #f4f5f7;
+    color: #303133;
+    padding-left: 16px;
+    margin-bottom: 0;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .levelCircle {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      background: #ebecf0;
+      border-radius: 50%;
+      color: #909399;
+      margin-right: 8px;
+      text-align: center;
+    }
+  }
+  .materialInfo,
+  .amountInfo,
+  .throwBidInfo,
+  .totalWrapper {
+    height: 162px;
+    background-color: #fff;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .isPrizeStyle {
+    border: 2px solid #00a98f;
+  }
+  .rankNumber {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #606266;
+    line-height: 44px;
+    border-radius: 50%;
+    background-color: #f4f5f7;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    text-align: right;
+    padding-right: 6px;
+  }
+}
+
+.prizeTotal {
+  :global {
+    .ant-tooltip-inner {
+      background-color: #fff;
+      color: #303133;
+    }
+    .ant-tooltip-arrow-content {
+      --antd-arrow-background-color: '#fff';
+    }
+  }
+}

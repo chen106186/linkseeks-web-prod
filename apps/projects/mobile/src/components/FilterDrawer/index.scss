@@ -1,0 +1,30 @@
+@import '@/styles/variables.scss';
+
+.filter-drawer {
+
+  &-popup {
+    width: calc(100vw - 47PX);
+    bottom: 0;
+    transform: translate3d(0, 0, 0) !important;
+    background-color: #FFFFFF;
+
+    &.god-right-enter,
+    &.god-right-leave-to {
+      transform: translate3d(100%, 0, 0) !important;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    z-index: 998;
+  }
+
+  &-scroll {
+    flex: 1;
+    overflow-y: auto;
+  }
+}

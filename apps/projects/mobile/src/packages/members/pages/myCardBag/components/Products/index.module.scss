@@ -1,0 +1,55 @@
+@import '@/styles/variables.scss';
+.card-bg-color {
+  background-color: rgb(255, 255, 255);
+  .card-column {
+    display: flex;
+    flex-direction: column;
+    .card-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      .font-black1 {
+        color: #303133;
+        font-weight: 800px;
+      }
+      .font-black2 {
+        color: #909399;
+      }
+      .font-black3 {
+        color: #ffffff;
+      }
+    }
+    .card-bottom {
+      justify-content: space-around;
+      .card-bottom-num {
+        align-items: center;
+      }
+    }
+    .image-container {
+      background-color: #cccccc;
+      width: 50px;
+      height: 50px;
+      margin-right: 12px;
+      overflow: hidden;
+      border-radius: $border-radius-md;
+      -webkit-border-radius: $border-radius-md;
+      -moz-border-radius: $border-radius-md;
+      -ms-border-radius: $border-radius-md;
+      -o-border-radius: $border-radius-md;
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .card-padding {
+    padding: $spacing-h-lg;
+  }
+  .margins {
+    margin-top: $spacing-v-sm;
+  }
+  .blur_view {
+    fillter: blur(10px);
+  }
+}

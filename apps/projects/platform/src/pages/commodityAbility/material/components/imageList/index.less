@@ -1,0 +1,38 @@
+.img_body {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &-item {
+    position: relative;
+    margin-bottom: 8px;
+    padding-right: 16px;
+
+    &-img {
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgb(244, 245, 247);
+      border-radius: 4px;
+    }
+
+    &-span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      background: rgba(0, 0, 0, 0.24);
+      border-radius: 4px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      color: #e34d59;
+      font-size: 16px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 50%;
+    }
+  }
+}

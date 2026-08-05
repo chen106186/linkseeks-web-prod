@@ -1,0 +1,49 @@
+.multWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  .h3 {
+    margin: 16px;
+  }
+
+  .multListWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .multItem {
+    width: 328px;
+    border-radius: 8px;
+    display: flex;
+    height: 48px;
+    align-items: center;
+    cursor: pointer;
+    background-color: #edeeef;
+    margin-bottom: 16px;
+    border: 1px solid transparent;
+    padding: 0 16px;
+		outline: none;
+    .image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    .multText {
+      font-size: 14px;
+      color: #91959b;
+    }
+
+    &.active {
+      border: 1px solid #00a98f;
+      background-color: #ebf9f6;
+      .multText {
+        color: #5c626a;
+      }
+    }
+  }
+}

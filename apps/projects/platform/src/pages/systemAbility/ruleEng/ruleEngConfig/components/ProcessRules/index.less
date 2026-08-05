@@ -1,0 +1,73 @@
+.rules {
+  padding-bottom: 16px;
+
+  .rules-item {
+    margin-bottom: 24px;
+  }
+
+  .rules-item-hidden {
+    height: 32px;
+    overflow: hidden;
+  }
+
+  .rule-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 368px;
+    height: 32px;
+    margin-bottom: 16px;
+    padding: 0 4px;
+    border: 1px solid #f5f6f7;
+    border-radius: 4px;
+    color: #252d37;
+    font-size: 14px;
+    background-color: #f5f6f7;
+    cursor: pointer;
+
+    .rule-delete {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      border: 1px solid #00a98f;
+      .rule-delete {
+        display: flex;
+      }
+    }
+
+    :global {
+      .anticon {
+        padding: 0 4px;
+      }
+    }
+  }
+
+  .fields {
+    :global {
+      .ant-form-item {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .add {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    height: 42px;
+    width: 100%;
+    padding-left: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #f5f6f7;
+    background-color: #fff;
+  }
+}

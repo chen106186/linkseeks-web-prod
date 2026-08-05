@@ -1,0 +1,54 @@
+@import '@/styles/variables.scss';
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.infos {
+  display: flex;
+  align-items: center;
+}
+.img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.name {
+  color: #303133;
+  font-size: 14px;
+}
+.extra {
+  font-size: 12px;
+  color: #909399;
+  margin-left: 4px;
+}
+.status {
+  width: 16px;
+  height: 16px;
+  border-color: #f4f5f7;
+  border-width: 0.5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $theme-color;
+}
+.disappear {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 0.5px solid #EBECF0;
+}
+.helper {
+  font-size: 12px;
+  color: #606266;
+  background-color: #F7F8FA;
+  padding: 2px 4px;
+}
+.disable {
+  color: #909399;
+}

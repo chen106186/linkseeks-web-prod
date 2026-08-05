@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+
+.refund-info {
+  padding: $spacing-v-md $spacing-h-md;
+
+  .refundTabWrap {
+    &-item {
+      flex: 1 0 0;
+      
+      &-small {
+        flex: 0 0 327px;
+        padding-right: $spacing-h-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+
+.subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #F5F6F7;
+  border-radius: 4px;
+  color: $third-text-color;
+
+  .pay-wrap {
+    display: flex;
+
+    > View,
+    > taro-view-core {
+      flex: 1;
+    }
+
+    .money {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      color: $main-text-color;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  padding: 0 12px;
+  color: $third-text-color;
+
+  > View,
+  > taro-view-core {
+    flex: 1;
+  }
+
+  .number {
+    margin-top: 8px;
+    color: $main-text-color;
+  }
+}

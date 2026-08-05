@@ -1,0 +1,51 @@
+@import "@/styles/variables.scss";
+@import "../../../../styles/common.scss";
+
+.mixPopup {
+  overflow: hidden;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &-search {
+    margin-bottom: 12px;
+  }
+  &-outer {
+    flex: 1;
+    overflow: scroll;
+    &-flatList {
+      background-color: #fff;
+      height: 100%;
+      &-item {
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &-left {
+          flex: 1;
+          margin-right: 40px;
+          overflow: hidden;
+          &-top {
+            display: block;
+            color: #252d37;
+            font-size: 14px;
+            margin-bottom: 8px;
+            @include text-overflow();
+          }
+          &-bottom {
+            display: block;
+            font-size: 12px;
+            color: #909399;
+            @include text-overflow();
+          }
+        }
+        &-right {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

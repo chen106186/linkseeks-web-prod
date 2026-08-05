@@ -1,0 +1,3 @@
+export default {
+  navigationBarTitleText: '查看物流信息',
+}

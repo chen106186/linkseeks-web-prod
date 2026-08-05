@@ -1,0 +1,234 @@
+page {
+  background-color: #fff;
+}
+
+.container {
+  padding: 0px 23px;
+
+  .Text {
+    color: #c0c4cc;
+    font-size: 14px;
+  }
+  .head {
+    margin-top: 32px;
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+    .logoTitle {
+      font-family: PingFangSC-Medium;
+      font-size: 24px;
+      color: #303133;
+      margin-top: 12px;
+    }
+  }
+  .LoginType {
+    margin-top: 20px;
+    taro-text-core,
+    Text {
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      padding: 5px 0;
+      margin-right: 12px;
+      // width: 100px;
+      color: #909399;
+      display: inline-block;
+    }
+    .ative {
+      color: #252d37;
+      font-weight: 900;
+      position: relative;
+    }
+    .ative::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 40%;
+      left: 30%;
+      background-color: #00a98f;
+      height: 3px;
+    }
+  }
+  .swiper-container {
+    margin-top: 10px;
+    height: 230px;
+  }
+  .Loginfoot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    .left {
+      font-size: 14px;
+      color: #000;
+    }
+    .right {
+      font-size: 14px;
+      color: #00a98f;
+    }
+  }
+  .contentMain {
+    .title {
+      padding: 14px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #f4f5f7;
+    }
+  }
+  .last {
+    padding: 14px 0;
+    font-size: 14px;
+    border-top: 4px solid #f7f8fa;
+  }
+  :global {
+    .at-input {
+      background-color: #f5f6f7;
+      // padding: 10px 0 !important;
+      margin-left: 0 !important;
+      width: 100% !important;
+      flex: 1 !important;
+      // height: 50px !important;
+    }
+  }
+}
+.loginConfirmContainer {
+  // text-align: center;
+  padding: 0 20px;
+}
+.loginConfirmText {
+  font-size: 16px;
+  color: #303133;
+  font-weight: 900;
+}
+.loginConfirmTip {
+  font-size: 12px;
+  margin-top: 16px;
+  color: #909399;
+}
+.sign {
+  display: flex;
+  // justify-content: flex-end;
+  align-items: center;
+  margin-top: 182px;
+  taro-image-core,
+  image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    // margin-top: 12px;
+  }
+  .signFlex {
+    flex: 1;
+  }
+  .signText {
+    font-size: 12px;
+    color: #909399;
+  }
+  .signRight {
+    color: #000;
+    font-size: 12px;
+  }
+}
+.foot {
+  position: fixed;
+  bottom: 20px;
+  width: 92%;
+  left: 4%;
+  .loginConfirmBthText {
+    background-color: #00a98f;
+    color: #fff;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .cancelBtnText {
+    margin-top: 10px;
+    background-color: #f5f6f7;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+.MobileView {
+  // margin-top: 20px;
+  .fromItem {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f6f7;
+    border-radius: 8px;
+    padding: 0 8px;
+    // border-bottom: 1px solid #F4F5F7;
+    // padding: 10px 0;
+    .code {
+      font-size: 14px;
+    }
+    .TaroInput {
+      padding: 12px 0;
+    }
+    .placeholderText {
+      @extend .Text;
+    }
+    input {
+      flex: 1;
+      color: #333333;
+      font-size: 14px;
+      border: none !important;
+    }
+    .fill {
+      padding: 0 10px;
+
+      border-right: 1px solid #c8cacd;
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+      image {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .fromFlex {
+    @extend .fromItem;
+    display: flex;
+    justify-content: space-between;
+    taro-text-core,
+    Text {
+      border-left: 1px solid #c8cacd;
+      padding-left: 14px;
+      width: 70px;
+      text-align: center;
+      @extend .Text;
+    }
+    .placeholderText {
+      @extend .Text;
+    }
+    image {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .Imgbox {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .Submit {
+    margin-top: 30px;
+    background-color: #00a98f;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+  }
+}
+
+.mobileModel {
+  border-radius: 25px 25px 0 0 !important;
+  height: 240px;
+}

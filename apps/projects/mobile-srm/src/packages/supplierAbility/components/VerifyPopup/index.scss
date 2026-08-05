@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+
+.verify-popup {
+  &-content {
+    padding: 0 $spacing-v-md $spacing-v-md;
+
+    .at-textarea {
+      padding: 0;
+      border: none;
+  
+      &__textarea {
+        height: 185px;
+        font-size: $font-size-base;
+        color: #C0C4CC;
+      }
+    }
+  }
+
+  &-actions {
+    padding: $spacing-v-md $spacing-h-md;
+    background-Color: #FFFFFF;
+  }
+}

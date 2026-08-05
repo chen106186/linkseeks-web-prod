@@ -1,0 +1,17 @@
+{
+  "name": "test-config",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "vite.config.json",
+    "setup.ts",
+    "test-util.tsx"
+  ],
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitest-fetch-mock": "^0.2.2"
+  }
+}

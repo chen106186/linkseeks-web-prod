@@ -1,0 +1,21 @@
+.AccountRecharge{
+  padding: 12px;
+  background: #F5F6F7;
+  &-Container{
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #fff;
+    &-title{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+    }
+  }
+  .action{
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    background: #007BFC;
+  }
+}

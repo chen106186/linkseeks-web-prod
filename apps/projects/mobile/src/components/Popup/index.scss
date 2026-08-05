@@ -1,0 +1,134 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+$popup-prefix: 'popup';
+
+.popup {
+  position: fixed;
+  z-index: 100;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: $color-bg-grey;
+  transition-timing-function: ease;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+
+  &__center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    &.#{$popup-prefix}__round {
+      border-radius: 16px;
+    }
+  }
+
+  &__top {
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.#{$popup-prefix}__round {
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+  }
+
+  &__right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+
+    &.#{$popup-prefix}__round {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+  }
+
+  &__bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &.#{$popup-prefix}__round {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+  }
+
+  &__left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+
+    &.#{$popup-prefix}__round {
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+  }
+
+  &-title {
+    padding: $spacing-v-xl - 1 $spacing-h-xl * 2;
+    font-size: 16px;
+    color: $color-grey-0;
+    text-align: center;
+    @include border-thin-bottom($color-bg-grey);
+    @include text-overflow();
+  }
+
+  &-close {
+    position: absolute;
+    padding: $spacing-h-md $spacing-h-md;
+
+    &__top-right {
+      top: $spacing-v-xs;
+      right: $spacing-v-xs;
+    }
+
+    &__top-left {
+      top: $spacing-v-xs;
+      left: $spacing-v-xs;
+    }
+  }
+}
+
+.god-center-enter-active,
+.god-center-leave-active {
+  transition-property: opacity;
+}
+
+.god-center-enter,
+.god-center-leave-to {
+  opacity: 0;
+}
+
+.god-bottom-enter-active,
+.god-bottom-leave-active,
+.god-top-enter-active,
+.god-top-leave-active,
+.god-left-enter-active,
+.god-left-leave-active,
+.god-right-enter-active,
+.god-right-leave-active {
+  transition-property: transform;
+}
+
+.god-bottom-enter,
+.god-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.god-top-enter,
+.god-top-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.god-left-enter,
+.god-left-leave-to {
+  transform: translate3d(-100%, -50%, 0);
+}
+
+.god-right-enter,
+.god-right-leave-to {
+  transform: translate3d(100%, -50%, 0);
+}

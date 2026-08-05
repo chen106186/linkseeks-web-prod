@@ -1,0 +1,169 @@
+.card-list {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 24px;
+  border: 1px solid #F4F5F7;
+  padding: 12px;
+  &:hover {
+    .deleteMember {
+      display: block;
+    }
+  }
+}
+.card-list-dash {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 24px;
+  border: 1px dashed #D8DDE6;
+  padding: 12px;
+  cursor: pointer;
+  position: relative;
+}
+.deleteMember {
+  display: none;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  position: absolute;
+  right: 12px;
+  top: 24px;
+  border: none;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+}
+.card-list_title {
+  font-size: 12px;
+  color: #909399;
+}
+
+.headColor {
+  font-weight: 500;
+  color: #909399;
+}
+.rankContainer {
+  .levelCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #EBECF0;
+    border-radius: 50%;
+    color: #909399;
+    margin-right: 8px;
+    text-align: center;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+  }
+  h5 {
+    margin-left: 8px;
+  }
+}
+
+// .remarkBidReportWrapper {
+  // // 评标委员会
+  // .remarkCommitteeContainer {
+  //   margin-bottom: 24px;
+    .committeeItem {
+      position: relative;
+      display: flex;
+      background-color: #FAFBFC;
+      text-align: center;
+      padding-top: 12px;
+      padding-left: 12px;
+      p {
+        align-items: center;
+        height: 56px;
+        line-height: 56px;
+      }
+      .avater {
+        width: 72px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+        p {
+          height: 12px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #909399;
+          line-height: 12px;
+        }
+      }
+      .status {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #00A98F;
+        line-height: 12px;
+        padding: 2px 4px;
+        background-color: #E4F7EF;
+      }
+      .statusInfo {
+        color: #5243AA;
+        background-color: #6554C0;
+      }
+      .statusReceive {
+        color: #2266EE;
+        background-color: #F0F7FF;
+      }
+      .statusReject {
+        color: #D32F2F;
+        background-color: #FFF2F0;
+      }
+    }
+  // }
+  // 评标记录
+  .remarkRecordContainer {
+    .rankContent {
+      display: flex;
+      p {
+        img {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          &:first-child {
+            margin-right: 14px;
+          }
+        }
+      }
+    }
+    .remarkRecordHead {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    :global {
+      .ant-radio-button-wrapper:hover {
+        color: #606266;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        color: #fff;
+        background: #6B778C;
+        border-color: #6B778C;
+      }
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+        background-color: #6B778C;
+      }
+      .ant-table-thead > tr > th {
+        color: #909399;
+      }
+    }
+    .remarkFile {
+      margin-top: 20px;
+      .card-list {
+        margin-top: 12px;
+        border: none;
+      }
+    }
+  }
+  .remarkBidMember {
+    margin-top: 20px;
+  }
+// }

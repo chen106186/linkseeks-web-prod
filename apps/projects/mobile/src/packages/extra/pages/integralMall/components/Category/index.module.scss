@@ -1,0 +1,76 @@
+@import '@/styles/variables.scss';
+
+.banner-category-container {
+  position: relative;
+  background-color: #FFFFFF;
+  margin: 0px 8px 8px;
+  border-radius: 8px;
+  padding-top: 8px;
+
+  &-hide {
+    display: none;
+  }
+
+  &-navList {
+    padding-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 12px;
+  }
+
+  &-navIcon {
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 4px;
+  }
+
+  &-navText {
+    width: 50px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #606266;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &-pagination {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-paginationStyle {
+    height: 3px;
+    border-radius: 3px;
+    margin-bottom: 13px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &-paginationItem {
+    width: 24px;
+    height: 3px;
+    background-color: #EEF0F3;
+    border-radius: 3px;
+  }
+
+  &-paginationTextActive {
+    transition: all 1s;
+    background-color: $theme-color;
+  }
+}

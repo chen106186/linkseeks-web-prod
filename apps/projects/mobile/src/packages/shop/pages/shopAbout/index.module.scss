@@ -1,0 +1,347 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+@import '@/styles/utils/common.scss';
+
+.aboutContainer {
+  flex: 1;
+	display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #F4F5F7;
+  padding: 12px;
+}
+.workshopPics {
+  padding-bottom: 12px;
+}
+.workshopPicsItem {
+  margin-right: 12px;
+  height: 174px;
+}
+.shopInfoCard {
+  padding: 12px 12px 0;
+  background-color: #FFF;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.ownTag {
+  background-color: #EBF9F6;
+  border-radius: 4px;
+  min-width: 60px;
+  padding: 0 8px;
+  line-height: 18px;
+  display: inline-block;
+}
+.ownTagText {
+  font-size: 12px;
+  color: $color-brand;
+}
+.shopInfoContainer {
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 8px;
+}
+.shopInfo {
+  padding-left: 12px;
+  flex: 1;
+  flex-direction: column;
+}
+.shopInfoContainerVip {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 8px;
+}
+.shopInfoVip {
+  flex: 1;
+  flex-direction: column;
+}
+.shopNameLine {
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.shopName {
+  font-size: 14px;
+  margin-right: 6px;
+  color: #000;
+  font-weight: bold;
+}
+.shopDetail {
+  margin-top: 6px;
+}
+.shopDetailInfo {
+  background-color: rgba(219, 153, 84, 0.08);
+  margin-right: 16px;
+  height: 16px;
+  padding-right: 4px;
+  overflow: hidden;
+  align-items: center;
+}
+.shopIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.tagText {
+  font-size: 14px;
+  text-align: center;
+  color: #DB9954;
+}
+.yearBox {
+  background-color: rgba(211, 47, 47, 0.08);
+}
+.yearText {
+  color: #D32F2F;
+}
+.cardLine {
+  min-height: 48px;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.bottomBorder {
+  border-bottom: 0.5px solid #F4F5F7;
+}
+.cardLineText {
+  color: #333;
+  font-size: 14px;
+  margin-left: 8px;
+  flex: 1;
+  padding-right: 8px;
+}
+.cardTitleBox {
+  padding: 4px 0;
+}
+.cardTitle {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.categoryList {
+  display: flex;
+  padding: 8px 0 12px;
+  padding-right: 12px;
+}
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.categoryName {
+  color: #333;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.strengthCardWrap {
+  margin-bottom: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.strengthCardHeader {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #FAFBFC;
+}
+.strengthCardBody {
+  background-color: #FFF;
+  padding: 12px;
+  flex-direction: column;
+}
+.strengthCardHeaderText {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+.strengthCardHeaderRight {
+  display: flex;
+  align-items: center;
+}
+.strengthCardHeaderRightText {
+  font-size: 12px;
+  color: #3877FF;
+  font-weight: bold;
+}
+.strengthCardSplit {
+  height: 0.5px;
+  background-color: #F4F5F7;
+  margin: 8px 0;
+}
+.strengthCardTitleBox {
+  font-size: 14px;
+  color: #252D37;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.strengthCardDescription {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 0;
+}
+.strengthCardLabel {
+  width: 94px;
+  color: #91959B;
+  font-size: 12px;
+}
+.strengthCardBrief {
+  display: flex;
+  flex: 1;
+  color: #252D37;
+  font-size: 12px;
+}
+.text-icon {
+  display: flex;
+  align-items: flex-end;
+}
+.honorPics {
+  display: flex;
+}
+.honorPicsItem {
+  margin-right: 12px;
+  border-radius: 4px;
+  border-color: #F4F5F7;
+  border-width: 0.5px;
+  padding: 18px 0;
+}
+.bottomBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  background-color: #FFF;
+  padding: 0 8px;
+}
+.iconBoxWrap {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
+.buttonBox {
+  @include clearDefaultButton;
+}
+.iconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+}
+.iconBoxText {
+  font-size: 12px;
+  color: #5C626A;
+}
+.registerBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-brand;
+  height: 40px;
+  z-index: 9;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+.registerBtnText {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+.introduceBox {
+  padding: 12px;
+}
+.introduceText {
+  display: flex;
+  text-indent: 24px;
+  text-align: left;
+  color: #303133;
+  font-size: 14px;
+  line-height: 24px;
+}
+.stateTag {
+  position: relative;
+  background-color: #3877FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 0.5px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  top: -8px;
+  margin-left: 2px;
+}
+.nopass {
+  background-color: #D32F2F;
+}
+.stateTagText {
+  color: #FFF;
+  font-size: 12px;
+}
+.avgTradeCommentStar {
+  font-size: 12px;
+  margin-right: 4px;
+}
+.startWrap {
+  display: flex;
+  align-items: center;
+  // background-color: #F4F5F7;
+  border-radius: 8px;
+  height: 16px;
+  padding: 0 4px;
+
+  .startGrade {
+    color: #EA8000;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+}
+.Submit {
+  margin-top: 40px;
+  background-color: #6fc400;
+}
+.SubmitText {
+  color: #fff;
+}
+.agreementTip {
+  color: #909399;
+  font-size: 12px;
+}
+.agreementText {
+  color: #303133;
+  font-size: 12px;
+}
+.collectStyle {
+  display: flex;
+  flex-direction: row;
+  background-color: #F5F6F7;
+  border-radius: 4px;
+  padding: 6px 8px;
+  align-items: center;
+}
+.bodyImg {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  border-radius: 8px;
+  background-color: #FFF;
+}
+.text-line-2 {
+  @include text-overflow-multi-line(2)
+}

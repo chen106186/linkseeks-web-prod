@@ -1,0 +1,36 @@
+{
+  "name": "@apps/design-core",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "license": "MIT",
+  "main": "./src/index",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js",
+    "clean": "../../scripts/clean_package.sh",
+    "dev": "tsc -w & rollup -c rollup.config.js -w",
+    "pub:patch": "node scripts/run.js --patch"
+  },
+  "files": [
+    "design_dist",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://10.0.0.22:3000/ghua/lingxi-design.git"
+  },
+  "gitHead": "c65fc560a56374d0fa3412fbbad52060524f7baf",
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "dependencies": {
+    "immer": "^6.0.5",
+    "lodash": "^4.17.15",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149"
+  }
+}

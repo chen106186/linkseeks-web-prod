@@ -1,0 +1,93 @@
+.wrap {
+  .anchorWrap {
+    padding-left: 2px;
+  }
+  .titleWrap {
+    flex: 1;
+    background-color: #ffffff;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    .titleBox {
+      display: flex;
+      align-items: center;
+      .goBack {
+        color: #909399;
+        font-size: 14px;
+      }
+      .titleContext {
+        display: flex;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        margin-left: 8px;
+        color: #303133;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+  .anchor {
+    display: flex;
+    padding: 0 16px;
+  }
+  .layout {
+    margin: 16px;
+    :global {
+      .ant-card {
+        margin-bottom: 16px;
+        .ant-card-head {
+          > .ant-card-head-wrapper {
+            padding: 12px 0;
+          }
+        }
+        .ant-card-extra {
+          padding: 0 0;
+          .ant-radio-button-wrapper {
+            height: 24px;
+            line-height: 23px;
+          }
+          .ant-radio-button-wrapper:hover {
+            color: #606266;
+          }
+          .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+            color: #fff;
+            background: #6b778c;
+            border-color: #6b778c;
+          }
+        }
+      }
+      .god-table-control {
+        margin-bottom: 0;
+      }
+    }
+  }
+  :global {
+    .ant-anchor {
+      display: flex;
+      .ant-anchor-ink {
+        display: none;
+      }
+      .ant-anchor-link {
+        margin: 0 16px;
+        padding: 14px 0 !important;
+        .ant-anchor-link-title {
+          color: #909399;
+          font-size: 14px;
+        }
+      }
+      .ant-anchor-link-active {
+        position: relative;
+        box-sizing: border-box;
+        border-bottom: 2px solid #00a98f;
+        .ant-anchor-link-title {
+          color: #303133;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.cell {
+  display: flex;
+  align-items: center;
+  h5 {
+    margin-bottom: 2em;
+  }
+  .label {
+    flex: 0 0 25%;
+    color: #909399;
+  }
+  .content {
+    flex: 0 0 70%;
+    display: flex;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+
+    .selector {
+      max-width: 130px;
+      min-width: 56px;
+      padding: 0px 6px;
+      height: 32px;
+      color: #252d37;
+      background: #fafbfc;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+}
+.colStyle {
+  padding: 10px 16px;
+  background-color: #fafbfc;
+  .cell {
+    h5 {
+      margin-bottom: 0px;
+    }
+    .label,
+    .content {
+      flex: 1;
+    }
+  }
+}

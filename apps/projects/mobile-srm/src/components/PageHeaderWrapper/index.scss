@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+
+.page-header {
+
+  &-nav {
+    .nav-bar {
+      background-color: $color-brand;
+      
+      &-left-arrow {
+        .icon {
+          color: $color-white !important;
+        }
+      }
+
+      &-title {
+        color: $color-white;
+      }
+    }
+
+    &__fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      opacity: 0;
+    }
+  }
+
+  &-poster {
+    padding: $spacing-v-md $spacing-h-lg 32px;
+    background-color: $color-brand;
+  
+    &-title {
+      font-size: $font-size-xxl;
+      color: $color-white;
+      height: 28px;
+    }
+  }
+
+  &-section {
+    margin-top: -$spacing-v-xl;
+    padding: 0 $spacing-h-md;
+    padding-bottom: 100px;
+  }
+}

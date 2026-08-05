@@ -1,0 +1,31 @@
+.expanded_row {
+  display: flex;
+  align-items: center;
+  height: 56px;
+
+  &_label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: inherit;
+    padding: 0 16px;
+    color: #00a98f;
+    font-size: 12px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(0, 169, 143, 0.16) 100%);
+  }
+
+  :global {
+    .ant-col {
+      padding: 0 16px;
+      color: #252d37;
+      font-size: 12px;
+
+      span {
+        display: inline-block;
+        width: 64px;
+        color: #91959b;
+      }
+    }
+  }
+}

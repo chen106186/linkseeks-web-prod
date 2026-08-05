@@ -1,0 +1,20 @@
+{
+  "createBrand": "브랜드 만들기",
+  "createCategory": "카테고리 생성",
+  "createMaterial": "재료 만들기",
+  "createProduct": "제품 만들기",
+  "setInventory": "인벤토리 설정",
+  "shou-ye": "첫 장",
+  "afterCenter": "애프터 서비스 센터",
+  "contractCenter": "계약센터",
+  "logisticsCenter": "물류센터",
+  "mallCenter": "매장 센터",
+  "memberCenter": "회원센터",
+  "orderCenter": "주문센터",
+  "payCenter": "결제 센터",
+  "procureCenter": "구매센터",
+  "productCenter": "상품 센터",
+  "settleCenter": "정착 센터",
+  "zijinzhanghuguanlizhongxin": "자본계정관리센터",
+  "gysgl": "공급자 관리"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@apps/design",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pnpm --filter=@apps/design-* --filter=!@apps/design-ui dev",
+    "start:core": "pnpm --filter=@apps/design-core dev",
+    "start:hooks": "pnpm --filter=@apps/design-hooks dev",
+    "start:react": "pnpm --filter=@apps/design-react dev",
+    "start:utils": "pnpm --filter=@apps/design-utils dev",
+    "build": "pnpm --filter=@apps/design-* --filter=!@apps/design-ui build",
+    "build:core": "pnpm --filter=@apps/design-core build",
+    "build:hooks": "pnpm --filter=@apps/design-hooks build",
+    "build:react": "pnpm --filter=@apps/design-react build",
+    "build:utils": "pnpm --filter=@apps/design-utils build"
+  },
+  "gitHead": "c65fc560a56374d0fa3412fbbad52060524f7baf",
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "rollup": "^2.18.1",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1"
+  },
+  "sideEffects": []
+}

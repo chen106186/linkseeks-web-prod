@@ -1,0 +1,20 @@
+{
+  "canshuzhijinweilinghuoyi": "參數值僅為0或1",
+  "buzhichidewenjianleixing": "不支援的文件類型",
+  "shangchuantupianbuchaoguo": "上傳圖片不超過",
+  "canshuzhi": "參數值",
+  "wuxushenhe": "無需審核",
+  "xushenhe": "需審核",
+  "zhichijpgpngjpeg": "支援JPG/PNG/JPEG",
+  "zuidabuchaoguo": "最大不超過",
+  "chicun": "尺寸",
+  "quedingyaozhixingzheigecaozuo": "確定要執行這個操作？",
+  "canshubianhao": "參數編號",
+  "canshumiaoshu": "參數描述",
+  "canshumingcheng": "參數名稱",
+  "liangweixiaoshu": "兩位小數",
+  "bitianshuruzhi": "必填，輸入數值",
+  "morenzhi": "預設值",
+  "shuruqujian": "輸入區間",
+  "zhanghaomingchengchangdubuchaoguoershi": "賬號名稱長度不超過20"
+}

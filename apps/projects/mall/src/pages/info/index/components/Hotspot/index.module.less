@@ -1,0 +1,94 @@
+.hotspot-main {
+  background: #fff;
+  margin-top: 16px;
+  padding: 0 24px;
+
+  .hotspot-nav-warp {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 2px solid #f7f8fa;
+    margin-bottom: 24px;
+
+    .hotspot-nav-title {
+      font-size: 20px;
+      color: #303133;
+      border-bottom: 2px solid #00a98f;
+    }
+
+    .hotspot-nav-more {
+      color: #909399;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .hotspot-content-warp {
+    display: flex;
+  }
+
+  .hotspot-content-left {
+    width: 368px;
+    margin-right: 24px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .hotspot-content-left:hover .hotspot-content-title {
+    color: #00a98f;
+  }
+
+  .hotspot-content-img {
+    width: 100%;
+    height: 207px;
+  }
+
+  .hotspot-content-title {
+    color: #303133;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 12px;
+  }
+
+  .hotspot-content-second-title {
+    color: #909399;
+    font-size: 12px;
+    margin: 12px 0 0;
+  }
+
+  .hotspot-time-main {
+    display: flex;
+    padding: 12px 0;
+  }
+
+  .hotspot-time-warp {
+    display: flex;
+    color: #909399;
+    align-items: center;
+
+    .hotspot-time-icon {
+      margin-right: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .hotspot-time-warp:nth-child(2) {
+    margin-left: 16px;
+  }
+
+  .hotspot-content-right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hotspot-content-right-item {
+    width: 368px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .hotspot-content-right-item:hover .hotspot-content-title {
+    color: var(--mall-main-color);
+  }
+}

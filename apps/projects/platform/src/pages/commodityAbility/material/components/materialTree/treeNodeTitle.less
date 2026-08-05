@@ -1,0 +1,58 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+:global {
+  #root {
+    .ant-tree {
+      .ant-tree-treenode {
+        width: 100%;
+        border: 1px solid transparent;
+        background: #fff;
+      }
+
+      .ant-tree-treenode-selected {
+        border: 1px solid @color-primary;
+      }
+    }
+  }
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  .tree-node-title {
+    position: relative;
+    margin-left: 12px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      margin-top: -2px;
+      background: #c0c4cc;
+    }
+  }
+  .isSelected {
+    color: @color-primary;
+
+    &::before {
+      background: @color-primary;
+    }
+  }
+
+  .tree-node-actions {
+    opacity: 0;
+  }
+
+  &:hover {
+    .tree-node-actions {
+      opacity: 1;
+    }
+  }
+}

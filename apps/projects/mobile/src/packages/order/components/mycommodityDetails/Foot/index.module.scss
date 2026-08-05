@@ -1,0 +1,112 @@
+@import "@/styles/variables.scss";
+@import "@/styles/utils/modal.scss";
+.at-action-sheet__container {
+  border-radius: 25px 25px 0 0 !important;
+  height: 240px;
+}
+
+.foot {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fff;
+  padding-left: $spacing-h-md;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  padding-left: $spacing-h-xl;
+  padding-right: $spacing-h-xl;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f5f6f7;
+  overflow: hidden;
+}
+.btn-border {
+  border-width: 1px;
+  border-color: #e3e4e5;
+}
+.btn-color {
+  background-color: $theme-color;
+  color: #ffffff;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.pay-btn {
+  padding-top: $spacing-v-sm;
+  padding-bottom: $spacing-v-sm;
+  width: 74px;
+  margin-left: $spacing-h-md;
+}
+.order-model {
+  @include new-at-model;
+}
+.ActionSheet-title {
+  font-size: 14px;
+  padding: 10px 0;
+}
+.Img {
+  width: 100%;
+  height: 80px;
+}
+.UploadWarp {
+  text-align: center;
+  padding: 10px 0;
+  align-items: center;
+  background-color: #fafbfc;
+  Image ,taro-image-core {
+    width: 40px;
+    height: 40px;
+  }
+  .UploadWarpText {
+    text-align: center;
+    font-size: 14px;
+    color: #909399;
+  }
+}
+.btntext {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: $theme-color;
+  padding: 10px 0;
+  color: #fff;
+  // position: fixed;
+}
+.ActionSheet-warp {
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.ActionSheet-conter {
+  flex: 1;
+  margin-bottom: 80px;
+}
+.ActionSheet-tip {
+  padding: 10px 0;
+  text-align: left;
+  font-size: 14px;
+}
+:global {
+  .at-action-sheet__container {
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+}
+}
+
+.delete-model {
+  @include new-index-at-model;
+}

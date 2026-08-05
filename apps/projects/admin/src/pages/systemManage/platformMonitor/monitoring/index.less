@@ -1,0 +1,51 @@
+@import '~antd/es/style/themes/default.less';
+
+.monitoring-index {
+  // .ant-select-selector,
+  // .ant-picker {
+  //   background: #f5f5f5 !important;
+  //   border: none !important;
+  // }
+
+  .ant-table-fixed {
+    table-layout: fixed;
+  }
+
+  .ant-table-tbody > tr > td {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+.batch-executor {
+  border: none;
+  margin-left: 16px;
+
+  .ant-btn {
+    border: none;
+  }
+
+  .counts {
+    margin-left: @margin-xss;
+  }
+}
+
+.json-edit-drawer .ant-drawer-body {
+  .ant-form,
+  .ant-input-affix-wrapper,
+  div {
+    height: 100%;
+
+    .ant-form-item-explain {
+      height: @font-size-base * 2;
+    }
+
+    textarea {
+      height: 100%;
+      font-size: @font-size-lg;
+      line-height: 1.8;
+      word-break: break-all;
+      resize: none;
+    }
+  }
+}

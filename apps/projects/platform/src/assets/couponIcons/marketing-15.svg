@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/买商品换购</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2179FD" offset="0%"></stop>
+            <stop stop-color="#3BADEC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/买商品换购" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" fill="url(#linearGradient-1)" cx="8" cy="8" r="8"></circle>
+        <rect id="矩形" x="2" y="2" width="12" height="12"></rect>
+        <path d="M8,3 C9.1045695,3 10,3.8954305 10,5 L11.2954116,5 C11.691459,5 12.0192463,5.3079401 12.043951,5.70321629 L12.450201,12.2032163 C12.4760389,12.6166232 12.1618522,12.9727015 11.7484453,12.9985394 L11.7016616,13 L4.29833842,13 C3.88412485,13 3.54833842,12.6642136 3.54833842,12.25 L3.54979898,12.2032163 L3.95604898,5.70321629 C3.98075374,5.3079401 4.30854095,5 4.70458842,5 L6,5 L6,5 C6,3.8954305 6.8954305,3 8,3 Z M8,4 C7.44771525,4 7,4.44771525 7,5 L9,5 L9,5 C9,4.44771525 8.55228475,4 8,4 Z" id="形状结合" fill="#FFFFFF"></path>
+    </g>
+</svg>

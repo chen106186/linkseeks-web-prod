@@ -1,0 +1,55 @@
+.affix-main {
+  position: absolute;
+  right: 10px;
+}
+
+.affix-warp {
+  padding: 6px 0;
+  text-align: center;
+
+  .icon-affix {
+    font-size: 20px;
+    padding: 2px;
+  }
+
+  .icon-warp {
+    background: #fff;
+    color: #606266;
+    padding: 6px;
+    border-bottom: 1px solid #f4f5f7;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .icon-warp:nth-child(5) {
+    border-bottom: 0;
+  }
+
+  .icon-warp:hover {
+    color: #00a98f;
+  }
+
+  .icon-text {
+    width: 34px;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+}
+
+:global {
+  .ant-tooltip-inner {
+    background: #fff;
+  }
+
+  .ant-back-top {
+    position: unset;
+    width: 46px;
+    height: 46px;
+  }
+
+  .ant-affix-right {
+    .ant-affix {
+      right: 0;
+    }
+  }
+}

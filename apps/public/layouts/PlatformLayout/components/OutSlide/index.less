@@ -1,0 +1,59 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.out-slide {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  background-color: #323a44;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+
+  & > img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slide-list {
+  padding: 24px 0;
+  flex: 1;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slide-item {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #91959b;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(255 255 255 / 8%);
+    color: #fff;
+  }
+}
+
+.slide-item-active {
+  background-color: rgb(255 255 255 / 8%);
+  color: #fff;
+}
+
+.item-title {
+  margin-top: 4px;
+}

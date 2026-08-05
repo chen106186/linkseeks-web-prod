@@ -1,0 +1,31 @@
+.category_select_line {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .opration_btn {
+    width: 32px;
+    height: 32px;
+    background: rgba(250, 251, 252, 1);
+    border: 1px solid rgba(235, 236, 240, 1);
+    color: #909399;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 16px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.add {
+      background: rgba(0, 179, 122, 1);
+      border: 1px solid rgba(0, 179, 122, 1);
+      color: #ffffff;
+    }
+  }
+}

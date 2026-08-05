@@ -1,0 +1,24 @@
+.search-wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  padding-right: 16px;
+  background-color: #FFF;
+}
+
+.search {
+  flex: 1;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.screen-year-month {
+  font-size: 14px;
+  color: $main-text-color;
+  white-space: nowrap;
+}
+

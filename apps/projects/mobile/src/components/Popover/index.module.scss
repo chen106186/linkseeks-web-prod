@@ -1,0 +1,49 @@
+.popover-container {
+  position: relative; /* 让子元素的绝对定位基于此容器 */
+  display: inline-block;
+}
+
+.popover-content {
+  position: absolute;
+  top: 26px; /* 弹出层距离触发按钮的距离 */
+  left: -8px;
+  min-width: 86px;
+  padding: 8px;
+  background-color: #FFFFFF;
+	box-shadow: 5px 5px 5px rgba(215, 215, 215, 0.34);
+  border-radius: 6px;
+  z-index: 100;
+}
+
+.popover-children {
+	position: relative;
+	z-index: 98;
+}
+
+.popover-content::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #FFFFFF transparent; /* 创建向上的三角形 */
+	z-index: 89;
+}
+
+.popover-option-item {
+	padding: 6px;
+	color: #252D37;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.popover-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0); /* 透明背景 */
+  z-index: 99; /* 遮罩层放在弹窗之下，确保捕获点击事件 */
+}

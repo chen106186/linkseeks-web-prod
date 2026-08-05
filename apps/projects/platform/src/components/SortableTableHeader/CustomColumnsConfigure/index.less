@@ -1,0 +1,78 @@
+@import '~antd/es/style/themes/default.less';
+
+.columns-configure {
+
+  &-modal {
+    .ant-modal {
+      border-radius: 8px;
+      
+      &-header {
+        padding: @padding-md;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    height: 440px;
+  }
+
+  &-cell {
+    flex: 1;
+    padding: 0 @padding-md;
+    padding-bottom: @padding-sm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: @margin-sm;
+      font-size: @font-size-sm;
+      color: @text-color-secondary;
+    }
+
+    &-content {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px dashed @border-color-base;
+    }
+  }
+
+  &-checkbox {
+    &-item {
+      padding: @padding-xs;
+      margin-bottom: @margin-xs;
+    }
+  }
+
+  &-draggable {
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: @padding-xs;
+      margin-bottom: @margin-xs;
+      background-color: @background-color-base;
+      border-radius: 4px;
+
+      &-handle {
+        margin-right: @margin-xs;
+        cursor: grabbing;
+      }
+
+      &-txt {
+        flex: 1;
+        font-size: @font-size-sm;
+        color: @text-color;
+        user-select: none;
+      }
+
+      &-close {
+        margin-left: @margin-xs;
+      }
+    }
+  }
+}

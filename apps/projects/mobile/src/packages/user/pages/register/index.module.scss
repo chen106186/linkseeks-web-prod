@@ -1,0 +1,206 @@
+@import '@/styles/utils/modal.scss';
+@import '@/styles/variables.scss';
+
+.container {
+  background: #fff;
+  height: 100vh;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  :global{
+    .at-input {
+      flex: 1 !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      background: #F4F4F4;
+    }
+    .at-input::after {
+      border: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+      content: none !important;
+    }
+  }
+  .Text {
+    color: #C0C4CC;
+    font-size: 14px;
+  }
+
+  .InfoName {
+    font-size: 24px;
+    font-family: PingFangSC-Regular;
+    color: #303133;
+    margin-bottom: 22px;
+  }
+
+  .from_item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F4F5F7;
+    margin-top: 16px;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    padding: 0 12px;
+
+    .code {
+      font-size: 14px;
+      width: 30px;
+    }
+
+    .placeholderText {
+      @extend .Text;
+    }
+
+    Input {
+      flex: 1;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .fill {
+      padding: 0 10px;
+      border-right: 1px solid #F4F5F7;
+      display: flex;
+      align-items: center;
+      margin-right: 14px;
+
+      Image ,taro-image-core {
+        width: 15px;
+        height: 16px;
+      }
+    }
+  }
+
+  .from_flex {
+    @extend .from_item;
+    display: flex;
+    justify-content: space-between;
+
+    Text {
+      border-left: 1px solid #F4F5F7;
+      padding-left: 14px;
+      width: 100px;
+      text-align: center;
+      @extend .Text;
+    }
+
+    .placeholderText {
+      @extend .Text;
+    }
+
+    Image ,taro-image-core {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .from{
+    flex: 1;
+    .fromItem {
+      @extend .from_item;
+    }
+
+    .fromFlex {
+      @extend .from_flex;
+    }
+  }
+	.fromFlex-hide {
+		height: 1px;
+		padding: 0;
+	}
+  .sign {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    Image ,taro-image-core {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      // margin-top: 12px;
+    }
+
+    .signFlex {
+      flex: 1;
+    }
+
+    .signText {
+      font-size: 12px;
+      color: #909399;
+    }
+
+    .signRight {
+      color: #000;
+      font-size: 12px;
+    }
+  }
+
+  .foot {
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      width: 100%;
+      padding: 16px 0;
+      color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      background: $theme-color;
+      border-radius: 8px;
+    }
+
+    .btnText {
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
+      margin-top: 24px;
+      color: #909399;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .Tip {
+    color: #909399;
+    font-size: 12px;
+    padding: 16px 0;
+  }
+
+}
+.codeNumber{
+   background: $theme-color;
+   border-radius: 16px;
+   color: #fff !important;
+   width: 80px !important;
+   text-align: center;
+   padding: 8px 0 !important;
+}
+
+.register-model {
+  @include new-index-at-model;
+
+  :global{
+    .at-modal__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      min-height: 80px;
+      padding: 12px;
+      line-height: 1.5;
+      white-space: initial;
+      overflow: auto;
+    }
+  }
+}
+
+
+.phone-code {
+	color: $theme-color!important;
+
+	&-disabled {
+		color: #C0C4CC!important;
+	}
+}

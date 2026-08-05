@@ -1,0 +1,201 @@
+@import '../../common.less';
+
+@mall-main-color: #00a98f;
+
+.header {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+
+  .header_container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+
+    .logo {
+      position: relative;
+      width: 190px;
+      height: 48px;
+      display: inline-block;
+      margin: 0 95px 0 17px;
+      overflow: hidden;
+      & > span {
+        display: block;
+      }
+      & > img {
+        display: block;
+        margin: 0 auto;
+        height: 50px;
+      }
+    }
+
+    .mall_search {
+      width: 632px;
+      vertical-align: top;
+
+      .mall_search_tags {
+        display: flex;
+        align-items: center;
+
+        .mall_search_tags_item {
+          height: 24px;
+          line-height: 24px;
+          color: #909399;
+          font-size: 12px;
+          cursor: pointer;
+
+          &_split {
+            margin: 0 12px;
+            width: 1px;
+            height: 12px;
+            background-color: #ebecf0;
+          }
+
+          &.active {
+            // background-color: @mall-main-color;
+            color: @mall-main-color;
+          }
+        }
+      }
+
+      .mall_search_box {
+        display: flex;
+        .commone_input_placeholder();
+        position: relative;
+        width: 100%;
+        border: 2px solid @mall-main-color;
+        height: 40px;
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        .search_type {
+          position: relative;
+
+          &:hover {
+            .more_type {
+              display: block;
+            }
+          }
+
+          &_item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            // width: 70px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 12px;
+            padding: 0px 15px;
+            color: #909399;
+            border-right: 1px solid #eef0f3;
+
+            &_text {
+              margin-right: 6px;
+            }
+
+            &_icon {
+              font-size: 10px;
+            }
+          }
+
+          .more_type {
+            position: absolute;
+            display: none;
+            top: 36px;
+            left: -2px;
+            border-top: 2px solid @mainColor;
+            background: #ffffff;
+            width: 72px;
+            height: 32px;
+            line-height: 32px;
+            z-index: 9999;
+            font-size: 12px;
+            padding-left: 15px;
+            color: #909399;
+            cursor: pointer;
+
+            &:hover {
+              color: @mainColor;
+            }
+          }
+        }
+
+        .mall_search_input {
+          display: inline-block;
+          flex: 1;
+          height: 36px;
+          line-height: 36px;
+          outline: none;
+          border: none;
+          box-shadow: none;
+
+          .ant-input {
+            border: none;
+
+            &:active,
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+
+        .search_btn {
+          position: relative;
+          background-color: @mall-main-color;
+          color: #fff;
+          min-width: 76px;
+          padding: 0 8px;
+          height: 40px;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 14px;
+          border-radius: 8px;
+          z-index: 1;
+          right: -2px;
+          top: -2px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .shopping_cart {
+      position: relative;
+      display: flex;
+      margin-left: 66px;
+      padding: 0 8px;
+      min-width: 130px;
+      height: 40px;
+      line-height: 38px;
+      color: #252d37;
+      background-color: #f5f6f7;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .card_icon {
+        margin-right: 8px;
+      }
+
+      .badge {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        border-radius: 50%;
+        overflow: hidden;
+        line-height: 16px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background-color: #ef3346;
+      }
+    }
+  }
+}

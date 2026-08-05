@@ -1,0 +1,121 @@
+@import '../../common.less';
+
+.banner {
+  &-box {
+    margin-bottom: 16px;
+
+    :global {
+      .ant-upload {
+        width: 100%;
+      }
+    }
+
+    &-label {
+      font-size: 12px;
+      color: #91959b;
+      margin-bottom: 8px;
+    }
+
+    &-icon {
+      height: 96px;
+      background-color: #fafbfc;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+      }
+
+      &-add {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        .banner-box-icon-cover {
+          display: block;
+        }
+      }
+
+      &-cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+
+        &-delete {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        &-bottom {
+          cursor: pointer;
+          position: absolute;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.24);
+          font-size: 12px;
+          color: #fff;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &-record {
+    &-shop {
+      position: relative;
+      height: 56px;
+      border: 1px solid #edeeef;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 8px;
+      margin-bottom: 8px;
+
+      &:hover {
+        .banner-record-shop-mask {
+          display: block;
+        }
+      }
+
+      &-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.24);
+        transition: 0.5s all;
+        z-index: 6;
+
+        &-delete {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 20px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.resetBtnStyle {
+  width: 100%;
+
+  :global {
+    .ant-input-group-addon {
+      padding: 0;
+      border: none;
+    }
+
+    .relevance {
+      height: 100%;
+      padding: 8.6px 15px;
+      background: #00aa8d;
+      border-radius: 0;
+
+      &[disabled] {
+        background: #00aa8d;
+      }
+    }
+  }
+}
+
+.teamMemberBtn {
+  margin-bottom: 20px;
+}
+
+.resetCustomRelevance {
+  :global {
+    .relevance {
+      background: #00aa8d !important;
+
+      &[disabled] {
+        background: #00aa8d !important;
+      }
+
+      span {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.resetRadio {
+  :global {
+    .ant-radio-wrapper {
+      padding: 4px 8px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+
+    .ant-radio-wrapper-checked {
+      color: #00a98f;
+      border-color: #00a98f;
+    }
+  }
+}
+
+.uploadFile {
+  :global {
+    .ant-card-body {
+      padding-top: 6px !important;
+    }
+
+    .uploadFilesList {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.addressManage {
+  width: 100%;
+}

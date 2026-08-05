@@ -1,0 +1,44 @@
+.filterMro {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 16px;
+
+  .filterMro_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .filterMro_bottom_result {
+      flex: 1;
+      font-size: 14px;
+      color: #252d37;
+
+      span {
+        font-size: 20px;
+        color: var(--mall-main-color);
+      }
+    }
+
+    .filterMro_bottom_btn {
+      margin-left: 16px;
+      width: 80px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 12px;
+      align-self: center;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &.clearBtn {
+        background-color: #f5f6f7;
+        color: #303133;
+      }
+
+      &.useBtn {
+        background-color: var(--mall-main-color);
+        color: #fff;
+      }
+    }
+  }
+}

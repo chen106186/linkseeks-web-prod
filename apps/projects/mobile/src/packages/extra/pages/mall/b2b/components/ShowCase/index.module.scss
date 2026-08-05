@@ -1,0 +1,26 @@
+
+.container {
+  position: relative;
+  padding: 0 4px;
+  margin-bottom: 2px;
+
+  .showCaseWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .showCaseItem {
+      width: 50%;
+      height: 120px;
+      padding: 4px;
+      margin-bottom: 8px;
+      padding: 0 4px;
+
+      .showCaseItemBody {
+        background-color: #FFF;
+        border-radius: 8px;
+      }
+    }
+  }
+
+}

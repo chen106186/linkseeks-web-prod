@@ -1,0 +1,78 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.addressList {
+  .addressLayout {
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #f5f6f7;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 169, 143, 0.04);
+      border-color: @color-primary;
+
+      .addressOperate {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .addressInfo {
+      .info {
+        display: flex;
+        align-items: center;
+
+        .name {
+          color: #252d37;
+          font-size: 14px;
+        }
+
+        .default {
+          margin-left: 16px;
+          color: #5c626a;
+          font-size: 12px;
+          padding: 0px 4px;
+          background-color: #ebecf0;
+        }
+      }
+
+      .address {
+        color: #91959b;
+        font-size: 12px;
+      }
+    }
+
+    .addressOperate {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+
+      .icon {
+        padding-left: 16px;
+        color: #91959b;
+        font-size: 14px;
+      }
+    }
+  }
+
+  :global {
+    .ant-radio-group {
+      width: 100%;
+
+      .ant-radio-wrapper {
+        display: flex;
+        align-items: center;
+
+        span.ant-radio + * {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import url('../../Mobile/common.less');
+
+.@{prefixCls}-status-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+
+  &-time {
+    font-size: 15px;
+    width: 54px;
+    text-align: center;
+
+    &.default {
+      color: #333;
+    }
+
+    &.science {
+      color: #fff;
+    }
+  }
+
+  &-right {
+    margin-left: auto;
+    font-size: 20px;
+    display: flex;
+
+    &-icon {
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

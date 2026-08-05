@@ -1,0 +1,105 @@
+@import '@/styles/utils/text-overflow-multi-line.scss';
+.evaluatedItem {
+  width: 100%;
+  padding: 12px;
+  background-color: #FFFFFF;
+  &-evaluated-item-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  &-evaluated-item-head-left {
+    margin-right: 8px;
+  }
+  &-evaluated-item-head-center {
+    flex: 1;
+  }
+  &-evaluated-item-head-right {
+    margin-left: 8px;
+  }
+  &-evaluated-item-left {
+    margin-right: 8px;
+  }
+  &-evaluated-item-avatar {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999;
+    background-color: #CCCCCC;
+    overflow: hidden;
+  }
+  &-evaluated-item-avatar-image {
+    width: 32px;
+    height: 32px;
+  }
+  &-evaluated-item-memberName {
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #303133;
+  }
+  &-evaluated-item-head-star {
+    width: 100%;
+    height: 12px;
+  }
+  &-evaluated-item-time {
+    font-size: 12px;
+    color: #909399;
+    width: 100px;
+    text-align: right;
+  }
+  &-evaluated-item-content {
+    font-size: 12px;
+    color: #303133;
+    @include text-overflow-multi-line(2);
+  }
+  &-evaluated-item-pic {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+  }
+  &-evaluated-item-pic-item {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    background-color: #F7F8FA;
+  }
+  &-evaluated-item-pic-item-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+  }
+  &-evaluated-item-product {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #F4F5F7;
+  }
+  &-evaluated-item-product-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+  &-evaluated-item-product-pic-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  &-evaluated-item-product-name {
+    flex: 1;
+    line-height: 18px;
+    font-size: 12px;
+    color: #303133;
+  }
+  &-evaluated-item-product-arrow {
+    margin-left: 8px;
+  }
+}

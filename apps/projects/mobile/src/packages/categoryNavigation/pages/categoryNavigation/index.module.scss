@@ -1,0 +1,116 @@
+@import '@/styles/variables.scss';
+
+.categoryPage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  // background-color: y
+  // height: 100%;
+
+  .category-tab-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    // margin-bottom: $spacing-v-lg;
+
+    .category-tab-home {
+      width: 40px * $hd;
+      font-size: $font-size-base;
+      margin: 0 $spacing-h-md;
+      cursor: pointer;
+    }
+
+    .category-tab-more {
+      width: 26px * $hd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 $spacing-h-lg;
+    }
+  }
+
+  .at-tabs__header {
+    text-align: left;
+  }
+  .scrollViewContent {
+    // position: absolute;
+    // top: 175PX;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    background-color: #F5F6F7;
+    width: 100%;
+    .innerScroll {
+      padding: 0 $spacing-h-md;
+
+    }
+  }
+  .scrollViewFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: $spacing-h-md 0;
+    color: #C0C4CC;
+    font-size: $font-size-sm;
+  }
+  .navCard {
+    margin-top: $spacing-v-lg;
+    padding: $spacing-h-lg $spacing-h-md;
+    background-color: #fff;
+    border-radius: $border-radius-lg;
+    // margin-bottom: $spacing-v-lg;
+  }
+
+  .brandCard {
+    // padding: $spacing-h-lg $spacing-h-lg;
+    padding: $spacing-h-lg 0;
+    background-color: #fff;
+    border-radius: $border-radius-lg;
+    margin-top: $spacing-v-lg;
+  }
+
+  .flashSale {
+    // background-color: #fff;
+    background-color: #fff;
+    border-radius: $border-radius-lg;
+    margin-top: $spacing-v-lg;
+
+    .card-header {
+      padding: 12px * $hd;
+      font-size: $font-size-lg;
+      color: #252D37;
+    }
+
+    .card-body {
+      padding: 0 12px * $hd 12px * $hd 12px * $hd;
+    }
+  }
+
+  .commodityList {
+    // background-color: #fff;
+    margin-top: $spacing-v-lg;
+
+  }
+}
+
+
+.indicatorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px * $hd 0px * $hd;
+
+  .indicator {
+    margin-bottom: 8px * $hd;
+  }
+  .indicatorText {
+    font-size: 12px * $hd;
+    color: #909399;
+    text-align: center;
+  }
+}
+
+

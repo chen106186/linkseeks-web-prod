@@ -1,0 +1,24 @@
+@import '@/styles/variables.scss';
+
+.progressContainer {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+  background: #fff;
+
+  .progress {
+    background: #EEF0F3;
+    width: 40px;
+    height: 2px;
+    margin: 0 4px;
+    border-radius: 2px;
+  }
+
+  .progress-active {
+    background: $theme-color;
+    width: 40px;
+    height: 2px;
+    margin: 0 4px;
+    border-radius: 2px;
+  }
+}

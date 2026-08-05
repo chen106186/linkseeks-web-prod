@@ -1,0 +1,25 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+.shopListLayout {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-color: #5c626a;
+  padding: 8px 16px;
+  cursor: pointer;
+  .shopListLogo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .shopListName {
+    color: #5c626a;
+    margin-left: 10px;
+  }
+}
+.shopListLayoutChecked {
+  border-color: @color-primary;
+  .shopListName {
+    color: @color-primary;
+  }
+}

@@ -1,0 +1,80 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.container {
+  display: flex;
+
+  .main {
+    flex: 1;
+    // margin-left: 16px;
+
+    .tool_bar_wrap {
+      .search_input_wrap {
+        display: flex;
+        width: 256px;
+        align-items: center;
+        margin-bottom: 16px;
+        background-color: #fff;
+        border-radius: 4px;
+
+        .search_input {
+          border: none;
+          box-shadow: none;
+          height: 32px;
+
+          &:active,
+          &:focus {
+            border: none;
+            box-shadow: none;
+          }
+        }
+        .search_btn {
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          .search_icon {
+            color: #919598;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .pagination_wrap {
+      margin-top: 60px;
+      text-align: right;
+
+      :global {
+        .ant-pagination-item {
+          background-color: #fff !important;
+
+          &:hover,
+          &:active {
+            border-color: @color-primary;
+
+            & > a {
+              color: @color-primary;
+            }
+          }
+        }
+
+        .ant-pagination-item-active {
+          background-color: @color-primary!important;
+          border-color: @color-primary;
+
+          &:hover {
+            & > a {
+              color: #ffffff !important;
+            }
+          }
+
+          & > a {
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.mobileSettingPanel {
+  overflow-y: auto;
+  background-color: #fff;
+  transition: width 0.25s;
+
+  &.hide {
+    width: 0;
+  }
+
+  &.show {
+    width: 440px;
+  }
+
+  .settingTabs {
+    height: 100%;
+    :global {
+      .ant-tabs-content {
+        position: relative;
+        height: 100%;
+      }
+      .ant-tabs {
+        height: 100%;
+      }
+      .ant-tabs-tab {
+        margin: 0 32px;
+
+        .ant-tabs-tab-btn {
+          color: #909399;
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            color: #303133;
+          }
+        }
+      }
+    }
+  }
+}
+
+.setting_panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+
+  &_body {
+    flex-grow: 1;
+    overflow: auto;
+    font-size: 12px;
+    line-height: 1.5715;
+  }
+
+  &_footer {
+    flex-shrink: 0;
+    padding: 10px 10px;
+    border-top: 1px solid #f0f0f0;
+  }
+}

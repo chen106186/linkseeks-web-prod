@@ -1,0 +1,144 @@
+@import "@/styles/variables.scss";
+@import "../../../../styles/common.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+
+  .scrollView-outer {
+    height: 100%;
+    overflow: scroll;
+    padding: 8px;
+    padding-bottom: 56px;
+    position: relative;
+    &-fixButton {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 8px;
+      width: 100%;
+      background-color: #fff;
+      &-btnBox {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        &-btn {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          background-color: $theme-color;
+          border-radius: 8px;
+          &-text {
+            font-size: 14px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .scrollView {
+    height: 100%;
+    background-color: #f4f5f7;
+    .customStyle {
+      margin-bottom: 8px;
+
+      &-box {
+        display: flex;
+        align-items: center;
+      }
+
+      &-value {
+        font-size: 14px;
+      }
+
+      &-copy {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        margin-left: 12px;
+        padding: 2px 8px;
+        background-color: #f4f5f7;
+        overflow: hidden;
+
+        &-text {
+          font-size: 12px;
+        }
+      }
+
+      :global {
+        .at-input {
+          padding: 0px 0px;
+
+          .at-input__input {
+            font-size: 14px;
+            text-align: right;
+            input {
+              font-size: 14px;
+              text-align: right;
+              &::placeholder{
+                color: #c8cacd;
+              }
+            }
+          }
+
+          &::after {
+            border-bottom: none;
+          }
+        }
+      }
+
+      &-extra {
+        display: flex;
+        align-items: center;
+
+        &-text {
+          font-size: 14px;
+          color: $color-grey-2;
+        }
+
+        &-arrow {
+          margin-left: 4px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.productItem-showMore {
+  background-color: #fff;
+  height: 32px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  &-text {
+    color: $theme-color;
+    font-size: 12px;
+  }
+}
+
+.product-row {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #5c626a;
+  padding: 12px;
+  &-amount {
+    color: #ef3346;
+  }
+}
+
+.advanceDeliveryDate{
+  font-size: 14px;
+  color: $color-grey-3;
+}

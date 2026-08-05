@@ -1,0 +1,95 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+$hsm: $spacing-h-sm - 1;
+
+
+.pointsSourcing-detail {
+  padding: $spacing-v-md 0;
+  position: relative;
+
+  &-anchor {
+    height: 100%;
+
+    &-item {
+      padding: 0 $spacing-h-md;
+    }
+  }
+
+  &-fixedWrap {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+
+  &-fixedAction {
+    .at-button {
+      width: 100%;
+      font-size: $font-size-base;
+      border-radius: 8px;
+
+      &--primary {
+        background: $color-warning;
+        border-color: $color-warning;
+      }
+    }
+  }
+
+  .shop-volume {
+    font-size: $font-size-sm;
+    color: $color-grey-2;
+  };
+}
+
+
+.product {
+	&-priceWrap {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		margin-bottom: $spacing-v-md;
+	}
+
+	&-price {
+		font-size: $font-size-xxl;
+		font-weight: 500;
+		color: $color-warning;
+	}
+
+	&-unit {
+		margin-left: $spacing-h-sm - 2;
+		font-size: $font-size-xl;
+		font-weight: 400;
+		color: $color-warning;
+	}
+
+	&-name {
+		line-height: $font-size-xl;
+		font-size: $font-size-base;
+		font-weight: 500;
+		color: $color-grey-0;
+	}
+
+	&-describe {
+		margin-top: $spacing-v-lg;
+		margin-bottom: $spacing-v-md;
+		font-size: $font-size-sm;
+		font-weight: 400;
+		color: $color-grey-2;
+	}
+
+	&-tags {
+		&-item {
+			padding: $spacing-h-sm - 1 calc($hsm / 2);
+			margin-right: $spacing-h-md;
+			color: #D69B5D;
+			font-size: 12px;
+			background-color: #FCF7F2;
+		}
+	}
+}

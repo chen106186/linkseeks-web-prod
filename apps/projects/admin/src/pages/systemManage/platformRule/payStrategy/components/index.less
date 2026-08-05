@@ -1,0 +1,32 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.anchor {
+  color: #909399;
+  font-size: 14px;
+  position: relative;
+  padding-left: 6px;
+  margin-bottom: 16px;
+  &::after {
+    content: '';
+    height: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-left: 2px solid @color-primary;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+.spaceBox {
+  margin-bottom: 0px;
+  :global {
+    .ant-space-vertical {
+      width: 100%;
+    }
+  }
+}

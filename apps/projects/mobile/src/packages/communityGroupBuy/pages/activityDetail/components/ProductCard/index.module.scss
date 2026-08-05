@@ -1,0 +1,105 @@
+.card {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &-image {
+        width: 115px;
+        height: 115px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    &-info {
+        flex: 1;
+        margin-left: 12px;
+        overflow: hidden;
+
+        &-name {
+            height: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            overflow: hidden;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        &-tags {
+            margin-top: 4px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 16px;
+
+            &-item {
+                margin-right: 4px;
+                padding: 0 4px;
+                font-size: 10px;
+                line-height: 14px;
+                color: #EF3346;
+                border-radius: 2px;
+                border: 0.5px solid #EF3346;
+            }
+        }
+
+        &-volume {
+            margin-top: 8px;
+            line-height: 18px;
+            color: #91959B;
+            font-size: 12px;
+
+            &-black {
+                color: #303133;
+            }
+        }
+
+        &-footer {
+            margin-top: 4px;
+            display: flex;
+
+            &-price {
+                flex: 1;
+                font-size: 12px;
+
+                &-red {
+                    color: #EF3346;
+                }
+
+                &-large {
+                    font-size: 16px;
+                    font-weight: 500;
+                    vertical-align: baseline;
+                }
+
+                &-original {
+                    margin-left: 4px;
+                    text-decoration: line-through;
+                    color: #91959B;
+                }
+            }
+
+            &-button {
+                width: 24px;
+                height: 24px;
+                border-radius: 534px;
+                background: #00a98f;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.disabled {
+                    background: #C8CACD;
+                }
+            }
+        }
+    }
+}

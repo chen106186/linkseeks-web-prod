@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+
+@mixin  commonBtn {
+  @include flexCenter;
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-wrap {
+  @include flexCenter;
+  padding: 8px;
+  background-color: #FFF;
+
+  .disagree {
+    @include commonBtn;
+    color: $main-text-color;
+    background-color: #F5F6F7;
+    margin-right: 8px;
+  }
+
+  .agree {
+    @include commonBtn;
+    color: #FFF;
+    background-color: $theme-color;
+  }
+}

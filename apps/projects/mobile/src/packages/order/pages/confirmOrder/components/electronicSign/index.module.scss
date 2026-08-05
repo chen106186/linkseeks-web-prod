@@ -1,0 +1,92 @@
+@import "@/styles/variables.scss";
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.wrap-model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -144;
+  margin-top: -126;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal {
+  background-color: #fff;
+  width: 288px;
+  height: 252px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  padding: 18px;
+  border-bottom-color: #f5f5f5;
+  border-bottom-width: 0.5;
+  justify-content: center;
+}
+.body {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.tips {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tips-text {
+  color: $color-black-3;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f8ff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.img {
+  height: 40px;
+  width: 40px;
+  margin-right: 18px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.strong {
+  color: $color-black-1;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.safe {
+  color: $color-black-3;
+  font-size: 12px;
+}
+.back {
+  margin-top: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border-color: #fff;
+  border-width: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

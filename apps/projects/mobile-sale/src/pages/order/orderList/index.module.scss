@@ -1,0 +1,10 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include common-container;
+  :global {
+    .at-tabs{
+      height: 42px;
+    }
+  }
+}

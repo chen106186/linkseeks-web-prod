@@ -1,0 +1,31 @@
+.star_rate {
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  height: 16px;
+  display: flex;
+  width: 89px;
+  line-height: 16px;
+  align-items: center;
+  justify-content: center;
+
+  .star_rate_value {
+    color: #303133;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .star {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 4px;
+    color: #fca110 !important;
+
+    :global {
+      .ant-rate-star {
+        &:not(:last-child) {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+}

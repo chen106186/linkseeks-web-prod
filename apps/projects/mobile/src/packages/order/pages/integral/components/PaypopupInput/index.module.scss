@@ -1,0 +1,48 @@
+@import "@/styles/variables.scss";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 350px * $hd;
+
+  .popupTitle {
+    padding: $spacing-h-lg 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #F4F5F7;
+  }
+
+  .content {
+    padding: $spacing-h-lg $spacing-h-lg;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .value {
+        color: #303133;
+        font-size: 24px * $hd;
+        margin-bottom: $spacing-v-md;
+      }
+
+      .tips {
+        color: #91959B;
+        font-size: $font-size-sm;
+        margin-bottom: 34px * $hd
+      }
+    }
+
+    .boxItem {
+      border: 1px solid #E3E4E5 !important;
+    }
+
+    .heightlight {
+      border: 1px solid #E3E4E5 !important;
+    }
+
+  }
+}

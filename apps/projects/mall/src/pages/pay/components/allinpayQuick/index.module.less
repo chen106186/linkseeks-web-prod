@@ -1,0 +1,56 @@
+@import url('../common.less');
+
+.allinpay_quick {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_needpay {
+    color: #606266;
+    font-size: 12px;
+    margin-top: 28px;
+
+    & > span {
+      color: #d32f2f;
+      font-size: 20px;
+      margin: 0 5px;
+    }
+  }
+
+  .pay_btn {
+    margin-top: 32px;
+  }
+
+  .code_input {
+    font-size: 14px;
+    color: #909399;
+    margin: 16px 0;
+  }
+
+  .send_reset {
+    color: #00a98f;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &.disable {
+      color: #c8cacd;
+      cursor: not-allowed;
+    }
+  }
+
+  .code_send {
+    text-align: center;
+    color: #909399;
+    font-size: 14px;
+    margin-top: 12px;
+
+    & > i {
+      font-style: normal;
+      color: #00a98f;
+    }
+  }
+}

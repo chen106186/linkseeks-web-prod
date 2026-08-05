@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+
+.stock {
+  &-address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-left {
+      margin-right: $spacing-h-sm;
+      font-size: 0;
+    }
+
+    &-right {
+      flex: 1;
+    }
+
+    &-text {
+      font-size: $font-size-sm;
+      color: $color-black-1;
+    }
+  }
+
+  &-tip {
+    padding-left: $spacing-h-lg + 2;
+    margin-top: $spacing-v-sm;
+    font-size: $font-size-sm;
+    color: $color-error;
+  }
+}
+
+.pickup-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &-name {
+    margin-left: 4px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: $font-size-sm;
+  }
+}

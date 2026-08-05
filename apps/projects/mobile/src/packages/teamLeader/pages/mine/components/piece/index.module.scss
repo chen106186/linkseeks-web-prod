@@ -1,0 +1,71 @@
+.mine-piece {
+	border-radius: 8px;
+	background: #ffffff;
+	padding: 12px 12px 10px 12px;
+	margin-bottom: 8px;
+
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-title {
+			color: #303133;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		&-right {
+			display: flex;
+			align-items: center;
+		}
+		&-text {
+			color: #91959b;
+			font-size: 12px;
+			font-weight: 400;
+			margin-right: 4px;
+		}
+	}
+	&-row {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 16px;
+		&-view {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 90px;
+			height: 50px;
+			box-sizing: border-box;
+		}
+		&-icon {
+			width: 28px;
+			height: 28px;
+		}
+		&-text {
+			color: #303133;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 400;
+			margin-top: 6px;
+		}
+		&-box {
+			position: absolute;
+			top: -2px;
+			right: 20px;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #d01219;
+			color: #FFFFFF;
+			text-align: center;
+			line-height: 15px;
+			font-size: 12px;
+		}
+		&-text2 {
+			color: #303133;
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+}

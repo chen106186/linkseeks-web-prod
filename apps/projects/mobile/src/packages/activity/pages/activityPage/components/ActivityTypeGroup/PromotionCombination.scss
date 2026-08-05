@@ -1,0 +1,59 @@
+@import '@/styles/variables.scss';
+
+.promotion-combination {
+  display: flex;
+  flex-direction: column;
+  /** 删除 **/
+  // margin: $spacing-h-lg;
+  // padding: $spacing-h-lg;
+  background-color: #fff;
+  border-radius: 8px * $hd;
+  padding: $spacing-h-lg;
+
+  &-main-commodity {
+    // display: ;
+    padding: 0;
+    .product-tag {
+      background-color: #EF3346;
+      color: #fff;
+      font-size: $font-size-sm;
+      padding: $spacing-h-sm $spacing-h-sm;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &-tabs {
+    margin-top: $spacing-v-lg;
+
+    .at-tabs__header {
+      text-align: left;
+
+    }
+    .at-tabs__underline {
+      height: 0px;
+    }
+
+    &-tabpane-products {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-commodity-item {
+      margin-top: $spacing-h-lg;
+
+      .simple-commodity {
+        height: 100%;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0 0;
+    border-top: 1px solid #F4F5F7;
+    margin-top: 12px;
+  }
+}

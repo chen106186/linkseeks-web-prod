@@ -1,0 +1,14 @@
+{
+  "name": "tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "react-library.json",
+    "create-react-app.json",
+    "webpack.json",
+    "react-app-env.d.ts",
+    "jest-matcher.d.ts",
+    "basic.json"
+  ]
+}

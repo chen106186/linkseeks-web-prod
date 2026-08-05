@@ -1,0 +1,78 @@
+{
+  "feat": {
+    "description": "一个新功能",
+    "title": "Features",
+    "emoji": "🆕"
+  },
+  "fix": {
+    "description": "一个bug",
+    "title": "Bug Fixes",
+    "emoji": "🐛"
+  },
+  "stash": {
+    "description": "暂存文件",
+    "title": "Stash Files",
+    "emoji": "🚧"
+  },
+  "conflict": {
+    "description": "合并分支",
+    "title": "Conflict",
+    "emoji": "🔀"
+  },
+  "docs": {
+    "description": "文档增删改",
+    "title": "Documentation",
+    "emoji": "📖"
+  },
+  "style": {
+    "description": "样式修改(空白、格式、缺少分号等)",
+    "title": "Styles",
+    "emoji": "💄"
+  },
+  "refactor": {
+    "description": "既不修复bug也不添加新功能的更改",
+    "title": "Code Refactoring",
+    "emoji": "🔨"
+  },
+  "perf": {
+    "description": "性能优化",
+    "title": "Performance Improvements",
+    "emoji": "🐎"
+  },
+  "test": {
+    "description": "增加测试",
+    "title": "Tests",
+    "emoji": "✅"
+  },
+  "build": {
+    "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
+    "title": "Builds",
+    "emoji": "👷"
+  },
+  "ci": {
+    "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
+    "title": "Continuous Integrations",
+    "emoji": "👷"
+  },
+  "chore": {
+    "description": "除src目录或测试文件以外的修改",
+    "title": "Chores",
+    "emoji": "🔧"
+  },
+  "revert": {
+    "description": "回退历史版本",
+    "title": "Reverts",
+    "emoji": "🚑"
+  },
+
+  "font": {
+    "description": "字体文件更新",
+    "title": "Fonts",
+    "emoji": "💚"
+  },
+  "delete": {
+    "description": "删除文件",
+    "title": "Delete Files",
+    "emoji": "🗑️"
+  }
+}

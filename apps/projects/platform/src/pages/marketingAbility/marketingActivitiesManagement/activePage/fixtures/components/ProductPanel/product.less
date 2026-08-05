@@ -1,0 +1,126 @@
+.textOverflowMulti2(@line: 3) {
+  display: -webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+
+  &:hover {
+    .actions {
+      display: block;
+    }
+  }
+
+  .actions {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 8px;
+
+    .iconContainer {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2px 4px;
+      cursor: pointer;
+      line-height: 16px;
+
+      .icon {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+
+  .img {
+    height: 80px;
+    width: 80px;
+    margin-right: 8px;
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .name {
+      color: #303133;
+      font-size: 12px;
+      .textOverflowMulti2(2);
+    }
+
+    .price {
+      color: #d32f2f;
+      font-size: 14px;
+    }
+  }
+}
+
+.headerName {
+  color: #91959b;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px 0 0;
+
+  .activityItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+    color: #303133;
+
+    .activityImg {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    .activityName {
+      flex: 1;
+    }
+  }
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .tagItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffebe6;
+    padding: 2px 8px 2px 0;
+    cursor: pointer;
+    margin: 0 8px 8px 0;
+  }
+
+  .addTag {
+    background: #fff;
+    border-style: dashed;
+    margin-bottom: 8px;
+    padding: 2px 4px;
+  }
+}
+
+.tagInput {
+  width: 78px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}

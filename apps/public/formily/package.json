@@ -1,0 +1,49 @@
+{
+  "name": "@apps/formily",
+  "description": "formilyjs 1.x库",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "engines": {
+    "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "build": "rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "copyfiles -u 1 src/**/*.less lib && tsc --project tsconfig.json --outDir lib",
+    "build:esm": "copyfiles -u 1 src/**/*.less esm && tsc --project tsconfig.json --module es2015 --outDir esm",
+    "build:umd": "rollup --config"
+  },
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "peerDependencies": {
+    "react-eva": "^1.1.7",
+    "rxjs": "^6.5.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom",
+        "webpack",
+        "umi",
+        "@babel/*",
+        "@formily/*",
+        "react-is",
+        "@umijs/*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@formily/antd": "1.3.17",
+    "@formily/antd-components": "1.3.17",
+    "@formily/core": "1.3.17",
+    "@formily/react-schema-renderer": "1.3.17",
+    "@formily/react-shared-components": "1.3.17",
+    "@formily/shared": "1.3.17",
+    "@formily/validator": "1.3.17",
+    "react-eva": "^1.1.7",
+    "rxjs": "6"
+  }
+}

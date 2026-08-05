@@ -1,0 +1,54 @@
+@use "./layout.scss";
+@use "./color.scss";
+
+.message-card-container {
+	display: grid;
+	grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 33.33%);
+	grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+.message-card-text {
+}
+
+.message-card-label {
+	font-size: 14px;
+	font-weight: 700;
+	color: #666;
+	margin-right: 24px;
+}
+
+.message-card-content {
+}
+
+// 移动端
+.message-mobile-card {
+	min-width: 270px;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 12px;
+}
+
+.message-mobile-header {
+	display: flex;
+	margin-bottom: 16px;
+	justify-content: space-between;
+	font-size: 12px;
+	color: #666;
+}
+
+.message-mobile-no {
+
+}
+
+.message-mobile-name {
+	font-size: #333;
+	line-height: 20px;
+}
+
+.message-mobile-footer {
+	display: flex;
+	justify-content: space-between;
+	color: #666;
+}

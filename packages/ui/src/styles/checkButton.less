@@ -1,0 +1,16 @@
+@import url('./theme/variables.less');
+
+.ui-checkbutton {
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+
+  &.active {
+    border-color: @color-primary;
+    background-color: @color-ctl-active-bg;
+    color: @color-primary;
+  }
+}

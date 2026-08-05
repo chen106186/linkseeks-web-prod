@@ -1,0 +1,25 @@
+@import '~antd/es/style/themes/default.less';
+
+.COD {
+  :global {
+    .ant-descriptions-item-container {
+      align-items: center;
+    }
+  }
+
+  .amount {
+    font-size: @font-size-lg;
+    font-weight: 500;
+
+    &-plus {
+      color: @error-color;
+      font-size: 24px;
+    }
+  }
+
+  .tip {
+    padding: @padding-xss @padding-xs;
+    color: @primary-color;
+    background-color: color(~`colorPalette('@{primary-color}', 0.04) `);
+  }
+}

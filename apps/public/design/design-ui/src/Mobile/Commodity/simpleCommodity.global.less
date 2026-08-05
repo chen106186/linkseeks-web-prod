@@ -1,0 +1,46 @@
+.lingxi-commodity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  .lingxi-image-container {
+    width: 88px;
+    height: 88px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    .lingxi-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .lingxi-commodity-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+
+    .lingxi-price {
+      font-size: 10px;
+      color: #ef3346;
+
+      &-big {
+        font-size: 16px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .lingxi-commodity-footer {
+    .lingxi-originalPrice {
+      margin-top: 4px;
+      font-size: 10px;
+      color: #91959b;
+      text-decoration: line-through;
+      display: inline-block;
+    }
+  }
+}

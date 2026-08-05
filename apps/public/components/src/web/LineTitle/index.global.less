@@ -1,0 +1,25 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.cp-line-title {
+  display: flex;
+  align-items: center;
+  font-size: @font-size-regular;
+  font-weight: 700;
+  line-height: 20px;
+  min-height: 20px;
+  margin-bottom: 16px;
+
+  &::before {
+    content: '';
+    width: 2px;
+    height: 1em;
+    background-color: @color-primary;
+    margin-right: 8px;
+  }
+}
+
+.cp-line-title-extra {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}

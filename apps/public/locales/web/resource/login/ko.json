@@ -1,0 +1,6 @@
+{
+  "changeEmailValidate": "이메일 확인 전환",
+  "phoneValidate": "휴대폰번호 확인",
+  "emailValidate": "이메일 인증",
+  "changePhoneValidate": "휴대폰번호 인증 전환"
+}

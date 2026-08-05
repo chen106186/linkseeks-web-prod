@@ -1,0 +1,53 @@
+.customizeTabBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .activeTabbar {
+    position: relative;
+    color: #252d37;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 24px;
+      height: 4px;
+      background: #ef3346;
+      border-radius: 2px;
+      transform: translateX(-12px);
+      content: '';
+    }
+  }
+
+  .tabbarItem {
+    margin-right: 12px;
+    color: #91959b;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+
+    &.mealTab {
+      position: relative;
+      padding: 0 8px;
+      color: #5c626a;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      background-color: #f5f6f7;
+      border-radius: 4px;
+
+      &.activeTabbar {
+        color: #ef3346;
+        background-color: rgb(0 169 143 / 8%);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

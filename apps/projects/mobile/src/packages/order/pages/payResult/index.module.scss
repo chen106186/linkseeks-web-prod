@@ -1,0 +1,31 @@
+@import "@/styles/variables.scss";
+@import "@/styles/utils/text-overflow-multi-line.scss";
+
+.viewHeader {
+  background-color: $theme-color;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+}
+.msg {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 16px;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+.btn {
+  color: #ffffff;
+  font-size: 12px;
+  width: 100px;
+  height: 32px;
+  margin: 0 8px;
+  line-height: 32px;
+}
+.btnText {
+  font-size: 12px;
+}

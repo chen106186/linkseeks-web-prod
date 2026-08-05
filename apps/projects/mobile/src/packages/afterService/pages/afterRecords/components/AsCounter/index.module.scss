@@ -1,0 +1,109 @@
+@import '@/styles/variables.scss';
+
+.as-counter {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-lg $spacing-h-lg;
+
+    &-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex: 1;
+    }
+
+    &-extra {
+      flex-shrink: 0;
+      margin-left: $spacing-h-lg * 2;
+    }
+  }
+
+  &-logo {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &-name-wrap {
+    display: flex;
+    margin-left: $spacing-h-md;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-name {
+    font-size: $font-size-sm;
+    color: $color-black-1;
+  }
+
+  &-arrow {
+    margin-left: $spacing-h-sm;
+    font-size: $font-size-sm;
+    color: $color-black-1;
+  }
+
+  &-status {
+    font-size: $font-size-sm;
+    color: $color-black-3;
+  }
+
+  &-body {
+    padding-left: $spacing-h-lg;
+    padding-right: $spacing-h-lg;
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: $spacing-v-md;
+    justify-content: space-between;
+
+    &-left {}
+
+    &-right {
+      .descriptions-item {
+        align-items: center;
+      }
+    }
+  }
+
+  &-amount {
+    font-size: $font-size-lg;
+    color: rgb(255, 59, 48);
+  }
+
+  &-foot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: $spacing-v-lg;
+    padding-left: $spacing-h-lg;
+    padding-right: $spacing-h-lg;
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+  }
+}

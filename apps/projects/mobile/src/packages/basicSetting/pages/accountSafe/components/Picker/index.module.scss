@@ -1,0 +1,62 @@
+@import "@/styles/variables.scss";
+$padding-s: 16px;
+$margin-s: 16px;
+
+$padding-m: 28px;
+$margin-m: 28px;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.divider {
+  height: 4px;
+  width: 40px;
+  background-color: #d8dde6;
+  margin-top: $margin-s;
+}
+.title {
+  color: $color-black-1;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: $margin-m;
+  margin-bottom: $margin-m;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: $padding-m;
+  padding-right: $padding-m;
+  padding-top: $padding-m;
+  padding-bottom: $padding-m;
+  border-bottom-color: #f7f8fa;
+  border-bottom-width: 0.5;
+}
+.country {
+  font-size: 14px;
+  color: $color-black-1;
+  margin-right: $margin-m;
+}
+.code {
+  font-size: 14px;
+  color: $color-black-3;
+}
+.active {
+  color: $color-brand;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.value {
+  margin-right: 12px;
+  font-size: 14px;
+}

@@ -1,0 +1,39 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../../global/styles/utils.less';
+
+.message {
+  &-title {
+    font-size: @font-size-lg;
+  }
+
+  &-list {
+    height: 158px;
+    overflow-y: auto;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: @margin-md;
+    }
+
+    &-content {
+      flex: 1;
+      font-size: @font-size-sm;
+      color: @text-color;
+      .textOverflow();
+    }
+
+    &-date {
+      margin-left: @margin-xs;
+      font-size: @font-size-sm;
+      color: @text-color;
+    }
+  }
+
+  &-action {
+  }
+}

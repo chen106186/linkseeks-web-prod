@@ -1,0 +1,107 @@
+@import '~antd/es/style/themes/default.less';
+
+@normal-table: normal-table;
+
+.@{normal-table} {
+  &-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -@margin-md;
+
+    &-left {
+      flex: auto,
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+
+    &-left,
+    &-right {
+      padding: 0 @padding-md;
+    }
+  }
+
+  &-body {}
+
+  &-foot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -@margin-md;
+    padding: @padding-md 0;
+
+    &-right {
+      flex-shrink: 0;
+    }
+    
+    &-left,
+    &-right {
+      padding: 0 @padding-md;
+    }
+
+    .@{normal-table}-pagination {
+      padding: 0;
+    }
+
+    &-content {
+      padding: @padding-md 0;
+    }
+  }
+
+  &-reverse {
+    flex-direction: row-reverse;
+
+    .@{normal-table}-head-left {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &-pagination {
+    padding: @padding-xs - 2px 0 @padding-md;
+  }
+
+  &-full {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .@{normal-table}-body {
+      flex: 1;
+      overflow: hidden;
+
+      :global {
+        .ant-table {
+          height: 100%;
+
+          &-wrapper,
+          &-content {
+            height: 100%;
+          }
+
+          &-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+
+          &-header {
+            flex-shrink: 0;
+          }
+
+          &-body {
+            flex: 1;
+            overflow-y: auto !important;
+          }
+        }
+
+        .ant-spin-nested-loading,
+        .ant-spin-container {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.shop-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  &-body {
+    padding: 16px;
+    display: flex;
+  }
+
+  &-main {
+    padding-left: 16px;
+    flex: 1;
+  }
+
+  &-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #303133;
+    line-height: 16px;
+  }
+
+  &-line {
+    display: flex;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & > label {
+      color: #909399;
+    }
+
+    & > span {
+      color: #303133;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-dropdown-btn {
+      height: 32px;
+      display: flex;
+      padding: 5.6px 15px;
+      background-color: #f5f6f7;
+      align-items: center;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../variables/default.scss';
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  background-color: $at-checkbox-bg-color;
+}
+.checkbox-icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid  $at-checkbox-icon-border-color;
+  border-radius: 100%;
+}
+.checkbox-icon__check {
+  border-color:  $color-primary;
+  background-color:  $color-primary;
+}
+.checkbox-label {
+  margin-left: $at-checkbox-label-mf;
+  font-size: $at-checkbox-title-font-size;
+  color:  $color-black-1;
+}

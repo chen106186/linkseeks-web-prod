@@ -1,0 +1,35 @@
+@colors: {
+  danger: #ef3346;
+  primary: #1890ff;
+  success: #00a98f;
+  warning: #ffe58f;
+  default: #000;
+  purple: #9100f9;
+};
+
+.label {
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 12px;
+
+  each(@colors, {
+      .label-ghost-@{key} {
+        color: @value;
+        padding: 4px 4px;
+        border: 1px solid @value;
+        border-radius: 4px;
+      }
+    }
+
+  ) each(@colors, {
+      .label-inner-@{key} {
+        background-color: @value;
+        color: #fff;
+        padding: 4px 4px;
+        border: 1px solid @value;
+        border-radius: 4px;
+      }
+    }
+
+  );
+}

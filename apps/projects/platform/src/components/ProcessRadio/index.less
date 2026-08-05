@@ -1,0 +1,82 @@
+.select-box {
+  :global {
+    .ant-radio-group {
+      width: 100%;
+
+      .ant-radio-wrapper {
+        width: 100%;
+        padding: 16px 0px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #F5F6F7;
+
+        .ant-radio {
+          width: 16px;
+          height: 16px;
+        }
+
+        span:nth-child(2) {
+          flex: 1;
+          display: inline-block;
+        }
+      }
+      .ant-radio-wrapper:last-child {
+        border-bottom: 0px;
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .box-clerk {
+      padding-left: 8px;
+
+      .box-clerk-name {
+        font-size: 14px;
+        color: #252D37;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 4px 0px
+      }
+
+      .box-clerk-value {
+        font-weight: 400;
+        font-size: 12px;
+        color: #91959B;
+        line-height: 16px;
+        padding: 4px 0px
+      }
+    }
+
+    .box-tag {
+      min-width: 100px;
+      margin-left: 24px;
+      .default {
+        padding: 4px;
+        border-radius: 2px;
+        color: #4787F0;
+        background-color: #ECF2FE;
+      }
+      .red {
+        .default;
+        color: #E34D59;
+        background-color: #FDECEE;
+      }
+      .orange {
+        .default;
+        color: #d46b08;
+        background-color: #fff7e6;
+      }
+    }
+  }
+
+  .more {
+    margin: 20px 8px 0;
+    font-size: 12px;
+    color: #00A98F;
+    cursor: pointer;
+  }
+}

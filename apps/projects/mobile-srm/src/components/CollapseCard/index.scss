@@ -1,0 +1,32 @@
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.collapse-card {
+  &-arrow {
+    display: flex;
+    align-items: center;
+    @include extend-click();
+
+    &-txt {
+      margin-right: $spacing-h-md;
+      font-size: $font-size-sm;
+      color: $color-black-3;
+    }
+  }
+
+  &-content {
+    padding: $spacing-v-lg $spacing-h-lg;
+
+    &-show {
+      display: block;
+    }
+
+    &-hide {
+      display: none;
+    }
+
+    &-empty {
+      padding: 0;
+    }
+  }
+}

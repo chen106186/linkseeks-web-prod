@@ -1,0 +1,28 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.refund {
+  border-radius: 8px;
+  @include border-thin(transparent);
+
+  &-status {
+    font-size: $font-size-sm;
+    color: $color-grey-2;
+  }
+
+  &-payNode {
+    margin-bottom: $spacing-v-lg;
+    font-size: $font-size-base;
+    color: $color-grey-0;
+  }
+
+  &-amount {
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: #D32F2F;
+  }
+
+  &-active {
+    border-color: $color-brand;
+  }
+}

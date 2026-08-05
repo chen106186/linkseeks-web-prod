@@ -1,0 +1,234 @@
+// @import '../../../../theme/style/common.less';
+@page_body_minWidth: 1200px;
+
+.common_page_container() {
+  position: relative;
+  width: @page_body_minWidth;
+  margin: 0 auto;
+}
+
+.topbar {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f4f5f7;
+
+  .topbar_container {
+    .common_page_container();
+
+    .topbar_menu {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      display: flex;
+
+      &.right {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topbar_menu_item {
+        position: relative;
+        list-style: none;
+        padding: 0 16px;
+        color: #303133;
+
+        &_badge {
+          :global {
+            .ant-scroll-number {
+              z-index: 9;
+            }
+          }
+        }
+
+        &.link {
+          cursor: pointer;
+        }
+
+        a {
+          color: #303133;
+
+          &:hover {
+            color: var(--mall-main-color);
+          }
+        }
+
+        &.username {
+          position: relative;
+          cursor: pointer;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+
+          &:hover {
+            border-left: 1px solid #eef0f3;
+            border-right: 1px solid #eef0f3;
+
+            .arrow_icon {
+              color: #303133;
+            }
+
+            .userInfo_card_split,
+            .userInfo_card {
+              display: block;
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        .userInfo_card_split {
+          display: none;
+          position: absolute;
+          top: 29px;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: #fff;
+          z-index: 999;
+        }
+
+        .user_type {
+          color: #f8edaf;
+          display: inline-block;
+          background-color: #303133;
+          height: 16px;
+          font-size: 12px;
+          line-height: 16px;
+          padding: 0 3px;
+          text-align: center;
+        }
+
+        .credit_count {
+          line-height: 16px;
+        }
+
+        .userInfo_card {
+          display: none;
+          position: absolute;
+          width: 400px;
+          height: 200px;
+          top: 30px;
+          left: 0;
+          background: #fff;
+          z-index: 99;
+          box-shadow: 0 2px 8px 0 rgb(48 49 51 / 8%), 0 0 1px 0 #eef0f3;
+          // border: 1px solid #EEF0F3;
+
+          &_header {
+            display: flex;
+            align-items: center;
+            padding: 24px 0 16px;
+            margin: 0 24px;
+            border-bottom: 1px solid #eef0f3;
+          }
+
+          &_column {
+            margin-left: 16px;
+
+            .userInfo_card_level {
+              width: 54px;
+              height: 16px;
+              background-repeat: no-repeat;
+              background-size: cover;
+
+              &.level3 {
+                background-image: url('/static/imgs/level3@2x.png');
+              }
+
+              &.level2 {
+                background-image: url('/static/imgs/level1@2x.png');
+              }
+
+              &.level1 {
+                background-image: url('/static/imgs/level2@2x.png');
+              }
+            }
+          }
+
+          .nav_list {
+            display: flex;
+            padding: 15px 24px 0;
+            justify-content: space-between;
+
+            &_item {
+              text-align: center;
+
+              &:hover {
+                cursor: pointer;
+
+                span {
+                  color: var(--mall-main-color);
+                }
+              }
+
+              img {
+                display: block;
+                margin: 0 auto;
+                width: 40px;
+                height: 40px;
+              }
+
+              span {
+                line-height: 12px;
+                margin-top: 12px;
+              }
+            }
+          }
+
+          .sign_out_btn {
+            cursor: pointer;
+            margin-left: auto;
+
+            &:hover {
+              color: var(--mall-main-color);
+            }
+          }
+        }
+
+        .login_link {
+          color: var(--mall-main-color);
+          margin-right: 10px;
+        }
+
+        .arrow_icon {
+          margin-left: 8px;
+          color: #909399;
+        }
+
+        &.nopad {
+          padding: 0;
+        }
+
+        &.pad_left_0 {
+          padding-left: 0;
+        }
+
+        .icon {
+          margin-right: 6px;
+        }
+
+        &:not(:last-child) {
+          &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 12px;
+            background-color: #e5e5e5;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

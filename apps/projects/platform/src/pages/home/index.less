@@ -1,0 +1,62 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+@import '../../global/styles/theme.less';
+.userGuaid {
+  margin-bottom: @padding-sm;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-width: 1179px;
+
+  .left {
+    flex: 1;
+    .otherCenters {
+      margin-top: 24px;
+    }
+
+    .ability {
+      margin-top: 24px;
+    }
+  }
+  .right {
+    margin-left: 24px;
+    flex-basis: 320px;
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .commonMargin {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.controller {
+  background-color: @color-primary;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  cursor: pointer;
+  width: 148px;
+
+  .icon {
+    font-size: 22px;
+    color: #fff;
+  }
+  .text {
+    margin-left: 8px;
+    color: #fff;
+  }
+}

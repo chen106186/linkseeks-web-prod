@@ -1,0 +1,90 @@
+@import '@/styles/variables.scss';
+
+.exchange {
+  display: flex;
+  flex-direction: column;
+  /** 删除 **/
+  // margin: $spacing-h-lg;
+  // padding: $spacing-h-lg;
+  background-color: #fff;
+  border-radius: 8px * $hd;
+  padding: $spacing-h-lg;
+
+  &-main-commodity {
+    // display: ;
+    padding: 0;
+    .product-tag {
+      background-color: #EF3346;
+      color: #fff;
+      font-size: $font-size-sm;
+      padding: $spacing-h-sm $spacing-h-sm;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &-tabs {
+
+    .at-tabs__header {
+      text-align: left;
+    }
+    .at-tabs__underline {
+      height: 0px;
+    }
+
+    .at-tabs__item--active .at-tabs__item-underline {
+      transform: scaleX(0.5);
+      background-color: #EF3346;
+      height: 3px * $hd;
+    }
+
+    .at-tabs__item--active {
+      color: #000;
+      font-size: 14px * $hd;
+      font-weight: 600;
+    }
+
+
+    &-tabpane-products {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-commodity-item {
+      margin-top: $spacing-h-lg;
+      margin-right: 12px * $hd;
+      border: 1px solid transparent;
+      padding: 4px * $hd;
+      border-radius: 4px * $hd;
+
+      .simple-commodity {
+        height: 100%;
+        margin-right: 0px;
+      }
+    }
+    &-commodity-item-active {
+      border: 1px solid #EF3346;
+      padding: 4px * $hd;
+      border-radius: 4px * $hd;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  .exchange-active {
+    position: absolute;
+    left: 0;
+    top: -2px * $hd;
+    width: 20px * $hd;
+    height: 20px * $hd;
+    z-index: 6;
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0 0;
+    border-top: 1px solid #F4F5F7;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.customList {
+  :global {
+    .ant-list-item-meta {
+      align-items: center;
+    }
+  }
+  .messageText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #606266;
+  }
+  .messageTitle {
+    margin: 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #303133;
+  }
+
+  .time {
+    margin-left: 20px;
+  }
+
+  .section {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

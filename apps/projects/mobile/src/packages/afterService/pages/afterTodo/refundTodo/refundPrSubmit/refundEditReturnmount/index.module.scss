@@ -1,0 +1,33 @@
+.refund-edit-returnAmount {
+  padding-bottom: 100px;
+
+  &-list {
+    &-item {
+      margin: 8px 8px 0px;
+  
+      &-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+  
+      &-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #303133;
+      }
+  
+      &-label {
+        font-size: 14px;
+        font-weight: 400;
+        color: #303133;
+      }
+  
+      &-amount {
+        font-size: 14px;
+        font-weight: 400;
+        color: #D32F2F;
+      }
+    }
+  }
+}

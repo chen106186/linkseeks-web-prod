@@ -1,0 +1,20 @@
+{
+  "canshuzhijinweilinghuoyi": "Parameter value is only 0 or 1",
+  "buzhichidewenjianleixing": "Unsupported file types",
+  "shangchuantupianbuchaoguo": "Upload images no larger than",
+  "canshuzhi": "Parameter value",
+  "wuxushenhe": "No review required",
+  "xushenhe": "Requires review",
+  "zhichijpgpngjpeg": "Support JPG/PNG/JPEG",
+  "zuidabuchaoguo": "no more than",
+  "chicun": "size",
+  "quedingyaozhixingzheigecaozuo": "Are you sure you want to perform this operation?",
+  "canshubianhao": "Parameter number",
+  "canshumiaoshu": "Parameter Description",
+  "canshumingcheng": "parameter name",
+  "liangweixiaoshu": "two decimal places",
+  "bitianshuruzhi": "Required, enter value",
+  "morenzhi": "default value",
+  "shuruqujian": "Input interval",
+  "zhanghaomingchengchangdubuchaoguoershi": "Account name length shall not exceed 20"
+}

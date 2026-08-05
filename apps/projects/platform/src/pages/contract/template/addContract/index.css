@@ -1,0 +1,39 @@
+.addcontract_wrap :global .ant-form-item {
+  width: 748px;
+}
+.addcontract_wrap :global .ant-form-item .ant-form-item-label {
+  width: 172px;
+  text-align: left;
+}
+.addcontract_wrap :global .ant-form-item .ant-form-item-label > label {
+  color: #909399;
+}
+.addcontract_wrap :global .ant-form-item .ant-upload-list-item {
+  margin-top: 0px;
+}
+.addcontract_wrap .upload_item {
+  padding: 5px 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafbfc;
+}
+.addcontract_wrap .upload_item .upload_left {
+  display: flex;
+  align-items: center;
+  color: #303133;
+}
+.addcontract_wrap .upload_item .upload_left :global .anticon-file-word {
+  color: #4279df;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.addcontract_wrap .upload_item .upload_right {
+  color: #00A98F;
+  cursor: pointer;
+}
+.addcontract_wrap .upload_item .upload_right :global .anticon-delete {
+  margin-left: 19px;
+  color: #c0c4cc;
+}

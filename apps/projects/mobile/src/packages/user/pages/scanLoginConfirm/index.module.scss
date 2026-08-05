@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+
+.loginConfirmContainer {
+  padding: 0 20px;
+}
+
+.loginConfirmText {
+  font-size: 16px;
+  color: #303133;
+  font-weight: 900;
+}
+
+.loginConfirmTip {
+  font-size: 12px;
+  margin-top: 16px;
+  color: #909399;
+}
+.foot {
+  width: 100%;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+
+  .loginConfirmBthText {
+    width: 48%;
+    background-color: $theme-color;
+    color: #fff;
+    // padding: 15px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .cancelBtnText {
+    width: 48%;
+    margin-top: 10px;
+    background-color: #F5F6F7;
+    // padding: 15px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #000;
+    border: 1px solid black;
+    text-align: center;
+  }
+}

@@ -1,0 +1,42 @@
+.grid-common {
+  display: grid;
+  grid-gap: 16px;
+  gap: 16px;
+}
+
+.card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+
+  :global {
+    .ant-card-head {
+      padding: 0 16px;
+      border-bottom: none;
+
+      .ant-card-head-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #252d37;
+      }
+    }
+
+    .ant-form-item-label > label {
+      font-family: PingFangSC;
+      color: #909399;
+    }
+  }
+
+  .grid-columns-1 {
+    // grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .grid-columns-2 {
+    .grid-common;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+}

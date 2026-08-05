@@ -1,0 +1,26 @@
+@import '~antd/es/style/themes/default.less';
+
+.evaluate {
+  .score {
+    position: relative;
+    padding-right: 90px;
+    display: inline-block;
+
+    &-left {
+      display: inline-block;
+    }
+
+    &-right {
+      position: absolute;
+      top: -76%;
+      right: 0;
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    &-star {
+      font-size: @font-size-lg;
+      font-weight: 500;
+    }
+  }
+}

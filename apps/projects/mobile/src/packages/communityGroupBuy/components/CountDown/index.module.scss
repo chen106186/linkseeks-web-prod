@@ -1,0 +1,18 @@
+.content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.tag {
+		width: 20px;
+		line-height: 20px;
+		border-radius: 4px;
+		background: #ffffff;
+		text-align: center;
+		color: #FC5512;
+	}
+}
+
+.ml-4 {
+	margin-left: 4px;
+}

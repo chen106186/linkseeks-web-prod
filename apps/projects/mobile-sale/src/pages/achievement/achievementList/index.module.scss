@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include common-container;
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $main-text-color;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: $theme-color;
+      margin-right: 8px;
+    }
+  }
+}

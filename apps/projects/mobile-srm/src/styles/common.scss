@@ -1,0 +1,97 @@
+$theme-color: #00A98F;
+$bg-color: #F5F6F7;
+$main-text-color: #252D37;
+$second-text-color: #5C626A;
+$third-text-color: #91959B;
+$red-text-color: #EF3346;
+
+$sm-font-size: 12px;
+$base-font-size: 14px;
+$lg-font-size: 16px;
+
+@mixin common-container {
+  height: 100vh;
+  background-color: $bg-color;
+  @include flexCol;
+}
+
+// 清除 Button 默认样式
+@mixin clearDefaultButton {
+  line-height: initial;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: initial;
+  &::after {
+      border: 0;
+      border-radius: 0;
+      background-color: initial;
+  }
+}
+
+// 固宽单行处理文本溢出
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+// 处理文本溢出(多行)
+@mixin text-overflow-line($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin card {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: $main-text-color;
+  background-color: #FFF;
+}
+
+@mixin confirmBtn  {
+  @include flexCenter;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: $theme-color;
+  color: #FFF;
+  font-size: 14px;
+}
+
+@mixin extend-click {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}

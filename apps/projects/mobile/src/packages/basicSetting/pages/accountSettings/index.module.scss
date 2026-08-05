@@ -1,0 +1,141 @@
+@import "@/styles/variables.scss";
+@import "@/styles/utils/modal.scss";
+
+$middlesize: 14px;
+
+.main {
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f5f7;
+}
+.phone {
+  display: block;
+  margin-top: 10px;
+  color: #909399;
+  font-size: $middlesize;
+}
+.left {
+  flex: 1;
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.right-text {
+  font-size: 14px;
+  color: #91959b;
+}
+.settings-list {
+  margin-top: 16px;
+  flex-direction: column;
+}
+.settings-list-item {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.cell {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-color: #f4f5f7;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+}
+.cell-text {
+  font-size: $middlesize;
+  color: #5c626a;
+}
+.icon-right {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  align-items: center;
+}
+.settings-foot {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.head {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 24px 12px;
+  flex: 1;
+}
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.warp {
+  padding: 15px;
+  width: 100%;
+}
+.tag {
+  margin-left: 5px;
+  color: $theme-color;
+  background-color: #e4f7ef;
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 2px;
+}
+.name {
+  flex-direction: column;
+  align-items: center;
+  font-size: $middlesize;
+}
+.text {
+  background-color: #fff;
+  font-size: 16px;
+}
+.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.loading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin-top: 10px;
+  color: #909399;
+  font-size: 14px;
+}
+
+.account-model {
+  @include new-index-at-model;
+}
+
+.localeBox {
+  height: 300px;
+
+  .localeBoxItem {
+    padding: 12px;
+    border-bottom: 1px solid #eeeeee;
+  }
+}

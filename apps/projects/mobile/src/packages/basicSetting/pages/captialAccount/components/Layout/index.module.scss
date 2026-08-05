@@ -1,0 +1,57 @@
+.page{
+  display: flex;
+  flex: 1;
+    :global{
+    .at-steps__circular{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+    .at-steps__item--active {
+      .at-steps__title{
+        font-size: 12px;
+        color: #FFFFFF;
+        opacity: 1;
+      }
+     .at-steps__circular {
+        background-color: #fff;
+        opacity: 1;
+      }
+    }
+    .at-steps__title{
+      color: #fff;
+      opacity: 0.45;
+      font-size: 12px;
+    }
+    .at-steps__item--inactive .at-steps__circular {
+       background-color: #fff;
+       opacity: 0.45;
+    }
+    .at-steps__num{
+      color: #007BFC;
+    }
+  }
+  .header{
+        background-color: #3877FF;
+       .headerTitle {
+          color: #fff
+        }
+  }
+  .scrollView{
+    width: 100%;
+    display: flex;
+    position: relative;
+    .step{
+      background-color: #3877FF;
+      padding-top: 40px;
+      padding-bottom: 40px;
+			margin-bottom: -20px;
+    }
+  }
+}
+
+.pad-12 {
+	padding: 0 12px;
+	position: relative;
+	flex: 1;
+}

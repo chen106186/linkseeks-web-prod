@@ -1,0 +1,128 @@
+@import '@/styles/variables.scss';
+
+.warp {
+  display: flex;
+  background-color: #f5f6f7;
+  flex-direction: column;
+  height: 400px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  border-bottom-color: #e3e4e5;
+  border-bottom-width: 1px;
+}
+.text {
+  color: #303133;
+  text-align: center;
+  font-weight: 600px;
+  line-height: 48px;
+  font-size: 16px;
+}
+.content-warp {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+}
+.content-title {
+  color: #252d37;
+  font-size: 14px;
+  font-weight: 600px;
+}
+.content-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 12px;
+  color: $theme-color;
+  border-width: 0.5;
+  border-color: $theme-color;
+  background-color: #ebf9f6;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 26px;
+  font-size: 12px;
+}
+.address-warp {
+  display: flex;
+  background-color: #fafbfc;
+  padding: 12px;
+  margin: 12px;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.address-text {
+  font-size: 12px;
+}
+.address-text-first {
+  margin-bottom: 6px;
+}
+.content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+.content-time {
+  display: flex;
+  align-items: center;
+}
+.rand-time-warp {
+  display: flex;
+  flex-direction: column;
+}
+.rand-time-title-main {
+  display: flex;
+  flex-direction: column;
+}
+.rand-time-title-warp {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+.rand-time-title {
+  color: #252d37;
+}
+.time-select-warp {
+  display: flex;
+  background-color: #f4f5f7;
+  align-items: center;
+  height: 32px;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.time-select-warping {
+  display: flex;
+  border-color: $theme-color;
+  background-color: #ebf9f6;
+  border-width: 0.5;
+  align-items: center;
+  height: 32px;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.time-tips {
+  font-size: 12px;
+  color: #5c626a;
+}
+.time-tips-select {
+  font-size: 12px;
+  color: $theme-color;
+}
+.footer-btn-warp {
+  display: flex;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  background-color: $theme-color;
+  border-radius: 4px;
+}
+.footer-btn-tips {
+  color: #ffffff;
+  font-weight: 600px;
+}

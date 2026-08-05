@@ -1,0 +1,59 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px * $hd 12px * $hd;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px * $hd 0px * $hd;
+}
+.title {
+  font-size: 14px * $hd;
+  font-weight: bold;
+  margin-right: 4px * $hd;
+}
+.commodityList {
+  display: flex;
+  flex-direction: column;
+}
+.commodityItem {
+  margin-bottom: 16px * $hd;
+  display: flex;
+  flex-direction: row;
+}
+.commodityInfo {
+  padding-left: 8px * $hd;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.rank {
+  margin-bottom: 8px * $hd;
+  padding: 0px * $hd 4px * $hd;
+  height: 20px * $hd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F8FA;
+  border-radius: 12px * $hd;
+  width: 45px * $hd;
+}
+.rankIcon {
+  margin-bottom: 8px * $hd;
+}
+.rankText {
+  font-size: 14px * $hd;
+  color: #C0C3C8;
+}
+.commidtyNameText {
+  color: #303133;
+  font-size: 14px * $hd;
+}
+.soldText {
+  color: #909399;
+  font-size: 12px * $hd;
+  margin-right: 4px * $hd;
+}

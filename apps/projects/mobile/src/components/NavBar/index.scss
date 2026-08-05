@@ -1,0 +1,65 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+$nav-bar-prefix: 'nav-bar';
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 $spacing-h-lg;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+
+  &-left-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 7;
+    overflow: hidden;
+  }
+
+  &-right-view {
+    flex: 2;
+  }
+
+  // h5
+  &-right-view__auto {
+    flex: 0;
+  }
+
+  &-left-arrow {
+    flex: 2;
+
+    &__hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-title {
+    flex: 5;
+    padding: 0 $spacing-h-lg;
+    text-align: center;
+    color: $color-grey-0;
+    font-size: $font-size-xl;
+    font-weight: 500;
+    @include text-overflow();
+
+    &__greedy {
+      flex: 1;
+    }
+  }
+
+  &__greedy {
+    flex: none;
+
+    .#{$nav-bar-prefix}-left-arrow {
+      flex: none;
+    }
+
+    .#{$nav-bar-prefix}-title {
+      flex: 1;
+      text-align: left;
+    }
+  }
+}

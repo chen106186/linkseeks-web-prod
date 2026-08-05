@@ -1,0 +1,81 @@
+@import '@/styles/variables.scss';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  justify-content: space-between;
+  position:relative;
+  .scroll-view {
+    background-color: #fff;
+    padding-bottom: 30px * $hd;
+    flex: 1;
+
+    .shop-group {
+      margin-top: 24px * $hd;
+      padding: 0 16px * $hd;
+      // margin-left: 24px * $hd;
+
+      .shop-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: -16px * $hd;
+
+        .shop-item {
+          flex-basis: 33.3%;
+          padding-right: $spacing-v-xl;
+          .shopContainer {
+            border-radius: 8px * $hd;
+            height: 150px * $hd;
+            display: flex;
+            padding: 16px * $hd;
+            font-size: 14px * $hd;
+            color: #303133;
+            font-weight: "600";
+            background-color: #FAFBFC;
+            border: 1px solid transparent;
+          }
+          .active {
+            border: 1px solid $theme-color;
+            background-color: #EBF9F6;
+
+          }
+        }
+      }
+    }
+
+    .sites {
+      margin-top: 24px * $hd;
+      display: flex;
+      flex-direction: column;
+      padding-left: 24px * $hd;
+      padding-right: 24px * $hd;
+
+      .border {
+        margin-bottom: 24px * $hd;
+        border: 1px dashed #F4F5F7;
+        // border-top-width: 1px * $hd;
+        // border-top-color: #EEF0F3;
+      }
+    }
+  }
+}
+
+
+.btn-container {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+
+  .btn {
+    background-color: $theme-color;
+    border-radius: 4px * $hd;
+    font-size: 14px * $hd;
+    margin: 0 20px * $hd;
+    color: #fff
+  }
+}

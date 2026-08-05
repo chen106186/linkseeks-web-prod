@@ -1,0 +1,115 @@
+@import url('../common.less');
+
+.address {
+  background-color: #fff;
+  padding: 0 16px 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+
+  .address_raido_group {
+    display: block;
+    width: 100%;
+  }
+
+  .warning_alert {
+    height: 32px;
+    background-color: #fff8e8;
+    border: 1px solid #fff8e8;
+    border-radius: 4px;
+  }
+
+  &_list {
+    &_radio {
+      position: relative;
+      display: flex;
+      height: 36px;
+      align-items: center;
+      margin-top: 10px;
+      border: 1px solid #fff;
+      padding-left: 17px;
+
+      &:hover {
+        background-color: #fafafa;
+
+        .adderss_list_radio_line .set_default_address {
+          display: block;
+        }
+      }
+
+      .adderss_list_radio_line {
+        display: flex;
+        align-items: center;
+
+        .default_address {
+          min-width: 64px;
+          height: 16px;
+          line-height: 16px;
+          padding: 0 4px;
+          text-align: center;
+          background: rgb(238 238 238 / 100%);
+          font-size: 12px;
+          color: #606266;
+        }
+
+        .set_default_address {
+          font-size: 12px;
+          display: none;
+          color: #606266;
+        }
+
+        .address_item_btn_group {
+          margin-left: auto;
+          display: flex;
+
+          .address_item_btn {
+            margin: 0 10px;
+            cursor: pointer;
+          }
+        }
+
+        & > span,
+        & > div {
+          display: block;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    :global {
+      span.ant-radio + * {
+        display: block;
+        width: 100%;
+      }
+
+      .ant-radio-inner {
+        &:hover {
+          border-color: var(--mall-main-color);
+        }
+      }
+
+      .ant-radio-wrapper.ant-radio-wrapper-checked {
+        border: 1px solid var(--mall-main-color);
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-bottom: 12px solid var(--mall-main-color);
+          border-left: 12px solid transparent;
+          bottom: 0;
+          right: 0;
+          z-index: 5;
+        }
+      }
+
+      .ant-radio-checked .ant-radio-inner {
+        border-color: var(--mall-main-color);
+      }
+
+      .ant-radio-inner::after {
+        background-color: var(--mall-main-color);
+      }
+    }
+  }
+}

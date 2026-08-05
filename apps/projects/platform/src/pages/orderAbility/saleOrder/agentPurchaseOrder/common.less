@@ -1,0 +1,78 @@
+@mainColor: #00a98f;
+
+.commone_input_placeholder() {
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: #c0c4cc;
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #c0c4cc;
+  }
+}
+
+@page_body_minWidth: 1200px;
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(48, 49, 51, 0.24);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(48, 49, 51, 0.08);
+}
+
+.common_page_container() {
+  position: relative;
+  width: @page_body_minWidth;
+  margin: 0 auto;
+}
+
+.shopping_cart {
+  position: relative;
+  display: flex;
+  margin-left: 66px;
+  padding: 0 8px;
+  min-width: 130px;
+  height: 40px;
+  line-height: 38px;
+  color: #252d37;
+  background-color: #f5f6f7;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .card_icon {
+    margin-right: 8px;
+  }
+
+  .badge {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #ef3346;
+  }
+}

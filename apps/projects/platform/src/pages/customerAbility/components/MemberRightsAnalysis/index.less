@@ -1,0 +1,68 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../../global/styles/utils.less';
+
+.equityInfo {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+
+    &-title {
+      margin-bottom: @margin-lg - 4px;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(23, 43, 77, 1);
+    }
+
+    &-content {
+    }
+  }
+
+  .exhibition {
+    display: flex;
+    align-items: center;
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+
+    &-title {
+      line-height: 20px;
+      margin-bottom: @margin-lg;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(107, 119, 140, 1);
+    }
+
+    &-amount {
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(23, 43, 77, 1);
+      line-height: 24px;
+
+      > span {
+        margin-right: @margin-xs;
+        line-height: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(107, 119, 140, 1);
+      }
+    }
+
+    &-logo {
+      width: 72px;
+      height: 72px;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

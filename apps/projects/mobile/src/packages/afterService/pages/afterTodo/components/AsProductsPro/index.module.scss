@@ -1,0 +1,13 @@
+@import '@/styles/variables.scss';
+
+.asProductsPro {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 12px;
+}
+.asProductsPro-list-mult {
+  margin-bottom: 12px;
+}
+.asProductsPro-list-item-head {
+  padding: 12px 0px;
+}

@@ -1,0 +1,131 @@
+@import '@/styles/variables.scss';
+@import "@/styles/utils/modal.scss";
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .errorTip {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    background-color: #FFF8EB;
+    padding: 0 12px;
+  }
+  .errorTip_text {
+    color: #EB9B00;
+    font-size: 12px;
+  }
+
+  .logistics-warp {
+    display: flex;
+    background-color: #FFF;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 12px;
+  }
+  .logistics-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .scrollView {
+    flex: 1;
+    padding: $spacing-h-md $spacing-h-md;
+    background-color: #F4F5F7;
+    // background-color: red;
+
+    .card {
+      margin-top: $spacing-v-md;
+    }
+
+    .address {
+      padding: $spacing-v-xl $spacing-h-lg;
+      background-color: #fff;
+      border-radius: 8px * $hd;
+      margin-bottom: $spacing-v-md;
+    }
+
+    .invoice {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: space-between;
+
+      &-name {
+        margin-left: auto;
+        font-size: $font-size-sm;
+        color: #91959B;
+      }
+    }
+
+    .pay-ways {
+      display: flex;
+      flex-direction: column;
+
+      .pay-way-item {
+        display: flex;
+        flex-direction: row;
+        padding: $spacing-h-lg 0;
+        align-items: center;
+
+        .pay-image {
+          width: 24px * $hd;
+          height: 24px * $hd;
+        }
+
+        .pay-name {
+          color: #252D37;
+          font-size: 14px * $hd;
+          margin-left: $spacing-v-md;
+        }
+
+        .score {
+          color: #91959B;
+          font-size: $font-size-sm;
+          margin-left: $spacing-v-md;
+        }
+
+        .pay-checked {
+          margin-left: auto;
+
+          .check-icon {
+            border: 1px solid #F4F5F7;
+            border-radius: 50%;
+            width: 16px * $hd;
+            height: 16px * $hd;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .active {
+
+          }
+
+          .not-enough-label {
+            background-color: #F4F5F7;
+            border-color: #F4F5F7;
+          }
+        }
+      }
+    }
+
+
+  }
+  .pay-model {
+    @include new-at-model;
+  }
+
+}
+
+.left-titlr {
+  font-size: 14px;
+  color: #91959b;
+  width: 70px;
+}

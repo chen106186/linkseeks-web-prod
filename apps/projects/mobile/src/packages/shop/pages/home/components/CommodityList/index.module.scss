@@ -1,0 +1,44 @@
+
+.shop-commodity-list {
+	padding: 0 8px;
+
+
+  .productList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    .productItem {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .productItem_title {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .productItem_title_text {
+          display: flex;
+          flex: 1;
+          color: #252D37;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .productItem_title_more {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .productItem_title_more_text {
+            font-size: 12px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}

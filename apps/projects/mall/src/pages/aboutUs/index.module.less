@@ -1,0 +1,275 @@
+.shop_about {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 16px 0;
+
+  &_left {
+    width: 240px;
+    height: 384px;
+    background-color: #fff;
+
+    .nav_list {
+      &_item {
+        position: relative;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #303133;
+        cursor: pointer;
+
+        &.active {
+          color: var(--mall-main-color);
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 4px;
+            height: 48px;
+            top: 0;
+            left: 0;
+            background-color: var(--mall-main-color);
+            z-index: 2;
+          }
+        }
+
+        &_icon {
+          font-size: 18px;
+          margin-left: 20px;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  &_main {
+    margin-left: 16px;
+    padding-bottom: 39px;
+    flex: 1;
+    width: 0;
+
+    .shop_about_header {
+      background-color: #fff;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+
+      &_main {
+        flex: 1;
+
+        .shop_name {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          line-height: 24px;
+          color: #333;
+          font-weight: 500;
+          margin-bottom: 16px;
+
+          & > label {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .shop_about_card {
+    padding: 24px;
+    background-color: #fff;
+    margin-top: 16px;
+
+    &_title {
+      display: flex;
+
+      & > label {
+        font-weight: 500;
+        color: #333;
+        font-size: 16px;
+      }
+
+      .auth_wrap {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        & > img {
+          width: 16px;
+          height: 16px;
+          margin-right: 4px;
+        }
+
+        & > span {
+          font-size: 12px;
+          color: #909399;
+        }
+      }
+    }
+
+    &_body {
+      .shop_ul {
+        display: flex;
+        margin: 24px 0;
+
+        &_li {
+          flex: 1;
+          display: flex;
+
+          &_icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+          }
+
+          &_main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            width: 0;
+
+            & > span {
+              color: #606266;
+              font-size: 12px;
+              line-height: 12px;
+              margin-top: 8px;
+              display: block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            &_title {
+              font-size: 12px;
+              color: #303133;
+              font-weight: 500;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+
+      .shop_brief_wrap {
+        display: flex;
+
+        .shop_brief_item {
+          display: flex;
+          flex: 1;
+          line-height: 16px;
+          font-size: 12px;
+
+          &:first-child {
+            margin-right: 40px;
+          }
+
+          & > label {
+            color: #909399;
+          }
+
+          &_content {
+            flex: 1;
+            // display: flex;
+            width: 0;
+            color: #606266;
+
+            .line_limit {
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              -webkit-box-orient: vertical;
+              word-wrap: break-word;
+              word-break: break-all;
+            }
+
+            .showbtn {
+              color: var(--mall-main-color);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .exhibition_toolbar {
+        position: relative;
+        height: 186px;
+        display: flex;
+        align-items: center;
+        margin-top: 24px;
+
+        .exhibition_tool_item {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+          cursor: pointer;
+          z-index: 3;
+
+          & > img {
+            width: 16px;
+            height: 16px;
+          }
+
+          &.prev {
+            left: 8px;
+          }
+
+          &.next {
+            right: 8px;
+          }
+        }
+
+        .exhibition_list_contaner {
+          position: relative;
+          flex: 1;
+          overflow: hidden;
+
+          .exhibition_list {
+            position: relative;
+            white-space: nowrap;
+            transition: all 0.3s;
+
+            &_item {
+              position: relative;
+              display: inline-block;
+              width: 280px;
+              height: 186px;
+              overflow: hidden;
+              cursor: pointer;
+              margin-right: 8px;
+              border-radius: 8px;
+
+              & > img {
+                height: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .shop_honorpic_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -12.5px;
+
+        &_item {
+          margin-top: 24px;
+          margin-left: 12.5px;
+          margin-right: 12.5px;
+        }
+      }
+    }
+  }
+}
+
+.album_box {
+  padding-top: 16px;
+
+  .album_iframe {
+    width: 100%;
+    height: 600px;
+  }
+}

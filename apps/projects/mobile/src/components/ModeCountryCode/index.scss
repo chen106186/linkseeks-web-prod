@@ -1,0 +1,56 @@
+
+.at-action-sheet__container {
+  border-radius: 25px 25px 0 0 !important;
+  // height: 300px;
+}
+.content{
+  .title{
+    padding: 14px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #F4F5F7;
+  }
+}
+.countryCode {
+	flex: 1;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	padding-left: 12px;
+}
+.countryCodeText {
+	font-size: 15px;
+}
+.placeholder {
+	font-size: 15px;
+	color: #C8CACD;
+}
+.countryList{
+  padding: 0 10px;
+  .countryItem{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #F4F5F7;
+    .name{
+      color: #00A98F;
+			font-size: 14px;
+      padding-right: 5px;
+    }
+    .text{
+      color: #000;
+      padding-right: 5px;
+      background-color: transparent !important;
+    }
+    .countryRight{
+      display: flex;
+      align-items: center;
+    }
+    .ItemIcon {
+      width: 16px;
+      height:16px;
+      padding-left: 5px;
+    }
+
+  }
+}

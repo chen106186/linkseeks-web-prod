@@ -1,0 +1,12 @@
+.scroll-container {
+  position: relative;
+}
+
+.scroll-loading-container {
+  position: absolute;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+.at-scroll-view{
+  &-group{
+    display: inline-block;
+    &-row{
+      display: flex;
+      flex-direction: row;
+			justify-content: space-between;
+      &-item{
+        flex: 1;
+      }
+    }
+  }
+}
+
+

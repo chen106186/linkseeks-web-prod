@@ -1,0 +1,408 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+@import '../src//global/styles/mixins/layout.less';
+
+#root {
+  .god-tabtree {
+    max-height: 700px;
+    overflow-y: scroll;
+  }
+  // 去除input type为number时的箭头
+  .ant-input-number-handler-wrap {
+    display: none;
+  }
+
+  .ant-pro-global-footer {
+    margin: 8px auto 32px auto;
+  }
+
+  .ant-table-tbody > tr > td {
+    vertical-align: middle;
+  }
+
+  .ant-table-filter-trigger,
+  .ant-table-column-sorter {
+    margin-right: auto;
+  }
+
+  .ant-table-column-title {
+    flex: none;
+  }
+
+  .common-checkbox {
+    &:hover,
+    &:active,
+    &:focus {
+      .ant-checkbox-inner {
+        border-color: @color-primary;
+      }
+    }
+
+    .ant-checkbox-group-item {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .ant-checkbox {
+      &:hover,
+      &:active,
+      &:focus {
+        .ant-checkbox-inner {
+          border-color: @color-primary;
+        }
+      }
+    }
+
+    .ant-checkbox .ant-checkbox-indeterminate {
+      &:hover {
+        border-color: @color-primary;
+      }
+    }
+
+    .ant-checkbox-indeterminate.ant-checkbox-checked .ant-checkbox-inner {
+      background-color: transparent;
+    }
+
+    .ant-checkbox-indeterminate .ant-checkbox-inner {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: @color-primary;
+      }
+
+      &::after {
+        background-color: @color-primary;
+        border-color: @color-primary;
+      }
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @color-primary;
+      border-color: @color-primary;
+    }
+  }
+
+  // 去除数字输入框的箭头
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  .identityRadio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .make-center(text);
+
+    & label {
+      width: 320px;
+      height: 48px;
+      line-height: 48px;
+      vertical-align: middle;
+      .make-center-space(margin, 12);
+    }
+  }
+
+  .businessRadio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    .make-center(margin);
+    .make-center(text);
+
+    & label {
+      width: 148px;
+      height: 32px;
+      margin: 8px 0;
+      overflow: hidden;
+      line-height: 32px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-top-width: 1px;
+      border-left-width: 1px;
+    }
+
+    & label:nth-child(odd) {
+      margin-right: 24px;
+    }
+  }
+
+  // 去除sogou浏览器自动加的密码软盘图标
+  input::-webkit-input-safebox-button {
+    display: none;
+  }
+
+  // 处理ant tree组件
+  // .ant-tree-checkbox {
+  //   order: 10;
+  // }
+
+  .ant-tree .ant-tree-treenode {
+    align-items: center;
+    height: 32px;
+    margin-bottom: 4px;
+    padding-right: 16px;
+    padding-bottom: 0;
+    background: @tree-node;
+    border: 1px solid @tree-node-border;
+
+    &.ant-tree-treenode-selected {
+      background: @tree-node_hover;
+      border-color: @color-primary;
+    }
+
+    &.ant-tree-treenode:hover {
+      background: @tree-node_hover;
+      border-color: @color-primary;
+    }
+
+    &.ant-tree-treenode-selected {
+      .tree-node-circle {
+        background: @color-primary;
+      }
+    }
+  }
+
+  .tree-node-circle {
+    width: 4px;
+    height: 4px;
+    margin-right: 12px;
+    background: @status-stop;
+    border-radius: 50%;
+  }
+
+  .ant-tree .ant-tree-checkbox {
+    margin: 0;
+  }
+
+  .ant-tree .ant-tree-node-content-wrapper:hover {
+    background: none;
+  }
+
+  .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background: none;
+  }
+
+  .ant-tree .ant-tree-switcher {
+    width: 28px;
+    height: 28px;
+    line-height: 32px;
+  }
+
+  .ant-tree .ant-tree-switcher .ant-tree-switcher-icon,
+  .ant-tree .ant-tree-switcher .ant-select-tree-switcher-icon {
+    font-size: 12px;
+  }
+
+  .black-tabs {
+    &.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+      margin-right: 0;
+    }
+  }
+
+  .ant-badge-count {
+    z-index: 1;
+  }
+
+  .ant-input-textarea {
+    width: 100%;
+  }
+
+  // 主内容区块的，margin
+  .ant-pro-page-header-wrap-children-content {
+    margin: 16px 16px 0;
+  }
+
+  .ant-card {
+    font-size: 12px;
+  }
+
+  // 覆写 card padding
+  .ant-card-head {
+    padding: 0 16px;
+
+    .ant-radio-button-wrapper {
+      height: 24px !important;
+      line-height: 22px;
+    }
+  }
+
+  .ant-card-body {
+    padding: 16px;
+  }
+
+  // 覆写page-header-title
+  .ant-page-header {
+    padding: 4px 16px;
+  }
+
+  .ant-page-header-heading-title {
+    font-size: 16px;
+  }
+
+  // 覆写左边菜单
+  .ant-menu-item {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+
+  .ant-menu-submenu-title {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+
+  .anticon-border {
+    margin-right: 8px;
+  }
+
+  // 覆写page 报个上部操作按钮样式
+  .mega-layout-item-content {
+    .ant-space {
+      .ant-space-item {
+        margin-right: 16px !important;
+      }
+    }
+  }
+
+  .god-table-content {
+    .ant-table-wrapper {
+      .ant-spin-nested-loading {
+        .ant-spin-container {
+          .ant-pagination {
+            margin: 16px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 处理高级筛选input和search按钮不对齐问题、search按钮背景
+  // .god-standard-table {
+  .ant-input-search {
+    .ant-input-group {
+      .ant-input {
+        padding: 6px;
+      }
+    }
+
+    .ant-input-group-addon {
+      .ant-input-search-button {
+        background-color: #f7f8fa;
+      }
+    }
+
+    .ant-input-affix-wrapper {
+      padding: 0;
+
+      .ant-input-suffix {
+        margin-right: 11px;
+      }
+    }
+  }
+
+  // }
+  // 处理因为antd版本不同导致anchor的背景色不同
+  .ant-anchor-wrapper {
+    background-color: #fff;
+  }
+
+  .ant-input-group-addon {
+    & > .connectBtn {
+      margin: 0 -11px;
+    }
+  }
+
+  .connectBtn {
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    background: #909399;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.ant-form-item-no-colon,
+.ant-form-item-no-colon span {
+  white-space: pre-wrap;
+}
+
+.ant-descriptions-item-label {
+  flex-shrink: 0;
+  color: #909399 !important;
+}
+
+.mega-layout-container-content {
+  overflow: hidden;
+}
+
+.ant-form-item-label > label {
+  color: #909399 !important;
+  font-size: 12px !important;
+
+  &::after {
+    content: '';
+  }
+}
+
+// 设置formitem的*号到字段label前
+.ant-form-item-label > label.ant-form-item-required::before {
+  order: 10;
+  // margin-left: -6px;
+}
+
+.ant-table-filter-column {
+  justify-content: center !important;
+}
+
+// 修复所有输入框不对称搜索
+.ant-input-group {
+  .ant-input {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .ant-input-lg {
+    padding: 8px 11px;
+  }
+}
+
+// 隐藏表格头 td 的 竖线
+.ant-table-thead > tr > th::before {
+  display: none;
+}
+
+// 去除inputNumber的箭头（弹框）
+.ant-input-number-handler-wrap {
+  display: none;
+}
+
+.ant-input-number {
+  &:hover {
+    .ant-input-number-handler-wrap {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+
+.ant-btn-link {
+  padding-left: unset !important;
+  white-space: normal !important;
+}
+
+.ant-table-content {
+  .ant-table-filter-column,
+  .ant-table-column-sorters {
+    justify-content: flex-start !important;
+  }
+
+  .ant-table-column-title {
+    flex: none;
+  }
+}

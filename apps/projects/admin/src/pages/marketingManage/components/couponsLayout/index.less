@@ -1,0 +1,15 @@
+.customsCheckbox {
+  display: flex;
+  align-items: center;
+
+  :global {
+    .ant-radio-wrapper {
+      width: 100%;
+    }
+    .ant-checkbox + span,
+    .ant-radio + span {
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+}

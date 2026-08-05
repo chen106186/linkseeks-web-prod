@@ -1,0 +1,68 @@
+@import url('../commonly.less');
+
+.company-main {
+  @main();
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .company-second-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .company-title {
+    color: #303133;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .company-time {
+    color: #6a8dda;
+    padding: 0 4px;
+    font-size: 12px;
+    margin-left: 12px;
+    border: 1px solid #6a8dda;
+  }
+
+  .company-quality {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    img {
+      position: relative;
+    }
+
+    span {
+      color: #ad794f;
+      font-weight: bold;
+      background: #ffe6c8;
+      line-height: 14px;
+      padding: 0 5px 0 10px;
+      height: 14px;
+      font-size: 12px;
+      margin-left: -8px;
+    }
+  }
+
+  .company-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .company-tips-warp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #909399;
+
+    .company-tips {
+      cursor: pointer;
+      color: #00a98f;
+    }
+  }
+}

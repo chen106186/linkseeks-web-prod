@@ -1,0 +1,57 @@
+@import "@/styles/variables.scss";
+
+.page {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	&-scrollView{
+		flex: 1;
+		background-color: #F5F6F7;
+		padding: 8px 0;
+	}
+	&-bottom{
+		padding: 8px;
+		background-color: #fff;
+	}
+}
+
+.head{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 36px 0;
+	margin-bottom: 8px;
+	background-color: #fff;
+	&-logo{
+		width: 64px;
+		height: 64px;
+		margin-bottom: 16px;
+	}
+	&-title{
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		font-size: 16px;
+		color: #252D37;
+		text-align: center;
+	}
+}
+
+.renderItem{
+	border-bottom: 1px solid #F5F6F7;
+	padding: 8px;
+	background-color: #fff;
+	&-title{
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		font-size: 14px;
+		color: #252D37;
+		margin-bottom: 5px;
+	}
+	&-text{
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		font-size: 12px;
+		color: #91959B;
+	}
+}

@@ -1,2 +1,1 @@
-# linkseeks-web-prod
-linkseeks-web-prod
+文档请查看 `.docs` 目录下的文件

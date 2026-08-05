@@ -1,0 +1,448 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.commodity {
+  padding-bottom: 52px;
+
+  .commodity_container {
+    display: flex;
+    width: 1200px;
+
+    .commodity_main {
+      flex: 1;
+
+      .banner {
+        height: 160px;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      .tool_bar_wrap {
+        position: relative;
+        // border-radius: 8px;
+        // overflow: hidden;
+        // background-color: #FFFFFF;
+      }
+
+      .tool_bar {
+        border-radius: 8px;
+        display: flex;
+        height: 40px;
+        background-color: #ffffff;
+
+        .tool_bar_left {
+          display: flex;
+          align-items: center;
+
+          .tool_bar_filter_item {
+            position: relative;
+            display: flex;
+            height: 16px;
+            align-items: center;
+            color: #606266;
+            width: 88px;
+            justify-content: center;
+            font-size: 12px;
+            border-right: 1px solid #ebecf0;
+            cursor: pointer;
+
+            &.no_right_border {
+              width: auto;
+              height: 40px;
+              border-right: 0;
+            }
+
+            .tool_bar_search {
+              display: flex;
+              height: 32px;
+              width: 256px;
+              border-radius: 4px;
+              background: rgb(245, 246, 247);
+
+              &_input {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+              }
+
+              &_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 12px;
+
+                &_icon {
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+            }
+
+            .price_box {
+              position: relative;
+              display: flex;
+              width: 216px;
+              font-size: 14px;
+              color: #303133;
+              align-items: center;
+              justify-content: center;
+
+              &:hover {
+                .price_box_hover {
+                  display: block;
+                }
+              }
+
+              &_hover {
+                position: absolute;
+                display: none;
+                top: -4px;
+                width: 100%;
+                background-color: #fff;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                box-shadow: 0 2px 7px 0 rgba(137, 137, 137, 0.5);
+                z-index: 2;
+                padding-right: 18px;
+                padding-bottom: 8px;
+
+                &_box {
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: flex-end;
+                  height: 72px;
+                }
+
+                .price_confirm_btn {
+                  border-radius: 4px;
+                  // height: 24px;
+                }
+              }
+
+              .price_box_brief {
+                color: #909399;
+                font-size: 12px;
+              }
+
+              .price_range {
+                position: relative;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3;
+
+                .price_input {
+                  width: 80px;
+                  height: 26px;
+                  background-color: #f5f6f7;
+                  border-color: #f5f6f7;
+                  box-shadow: none;
+
+                  :global {
+                    .ant-input-number-input {
+                      height: 24px;
+                      padding: 0 8px;
+                    }
+                  }
+                }
+
+                & > .split {
+                  width: 24px;
+                  font-size: 20px;
+                  color: #91959b;
+                  text-align: center;
+                }
+              }
+
+              .confirm_btn {
+                background-color: #00a98f;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+
+                &_icon {
+                  color: #fff;
+                  font-size: 18px;
+                }
+
+                &.disabled {
+                  background-color: #edeeef;
+
+                  .confirm_btn_icon {
+                    color: #dee0e2;
+                  }
+                }
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            .arrowIcon {
+              color: #e4e6eb;
+              font-size: 12px;
+              margin-left: 4px;
+            }
+
+            .active {
+              color: @color-primary;
+            }
+
+            & > span {
+              .active {
+                color: @color-primary;
+              }
+            }
+
+            & > .icon {
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              line-height: 1;
+
+              & > img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            .price_filter_box {
+              display: flex;
+              flex-direction: column;
+              margin-left: 6px;
+
+              & > .icon {
+                font-size: 12px;
+                color: #e4e6eb;
+
+                &.active {
+                  color: @color-primary;
+                }
+
+                &:last-child {
+                  margin-top: -4px;
+                }
+              }
+            }
+          }
+        }
+
+        .tool_bar_right {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+
+          .showTypeBox {
+            width: 40px;
+            height: 16px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > .icon {
+              color: #e4e6eb;
+              font-size: 22px;
+              cursor: pointer;
+
+              &.active {
+                color: #303133;
+              }
+            }
+          }
+
+          .pageBox {
+            display: flex;
+            // border-left: 1px solid #EBECF0;
+            padding: 0 8px;
+            font-size: 12px;
+            height: 40px;
+            line-height: 40px;
+            align-items: center;
+
+            &_main {
+              margin: 0 8px;
+            }
+
+            & > .pageBoxIcon {
+              color: #303133;
+              cursor: pointer;
+
+              &.disabled {
+                color: #909399;
+              }
+            }
+          }
+
+          .count {
+            color: #909399;
+            margin-right: 14px;
+            padding-right: 16px;
+            border-right: 1px solid #ebecf0;
+
+            & > label {
+              color: #333300;
+              margin: 0 2px;
+            }
+          }
+        }
+      }
+
+      .filter_bar {
+        margin: 16px 0;
+        display: flex;
+        align-items: center;
+
+        &_reset {
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .filter_bar_left {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          padding-left: 10px;
+
+          &_text1 {
+            color: #909399;
+          }
+
+          &_text {
+            color: #3a3a3a;
+            cursor: pointer;
+          }
+
+          &_split {
+            height: 16px;
+            width: 1px;
+            background-color: #e5e5e5;
+            margin: 0 15px;
+          }
+        }
+
+        .filter_bar_list {
+          display: flex;
+          align-items: center;
+
+          .filter_bar_list_item {
+            display: flex;
+            height: 24px;
+            line-height: 24px;
+            background-color: #f4f5f7;
+            font-size: 12px;
+            color: #303133;
+            border-radius: 4px;
+            margin-right: 20px;
+            // margin-bottom: 8px;
+
+            .filter_bar_close_box {
+              width: 24px;
+              background-color: #f7f8fa;
+              border-left: 1px solid #ebecf0;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+            }
+
+            &_text {
+              flex: 1;
+              padding: 0 5px;
+
+              & > b {
+                margin-left: 5px;
+                color: #d32f2f;
+              }
+            }
+
+            &_icon {
+              margin-left: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .pagination_wrap {
+        margin-top: 60px;
+        text-align: right;
+
+        :global {
+          .ant-pagination-item {
+            &:hover,
+            &:active {
+              border-color: @color-primary;
+
+              & > a {
+                color: @color-primary;
+              }
+            }
+          }
+
+          .ant-pagination-item-active {
+            background-color: @color-primary;
+            border-color: @color-primary;
+
+            &:hover {
+              & > a {
+                color: #ffffff !important;
+              }
+            }
+
+            & > a {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal_confirm {
+  position: relative;
+  width: 520px !important;
+
+  :global {
+    .ant-modal-body {
+      .ant-input {
+        &:hover,
+        &:active,
+        &:focus {
+          border: 1px solid @color-primary;
+          box-shadow: 0 0 0 2px var(#daf2e7);
+        }
+      }
+    }
+
+    .ant-modal-footer {
+      .ant-btn {
+        &:hover {
+          color: @color-primary;
+          border-color: @color-primary;
+        }
+      }
+
+      .ant-btn-primary {
+        background-color: @color-primary;
+        border-color: @color-primary;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

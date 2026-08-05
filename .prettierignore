@@ -1,0 +1,11 @@
+.next/
+build/
+dist/
+node_modules/
+target/
+coverage/
+snapshot/
+api-*
+generated/
+pnpm-lock.yaml
+CHANGELOG.md

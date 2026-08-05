@@ -1,0 +1,54 @@
+@import '@/styles/variables.scss';
+
+.stockAddress-popup {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+
+  &-nav {
+    position: relative;
+
+    &-left {
+      padding: $spacing-v-lg;
+      padding-top: $spacing-v-lg + 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    &-title {
+      flex-shrink: 0;
+      padding: $spacing-v-xl;
+      font-size: $font-size-lg;
+      text-align: center;
+      color: $color-black-1;
+      font-weight: 600;
+    }
+  }
+
+  &-content {
+    flex: 1;
+  }
+
+  &-swiper {
+    height: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-action {
+    flex-shrink: 0;
+    padding: $spacing-v-md;
+    background-color: #FFFFFF;
+  }
+}

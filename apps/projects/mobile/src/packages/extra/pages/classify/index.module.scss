@@ -1,0 +1,33 @@
+.classify-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+
+  :global {
+    .at-tabs {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      .at-tabs-pane--active {
+        height: 100%;
+        overflow: scroll;
+      }
+
+      .at-tabs__body {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .at-tabs__item--active {
+        .at-tabs__item-underline {
+          transform: scaleX(0.2);
+        }
+      }
+    }
+  }
+}

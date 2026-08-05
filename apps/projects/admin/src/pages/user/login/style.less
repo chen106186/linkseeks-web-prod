@@ -1,0 +1,123 @@
+.ant-pro-basicLayout-content {
+  margin: 0;
+}
+
+.content {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+.container-wrap {
+  background: url('../../../assets/image_bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left-title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.right-content {
+  display: flex;
+  flex: 1;
+}
+
+.login-body {
+  padding: 0 48px;
+}
+.login-container {
+  // flex: 1;
+  border-radius: 0 8px 8px 0;
+  background-color: #fff;
+  width: 384px;
+  height: 512px;
+
+  &.round {
+    border-radius: 8px;
+  }
+
+  h4 {
+    font-weight: 400;
+    padding: 80px 0;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 12px;
+  }
+}
+
+.icon {
+  color: #91959b;
+}
+
+.login-btn {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    height: 18px;
+    width: 18px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 8px;
+  }
+}
+
+.login-input {
+  background-color: #f5f6f7 !important;
+  height: 40px;
+  border: none;
+  outline: none;
+
+  :global {
+    .ant-input {
+      background-color: #f5f6f7;
+    }
+  }
+}
+
+.pwd-comfirm {
+  :global {
+    .ant-modal-confirm-btns {
+      display: flex;
+      .ant-btn {
+        flex: 1;
+      }
+    }
+  }
+}
+.forget-form {
+  &-sms {
+    display: flex;
+
+    .sms-button {
+      border: none;
+      background: #f5f6f7;
+
+      &:hover {
+        background: rgba(37, 45, 55, 0.08);
+      }
+
+      &:active {
+        background: rgba(37, 45, 55, 0.12);
+      }
+    }
+  }
+}

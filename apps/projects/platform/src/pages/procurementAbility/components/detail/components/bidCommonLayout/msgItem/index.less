@@ -1,0 +1,51 @@
+.msgItem {
+  background: #fafbfc;
+  padding: 12px 14px;
+
+  .msgItemRow {
+    display: flex;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #909399;
+
+    .badge {
+      width: 16px;
+      height: 16px;
+      background: #ebecf0;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 16px;
+      color: #909399;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+
+    .title {
+      font-size: 12px;
+      color: #303133;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+
+    .titleTop {
+      font-size: 12px;
+      color: #303133;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      max-width: calc(100% - 20px);
+    }
+
+    .label {
+      width: 40%;
+    }
+    .files {
+      flex: 1;
+    }
+  }
+}

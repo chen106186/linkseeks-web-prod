@@ -1,0 +1,39 @@
+@import url('@linkseeks/ui/src/styles/utils.less');
+
+.layout-content {
+  height: 100vh;
+
+  .content-wrap {
+    height: calc(100vh - 48px);
+    overflow: hidden;
+  }
+}
+
+.content {
+  padding: 16px;
+  height: calc(100vh - 96px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &.no-padding {
+    padding: 0;
+    height: calc(100vh - 48px);
+
+    & > div {
+      flex: 1;
+      height: 0;
+      overflow-y: auto;
+    }
+  }
+
+  & > div {
+    flex: initial;
+    height: auto;
+    overflow-y: initial;
+  }
+}
+
+// 放到上面不生效
+.silkyScrollbar();

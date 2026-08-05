@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .formItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .input {
+      margin-right: 8px;
+      flex: 1;
+
+      :global {
+        .ant-input {
+          background-color: #F5F6F7;
+        }
+      }
+    }
+  }
+
+  .tips {
+    color: #91959B;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}

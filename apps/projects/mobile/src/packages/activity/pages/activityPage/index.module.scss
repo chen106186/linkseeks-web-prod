@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+
+.pageLayout {
+  // background-color: #DD3041;
+}
+
+.activity-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .activity-scrollView {
+    flex: 1;
+
+    .scrollView {
+      height: 100%;
+      // padding: $spacing-h-lg;
+    }
+  }
+}

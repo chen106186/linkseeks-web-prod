@@ -1,0 +1,119 @@
+.titleAvator {
+  width: 48px;
+  height: 48px;
+  margin: 0 24px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background: rgba(135, 119, 217, 1);
+  border: 1px solid rgba(223, 225, 230, 1);
+  border-radius: 4px;
+}
+
+.titleAvatorText {
+  margin-left: 8px;
+  color: #303133;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.detailHeader {
+  padding: 24px 24px 0;
+  background: #fff;
+  :global {
+    .ant-row {
+      .ant-col-2 {
+        .ant-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    .ant-anchor-wrapper {
+      min-height: auto;
+    }
+    .ant-anchor {
+      display: flex;
+    }
+    .ant-anchor-ink {
+      display: none;
+    }
+    .ant-anchor-link {
+      padding: 0;
+      text-align: center;
+      a {
+        display: inline-block;
+        height: 48px;
+        margin: 0 16px;
+        color: #909399;
+        font-size: 14px;
+        line-height: 48px;
+      }
+    }
+    .ant-anchor-link-active {
+      a {
+        color: #303133;
+        font-weight: 500;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+}
+
+.detailCol {
+  display: flex;
+  margin-top: 20px;
+  color: #303133;
+}
+
+.colLabel {
+  margin-right: 16px;
+  color: #909399;
+}
+
+// tabs标签锚点
+.anchorTitle {
+  // height: 48px;
+  ul {
+    display: flex;
+    padding-left: 0;
+    li {
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      list-style: none;
+      a {
+        display: inline-block;
+        height: 48px;
+        margin: 0 16px;
+        color: #909399;
+        font-size: 14px;
+        line-height: 48px;
+      }
+      .current {
+        color: #303133;
+        font-weight: 500;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+}
+
+.anchorTitleFixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  :global {
+    .ant-row {
+      .ant-col-2 {
+        .ant-btn {
+          position: fixed;
+          top: 16px;
+          right: 16px;
+        }
+      }
+    }
+  }
+}

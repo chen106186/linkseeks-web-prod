@@ -1,0 +1,158 @@
+.logistucs-main {
+  background: #fff;
+
+  .login-warp {
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    padding: 12px 0;
+
+    img {
+      // width: 240px;
+      height: 49px;
+    }
+  }
+
+  .banner-warp {
+    // background-image: url('./img/banner.png');
+    background-size: 100% 100%;
+    height: 480px;
+    position: relative;
+  }
+
+  .carousel-warp {
+    width: 100%;
+    height: 480px;
+    position: absolute;
+
+    .carousel-item {
+      background-size: 100% 100%;
+      height: 480px;
+    }
+  }
+
+  .banner-first {
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    align-items: center;
+    height: 480px;
+    padding-left: 24px;
+    position: relative;
+
+    .banner-title {
+      font-size: 60px;
+      margin-bottom: 26px;
+      letter-spacing: 5px;
+    }
+
+    .banner-second-title {
+      font-size: 28px;
+    }
+  }
+
+  .banner-search-main {
+    position: absolute;
+    width: 350px;
+    background: #0f163b;
+    height: 440px;
+    right: 20px;
+    color: #fff;
+    border-radius: 8px;
+    top: 20px;
+
+    .banner-search-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+      font-size: 16px;
+
+      .banner-search-logon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 12px;
+        background: url('./img/hi.png');
+        background-size: 100% 100%;
+      }
+    }
+
+    .sign-mian {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+
+      .sign-item {
+        text-align: center;
+        cursor: pointer;
+        padding: 0 30px;
+        position: relative;
+      }
+
+      .sign-item:nth-child(1) {
+        border-right: 1px solid #fff;
+      }
+
+      .sign-item:hover {
+        color: #00a98f;
+      }
+    }
+  }
+
+  .service-warp {
+    padding: 80px 0 64px;
+    text-align: center;
+
+    .service-title {
+      font-size: 32px;
+      color: #303133;
+      font-weight: bold;
+    }
+
+    .service-title-second {
+      font-size: 16px;
+      font-weight: 400;
+      color: #909399;
+      line-height: 16px;
+    }
+
+    .service-title-second:nth-child(2) {
+      margin: 32px 0 16px;
+    }
+  }
+
+  .service-project-main {
+    background-image: url('./img/project-bg.png');
+    padding-bottom: 50px;
+    background-position-y: 50px;
+    background-size: 100% 300px;
+    background-repeat: repeat-x;
+  }
+
+  .service-project-warp {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.commoney-bg {
+  background: #f7f8fa;
+}
+
+:global {
+  .left-min-bor {
+    border: 0;
+
+    .ant-select-selector {
+      border: 0 !important;
+    }
+  }
+
+  .ant-form-item-label {
+    position: relative;
+  }
+}

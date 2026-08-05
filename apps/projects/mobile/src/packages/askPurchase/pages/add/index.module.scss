@@ -1,0 +1,206 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.EditRfqOrder-container {
+  background-color: #F5F6F7;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+	padding: 8px;
+
+  &-advert {
+    background-color: $theme-color;
+    height: 160px;
+
+    &-Head {
+      padding-top: 32px;
+
+      &-title {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    &-headTagList {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      &-item {
+        flex: 1;
+        text-align: center;
+
+        Image,
+        taro-image-core {
+          width: 40px;
+          height: 40px;
+        }
+
+        .advert-tofo-text {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-main {
+    flex: 1;
+    overflow-x: hidden;
+
+    &-box {
+      border-radius: 10px;
+      padding: 0 10px;
+      background-color: #fff;
+      margin-bottom: 14px;
+
+    }
+
+    Input {
+      text-align: right;
+    }
+
+    .Upload {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      // justify-content: space-between;
+      .UploadList {
+        display: flex;
+
+        &-card {
+          width: 72px;
+          height: 72px;
+          background: rgba(255, 255, 255, 0.00);
+          border: 1px solid #EEF0F3;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          Image,
+          taro-image-core {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
+        &-item {
+          margin-left: 10px;
+          width: 72px;
+          height: 72px;
+          position: relative;
+          border-radius: 4px;
+
+          Image,
+          taro-image-core,
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .remove {
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+  }
+
+  &-actions {
+    padding: $spacing-v-md $spacing-h-md;
+    background-color: transparent;
+  }
+}
+
+.textStyle {
+  text-align: right;
+  font-size: 14px;
+  color: #606266;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.tabItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F4F5F7;
+  padding: 12px 0;
+  font-size: 14px;
+	font-weight: bold;
+}
+
+.inquiryDetailContainer {
+
+	&-productInfo {
+    flex: 1;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  &-productInfoTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+	&-docLine {
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: $theme-color;
+    margin-right: 8px;
+  }
+  &-productName {
+    font-size: 16px;
+    color: #303133;
+    font-weight: 500;
+    @include text-overflow();
+  }
+  &-productInfoNo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 12px;
+    margin-top: 12px;
+  }
+  &-productNo {
+    font-size: 14px;
+    color: #252D37;
+    @include text-overflow();
+  }
+  &-textCopyStyle {
+    font-size: 12px;
+    background-color: #f4f5f7;
+    padding: 2px 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-left: 12px;
+  }
+	&-customStyle {
+    margin-bottom: 8px;
+  }
+}
+
+.time {
+	color: #252d37;
+	text-align: right;
+
+	&.placeholderColor {
+		color: #C8CACD;
+	}
+}

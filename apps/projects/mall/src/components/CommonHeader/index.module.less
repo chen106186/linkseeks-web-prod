@@ -1,0 +1,41 @@
+@import url('@/theme/style/common.less');
+@mall-main-color: var(--mall-main-color);
+
+.common_header {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+
+  .common_header_container {
+    .common_page_container();
+
+    height: 96px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .logo {
+      overflow: hidden;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        height: 50px;
+        max-width: 145px;
+      }
+    }
+
+    .common_header_split {
+      width: 1px;
+      height: 24px;
+      background-color: #f4f5f7;
+      margin: 0 16px;
+    }
+
+    .common_header_title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #303133;
+    }
+  }
+}

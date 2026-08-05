@@ -1,0 +1,53 @@
+.filter_brand {
+  padding: 10px 0;
+  max-height: 300px;
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgb(48 49 51 / 24%);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgb(48 49 51 / 8%);
+  }
+
+  .filter_brand_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 -4px;
+
+    &_item {
+      width: 100px;
+      height: 50px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #f7f8fa;
+      border-radius: 4px;
+      margin: 4px;
+
+      .brand_img {
+        width: 80px;
+        height: 40px;
+        overflow: hidden;
+        cursor: pointer;
+
+        & > .img {
+          width: 80px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: center center;
+        }
+      }
+    }
+  }
+}

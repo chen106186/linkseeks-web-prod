@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+$danger: #ef3346;
+$success: #b7eb8f;
+$warning: #ffe58f;
+$purple: #9100F9;
+$gray: #606266;
+
+$colors: (
+  "primary": $color-brand,
+  "danger": $danger,
+  "success": $success,
+  "warning": $warning,
+  "purple": $purple,
+  "violet": $purple,
+);
+
+
+.label {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: $border-radius-md;
+  border: 1px solid #f2f4f5;
+  padding: 2px * $hd $spacing-h-sm - 2;
+
+  .icon {
+    margin-right: $spacing-h-md;
+  }
+}
+
+.name {
+  font-size: $font-size-sm;
+  color:  $color-grey-0;
+}
+
+@each $key, $color in $colors {
+  .label-#{$key} {
+    border-color: $color;
+    color: $color;
+  }
+  .label-#{$key}-name {
+    color: $color;
+  }
+}

@@ -1,0 +1,115 @@
+.filterMro_fastFilterDrawer {
+  display: flex;
+  flex-direction: row;
+
+  .filterMro_fastFilterDrawer_left {
+    width: 240px;
+    margin-right: 16px;
+
+    .filterMro_fastFilterDrawer_left_item {
+      width: 100%;
+      height: 40px;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: #252d37;
+      font-size: 12px;
+      border-radius: 4px;
+
+      .filterMro_fastFilterDrawer_left_item_title {
+        font-size: 14px;
+        flex: 1;
+      }
+
+      &.active {
+        background-color: #ebf9f6;
+        color: var(--mall-main-color);
+      }
+    }
+  }
+
+  .filterMro_fastFilterDrawer_right {
+    flex: 1;
+
+    .filterMro_fastFilterDrawer_right_top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+
+      .filterMro_fastFilterDrawer_right_top_search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        font-size: 14px;
+        color: #252d37;
+
+        .filterMro_fastFilterDrawer_right_top_search_input {
+          width: 256px;
+          margin-left: 16px;
+          background-color: #f5f6f7;
+          border: 0;
+
+          :global {
+            .ant-input {
+              background-color: #f5f6f7;
+            }
+          }
+        }
+      }
+
+      .filterMro_fastFilterDrawer_right_top_btn {
+        margin-left: 16px;
+        width: 80px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 12px;
+        align-self: center;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #f5f6f7;
+        color: #303133;
+      }
+    }
+
+    .filterMro_fastFilterDrawer_right_box {
+      display: flex;
+      flex-flow: row wrap;
+
+      .filterMro_fastFilterDrawer_right_box_item {
+        width: 210px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+        background-color: #f5f6f7;
+        border: 1px solid #f5f6f7;
+        border-radius: 4px;
+        color: #5c626a;
+        margin-right: 16px;
+        margin-bottom: 16px;
+
+        &.active {
+          background-color: #ebf9f6;
+          color: var(--mall-main-color);
+          border-color: var(--mall-main-color);
+        }
+
+        &.disable {
+          color: #c8cacd;
+          background-color: #fafbfc;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

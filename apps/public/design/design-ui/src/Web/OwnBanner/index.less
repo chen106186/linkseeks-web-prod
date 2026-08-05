@@ -1,0 +1,89 @@
+.lingxi-own-banner {
+  height: 496px;
+  width: 496px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &.two {
+    height: 248px;
+    width: 480px;
+  }
+
+  &.three {
+    width: 480px;
+    height: 232px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+
+  &.four {
+    width: 1200px;
+    margin: 0 auto;
+    height: 90px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+
+    .lingxi-own-banner-item {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+    cursor: pointer;
+    // background-color: #F5F6F7;
+  }
+
+  &-null {
+    width: 496px;
+    height: 496px;
+    line-height: 496px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #d9d9d9;
+  }
+
+  &-two-null {
+    width: 480px;
+    height: 248px;
+    line-height: 248px;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #d9d9d9;
+  }
+
+  &-three-null {
+    width: 232px;
+    height: 232px;
+    line-height: 232px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #d9d9d9;
+  }
+
+  &-four-null {
+    width: 580px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #d9d9d9;
+    color: #b3b3b3;
+    background-color: #edeeef;
+  }
+}

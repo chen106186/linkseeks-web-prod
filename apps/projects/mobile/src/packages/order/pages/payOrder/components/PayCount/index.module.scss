@@ -1,0 +1,30 @@
+@import '@/styles/variables.scss';
+
+.payCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: 'center';
+  align-items: center;
+  padding: 24px 0;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 8px;
+
+  .timeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .time {
+    font-size: 14px;
+    color: #909399;
+    margin-left: 4px;
+  }
+
+  .money {
+    color: #D32F2F;
+    margin-top: 16px;
+    font-size: 24px;
+  }
+}

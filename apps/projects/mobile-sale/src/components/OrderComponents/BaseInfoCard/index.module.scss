@@ -1,0 +1,25 @@
+@import '@/styles/variables.scss';
+
+.info-base {
+  @include card;
+
+  .info-base-code {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+
+    .copy {
+      margin-left: 4px;
+      padding: 2px 4px;
+      font-size: 12px;
+      color: $main-text-color;
+      background-color: $bg-color;
+    }
+  }
+
+  .info-base-buyer {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@apps/domains",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

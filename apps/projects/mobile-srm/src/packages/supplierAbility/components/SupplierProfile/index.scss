@@ -1,0 +1,27 @@
+@import '@/styles/variables.scss';
+
+.supplier-profile {
+  .at-tabs {
+    margin: $spacing-v-md 0;
+
+    &__header {
+      text-align: left;
+      background-color: transparent;
+    }
+
+    &__body {
+      background-color: transparent;
+    }
+
+    &__item {
+      flex: 0 0 auto;
+    }
+  }
+
+  .cell-list-item {
+    &-title,
+    &-value {
+      font-size: $font-size-sm;
+    }
+  }
+}

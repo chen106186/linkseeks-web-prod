@@ -1,0 +1,38 @@
+import { ComponentClass } from 'react'
+
+import GodComponent from './base'
+
+export interface GodAvatarProps extends GodComponent{
+  /**
+   * 头像大小
+   * @default 'normal'
+   */
+  size?: 'large' | 'normal' | 'small'
+  /**
+   * 头像是否圆形
+   * @default false
+   */
+  circle?: boolean
+  /**
+   * 以文字形式展示头像
+   */
+  text?: string
+  /**
+   * 头像图片地址
+   */
+  image?: string
+  /**
+   * 参考微信[开放数据](https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html)
+   *
+   * **注意：** openData 仅支持 type 为 userAvatarUrl
+   */
+  openData?: { type: 'userAvatarUrl' }
+}
+
+export interface GodAvatarState {
+  isWEAPP: boolean
+}
+
+declare const GodAvatar: ComponentClass<GodAvatarProps>
+
+export default GodAvatar

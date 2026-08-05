@@ -1,0 +1,57 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+.god-upload-card_container {
+  display: flex;
+  height: 192px;
+  align-items: center;
+}
+
+.god-upload-card_empty_container {
+  display: flex;
+  width: 192px;
+  height: 192px;
+  justify-content: center;
+  align-items: center;
+}
+
+.god-upload-card-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.god-upload-card_icon {
+  font-size: $font-size-xxl;
+  color:  $color-black-2;
+}
+.god-upload-card_tip {
+  color: $color-black-2;
+}
+
+.god-upload-card_main {
+  border-style: 'dashed';
+  border-width: 1px;
+  border-color: '#EEF0F3';
+  border-radius: 2px;
+  flex-direction: 'column';
+}
+
+.god-upload-container-small {
+  display: flex;
+  width: 192px;
+  height: 192px;
+  border-style: 'dashed';
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: '#EEF0F3';
+  border-top-width: 0;
+  border-bottom-width: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.god-upload-container-image {
+  width: 192px;
+  height: 192px;
+  margin: 8px;
+}

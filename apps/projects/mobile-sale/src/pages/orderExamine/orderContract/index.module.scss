@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include common-container;
+  padding: 8px;
+
+  :global {
+    .at-switch {
+      padding: 0;
+    }
+  }
+}

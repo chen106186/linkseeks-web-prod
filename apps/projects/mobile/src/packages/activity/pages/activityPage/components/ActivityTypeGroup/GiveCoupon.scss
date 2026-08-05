@@ -1,0 +1,112 @@
+@import '@/styles/variables.scss';
+
+.give-coupon {
+  display: flex;
+  flex-direction: column;
+  /** 删除 **/
+  // margin: $spacing-h-lg;
+  // padding: $spacing-h-lg;
+  background-color: #fff;
+  border-radius: 8px * $hd;
+  padding: $spacing-h-lg;
+
+  &-main-commodity {
+    // display: ;
+    padding: 0;
+
+    .product-tag {
+      background-color: #EF3346;
+      color: #fff;
+      font-size: $font-size-sm;
+    }
+  }
+
+  &-main-commodity-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-tabs {
+    margin-top: $spacing-v-sm;
+    .at-tabs__header {
+      text-align: left;
+
+      .at-tabs__item {
+        font-size: 12px * $hd;
+        color: #252D37;
+        padding: 12px * $hd 12px * $hd;
+        font-weight: 600;
+      }
+
+      .at-tabs__item--active {
+        .at-tabs__item-underline {
+          transform: scaleX(0.5);
+          height: 3px * $hd;
+          background-color: #ef3346;
+        }
+      }
+    }
+    .at-tabs__underline {
+      height: 0px;
+    }
+
+    &-tabpane-coupons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    &-coupon-item {
+      width: 98px * $hd;
+      overflow: hidden;
+      margin-top: $spacing-h-lg;
+      background-color: #FFF0F2;
+      display: flex;
+      flex-direction: column;
+      margin-right: $spacing-h-sm;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px * $hd;
+      padding: $spacing-h-xl $spacing-h-md;
+      flex-shrink: 0;
+
+      .coupon-amount {
+        color: #EF3346;
+        font-size: 18px * $hd;
+      }
+
+      .coupon-condition {
+        color: #EF3346;
+        font-size: $font-size-xs;
+        margin-top: $spacing-v-md;
+        margin-bottom: $spacing-v-xl;
+        text-align: center;
+      }
+
+      .coupon-type {
+        background-image: linear-gradient(90deg, #F87362 0%, #EF3346 100%);
+        padding: 4px $spacing-h-md;
+        color: #fff;
+        border-radius: 50px;
+        font-size: $font-size-sm;
+        width: 72px * $hd;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        text-align: center;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0 0;
+    border-top: 1px solid #F4F5F7;
+    margin-top: 12px;
+  }
+}

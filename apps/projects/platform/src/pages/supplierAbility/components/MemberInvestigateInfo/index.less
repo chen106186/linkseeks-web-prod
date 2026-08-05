@@ -1,0 +1,39 @@
+@import '~antd/es/style/themes/default.less';
+
+.investigate-info {
+  :global {
+    .ant-descriptions-item-content {
+      white-space: break-spaces;
+    }
+  }
+
+  &-progress {
+    width: 80px;
+    height: 40px;
+    position: relative;
+
+    :global {
+      .ant-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+      color: @text-color-secondary;
+      font-size: @font-size-sm;
+      white-space: nowrap;
+
+      > span {
+        color: @text-color;
+        font-size: @font-size-lg;
+        font-weight: 500;
+      }
+    }
+  }
+}

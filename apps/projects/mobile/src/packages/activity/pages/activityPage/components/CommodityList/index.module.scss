@@ -1,0 +1,61 @@
+@import '@/styles/variables.scss';
+
+$first: (#FDD382, #FDA41A);
+$second: (#D3D1D2, #A7A5A6);
+$third: (#F0C198, #DD8E5F);
+
+$linearColor: (
+  "1": $first,
+  "2": $second,
+  "3": $third,
+);
+
+.topLabelContainer {
+
+  @each $key, $primary in $linearColor {
+    .product-tag-#{$key} {
+      background-image: linear-gradient(135deg, nth($primary, 1) 0%, nth($primary, 2) 100%);
+      font-size: $font-size-xs;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: $spacing-h-sm $spacing-h-md;
+      border-top-left-radius: 8px * $hd;
+      border-bottom-right-radius: 8px * $hd;
+    }
+  }
+}
+
+.give-product-item {
+  margin-bottom: $spacing-h-md;
+}
+
+.progress {
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 12px * $hd;
+
+    .progress-remain {
+      font-size: 10px;
+      color: #91959B;
+    }
+  }
+
+  &-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: $spacing-h-md;
+    color: #919598;
+    font-size: $font-size-sm;
+
+    &-highlight {
+      color: #ef3346;
+    }
+  }
+}
+

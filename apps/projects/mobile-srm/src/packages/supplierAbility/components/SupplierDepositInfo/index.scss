@@ -1,0 +1,63 @@
+@import '@/styles/variables.scss';
+
+.supplier-deposit {
+  &-current-data{
+    font-size: $font-size-sm;
+    color: $color-black-2;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+
+    &-title {
+      color: $color-brand;
+    }
+  }
+
+  &-modify {
+    text-align: right;
+    font-size: $font-size-sm;
+    color: $third-text-color;
+    background-color: $color-bg-base;
+
+    &-txt {
+      font-size: $font-size-sm;
+      color: $third-text-color;
+    }
+
+    &-last {
+      .register-data-list-item-title,.cell-list-item-value,.cell-list-item-title{
+        color: $third-text-color;
+      }
+    }
+  }
+
+  &-cell-label {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    padding-bottom: $spacing-v-lg;
+    background-color: $color-bg-base;
+    
+    &-text {
+      font-size: $font-size-sm;
+      color: $theme-color;
+    }
+  }
+
+  .cell-list-item-label-wrap {
+    padding-bottom: 0;
+  }
+  
+  .cell-list{
+    padding-left: 0;
+    padding-right: 0;
+
+    &-item-title{
+      padding-left: 24rpx;
+      padding-right: 24rpx;
+    }
+
+    &-item-value__right{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

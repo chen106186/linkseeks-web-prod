@@ -1,0 +1,71 @@
+.drawer-body {
+  position: relative;
+
+  .line-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .import-commodity-icon {
+    width: 128px;
+    height: 128px;
+    margin: 24px 0;
+  }
+  .tip-box {
+    background-color: rgba(250, 251, 252, 1);
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 24px;
+
+    .tip-line {
+      position: relative;
+      color: #91959b;
+      font-size: 12px;
+      padding: 4px 24px 4px 24px;
+
+      &.tip1 {
+        &::before {
+          content: '1';
+        }
+      }
+      &.tip2 {
+        &::before {
+          content: '2';
+        }
+      }
+      &.tip3 {
+        &::before {
+          content: '3';
+        }
+      }
+      &.tip4 {
+        &::before {
+          content: '4';
+        }
+      }
+      &.wraning {
+        &::before {
+          content: '!';
+          background-color: rgb(232, 158, 66);
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-color: rgb(87, 133, 233);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+  }
+}

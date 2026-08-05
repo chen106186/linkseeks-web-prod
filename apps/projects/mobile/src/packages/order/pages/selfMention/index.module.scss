@@ -1,0 +1,42 @@
+
+@import '@/styles/variables.scss';
+
+.container{
+  background-color: #F4F5F7;
+  display: flex;
+  margin-bottom: 5px;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+}
+.warp{
+  width: 100%;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+.cell{
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: flex;
+  padding: 10px 0;
+  padding: 0 10px;
+  align-items: center;
+  height: 60px;
+}
+.cellText{
+  font-size: 14px;
+}
+.btn{
+ margin: 0 10px;
+ border-radius: 4px;
+ padding: 10px 0;
+ background-color: $theme-color;
+ text-align: center;
+}
+.Icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

@@ -1,0 +1,179 @@
+.popularExchange {
+  position: relative;
+  margin-bottom: 8px;
+  &-exchange_title {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+  }
+  &-exchange_title_text {
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: 16px;
+  }
+  &-exchange_icon {
+    width: 24px;
+    height: 24px;
+  }
+  &-scrollItem {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 8px 0px;
+    overflow: hidden;
+  }
+  &-integral {
+    padding: 0px;
+  }
+  &-integralPrice {
+    color: #D6985d;
+  }
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+  &-commodityInfo {
+    flex: 1;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    justify-content: flex-start;
+  }
+  &-name {
+    font-size: 14px;
+    color: #303133;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  &-integralName {
+    font-size: 14px;
+    color: #303133;
+    margin-top: 8px;
+  }
+  &-commodityPriceWrap {
+    display: flex;
+    align-items: center;
+  }
+  &-commodityPrice {
+    color: #FA8C16;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-saleCount {
+    color: #909399;
+    font-size: 12px;
+  }
+  &-saleCountWrap {
+    margin-left: auto;
+  }
+  &-scrollItemLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+  &-soldInfo {
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  &-soldRateBox {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background-color: #F4F5F7;
+    border-radius: 2px;
+  }
+  &-soldRate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    background-color: #FA8C16;
+    border-radius: 2PX;
+  }
+  &-soldCountBox {
+    margin-top: 4px;
+    display: flex;
+  }
+  &-soldCount {
+    color: #909399;
+    font-size: 12px;
+  }
+  &-exchangeBtn {
+    background-color: #FF991F;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    border-radius: 34px;
+  }
+  &-exchangeBtnText {
+    color: #FFFFFF;
+    font-size: 12px;
+  }
+  &-indicatorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0px;
+  }
+  &-indicator {
+    margin-bottom: 8px;
+  }
+  &-indicatorText {
+    font-size: 12px;
+    color: #909399;
+    display: flex;
+    align-items: center;
+  }
+  &-tabsItem {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+  }
+  &-tabsItemActiveSplit {
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background-color: #FA8C16;
+    bottom: 0;
+  }
+  &-tabsItemText {
+    font-size: 14px;
+    color: #606266;
+  }
+  &-tabsItemTextActive {
+    color: #303133;
+    font-weight: bold;
+  }
+  &-scrollLable {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &-scrollLableTitle {
+    color: #303133;
+    font-size: 14px;
+  }
+  &-scrollLableDate {
+    font-size: 12px;
+    color: #909399;
+    margin-top: 8px;
+  }
+  &-countText {
+    color: #FA8C16;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-reduceText {
+    color: #303133;
+  }
+}

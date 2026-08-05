@@ -1,0 +1,35 @@
+.cell {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  .label {
+    flex: 0 0 250px;
+    color: #909399;
+  }
+  .content {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    .selector {
+      min-width: 68px;
+      height: 32px;
+      color: #252d37;
+      background: #fafbfc;
+      text-align: center;
+      line-height: 32px;
+      padding: 0px 4px;
+    }
+  }
+}
+.colStyle {
+  padding: 10px 16px;
+  background-color: #fafbfc;
+  .cell {
+    margin-bottom: 0px;
+    .label,
+    .content {
+      flex: 1;
+    }
+  }
+}

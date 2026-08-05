@@ -1,0 +1,66 @@
+@import url('../../common.less');
+
+.@{prefixCls}-marketingCard-collageContainer {
+  background-color: #fff;
+
+  &-showList {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 12px;
+    overflow: hidden;
+
+    &-item {
+      width: 20%;
+      box-sizing: border-box;
+      padding: 8px;
+
+      img {
+        width: 100%;
+      }
+
+      &.ative {
+        padding: 0;
+        border: 1px solid #ef3346;
+        border-radius: 4px;
+      }
+
+      &-null {
+        width: 20%;
+        box-sizing: border-box;
+        margin: 8px;
+        height: 56px;
+        border: 1px dashed #c8cacd;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-wrap {
+      height: 4px;
+      background-color: #eef0f3;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      width: 48px;
+
+      &-item {
+        height: 4px;
+        background-color: #00a98f;
+        border-radius: 2px;
+        position: absolute;
+        width: 24px;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

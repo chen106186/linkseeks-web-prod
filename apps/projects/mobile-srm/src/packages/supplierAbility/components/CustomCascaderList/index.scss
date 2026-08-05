@@ -1,0 +1,40 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.cascader-list {
+  &-add {
+    &-icon {
+      padding: 0 $spacing-v-md;
+      position: relative;
+      top: -2px;
+    }
+
+    .at-button {
+      border: none;
+    }
+  }
+
+  &-list {
+    &-item {
+      display: flex;
+      align-items: center;
+      padding-top: $spacing-v-lg - 2;
+      padding-bottom: $spacing-v-lg - 2;
+      overflow: hidden;
+      @include border-thin-bottom($color-bg-base);
+
+      &-delete {
+        padding-left: $spacing-h-lg;
+      }
+
+      &-control {
+        flex: 1;
+      }
+
+      .cascader-arrow {
+        display: none;
+      }
+    }
+  }
+}

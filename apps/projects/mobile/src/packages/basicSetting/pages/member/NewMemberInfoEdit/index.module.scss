@@ -1,0 +1,223 @@
+@import "@/styles/variables.scss";
+.main {
+  flex: 1;
+	height: 100vh;
+	display: flex;
+  flex-direction: column;
+  background-color: #f4f5f7;
+	:global{
+		.radio-button-group {
+			width: 100% !important;
+		}
+	}
+}
+.page {
+	flex: 1;
+  background-color: #f4f5f7;
+  padding-top: 16px;
+}
+.multi-picker {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.multi-picker-item {
+  font-size: 14px;
+}
+.speed {
+  padding-top: 0px;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}
+.container {
+  background-color: #fff;
+  flex-direction: column;
+  padding: 18px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 24px;
+  padding: 18px;
+  padding-top: 50px;
+  background-color: #fff;
+}
+.speed-item {
+  height: 3px;
+  background-color: $theme-color;
+  width: 50px;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+.ative {
+  background-color: #eef0f3;
+  height: 3px;
+  width: 50px;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+.tips {
+  font-size: 16px;
+  border-left-color: $theme-color;
+  border-left-width: 3px;
+  padding-left: 5px;
+	display: flex;
+	align-items: center;
+}
+.tips-color {
+	background: $theme-color;
+	height: 16px;
+	width: 4px;
+	margin-right: 8px;
+	display: inline-block;
+	border-radius: 2px;
+}
+.tips-text {
+  padding-left: 0px;
+}
+.member-edit {
+  :global{
+		.at-form::after {
+			border: none;
+		}
+		.at-input {
+			// padding: 0;
+			margin-left: 0;
+		}
+	}
+  .RadioBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+.from {
+  padding-top: 20px;
+  flex-direction: column;
+}
+.warp {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.input-container {
+  border-bottom-width: 1px;
+  border-bottom-color: #f4f5f7;
+  margin-bottom: 10px;
+}
+.input {
+  background-color: red;
+}
+.form-item {
+  width: 100%;
+}
+.item {
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.iconS {
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+}
+.item-title {
+  color: #606266;
+  font-size: 12px;
+}
+.submit {
+  background-color: #f4f5f7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.error {
+  font-size: 12px;
+  color: red;
+}
+.color {
+  color: #fff;
+}
+.submit-btn {
+  background-color: $theme-color;
+  border-radius: 8px;
+}
+
+.UploadWarp {
+  text-align: center;
+  padding: 10px 0;
+  align-items: center;
+  background-color: #fafbfc;
+  border: 1px dashed #eef0f3;
+	border-radius: 8px;
+  image,
+  taro-image-core {
+    width: 40px;
+    height: 40px;
+  }
+  .UploadWarpText {
+    text-align: center;
+    font-size: 14px;
+    color: #909399;
+  }
+}
+.Img {
+  width: 100%;
+  height: 80px;
+}
+
+.icon-right {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.list-input {
+  text-align: right;
+}
+
+.list-container {
+  border: 0;
+  width: 100%;
+}
+
+.list-add-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.list-add-btnText {
+  font-size: 14px;
+  color: $theme-color;
+  margin-left: 8px;
+}
+
+.list-add-btnIcon {
+  width: 14px;
+  height: 14px;
+  color: $theme-color;
+}
+
+.long{
+	background-color: #F5F6F7;
+	height: 40px;
+	border-radius: 8px;
+	padding: 10px 8px;
+}
+
+.select-item{
+	background-color: #F5F6F7;
+	height: 40px;
+	border-radius: 8px;
+	padding: 10px 8px;
+	&-text{
+		font-size: 14px;
+	}
+}

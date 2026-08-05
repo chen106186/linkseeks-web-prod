@@ -1,0 +1,62 @@
+.shopName {
+  display: flex;
+  flex-direction: column;
+
+  &-top {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    color: #252d37;
+    font-size: 14px;
+
+    &-tag {
+      margin-left: 20px;
+      display: inline-block;
+      background: #fff0f2;
+      border-radius: 2px;
+      font-size: 12px;
+      color: #ef3346;
+      padding: 2px 4px;
+    }
+  }
+
+  &-bottom {
+    color: #909399;
+    font-size: 12px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    flex: 1;
+    font-size: 14px;
+    color: #252d37;
+  }
+
+  &-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+
+    &-tag {
+      display: inline-block;
+      padding: 2px 4px;
+      border-radius: 2;
+      background-color: #ebf9f6;
+      color: #00a98f;
+    }
+
+    &-time {
+      flex: 1;
+      color: #909399;
+      text-align: right;
+    }
+  }
+}

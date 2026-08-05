@@ -1,0 +1,73 @@
+@import '@/styles/variables.scss';
+
+.seckillItem {
+  margin-bottom: $spacing-h-lg;
+}
+
+.progress {
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 12px * $hd;
+
+    .progress-remain {
+      font-size: 10px;
+      color: #91959B;
+    }
+  }
+
+  &-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: $spacing-h-md;
+    color: #919598;
+    font-size: $font-size-sm;
+
+    &-highlight {
+      color: #ef3346;
+    }
+  }
+}
+
+.seckillPrice {
+  margin: 8px * $hd 0;
+}
+
+.seckillFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .countDownContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #F5F6F7;
+    width: 100%;
+    padding-left: 12px * $hd;
+    border-radius: 16px * $hd;
+
+    .isOut {
+      color: #91959B;
+      font-size: $font-size-sm;
+      font-weight: 600;
+    }
+
+    .countDown {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .countDownTitle {
+        color: #91959B;
+        font-size: $font-size-sm;
+        font-weight: 600;
+      };
+    };
+  }
+}
+

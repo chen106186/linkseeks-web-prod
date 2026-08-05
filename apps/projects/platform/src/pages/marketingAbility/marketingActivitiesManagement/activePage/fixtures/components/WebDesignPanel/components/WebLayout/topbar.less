@@ -1,0 +1,40 @@
+.topBar {
+  width: 100%;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f4f5f7;
+
+  &-content {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+
+    .toLogin {
+      color: #00a98f;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-item {
+        padding: 0 12px;
+        border-right: 1px solid #e5e5e5;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

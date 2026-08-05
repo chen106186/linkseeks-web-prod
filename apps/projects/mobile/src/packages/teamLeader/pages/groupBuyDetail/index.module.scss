@@ -1,10 +1,11 @@
 @import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 
 .container {
 	min-height: 100vh;
 	color: $color-text-base;
 	font-size: $font-size-base;
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 }
 
 .ml-4 {
@@ -45,7 +46,7 @@
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	background: #ffffff;
+	background: $theme-surface;
 	box-shadow: 0 2px 4px 0 #0000001f;
 	z-index: 1;
 
@@ -112,7 +113,7 @@
 			line-height: 24px;
 			border-radius: 4px;
 			border: 1px solid #ebecf0;
-			background: #ffffff;
+			background: $theme-surface;
 			text-align: center;
 			font-size: 12px;
 			color: #91959B;
@@ -131,7 +132,7 @@
 	width: 20px;
 	line-height: 20px;
 	border-radius: 4px;
-	background: #ffffff;
+	background: $theme-surface;
 	text-align: center;
 	color: #FC5512;
 }
@@ -139,7 +140,7 @@
 .delivery-goods {
 	margin: 8px;
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 }
 
 .delivery-goods-title {
@@ -152,7 +153,7 @@
 .delivery-info {
 	margin: 8px;
 	padding: 12px;
-	background-color: #ffffff;
+	background-color: $theme-surface;
 	border-radius: 8px;
 
 	&-title {
@@ -175,7 +176,7 @@
 		}
 
 		&.border-bottom {
-			border-bottom: 1px solid #F5F6F7;
+			border-bottom: 1px solid $theme-border-light;
 		}
 
 		&-label {
@@ -202,7 +203,7 @@
 .activity-info {
 	margin: 8px;
 	padding: 12px;
-	background-color: #ffffff;
+	background-color: $theme-surface;
 	border-radius: 8px;
 
 	&-title {
@@ -242,7 +243,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: #fff;
+	background-color: $theme-surface;
 
 	&-holder {
 		@include footer-size-style;
@@ -261,7 +262,7 @@
 			width: 40px;
 			height: 40px;
 			border-radius: 8px;
-			background: #ebf9f6;
+			background: $theme-primary-soft;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -315,15 +316,14 @@
 			width: 100%;
 			line-height: 40px;
 			border-radius: 8px;
-			background: #00a98f;
+		background: $theme-primary;
 			font-size: 14px;
 			font-weight: 500;
 			color: #fff;
 			text-align: center;
 
 			&.disabled {
-				//background: #80D4C7;
-				background: #00a98f;
+			background: $theme-primary;
 				opacity: 0.6;
 			}
 		}
@@ -331,7 +331,7 @@
 }
 .container-box {
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	padding: 4px 12px 12px 12px;
 	margin: 8px 8px 0 8px;
 	&-item {
@@ -359,12 +359,11 @@
 		width: 58px;
 		height: 20px;
 		border-radius: 4px;
-		border: 1px solid #00a98f;
-		color: #00a98f;
+	border: 1px solid $theme-primary;
+	color: $theme-primary;
 		font-size: 14px;
 		font-weight: 400;
 		text-align: center;
 		box-sizing: border-box;
 	}
 }
-

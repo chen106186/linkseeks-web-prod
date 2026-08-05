@@ -42,7 +42,7 @@
 	}
 	&-content {
 		border-radius: 8px;
-		background: #ffffff;
+		background: $theme-surface;
 		padding: 8px 12px 12px 12px;
 		margin-top: -6px;
 		.content-item {
@@ -112,11 +112,11 @@
 				font-size: 12px;
 				font-weight: 600;
 				&-bg1 {
-					background: #ebf9f6;
+					background: $theme-primary-soft;
 					color: $theme-color;
 				}
 				&-bg2 {
-					background: #F5F6F7;
+					background: $theme-page-bg;
 					color: #CCCED1;
 				}
 			}

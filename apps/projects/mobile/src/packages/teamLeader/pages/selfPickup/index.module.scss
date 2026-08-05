@@ -1,12 +1,14 @@
+@import '@/styles/variables.scss';
+
 .self-pickup {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 }
 .pickup-top {
-	background-color: #00A98F;
+	background-color: $theme-primary;
 	padding: 8px 0 45px 24px;
 }
 .pickup-top-title {
@@ -19,7 +21,7 @@
 }
 .self-top {
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	padding: 16px 12px;
 	margin: -30px 0 8px;
 }
@@ -49,7 +51,7 @@
 	align-items: center;
 	//justify-content: center;
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	padding: 16px 0;
 	margin-bottom: 8px;
 }
@@ -64,14 +66,14 @@
 	margin: 8px 0;
 }
 .self-code-text2 {
-	color: #00a98f;
+	color: $theme-primary;
 	font-size: 20px;
 	font-weight: 500;
 }
 .self-commodity {
 	padding: 0 12px;
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	margin-bottom: 8px;
 }
 .self-commodity-top {
@@ -81,7 +83,7 @@
 	color: #252d37;
 	font-size: 14px;
 	font-weight: 400;
-	border-bottom: 1px solid #F5F6F7;
+	border-bottom: 1px solid $theme-border-light;
 }
 .commodity-top-img {
 	width: 24px;
@@ -100,7 +102,7 @@
 .box-row-left {
 	width: 80px;
 	height: 80px;
-	border: 1px solid #f7f8fa;
+	border: 1px solid $theme-border-light;
 	border-radius: 4px;
 	margin-right: 8px;
 	box-sizing: border-box;
@@ -149,7 +151,7 @@
 .self-amount {
 	border-radius: 8px;
 	padding: 10px 12px;
-	background-color: #FFFFFF;
+	background-color: $theme-surface;
 	margin-bottom: 8px;
 }
 .self-amount-top {
@@ -189,7 +191,7 @@
 }
 .self-info {
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	padding: 12px;
 	margin-bottom: 8px;
 }
@@ -244,14 +246,14 @@
 	right: 0;
 	display: flex;
 	justify-content: flex-end;
-	background-color: #FFFFFF;
+	background-color: $theme-surface;
 	padding: 12px 12px 32px 12px;
 }
 .self-btm-btn1 {
 	width: 80px;
 	height: 32px;
 	border-radius: 4px;
-	background: #f5f6f7;
+	background: $theme-page-bg;
 	color: #303133;
 	text-align: center;
 	font-size: 12px;
@@ -263,10 +265,10 @@
 	width: 80px;
 	height: 32px;
 	border-radius: 4px;
-	background: #ebf9f6;
+	background: $theme-primary-soft;
 	text-align: center;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 32px;
-	color: #00a98f;
+	color: $theme-primary;
 }

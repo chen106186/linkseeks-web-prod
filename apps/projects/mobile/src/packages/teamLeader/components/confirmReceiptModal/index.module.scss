@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .ActionSheet-header {
 	display: flex;
 	align-items: center;
@@ -29,7 +31,7 @@
   margin-bottom: 15px;
   border-radius: 8px;
   text-align: center;
-  background-color: #00a98f;
+  background-color: $theme-primary;
   padding: 10px 0;
   color: #fff;
   // position: fixed;

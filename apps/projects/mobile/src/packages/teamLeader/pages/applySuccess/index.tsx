@@ -7,6 +7,7 @@ import NavBar from '@/components/NavBar'
 import styles from './index.module.scss'
 const successIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/teamleader-apply-success.png'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 
 const TeamLeaderApplySuccess: React.FC<{}> = () => {
   const intl = useIntl()
@@ -25,7 +26,7 @@ const TeamLeaderApplySuccess: React.FC<{}> = () => {
         titleColor="#fff"
         backIconColor="#fff"
         customClassName={styles['nav-bar-custom']}
-        customStyle="background-color: #00A98F;"
+        customStyle={`background-color: ${THEME_COLORS.primary};`}
         showBack={true}
         showExtra={false}
       />

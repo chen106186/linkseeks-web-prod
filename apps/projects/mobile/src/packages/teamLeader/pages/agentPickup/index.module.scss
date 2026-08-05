@@ -1,13 +1,15 @@
+@import '@/styles/variables.scss';
+
 .agent-pickup {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 	padding-top: 58px;
 }
 .pickup-top {
-  background-color: #00A98F;
+  background-color: $theme-primary;
   padding: 8px 0 20px 24px;
   position: fixed;
   top: 0;
@@ -30,7 +32,7 @@
 .pickup-box-commodity {
 	width: 100%;
   border-radius: 8px;
-  background: #ffffff;
+  background: $theme-surface;
   padding: 12px;
   margin-bottom: 8px;
 }
@@ -102,14 +104,14 @@
   left: 0;
   right: 0;
   padding: 0 8px 42px 8px;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   z-index: 999;
 }
 .pickup-btm-btn {
   height: 40px;
   border-radius: 8px;
   border: 1px solid #789ffe;
-  background: #00a98f;
+  background: $theme-primary;
   text-align: center;
   line-height: 40px;
   color: #ffffff;

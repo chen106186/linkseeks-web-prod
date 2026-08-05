@@ -5,12 +5,12 @@
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 	&-top {
 		display: flex;
 		align-items: center;
 		padding: 6px 16px;
-		background-color: #FFFFFF;
+		background-color: $theme-surface;
 	}
 	&-search {
 		flex: 1;
@@ -19,7 +19,7 @@
 		height: 32px;
 		border-radius: 194px;
 		border: 1px solid $theme-color;
-		background: #ffffff;
+		background: $theme-surface;
 		padding-left: 13px;
 		//margin-right: 10px;
 		&-input {
@@ -60,7 +60,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		background-color: #ffffff;
+	background-color: $theme-surface;
 
 		.tab {
 			line-height: 40px;
@@ -102,14 +102,14 @@
 		width: 100%;
 		margin-top: 8px;
 		padding: 10px 12px 12px 12px;
-		background: #ffffff;
+		background: $theme-surface;
 		border-radius: 8px;
 		&-top {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			padding-bottom: 10px;
-			border-bottom: 1px solid #F5F6F7;
+		border-bottom: 1px solid $theme-border-light;
 			&-left {
 				display: flex;
 				align-items: center;
@@ -158,7 +158,7 @@
 			width: 80px;
 			height: 32px;
 			border-radius: 4px;
-			background: #ebf9f6;
+		background: $theme-primary-soft;
 			color: $theme-color;
 			text-align: center;
 			font-size: 12px;
@@ -170,5 +170,4 @@
 		height: 100%;
 	}
 }
-
 

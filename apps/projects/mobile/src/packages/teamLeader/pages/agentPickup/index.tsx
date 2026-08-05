@@ -19,6 +19,7 @@ import { observer } from 'mobx-react-lite'
 import Empty from '@/components/Empty'
 import Loading from '@/components/Loading'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 const tradeIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/teamleader-trade.png'
 
 // 代客取货页
@@ -172,7 +173,7 @@ const TeamLeaderAgentPickup: React.FC<{}> = () => {
           <Progress
             percent={getPercent(item.received, item.quantity)}
             showInfo={false}
-            strokeColor="#00A98F"
+            strokeColor={THEME_COLORS.primary}
             trailColor="#edeeef"
             width={4}
             strokeWidth={4}

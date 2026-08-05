@@ -8,11 +8,11 @@
 	height: 100vh;
 	color: $color-text-base;
 	font-size: $font-size-base;
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 }
 
 .top {
-	background-color: #FFF;
+	background-color: $theme-surface;
 }
 
 .tabs {
@@ -23,7 +23,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #ffffff;
+	background-color: $theme-surface;
 
 	.tab {
 		line-height: 40px;

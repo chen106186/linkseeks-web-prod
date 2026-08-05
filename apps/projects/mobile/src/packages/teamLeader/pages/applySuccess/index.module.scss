@@ -1,15 +1,17 @@
+@import '@/styles/variables.scss';
+
 .apply-success {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-color: #F4F5F7;
+	background-color: $theme-page-bg;
 }
 .apply-success-box {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #00A98F;
+	background-color: $theme-primary;
 	height: 140px;
 	box-sizing: border-box;
 }

@@ -10,6 +10,7 @@ import FullScreenLoading from '@/components/Loading/fullscreenLoading'
 import Search from '@/components/Search'
 import { showToast, scanCode } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 const CameraIcon = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/camera.png'
 
 const TeamLeaderScanVerify: React.FC<{}> = () => {
@@ -109,7 +110,7 @@ const TeamLeaderScanVerify: React.FC<{}> = () => {
     <View className={styles['scan-verify']}>
       <View className={styles['scan-verify-top']}>
         <Search
-          background="#f5f6f7"
+          background={THEME_COLORS.page}
           customClassName={styles['scan-verify-search']}
           defaultValue={keyword}
           onSearch={handleSearch}

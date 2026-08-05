@@ -5,7 +5,7 @@
 		width: calc(100vw - 47PX);
 		bottom: 0;
 		transform: translate3d(0, 0, 0) !important;
-		background-color: #FFFFFF;
+		background-color: $theme-surface;
 
 		&.god-right-enter,
 		&.god-right-leave-to {
@@ -55,7 +55,7 @@
 	width: calc((100% - 24px) / 3); // 3 个一行，减去 2 个 gap 的总宽度
 	height: 32px;
 	border-radius: 4px;
-	background: #f5f6f7;
+	background: $theme-page-bg;
 	color: #5c626a;
 	text-align: center;
 	font-size: 12px;
@@ -65,7 +65,7 @@
 }
 
 .team-leader-drawer-option-selected {
-	background: #ebf9f6;
+	background: $theme-primary-soft;
 	color: $theme-color;
 }
 
@@ -79,7 +79,7 @@
 	width: 104px;
 	height: 40px;
 	border-radius: 8px;
-	background: #f5f6f7;
+	background: $theme-page-bg;
 	color: #303133;
 	text-align: center;
 	line-height: 40px;
@@ -90,7 +90,7 @@
 	width: 192px;
 	height: 40px;
 	border-radius: 8px;
-	background: #00a98f;
+	background: $theme-primary;
 	color: #ffffff;
 	text-align: center;
 	line-height: 40px;

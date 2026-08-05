@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .mine-piece {
 	border-radius: 8px;
-	background: #ffffff;
+	background: $theme-surface;
 	padding: 12px 12px 10px 12px;
 	margin-bottom: 8px;
 

@@ -3,6 +3,7 @@ import { Text, View, ScrollView, Tabs, TabsPane } from '@apps/mobile-ui'
 import { getSystemInfoSync, pxTransform } from '@apps/mobile-services/utils/taro'
 import { useIntl } from '@linkseeks/i18n'
 import { PRICE_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import useProductDetailJump from '@/hooks/useProductDetailJump'
 import GoodsItem from '../GoodsItem'
 import DetailItem from '../DetailItem'
@@ -82,7 +83,7 @@ const PackageContainer: React.FC<PackageContainerProps> = (props: PackageContain
           <TabsPane key={index} current={activeKey}>
             <ScrollView
               style={{
-                backgroundColor: '#fff',
+                backgroundColor: THEME_COLORS.surface,
                 minWidth: pxTransform(windowWidth - 16),
                 paddingTop: pxTransform(12),
                 paddingBottom: pxTransform(12),

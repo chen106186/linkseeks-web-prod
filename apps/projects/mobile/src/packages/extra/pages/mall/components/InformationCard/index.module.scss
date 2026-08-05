@@ -2,7 +2,9 @@
 
 
 .information-card {
-  background-color: #FFF;
+  background-color: $theme-surface;
+  border: 1px solid $theme-border-light;
+  box-shadow: $theme-shadow;
   border-radius: 8px;
   margin: 0 8px 8px 8px;
 
@@ -50,7 +52,7 @@
             overflow: hidden;
             white-space: nowrap;
             font-size: 12px;
-            color: #303133;
+            color: $theme-text;
             text-overflow: ellipsis;
           }
         }
@@ -60,7 +62,7 @@
     .rect {
       width: 2px;
       height: 2px;
-      background: #303133;
+      background: $theme-text;
     }
   }
 }

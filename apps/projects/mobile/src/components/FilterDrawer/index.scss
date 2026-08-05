@@ -6,7 +6,7 @@
     width: calc(100vw - 47PX);
     bottom: 0;
     transform: translate3d(0, 0, 0) !important;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
 
     &.god-right-enter,
     &.god-right-leave-to {

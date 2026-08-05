@@ -6,7 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: -$spacing-h-md;
-  background-color: #fff;
+  background-color: $theme-surface;
 
   .brandItem   {
     flex-basis: 25%;
@@ -29,7 +29,7 @@
       }
     }
     .name {
-      color: #606266;
+      color: $theme-text;
       font-size: $font-size-sm;
       text-align: center;
     }

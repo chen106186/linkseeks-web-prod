@@ -1,11 +1,11 @@
 @import '@/styles/variables.scss';
 
 .combination {
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px * $hd;
   padding: $spacing-v-lg;
   font-size: 16px * $hd;
-  color: #252D37;
+  color: $theme-title;
 
   .combination-title {
     margin-bottom: $spacing-v-md;
@@ -46,7 +46,7 @@
           height: 0;
           border: 12px solid;
           border-width: 12px * $hd;
-          border-color: #EF3346 transparent transparent #EF3346;
+          border-color: $theme-primary transparent transparent $theme-primary;
         }
 
         .combination-item-checked-icon {
@@ -58,7 +58,7 @@
         }
       }
       .combination-item-border-active {
-        border-color: #EF3346;
+        border-color: $theme-primary;
       }
 
       .simple-commodity {
@@ -79,7 +79,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: $spacing-h-lg;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid $theme-divider;
   }
 
 

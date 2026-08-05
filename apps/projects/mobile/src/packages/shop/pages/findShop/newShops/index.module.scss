@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .new-shops-container {
   display: flex;
   padding-left: 8PX;
@@ -12,7 +14,7 @@
     align-items: center;
     .title {
       font-size: 16PX;
-      color: #F5CD95;
+      color: $theme-accent;
       font-weight: bold;
       flex: 1;
 
@@ -21,7 +23,7 @@
   }
   .shop-scroll-wrap {
     margin-top: 8PX;
-    background-color: #FFF;
+    background-color: $theme-surface;
     border-radius: 8PX;
     .shop-list {
       display: flex;
@@ -45,7 +47,7 @@
           flex-direction: column;
           .shopname {
             font-size: 12PX;
-            color: #303133;
+            color: $theme-title;
             font-weight: bold;
 
           }
@@ -55,7 +57,7 @@
             margin-top: auto;
             .address-text {
               font-size: 12PX;
-              color: #909399;
+              color: $theme-text-secondary;
 
             }
           }
@@ -65,4 +67,3 @@
     }
   }
 }
-

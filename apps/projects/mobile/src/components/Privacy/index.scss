@@ -1,5 +1,6 @@
 @import '@apps/mobile-ui/packages/styles/variables/default.scss';
 @import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
 @import '@/styles/utils/text-overflow.scss';
 
 .privacy{
@@ -17,7 +18,7 @@
 		flex: 1;
 	}
 	&-container{
-		background-color: #fff;
+		background-color: $theme-surface;
 		border-radius: 16px 16px 0px 0px;
 		overflow: hidden;
 		height: 50%;
@@ -28,7 +29,7 @@
 		&-title{
 			height: 48px;
 			line-height: 48px;
-			color: #252d37;
+			color: $theme-title;
 			font-size: 16px;
 			font-weight: 500;
 			font-family: "PingFang SC";
@@ -39,7 +40,7 @@
 			flex: 1;
 		}
 		&-text{
-			color: #252d37;
+			color: $theme-text;
 			font-size: 14px;
 			font-weight: 400;
 			font-family: "PingFang SC";
@@ -63,8 +64,8 @@
 			&-button{
 				width: 48%;
 				height: 40px;
-				background-color: #f4f5f6;
-				color: #252d37;
+				background-color: $theme-disabled-bg;
+				color: $theme-title;
 				font-size: 16px;
 				font-weight: 500;
 				font-family: "PingFang SC";

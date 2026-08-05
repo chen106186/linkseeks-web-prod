@@ -6,7 +6,7 @@ $cell-list-prefix: 'cell-list';
 .cell-list {
   padding-left: 12px;
   padding-right: 12px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
 
   &__border {
     .#{$cell-list-prefix}-item {
@@ -25,7 +25,7 @@ $cell-list-prefix: 'cell-list';
       align-items: center;
       padding-top: $spacing-v-lg;
       padding-bottom: $spacing-v-lg;
-      background-color: #ffffff;
+      background-color: $theme-surface;
     }
 
     &-icon {

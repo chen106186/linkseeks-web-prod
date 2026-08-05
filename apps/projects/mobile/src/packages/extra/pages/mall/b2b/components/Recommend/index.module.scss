@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .mall-recommend {
   position: relative;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   display: flex;
   flex-direction: column;
 
@@ -13,7 +15,7 @@
     // z-index: 2;
 
     .mall-recommend-tabs {
-      background-color: #FFF;
+      background-color: $theme-surface;
     }
   }
 
@@ -61,7 +63,7 @@
 
   .tab-fix {
     position: absolute;
-    background-color: #FFF;
+    background-color: $theme-surface;
     top: 0;
     left: 0;
     height: 60px;
@@ -70,4 +72,3 @@
   }
 
 }
-

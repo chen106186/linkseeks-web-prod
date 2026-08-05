@@ -1,3 +1,4 @@
+@import '@/styles/variables.scss';
 
 .shop-commodity-list {
 	padding: 0 8px;
@@ -23,7 +24,7 @@
         .productItem_title_text {
           display: flex;
           flex: 1;
-          color: #252D37;
+          color: $theme-title;
           font-size: 16px;
           font-weight: 500;
         }

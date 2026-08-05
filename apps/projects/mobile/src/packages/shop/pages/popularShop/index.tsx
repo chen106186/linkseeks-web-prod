@@ -12,6 +12,7 @@ import { getCommodityMobileStoreMobilePopularStore } from '@apps/apis'
 import { getManageContentAdvertFindAllByColumnType } from '@apps/apis'
 import { getOssUrlPath } from '@apps/constants'
 import { useIntl } from '@linkseeks/i18n'
+import { THEME_COLORS } from '@/constants/theme'
 import useStores from '@/store/useStores'
 import styles from './index.module.scss'
 const Top1Icon = getOssUrlPath('/miniprogram/assets/images/TOP1.png')
@@ -273,9 +274,9 @@ const PopularShop: React.FC = () => {
                 id: 'popular_shop_title',
               })
         }
-        bgColor={calcCritical() ? 'rgba(0, 0, 0, 0)' : '#FFF'}
-        fontColor="#252d37"
-        iconColor={calcCritical() ? '#FFF' : '#252d37'}
+        bgColor={calcCritical() ? 'rgba(0, 0, 0, 0)' : THEME_COLORS.surface}
+        fontColor={THEME_COLORS.title}
+        iconColor={calcCritical() ? THEME_COLORS.surface : THEME_COLORS.title}
         style={{
           paddingBottom: 0,
           opacity: calcCritical() ? '1' : topOpacity,

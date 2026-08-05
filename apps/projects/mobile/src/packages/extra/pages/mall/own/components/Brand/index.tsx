@@ -5,6 +5,7 @@ import ImageBox from '@/components/ImageBox'
 import { useIntl } from '@linkseeks/i18n'
 import { getProductCommodityTemplateGetBrandList } from '@apps/apis'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 interface BrandItemType {
@@ -94,7 +95,7 @@ const Brand: React.FC<BrandProps> = (props) => {
       <View className={styles['brand-list']}>{_renderBrandList}</View>
     </View>
   ) : (
-    <View style={{ backgroundColor: '#FFF', margin: '8px', borderRadius: '8px' }}>
+    <View style={{ backgroundColor: THEME_COLORS.surface, margin: '8px', borderRadius: '8px' }}>
       <Skeleton.List column={3} row={2} item={<Skeleton height={40} style={{ margin: '6px' }} />} />
     </View>
   )

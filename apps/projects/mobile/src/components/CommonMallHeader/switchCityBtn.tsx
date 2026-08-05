@@ -10,6 +10,7 @@ import { View, Text, Icons } from '@apps/mobile-ui'
 import Router from '@/utils/router'
 import { observer } from 'mobx-react-lite'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import './index.scss'
 
 const SwitchCityBtn = () => {
@@ -27,7 +28,7 @@ const SwitchCityBtn = () => {
   return (
     <View className="actionsItem" onClick={() => Router.navigateTo('extra/switchCity')}>
       <Text className="actionsIteText">{currentCity?.cityName}</Text>
-      <Icons name="ChevronDown" color="#C8CACD" size={12} />
+      <Icons name="ChevronDown" color={THEME_COLORS.placeholder} size={12} />
     </View>
   )
 }

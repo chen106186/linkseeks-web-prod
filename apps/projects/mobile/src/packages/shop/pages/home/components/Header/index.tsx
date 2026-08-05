@@ -9,6 +9,7 @@ import { ShopInfoType } from '@/store/templateStore/model'
 import { useIntl } from '@linkseeks/i18n'
 import { postCommodityMobileStoreMobileCollect } from '@apps/apis'
 import Router from '@/utils/router'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 interface HeaderProps {
@@ -60,7 +61,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       </View>
       <View className={styles['shop-header-body']}>
         <NavBar
-          customRenderLeft={<Icons name="ChevronLeft" size={24} color="#FFF" onClick={() => Router.navigateBack()} />}
+          customRenderLeft={<Icons name="ChevronLeft" size={24} color={THEME_COLORS.surface} onClick={() => Router.navigateBack()} />}
           customClassName={styles['shop-header-nav']}
           title={
             <View className={styles['shop-header-search']}>
@@ -68,7 +69,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 className={styles['shop-header-search-body']}
                 onClick={() => Router.navigateTo('shop/shopSearch', { storeId: shopInfo?.id })}
               >
-                <Icons name="Search" size={20} color="#FFF" />
+                <Icons name="Search" size={20} color={THEME_COLORS.surface} />
                 <Text className={styles['shop-header-search-placeholder']}>
                   {intl.formatMessage({
                     id: 'shop_home_header_search_palceholder',
@@ -88,7 +89,7 @@ const Header: React.FC<HeaderProps> = (props) => {
               onClick={() => Router.navigateTo('shop/shopAbout', { shopId: shopInfo?.id })}
             >
               <Text className={styles['shop-header-store-info-name']}>{shopInfo?.name}</Text>
-              <Icons name="ChevronRight" size={14} color="#252D37" />
+              <Icons name="ChevronRight" size={14} color={THEME_COLORS.title} />
             </View>
             <ShopCreditInfo
               creditPoint={shopInfo?.creditPoint || 0}
@@ -102,9 +103,9 @@ const Header: React.FC<HeaderProps> = (props) => {
             onClick={handleCollect}
           >
             {collectStatus ? (
-              <Icons name="StarFill" size={14} color="#00A98F" />
+              <Icons name="StarFill" size={14} color={THEME_COLORS.primary} />
             ) : (
-              <Icons name="Star" size={14} color="#252D37" />
+              <Icons name="Star" size={14} color={THEME_COLORS.title} />
             )}
             {collectStatus ? (
               <Text className={styles['shop-header-collect-btn-text']}>

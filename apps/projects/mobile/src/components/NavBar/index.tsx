@@ -13,6 +13,7 @@ import { useStatusBarHeight } from '@apps/mobile-services'
 import Router from '../../utils/router'
 import './index.scss'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 
 interface NavBarProps {
   /**
@@ -147,7 +148,7 @@ NavBar.defaultProps = {
   customStyle: '',
   greedy: false,
   backIconName: 'ChevronLeft',
-  backIconColor: '#252D37',
+  backIconColor: THEME_COLORS.title,
   showBack: true,
   showExtra: true,
 }

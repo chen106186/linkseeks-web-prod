@@ -3,7 +3,7 @@
 .find-shop-container {
   display: flex;
   flex: 1;
-  background-color: $theme-color;
+  background-color: $theme-page-bg;
   flex-direction: column;
   height: 100vh;
   .search {
@@ -18,7 +18,7 @@
     padding-left: 8px;
     overflow: hidden;
     .keyword {
-      color: #91959b;
+      color: $theme-placeholder;
       margin-left: 8px;
       font-size: 14px;
       flex: 1;
@@ -40,10 +40,10 @@
     }
   }
   .search-container {
-    background-color: $theme-color;
+    background-color: $theme-page-bg;
     .search-body {
       width: 100%;
-      background-color: #f5f6f7;
+      background-color: $theme-surface;
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
       padding-left: 8px;
@@ -54,13 +54,13 @@
   }
   .linear-gradient-box {
     border-radius: 16px;
-    background-image: linear-gradient(#ffffff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient($theme-surface, rgba(252, 246, 240, 0));
     margin-top: 20px;
   }
 }
 
 .custom-nav {
-  background-color: $theme-color;
+  background-color: $theme-surface;
 }
 
 .custom-fixed-nav {
@@ -68,7 +68,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   opacity: 0;
   z-index: 1;
 }

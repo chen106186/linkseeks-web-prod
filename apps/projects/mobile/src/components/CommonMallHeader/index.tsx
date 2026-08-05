@@ -10,6 +10,7 @@ import {
 } from '@apps/apis'
 import Router from '@/utils/router'
 import useStores from '@/store/useStores'
+import { THEME_COLORS } from '@/constants/theme'
 import MallNavBar from './MallNavBar'
 import './index.scss'
 
@@ -144,7 +145,7 @@ const CommonMallHeader: React.FC<CommonMallHeaderProps> = (props) => {
         onClick={handleLink}
         extra={
           isSelf && (
-            <Icons name="ArrowDownFill" size={24} onClick={handleMoreLink} color="#303133" className="exchange_icon" />
+            <Icons name="ArrowDownFill" size={24} onClick={handleMoreLink} color={THEME_COLORS.title} className="exchange_icon" />
           )
         }
       />
@@ -156,7 +157,7 @@ const CommonMallHeader: React.FC<CommonMallHeaderProps> = (props) => {
       {_renderNavBar()}
       <View className="searchContainer">
         <View className="search" onClick={handleSearch}>
-          <Icons customStyle={{ margin: '0 8px' }} name="Search" color="#91959B" size={20} />
+          <Icons customStyle={{ margin: '0 8px' }} name="Search" color={THEME_COLORS.placeholder} size={20} />
           <View className="keyword">
             {isSelf
               ? intl.formatMessage({ id: 'mall_common_header_search_placeholder_self' })
@@ -190,7 +191,7 @@ const CommonMallHeader: React.FC<CommonMallHeaderProps> = (props) => {
               Router.navigateTo(isSelf ? 'extra/commonClassify' : 'extra/classify', { showBack: isSelf ? false : true })
             }
           >
-            <Icons name="Menu" color={styleTheme === 0 ? '#91959B' : '#FFFFFF'} size={24} />
+            <Icons name="Menu" color={styleTheme === 0 ? THEME_COLORS.textSecondary : THEME_COLORS.surface} size={24} />
           </View>
         </View>
       ) : null}

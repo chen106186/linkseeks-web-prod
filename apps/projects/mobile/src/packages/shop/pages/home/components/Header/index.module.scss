@@ -42,7 +42,7 @@
       align-items: center;
     }
     &-placeholder {
-      color: #FFF;
+    color: $theme-surface;
       font-size: 14px;
       margin-left: 4px;
     }
@@ -51,7 +51,7 @@
   &-container {
     display: flex;
     margin-top: 8px;
-    background-color: #FFF;
+    background-color: $theme-surface;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     padding: 12px;
@@ -73,7 +73,7 @@
 
     &-name {
       font-size: 14px;
-      color: #252D37;
+      color: $theme-title;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -86,7 +86,7 @@
     height: 24px;
     display: flex;
     align-items: center;
-    background-color: #F5F6F7;
+    background-color: $theme-disabled-bg;
 
     &.active {
       .shop-header-collect-btn-text {
@@ -96,7 +96,7 @@
 
     &-text {
       font-size: 12px;
-      color: #252D37;
+      color: $theme-title;
       margin-left: 4px;
     }
   }

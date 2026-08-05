@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F7F8FA;
+  background-color: $theme-disabled-bg;
   border-radius: 12px * $hd;
   width: 45px * $hd;
 }
@@ -46,14 +46,14 @@
 }
 .rankText {
   font-size: 14px * $hd;
-  color: #C0C3C8;
+  color: $theme-placeholder;
 }
 .commidtyNameText {
-  color: #303133;
+  color: $theme-title;
   font-size: 14px * $hd;
 }
 .soldText {
-  color: #909399;
+  color: $theme-text-secondary;
   font-size: 12px * $hd;
   margin-right: 4px * $hd;
 }

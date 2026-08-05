@@ -1,14 +1,16 @@
+@import '@/styles/variables.scss';
+
 .list {
 	padding: 12px;
 	border-radius: 8px;
-	background-color: #fff;
+	background-color: $theme-surface;
 	width: 250px;
 }
 
 .item {
 	font-size: 14px;
-	color: #999;
-	border-bottom: 1px solid #ccc;
+	color: $theme-text-secondary;
+	border-bottom: 1px solid $theme-border-light;
 	padding: 12px 0;
 	line-height: 24px;
 	text-align: center;

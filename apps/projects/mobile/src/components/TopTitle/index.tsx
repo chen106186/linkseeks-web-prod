@@ -10,7 +10,7 @@ import React, { useEffect, useState, CSSProperties } from 'react'
 import { View, Icons, Text } from '@apps/mobile-ui'
 import { getSystemInfo, pxTransform } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
-import { COLOR, PRIMARY } from '@/constants/theme'
+import { THEME_COLORS } from '@/constants/theme'
 import './index.scss'
 
 interface TopTitleProps {
@@ -55,10 +55,10 @@ const TopTitle: React.FC<TopTitleProps> = (props) => {
 }
 
 TopTitle.defaultProps = {
-  fontColor: '#FFF',
-  bgColor: COLOR[PRIMARY],
+  fontColor: THEME_COLORS.title,
+  bgColor: THEME_COLORS.surface,
   iconSize: 20,
-  iconColor: '#FFF',
+  iconColor: THEME_COLORS.title,
   style: {},
 }
 

@@ -4,7 +4,7 @@
 .businessCard {
   display: flex;
   flex-direction: row;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   align-items: center;
 
   &-left {
@@ -75,7 +75,7 @@
     position: relative;
     padding-right: calc($spacing-h-md / 2);
     padding-left: 10px;
-    background-color: #FFE6C8;
+    background-color: $theme-primary-soft;
     border-radius: 1px;
 
     &-imgWrap {
@@ -97,7 +97,7 @@
     }
 
     &-value {
-      color: #773100;
+      color: $theme-title;
       font-size: 10px;
       font-weight: 400;
     }
@@ -109,11 +109,11 @@
       padding: 0 2px;
       border-radius: 1px;
       padding-left: 0.5px;
-      border-color: #6A8DDA;
+      border-color: $theme-primary;
     }
 
     &-txt {
-      color: #6A8DDA;
+      color: $theme-primary;
       font-size: 10px;
       font-weight: 400;
     }

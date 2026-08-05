@@ -11,8 +11,8 @@
       padding-bottom: $spacing-v-lg;
       text-align: center;
       border-top-width: 1px;
-      border-color: #FFF;
-      background-color: #ffffff;
+      border-color: $theme-border-light;
+      background-color: $theme-surface;
       position: relative;
     }
 
@@ -22,7 +22,7 @@
       top: $spacing-v-lg;
       bottom: $spacing-v-lg;
       left: 0px;
-      background-color: #f4f5f7;
+      background-color: $theme-divider;
     }
 
     &-icon {

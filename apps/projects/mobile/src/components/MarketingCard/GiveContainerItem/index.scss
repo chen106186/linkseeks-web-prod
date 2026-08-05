@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .marketingCard-giveContainerItem-container {
   // padding-left: 12px;
   // padding-right: 12px;
@@ -15,12 +17,12 @@
       &-originalPrice {
         flex: 1;
         font-size: 10px;
-        color: #91959b;
+        color: $theme-text-secondary;
         text-decoration: line-through;
         margin-left: 4px;
       }
       &-discountPrice {
-        color: #ef3346;
+        color: $theme-primary;
         font-size: 10px;
         &-inner {
           font-size: 16px;
@@ -34,7 +36,7 @@
       height: 24px;
       width: 64px;
       border-radius: 12px;
-      background-image: linear-gradient(to right, #f87362, #ef3346);
+      background-image: linear-gradient(to right, #e6783b, #c64e22);
       &-text {
         color: #fff;
         font-size: 12px;

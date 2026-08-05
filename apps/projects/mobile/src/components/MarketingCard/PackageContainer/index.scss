@@ -2,7 +2,7 @@
 
 .marketingCard-packageContainer-container {
   &-bottom {
-    background-color: #fafbfc;
+    background-color: $theme-surface;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,11 +17,11 @@
       align-items: baseline;
       &-left {
         font-size: 12px;
-        color: #252d37;
+        color: $theme-title;
       }
       &-discountPrice {
         font-size: 10px;
-        color: #ef3346;
+        color: $theme-primary;
         &-inner {
           font-size: 16px;
         }
@@ -29,7 +29,7 @@
       &-originalPrice {
         flex: 1;
         font-size: 10px;
-        color: #91959b;
+        color: $theme-text-secondary;
         text-decoration: line-through;
         margin-left: 4px;
       }

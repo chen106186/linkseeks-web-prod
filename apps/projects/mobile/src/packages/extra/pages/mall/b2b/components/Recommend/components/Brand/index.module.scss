@@ -1,11 +1,13 @@
 
+@import '@/styles/variables.scss';
+
 .recommend-brand-list {
   display: flex;
   flex-direction: column;
   padding: 0 8px;
 
   &-item {
-    background-color: #FFF;
+    background-color: $theme-surface;
     border-radius: 8px;
 
     &-header {
@@ -18,7 +20,7 @@
         height: 40px;
         overflow: hidden;
         border-radius: 4px;
-        background-color: #FFF;
+        background-color: $theme-surface;
         border-width: 0.1px;
         border-color: #EEF0F3;
         margin-right: 8px;
@@ -52,7 +54,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #FAFBFC;
+          background-color: $theme-page-bg;
         }
       }
     }

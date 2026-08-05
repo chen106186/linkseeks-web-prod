@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .filter-page {
   position: fixed;
   top: 0;
@@ -5,7 +7,7 @@
   bottom: 0;
   left: 0;
   z-index: 999;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   transition-duration: 300;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }

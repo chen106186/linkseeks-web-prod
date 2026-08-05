@@ -1,7 +1,17 @@
 export const PRIMARY = 'PRIMARY';
 
 export const COLOR = {
-  [PRIMARY]: '#00A98F'
+  [PRIMARY]: '#D8612E'
+}
+
+export const THEME_COLORS = {
+  page: '#FBF6EF',
+  primary: '#D8612E',
+  title: '#542C19',
+  text: '#694633',
+  textSecondary: '#927462',
+  placeholder: '#AD9585',
+  surface: '#FCF6F0',
 }
 
 

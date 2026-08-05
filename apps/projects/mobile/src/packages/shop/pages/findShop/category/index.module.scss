@@ -26,14 +26,14 @@
       height: 48px;
       border-radius: 48px;
       margin-bottom: 4px;
-      border: 1px solid #000;
+      border: 1px solid $theme-border-light;
     }
     .nav-text {
       font-size: 12px;
       line-height: 14px;
       width: 49px;
       text-align: center;
-      color: #252d37;
+      color: $theme-title;
       margin-top: 4px;
       white-space: nowrap;
       overflow: hidden;

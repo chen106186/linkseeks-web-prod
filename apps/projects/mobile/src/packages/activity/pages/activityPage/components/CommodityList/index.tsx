@@ -4,6 +4,7 @@ import { ColumnCommodity, Price, RowCommodity } from '@/components/Commodity'
 import Progress from '@/components/Progress'
 import { useIntl } from '@linkseeks/i18n'
 import { PRICE_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import useProductDetailJump from '@/hooks/useProductDetailJump'
 import {
   ACTIVITY_BARGAIN,
@@ -269,8 +270,8 @@ const WrapCommodity: React.FC<Iprops> = (props: Iprops) => {
     return (
       <View style={styles.progress}>
         <Progress
-          strokeColor="#EF3346"
-          trailColor="#FFF0F2"
+          strokeColor={THEME_COLORS.primary}
+          trailColor="#F6DFCA"
           strokeWidth={6}
           percent={percent}
           customRenderText={

@@ -7,6 +7,7 @@
  */
 import React, { useEffect, useRef, CSSProperties } from 'react'
 import { View, Icons } from '@apps/mobile-ui'
+import { THEME_COLORS } from '@/constants/theme'
 import './index.scss'
 
 interface IProps {
@@ -69,7 +70,7 @@ const Spin: React.FC<IProps> = (props: IProps) => {
 }
 
 Spin.defaultProps = {
-  color: '#C0C4CC',
+  color: THEME_COLORS.placeholder,
   size: 14,
   customStyle: {},
 }

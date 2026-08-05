@@ -4,10 +4,64 @@ $at-button-height: 40px;
 
 $at-button-height-sm: 24px !default;
 
-$theme-color: #00a98f;
+$theme-page-bg: #fbf6ef;
+$theme-surface: #fcf6f0;
+$theme-surface-soft: #f9eee2;
+$theme-primary: #d8612e;
+$theme-primary-hover: #c95526;
+$theme-primary-active: #b94b21;
+$theme-primary-light: #f6dfca;
+$theme-primary-soft: #fff0e4;
+$theme-accent: #c78a4c;
+$theme-accent-light: #ead0ad;
+$theme-title: #542c19;
+$theme-text: #694633;
+$theme-text-secondary: #927462;
+$theme-placeholder: #ad9585;
+$theme-disabled-text: #c2afa1;
+$theme-border: #e8cbb1;
+$theme-border-light: #f0dfd0;
+$theme-divider: #f1e4d8;
+$theme-selected-bg: #fff0e4;
+$theme-disabled-bg: #f3ece5;
+$theme-mask: rgba(68, 39, 23, 0.45);
+$theme-shadow: 0 6px 20px rgba(105, 67, 38, 0.08);
+$theme-shadow-strong: 0 8px 24px rgba(105, 67, 38, 0.13);
+
+$theme-color: $theme-primary;
 
 /* The Color of O2Team Brand */
-$color-brand: #00A98F;
+$color-brand: $theme-primary;
+$color-brand-light: #e6783b;
+$color-brand-dark: $theme-primary-active;
+$color-primary: $theme-primary;
+$color-success: #4d9b62;
+$color-warning: $theme-accent;
+$color-grey-0: $theme-title;
+$color-grey-1: $theme-text;
+$color-grey-2: $theme-text-secondary;
+$color-grey-3: $theme-placeholder;
+$color-grey-4: $theme-border-light;
+$color-grey-5: $theme-divider;
+$color-grey-6: $theme-page-bg;
+$color-text-base: $theme-text;
+$color-text-secondary: $theme-primary;
+$color-text-title: $theme-title;
+$color-text-paragraph: $theme-text;
+$color-text-placeholder: $theme-placeholder;
+$color-text-disabled: $theme-disabled-text;
+$color-bg: $theme-surface;
+$color-bg-base: $theme-page-bg;
+$color-bg-grey: $theme-page-bg;
+$color-border-base: $theme-border-light;
+$color-border-split: $theme-divider;
+$color-border-light: $theme-border-light;
+$color-border-lighter: $theme-border-light;
+$color-border-lightest: $theme-surface-soft;
+$color-border-grey: $theme-border-light;
+$color-icon-base: $theme-text-secondary;
 
 /* Link */
-$color-link: #00A98F;
+$color-link: $theme-primary;
+$color-link-hover: $theme-primary-hover;
+$color-link-active: $theme-primary-active;

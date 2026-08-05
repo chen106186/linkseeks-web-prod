@@ -21,6 +21,7 @@ import {
   MOBILE_DESIGN_COMPONENT,
 } from '@apps/design-ui/src/constants'
 import { priceFormat } from '@apps/utils/src/format'
+import { THEME_COLORS } from '@/constants/theme'
 const ShopHome = () => {
   const { id } = getCurrentInstance().router?.params || {}
   const [refreshing, setRefreshing] = useState<boolean>(false)
@@ -281,7 +282,7 @@ const ShopHome = () => {
         style={{
           flex: 1,
           height: 0,
-          backgroundColor: '#F5F6F7',
+          backgroundColor: THEME_COLORS.page,
         }}
         onRefresherRefresh={handleRefresh}
       >

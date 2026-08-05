@@ -5,6 +5,7 @@ import Router from '@/utils/router'
 import ImageBox from '@/components/ImageBox'
 import Rating from '@/components/Rating'
 import { useIntl } from '@linkseeks/i18n'
+import { THEME_COLORS } from '@/constants/theme'
 import { CurrentCityType } from '@/store/locationStore/model'
 import {
   GetCommodityMobileStoreMobilePopularStoreResponse,
@@ -66,7 +67,7 @@ const PopularShops = (props: PopularShopsProps) => {
           }}
         >
           <Text className={styles['more-link']}>{intl.formatMessage({ id: 'findShop_popularShops_more' })}</Text>
-          <Icons name="ChevronRight" size={16} color="#91959B" />
+          <Icons name="ChevronRight" size={16} color={THEME_COLORS.textSecondary} />
         </View>
       </View>
       <ScrollView

@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Tabs, TabsPane } from '@apps/mobile-ui'
 import { getSystemInfoSync, pxTransform } from '@apps/mobile-services/utils/taro'
 import { useIntl } from '@linkseeks/i18n'
 import { PRICE_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import useProductDetailJump from '@/hooks/useProductDetailJump'
 
 import GoodsItem from '../GoodsItem'
@@ -111,7 +112,7 @@ const GiveContainerItem: React.FC<GiveContainerItemProps> = (props: GiveContaine
       <DetailItem
         {...props}
         tag={_needBtn ? '' : intl.formatMessage({ id: 'components.marketingCard.giveContainerItem.tag' })}
-        tagColor={_needBtn ? [] : ['#EF3346', '#EF3346']}
+        tagColor={_needBtn ? [] : ['#D8612E', '#D8612E']}
         containStyle={{ padding: 0 }}
         detail={detail}
         detailType="give"
@@ -126,7 +127,7 @@ const GiveContainerItem: React.FC<GiveContainerItemProps> = (props: GiveContaine
                 key={`TabsPane_ScrollView_${childIndex}`}
                 keyExtractor={(item) => `${item.id}`}
                 style={{
-                  backgroundColor: '#fff',
+                  backgroundColor: THEME_COLORS.surface,
                   minWidth: pxTransform(windowWidth - 40),
                   paddingTop: pxTransform(12),
                   paddingBottom: pxTransform(12),

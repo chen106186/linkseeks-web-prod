@@ -1,4 +1,5 @@
 @import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 @import '@/styles/utils/text-overflow.scss';
 
 $nav-bar-prefix: 'nav-bar';
@@ -8,7 +9,7 @@ $nav-bar-prefix: 'nav-bar';
   flex-direction: row;
   align-items: center;
   padding: 0 $spacing-h-lg;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   box-sizing: border-box;
 
   &-left-view {

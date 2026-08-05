@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: #f4f5f7;
+    background-color: $theme-page-bg;
   }
   .tabBottom-tabs {
 		position: relative;
@@ -24,7 +24,7 @@
     padding: 6px 0;
     display: flex;
     flex-direction: row;
-    background-color: #fff;
+    background-color: $theme-surface;
     .tabBottom-tab-item {
       flex: 1;
       display: flex;
@@ -34,7 +34,7 @@
       font-size: 12px;
 			position: relative;
       .activeText {
-        color: $theme-color;
+        color: $theme-primary;
       }
       .at-button__text {
 

@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .marketingCard-goodsItem-container {
   display: flex;
   flex-direction: column;
@@ -33,7 +35,7 @@
 
     .marketingCard-goodsItem-container-product-name {
       font-size: 14px;
-      color: #252D37;
+      color: $theme-title;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -50,17 +52,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ef3346;
+    border: 1px solid $theme-primary;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 6px;
     margin-bottom: 8px;
-    background-color: #fff;
+    background-color: $theme-surface;
     &-text {
       font-size: 10px;
-      color: #ef3346;
+      color: $theme-primary;
     }
   }
   &-price {
@@ -69,13 +71,13 @@
     justify-content: center;
     &-discountPrice {
       font-size: 10px;
-      color: #ef3346;
+      color: $theme-primary;
       &-in {
         font-size: 16px;
       }
     }
     &-originalPrice {
-      color: #91959b;
+      color: $theme-text-secondary;
       font-size: 10px;
       margin-top: 3px;
       text-decoration: line-through;

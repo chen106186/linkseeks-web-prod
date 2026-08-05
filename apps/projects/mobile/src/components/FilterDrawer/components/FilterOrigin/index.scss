@@ -7,7 +7,7 @@ $filter-tofu-prefix: 'filter-tofu';
 .filter-page {
   &-popup {
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-page {

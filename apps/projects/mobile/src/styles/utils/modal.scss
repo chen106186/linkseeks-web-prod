@@ -84,7 +84,7 @@
 			.at-modal__content {
 				padding-top: 8px;
 				min-height: 35px;
-				color: #91959B;
+				color: $theme-text-secondary;
 				text-align: center;
 			}
 			.at-modal__action {
@@ -103,7 +103,7 @@
 				height: 40px;
 				line-height: 40px;
 				border-radius: 8px;
-				background-color: #00a98f;
+				background-color: $theme-primary;
 				&:last-child {
 					color: #FFF;
 				}
@@ -112,7 +112,7 @@
 				height: 40px;
 				line-height: 40px;
 				border-radius: 8px;
-				background-color: #00a98f;
+				background-color: $theme-primary;
 			}
 
       .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),

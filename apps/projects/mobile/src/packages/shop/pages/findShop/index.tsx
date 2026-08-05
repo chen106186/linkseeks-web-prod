@@ -8,6 +8,7 @@ import { useIntl } from '@linkseeks/i18n'
 import useStores from '@/store/useStores'
 import { getCommodityMobileStoreMobileMemberShopList } from '@apps/apis'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import { observer } from 'mobx-react-lite'
 import Category from './category'
 import PopularShops from './popularShops'
@@ -38,7 +39,7 @@ const SearchComponent = (props: { style?: any; type?: number }) => {
         })
       }}
     >
-      <Icons name="Search" size={20} color="#91959B" />
+      <Icons name="Search" size={20} color={THEME_COLORS.textSecondary} />
       <Text className={styles['keyword']}>
         {type === 1
           ? intl.formatMessage({
@@ -79,8 +80,8 @@ const FindShop = () => {
   useEffect(() => {
     // setNavigationBarTitle({ title: intl.formatMessage({ id: 'findShop_navigationBarTitleText' }) })
     setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#ff0000',
+      frontColor: '#000000',
+      backgroundColor: THEME_COLORS.surface,
     })
   }, [])
   const handleScroll = (event: any) => {
@@ -90,21 +91,21 @@ const FindShop = () => {
     }
     if (y <= 0) {
       setNavigationBarColor({
-        frontColor: '#ffffff',
-        backgroundColor: '#ff0000',
+        frontColor: '#000000',
+        backgroundColor: THEME_COLORS.surface,
       })
       setCusOpacity(0)
     } else if (y < 80) {
       setNavigationBarColor({
         frontColor: '#000000',
-        backgroundColor: '#ff0000',
+        backgroundColor: THEME_COLORS.surface,
       })
       setCusOpacity(y / 60)
     } else {
       setCusOpacity(1)
       setNavigationBarColor({
         frontColor: '#000000',
-        backgroundColor: '#ff0000',
+        backgroundColor: THEME_COLORS.surface,
       })
     }
   }
@@ -199,7 +200,7 @@ const FindShop = () => {
           <SearchComponent
             type={2}
             style={{
-              backgroundColor: '#F7F8FA',
+              backgroundColor: THEME_COLORS.surface,
               border: 0,
               borderRadius: '16px',
             }}
@@ -216,7 +217,7 @@ const FindShop = () => {
         style={{
           flex: 1,
           height: '100%',
-          backgroundColor: '#F5F6F7',
+          backgroundColor: THEME_COLORS.page,
           display: 'flex',
           flexDirection: 'column',
         }}
@@ -235,7 +236,7 @@ const FindShop = () => {
             title={
               <Text
                 style={{
-                  color: '#fff',
+                  color: THEME_COLORS.title,
                 }}
               >
                 {intl.formatMessage({
@@ -244,7 +245,7 @@ const FindShop = () => {
               </Text>
             }
             customClassName={styles['custom-nav']}
-            backIconColor="#FFF"
+            backIconColor={THEME_COLORS.title}
           />
           <View className={styles['search-container']}>
             <View className={styles['search-body']}>

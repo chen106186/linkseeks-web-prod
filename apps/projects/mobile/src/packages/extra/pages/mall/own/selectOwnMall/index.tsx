@@ -57,7 +57,7 @@ const SelectOwnMall = () => {
                   <ImageBox source={item.logoUrl} width={32} height={32} />
                   <Text className={styles.name}>{item.name}</Text>
                   {shopItem?.id === item.id && (
-                    <Icons name="Right" color="#00A98F" className={styles.right_icon} size={16} />
+                    <Icons name="Right" color="#D8612E" className={styles.right_icon} size={16} />
                   )}
                 </View>
               </View>

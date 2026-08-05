@@ -3,7 +3,7 @@
 .row-commodity {
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+    background-color: $theme-surface;
   position: relative;
   padding: $spacing-h-md;
   border-radius: 8px * $hd;
@@ -32,7 +32,7 @@
     &-productName {
       line-height: 20px * $hd;
       font-size: $font-size-base;
-      color: #252D37;
+      color: $theme-title;
     }
 
     &-middleArea {

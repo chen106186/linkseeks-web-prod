@@ -1,4 +1,6 @@
 
+@import '@/styles/variables.scss';
+
 .container {
   position: relative;
   padding: 0 4px;
@@ -17,7 +19,10 @@
       padding: 0 4px;
 
       .showCaseItemBody {
-        background-color: #FFF;
+        box-sizing: border-box;
+        background-color: $theme-surface;
+        border: 1px solid $theme-border-light;
+        box-shadow: $theme-shadow;
         border-radius: 8px;
       }
     }

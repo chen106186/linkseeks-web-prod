@@ -3,7 +3,7 @@
 .shop-item {
   width: 100%;
   padding-bottom: 0px;
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px;
   padding-left: 12px;
   padding-right: 12px;
@@ -17,9 +17,9 @@
     .shop-logo {
       overflow: hidden;
       border-radius: 4px;
-      background-color: #fff;
+      background-color: $theme-surface;
       border-width: 0.1;
-      border-color: #eef0f3;
+      border-color: $theme-border-light;
       margin-right: 8px;
       .logo {
         height: 40px;
@@ -36,7 +36,7 @@
         .shop-name {
           font-size: 12px;
           overflow: hidden;
-          color: #303133;
+          color: $theme-title;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
@@ -52,10 +52,10 @@
       padding: 0 8px;
       align-items: center;
       justify-content: center;
-			background-color: #F4F5F7;
+			background-color: $theme-disabled-bg;
       .enter-shop-btn-text {
         font-size: 12px;
-				color: #252D37;
+				color: $theme-title;
         // color: $theme-color;
       }
     }
@@ -73,7 +73,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        color: #303133;
+        color: $theme-title;
         width: 106px;
         font-size: 12px;
         margin-top: 6px;
@@ -84,11 +84,11 @@
         margin-top: 8px;
         align-items: center;
         .goods-price-unit {
-          color: #303133;
+          color: $theme-primary;
           font-size: 14px;
         }
         .goods-price {
-          color: #303133;
+          color: $theme-primary;
           font-size: 14px;
         }
       }
@@ -103,7 +103,7 @@
           padding-right: 4px;
           padding-top: 2px;
           padding-bottom: 2px;
-          background-color: #f0f7ff;
+          background-color: $theme-primary-soft;
           border-radius: 2px;
           display: inherit;
           .ask-commodity-price-text {

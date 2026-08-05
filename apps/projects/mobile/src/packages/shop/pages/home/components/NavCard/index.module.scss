@@ -1,7 +1,9 @@
 @import '@/styles/variables.scss';
 
 .common-nav-card {
-  background-color: #fff;
+  background-color: $theme-surface;
+  border: 1px solid $theme-border-light;
+  box-shadow: $theme-shadow;
   border-radius: 8px;
   margin: 8px;
   padding: 6px 0;
@@ -31,7 +33,7 @@
       position: relative;
       width: 24px;
       height: 3px;
-      background-color: #eef0f3;
+      background-color: $theme-border-light;
       border-radius: 3px;
 
       .actives {
@@ -60,7 +62,7 @@
     }
 
     .navText {
-      color: #606266;
+      color: $theme-text;
       font-size: 12px;
       overflow: hidden;
       white-space: nowrap;

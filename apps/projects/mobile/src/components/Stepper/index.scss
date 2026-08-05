@@ -13,7 +13,7 @@
     margin-right: $spacing-h-sm - 1;
 
     &__disable {
-      background-color: #EEF0F3;
+      background-color: $theme-disabled-bg;
     }
   }
 
@@ -25,7 +25,7 @@
     margin-left: $spacing-h-sm - 1;
 
     &__disable {
-      color: #C8C9CC;
+      color: $theme-disabled-text;
     }
   }
 
@@ -37,7 +37,7 @@
     .at-input {
       padding: 0;
       margin: 0;
-      background-color: #F5F6F7;
+      background-color: $theme-disabled-bg;
 
       &__input {
         text-align: center;
@@ -50,7 +50,7 @@
   .search-content {
     flex: 1;
     padding-left: $spacing-h-lg;
-    background-color: #F7F8FA;
+    background-color: $theme-surface;
     border-radius: 2px;
   }
 }

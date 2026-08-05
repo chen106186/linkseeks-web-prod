@@ -14,7 +14,7 @@
 
     .progress-remain {
       font-size: 10px;
-      color: #91959B;
+      color: $theme-text-secondary;
     }
   }
 
@@ -23,11 +23,11 @@
     flex-direction: row;
     align-items: center;
     margin-left: $spacing-h-md;
-    color: #919598;
+    color: $theme-text-secondary;
     font-size: $font-size-sm;
 
     &-highlight {
-      color: #ef3346;
+      color: $theme-primary;
     }
   }
 }
@@ -46,13 +46,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: #F5F6F7;
+    background: $theme-disabled-bg;
     width: 100%;
     padding-left: 12px * $hd;
     border-radius: 16px * $hd;
 
     .isOut {
-      color: #91959B;
+      color: $theme-text-secondary;
       font-size: $font-size-sm;
       font-weight: 600;
     }
@@ -63,11 +63,10 @@
       align-items: center;
 
       .countDownTitle {
-        color: #91959B;
+        color: $theme-text-secondary;
         font-size: $font-size-sm;
         font-weight: 600;
       };
     };
   }
 }
-

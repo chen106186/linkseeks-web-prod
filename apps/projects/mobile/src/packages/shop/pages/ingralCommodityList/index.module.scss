@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 
 .container {
-  background-color: #f4f5f7;
+  background-color: $theme-page-bg;
   flex: 1;
   height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@
   .filter-box {
     height: 40px;
     align-items: center;
-    background-color: #fff;
+    background-color: $theme-surface;
     padding-left: 16px;
     padding-right: 16px;
     display: flex;

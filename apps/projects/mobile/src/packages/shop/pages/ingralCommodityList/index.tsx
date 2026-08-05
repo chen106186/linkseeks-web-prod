@@ -6,6 +6,7 @@ import { observer } from 'mobx-react-lite'
 import Router from '@/utils/router'
 import { useStores } from '@/store/useStores'
 import { PRICE_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import useProductDetailJump from '@/hooks/useProductDetailJump'
 import { useIntl } from '@linkseeks/i18n'
 import Empty from '@/components/Empty'
@@ -224,8 +225,8 @@ const IngralCommodityList = observer(() => {
                 })}
               </Text>
               <View className={styles['filter-arrow-box']}>
-                <Icons name="ArrowUpFill" size={10} color={orderType === 4 ? '#00A98F' : '#909399'} />
-                <Icons name="ArrowDownFill" size={10} color={orderType === 3 ? '#00A98F' : '#909399'} />
+                <Icons name="ArrowUpFill" size={10} color={orderType === 4 ? THEME_COLORS.primary : THEME_COLORS.textSecondary} />
+                <Icons name="ArrowDownFill" size={10} color={orderType === 3 ? THEME_COLORS.primary : THEME_COLORS.textSecondary} />
               </View>
             </View>
           </View>
@@ -234,7 +235,7 @@ const IngralCommodityList = observer(() => {
       <ScrollView
         style={{
           flex: 1,
-          backgroundColor: '#F4F5F7',
+          backgroundColor: '#FBF6EF',
           height: 0,
         }}
         contentContainerStyle={{

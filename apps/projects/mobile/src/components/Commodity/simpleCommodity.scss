@@ -53,7 +53,7 @@ $rankColor: rgb(253,198,98), rgb(197,195,196), rgb(235,179,136);
     .simple-commodity-name {
       display: -webkit-box;
       font-size: $font-size-sm;
-      color: #252D37;
+      color: $theme-title;
       line-height: $line-height-zh;
       word-break: break-all;
       text-overflow: ellipsis;  //超出文字用省略号代替

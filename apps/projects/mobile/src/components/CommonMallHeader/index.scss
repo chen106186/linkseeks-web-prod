@@ -7,7 +7,7 @@
   flex-direction: row;
   align-items: center;
   padding: 0 $spacing-h-lg;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   box-sizing: border-box;
 
   .mall_nav_bar_title {
@@ -18,7 +18,7 @@
     max-width: 180px;
 
     &_text {
-      color: $color-grey-0;
+      color: $theme-title;
       font-size: $font-size-xl;
       font-weight: 500;
       @include text-overflow();
@@ -48,7 +48,7 @@
 
   .self-header-title {
     font-size: 16px;
-    color: #303133;
+    color: $theme-title;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -68,10 +68,10 @@
 }
 
 .common-mall-header {
-  background-color: #FFF;
+  background-color: $theme-surface;
 
   .searchContainer {
-    background-color: #FFF;
+    background-color: $theme-surface;
     margin: 4px 8px;
     height: auto;
 
@@ -87,7 +87,7 @@
 
       .keyword {
         flex: 1;
-        color: #91959B;
+        color: $theme-placeholder;
         font-size: 14px;
         height: 100%;
         display: flex;
@@ -101,7 +101,7 @@
         font-size: 14px;
         height: 100%;
         padding: 0 12px;
-        background-color: $theme-color;
+        background: linear-gradient(135deg, #e6783b 0%, #d55d2b 55%, #c64e22 100%);
         // border-radius: 4px;
         color: #FFF;
         display: flex;
@@ -115,7 +115,7 @@
     height: 36px;
     display: flex;
     align-items: center;
-    background-color: #FFF;
+    background-color: $theme-surface;
 
     .scrollView {
       width: 90%;
@@ -136,10 +136,10 @@
         .categoryText {
           font-size: 14px;
           font-weight: 500;
-          color: #606266;
+          color: $theme-text;
 
           &.active {
-            color: $theme-color;
+            color: $theme-primary;
           }
         }
       }
@@ -159,10 +159,10 @@
   }
 
 	&.science {
-		background-color: $theme-color;
+		background-color: $theme-primary;
 
 		.mall_nav_bar, .categoryContainer {
-			background-color: $theme-color;
+			background-color: $theme-primary;
 		}
 
 		.mall_nav_bar_title_text, .actionsIteText {
@@ -182,8 +182,7 @@
 		}
 
 		.search {
-			border: 2px solid #FFFFFF;
+			border: 2px solid $theme-surface;
 		}
 	}
 }
-

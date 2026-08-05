@@ -6,7 +6,7 @@
   /** 删除 **/
   // margin: $spacing-h-lg;
   // padding: $spacing-h-lg;
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px * $hd;
   padding: $spacing-h-lg;
 
@@ -15,7 +15,7 @@
     padding: 0;
 
     .product-tag {
-      background-color: #EF3346;
+      background-color: $theme-primary;
       color: #fff;
       font-size: $font-size-sm;
       padding: $spacing-h-sm $spacing-h-sm;
@@ -37,7 +37,7 @@
 
       .at-tabs__item {
         font-size: 12px * $hd;
-        color: #252D37;
+        color: $theme-title;
         padding: 0 12px * $hd 8px * $hd 12px * $hd;
         font-weight: 600;
 				text-align: center;
@@ -48,7 +48,7 @@
         .at-tabs__item-underline {
           transform: scaleX(0.5);
           height: 3px * $hd;
-          background-color: #ef3346;
+          background-color: $theme-primary;
         }
       }
     }
@@ -72,7 +72,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 0 0 0;
-    border-top: 1px solid #F4F5F7;
+    border-top: 1px solid $theme-divider;
     margin-top: 12px;
   }
 }

@@ -92,7 +92,7 @@ const InformationCard: React.FC<InformationCardProps> = (props) => {
           </View>
         </View>
         <View onClick={() => Router.navigateTo('companyNews/newsHome')}>
-          <Icons name="ChevronRight" color="#91959B" size={16} />
+          <Icons name="ChevronRight" color="#927462" size={16} />
         </View>
       </View>
     </View>

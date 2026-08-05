@@ -17,7 +17,7 @@
 .commodity {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $theme-surface;
   overflow: hidden;
   border-radius: 8px * $hd;
   height: 100%;
@@ -43,7 +43,7 @@
     padding: 0 $spacing-h-md;
 
     .commodityName {
-      color: #303133;
+      color: $theme-title;
       font-size: $font-size-sm;
       line-height: $line-height-zh;
       overflow: hidden;
@@ -73,12 +73,12 @@
     flex-direction: row;
 
     .sale {
-      color: #91959B;
+      color: $theme-text-secondary;
       margin-left: 12px;
       font-size: 13px;
 
       .saleNumber {
-        color: #EF3346;
+        color: $theme-primary;
       }
     }
   }

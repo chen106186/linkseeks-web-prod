@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .mall-recommend {
   position: relative;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   display: flex;
   flex-direction: column;
   z-index: 3;
@@ -12,12 +14,12 @@
     top: -1px;
     transition: all 0.01s;
     z-index: 999;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
 
     &.fixed {
-      background-color: #FFF;
-      border-top: 2px solid #EDEEEF;
-      border-bottom: 1px solid #EDEEEF;
+      background-color: $theme-surface;
+      border-top: 2px solid $theme-divider;
+      border-bottom: 1px solid $theme-divider;
     }
 
     &__body {
@@ -52,7 +54,7 @@
   // }
 
   .swiper-wrap {
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -127,7 +129,7 @@
 
   .tab-fix {
     position: absolute;
-    background-color: #FFF;
+        background-color: $theme-surface;
     top: 0;
     left: 0;
     height: 60px;
@@ -136,4 +138,3 @@
   }
 
 }
-

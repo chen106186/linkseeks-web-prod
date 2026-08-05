@@ -1,7 +1,9 @@
+@import '@/styles/variables.scss';
+
 .marketingCard-commonContainer-container{
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #fff;
+  background-color: $theme-surface;
 }

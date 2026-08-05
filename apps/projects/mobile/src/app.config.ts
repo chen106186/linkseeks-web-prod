@@ -38,10 +38,11 @@ export default {
     factoryRouterPackage('companyNews', companyNewsRouter),
     factoryRouterPackage('members', membersRouter),
     factoryRouterPackage('commodityMerge', commodityMergeRouter, {
-      ezplayer: {
-        version: 'latest',
-        provider: 'wxf2b3a0262975d8c2',
-      },
+      // ezplayer 插件暂时注释，避免未授权时阻塞小程序启动编译
+      // ezplayer: {
+      //   version: 'latest',
+      //   provider: 'wxf2b3a0262975d8c2',
+      // },
     }),
     factoryRouterPackage('contract', contractRouter),
     factoryRouterPackage('shop', shopRouter),
@@ -56,7 +57,7 @@ export default {
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    navigationBarBackgroundColor: '#fcf6f0',
     navigationBarTitleText: '云链认养鲜',
     navigationBarTextStyle: 'black',
   },

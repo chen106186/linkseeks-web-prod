@@ -13,6 +13,7 @@ import CommonMallHeader from '@/components/CommonMallHeader'
 import Router from '@/utils/router'
 import { useIntl } from '@linkseeks/i18n'
 import { PRICE_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import useProductDetailJump from '@/hooks/useProductDetailJump'
 import NavList, { NavItemType } from './components/navs'
 import BrandList, { BrandType } from './components/brands'
@@ -132,7 +133,7 @@ const CategoryNavigation: React.FC<Iprops> = (props: Iprops) => {
         </View>
         <Tabs scroll tabList={tabList} current={current} onClick={handleOnTabClick} />
         <View className={styles['category-tab-more']} onClick={handleJump}>
-          <Icons name="Menu" size={26} color="#91959B" />
+          <Icons name="Menu" size={26} color={THEME_COLORS.textSecondary} />
         </View>
       </View>
     )
@@ -282,7 +283,7 @@ const CategoryNavigation: React.FC<Iprops> = (props: Iprops) => {
     return (
       <ScrollView
         style={{
-          backgroundColor: '#F5F6F7',
+          backgroundColor: THEME_COLORS.page,
           display: 'flex',
           flexDirection: 'column',
         }}

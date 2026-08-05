@@ -19,6 +19,7 @@ import Router from '@/utils/router'
 import { getIntl } from '@linkseeks/i18n'
 import { useMobileIntl } from '@apps/locales'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 
 interface MallNavBarProps {
   title: string | undefined
@@ -84,7 +85,7 @@ const MallNavBar: React.FC<MallNavBarProps> = (props) => {
         <Text className="mall_nav_bar_title_text" onClick={handleLink}>
           {title}
           {!shopAndSite?.isSelf && mallList.length > 1 && (
-            <Icons name="ArrowDownFill" size={24} color="#303133" className="exchange_icon" />
+            <Icons name="ArrowDownFill" size={24} color={THEME_COLORS.title} className="exchange_icon" />
           )}
         </Text>
         {extra}

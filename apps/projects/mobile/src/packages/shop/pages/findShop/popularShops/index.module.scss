@@ -1,3 +1,4 @@
+@import '@/styles/variables.scss';
 @import '@/styles/utils/text-overflow-multi-line.scss';
 .popular-shops-container {
   display: flex;
@@ -12,12 +13,12 @@
     align-items: center;
     .title {
       font-size: 16px;
-      color: #252d37;
+      color: $theme-title;
       font-weight: bold;
       flex: 1;
     }
     .more-link {
-      color: #91959b;
+      color: $theme-text-secondary;
       font-size: 14px;
     }
   }
@@ -37,7 +38,7 @@
     .shop-item {
       width: 152px;
       padding: 12px;
-      background-color: #fff;
+      background-color: $theme-surface;
       border-radius: 8px;
       margin-right: 8px;
       .shop-info {
@@ -46,14 +47,14 @@
         flex-direction: column;
         .shopname {
           font-size: 12px;
-          color: #303133;
+          color: $theme-title;
           font-weight: bold;
           @include text-overflow-multi-line(1);
         }
         .start-wrap {
           display: flex;
           align-items: center;
-          background-color: #f4f5f7;
+          background-color: $theme-disabled-bg;
           border-radius: 8px;
           height: 16px;
           margin-top: 4px;

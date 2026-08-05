@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .recommend-shop-container {
   display: flex;
   padding-left: 8px;
@@ -23,7 +25,7 @@
         align-items: center;
         .filter-text {
           font-size: 12px;
-          color: #606266;
+          color: $theme-text;
           margin-right: 4px;
         }
       }
@@ -37,7 +39,7 @@
       .indicator-text {
         display: flex;
         font-size: 12px;
-        color: #303133;
+        color: $theme-title;
         text-align: center;
       }
     }

@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .address-picker {
   position: fixed;
   width: 100%;
@@ -28,7 +30,7 @@
     opacity: 1;
   }
   &-container {
-    background-color: #fff;
+    background-color: $theme-surface;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -40,7 +42,7 @@
       padding-bottom: 10px;
       padding-left: 8px;
       padding-right: 8px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $theme-border-light;
       display: flex;
       flex-direction: row;
       align-items: center;

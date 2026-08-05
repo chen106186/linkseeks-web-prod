@@ -3,6 +3,7 @@ import { View, Text, Icons } from '@apps/mobile-ui'
 import { observer } from 'mobx-react-lite'
 import { useStores } from '../../store/useStores'
 import { SuperiorChannelItemType } from '../../store/userStore/model'
+import { THEME_COLORS } from '@/constants/theme'
 import ImageBox from '../ImageBox'
 import Overlay from '../Overlay'
 import './index.scss'
@@ -61,7 +62,7 @@ const ChannelActionSheet = (props: ModalActionSheetPropsType) => {
                     <Text className={cx('modal-action-list-item-text', (selectActionItem && selectActionItem.memberId === actionItem.memberId) && 'modal-action-list-item-text-active')}>{actionItem.memberName}</Text>
                   </View>
                   {
-                      (selectActionItem && selectActionItem.memberId === actionItem.memberId) && <Icons name="check" color='#00A98F' />
+                      (selectActionItem && selectActionItem.memberId === actionItem.memberId) && <Icons name="check" color={THEME_COLORS.primary} />
                     }
                 </View>
               )) : null

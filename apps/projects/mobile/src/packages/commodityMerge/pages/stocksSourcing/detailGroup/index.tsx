@@ -79,6 +79,7 @@ type CameraItem = {
   } | null
 }
 
+/*
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -86,6 +87,7 @@ declare global {
     }
   }
 }
+*/
 
 type RouteParams = {
   /**
@@ -392,6 +394,7 @@ const StocksSourcingDetail: React.FC = () => {
             <View className="camera-view__player" style={'height:' + height + 'px'}>
               {canPlay ? (
                 <View>
+                  {/* ezplayer 插件暂时注释，待完成微信插件授权后恢复
                   <ezplayer
                     id={`ezplayer_${activeCameraIndex}`}
                     key={`ezplayer_${activeCameraIndex}`}
@@ -418,6 +421,16 @@ const StocksSourcingDetail: React.FC = () => {
                     bindhandleerror={handleEzplayerError}
                     bindoncontrolevent={handleEzplayerControlEvent}
                   ></ezplayer>
+                  */}
+                  <View className="camera-view__placeholder">
+                    {current.coverUrl && <img src={current.coverUrl} alt="" className="camera-view__cover" />}
+                    <View
+                      className="camera-view__status-overlay"
+                      style={{ backgroundColor: getStatusColor(current.cameraStatus) + 'CC' }}
+                    >
+                      <Text className="camera-view__status-text">ezplayer 插件暂未启用</Text>
+                    </View>
+                  </View>
                 </View>
               ) : (
                 <View className="camera-view__placeholder">

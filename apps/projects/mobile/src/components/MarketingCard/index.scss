@@ -1,7 +1,11 @@
+@import '@/styles/variables.scss';
+
 .marketingCard-container {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $theme-surface;
+  border: 1px solid $theme-border-light;
+  box-shadow: $theme-shadow;
   border-radius: 8px;
   margin: 8px;
   overflow: hidden;

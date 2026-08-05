@@ -218,7 +218,7 @@ const MallTabBottom: React.FC<MallTabBottomProps> = (props) => {
 
   return visible ? (
     <TabBottom
-      style={{ backgroundColor: '#F7F8FA' }}
+      style={{ backgroundColor: '#FBF6EF' }}
       param={{
         hasTab: true,
         layoutType,

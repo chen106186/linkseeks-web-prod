@@ -17,7 +17,7 @@ const CollageContainerItem: React.FC<CollageContainerItemProps> = (props: Collag
     width: pxTransform(isAct ? clientWidth + 8 : clientWidth),
     height: pxTransform(isAct ? clientWidth + 8 : clientWidth),
     borderWidth: isAct ? 1 : 0,
-    borderColor: '#C8CACD',
+    borderColor: '#E8CBB1',
   }
   useEffect(() => {
     if (isAct) {

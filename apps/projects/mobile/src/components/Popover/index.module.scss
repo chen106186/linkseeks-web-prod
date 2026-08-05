@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .popover-container {
   position: relative; /* 让子元素的绝对定位基于此容器 */
   display: inline-block;
@@ -9,8 +11,8 @@
   left: -8px;
   min-width: 86px;
   padding: 8px;
-  background-color: #FFFFFF;
-	box-shadow: 5px 5px 5px rgba(215, 215, 215, 0.34);
+  background-color: $theme-surface;
+	box-shadow: $theme-shadow;
   border-radius: 6px;
   z-index: 100;
 }
@@ -27,13 +29,13 @@
   left: 10px;
   border-width: 8px;
   border-style: solid;
-  border-color: transparent transparent #FFFFFF transparent; /* 创建向上的三角形 */
+  border-color: transparent transparent $theme-surface transparent; /* 创建向上的三角形 */
 	z-index: 89;
 }
 
 .popover-option-item {
 	padding: 6px;
-	color: #252D37;
+	color: $theme-title;
 	font-size: 12px;
 	font-weight: 400;
 }

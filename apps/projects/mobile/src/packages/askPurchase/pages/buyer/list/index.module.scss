@@ -47,7 +47,7 @@
         background-color: rgba(22, 130, 230, 0.12);
         height: 24px;
         align-items: center;
-        color: #00a98f;
+        color: $theme-primary;
         line-height: 16px;
         padding: 0 10px;
         font-size: 12px;
@@ -59,7 +59,7 @@
         }
 
         &.disabled {
-          background-color: #F5F6F7;
+          background-color: $theme-page-bg;
           color: #91959B;
         }
       }
@@ -97,7 +97,7 @@
       }
 
       &-img {
-        border: 1px solid #F7F8FA;
+        border: 1px solid $theme-border-light;
         border-radius: 4px;
         overflow: hidden;
         margin-right: 12px;
@@ -137,7 +137,7 @@
 					margin: auto 0;
 					width: 6px;
 					height: 6px;
-					background-color: #00a98f;
+					background-color: $theme-primary;
 					border-radius: 50%;
 				}
 			}
@@ -222,7 +222,7 @@
 	padding: 8px;
 
 	.add-button {
-		background-color: #00a98f;
+			background-color: $theme-primary;
 		color: #FFFFFF;
 		font-size: 14px;
 
@@ -237,8 +237,8 @@
 	gap: 8px;
 
 	.askpurchase-bottom-button {
-		background-color: #F4F5F7;
-		border: 1px solid #F4F5F7;
+			background-color: $theme-page-bg;
+			border: 1px solid $theme-border-light;
 		color: #303133;
 		font-size: 12px;
 

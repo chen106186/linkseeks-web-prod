@@ -17,6 +17,7 @@ import Router from '@/utils/router'
 import { preload } from '@apps/mobile-services/utils/taro'
 import { RouterKeys } from '@/routes'
 import { filterIcon } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import Empty from '@/components/Empty'
 import Popover from '@/components/Popover'
 import timeIcon from '../../list/time.png'
@@ -466,7 +467,7 @@ const AskPurchaseList = () => {
               }}
               onClear={handleSearchSubmit}
               onSearch={handleSearchSubmit}
-              innerBackground="#F7F8FA"
+              innerBackground={THEME_COLORS.surface}
               customClassName={styles['page-wrap-search-key']}
               shape="round"
               clearable

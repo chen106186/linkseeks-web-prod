@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #F4F5F7;
+  border-bottom: 1px solid $theme-border-light;
   padding: 12px 0;
   font-size: 14px;
 
@@ -51,7 +51,7 @@
   padding: 3px;
   border-radius: 4px;
   margin: 2px;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
 }
 
 .product-item-name {
@@ -142,7 +142,7 @@
     padding-left: 12px;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #F4F5F7;
+    border-bottom: 1px solid $theme-border-light;
   }
 
   &-productNo {
@@ -276,10 +276,10 @@
         font-size: 12px;
         text-align: center;
         padding: 10px 8px;
-        background-color: #F4F5F7;
+        background-color: $theme-page-bg;
         margin-bottom: 10px;
         border-radius: 6px;
-				border: 1px solid #F4F5F7 !important;
+				border: 1px solid $theme-border-light !important;
         // margin-right: 10px;
       }
 
@@ -307,7 +307,7 @@
     .filterBtn {
       // flex: 0.7;
       width: 160px;
-      background-color: #F4F5F7;
+      background-color: $theme-page-bg;
       text-align: center;
       padding: 10px 0;
       border-radius: 10px;

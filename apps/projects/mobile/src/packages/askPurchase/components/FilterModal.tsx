@@ -9,6 +9,7 @@ import Search from '@/components/Search'
 import useStatusBarHeight from '@/hooks/useStatusBarHeight'
 import { useIntl } from '@linkseeks/i18n'
 import { filterIcon } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 interface FilterModalProps {
@@ -207,7 +208,7 @@ const FilterModal = (props: FilterModalProps) => {
               <Search
                 value={name}
                 placeholder={'采购寻源单号/寻源摘要'}
-                innerBackground="#F7F8FA"
+                innerBackground={THEME_COLORS.surface}
                 onChange={(value) => setName(value)}
                 customClassName={styles['page-wrap-search-key']}
                 shape="round"

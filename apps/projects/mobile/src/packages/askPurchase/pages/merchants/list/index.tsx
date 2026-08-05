@@ -17,6 +17,7 @@ import { preload } from '@apps/mobile-services/utils/taro'
 import { dateFormat } from '@/utils/date'
 import { RouterKeys } from '@/routes'
 import { filterIcon } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import Empty from '@/components/Empty'
 import timeIcon from '../../list/time.png'
 import { outerStatusList } from '../../../constants'
@@ -269,7 +270,7 @@ const AskPurchaseList = () => {
               }}
               onClear={handleSearchSubmit}
               onSearch={handleSearchSubmit}
-              innerBackground="#F7F8FA"
+              innerBackground={THEME_COLORS.surface}
               customClassName={styles['page-wrap-search-key']}
               shape="round"
               clearable

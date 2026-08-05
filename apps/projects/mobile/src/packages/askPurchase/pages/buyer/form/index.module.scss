@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 
 .container {
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
   position: relative;
   height: 100vh;
   overflow-x: hidden;

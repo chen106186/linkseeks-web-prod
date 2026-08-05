@@ -4,14 +4,14 @@
 .sku {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $theme-surface;
 
   &-product-card {
     display: flex;
     flex-direction: row;
     padding: $spacing-v-lg $spacing-h-lg;
     padding-right: 48px;
-    background-color: #ffffff;
+    background-color: $theme-surface;
 
     &-left {
       width: 88px;
@@ -20,7 +20,7 @@
       border-radius: 8px;
       overflow: hidden;
       position: relative;
-      background-color: #f4f5f7;
+      background-color: $theme-disabled-bg;
     }
 
     &-right {
@@ -46,7 +46,7 @@
     &-price {
       font-size: 20px;
       font-weight: 600;
-      color: $color-error;
+      color: $theme-primary;
     }
 
     &-unit {
@@ -63,7 +63,7 @@
       margin-top: $spacing-h-sm - 1;
       font-size: 12px;
       font-weight: 400;
-      color: $color-error;
+      color: $theme-primary;
     }
 
     &-merge {
@@ -142,12 +142,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: $theme-surface;
   }
 
   &-action {
     width: 100%;
-    background-color: #ffffff;
+    background-color: $theme-surface;
 
     &-inner {
       padding: $spacing-v-md $spacing-h-md;
@@ -173,12 +173,12 @@
 
     &-consent {
       font-size: 12px;
-      color: #909399;
+      color: $theme-text-secondary;
     }
 
     &-signRight {
       font-size: 12px;
-      color: #252d37;
+      color: $theme-title;
     }
   }
 }

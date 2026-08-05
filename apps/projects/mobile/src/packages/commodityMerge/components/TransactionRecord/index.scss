@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-left {
     margin-right: $spacing-h-md;
@@ -27,7 +27,7 @@
     margin-right: $spacing-h-lg - 2;
     border-radius: 999px;
     overflow: hidden;
-    background-color: #CCCCCC;
+    background-color: $theme-disabled-bg;
 
     &-img {
       position: absolute;

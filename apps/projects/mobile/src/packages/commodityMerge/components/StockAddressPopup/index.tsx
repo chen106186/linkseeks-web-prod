@@ -8,7 +8,7 @@ import { Swiper, SwiperItem } from '@tarojs/components'
 import { observer } from 'mobx-react-lite'
 import { useSafeArea } from '@apps/mobile-services'
 import { useIntl } from '@linkseeks/i18n'
-import { themeLayout } from '@/constants/theme'
+import { THEME_COLORS, themeLayout } from '@/constants/theme'
 import useStores from '@/store/useStores'
 import Popup from '@/components/Popup'
 import { getLogisticsMobileReceiverAddressListDefault } from '@apps/apis'
@@ -205,7 +205,7 @@ const StockAddressPopup: React.FC<IProps> = (props: IProps) => {
         <View className={styles['stockAddress-popup-nav']}>
           {current === 1 && shippingAddressList.length > 0 ? (
             <View className={styles['stockAddress-popup-nav-left']} onClick={() => handleSlideTo(0)}>
-              <Icons name="ChevronLeft" color="#252d37" size={24} />
+              <Icons name="ChevronLeft" color={THEME_COLORS.title} size={24} />
             </View>
           ) : null}
           <View className={styles['stockAddress-popup-nav-title']}>

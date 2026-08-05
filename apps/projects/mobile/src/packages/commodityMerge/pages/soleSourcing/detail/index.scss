@@ -19,7 +19,7 @@ $hsm: $spacing-h-sm - 1;
     margin-top: $spacing-v-md + 2;
     align-self: flex-start;
     padding: $spacing-v-sm - 2 $spacing-h-sm;
-    background-color: #EBF9F6;
+    background-color: $theme-primary-soft;
     color: $color-brand;
     font-size: $font-size-sm;
     font-weight: 400;
@@ -47,7 +47,7 @@ $hsm: $spacing-h-sm - 1;
     bottom: 0;
     z-index: 1;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   .shop-volume {
@@ -66,7 +66,7 @@ $hsm: $spacing-h-sm - 1;
 
 	&-head {
 		display: flex;
-		background-image: linear-gradient(80deg, #F7F7F9 23%, #EBECF0 99%);
+		background-image: linear-gradient(80deg, $theme-surface-soft 23%, $theme-border-light 99%);
 
 		&-titleWrap {
 			display: flex;
@@ -119,9 +119,9 @@ $hsm: $spacing-h-sm - 1;
 		&-item {
 			padding: $spacing-h-sm - 1 calc($hsm / 2);
 			margin-right: $spacing-h-md;
-			color: #D69B5D;
+			color: $theme-accent;
 			font-size: $font-size-sm;
-			background-color: #FCF7F2;
+			background-color: $theme-primary-soft;
 		}
 	}
 }

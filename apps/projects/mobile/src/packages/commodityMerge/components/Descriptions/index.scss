@@ -17,12 +17,12 @@
     &-line {
       width: 24px;
       height: 1px;
-      background-color: #D8DDE6;
+      background-color: $theme-border-light;
     }
   }
 
 	&-richtext {
-		color: #252d37;
+		color: $theme-title;
 	}
 
   &-video {
@@ -55,17 +55,17 @@
 	display: flex;
 
 	&-label {
-		color: #999999;
+		color: $theme-text-secondary;
 		width: 86px;
 	}
 
 	&-breif {
-		color: #303133;
+		color: $theme-text;
 	}
 
 	&-wrap {
 		margin: 8px;
-		background-color: #FFFFFF;
+		background-color: $theme-surface;
 		border-radius: 8px;
 		padding: 12px;
 	}

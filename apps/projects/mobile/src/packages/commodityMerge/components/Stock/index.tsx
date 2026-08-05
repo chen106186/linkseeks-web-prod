@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Icons } from '@apps/mobile-ui'
 import useDeliverable, { DeliverAreaItem } from '@/hooks/useDeliverable'
+import { THEME_COLORS } from '@/constants/theme'
 import { useIntl } from '@linkseeks/i18n'
 import { DELIVERY_TYPE_ENUM } from '@/constants/const/product'
 import { getLogisticsMobileShipperAddressGet } from '@apps/apis'
@@ -113,7 +114,7 @@ const Stock: React.FC<StockProps> = (props: StockProps) => {
               {address ? (
                 <View className={styles['stock-address']}>
                   <View className={styles['stock-address-left']}>
-                    <Icons name="Pin" size={12} color="#303133" />
+                    <Icons name="Pin" size={12} color={THEME_COLORS.title} />
                   </View>
                   <View className={styles['stock-address-right']}>
                     <Text className={styles['stock-address-text']}>

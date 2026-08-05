@@ -8,6 +8,7 @@
 import React from 'react';
 import { View, Text, Icons } from '@apps/mobile-ui';
 import classNames from 'classnames';
+import { THEME_COLORS } from '@/constants/theme';
 import bookshelfContext from './context';
 import './index.scss';
 
@@ -116,7 +117,7 @@ const BookshelfItem: React.FC<BookshelfItemProps> = (props: BookshelfItemProps) 
           <Icons
             name='ChevronRight'
             size={12}
-            color='#909399'
+            color={THEME_COLORS.textSecondary}
           />
         </View>
       ) : null}

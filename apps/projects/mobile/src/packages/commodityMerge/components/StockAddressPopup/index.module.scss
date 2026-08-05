@@ -3,7 +3,7 @@
 .stockAddress-popup {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-nav {
     position: relative;
@@ -22,7 +22,7 @@
       padding: $spacing-v-xl;
       font-size: $font-size-lg;
       text-align: center;
-      color: $color-black-1;
+      color: $theme-title;
       font-weight: 600;
     }
   }
@@ -49,6 +49,6 @@
   &-action {
     flex-shrink: 0;
     padding: $spacing-v-md;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 }

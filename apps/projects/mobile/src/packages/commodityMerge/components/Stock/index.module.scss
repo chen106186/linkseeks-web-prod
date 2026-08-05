@@ -17,7 +17,7 @@
 
     &-text {
       font-size: $font-size-sm;
-      color: $color-black-1;
+      color: $theme-title;
     }
   }
 
@@ -25,6 +25,6 @@
     padding-left: $spacing-h-lg + 2;
     margin-top: $spacing-v-sm;
     font-size: $font-size-sm;
-    color: $color-error;
+    color: $theme-primary;
   }
 }

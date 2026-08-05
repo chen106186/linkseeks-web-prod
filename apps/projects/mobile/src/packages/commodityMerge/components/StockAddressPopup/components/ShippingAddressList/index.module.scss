@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-item {
     display: flex;
@@ -25,14 +25,14 @@
     &-name {
       font-size: $font-size-base;
       font-weight: 500;
-      color: $color-black-1;
+      color: $theme-title;
     }
 
     &-desc {
       margin-top: $spacing-v-md;
       font-size: $font-size-sm;
       font-weight: 400;
-      color: $color-black-1;
+      color: $theme-text;
     }
   }
 }

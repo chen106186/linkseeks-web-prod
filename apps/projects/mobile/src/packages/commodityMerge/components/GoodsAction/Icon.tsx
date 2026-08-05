@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { Icons, View, Text } from '@apps/mobile-ui';
+import { THEME_COLORS } from '@/constants/theme';
 import './styles.scss';
 
 interface GoodsActionIconProps {
@@ -12,7 +13,7 @@ interface GoodsActionIconProps {
    */
   icon: string,
   /**
-   * icon color，默认 #303133
+   * icon color，默认使用主题正文色
    */
   color?: string,
   /**
@@ -53,7 +54,7 @@ const GoodsActionIcon: React.FC<GoodsActionIconProps> = (props: GoodsActionIconP
 };
 
 GoodsActionIcon.defaultProps = {
-  color: '#303133',
+  color: THEME_COLORS.text,
   size: 20,
   customStyle: {},
   onClick: undefined,

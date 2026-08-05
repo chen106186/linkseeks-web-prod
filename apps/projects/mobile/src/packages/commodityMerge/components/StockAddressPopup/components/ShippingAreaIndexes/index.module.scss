@@ -4,7 +4,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-shortcut {
     display: flex;
@@ -21,17 +21,17 @@
       &-name {
         font-size: $font-size-base;
         font-weight: 400;
-        color: $color-black-1;
+        color: $theme-title;
 
         &__active {
-          color: $color-success;
+          color: $theme-primary;
         }
       }
     }
   }
 
   &-scroll {
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-group {
@@ -57,7 +57,7 @@
       &-placehodler {
         padding-left: $spacing-h-lg;
         font-size: $font-size-sm;
-        color: $color-black-3;
+        color: $theme-text-secondary;
       }
 
       &-group {
@@ -81,13 +81,13 @@
       &-key {
         display: inline-block;
         width: 30px;
-        color: $color-black-3;
+        color: $theme-text-secondary;
         font-size: $font-size-base;
         font-weight: 500;
       }
 
       &-title {
-        color: $color-black-1;
+        color: $theme-title;
         font-size: $font-size-base;
         font-weight: 400;
       }

@@ -31,7 +31,7 @@
     &-price {
       font-size: $font-size-xxl;
       font-weight: 500;
-      color: $color-error;
+      color: $theme-primary;
 
       &__original {
         font-size: $font-size-sm;
@@ -72,7 +72,7 @@
     bottom: 0;
     z-index: 1;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-fixedAction {
@@ -83,8 +83,8 @@
     }
 
     .button-elegant {
-      background-color: $color-bg-lighter;
-      border-color: $color-bg-lighter;
+      background-color: $theme-disabled-bg;
+      border-color: $theme-disabled-bg;
     }
   }
 

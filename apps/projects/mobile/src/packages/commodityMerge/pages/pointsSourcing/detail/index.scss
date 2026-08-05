@@ -24,7 +24,7 @@ $hsm: $spacing-h-sm - 1;
     bottom: 0;
     z-index: 1;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-fixedAction {
@@ -87,9 +87,9 @@ $hsm: $spacing-h-sm - 1;
 		&-item {
 			padding: $spacing-h-sm - 1 calc($hsm / 2);
 			margin-right: $spacing-h-md;
-			color: #D69B5D;
+			color: $theme-accent;
 			font-size: 12px;
-			background-color: #FCF7F2;
+			background-color: $theme-primary-soft;
 		}
 	}
 }

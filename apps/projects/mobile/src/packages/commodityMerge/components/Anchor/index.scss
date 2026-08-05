@@ -10,7 +10,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #F4F5F7;
+    background-color: $theme-page-bg;
   }
 
   &-item {}
@@ -23,7 +23,7 @@
     right: 0;
     left: 0;
     z-index: 99;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     opacity: 0;
     transition: opacity .1s;
 
@@ -33,7 +33,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #FFFFFF;
+      background-color: $theme-surface;
 
       &-txt {
         display: inline-block;
@@ -54,7 +54,7 @@
       &-line {
         width: 24px;
         height: 2PX;
-        background-color: #FFFFFF;
+        background-color: $theme-surface;
 
         &__active {
           background-color: $color-brand;

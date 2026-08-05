@@ -61,6 +61,12 @@ $color-border-lightest: $theme-surface-soft;
 $color-border-grey: $theme-border-light;
 $color-icon-base: $theme-text-secondary;
 
+// mobile-ui 按钮变量在默认变量文件加载时已完成初始化，需要在主题色覆盖后同步更新。
+$at-button-color: $theme-primary;
+$at-button-border-color-primary: $theme-primary;
+$at-button-border-color-secondary: $theme-primary;
+$at-button-bg: $theme-primary;
+
 /* Link */
 $color-link: $theme-primary;
 $color-link-hover: $theme-primary-hover;

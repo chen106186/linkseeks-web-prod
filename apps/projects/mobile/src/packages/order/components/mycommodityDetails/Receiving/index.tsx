@@ -102,11 +102,10 @@ const Receiving = (props: Iprops) => {
                   </Text>
                 </View>
                 {!!item.company && (
-                  <View className={styles.box}>
+                  <View className={styles.box} onClick={() => Router.navigateToKuaiDi100(item.logisticsNo)}>
                     <View className={styles.left}>
                       <Text className={styles.express}>{item.company}</Text>
                     </View>
-                    {/*    onClick={() => Router.navigateToKuaiDi100(item.logisticsNo)} */}
                     <Image
                       src={getOssUrlPath(`/Images/arrow-ios-right.svg`)}
                       style={{ width: pxTransform(15), height: pxTransform(15) }}

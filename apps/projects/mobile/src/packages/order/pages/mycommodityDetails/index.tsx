@@ -617,6 +617,7 @@ const MyCommodityDetails = () => {
   const dqrTitle = sendInfo.outerStatus === 13
   const hasDeliveries = (detailData?.deliveries?.length ?? 0) > 0
   const dqr = dqrTitle && (hasDeliveries || Boolean(detailData?.pickupPointName))
+  const showLogistics = dqrTitle && !!detailData?.deliveries?.length
   return (
     <View className={styles.container}>
       <Header
@@ -659,7 +660,7 @@ const MyCommodityDetails = () => {
             {detailData?.outerStatus === 1 && '>'}
           </Text>
 
-          {dqr && !detailData.pickupPointName && (
+          {showLogistics && !detailData.pickupPointName && (
             <Text
               style={{
                 fontSize: pxTransform(12),
@@ -682,12 +683,27 @@ const MyCommodityDetails = () => {
         <View
           className={styles.mian}
           style={{
-            marginTop: pxTransform(dqr && detailData?.deliveries ? -30 : 0),
+            marginTop: pxTransform(showLogistics && detailData?.deliveries ? -30 : 0),
           }}
         >
           {/* 待审核 */}
           {/* <Examine dataSource={detailData}/> */}
-          {dqr &&
+          {/* 待提交  */}
+          {!dqr && (
+            <StaySubmit
+              dataSource={detailData}
+              outerStatusName={sendInfo.outerStatusName}
+              fnClosePayType={fnShowPayType}
+              fnShowTime={fnShowTime}
+              getDisplayInvoice={playInvoice}
+              showAfterSale={showAfterSales === 'false' || !showAfterSales ? false : true}
+              noBtn={noBtn}
+              countdown={countdown}
+              totalAmount={totalAmount}
+            />
+          )}
+          {/*  */}
+          {showLogistics &&
             (detailData?.pickupPointName && detailData?.products ? (
               <View className={styles['cbg-receive-product-list']}>
                 {detailData.products.map((item) => (

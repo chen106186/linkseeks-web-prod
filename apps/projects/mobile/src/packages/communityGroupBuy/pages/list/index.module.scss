@@ -1,4 +1,5 @@
 @import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 
 .container {
   display: flex;
@@ -7,7 +8,7 @@
   height: 100vh;
   color: $color-text-base;
   font-size: $font-size-base;
-  background-color: #f5f6f7;
+  background-color: $theme-page-bg;
 }
 
 .top {
@@ -30,7 +31,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20rpx $spacing-h-md;
-  color: #00a98f;
+  color: $theme-primary;
   // background-color: #d3fcf6;
 
   &-left {
@@ -58,12 +59,12 @@
     flex-shrink: 0;
     margin-left: $spacing-h-md;
     cursor: pointer;
-    border: 1px solid #00a98f;
+    border: 1px solid $theme-primary;
     border-radius: 10px;
     padding: 4px 8px;
 
     .switch-text {
-      color: #00a98f;
+      color: $theme-primary;
       font-size: $font-size-base;
       margin-right: 4px;
     }
@@ -88,7 +89,7 @@
     transition: all 0.3s ease;
 
     &.selected {
-      background-color: #00a98f;
+      background-color: $theme-primary;
       color: #fff;
     }
   }
@@ -128,7 +129,7 @@
     padding: 4px 18px;
     line-height: 20px;
     border-radius: 14px;
-    background: #00a98f;
+    background: $theme-primary;
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -158,7 +159,7 @@
         line-height: 30px;
 
         &.selected {
-          color: #00a98f;
+          color: $theme-primary;
         }
       }
     }

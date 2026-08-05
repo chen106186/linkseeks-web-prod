@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .wrapper {
 	padding-bottom: 34px;
 	box-sizing: content-box;
@@ -149,7 +151,7 @@
 						width: 32px;
 						height: 18px;
 						border-radius: 4px;
-						background: #f5f6f7;
+						background: $theme-page-bg;
 						font-size: 12px;
 						line-height: 18px;
 						min-height: 18px;
@@ -219,7 +221,7 @@
 			width: 90px;
 			line-height: 40px;
 			border-radius: 8px;
-			background: #00a98f;
+			background: $theme-primary;
 			font-size: 14px;
 			font-weight: 500;
 			color: #fff;

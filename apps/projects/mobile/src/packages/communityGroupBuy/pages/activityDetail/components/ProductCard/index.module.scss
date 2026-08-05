@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .card {
     margin: 8px;
     padding: 8px;
@@ -90,7 +92,7 @@
                 width: 24px;
                 height: 24px;
                 border-radius: 534px;
-                background: #00a98f;
+                background: $theme-primary;
                 color: #fff;
                 display: flex;
                 justify-content: center;

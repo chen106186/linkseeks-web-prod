@@ -19,6 +19,7 @@ import { useStatusBarHeight } from '@apps/mobile-services'
 import { observer } from 'mobx-react-lite'
 import { checkMore } from '@/utils'
 import { useRouter } from '@apps/mobile-services/utils/taro'
+import { THEME_COLORS } from '@/constants/theme'
 
 const CommunityGroupBuyList: React.FC<{}> = () => {
   const intl = useIntl()
@@ -190,7 +191,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
             onClick={() => Router.navigateTo('communityGroupBuy/changeSelfPickupAddress')}
           >
             <Text className={styles['switch-text']}>自提点切换</Text>
-            <Icons name="ChevronDown" size={12} color="#00a98f" />
+            <Icons name="ChevronDown" size={12} color={THEME_COLORS.primary} />
           </View>
         </View>
         <View className={styles['status-tabs']}>

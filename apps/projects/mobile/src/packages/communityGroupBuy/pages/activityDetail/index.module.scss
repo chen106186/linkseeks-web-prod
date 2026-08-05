@@ -1,10 +1,11 @@
 @import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 
 .container {
 	min-height: 100vh;
 	color: $color-text-base;
 	font-size: $font-size-base;
-	background-color: #F5F6F7;
+	background-color: $theme-page-bg;
 }
 
 .ml-4 {
@@ -165,7 +166,7 @@
 		}
 
 		&.border-bottom {
-			border-bottom: 1px solid #F5F6F7;
+			border-bottom: 1px solid $theme-border-light;
 		}
 
 		&-label {
@@ -254,7 +255,7 @@
 			width: 40px;
 			height: 40px;
 			border-radius: 8px;
-			background: #ebf9f6;
+			background: $theme-primary-soft;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -309,7 +310,7 @@
 			width: 90px;
 			line-height: 40px;
 			border-radius: 8px;
-			background: #00a98f;
+			background: $theme-primary;
 			font-size: 14px;
 			font-weight: 500;
 			color: #fff;

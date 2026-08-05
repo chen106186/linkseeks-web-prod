@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .wrapper {
 	width: 100vw;
 	height: 100vh;
@@ -34,7 +36,7 @@
 		align-items: center;
 		box-sizing: border-box;
 		border-radius: 100px;
-		background: #f5f6f7;
+		background: $theme-page-bg;
 
 		.input {
 			flex: 1;
@@ -88,7 +90,7 @@
 					padding: 0 4px;
 					width: 96px;
 					border-radius: 4px;
-					background: #f5f6f7;
+					background: $theme-page-bg;
 					color: #5C626A;
 					font-size: 12px;
 					line-height: 32px;
@@ -102,8 +104,8 @@
 					}
 
 					&.selected {
-						background: #ebf9f6;
-						color: #00A98F;
+						background: $theme-primary-soft;
+						color: $theme-primary;
 					}
 				}
 			}
@@ -133,7 +135,7 @@
 		.cancel {
 			@include button-style;
 			width: 104px;
-			background: #f5f6f7;
+			background: $theme-page-bg;
 			color: #303133;
 		}
 
@@ -142,7 +144,7 @@
 			margin-left: 8px;
 			flex: 1;
 			border: none;
-			background: #00a98f;
+			background: $theme-primary;
 			color: #FFF;
 		}
 	}

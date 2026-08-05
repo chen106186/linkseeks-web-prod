@@ -24,6 +24,7 @@ import useGetCbgActivityDetail from '../../hooks/useGetCbgActivityDetail'
 import NavBar from '@/components/NavBar'
 import cs from 'classnames'
 import styles from './index.module.scss'
+import { THEME_COLORS } from '@/constants/theme'
 import { observer } from 'mobx-react-lite'
 import ProductCard from './components/ProductCard'
 import ActivityCart, { ActivityCartStatType, ActivityCartRefHandle } from '../../components/ActivityCart'
@@ -458,7 +459,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
               handleVisibleCartPopup(true)
             }}
           >
-            <Icons name="ShoppingCart" size={24} color="#00A98F" />
+            <Icons name="ShoppingCart" size={24} color={THEME_COLORS.primary} />
             <Badge className={styles['footer-content-cart-badge']} count={cartStat?.totalCount} color="#E34D59" />
           </View>
           <View className={styles['footer-content-price']}>

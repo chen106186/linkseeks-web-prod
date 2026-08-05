@@ -24,9 +24,9 @@
     &-spec {
       padding: $spacing-h-sm - 1 $spacing-h-md;
       min-width: 40px;
-      background-color: #F4F5F7;
+      background-color: $theme-page-bg;
       border-radius: 4px;
-      @include border-thin(#F4F5F7);
+      @include border-thin($theme-border-light);
 
       &-name {
         font-size: 12px;

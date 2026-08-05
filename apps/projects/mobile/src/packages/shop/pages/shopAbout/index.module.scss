@@ -7,7 +7,7 @@
 	display: flex;
   height: 100vh;
   flex-direction: column;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   padding: 12px;
 }
 .workshopPics {
@@ -24,7 +24,7 @@
   margin-bottom: 12px;
 }
 .ownTag {
-  background-color: #EBF9F6;
+  background-color: $theme-primary-soft;
   border-radius: 4px;
   min-width: 60px;
   padding: 0 8px;
@@ -106,7 +106,7 @@
   flex-direction: row;
 }
 .bottomBorder {
-  border-bottom: 0.5px solid #F4F5F7;
+  border-bottom: 0.5px solid $theme-border-light;
 }
 .cardLineText {
   color: #333;
@@ -176,7 +176,7 @@
 }
 .strengthCardSplit {
   height: 0.5px;
-  background-color: #F4F5F7;
+  background-color: $theme-page-bg;
   margin: 8px 0;
 }
 .strengthCardTitleBox {
@@ -211,7 +211,7 @@
 .honorPicsItem {
   margin-right: 12px;
   border-radius: 4px;
-  border-color: #F4F5F7;
+  border-color: $theme-border-light;
   border-width: 0.5px;
   padding: 18px 0;
 }
@@ -301,7 +301,6 @@
 .startWrap {
   display: flex;
   align-items: center;
-  // background-color: #F4F5F7;
   border-radius: 8px;
   height: 16px;
   padding: 0 4px;
@@ -330,7 +329,7 @@
 .collectStyle {
   display: flex;
   flex-direction: row;
-  background-color: #F5F6F7;
+  background-color: $theme-surface-soft;
   border-radius: 4px;
   padding: 6px 8px;
   align-items: center;

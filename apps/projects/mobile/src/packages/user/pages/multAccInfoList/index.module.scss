@@ -43,7 +43,7 @@
 
     &.active {
       border: 1px solid $theme-primary;
-      background-color: #ebf9f6;
+      background-color: $theme-primary-soft;
       .multText {
         color: #5c626a;
       }

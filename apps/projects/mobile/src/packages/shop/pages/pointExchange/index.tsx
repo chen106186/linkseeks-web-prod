@@ -18,6 +18,7 @@ import { postProductMobileShopScoreGetCommodityList, postProductMobileShopSelfGe
 import { getMemberMobileLrcRightShopDetailPage } from '@apps/apis'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 interface paramType {
   shopId: number
   logo: string
@@ -357,7 +358,7 @@ const PointExchange: React.FC<paramType> = () => {
           <ScrollView
             style={{
               flex: 1,
-              backgroundColor: '#F4F5F7',
+              backgroundColor: THEME_COLORS.page,
               height: '100%',
             }}
             data={dataList}

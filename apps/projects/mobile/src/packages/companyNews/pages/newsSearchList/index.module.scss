@@ -1,10 +1,12 @@
+@import '@/styles/variables.scss';
+
 .news-search-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f7f8fa;
+  background-color: $theme-page-bg;
   .header {
-    background-color: #fff;
+    background-color: $theme-surface;
     height: 88px;
     display: flex;
     padding-top: 20px;

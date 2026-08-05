@@ -7,12 +7,12 @@
   .container {
     flex: 1;
     flex-direction: column;
-    background-color: #f4f5f7;
+    background-color: $theme-page-bg;
   }
   .flat-list {
     width: 100%;
     flex: 1;
-    background-color: #f4f5f7;
+    background-color: $theme-page-bg;
   }
   .search-container {
     padding-left: 12px;

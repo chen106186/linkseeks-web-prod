@@ -20,6 +20,7 @@ import {
   getCommodityMobileShopMobileCheckShopMemberOperate,
 } from '@apps/apis'
 import { IS_WEB } from '@/constants'
+import { THEME_COLORS } from '@/constants/theme'
 import NewsCard from '../../components/newsCard/index'
 import NewsTab from '../../components/newsTab/index'
 import styles from './index.module.scss'
@@ -279,7 +280,7 @@ const HomeView = () => {
             </Text>
           </View>
         }
-        customStyle="background:#00a98f"
+        customStyle={`background:${THEME_COLORS.primary}`}
         greedy
         back={() => by()}
       />

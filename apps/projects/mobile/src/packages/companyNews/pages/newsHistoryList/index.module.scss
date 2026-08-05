@@ -1,8 +1,10 @@
+@import '@/styles/variables.scss';
+
 .Container {
   height: 100vh;
   display: flex;
   flex-direction: "column";
-  background-color: "#F7F8FA";
+  background-color: $theme-page-bg;
   .scroll {
     flex: 1;
     overflow: hidden;

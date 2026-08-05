@@ -22,6 +22,7 @@ import {
 import { getCommodityMobileShopMobileCheckShopMemberOperate } from '@apps/apis'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 let showRes: any = null
 declare global {
   namespace JSX {
@@ -163,7 +164,7 @@ const InformationDetail = () => {
                 />
                 <Text
                   style={{
-                    color: collectStatus ? '#00A98F' : '#91959B',
+                    color: collectStatus ? THEME_COLORS.primary : '#91959B',
                     marginLeft: pxTransform(5),
                   }}
                 >

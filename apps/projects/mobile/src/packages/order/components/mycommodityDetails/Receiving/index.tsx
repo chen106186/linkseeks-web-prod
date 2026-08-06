@@ -26,7 +26,7 @@ const Receiving = (props: Iprops) => {
   useEffect(() => {
     setSendInfo?.({
       ...sendInfo,
-      outerStatusName: !dataSource[Index]?.innerStatusName,
+      outerStatusName: dataSource[Index]?.innerStatusName,
       batchNo: dataSource[Index]?.batchNo,
       showReceive: dataSource[Index]?.showReceive,
     })
@@ -104,7 +104,7 @@ const Receiving = (props: Iprops) => {
                   <View className={styles.left}>
                     <Text className={styles.num}>
                       {intl.formatMessage({ id: 'order.fahuoshijian', defaultMessage: '发货时间：' })}
-                      {item.deliverTime?.split(' ')[0]}
+                      {(item.deliveryTime || item.deliverTime)?.split(' ')[0]}
                     </Text>
                   </View>
                 </View>

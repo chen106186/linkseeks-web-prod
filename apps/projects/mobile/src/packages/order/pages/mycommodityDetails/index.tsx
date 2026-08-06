@@ -615,7 +615,7 @@ const MyCommodityDetails = () => {
     return ''
   }
   const dqrTitle = sendInfo.outerStatus === 13
-  const dqr = dqrTitle && !noBtnClick
+  const dqr = dqrTitle
   return (
     <View className={styles.container}>
       <Header

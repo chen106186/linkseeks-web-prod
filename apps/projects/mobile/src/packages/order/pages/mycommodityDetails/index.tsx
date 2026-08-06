@@ -494,7 +494,7 @@ const MyCommodityDetails = () => {
           if (res.data?.groupId > 0 || res.data?.promotionStatus === 1 || res.data?.promotionStatus === 2) {
             getPurchase(res.data.groupId)
           }
-          if (res.data.outerStatus === 11 && res.data.deliveries.length > 0) {
+          if (res.data.outerStatus === 11 && res.data.deliveries?.length > 0) {
             setSendInfo({
               ...sendInfo,
               batchNo: res.data.deliveries[0].batchNo,
@@ -506,9 +506,9 @@ const MyCommodityDetails = () => {
           } else {
             setSendInfo({
               ...sendInfo,
-              batchNo: res.data.deliveries[0]?.batchNo,
+              batchNo: res.data.deliveries?.[0]?.batchNo,
               showReceive:
-                (res.data.outerStatus === 13 && res.data.pickupPointName) || res.data.deliveries[0]?.showReceive,
+                (res.data.outerStatus === 13 && res.data.pickupPointName) || res.data.deliveries?.[0]?.showReceive,
               outerStatusName: res.data.outerStatusName,
               outerStatus: res.data.outerStatus,
               cbgReceive: !!res.data.pickupPointName,
@@ -615,7 +615,8 @@ const MyCommodityDetails = () => {
     return ''
   }
   const dqrTitle = sendInfo.outerStatus === 13
-  const dqr = dqrTitle
+  const hasDeliveries = (detailData?.deliveries?.length ?? 0) > 0
+  const dqr = dqrTitle && (hasDeliveries || Boolean(detailData?.pickupPointName))
   return (
     <View className={styles.container}>
       <Header
@@ -686,21 +687,6 @@ const MyCommodityDetails = () => {
         >
           {/* 待审核 */}
           {/* <Examine dataSource={detailData}/> */}
-          {/* 待提交  */}
-          {!dqr && (
-            <StaySubmit
-              dataSource={detailData}
-              outerStatusName={sendInfo.outerStatusName}
-              fnClosePayType={fnShowPayType}
-              fnShowTime={fnShowTime}
-              getDisplayInvoice={playInvoice}
-              showAfterSale={showAfterSales === 'false' || !showAfterSales ? false : true}
-              noBtn={noBtn}
-              countdown={countdown}
-              totalAmount={totalAmount}
-            />
-          )}
-          {/*  */}
           {dqr &&
             (detailData?.pickupPointName && detailData?.products ? (
               <View className={styles['cbg-receive-product-list']}>
@@ -742,6 +728,19 @@ const MyCommodityDetails = () => {
                 <Receiving dataSource={detailData?.deliveries} sendInfo={sendInfo} setSendInfo={setSendInfo} />
               )
             ))}
+          {(!dqr || !detailData?.pickupPointName) && (
+            <StaySubmit
+              dataSource={detailData}
+              outerStatusName={sendInfo.outerStatusName}
+              fnClosePayType={fnShowPayType}
+              fnShowTime={fnShowTime}
+              getDisplayInvoice={playInvoice}
+              showAfterSale={showAfterSales === 'false' || !showAfterSales ? false : true}
+              noBtn={noBtn}
+              countdown={countdown}
+              totalAmount={totalAmount}
+            />
+          )}
         </View>
       </ScrollView>
       {/* 底部按钮 */}

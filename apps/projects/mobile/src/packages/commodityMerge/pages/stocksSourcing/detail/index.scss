@@ -4,6 +4,11 @@
   padding: $spacing-v-md 0;
   position: relative;
 
+  .mellow-card {
+    border: 1px solid $theme-border-light;
+    box-shadow: $theme-shadow;
+  }
+
   &-anchor {
     height: 100%;
 
@@ -73,6 +78,7 @@
     z-index: 1;
     width: 100%;
     background-color: $theme-surface;
+    border-top: 1px solid $theme-border-light;
   }
 
   &-fixedAction {

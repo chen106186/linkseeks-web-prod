@@ -3,6 +3,8 @@
 .use-card {
   margin: 8px;
   background-color: $theme-surface;
+  border: 1px solid $theme-border-light;
+  box-shadow: $theme-shadow;
   display: flex;
   flex-direction: column;
   border-radius: 8px;

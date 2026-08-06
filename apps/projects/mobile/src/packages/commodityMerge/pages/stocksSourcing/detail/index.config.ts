@@ -10,8 +10,7 @@ export default {
   navigationStyle: 'custom',
   enableShareAppMessage: true,
   enableShareTimeline: true,
-  // ezplayer 插件暂时注释，待完成微信插件授权后恢复
-  // usingComponents: {
-  //   ezplayer: 'plugin://ezplayer/ezplayer',
-  // },
+  usingComponents: {
+    ezplayer: 'plugin://ezplayer/ezplayer',
+  },
 }

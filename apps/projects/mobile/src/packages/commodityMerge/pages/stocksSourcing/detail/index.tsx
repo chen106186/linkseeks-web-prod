@@ -103,7 +103,6 @@ type StocksSourcingDetailRouteParams = {
   scene?: string
   isShare: string
 }
-/*
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -111,7 +110,6 @@ declare global {
     }
   }
 }
-*/
 
 const StocksSourcingDetail: React.FC = () => {
   const { routerToCustomerService } = useCustomerService()
@@ -225,6 +223,10 @@ const StocksSourcingDetail: React.FC = () => {
   useEffect(() => {
     if (commodityId) {
       setCameraLoading(true)
+      if (typeof getCommodityMobileCameraListByCommodity !== 'function') {
+        setCameraLoading(false)
+        return
+      }
       getCommodityMobileCameraListByCommodity({ commodityId })
         .then((res: any) => {
           if (res.code === 1000 && res.data) {
@@ -321,7 +323,6 @@ const StocksSourcingDetail: React.FC = () => {
             <View className="camera-view__player" style={'height:' + height + 'px'}>
               {canPlay ? (
                 <View>
-                  {/* ezplayer 插件暂时注释，待完成微信插件授权后恢复
                   <ezplayer
                     id={`ezplayer_${activeCameraIndex}`} // 添加唯一key，确保切换时重新渲染
                     key={`ezplayer_${activeCameraIndex}`} // 添加key属性
@@ -348,16 +349,6 @@ const StocksSourcingDetail: React.FC = () => {
                     bindhandleerror={handleEzplayerError}
                     bindoncontrolevent={handleEzplayerControlEvent}
                   ></ezplayer>
-                  */}
-                  <View className="camera-view__placeholder">
-                    {current.coverUrl && <img src={current.coverUrl} alt="" className="camera-view__cover" />}
-                    <View
-                      className="camera-view__status-overlay"
-                      style={{ backgroundColor: getStatusColor(current.cameraStatus) + 'CC' }}
-                    >
-                      <Text className="camera-view__status-text">ezplayer 插件暂未启用</Text>
-                    </View>
-                  </View>
                 </View>
               ) : (
                 <View className="camera-view__placeholder">

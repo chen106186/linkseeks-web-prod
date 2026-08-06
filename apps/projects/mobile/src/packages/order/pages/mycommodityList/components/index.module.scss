@@ -116,11 +116,14 @@
 
 }
 .OrderItem{
+  box-sizing: border-box;
   background-color: $theme-surface;
   width: 100%;
+  border: 1px solid $theme-border;
   border-radius: 8px;
   padding: 10px 12px;
   margin: 8px 10px 0 10px;
+  box-shadow: $theme-shadow-strong;
   .List{
     display: flex;
     margin-top: 10px;

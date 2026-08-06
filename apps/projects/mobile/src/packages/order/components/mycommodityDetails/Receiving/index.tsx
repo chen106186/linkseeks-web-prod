@@ -44,6 +44,13 @@ const Receiving = (props: Iprops) => {
     })
   }
 
+  const handleHeaderCardClick = (index: number) => {
+    setCurrentIndex(index)
+    if (!isLogistics) {
+      Router.navigateTo('order/logisticsDetail')
+    }
+  }
+
   return (
     <View className={styles.container}>
       <View
@@ -68,14 +75,20 @@ const Receiving = (props: Iprops) => {
                 className={`${styles['header-card']} ${dataSource.length > 1 && styles['header-card-more']} ${
                   Index === index && styles['header-card-border']
                 }`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => handleHeaderCardClick(index)}
               >
                 <View className={styles.box}>
                   {item.logisticsNo ? (
                     <View className={styles.left}>
                       {/*  onClick={() => Router.navigateToKuaiDi100(item.logisticsNo)} */}
                       <Text className={styles.num}>{item.logisticsNo}</Text>
-                      <Text className={styles.tag} onClick={() => clipboard(item.logisticsNo)}>
+                      <Text
+                        className={styles.tag}
+                        onClick={(event) => {
+                          event.stopPropagation()
+                          clipboard(item.logisticsNo)
+                        }}
+                      >
                         {intl.formatMessage({ id: 'order.fuzhi', defaultMessage: '复制' })}
                       </Text>
                     </View>

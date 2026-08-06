@@ -19,7 +19,7 @@ const Userinfo = () => {
   const handleLogout = async () => {
     Store.userStore.removeUserInfo()
     Toast.show({ title: intl.formatMessage({ id: 'user.tuichuchenggong', defaultMessage: '退出成功' }), icon: 'none' })
-    Router.redirectTo('extra/login')
+    Router.redirectTo('root/login')
   }
 
   useEffect(() => {

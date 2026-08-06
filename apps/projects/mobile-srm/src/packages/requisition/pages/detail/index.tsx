@@ -183,7 +183,7 @@ const RequisitionDetail: React.FC = () => {
       interiorRequisitionFormStateResponses: list,
       interiorInquiryListLogResponses: dataSoucre?.innerHistories,
     })
-    Router.navigateTo('extra/statusLayout')
+    Router.navigateTo('root/statusLayout')
   }
 
   const handleAuditLayout = (flag?: boolean) => {

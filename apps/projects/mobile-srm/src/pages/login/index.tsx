@@ -65,7 +65,7 @@ const Login = () => {
       if (res.code === 1000) {
         setAsyncStorage('USER_INFO', res.data)
         userStore.setUserInfo(res.data)
-        Router.reLaunch('extra/index')
+        Router.reLaunch('root/index')
         return
       } else {
         if (current == 1) {
@@ -90,7 +90,7 @@ const Login = () => {
   }
 
   const webView = (item: any) => {
-    Router.navigateTo('extra/richtext', { id: item.id, type: 'sign' })
+    Router.navigateTo('root/richtext', { id: item.id, type: 'sign' })
   }
   useEffect(() => {
     setNavigationBarTitle({ title: intl.formatMessage({ id: 'user.dengru', defaultMessage: '登入' }) })

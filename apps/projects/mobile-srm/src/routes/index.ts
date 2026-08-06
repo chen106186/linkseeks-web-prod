@@ -1,9 +1,9 @@
 export const rootRouter = {
-  'extra/index': 'pages/index/index', // 首页
-  'extra/login': 'pages/login/index', // 登录
-  'extra/network': 'pages/network/index', // 网络异常页
-  'extra/statusLayout': 'pages/statusLayout/index', // 审核状态
-  'extra/richtext': 'pages/richtext/index', // 富文本
+  'root/index': 'pages/index/index', // 首页
+  'root/login': 'pages/login/index', // 登录
+  'root/network': 'pages/network/index', // 网络异常页
+  'root/statusLayout': 'pages/statusLayout/index', // 审核状态
+  'root/richtext': 'pages/richtext/index', // 富文本
 }
 
 // 请购单相关

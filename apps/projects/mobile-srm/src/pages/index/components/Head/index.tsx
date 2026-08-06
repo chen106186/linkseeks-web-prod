@@ -407,7 +407,7 @@ const Head = (props: Iprops) => {
     if (userInfo) {
       Router.navigateTo('user/userInfo')
     } else {
-      Router.navigateTo('extra/login')
+      Router.navigateTo('root/login')
     }
   }
   /* 展开 */

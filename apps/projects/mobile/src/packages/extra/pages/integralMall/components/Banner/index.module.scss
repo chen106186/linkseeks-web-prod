@@ -1,14 +1,18 @@
+@import '@/styles/variables.scss';
+
 .banner-wrapper {
   height: 120px;
   display: flex;
   &-container {
     border-radius: 8px;
+    border: 1px solid $theme-border-light;
+    box-shadow: $theme-shadow;
     overflow: hidden;
-    background-color: #F2F2F2;
+    background-color: $theme-surface;
     flex: 1;
   }
   &-slideItem {
-    background-color: #F2F2F2;
+    background-color: $theme-surface;
     flex: 1;
   }
   &-image {

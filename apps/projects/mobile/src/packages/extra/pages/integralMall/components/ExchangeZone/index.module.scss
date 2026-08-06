@@ -1,5 +1,15 @@
+@import '@/styles/variables.scss';
+
 .exchangeZone {
   position: relative;
+
+  :global {
+    .productList-item-container {
+      border: 1px solid $theme-border-light;
+      box-shadow: $theme-shadow;
+    }
+  }
+
   &-exchange_title {
     padding: 8px 12px;
     display: flex;

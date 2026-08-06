@@ -6,7 +6,7 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-color: $theme-surface;
+  background-color: $theme-page-bg;
   .integral-mall {
     flex: 1;
     display: flex;
@@ -14,12 +14,12 @@
     flex-direction: column;
 
     &-navbar {
-      background-color: #FAFBFC;
+      background-color: $theme-page-bg;
     }
 
     &-scroll {
       height: 100%;
-      background-color: #FAFBFC;
+      background-color: $theme-page-bg;
     }
     &-header {
       display: flex;
@@ -57,7 +57,7 @@
     }
     &-body {
       flex: 1;
-      background-color: #FAF8FC;
+      background-color: $theme-page-bg;
     }
     &-detailLink {
       display: flex;

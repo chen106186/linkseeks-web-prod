@@ -43,6 +43,11 @@ const ModeMobileView = (props: Iprops) => {
   const Close = () => {
     onClose({ toggle: false })
   }
+
+  if (!toggle) {
+    return null
+  }
+
   return (
     <ActionSheet isOpened={toggle} onClose={() => Close()} customContainerStyle="customHeight">
       <View className="content">
@@ -65,6 +70,6 @@ const ModeMobileView = (props: Iprops) => {
 }
 ModeMobileView.defaultProps = {
   areaList: [],
-  toggle: true,
+  toggle: false,
 }
 export default ModeMobileView

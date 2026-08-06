@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
-import { View, Input, Image } from '@apps/mobile-ui'
+import { View, Image } from '@apps/mobile-ui'
+import { Input as TaroInput } from '@tarojs/components'
 import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import Eye from '@/assets/images/eye.png'
@@ -36,9 +37,7 @@ const SingView: React.FC<any> = (props: Iprops) => {
   }, [from])
 
   const setKey = (val, key) => {
-    const fromData = from
-    fromData[key] = val
-    setFrom({ ...fromData })
+    setFrom((prev) => ({ ...prev, [key]: val }))
   }
   /* 请求登录 */
   const login = async () => {
@@ -65,24 +64,26 @@ const SingView: React.FC<any> = (props: Iprops) => {
   return (
     <View className={styles['MobileView']}>
       <View className={styles['fromItem']}>
-        <Input
+        <TaroInput
           value={from.account}
-          placeholderClass="placeholderText"
+          disabled={false}
+          placeholderClass={styles['placeholderText']}
           placeholder={intl.formatMessage({
             id: 'user.qingshuruyonghumingshou',
             defaultMessage: '请输入用户名/手机号',
           })}
-          onChange={(e) => setKey(e, 'account')}
+          onInput={(e) => setKey(e.detail.value, 'account')}
         />
       </View>
       <View className={styles['fromFlex']}>
-        <Input
+        <TaroInput
           value={from.password}
+          disabled={false}
           type="text"
           password={type ? true : false}
-          placeholderClass="placeholderText"
+          placeholderClass={styles['placeholderText']}
           placeholder={intl.formatMessage({ id: 'user.qingshurumima', defaultMessage: '请输入密码' })}
-          onChange={(e) => setKey(e, 'password')}
+          onInput={(e) => setKey(e.detail.value, 'password')}
         />
         <View className={styles['Imgbox']} onClick={() => setType(!type)}>
           <Image

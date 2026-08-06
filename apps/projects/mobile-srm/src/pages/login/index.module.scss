@@ -232,6 +232,26 @@ page {
     background-color: #edeeef;
     color: #c0c4cc;
   }
+  .fromItem,
+  .fromFlex {
+    height: 48px;
+  }
+
+  :global {
+    .at-input {
+      height: 100%;
+      padding: 0 !important;
+    }
+
+    .at-input__container,
+    .at-input__input {
+      height: 100%;
+    }
+
+    .at-input__input {
+      line-height: 48px;
+    }
+  }
 }
 
 .mobileModel {

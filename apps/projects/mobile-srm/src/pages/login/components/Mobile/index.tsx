@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
-import { View, Input, Text, Image } from '@apps/mobile-ui'
+import { View, Text, Image } from '@apps/mobile-ui'
+import { Input as TaroInput } from '@tarojs/components'
 import cx from 'classnames'
 import { showToast, pxTransform } from '@apps/mobile-services/utils/taro'
 import fill from '@/assets/images/arrow-down-fill@2x.png'
@@ -96,9 +97,7 @@ const MobileView: React.FC<any> = (props: Iprops) => {
     }
   }
   const setKey = (val, key) => {
-    const fromData = from
-    fromData[key] = val
-    setFrom({ ...fromData })
+    setFrom((prev) => ({ ...prev, [key]: val }))
   }
   /* 点击手机号码显示弹出 */
   const onCode = () => {
@@ -136,21 +135,23 @@ const MobileView: React.FC<any> = (props: Iprops) => {
           </Text>
           <Image src={fill} style={{ width: pxTransform(16), height: pxTransform(16) }} />
         </View>
-        <Input
+        <TaroInput
           value={from.phone}
+          disabled={false}
           type="number"
           maxlength={phoneLength}
-          placeholderClass="placeholderText"
+          placeholderClass={styles['placeholderText']}
           placeholder={intl.formatMessage({ id: 'user.qingshurushoujihao', defaultMessage: '请输入手机号' })}
-          onChange={(e) => setKey(e, 'phone')}
+          onInput={(e) => setKey(e.detail.value, 'phone')}
         />
       </View>
       <View className={styles['fromFlex']}>
-        <Input
+        <TaroInput
           value={from.smsCode}
-          placeholderClass="placeholderText"
+          disabled={false}
+          placeholderClass={styles['placeholderText']}
           placeholder={intl.formatMessage({ id: 'user.qingshuruyanzhengma', defaultMessage: '请输入验证码' })}
-          onChange={(e) => setKey(e, 'smsCode')}
+          onInput={(e) => setKey(e.detail.value, 'smsCode')}
         />
         <Text onClick={getcode} style={{ color: '#333' }}>
           {btnContent}{' '}

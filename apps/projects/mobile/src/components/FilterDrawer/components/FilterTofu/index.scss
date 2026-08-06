@@ -32,17 +32,19 @@ $filter-tofu-prefix: 'filter-tofu';
 
     &-content {
       padding: $spacing-v-lg - 2 $spacing-h-lg - 2;
-      background-color: $color-bg-base;
+      background-color: $theme-page-bg;
       font-size: 12px;
       color: $color-grey-1;
       text-align: center;
       border-radius: 4px;
+      box-sizing: border-box;
       @include text-overflow();
-      @include border-thin($color-bg-base);
+      @include border-thin($theme-border-light);
     }
 
     &__active {
       .#{$filter-tofu-prefix}-item-content {
+        background-color: $theme-primary-soft;
         color: $color-brand;
         @include border-thin($color-brand);
       }

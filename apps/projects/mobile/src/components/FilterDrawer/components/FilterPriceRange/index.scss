@@ -9,6 +9,9 @@
       flex: 1;
       border-radius: 4px;
       overflow: hidden;
+      background-color: $theme-page-bg;
+      border: 1px solid $theme-border-light;
+      box-sizing: border-box;
 
       .at-input {
         padding: 0;
@@ -28,7 +31,7 @@
     }
 
     .filter-price-digit {
-      background-color: $theme-page-bg;
+      background-color: transparent;
       height: 32px;
       text-align: center;
       font-size: 12px;

@@ -1,10 +1,12 @@
+@import '@/styles/variables.scss';
+
 .classify-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-color: #ffffff;
+  background-color: $theme-page-bg;
 
   :global {
     .at-tabs {

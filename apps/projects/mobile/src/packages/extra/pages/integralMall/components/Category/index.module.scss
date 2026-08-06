@@ -2,7 +2,7 @@
 
 .banner-category-container {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   margin: 0px 8px 8px;
   border-radius: 8px;
   padding-top: 8px;
@@ -26,7 +26,7 @@
   }
 
   &-navIcon {
-    background-color: white;
+    background-color: $theme-surface;
     border-radius: 12px;
     margin-bottom: 4px;
   }

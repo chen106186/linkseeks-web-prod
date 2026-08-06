@@ -14,7 +14,7 @@
 		max-width: max-content;
 		height: 24px;
 		border-radius: 4px;
-		background-color: #FFFFFF;
+  background-color: $theme-surface;
 		color: #252d37;
 		font-size: 12px;
 		font-weight: 400;
@@ -29,7 +29,7 @@
   .TradingRecordList{
     &-item{
       padding: 0 10px;
-      background: #fff;
+    background: $theme-surface;
       border-radius: 5px;
 			//margin-bottom: 20px;
 			margin-bottom: 8px;
@@ -82,7 +82,7 @@
     }
     .nodata{
       padding: 20px 0;
-      background: #fff;
+  background: $theme-surface;
       text-align: center;
       .fileListLogo{
         width: 100%;

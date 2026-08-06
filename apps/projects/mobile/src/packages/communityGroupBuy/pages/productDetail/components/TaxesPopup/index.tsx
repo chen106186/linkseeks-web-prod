@@ -5,6 +5,7 @@ import React from 'react'
 import { View, Text } from '@apps/mobile-ui'
 import { useIntl } from '@linkseeks/i18n'
 import Popup from '@/components/Popup'
+import { THEME_COLORS } from '@/constants/theme'
 import Bookshelf from '../../../../components/Bookshelf'
 import './index.scss'
 
@@ -147,7 +148,7 @@ const TaxesPopup: React.FC<IProps> = (props: IProps) => {
       })}
       onClose={handleClose}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
     >

@@ -12,7 +12,7 @@
 		&-item{
 			display: flex;
 			justify-content: space-between;
-			background-color: #fff;
+			background-color: $theme-surface;
 			align-items: center;
 			border-radius: 5px;
 			padding: 5px 8px;
@@ -28,7 +28,7 @@
 	}
 
   &-submit{
-		background-color: #fff;
+		background-color: $theme-surface;
 		padding: 8px;
     &-btn{
 			background-color: $theme-color;

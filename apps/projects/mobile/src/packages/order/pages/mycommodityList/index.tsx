@@ -992,7 +992,7 @@ const MyCommodityList: React.FC = () => {
           onClear={handleSearchSubmit}
           onSearch={handleSearchSubmit}
           customClassName={styles['page-wrap-Search-key']}
-          innerBackground="#FFF"
+          innerBackground={THEME_COLORS.surface}
           shape="round"
           clearable
           showAction

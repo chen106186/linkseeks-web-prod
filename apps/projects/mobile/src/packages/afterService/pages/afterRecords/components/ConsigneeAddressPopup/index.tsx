@@ -8,6 +8,7 @@
 import React from 'react';
 import { useIntl } from '@linkseeks/i18n';
 import Popup from '@/components/Popup';
+import { THEME_COLORS } from '@/constants/theme';
 import Cell from '@/components/Cell';
 import Gap from '../Gap';
 
@@ -62,7 +63,7 @@ const ConsigneeAddressPopup: React.FC<IProps> = (props: IProps) => {
       onClose={handleClose}
       title={intl.formatMessage({id: 'afterRecords.components.consigneeAddress.title',  defaultMessage: '商品寄回信息' })}
       customStyle={{
-        backgroundColor: '#FFF',
+        backgroundColor: THEME_COLORS.surface,
       }}
     >
       <Cell border={false} transposition>

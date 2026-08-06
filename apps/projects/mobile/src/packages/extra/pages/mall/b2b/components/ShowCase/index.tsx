@@ -4,6 +4,7 @@ import Router from '@/utils/router'
 import { View } from '@apps/mobile-ui'
 import Skeleton from '@/components/Skeleton'
 import ImageBox from '@/components/ImageBox'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 type ShowcaseShopItem = {
@@ -105,7 +106,7 @@ const ShowCase: React.FC<ShowCaseProps> = (props) => {
         marginBottom: pxTransform(8),
       }}
       style={{
-        backgroundColor: '#FFF',
+        backgroundColor: THEME_COLORS.surface,
         marginBottom: pxTransform(0),
       }}
       column={2}

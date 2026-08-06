@@ -56,7 +56,7 @@
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-		background: #ffffff;
+    background: $theme-surface;
 		box-shadow: 0 2px 4px 0 #0000001f;
 		z-index: 1;
 
@@ -126,7 +126,7 @@
 			line-height: 24px;
 			border-radius: 4px;
 			border: 1px solid #ebecf0;
-			background: #ffffff;
+    background: $theme-surface;
 			text-align: center;
 			font-size: 12px;
 			color: #91959B;
@@ -143,7 +143,7 @@
 .delivery-info {
 	margin: 8px;
 	padding: 12px;
-	background-color: #ffffff;
+    background-color: $theme-surface;
 	border-radius: 8px;
 
 	&-title {
@@ -236,7 +236,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: #fff;
+  background-color: $theme-surface;
 
 	&-holder {
 		@include footer-size-style;

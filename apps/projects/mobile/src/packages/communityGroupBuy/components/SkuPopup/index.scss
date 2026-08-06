@@ -4,14 +4,14 @@
 .sku {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-product-card {
     display: flex;
     flex-direction: row;
     padding: $spacing-v-lg $spacing-h-lg;
     padding-right: 48px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
 
     &-left {
       width: 88px;
@@ -143,12 +143,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-action {
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
 
     &-inner {
       padding: $spacing-v-md $spacing-h-md;

@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from 'react'
 import { View } from '@apps/mobile-ui'
 import { observer } from 'mobx-react-lite'
 import Popup from '@/components/Popup'
+import { THEME_COLORS } from '@/constants/theme'
 import { getStockStorage } from './utils'
 import ShippingAreaIndexes, {
   ShippingAreaIndexesValueType,
@@ -104,7 +105,7 @@ const AreaPopup: React.FC<IProps> = (props: IProps) => {
       }}
       zIndex={101}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
       onAfterClose={handlePopupAfterClose}

@@ -5,6 +5,7 @@ import React from 'react';
 import { View, Text } from '@apps/mobile-ui';
 import { useIntl } from '@linkseeks/i18n';
 import Popup from '@/components/Popup';
+import { THEME_COLORS } from '@/constants/theme';
 import Bookshelf from '../../../../components/Bookshelf';
 import './index.scss';
 
@@ -107,7 +108,7 @@ const TaxesPopup: React.FC<IProps> = (props: IProps) => {
       title={intl.formatMessage({id: 'commodityMerge.stocksSourcing.components.taxesPopup.title',  defaultMessage: '税费说明' })}
       onClose={handleClose}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
     >

@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react'
 import { useIntl } from '@linkseeks/i18n'
 import { Text, View, ScrollView, Radio } from '@apps/mobile-ui'
 import { IRequestSuccess } from '@/types/request'
+import { THEME_COLORS } from '@/constants/theme'
 import {
   getAftersalesMobileReturnGoodsGetReasonList,
   getAftersalesMobileReplaceGoodsGetReasonList,
@@ -128,7 +129,7 @@ const ReasonPopup: React.FC<IProps> = (props: IProps) => {
       title={intl.formatMessage({ id: 'afterTodo.components.reasonPopup.reason', afterType: TITLE_MAP[afterType] })}
       zIndex={105}
       customStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
       }}
     >
       <View className={styles['reason-popup']}>

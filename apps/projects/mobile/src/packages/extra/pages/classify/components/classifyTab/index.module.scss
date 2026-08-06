@@ -10,7 +10,7 @@
 
     &-navWrap {
       width: 23%;
-      background-color: #FFFFFF;
+    background-color: $theme-surface;
     }
 
     &-nav {
@@ -18,13 +18,13 @@
         background-color: $theme-page-bg;
 
         &__active {
-          background-color: #FFFFFF;
+      background-color: $theme-surface;
         }
       }
 
       &-item {
         padding: $spacing-v-lg + 2 0;
-        background-color: #FFFFFF;
+    background-color: $theme-surface;
 
         &-textWrap {
           position: relative;

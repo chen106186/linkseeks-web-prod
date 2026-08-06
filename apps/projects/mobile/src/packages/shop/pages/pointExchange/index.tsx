@@ -376,7 +376,7 @@ const PointExchange: React.FC<paramType> = () => {
             safeBottomHeight && params?.hasTab !== 'true'
               ? {
                   paddingBottom: `${safeBottomHeight}PX`,
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: THEME_COLORS.page,
                 }
               : {}
           }

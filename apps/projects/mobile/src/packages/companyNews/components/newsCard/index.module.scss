@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .news-warp-item {
-  background-color: #fff;
+  background-color: $theme-surface;
   margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;

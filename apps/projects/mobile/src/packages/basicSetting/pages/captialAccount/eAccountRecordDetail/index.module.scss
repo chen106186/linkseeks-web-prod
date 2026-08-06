@@ -20,14 +20,14 @@
       flex-direction: column;
       width: 100%;
       padding: 0 12px;
-      background-color: #FFF;
+  background-color: $theme-surface;
       border-radius: 8px;
 
       .listHeader {
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: #FFF;
+  background-color: $theme-surface;
         padding: 16px 0;
         border-radius: 8px;
       }
@@ -56,7 +56,7 @@
       .listItem {
         display: flex;
         width: 100%;
-        background-color: #FFF;
+    background-color: $theme-surface;
         padding: 16px 0;
         flex-direction: row;
         justify-content: space-between;

@@ -43,7 +43,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 6px 16px;
-		background-color: #fff;
+		background-color: $theme-page-bg;
 
 		&-key {
 			flex: 1;
@@ -51,7 +51,7 @@
 			margin-right: 10px;
 			border: 1px solid $theme-primary;
 			border-radius: 32px;
-			background-color: #fff;
+			background-color: $theme-surface;
 		}
 
 		&-button {

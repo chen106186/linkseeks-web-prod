@@ -5,7 +5,7 @@
   width: 100%;
   flex-direction: row;
   padding: $spacing-h-md $spacing-h-md $spacing-h-md 0;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-icon {
     min-width: 52px;

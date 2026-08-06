@@ -2,7 +2,7 @@
 
 .container {
   padding: 24px * $hd 24px * $hd 8px * $hd 24px * $hd;
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px * $hd;
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@
   }
 
   .btn-default {
-    background-color: #fff;
+    background-color: $theme-surface;
     color: #000;
   }
 }

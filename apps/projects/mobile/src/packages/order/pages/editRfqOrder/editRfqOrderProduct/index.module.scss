@@ -11,7 +11,7 @@
 		overflow-x: hidden;
 		padding: 8px;
     .product-item{
-      background-color: #fff;
+      background-color: $theme-surface;
       display: flex;
       padding: 19px;
       align-items: center;
@@ -46,7 +46,7 @@
 }
 
 .submit{
-	background-color: #fff;
+	background-color: $theme-surface;
 	padding: 8px;
 	&-text{
 		background-color: $theme-color;

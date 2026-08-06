@@ -8,6 +8,7 @@ import Search from '@/components/Search'
 import { useStatusBarHeight } from '@apps/mobile-services'
 import { getOssUrlPath } from '@apps/constants'
 import { useIntl } from '@linkseeks/i18n'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 const choice = getOssUrlPath('/miniprogram/assets/images/choice.png')
@@ -258,7 +259,7 @@ const FilterModal = (props: FilterModalProps) => {
                 onClear={handleSearchSubmit}
                 onSearch={handleSearchSubmit}
                 customClassName={styles['page-wrap-Search-key']}
-                innerBackground="#FFF"
+                innerBackground={THEME_COLORS.surface}
                 shape="round"
                 clearable
                 showAction

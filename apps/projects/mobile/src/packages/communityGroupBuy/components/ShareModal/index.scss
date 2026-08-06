@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .container {
   position: relative;
   display: flex;
@@ -15,7 +17,7 @@
     }
 
     &-info {
-      background-color: #fff;
+      background-color: $theme-surface;
       margin: -435px 16px 16px 16px;
       padding: 12px;
       position: absolute;
@@ -95,7 +97,7 @@
   }
 
   .footer {
-    background-color: #fff;
+    background-color: $theme-surface;
     border-radius: 16px 16px 0 0;
     overflow: hidden;
     position: fixed;
@@ -132,7 +134,7 @@
         }
 
         .share-modal-button {
-          background-color: #fff;
+          background-color: $theme-surface;
           border: none;
           padding: 0;
           line-height: 1;

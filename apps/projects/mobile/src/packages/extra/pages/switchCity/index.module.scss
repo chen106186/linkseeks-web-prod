@@ -10,11 +10,11 @@
 .searchWrap {
   position: relative;
   padding: 8px 12px,;
-  background-color: #FFF;
+  background-color: $theme-page-bg;
 }
 
 .searchList {
-  background-color: #FFF;
+  background-color: $theme-surface;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@
 }
 
 .sectionListWrap {
-  background-color: #FFF;
+  background-color: $theme-surface;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -119,7 +119,7 @@
 }
 
 .sectionItem {
-  background-color: #FFF;
+  background-color: $theme-surface;
   padding: 14px 12px;
 }
 
@@ -182,7 +182,7 @@
 
 .cardBody {
   display: flex;
-  background-color: #FFF;
+  background-color: $theme-surface;
   border-radius: 8px;
   padding: 8px 4px;
   flex-wrap: wrap;

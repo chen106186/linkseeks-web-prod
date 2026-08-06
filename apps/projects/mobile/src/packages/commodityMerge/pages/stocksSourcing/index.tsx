@@ -357,6 +357,7 @@ const StocksSourcingIndex: React.FC<StocksSourcingIndexProps> = () => {
               greedy
             />
             <Filter
+              customClassName="stocksSourcing-filter"
               config={filterBarConfig}
               onChange={handleSortChange}
               extra={[

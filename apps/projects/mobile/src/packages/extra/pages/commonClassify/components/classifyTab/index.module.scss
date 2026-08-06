@@ -4,7 +4,7 @@
   display: flex;
   .tab-navWrap {
     width: 23%;
-    background-color: #ffffff;
+    background-color: $theme-surface;
 
     .tab-nav {
       .tab-nav-itemWrap {
@@ -13,7 +13,7 @@
         .tab-nav-item {
           padding-top: 14px;
           padding-bottom: 14px;
-          background-color: #ffffff;
+          background-color: $theme-surface;
 
           .tab-nav-item-textWrap {
             position: relative;
@@ -64,7 +64,7 @@
         }
       }
       .tab-nav-itemWrap__active {
-        background-color: #ffffff;
+        background-color: $theme-surface;
       }
     }
   }

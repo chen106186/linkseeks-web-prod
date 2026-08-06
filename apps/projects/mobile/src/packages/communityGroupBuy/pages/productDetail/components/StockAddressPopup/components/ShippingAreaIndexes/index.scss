@@ -2,7 +2,7 @@
 
 .area-indexes {
   flex: 1;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-shortcut {
     display: flex;
@@ -29,7 +29,7 @@
   }
 
   &-scroll {
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-group {

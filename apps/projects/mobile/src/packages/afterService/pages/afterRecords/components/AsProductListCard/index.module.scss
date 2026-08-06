@@ -3,7 +3,7 @@
 .as-products-card {
   border-radius: 8px;
   overflow: hidden;
-  background-color: #FFF;
+  background-color: $theme-surface;
 
   &-item {
     &__notLast {

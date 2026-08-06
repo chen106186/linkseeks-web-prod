@@ -145,7 +145,7 @@ const PopularExchange = (props: PopularExchangePropsType) => {
       </View>
       <Skeleton.Vertical style={{ padding: `0 ${pxTransform(8)}` }}>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{ backgroundColor: THEME_COLORS.surface, height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
         >
           <Skeleton.Avatar width="{104}" height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>
@@ -155,7 +155,7 @@ const PopularExchange = (props: PopularExchangePropsType) => {
           </Skeleton.Vertical>
         </Skeleton>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{ backgroundColor: THEME_COLORS.surface, height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
         >
           <Skeleton.Avatar width={104} height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>
@@ -165,7 +165,7 @@ const PopularExchange = (props: PopularExchangePropsType) => {
           </Skeleton.Vertical>
         </Skeleton>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{ backgroundColor: THEME_COLORS.surface, height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
         >
           <Skeleton.Avatar width={104} height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>

@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .activity {
 	border-radius: 8px;
 }
@@ -44,7 +46,7 @@
 
 	&-content {
 		border-radius: 8px;
-		background: #ffffff;
+		background: $theme-surface;
 		padding: 8px 12px 12px 12px;
 		margin-top: -8px;
 

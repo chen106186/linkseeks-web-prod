@@ -9,7 +9,7 @@
     height: 200px;
     border-radius: 8px;
     margin: 8px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     display: flex;
     flex-direction: column;
     :global{

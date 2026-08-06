@@ -22,7 +22,7 @@
   font-size: 12px;
   color: #3D3D3D;
   font-weight: 400;
-  background-color: #fff;
+  background-color: $theme-surface;
   
   .money {
     color: #EF3346;
@@ -41,7 +41,7 @@
   }
 
   .item {
-    background-color: #fff;
+    background-color: $theme-surface;
     padding: 16px 12px;
     border-radius: 8px;
     width: 100%;

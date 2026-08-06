@@ -29,7 +29,7 @@ $hsm: $spacing-h-sm - 1;
     width: 100%;
     padding: 0 $spacing-h-md;
     padding-top: 4px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
 
     &-left {
       width: 36%;

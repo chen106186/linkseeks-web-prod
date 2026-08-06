@@ -7,6 +7,7 @@ import { pxTransform, useRouter } from '@apps/mobile-services/utils/taro'
 import FullScreenLoading from '@/components/Loading/fullscreenLoading'
 import Router from '@/utils/router'
 import cx from 'classnames'
+import { THEME_COLORS } from '@/constants/theme'
 
 // 人像面背景图
 const frontCardImg = 'https://obs-wnwl.obs.cn-east-3.myhuaweicloud.com/mini-program/img-add/front-card.png'
@@ -63,7 +64,7 @@ const TeamLeaderDetail: React.FC<{}> = () => {
   return (
     <ScrollView scrollY className={styles['application']}>
       <View>
-        <View style={{ padding: pxTransform(8), background: '#fff', textAlign: 'right' }}>
+        <View style={{ padding: pxTransform(8), background: THEME_COLORS.surface, textAlign: 'right' }}>
           <Text onClick={() => editTeamLeader()}>编辑</Text>
         </View>
 

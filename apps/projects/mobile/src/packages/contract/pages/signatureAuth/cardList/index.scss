@@ -1,9 +1,11 @@
+@import '@/styles/variables.scss';
+
 .card-box {
   margin: 8px;
   padding: 8px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   .title-name {
     font-weight: bold;
     line-height: 40px;

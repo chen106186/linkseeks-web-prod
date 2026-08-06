@@ -3,7 +3,7 @@
 .taxes-popup {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
 
   &-scrollView {
     overflow-y: auto;

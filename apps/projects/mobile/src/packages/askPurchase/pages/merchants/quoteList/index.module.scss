@@ -25,7 +25,7 @@
     &-item {
       padding: 12px;
       border-radius: 8px;
-      background-color: #FFFFFF;
+    background-color: $theme-surface;
       margin-bottom: 8px;
 
 			&-box {
@@ -219,7 +219,7 @@
 			position: absolute;
 			display: none;
 			z-index: 9;
-			background-color: #FFFFFF;
+    background-color: $theme-surface;
 			border-radius: 6px;
 			top: 30px;
 			left: 0;
@@ -258,7 +258,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 12px;
-  background-color: #FFFFFF;
+  background-color: $theme-page-bg;
 
   &-key {
     flex: 1;

@@ -6,6 +6,7 @@ import { View } from '@apps/mobile-ui'
 import { useIntl } from '@linkseeks/i18n'
 import useProductConst from '@/hooks/useProductConst'
 import { DELIVERY_TYPE_ENUM } from '@/constants/const/product'
+import { THEME_COLORS } from '@/constants/theme'
 import { vibrateShort } from '@tarojs/taro'
 import Popup from '@/components/Popup'
 import styles from './index.module.scss'
@@ -113,7 +114,7 @@ const DeliveryTypePopup: React.FC<IProps> = (props: IProps) => {
       })}
       onClose={handleClose}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
     >

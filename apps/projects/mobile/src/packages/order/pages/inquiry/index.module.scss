@@ -11,7 +11,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0 $spacing-h-md;
-    background-color: #FFFFFF;
+  background-color: $theme-surface;
 
     &-search {
       flex: 1;
@@ -26,7 +26,7 @@
     flex-direction: column;
   }
   &-tabBar {
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     :global{
       .at-tabs__header {
         text-align: start;
@@ -53,7 +53,7 @@
   &-boxSizeing {
     flex: 1;
     border-radius: 8px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     margin: 8px 8px 0px;
     overflow: hidden;
   }

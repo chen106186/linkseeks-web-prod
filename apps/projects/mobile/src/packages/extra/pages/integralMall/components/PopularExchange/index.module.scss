@@ -18,7 +18,7 @@
     height: 24px;
   }
   &-scrollItem {
-    background-color: #FFFFFF;
+      background-color: $theme-surface;
     display: flex;
     flex-direction: row;
     flex: 1;

@@ -12,7 +12,7 @@
       align-items: center;
       padding: 0 $spacing-h-lg;
       margin: $spacing-v-md $spacing-h-md 0;
-      background-color: #FFFFFF;
+    background-color: $theme-surface;
       border-radius: 8px;
 
       &-head {
@@ -57,6 +57,6 @@
     left: 0;
     z-index: 101;
     padding: $spacing-v-md $spacing-h-md;
-    background-Color: #FFFFFF;
+    background-Color: $theme-surface;
   }
 }

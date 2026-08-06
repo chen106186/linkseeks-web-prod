@@ -9,6 +9,7 @@ import React from 'react'
 import { useIntl } from '@linkseeks/i18n'
 import { View } from '@apps/mobile-ui'
 import Popup from '@/components/Popup'
+import { THEME_COLORS } from '@/constants/theme'
 import Cell from '@/components/Cell'
 import Router from '@/utils/router'
 import Gap from '../../components/Gap'
@@ -189,7 +190,7 @@ const DeliveryInfoPopup: React.FC<IProps> = (props: IProps) => {
       visible={visible}
       onClose={handleClose}
       customStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
       }}
     >
       <View className={styles['delivery-info']}>

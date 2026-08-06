@@ -3,6 +3,7 @@ import { useIntl } from '@linkseeks/i18n'
 import { Text, View, ScrollView, Radio } from '@apps/mobile-ui'
 import { DELIVERY_TYPE_ENUM } from '@/constants/const/product'
 import Popup from '@/components/Popup'
+import { THEME_COLORS } from '@/constants/theme'
 import styles from './index.module.scss'
 
 export type DeliverItemType = {
@@ -127,7 +128,7 @@ const DeliverTypePopup: React.FC<IProps> = (props: IProps) => {
         afterType: TITLE_MAP[afterType],
       })}
       customStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
       }}
       zIndex={105}
     >

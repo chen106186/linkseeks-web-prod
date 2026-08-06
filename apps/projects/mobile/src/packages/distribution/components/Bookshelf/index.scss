@@ -19,7 +19,7 @@ $bookshelf-prefix: 'bookshelf';
     display: flex;
     align-items: center;
     padding: $spacing-h-lg - 2 0;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     @include border-thin-bottom(transparent);
 
     &__border {

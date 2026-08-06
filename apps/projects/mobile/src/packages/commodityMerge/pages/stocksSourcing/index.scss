@@ -21,6 +21,7 @@
   &-list {
     height: 100%;
     position: relative;
+    background-color: $theme-page-bg;
   }
 
   &-scrollView {
@@ -29,6 +30,33 @@
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  &-filter,
+  &-filter .filter-sort-bar {
+    background-color: $theme-page-bg;
+  }
+
+  &-filter .filter-sort-bar {
+    border-bottom: 1px solid $theme-border-light;
+  }
+
+  &-list {
+    .productList {
+      margin: 0;
+      padding: $spacing-h-md;
+    }
+
+    .productList-item {
+      padding: $spacing-v-xs 0;
+    }
+
+    .productList-item-container {
+      background-color: $theme-surface;
+      border: 1px solid $theme-border-light;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
   }
 
   .filter {

@@ -11,7 +11,7 @@
 	}
 	&-bottom{
 		padding: 8px;
-		background-color: #fff;
+		background-color: $theme-surface;
 	}
 }
 
@@ -22,7 +22,7 @@
 	align-items: center;
 	padding: 36px 0;
 	margin-bottom: 8px;
-	background-color: #fff;
+	background-color: $theme-surface;
 	&-logo{
 		width: 64px;
 		height: 64px;
@@ -40,7 +40,7 @@
 .renderItem{
 	border-bottom: 1px solid $theme-border-light;
 	padding: 8px;
-	background-color: #fff;
+	background-color: $theme-surface;
 	&-title{
 		font-family: PingFangSC-Regular;
 		font-weight: 400;

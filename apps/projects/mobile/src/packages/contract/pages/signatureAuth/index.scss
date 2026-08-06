@@ -15,7 +15,7 @@ page {
   display: flex;
   width: 100%;
   padding: 8px 0;
-  background-color: #fff;
+  background-color: $theme-surface;
   .btn-operate {
     flex: 1;
     margin: 0 8px;

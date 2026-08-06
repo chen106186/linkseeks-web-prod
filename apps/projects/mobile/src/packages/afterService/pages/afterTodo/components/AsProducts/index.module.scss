@@ -8,7 +8,7 @@
   &-item {
     display: flex;
     flex-direction: row;
-    background-color: #FFF;
+    background-color: $theme-surface;
 
     &__notLast {
       margin-bottom: $spacing-v-lg;

@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .provinces {
   position: fixed;
   width: 100%;
@@ -27,8 +29,8 @@
   &-seat--active {
     opacity: 1;
   }
-  &-container {
-    background-color: #fff;
+&-container {
+    background-color: $theme-surface;
     position: absolute;
     bottom: 0;
     left: 0;

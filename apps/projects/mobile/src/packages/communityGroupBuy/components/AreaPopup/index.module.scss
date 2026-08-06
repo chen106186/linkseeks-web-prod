@@ -1,8 +1,10 @@
+@import '@/styles/variables.scss';
+
 .wrapper {
     padding-bottom: 34px;
     height: 518px;
     display: flex;
     flex-direction: column;
     box-sizing: content-box;
-    background-color: #fff;
+    background-color: $theme-surface;
 }

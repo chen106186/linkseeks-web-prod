@@ -1,9 +1,11 @@
 @import "../..//styles/variables.scss";
 
+@import '@/styles/variables.scss';
+
 .coupon_view {
   padding-left: 12px;
   padding-right: 12px;
-  background-color: #fff;
+  background-color: $theme-surface;
   border-radius: 8px;
   flex: 1;
 	position: relative;

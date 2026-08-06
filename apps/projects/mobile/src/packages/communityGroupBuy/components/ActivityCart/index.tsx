@@ -17,6 +17,7 @@ import {
 import { useRouter, pxTransform, showToast, showLoading, hideLoading } from '@apps/mobile-services/utils/taro'
 import { useSafeArea } from '@apps/mobile-services'
 import { priceFormat } from '@/utils/numberFormat'
+import { THEME_COLORS } from '@/constants/theme'
 import { fnGetPriceAndAction } from '../../commonlyFn'
 import useStores from '@/store/useStores'
 import Popup from '@/components/Popup'
@@ -542,7 +543,7 @@ const ActivityCart = React.forwardRef<ActivityCartRefHandle, IProps>((props: IPr
       zIndex={101}
       customTitleStyle={{
         paddingLeft: '12px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
         textAlign: 'left',
         fontSize: '16px',

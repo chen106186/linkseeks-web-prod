@@ -136,7 +136,7 @@ const InformationDetail = () => {
           flex: 1,
           paddingLeft: pxTransform(12),
           paddingRight: pxTransform(12),
-          backgroundColor: '#fff',
+          backgroundColor: THEME_COLORS.page,
         }}
       >
         <View className={styles['detail-panel']}>

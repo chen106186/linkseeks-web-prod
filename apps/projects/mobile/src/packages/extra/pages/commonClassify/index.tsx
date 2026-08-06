@@ -9,6 +9,7 @@ import { useIntl } from '@linkseeks/i18n'
 import ClassifyTab from './components/classifyTab'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
+import { THEME_COLORS } from '@/constants/theme'
 const ShopClassify: React.FC<{}> = () => {
   const { safeBottomHeight } = useSafeArea()
   const { id, hasTab, layoutType, categoryId } = useRouter()?.params || {}
@@ -25,7 +26,7 @@ const ShopClassify: React.FC<{}> = () => {
           safeBottomHeight && !hasTab
             ? {
                 paddingBottom: `${safeBottomHeight}PX`,
-                backgroundColor: '#FFFFFF',
+                backgroundColor: THEME_COLORS.page,
               }
             : {}
         }

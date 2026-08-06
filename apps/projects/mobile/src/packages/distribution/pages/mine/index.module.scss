@@ -79,11 +79,11 @@
 
 
 .header-nav-sticky {
-  background: #ffffff !important;
+  background: $theme-surface !important;
 }
 
 .box {
-  background-color: #ffffff;
+  background-color: $theme-surface;
   border-radius: 8px;
   margin: 0 8px 8px 8px;
   padding: 12px;
@@ -206,7 +206,7 @@
   &-item {
     width: 48.9%;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: $theme-surface;
     padding: 12px;
     display: flex;
     flex-direction: row;
@@ -298,7 +298,7 @@
 
 .product-box {
 	width: 100%;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   border-radius: 4px;
   padding: 8px;
   margin: 8px 8px 0 8px;

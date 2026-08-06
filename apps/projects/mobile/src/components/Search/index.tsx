@@ -9,6 +9,7 @@ import React, { useRef, useImperativeHandle, useState, useEffect } from 'react'
 import { View, Text, Icons, Input } from '@apps/mobile-ui'
 import { pxTransform } from '@apps/mobile-services/utils/taro'
 import { getIntl } from '@linkseeks/i18n'
+import { THEME_COLORS } from '@/constants/theme'
 import classNames from 'classnames'
 import './index.scss'
 
@@ -277,7 +278,7 @@ Search.defaultProps = {
   label: '',
   shape: 'round',
   showAction: false,
-  background: '#FFFFFF',
+  background: THEME_COLORS.surface,
   actionText: getIntl().formatMessage({ id: 'search_default_actionText', defaultMessage: '取消' }),
   focus: false,
   editable: true,

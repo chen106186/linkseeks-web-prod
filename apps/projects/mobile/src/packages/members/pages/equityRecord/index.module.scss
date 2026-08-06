@@ -10,11 +10,11 @@
     .tabs-title {
       flex: 1;
       padding: 10px 0;
-      background-color: #fff;
+      background-color: $theme-surface;
       position: relative;
     }
     .tabs-title-sel {
-      background-color: #fff;
+      background-color: $theme-surface;
     }
     .tabs-title-bottom{
       width: 88%;

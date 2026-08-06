@@ -67,7 +67,7 @@ $margin-m: 28px;
   padding-bottom: $padding-m;
 
   .text {
-    background-color: #fff;
+    background-color: $theme-surface;
     text-align: center;
   }
 }
@@ -76,7 +76,7 @@ $margin-m: 28px;
   font-size: 14px;
 }
 .box-style {
-  background-color: #fff;
+  background-color: $theme-surface;
   border-bottom-width: 1px;
   border-bottom-color: #c0c4cc;
 }

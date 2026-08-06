@@ -66,7 +66,7 @@
     padding: 8px;
 
     &-item {
-      background-color: #FFF;
+    background-color: $theme-surface;
       border-radius: 8px;
       margin-bottom: 8px;
 
@@ -80,7 +80,7 @@
           height: 40px;
           overflow: hidden;
           border-radius: 4px;
-          background-color: #FFF;
+      background-color: $theme-surface;
           border-width: 0.1px;
           border-color: #EEF0F3;
           margin-right: 8px;

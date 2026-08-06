@@ -13,7 +13,7 @@
 .header {
 	width: 100vw;
 	height: 44px;
-	background-color: #fff;
+  background-color: $theme-surface;
 	box-sizing: content-box;
 	display: flex;
 	flex-direction: row;
@@ -52,7 +52,7 @@
 .content {
 	flex: 1;
 	width: 328px;
-	background: #ffffff;
+  background: $theme-surface;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;

@@ -19,7 +19,7 @@
 
   .logistics-warp {
     display: flex;
-    background-color: #FFF;
+    background-color: $theme-surface;
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
@@ -45,7 +45,7 @@
 
     .address {
       padding: $spacing-v-xl $spacing-h-lg;
-      background-color: #fff;
+      background-color: $theme-surface;
       border-radius: 8px * $hd;
       margin-bottom: $spacing-v-md;
     }

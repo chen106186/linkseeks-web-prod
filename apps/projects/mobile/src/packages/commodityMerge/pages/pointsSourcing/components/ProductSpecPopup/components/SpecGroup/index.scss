@@ -25,7 +25,7 @@
       display: flex;
       align-items: center;
       flex-direction: row;
-      background-color: #FFFFFF;
+      background-color: $theme-surface;
       border-radius: 4px;
       @include border-thin($theme-border-light);
 

@@ -6,6 +6,7 @@ import { View } from '@apps/mobile-ui'
 import { observer } from 'mobx-react-lite'
 import { useIntl } from '@linkseeks/i18n'
 import Popup from '@/components/Popup'
+import { THEME_COLORS } from '@/constants/theme'
 import ShippingAreaIndexes, {
   ShippingAreaIndexesValueType,
   ShippingAreaIndexesRefHandle,
@@ -81,7 +82,7 @@ const StockAddressPopup: React.FC<IProps> = (props: IProps) => {
       }}
       zIndex={101}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: THEME_COLORS.surface,
         borderBottom: 'none',
       }}
       onAfterClose={handlePopupAfterClose}

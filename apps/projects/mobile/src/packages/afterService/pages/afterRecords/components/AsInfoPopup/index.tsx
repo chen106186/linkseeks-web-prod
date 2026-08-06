@@ -9,6 +9,7 @@ import React from 'react';
 import { useIntl } from '@linkseeks/i18n';
 import { Text, View } from '@apps/mobile-ui';
 import Popup from '@/components/Popup';
+import { THEME_COLORS } from '@/constants/theme';
 import Cell from '@/components/Cell';
 import Copy from '@/components/Copy';
 import Gap from '../Gap';
@@ -96,7 +97,7 @@ const AsInfoPopup: React.FC<IProps> = (props: IProps) => {
       onClose={handleClose}
       title={intl.formatMessage({id: 'afterRecords.components.asInfoPopup.applyInfo',  afterType: AFTER_TYPE_NAME_MAP[afterType] })}
       customStyle={{
-        backgroundColor: '#FFF',
+        backgroundColor: THEME_COLORS.surface,
       }}
     >
       <View className={styles['as-info']}>

@@ -13,7 +13,7 @@
     white-space: nowrap;
     width: 100vw;
     .category-item {
-      background-color: #fff;
+      background-color: $theme-surface;
       margin-right: 10px;
       display: inline-flex;
       flex-direction: column;
@@ -46,7 +46,7 @@
   .category-wrap-mian {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: #fff;
+    background-color: $theme-surface;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px;

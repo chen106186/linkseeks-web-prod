@@ -45,7 +45,7 @@
   margin: 8px;
   padding: 12px;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   margin-bottom: 0px;
   overflow: hidden;
 
@@ -87,7 +87,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
-  background-color: #ffffff;
+  background-color: $theme-surface;
   align-items: center;
   padding-bottom: 6px;
 }

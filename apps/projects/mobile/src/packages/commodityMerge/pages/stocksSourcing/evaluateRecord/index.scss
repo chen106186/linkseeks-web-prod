@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: $spacing-v-lg - 2 $spacing-h-md - 2;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
 
     &-item {
       margin: $spacing-v-md - 2 $spacing-h-md - 2;

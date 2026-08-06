@@ -16,7 +16,7 @@
     left: 0;
     z-index: 101;
     padding: $spacing-v-md $spacing-h-md;
-    background-Color: #FFFFFF;
+    background-Color: $theme-surface;
   }
 
   &-refundAmount {

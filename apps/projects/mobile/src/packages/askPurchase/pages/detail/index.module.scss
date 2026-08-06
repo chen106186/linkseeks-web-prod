@@ -55,7 +55,7 @@
     flex-direction: column;
     padding: 12px;
     border-radius: 8px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
     margin-bottom: 8px;
   }
 
@@ -238,7 +238,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 0px;
-    background-color: #FFFFFF;
+    background-color: $theme-surface;
   }
 
   &-touchableOpacity {
@@ -506,7 +506,7 @@
 
 .warp {
   display: flex;
-  background-color: #FFFFFF;
+  background-color: $theme-surface;
   flex-direction: column;
 }
 .title {
@@ -526,7 +526,7 @@
 	&-main {
 		padding: 8px;
 		height: 400px;
-		background-color: #FFFFFF;
+    background-color: $theme-surface;
 	}
 
 	&-item {

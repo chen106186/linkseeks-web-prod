@@ -19,7 +19,7 @@
 }
 .shopInfoCard {
   padding: 12px 12px 0;
-  background-color: #FFF;
+  background-color: $theme-surface;
   border-radius: 8px;
   margin-bottom: 12px;
 }
@@ -40,7 +40,7 @@
   padding: 12px 0;
   display: flex;
   align-items: center;
-  background-color: #FFF;
+  background-color: $theme-surface;
   border-radius: 8px;
 }
 .shopInfo {
@@ -53,7 +53,7 @@
   margin-bottom: 12px;
   padding: 12px;
   align-items: center;
-  background-color: #FFF;
+  background-color: $theme-surface;
   border-radius: 8px;
 }
 .shopInfoVip {
@@ -156,7 +156,7 @@
   background-color: #FAFBFC;
 }
 .strengthCardBody {
-  background-color: #FFF;
+  background-color: $theme-surface;
   padding: 12px;
   flex-direction: column;
 }
@@ -223,7 +223,7 @@
   align-items: center;
   width: 100%;
   z-index: 5;
-  background-color: #FFF;
+  background-color: $theme-surface;
   padding: 0 8px;
 }
 .iconBoxWrap {
@@ -339,7 +339,7 @@
   flex-direction: column;
   padding-bottom: 12px;
   border-radius: 8px;
-  background-color: #FFF;
+  background-color: $theme-surface;
 }
 .text-line-2 {
   @include text-overflow-multi-line(2)

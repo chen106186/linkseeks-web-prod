@@ -57,6 +57,13 @@ const config = {
     // 开启智能提取分包依赖
     optimizeMainPackage: {
       enable: true,
+      // 避免开发者工具在增量编译时漏注册单独拆出的 Babel 运行时模块。
+      exclude: [
+        (module) =>
+          /[\\/]@babel[\\/]runtime[\\/]helpers[\\/]esm[\\/]interopRequireWildcard\.js$/.test(
+            module.resource || '',
+          ),
+      ],
     },
     commonChunks: ['taro', 'runtime', 'vendors', 'common'],
     webpackChain(chain) {

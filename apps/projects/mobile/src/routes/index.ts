@@ -141,6 +141,7 @@ export const orderRouter = {
   'order/mycommodityDetails': 'pages/mycommodityDetails/index', // 订单详情
   'order/feedback': 'pages/feedback/index', // 提交审核
   'order/logistics': 'pages/mycommodityDetails/logistics/index', // 查看物流
+  'order/logisticsDetail': 'pages/logisticsDetail/index', // 物流详情（Mock）
   'order/payList': 'pages/payList/index', // 支付列表
   // 申请售后
   'order/oftenBuy': 'pages/oftenBuyList/index', // 常购清单

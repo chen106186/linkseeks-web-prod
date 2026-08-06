@@ -13,12 +13,40 @@ import { useIntl } from '@linkseeks/i18n'
 import { LAYOUT_TYPE } from '@/constants/const/shop'
 import { IS_WEB } from '@/constants'
 import { getSupportCustomerServiceConfigGetConfigList } from '@apps/apis'
+import homeTab from '@/assets/images/tabs/home.png'
+import homeActiveTab from '@/assets/images/tabs/home-active.png'
+import categoryTab from '@/assets/images/tabs/category.png'
+import categoryActiveTab from '@/assets/images/tabs/category-active.png'
+import cartTab from '@/assets/images/tabs/cart.png'
+import cartActiveTab from '@/assets/images/tabs/cart-active.png'
+import mineTab from '@/assets/images/tabs/mine.png'
+import mineActiveTab from '@/assets/images/tabs/mine-active.png'
 
 interface MallTabBottomProps {
   visible?: boolean
   activeUrl: RouterKeys
   layoutType?: LAYOUT_TYPE
   children?: React.ReactNode
+}
+
+const getLocalTabIcons = (url: string) => {
+  switch (url) {
+    case 'extra/mall/b2b':
+    case 'extra/mall/client':
+    case 'extra/mall/own':
+    case 'shop/home':
+      return { pic: homeTab, lightPic: homeActiveTab }
+    case 'extra/classify':
+    case 'extra/commonClassify':
+    case 'commodityMerge/stocksSourcing/index':
+      return { pic: categoryTab, lightPic: categoryActiveTab }
+    case 'order/Purchase':
+      return { pic: cartTab, lightPic: cartActiveTab }
+    case 'extra/mine':
+      return { pic: mineTab, lightPic: mineActiveTab }
+    default:
+      return undefined
+  }
 }
 
 const MallTabBottom: React.FC<MallTabBottomProps> = (props) => {
@@ -154,16 +182,29 @@ const MallTabBottom: React.FC<MallTabBottomProps> = (props) => {
   }, [shopAndSite, customerServiceConfig, userInfo])
 
   const getBottomConfig = useCallback(() => {
+    let bottomConfig: TabBottomItemType[]
     switch (layoutType) {
       case LAYOUT_TYPE.mall:
       case LAYOUT_TYPE.own:
       case LAYOUT_TYPE.client:
-        return selfBottomConfig ? selfBottomConfig : defaultBottomConfig
+        bottomConfig = selfBottomConfig ? selfBottomConfig : defaultBottomConfig
+        break
       case LAYOUT_TYPE.shop:
-        return shopBottomConfig ? shopBottomConfig : defaultBottomConfig
+        bottomConfig = shopBottomConfig ? shopBottomConfig : defaultBottomConfig
+        break
       default:
-        return []
+        bottomConfig = []
+        break
     }
+
+    if (process.env.TARO_ENV !== 'weapp') {
+      return bottomConfig
+    }
+
+    return bottomConfig.map((item) => {
+      const localIcons = getLocalTabIcons(item.url)
+      return localIcons ? { ...item, ...localIcons } : item
+    })
   }, [shopBottomConfig, selfBottomConfig, customerServiceConfig, userInfo])
 
   // 兼容 h5 页面强刷装修信息丢失的问题

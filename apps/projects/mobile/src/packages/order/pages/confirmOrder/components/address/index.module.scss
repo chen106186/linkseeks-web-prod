@@ -69,6 +69,9 @@
   left: 0px;
 }
 .mellow-card-body-warp{
+  border: 1px solid $theme-border-light;
+  box-shadow: $theme-shadow;
+
   :global{
     .mellow-card-body{
       padding-bottom: 0;

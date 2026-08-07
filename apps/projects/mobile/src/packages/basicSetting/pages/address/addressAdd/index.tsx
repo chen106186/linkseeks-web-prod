@@ -555,16 +555,16 @@ const AddressAdd = () => {
                         defaultMessage: '请填写详细地址，楼号、门牌号等',
                       })}
                       maxLength={60}
-                      value={formItems.address}
+                      value={formItems.address || ''}
                       className={cx(styles['input'], styles['warpflex'])}
                       placeholderClass={styles['input-placeholder']}
-                      onChange={(e) => changeInputValue('address', e)}
+                      onChange={(value) => changeInputValue('address', value)}
                     />
                   </View>
                 )}
 
                 <View
-                  className={cx(styles['from-item'], styles['justify-content'], styles['clear'], styles['set-default'])}
+                  className={cx(styles['form-item'], styles['justify-content'], styles['set-default'])}
                 >
                   <Text className={styles['label']}>
                     {intl.formatMessage({
@@ -572,8 +572,8 @@ const AddressAdd = () => {
                       defaultMessage: '设为默认',
                     })}
                   </Text>
-                  <View className={cx(styles['switch-btn'], styles['fl-right'])}>
-                    <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
+                  <View className={styles['switch-btn']}>
+                    <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={(checked) => setIsSwitch(checked)} />
                   </View>
                 </View>
               </View>

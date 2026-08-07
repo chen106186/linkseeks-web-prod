@@ -397,7 +397,10 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout />
+              <EmptyLayout
+                image="default"
+                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
+              />
             </View>
           )}
         </TabsPane>
@@ -425,7 +428,10 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout />
+              <EmptyLayout
+                image="default"
+                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
+              />
             </View>
           )}
         </TabsPane>
@@ -453,7 +459,10 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout />
+              <EmptyLayout
+                image="default"
+                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
+              />
             </View>
           )}
         </TabsPane>

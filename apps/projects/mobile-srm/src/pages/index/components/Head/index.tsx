@@ -118,6 +118,11 @@ const Head = (props: Iprops) => {
                 status: 6,
               },
             },
+            {
+              id: 6,
+              title: '我的采购单',
+              route: 'vendor/orderList',
+            },
           ],
         },
       ],

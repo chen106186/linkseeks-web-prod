@@ -7,6 +7,7 @@ import {
   settlementRouter,
   supplierAbilityRouter,
   contractRouter,
+  vendorRouter,
 } from './routes'
 
 function factoryRouterPackage(name: string, routes: any) {
@@ -28,6 +29,7 @@ export default {
     factoryRouterPackage('settlement', settlementRouter),
     factoryRouterPackage('supplierAbility', supplierAbilityRouter),
     factoryRouterPackage('contract', contractRouter),
+    factoryRouterPackage('vendor', vendorRouter),
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -117,6 +117,12 @@ export const supplierAbilityRouter = {
   'supplierAbility/supplierDepositRegisterDataList/index': 'pages/supplierDepositRegisterDataList/index',
 }
 
+// 供应商采购单模块（mobile-srm 供应商角色）
+export const vendorRouter = {
+  'vendor/orderList': 'pages/list/index',    // 供应商-我的采购单列表
+  'vendor/orderDetail': 'pages/detail/index', // 供应商-采购单详情（含发货弹窗）
+}
+
 // 使用所有路由的集合
 export const mergeRouter = {
   ...contractRouter,
@@ -127,6 +133,7 @@ export const mergeRouter = {
   ...materialRouter,
   ...settlementRouter,
   ...supplierAbilityRouter,
+  ...vendorRouter,
 }
 export type RouterList = typeof mergeRouter
 

@@ -8,7 +8,8 @@ import Router from '@/utils/router'
 import request from '@apps/apis/src/request'
 import styles from './index.module.scss'
 
-const getPurchaseRequisitionSrmVendorPage = (params: any) =>
+// TODO: replace with @apps/apis generated function once YAPI syncs
+const fetchVendorOrders = (params: { current: number; pageSize: number }) =>
   request({ url: '/purchase/requisition/srm/vendor/page', method: 'GET', params })
 
 const VENDOR_STATUS_MAP: Record<number, string> = {
@@ -24,10 +25,8 @@ const VendorOrderList: React.FC = () => {
   const loadMoreLoading = useRef<boolean>(false)
 
   const fetchList = (page = 1, merge = false) => {
-    if (loadMoreLoading.current) return
-    loadMoreLoading.current = true
     setLoading(true)
-    getPurchaseRequisitionSrmVendorPage({ current: page, pageSize: 10 })
+    fetchVendorOrders({ current: page, pageSize: 10 })
       .then((res: any) => {
         if (res.code === 1000) {
           const items = res.data?.data || []

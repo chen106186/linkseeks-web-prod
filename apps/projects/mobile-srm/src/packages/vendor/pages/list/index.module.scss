@@ -1,0 +1,38 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  margin: 24px 24px 0;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 28px;
+  color: #333;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.no {
+  font-weight: 600;
+  flex: 1;
+}
+
+.status {
+  font-size: 24px;
+  color: #1677ff;
+  background: #e6f4ff;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+.label {
+  color: #999;
+  width: 140px;
+  flex-shrink: 0;
+}

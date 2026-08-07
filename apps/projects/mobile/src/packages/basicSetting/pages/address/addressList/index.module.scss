@@ -19,6 +19,10 @@
     .at-tabs__item--active{
       position: relative;
     }
+    .at-tabs__body,
+    .at-tabs-pane {
+      background-color: $theme-page-bg;
+    }
   }
 
 }
@@ -51,6 +55,15 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+
+.address-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 130px);
+  background-color: $theme-page-bg;
 }
 
 .left {

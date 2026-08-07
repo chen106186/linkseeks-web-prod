@@ -373,7 +373,7 @@ const AddressList = () => {
         ]}
         onClick={handleTabChange}
       >
-        <TabsPane current={Number(active)} index={0}>
+        <TabsPane display current={Number(active)} index={0}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView
@@ -401,7 +401,7 @@ const AddressList = () => {
             </View>
           )}
         </TabsPane>
-        <TabsPane current={Number(active)} index={1}>
+        <TabsPane display current={Number(active)} index={1}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView
@@ -429,7 +429,7 @@ const AddressList = () => {
             </View>
           )}
         </TabsPane>
-        <TabsPane current={Number(active)} index={2}>
+        <TabsPane display current={Number(active)} index={2}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView

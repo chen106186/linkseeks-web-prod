@@ -8,7 +8,7 @@ import {
   setStorageSync,
 } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
-import { View, Button, Text, Input, Switch, ScrollView, Form, Toast, Image, TextArea } from '@apps/mobile-ui'
+import { View, Button, Text, Input, Switch, ScrollView, Toast, Image, TextArea } from '@apps/mobile-ui'
 import ModeMobile from '@/components/Modemobile'
 import { PATTERN_MAPS } from '@/constants/regExp'
 import { COUNTRY_PHONE_CODE, COUNTRY_PHONE_LENGTH } from '@/constants'
@@ -419,9 +419,9 @@ const AddressAdd = () => {
     >
       <View className={styles['page']}>
         <ScrollView className={styles['main']}>
-          <Form>
+          <View className={styles['form']}>
             <View className={styles['address']}>
-              <Form className={styles['address-item']}>
+              <View className={styles['address-item']}>
                 <View className={styles['form-item']}>
                   <Text className={styles['label']}>
                     {params.active === '0'
@@ -500,7 +500,7 @@ const AddressAdd = () => {
                   </View>
                 )} */}
                 {params.active !== '2' && isCN && (
-                  <View className={styles['form-item']}>
+                  <View className={styles['form-item']} onClick={() => setAddressVisible(true)}>
                     <Text className={styles['label']}>
                       {params.active === '0'
                         ? intl.formatMessage({
@@ -512,10 +512,7 @@ const AddressAdd = () => {
                             defaultMessage: '发货地区',
                           })}
                     </Text>
-                    <View
-                      className={cx(styles['warp-item-box'], styles['clear'])}
-                      onClick={() => setAddressVisible(!addressVisible)}
-                    >
+                    <View className={cx(styles['warp-item-box'], styles['clear'])}>
                       <Text
                         className={styles['address-text']}
                         style={{
@@ -579,7 +576,7 @@ const AddressAdd = () => {
                     <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
                   </View>
                 </View>
-              </Form>
+              </View>
             </View>
 
             {params.active !== '2' && (
@@ -594,7 +591,7 @@ const AddressAdd = () => {
                 </View>
 
                 <View className={styles['address']}>
-                  <Form className={styles['address-item']}>
+                  <View className={styles['address-item']}>
                     <View className={styles['form-item']}>
                       <Text className={styles['label']}>
                         {intl.formatMessage({
@@ -642,11 +639,11 @@ const AddressAdd = () => {
                         onChange={(e) => changeInputValue('tel', e)}
                       />
                     </View>
-                  </Form>
+                  </View>
                 </View>
               </View>
             )}
-          </Form>
+          </View>
           <Button onClick={submit} className={styles['button']}>
             <Text
               style={{

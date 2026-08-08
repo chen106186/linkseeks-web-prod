@@ -1,0 +1,141 @@
+{
+  "setting": {
+    "compileHotReLoad": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "找现货",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "店铺会员",
+          "pathName": "packages/members/pages/shop/index",
+          "query": "hasTab=true&layoutType=shop&id=20&shopId=20&memberId=236&roleId=3",
+          "scene": null
+        },
+        {
+          "name": "积分商品详情",
+          "pathName": "packages/commodityMerge/pages/pointsSourcing/detail/index",
+          "query": "commodityId=1554",
+          "scene": null
+        },
+        {
+          "name": "店铺主页",
+          "pathName": "packages/shop/pages/home/index",
+          "query": "id=48",
+          "scene": null
+        },
+        {
+          "name": "切换城市",
+          "pathName": "pages/switchCity/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/oftenBuyList/index",
+          "pathName": "packages/order/pages/oftenBuyList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "外部跳转支付",
+          "pathName": "pages/pay/index",
+          "query": "money=0.01&token=4397bdc2c275a3be7e0bb2a77b5cc869&type=WECHATPAY_MINIPROGRAM_ORG",
+          "scene": null
+        },
+        {
+          "name": "通联-账户详情",
+          "pathName": "packages/basicSetting/pages/captialAccount/accountDetail/index",
+          "query": "bizUserId=702__92",
+          "scene": null
+        },
+        {
+          "name": "品类导航页",
+          "pathName": "packages/categoryNavigation/pages/categoryNavigation/index",
+          "query": "id=57&categoryId=916",
+          "scene": null,
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        },
+        {
+          "name": "确认售后完成",
+          "pathName": "packages/afterService/pages/afterTodo/refundTodo/refundPrFinished/refundSubmitFinished/index",
+          "query": "returnId=512",
+          "scene": null
+        },
+        {
+          "name": "确认积分订单",
+          "pathName": "packages/order/pages/integral/index",
+          "query": "id=24&categoryId=1"
+        },
+        {
+          "name": "pages/payOrder/index",
+          "pathName": "packages/order/pages/payOrder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/offlineTransfer/index",
+          "pathName": "packages/order/pages/offlineTransfer/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/stocksSourcing/detail/index",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/detail/index",
+          "query": "commodityId=664",
+          "scene": null
+        },
+        {
+          "name": "pages/popularShop/index",
+          "pathName": "packages/shop/pages/popularShop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "快递",
+          "pathName": "packages/kd/pages/kuaiDi/index",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        },
+        {
+          "name": "活动页",
+          "pathName": "packages/activity/pages/activityPage/index",
+          "query": "id=64",
+          "scene": null
+        },
+        {
+          "name": "拼团",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/detailGroup/index",
+          "query": "commodityId=891",
+          "scene": null
+        },
+        {
+          "name": "拼团详情",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/shareGroupDetail/index",
+          "query": "teamId=191&shopId=29&shopType=1&commodityId=1332&shopProperty=1&isSelf=0&skuId=3360",
+          "scene": null
+        },
+        {
+          "name": "选择商城",
+          "pathName": "pages/shopSetting/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "mobile",
+  "libVersion": "3.7.8"
+}

@@ -1,0 +1,107 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.anchor-page {
+  &-header {
+    background: #ffffff;
+
+    &-main {
+      padding: 0 16px;
+      display: flex;
+    }
+
+    &-left {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    &-right {
+      padding-top: 14px;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    &-heading {
+      padding: 14px 0 9px 0;
+      display: flex;
+      align-items: center;
+
+      &-title {
+        margin-bottom: 0;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        min-height: 32px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &-back {
+      margin-right: 12px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: @color-primary;
+      }
+    }
+
+    &-anchors {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        overflow-x: auto;
+      }
+    }
+
+    &-desc {
+      padding: @padding-xs 0;
+    }
+
+    :global {
+      .ant-anchor {
+        background-color: #ffffff;
+
+        &-wrapper {
+          margin-left: 0;
+        }
+
+        &-link {
+          padding: 0 16px;
+          font-size: 14px;
+          font-weight: 400;
+          color: @text-color;
+
+          &-title {
+            padding: 16px 0;
+            border-bottom: 2px solid transparent;
+            color: #5c626a !important;
+          }
+
+          &-active,
+          &:hover {
+            font-weight: 500;
+            color: @text-color;
+
+            .ant-anchor-link-title {
+              border-bottom: 2px solid @color-primary;
+              color: #252d37 !important;
+            }
+          }
+        }
+
+        &-ink {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding: @padding-md;
+  }
+}

@@ -1,0 +1,16 @@
+export default {
+  'constants.order.1': '詢價採購',
+  'constants.order.2': '需求採購',
+  'constants.order.3': '現貨採購',
+  'constants.order.4': '集採',
+  'constants.order.5': '渠道直採',
+  'constants.order.6': '通路現貨',
+  'constants.order.7': '積分兌換',
+  'constants.order.8': '通路積分兌換',
+  'constants.order.9': '採購詢價合約',
+  'constants.order.10': '採購競價合約',
+  'constants.order.11': '採購招標合約',
+  'constants.order.12': '請購單採購',
+  'constants.order.13': '跨境電商進口',
+  'constants.order.14': '請購單採購合約',
+}

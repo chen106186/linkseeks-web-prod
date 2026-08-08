@@ -1,0 +1,48 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+$bookshelf-prefix: 'bookshelf';
+
+.bookshelf {
+  width: 100%;
+  padding: 0 $spacing-h-lg;
+
+  &__border {
+    .#{$bookshelf-prefix}-item {
+      &:not(:last-child) {
+        border-bottom-color: $color-border-base;
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: $spacing-h-lg - 2 0;
+    background-color: #FFFFFF;
+    @include border-thin-bottom(transparent);
+
+    &__border {
+      border-bottom-color: $color-border-base;
+    }
+
+    &-label {
+      margin-right: $spacing-h-sm - 1;
+      font-size: $font-size-sm;
+      color: $color-grey-2;
+      height: 100%;
+    }
+
+    &-content {
+      flex: 1;
+      font-size: $font-size-sm;
+      color: $color-grey-0;
+      overflow: hidden;
+    }
+
+    &-link {
+      margin-left: $spacing-h-md;
+      font-size: 0;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.TradingDetail{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	background-color: #F4F5F7;
+	padding: 8px;
+	//padding: 10px;
+	//background: #F5F6F7;
+  &-head{
+    background:#fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &-status{
+      display: flex;
+      align-items: center;
+      Image ,taro-image-core {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+      &-statusName{
+        font-size: 14px;
+      }
+    }
+    &-Amount{
+      font-family: PingFangSC-Medium;
+      font-size: 24px;
+      color: #303133;
+			font-weight: 500;
+      padding: 10px 0;
+    }
+  }
+  &-List{
+		//margin-top: 15px;
+		margin-top: 8px;
+    background:#fff;
+    padding: 0px 20px;
+    border-radius: 5px;
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #F5F6F7;
+      padding: 10px 0;
+			&-text1 {
+				color: #91959b;
+				font-size: 14px;
+				font-weight: 400;
+			}
+			&-text2 {
+				color: #252d37;
+				font-size: 14px;
+				font-weight: 400;
+			}
+    }
+  }
+}

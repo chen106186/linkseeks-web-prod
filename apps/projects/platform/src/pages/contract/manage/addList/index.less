@@ -1,0 +1,117 @@
+.box {
+  width: 100%;
+  :global {
+    .ant-table-expanded-row-level-1 .ant-table-cell {
+      padding: 0px !important;
+      background-color: #ffffff;
+    }
+    .ant-form-item {
+      margin: 0 !important;
+    }
+  }
+  .listItem {
+    display: flex;
+    .label {
+      flex: 0.2;
+      padding: 0 16px;
+      color: #00a98f;
+      background: linear-gradient(270deg, #ffffff 0%, #daf2e7 100%);
+    }
+    .text {
+      padding: 0px 0px;
+      flex: 1;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  span {
+    background: #e4e6eb;
+    padding: 7px 12px;
+    color: #c0c4cc;
+  }
+}
+
+.upload_item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .upload_left {
+    display: flex;
+    align-items: center;
+    color: #303133;
+    cursor: pointer;
+    background-color: #fafbfc;
+    :global {
+      .anticon-file-word {
+        color: #4279df;
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .upload_right {
+    color: #00a98f;
+    cursor: pointer;
+
+    :global {
+      .anticon-delete {
+        margin-left: 19px;
+        color: #c0c4cc;
+      }
+    }
+  }
+}
+.select {
+  position: relative;
+  width: 259px;
+  text-align: left;
+  .setBox {
+    width: 100px;
+    display: flex;
+    justify-content: end;
+    // align-items: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 1px;
+    right: 78px;
+    :global {
+      .ant-input-number {
+        border: none !important;
+        background: transparent;
+        box-shadow: none !important;
+      }
+      .select {
+        .ant-input-number:focus {
+          border: none !important;
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+      }
+      .ant-input:focus,
+      .ant-input-focused {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.formNoStyle {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

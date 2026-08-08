@@ -1,0 +1,87 @@
+@import url('../common.less');
+
+.pay_point {
+  padding: 16px 0;
+  border-bottom: 2px solid #eef0f3;
+
+  &_way_list {
+    display: flex;
+    padding: 0 8px;
+
+    &_item {
+      flex: 1;
+      max-width: 50%;
+      border-radius: 4px;
+      border: 1px solid #fafbfc;
+      background: #fafbfc;
+      overflow: hidden;
+      cursor: pointer;
+      margin: 0 8px;
+      padding-bottom: 24px;
+
+      &.active {
+        border: 1px solid var(--mall-main-color);
+        background: #fff;
+      }
+
+      &_title {
+        padding: 16px;
+        color: #303133;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+
+        .title_icon {
+          font-size: 16px;
+          margin-right: 8px;
+        }
+      }
+
+      &_content {
+        padding-left: 48px;
+
+        .pay_point_way_list_item_point {
+          & > label {
+            font-size: 20px;
+            margin-right: 8px;
+          }
+
+          & > span {
+            font-size: 14px;
+          }
+        }
+
+        & > p {
+          margin-top: 0;
+          color: #91959b;
+          font-size: 12px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+.pay_amount_text {
+  text-align: center;
+  font-size: 12px;
+  color: #252d37;
+  margin-top: 48px;
+
+  .pay_amount_point {
+    color: #ea8000;
+    font-size: 20px;
+  }
+}
+
+.pay_wray {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_title {
+    padding: 20px 0;
+    color: #909399;
+  }
+}

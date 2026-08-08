@@ -1,0 +1,77 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.as-products {
+  padding: 0 $spacing-h-lg;
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+
+    &__notLast {
+      margin-bottom: $spacing-v-lg;
+    }
+
+    &-left {
+      margin-right: $spacing-h-lg;
+    }
+
+    &-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-name {
+      margin-bottom: $spacing-v-md;
+      line-height: 16px;
+      font-size: $font-size-sm;
+      font-weight: 600;
+      color: $color-grey-0;
+      flex: 1;
+      @include text-overflow-multi-line(2);
+    }
+
+    &-category {
+      margin-bottom: $spacing-v-lg;
+      line-height: 16px;
+      font-size: $font-size-sm;
+      color: $color-grey-2;
+      @include text-overflow();
+    }
+
+    &-price {
+      margin-right: $spacing-h-md;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-error;
+    }
+    
+    &-desc {
+      margin-right: $spacing-h-md;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-grey-1;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    &-wrap {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-quantity {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

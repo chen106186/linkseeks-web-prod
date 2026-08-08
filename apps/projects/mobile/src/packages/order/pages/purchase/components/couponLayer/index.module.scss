@@ -1,0 +1,97 @@
+.warp {
+  background-color: #f5f6f7;
+}
+.title {
+  text-align: center;
+  line-height: 48px;
+}
+.text {
+  color: #303133;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+}
+.tips {
+  color: #252d37;
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
+.money-left {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 88px;
+}
+.money-tips-small {
+  color: #ef3346;
+  font-size: 12px;
+  line-height: 30px;
+  margin-right: 2px;
+}
+.money-tips-big {
+  color: #ef3346;
+  font-size: 24px;
+  font-weight: 400px;
+}
+.money-tips-max-small {
+  font-size: 12px;
+  color: #919598;
+}
+.money-center {
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.money-main {
+  padding: 8px;
+  height: 60vh;
+  background-color: #f5f6f7;
+  overflow-y: scroll;
+}
+.money-warp {
+  padding: 8px;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 3px;
+  overflow: hidden;
+  flex: 1;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.money-btn {
+  font-size: 12px;
+  text-align: center;
+  background-color: #E34D59;
+  border-radius: 4px;
+  color: #ffffff;
+	padding: 4px 12px;
+}
+.un-money-btn {
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+	background-color: #F5F6F7;
+	color: #252D37;
+	padding: 4px 12px;
+}
+.money-btn-tips {
+  color: #ffffff;
+  font-size: 12px;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.section {
+  z-index: 88;
+  height: 275px;
+}
+.empty-text {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}

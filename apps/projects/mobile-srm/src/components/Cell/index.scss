@@ -1,0 +1,91 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '../../styles/variables.scss';
+
+$cell-list-prefix: 'cell-list';
+
+.cell-list {
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #ffffff;
+
+  &__border {
+    .#{$cell-list-prefix}-item {
+      &:not(:last-child) {
+        border-bottom-color: $color-border-base;
+      }
+    }
+  }
+
+  &-item {
+    @include border-thin-bottom(transparent);
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: $spacing-v-lg - 2;
+      padding-bottom: $spacing-v-lg - 2;
+      line-height: $spacing-v-lg * 2;
+      background-color: #ffffff;
+
+      &__border {
+        @include border-thin-bottom($color-border-base);
+      }
+    }
+
+    &-icon {
+      align-self: flex-start;
+      margin-left: 4px;
+      margin-right: 8px;
+    }
+
+    &-title-wrap {
+      flex: 1;
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-grey-1;
+    }
+
+    &-value {
+      max-width: 60%;
+      font-size: 14px;
+      font-weight: 400;
+      color: #252D37;
+
+      &__right {
+        text-align: right;
+      }
+    }
+
+    &-label-wrap {
+      padding-bottom: 12px;
+    }
+
+    &-label {
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-grey-2;
+    }
+
+    &-arrow {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-left: 8px;
+      font-size: 0;
+    }
+
+    &__border {
+      border-bottom-color: $color-border-base;
+    }
+  }
+
+  .placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-grey-3;
+  }
+}

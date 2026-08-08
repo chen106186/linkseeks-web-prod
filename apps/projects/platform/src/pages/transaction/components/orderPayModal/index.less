@@ -1,0 +1,148 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+.payRadio {
+  min-width: 130px;
+  padding: 4px 6px;
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+  color: #606266;
+  border: 1px solid rgba(235, 236, 240, 1);
+  cursor: pointer;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active {
+    border-color: #00b382;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-right: 6px solid #00b382;
+      border-bottom: 6px solid #00b382;
+    }
+  }
+}
+
+.radioBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: inline-block;
+  width: 122px;
+  font-weight: 400;
+}
+.amount {
+  font-size: 24px;
+  font-weight: 500;
+  color: #172b4d;
+}
+.amount1 {
+  font-size: 16px;
+}
+.amount2 {
+  font-size: 16px;
+  color: #e63f3b;
+}
+
+// 支付密码
+.payContainer {
+  // 禁用选择
+  // -moz-user-select: none;
+  // -webkit-user-select: none;
+  // -ms-user-select: none;
+  // -khtml-user-select: none;
+  // user-select: none;
+
+  margin: 90px 0;
+  text-align: center;
+  .title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b778c;
+    margin-bottom: 24px;
+  }
+
+  .inputBox {
+    position: relative;
+    width: 336px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    .codeItem {
+      width: 48px;
+      height: 48px;
+      line-height: 0.5;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #ebecf0;
+      font-size: 80px;
+    }
+    .codeInput {
+      height: 48px;
+      position: absolute;
+      outline: none;
+      color: transparent !important;
+      caret-color: #ebecf0;
+      font-size: 28px;
+      padding: 0 16px;
+      letter-spacing: 48px;
+      width: 336px;
+      border: none;
+      background: none;
+      background-color: transparent !important;
+      -webkit-appearance: none;
+      &:focus {
+        border: none !important;
+        box-shadow: 0 0 0 0 #fff;
+      }
+      &::-webkit-input-safebox-button {
+        display: none;
+      }
+    }
+  }
+}
+
+// 扫码
+.qrCodeImage {
+  text-align: center;
+  width: 224px;
+  height: 224px;
+  margin: 20px auto 42px;
+
+  & > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.qrCodeAlipayImage {
+  text-align: center;
+  div {
+    img {
+      width: 224px;
+      height: 224px;
+    }
+  }
+}
+
+.scanTips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b778c;
+  margin-bottom: 18px;
+  .scanIcon {
+    font-size: 30px;
+    margin-right: @padding-sm;
+  }
+}

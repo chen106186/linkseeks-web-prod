@@ -1,0 +1,215 @@
+@import '../../../../../../../../constants/styles/_var.less';
+.drawer {
+  :global {
+    .ant-drawer-body {
+      padding: 0px;
+      .ant-layout {
+        height: 100%;
+        .ant-layout-sider {
+          background-color: #ffffff;
+        }
+        .ant-anchor-wrapper {
+          margin-left: 0 !important;
+          padding-left: 0 !important;
+        }
+        .ant-menu-item {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          &:after {
+            left: 0;
+            height: 80%;
+            margin: auto;
+            border-right: none;
+            border-left: 2px solid #00a98f;
+          }
+          .ant-anchor-link {
+            padding: 0px !important;
+            line-height: 40px !important;
+          }
+        }
+        .ant-menu-item-selected {
+          color: #303133;
+          font-weight: 600;
+          background-color: transparent !important;
+        }
+        .ant-layout-content {
+          height: 100%;
+          padding: 24px;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+  .upload_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 5px 8px;
+    background-color: #fafbfc;
+
+    .upload_left {
+      display: flex;
+      align-items: center;
+      color: #303133;
+
+      :global {
+        .anticon-file-word {
+          margin-right: 8px;
+          color: #4279df;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .upload_right {
+      color: #00a98f;
+      cursor: pointer;
+
+      :global {
+        .anticon-delete {
+          margin-left: 19px;
+          color: #c0c4cc;
+        }
+      }
+    }
+  }
+}
+.box {
+  width: 100%;
+  border: 1px solid #daf2e7;
+  .title {
+    width: 100%;
+    padding: 0px 7px;
+    color: #00a98f;
+    font-size: 12px;
+    background-color: #e4f7ef;
+  }
+  .tagBlue {
+    color: #3877ff;
+    background-color: #f0f7ff;
+  }
+  .content1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 7px;
+    .row {
+      flex: 0 0 50%;
+      margin: 2px 0px;
+      .label {
+        width: 64px;
+        color: #909399;
+        font-size: 12px;
+      }
+      .col {
+        color: #303133;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.boxBlue {
+  margin-top: 16px;
+  border: 1px solid #f0f7ff;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  .menu {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #f4f5f7;
+    .menuItem {
+      padding: 18px 16px;
+      color: #606266;
+    }
+    .active {
+      position: relative;
+      color: #303133;
+      font-weight: bold;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 24px;
+        margin: auto;
+        border-left: 3px solid @main-color;
+        transform: scaleY(1);
+        opacity: 1;
+        transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+          opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+        content: '';
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    padding: 24px 16px;
+    overflow-y: scroll;
+    .anchor {
+      position: relative;
+      margin: 16px 0;
+      padding-left: 6px;
+      color: #909399;
+      font-size: 14px;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 14px;
+        margin: auto;
+        border-left: 2px solid @main-color;
+        transform: scaleY(1);
+        opacity: 1;
+        transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+          opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+        content: '';
+      }
+    }
+    #menu1 {
+      .anchor {
+        margin-top: 0px;
+      }
+    }
+    .upload_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding: 5px 8px;
+      background-color: #fafbfc;
+
+      .upload_left {
+        display: flex;
+        align-items: center;
+        color: #303133;
+
+        :global {
+          .anticon-file-word {
+            margin-right: 8px;
+            color: #4279df;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .upload_right {
+        color: @main-color;
+        cursor: pointer;
+
+        :global {
+          .anticon-delete {
+            margin-left: 19px;
+            color: #c0c4cc;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .item {
+    padding: 10px @padding-md;
+    border: 1px solid #e3e4e5;
+    margin-right: @padding-md;
+    line-height: 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .activeItem {
+    color: @color-primary;
+    border-color: @color-primary;
+  }
+}

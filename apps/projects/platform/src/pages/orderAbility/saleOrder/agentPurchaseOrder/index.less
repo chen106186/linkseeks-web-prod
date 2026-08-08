@@ -1,0 +1,131 @@
+// tabs标签锚点
+.anchorTitle {
+  margin-top: -12px;
+  margin-left: -16px;
+
+  :global {
+    .ant-row {
+      .ant-col-2 {
+        .ant-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    .ant-anchor-wrapper {
+      min-height: auto;
+    }
+    .ant-anchor {
+      display: flex;
+    }
+    .ant-anchor-ink {
+      display: none;
+    }
+    .ant-anchor-link {
+      padding: 0;
+      text-align: center;
+      a {
+        display: inline-block;
+        font-size: 14px;
+        color: #909399;
+        margin: 0 16px;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+    .ant-anchor-link-active {
+      a {
+        font-weight: 500;
+        color: #303133;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+  ul {
+    padding-left: 0;
+    display: flex;
+    li {
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      list-style: none;
+      a {
+        display: inline-block;
+        height: 48px;
+        font-size: 14px;
+        color: #909399;
+        line-height: 48px;
+        margin: 0 16px;
+      }
+      .current {
+        font-weight: 500;
+        color: #303133;
+        border-bottom: 2px solid #00a98f;
+      }
+    }
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+
+  .required {
+    font-style: normal;
+    color: #f36d78;
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 4px;
+  }
+}
+
+.mallList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -16px -8px -8px;
+
+  .mallListItem {
+    width: 25%;
+
+    &.active {
+      .mallListItemBody {
+        background: rgba(0, 169, 143, 0.04);
+        border: 1px solid #00a98f;
+      }
+    }
+
+    .mallListItemBody {
+      margin: 8px;
+      border: 1px solid #f5f6f7;
+      background-color: #f5f6f7;
+      border-radius: 4px;
+      height: 48px;
+      display: flex;
+      padding: 0 16px;
+      align-items: center;
+      cursor: pointer;
+
+      .mallLogo {
+        border: 1px solid #f7f8fa;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.memberSearchWrap {
+  margin-top: -8px;
+
+  .autoComplete {
+    background: #f5f6f7;
+    border: none;
+    box-shadow: none;
+
+    &:focus,
+    &:active {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

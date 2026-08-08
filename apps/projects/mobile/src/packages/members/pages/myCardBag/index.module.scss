@@ -1,0 +1,21 @@
+@import '@/styles/variables.scss';
+.page-card {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .card-container {
+    margin-left: $spacing-h-md;
+    margin-right: $spacing-h-md;
+    margin-top: $spacing-v-md;
+    overflow: hidden;
+    border-radius: $border-radius-lg;
+    -webkit-border-radius: $border-radius-lg;
+    -moz-border-radius: $border-radius-lg;
+    -ms-border-radius: $border-radius-lg;
+    -o-border-radius: $border-radius-lg;
+}
+  .page-body {
+    background-color: $color-bg-grey;
+    overflow: hidden;
+  }
+}

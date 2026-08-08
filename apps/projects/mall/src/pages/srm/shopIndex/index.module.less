@@ -1,0 +1,53 @@
+@import url('@/theme/style/common.less');
+
+.container {
+  .common_page_container();
+
+  width: auto;
+
+  .horizontalWrap {
+    display: flex;
+    padding-top: 16px;
+    justify-content: space-between;
+    .common_page_container();
+  }
+
+  .message-center-brief {
+    background-image: url('./point.png');
+    background-size: 100% 100%;
+  }
+
+  .bannerWrap {
+    margin: 0 16px;
+    flex: 1;
+    width: 0;
+  }
+
+  .quickNavWrap {
+    width: 320px;
+  }
+
+  .banner-warp {
+    width: 736px;
+  }
+
+  .user-message-warp {
+    width: 240px;
+    height: 400px;
+  }
+
+  .publicity-warp {
+    height: 262px;
+    width: 100%;
+    background: #fff;
+    padding: 0 16px;
+  }
+
+  .message-block {
+    width: 100%;
+  }
+
+  .message-center {
+    .common_page_container();
+  }
+}

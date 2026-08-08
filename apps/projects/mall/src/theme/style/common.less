@@ -1,0 +1,53 @@
+@page_body_minWidth: 1200px;
+@mainColor: var(--mall-main-color);
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(48 49 51 / 24%);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(48 49 51 / 8%);
+}
+
+.common_page_container() {
+  position: relative;
+  width: @page_body_minWidth;
+  margin: 0 auto;
+}
+
+.commone_input_placeholder() {
+  input::-webkit-placeholder,
+  textarea::-webkit-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:placeholder,
+  textarea:placeholder {
+    color: #c0c4cc;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #c0c4cc;
+  }
+
+  input:input-placeholder,
+  textarea:input-placeholder {
+    color: #c0c4cc;
+  }
+}
+
+@font-face {
+  font-family: iconfont;
+  src: url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.eot');
+  src: url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.woff2') format('woff2'),
+    url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.woff') format('woff'),
+    url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.ttf') format('truetype'),
+    url('https://cdn2.codesign.qq.com/icons/XMx86jzK19brz3e/2657351/iconfont.svg#iconfont') format('svg');
+}

@@ -1,0 +1,101 @@
+@import '../common.less';
+
+.tb_line {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background-color: #fff;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #f4f5f7;
+  }
+
+  &.tb_head {
+    height: 40px;
+    color: #909399;
+    font-size: 12px;
+    background-color: #f7f8fa;
+  }
+
+  &_item {
+    padding-left: 8px;
+
+    &.w32 {
+      width: 32px;
+    }
+
+    &.w160 {
+      width: 160px;
+    }
+
+    &.w320 {
+      width: 320px;
+    }
+
+    &.w280 {
+      width: 280px;
+    }
+
+    &.w448 {
+      width: 448px;
+    }
+
+    &.w576 {
+      width: 576px;
+    }
+
+    &.w128 {
+      width: 128px;
+    }
+
+    &_btn_group {
+      display: flex;
+    }
+
+    :global {
+      .ant-input-group-addon {
+        color: #d9d9d9;
+      }
+    }
+  }
+}
+
+.add_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  color: #00a98f;
+  background-color: #f7f8fa;
+  cursor: pointer;
+
+  &.martop {
+    margin-top: 48px;
+  }
+
+  & > span {
+    margin-left: 4px;
+  }
+}
+
+.form_line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .date_picker {
+    width: 160px;
+  }
+
+  .date_picker_split {
+    margin: 0 8px;
+    color: #909399;
+    font-size: 12px;
+  }
+}
+
+.information_titl {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

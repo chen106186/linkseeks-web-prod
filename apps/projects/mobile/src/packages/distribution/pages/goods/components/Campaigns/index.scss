@@ -1,0 +1,29 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.campaigns {
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &__notLast {
+      margin-bottom: $spacing-v-lg;
+    }
+
+    &-left {
+      flex-shrink: 0;
+      margin-right: $spacing-v-sm;
+    }
+
+    &-right {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    &-text {
+      font-size: $font-size-sm;
+      color: $color-grey-0;
+      @include text-overflow();
+    }
+  }
+}

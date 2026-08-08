@@ -1,0 +1,65 @@
+@import '@/styles/variables.scss';
+
+.exchange-apply {
+  padding: $spacing-v-md $spacing-h-md;
+  padding-bottom: 100px;
+
+  .at-switch {
+    zoom: .8;
+    padding: 0px;
+  }
+
+  &-actions {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+    padding: $spacing-v-md $spacing-h-md;
+    background-Color: #FFFFFF;
+  }
+
+  &-refundAmount {
+    font-Size: 14px;
+    color: #303133;
+  }
+
+  &-placeholderClass {
+    color: #626262;
+    font-size: 14px;
+  }
+
+  &-reason {
+    border: none;
+    padding: 0;
+
+    .at-textarea {
+      border: none;
+      padding: 0;
+
+      &__textarea {
+        color: $color-grey-0;
+      }
+    }
+  }
+
+  .at-image-picker {
+    &__item {
+      width: 77px;
+      height: 77px;
+      position: relative;
+      transform: none;
+    }
+
+    &__choose-btn {
+      .add-bar {
+        transform: none;
+        left: calc(50% - 8px);
+
+        &:nth-child(1) {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

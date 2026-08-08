@@ -1,0 +1,13 @@
+export default {
+  view: {
+    paddingMeta: false,
+    headerMeta: false,
+    authButtons: [
+      { name: '新建', key: 'add' },
+      { name: '发送邀请', key: 'send' },
+      { name: '编辑', key: 'edit' },
+      { name: '删除', key: 'delete' },
+    ],
+    cache: true,
+  },
+}

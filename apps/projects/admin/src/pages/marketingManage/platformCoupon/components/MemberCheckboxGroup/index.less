@@ -1,0 +1,55 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../../../global/styles/utils.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.member-list {
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: @padding-xs @padding-md;
+    position: relative;
+    background-color: @background-color-base;
+    border: 1px solid @border-color-base;
+
+    &-checkbox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &-checked {
+      color: @color-primary;
+      border-color: @color-primary;
+    }
+  }
+
+  &-checkboxGroup {
+    display: block;
+  }
+
+  &-more {
+    padding: @padding-xss @padding-xss 0;
+    text-align: center;
+  }
+
+  &-descriptions {
+    display: flex;
+    align-items: flex-start;
+
+    &-label {
+      margin-right: @margin-md;
+      font-size: 12px;
+      color: #91959b;
+    }
+
+    &-content {
+      flex: 1;
+      font-size: 12px;
+      color: #252d37;
+    }
+  }
+}

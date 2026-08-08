@@ -1,0 +1,48 @@
+@margin-bottom: 24px;
+@font-size: 14px;
+@margin-right: 16px;
+@color: #909399;
+
+.container {
+  background: #fff;
+  margin-bottom: @margin-bottom;
+  padding: @margin-bottom;
+  .error {
+    margin: 0 66px;
+    color: #ff4d4f;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: @font-size;
+  
+
+  .image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: @margin-right;
+
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+  } 
+
+  .itemName {
+    margin-right: @margin-right;
+    color: @color;
+  }
+
+  .itemValue {
+    margin-right: @margin-right;;
+    color: #303133;
+  }
+
+  .edit {
+    cursor: pointer;
+  }
+}

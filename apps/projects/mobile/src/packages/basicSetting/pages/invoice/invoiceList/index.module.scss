@@ -1,0 +1,194 @@
+@import "@/styles/variables.scss";
+@import "@/styles/utils/modal.scss";
+
+$gray: #606266;
+$sky-blue: #303133;
+$small: 10px;
+$default: 12px;
+$importmiddle: 14px;
+
+.invoice-container {
+  display: flex;
+  background-color: #f7f8fa;
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.invoicebtn-scroll {
+  flex: 1;
+  overflow: scroll;
+}
+
+.main {
+  padding: 8px;
+  flex-direction: column;
+  flex: 1;
+}
+
+.invoice-list {
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.invoice-item {
+  display: flex;
+  background-color: #fff;
+  padding: 14px 12px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.taginfo {
+  color: #fff;
+  font-size: 10px;
+}
+
+.flag {
+  position: absolute;
+  font-size: 10px;
+  background-color: #909399;
+  color: #fff;
+  right: 11px;
+  top: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.addicon {
+  display: inline-block;
+  padding: 3px;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.addicon-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.left {
+  flex-direction: column;
+  flex: 1;
+  color: #909399;
+}
+
+.invoice-text {
+  display: inline-block;
+  width: 60px;
+  color: #909399;
+  font-size: $importmiddle;
+  flex: 0.5;
+}
+
+.tagpersonal {
+  background-color: #f4f5f7;
+  width: 56px;
+  padding: 2px 4px;
+  color: #5c626a;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.tag-active {
+  background-color: #f0f7ff;
+  color: #3877ff;
+  font-size: 12px;
+  padding: 2px;
+  width: 35px;
+  text-align: center;
+}
+
+.name {
+  margin-left: 15px;
+  color: $sky-blue;
+  font-size: $importmiddle;
+  font-weight: 600;
+  text-align: left;
+  flex: 1;
+}
+
+.box {
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  flex: 0.1;
+  justify-content: center;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.warp {
+  flex-direction: column;
+  width: 100%;
+}
+
+.invoice-btn-group {
+  padding: 8px;
+  height: 56px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.invoice-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 36px;
+}
+
+.invoice-alone {
+  background-color: $theme-color;
+}
+
+.invoice-btn-left {
+  margin-right: 8px;
+  background-color: #f5f6f8;
+}
+
+.delete-btn {
+  width: 103px;
+  height: 100%;
+  padding: 0 30px;
+  text-align: center;
+  background-color: #d32f2f;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.invoice-model {
+  @include new-index-at-model;
+}

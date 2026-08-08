@@ -1,0 +1,52 @@
+.container {
+  background-color: #fff;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #252d37;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .logistics_line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .logistics_line_label {
+      width: 104px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #909199;
+    }
+
+    .logistics_line_tags {
+      display: flex;
+      align-items: center;
+
+      .tag {
+        width: 80px;
+        height: 32px;
+        background: #f5f6f7;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #5c626a;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 8px;
+        cursor: pointer;
+        border: 1px solid #f5f6f7;
+
+        &.active {
+          background: #1947ba0a;
+          border: 1px solid var(--mall-main-color);
+          color: var(--mall-main-color);
+        }
+      }
+    }
+  }
+}

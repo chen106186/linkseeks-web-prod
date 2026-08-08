@@ -1,0 +1,64 @@
+import { UploadImage } from "@apps/components"
+import { FileProcessorFactory, FileType } from "@linkseeks/tools"
+import { Button, Divider, Upload } from "@linkseeks/ui"
+import { useState } from "react"
+
+
+export default () => {
+	const [img1, setImg1] = useState<any>()
+	const [size1, setSize1] = useState('')
+	const [img2, setImg2] = useState<any>()
+	const [size2, setSize2] = useState('')
+	const imageFile = FileProcessorFactory.createFileStrategy(FileType.Image)
+
+	const transformSize = (size: number) => {
+		return (size / 1024).toFixed(2)
+	}
+
+	const handleBeforeUpload = async (files: File) => {
+		const originImg = await file2Img(files)
+		setImg1(originImg)
+		setSize1(transformSize(files.size))
+		const nameSplit = files.name.split('.')
+		const fileType = nameSplit[nameSplit.length - 1]
+		const result = await imageFile.compress(files, {  })
+		const afterImg = await file2Img(result.file as any)
+		setImg2(afterImg)
+		const tSize = transformSize(result.file.size)
+		setSize2(tSize)
+	}
+
+	const file2Img = (files: File) => {
+		return new Promise((resolve, reject) => {
+			const reader = new FileReader()
+			reader.readAsDataURL(files)
+			reader.onload = event => {
+				resolve(event.target?.result)
+			}
+		})
+
+	}
+	return (
+	<div>
+		      <Upload beforeUpload={handleBeforeUpload} showUploadList={false}>
+        <Button type="primary">点击上传</Button>
+      </Upload>
+		<div>
+			<p>上传前图片</p>
+			<img src={img1}/>
+			<p>size为 {size1} KB</p>
+		</div>
+		<Divider/>
+		<Divider/>
+		<Divider/>
+		<Divider/>
+		<Divider/>
+		<Divider/>
+		<div>
+			<p>上传后图片</p>
+			<img src={img2}/>
+			<p>size为 {size2} KB</p>
+		</div>
+	</div>
+	)
+}

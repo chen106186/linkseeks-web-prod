@@ -1,0 +1,47 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.tofuCheckbox-list {
+  margin-bottom: -@margin-md;
+
+  &-item {
+    display: inline-flex;
+    align-items: center;
+    padding: @padding-sm - 2 @padding-md;
+    margin-right: @margin-md;
+    margin-bottom: @margin-md;
+    position: relative;
+    background-color: @background-color-base;
+    border: 1px solid @border-color-base;
+
+    &-title {
+      flex: 1;
+      font-size: @font-size-sm;
+      color: inherit;
+    }
+
+    &-checkbox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &-checked {
+      color: @color-primary;
+      border-color: @color-primary;
+    }
+
+    &-disabled {
+      color: @disabled-color;
+      background-color: @disabled-bg;
+    }
+  }
+
+  &-checkboxGroup {
+    display: block;
+  }
+}

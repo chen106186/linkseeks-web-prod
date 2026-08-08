@@ -1,0 +1,22 @@
+.custom-upload {
+  text-align: right;
+
+  &__multiple {
+    text-align: left;
+
+    .at-image-picker {
+      width: 100% !important;
+    }
+  }
+
+  &__disabled {
+    .at-image-picker__remove-btn {
+      display: none;
+    }
+  }
+
+  .at-image-picker {
+    width: 73px;
+    display: inline-block;
+  }
+}

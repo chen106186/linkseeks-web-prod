@@ -1,0 +1,71 @@
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.supplier-deposits {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f4f5f7;
+
+  &-nav {
+    display: inline-block;
+  }
+
+  &-scroll {
+    flex: 1;
+    position: relative;
+  }
+
+  &-scrollView {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .at-tabs {
+    &__header {
+      text-align: left;
+    }
+
+    &__item {
+      color: $color-black-2;
+      font-weight: 400;
+
+      &--active {
+        color: $color-black-1;
+        font-weight: 500;
+      }
+
+      &-underline {
+        height: 2px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .nav-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $spacing-h-md;
+    background-color: #FFFFFF;
+
+    &-search {
+      flex: 1;
+    }
+
+    &-filter {
+      @include extend-click();
+    }
+  }
+
+  &-list {
+    &-item {
+      margin-top: $spacing-v-md;
+      margin-left: $spacing-h-md;
+      margin-right: $spacing-h-md;
+    }
+  }
+}

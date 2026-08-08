@@ -1,0 +1,44 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f5f7;
+  :global {
+    .at-input {
+      flex: 1;
+      text-align: right;
+      font-size: 14px;
+    }
+  }
+
+  .Border {
+    padding-left: 16px;
+    border-left: 1px solid #f4f5f7;
+  }
+  .countryCode {
+    font-size: 14px;
+    text-align: center;
+  }
+  .btn {
+    margin-top: 30px;
+    padding: 10px;
+    .btnText {
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      background-color: #007bfc;
+    }
+  }
+}
+
+.signContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	padding: 12px 0;
+}
+
+.goSign {
+	color: #00a98f;
+}

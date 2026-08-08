@@ -1,0 +1,32 @@
+import {
+  FROZEN,
+  PENDING_ADD_MATERIAL,
+  PENDING_EXAM_I,
+  EXAM_I_FAIL,
+  PENDING_EXAM_II,
+  EXAM_II_FAIL,
+  PENDING_SUBMIT_EXAM,
+  PENDING_EXAM_CHANGE_I,
+  PENDING_EXAM_CHANGE_I_FAIL,
+  PENDING_EXAM_CHANGE_II,
+  PENDING_EXAM_CHANGE_II_FAIL,
+  HAS_CONFIRM,
+} from '@/constants/material'
+
+/**
+ * 物料内部状态 Tag badge map
+ */
+export const MATERIAL_INNER_STATUS_BADGE_COLOR = {
+  [FROZEN]: 'grey',
+  [PENDING_ADD_MATERIAL]: 'blue',
+  [PENDING_EXAM_I]: 'orange',
+  [EXAM_I_FAIL]: 'red',
+  [PENDING_EXAM_II]: 'orange',
+  [EXAM_II_FAIL]: 'red',
+  [PENDING_SUBMIT_EXAM]: 'orange',
+  [PENDING_EXAM_CHANGE_I]: 'orange',
+  [PENDING_EXAM_CHANGE_I_FAIL]: 'red',
+  [PENDING_EXAM_CHANGE_II]: 'orange',
+  [PENDING_EXAM_CHANGE_II_FAIL]: 'red',
+  [HAS_CONFIRM]: 'green',
+}

@@ -1,0 +1,109 @@
+.coupon-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  &-wrap {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 48px;
+    color: #303133;
+  }
+
+  &-item {
+    position: relative;
+    width: 288px;
+    background: #fff;
+    border-radius: 8px;
+    height: 113px;
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+
+    .coupon-conditions-wrap {
+      display: flex;
+      flex-direction: column;
+      padding-right: 16px;
+      position: relative;
+
+      .coupon-money {
+        color: #ef3346;
+        font-size: 24px;
+        line-height: 38px;
+        text-align: center;
+
+        .coupon-currency {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+
+      .coupon-condition {
+        color: #606266;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #f4f5f7;
+      }
+    }
+
+    .coupon-info {
+      padding-left: 16px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .coupon-info-typeName {
+        color: #303133;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+
+      .coupon-info-date {
+        color: #606266;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+      }
+
+      .coupon-info-btn {
+        background-color: #ef3346;
+        color: #fff;
+        font-size: 14px;
+        padding: 6px 8px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .coupon-info-btn-disabled {
+        background-color: #babcc0;
+        color: #fff;
+        cursor: not-allowed;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

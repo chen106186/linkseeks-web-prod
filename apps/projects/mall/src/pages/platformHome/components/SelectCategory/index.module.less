@@ -1,0 +1,78 @@
+.tool_tip {
+  position: relative;
+  width: 320px;
+  max-width: 320px !important;
+  @main_color: #00a98f;
+
+  :global {
+    .ant-tooltip-inner {
+      padding: 0 24px 24px;
+    }
+
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: @main_color;
+    }
+
+    .ant-tabs-ink-bar {
+      background: @main_color;
+    }
+  }
+
+  .select_item {
+    // width: 38px;
+    padding: 0 4px;
+    height: 16px;
+    line-height: 16px;
+    margin: 6px 4px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+
+    &.active {
+      background-color: @main_color;
+      color: #fff;
+    }
+  }
+}
+
+.select_box {
+  display: flex;
+  position: relative;
+  flex: 1;
+
+  &_value {
+    flex: 1;
+    width: 0;
+    font-size: 12px;
+    margin-right: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .value {
+      color: #303133 !important;
+    }
+
+    .placeholder {
+      color: #909399;
+    }
+  }
+
+  &_icon {
+    margin-right: 12px;
+
+    & > img {
+      width: 7px;
+      height: 3.5px;
+    }
+  }
+}
+
+.category_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+}

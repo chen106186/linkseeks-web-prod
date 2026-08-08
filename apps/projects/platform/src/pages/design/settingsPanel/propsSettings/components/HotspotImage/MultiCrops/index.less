@@ -1,0 +1,79 @@
+.crop_item {
+  // box-shadow: 0 0 6px #000;
+  border: 1px solid #155bd4;
+  background: rgba(21, 91, 212, 0.5);
+  display: inline-block;
+
+  &:hover {
+    .delete_icon_box {
+      visibility: visible;
+    }
+    .copy_icon_box {
+      visibility: visible;
+    }
+  }
+
+  .hotarea {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    .hotarea_text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 4px;
+      word-break: break-all;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .hotarea_edit {
+    position: absolute;
+    bottom: 0;
+    width: 32px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .delete_icon_box {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 3;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    .delete_icon {
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+  .copy_icon_box {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 3;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    .copy_icon {
+      font-size: 20px;
+      color: rgb(54, 53, 53);
+    }
+  }
+}

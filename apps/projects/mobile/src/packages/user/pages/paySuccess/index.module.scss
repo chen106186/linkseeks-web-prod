@@ -1,0 +1,27 @@
+.paySuccess{
+  padding: 24px;
+  background: #F5F6F7;
+  &-container{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+
+  &-backBtn{
+    margin-top: 48px;
+    height: 48px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    background: #007BFC;
+  }
+}

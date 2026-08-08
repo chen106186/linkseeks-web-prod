@@ -1,0 +1,34 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.addressee {
+  padding: $spacing-v-lg;
+  @include border-thin-top($color-bg-grey);
+
+  &-title {
+    margin-bottom: $spacing-v-md;
+    font-size: $font-size-sm;
+    color: $color-grey-1;
+  }
+
+  &-part {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $spacing-v-sm;
+    font-size: $font-size-sm;
+    color: $color-grey-1;
+
+    &__notLast {
+      margin-bottom: $spacing-v-sm;
+    }
+  }
+
+  &-text {
+    font-size: $font-size-sm;
+    color: $color-grey-0;
+  }
+
+  &-name {
+    margin-right: $spacing-h-xl;
+  }
+}

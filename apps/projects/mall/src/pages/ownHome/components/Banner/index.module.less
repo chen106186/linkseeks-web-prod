@@ -1,0 +1,40 @@
+.lingxi-own-banner {
+  height: 496px;
+  width: 496px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &.two {
+    height: 248px;
+    width: 480px;
+  }
+
+  &.three {
+    width: 480px;
+    height: 232px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+
+  &.four {
+    width: 1200px;
+    margin: 0 auto;
+    height: 90px;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+
+    .lingxi-own-banner-item {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+  }
+}

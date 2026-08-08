@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+
+.containers {
+  padding: 0 20px;
+  background-color: #fff;
+  .TextArea {
+  }
+  .btn {
+    color: #fff;
+    background-color: $theme-color;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+}

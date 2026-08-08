@@ -1,0 +1,165 @@
+@import '@/styles/variables.scss';
+@import "@/styles/utils/modal.scss";
+
+.warp {
+  display: flex;
+  background-color: #f5f6f7;
+  flex-direction: column;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text {
+  color: #303133;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  padding-left: 12px;
+}
+.exchange-title {
+  font-size: 12px;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+  padding: 0 2px;
+  margin-right: 3px;
+  border-radius: 3px;
+  height: 16px;
+}
+.commodity-number {
+  color: #303133;
+  font-size: 16px;
+  padding-right: 40px;
+}
+.money-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 88px;
+}
+.money-tips-small {
+  color: #ef3346;
+  font-size: 12px;
+  line-height: 30px;
+  margin-right: 2px;
+}
+.money-tips-big {
+  color: #ef3346;
+  font-size: 24px;
+  font-weight: 400px;
+}
+.money-tips-max-small {
+  font-size: 12px;
+  color: #919598;
+}
+.money-center {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+  flex: 1;
+}
+.money-main {
+  padding: 8px;
+  height: 400px;
+  background-color: #f5f6f7;
+}
+.card-main {
+  background-color: #ffffff;
+  margin-bottom: 8px;
+}
+.money-warp {
+  display: flex;
+  padding: 8px;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 3px;
+  overflow: hidden;
+  flex: 1;
+  justify-content: space-between;
+}
+.center-type {
+  width: 55px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $theme-color;
+  margin-bottom: 9px;
+  flex: 1;
+}
+.center-title {
+  font-size: 12px;
+  color: #252d37;
+  font-weight: 400px;
+  margin-bottom: 9px;
+}
+.center-title-sku {
+  font-size: 12px;
+  color: #91959b;
+  margin-bottom: 12px;
+}
+.center-title-small {
+  font-size: 12px;
+  color: #252d37;
+}
+.product-warp {
+  display: flex;
+  justify-content: space-between;
+}
+.right-btn {
+  width: 64px;
+  height: 24px;
+  text-align: center;
+  background-color: #ef3346;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.right-btn-text {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 24px;
+  width: 100%;
+}
+.product-number {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.min-text {
+  font-size: 12px;
+}
+.price-text {
+  color: #ef3346;
+  font-size: 16px;
+}
+.box {
+  display: flex;
+}
+.tip-wrap {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0 24px;
+
+	&-text {
+		color: #00A98F;
+		font-size: 12px;
+	}
+}
+
+
+.price-tip-model {
+	@include new-price-at-model;
+}

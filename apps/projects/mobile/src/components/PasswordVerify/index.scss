@@ -1,0 +1,26 @@
+.passwordVerify {
+	display: flex;
+	flex-direction: row;
+	margin: 8px 0;
+}
+.passwordVerify-item{
+	border-radius: 8px;
+	padding: 0 20px;
+	margin-right: 8px;
+	background-color: rgba(242, 242, 242, 1);
+}
+.passwordVerify-item-1{
+	background-color: rgba(236, 128, 141, 1)
+}
+.passwordVerify-item-2{
+	background-color: rgba(2, 167, 240, 1)
+}
+.passwordVerify-item-3{
+	background-color: rgba(29, 181, 153, 1)
+}
+.passwordVerify-item-text{
+	color: #AAAAAA
+}
+.passwordVerify-item-textAct{
+	color: #fff
+}

@@ -1,0 +1,76 @@
+.filterMro_controller {
+  width: 1168px;
+  overflow: auto hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  .filterMro_controller_item {
+    width: 220px;
+    height: 232px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    .filterMro_controller_item_title {
+      font-size: 14px;
+      color: #252d37;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.filterMro_controller_item_container {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #f5f6f7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+
+  .filterMro_controller_item_container_search {
+    background-color: #f5f6f7;
+    margin-bottom: 2px;
+    border: 0;
+
+    :global {
+      .ant-input {
+        background-color: #f5f6f7;
+      }
+    }
+  }
+
+  .filterMro_controller_item_container_list {
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 160px;
+
+    .filterMro_controller_item_container_list_child {
+      height: 32px;
+      line-height: 32px;
+      padding-left: 8px;
+      background: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #252d37;
+      margin-bottom: 2px;
+
+      &:hover {
+        background-color: #f5f6f7;
+      }
+
+      &.active {
+        background-color: #ebf9f6;
+        color: var(--mall-main-color);
+      }
+
+      &.disable {
+        color: #c8cacd;
+      }
+    }
+  }
+}

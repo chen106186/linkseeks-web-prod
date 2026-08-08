@@ -1,0 +1,40 @@
+{
+  "name": "apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apps/apis": "workspace:^1.0.0",
+    "@apps/asserts": "workspace:^1.0.0",
+    "@apps/components": "workspace:^1.0.0",
+    "@apps/config": "workspace:^1.0.0",
+    "@apps/constants": "workspace:^1.0.0",
+    "@apps/container": "workspace:^1.0.0",
+    "@apps/design-core": "workspace:^1.0.0",
+    "@apps/design-hooks": "workspace:^1.0.0",
+    "@apps/design-react": "workspace:^1.0.0",
+    "@apps/design-ui": "workspace:^1.0.0",
+    "@apps/design-utils": "workspace:^1.0.0",
+    "@apps/domains": "workspace:^1.0.0",
+    "@apps/form": "workspace:^1.0.0",
+    "@apps/formily": "workspace:^1.0.0",
+    "@apps/layouts": "workspace:^1.0.0",
+    "@apps/locales": "workspace:^1.0.0",
+    "@apps/mobile-services": "workspace:^1.0.0",
+    "@apps/mobile-ui": "workspace:^1.0.0",
+    "@apps/services": "workspace:^1.0.0",
+    "@apps/styles": "workspace:^1.0.0",
+    "@apps/utils": "workspace:^1.0.0",
+    "@apps/validator": "workspace:^1.0.0",
+    "@apps/ci": "workspace:^1.0.0",
+    "@feature/paas": "workspace:^1.0.0",
+    "i18next": "^22.4.13",
+    "i18next-react": "^0.2.2"
+  }
+}

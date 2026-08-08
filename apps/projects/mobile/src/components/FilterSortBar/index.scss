@@ -1,0 +1,54 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+
+$filter-sort-bar-prefix: 'filter-sort-bar';
+
+.#{$filter-sort-bar-prefix} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-bg;
+
+  &-list {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      padding: $spacing-v-lg - 2 $spacing-h-xl;
+      display: flex;
+      align-items: center;
+
+      &-name {
+        font-size: 12px;
+        color: $color-grey-2;
+        font-weight: 400;
+      }
+
+      &__active {
+        .#{$filter-sort-bar-prefix}-list-item-name {
+          color: $color-brand;
+          font-weight: 600;
+        }
+      }
+
+      &-sorter {
+        display: inline-block;
+        margin-left: $spacing-h-sm - 2;
+
+        &-up {
+          margin-bottom: -5px;
+        }
+        &-down {}
+
+        &-up,
+        &-down {
+          font-size: 0;
+          color: $color-grey-2;
+
+          &.active {
+            color: $color-brand;
+          }
+        }
+      }
+    }
+  }
+}

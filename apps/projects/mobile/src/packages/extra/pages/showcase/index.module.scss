@@ -1,0 +1,125 @@
+@import "@/styles/variables.scss";
+
+.showcase {
+  height: 100vh;
+  &-header-scroll {
+    background-color: #F7F8FA;
+  }
+
+  .showcase-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .showcase-header-nav-bar {
+    position: relative;
+    z-index: 3;
+  }
+
+  .space_height {
+    height: 120px;
+  }
+
+  .showcase-header-nav {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .showcase-header-nav-wrap__fix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    opacity: 0;
+  }
+
+  .indicatorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  .indicator {
+    margin-bottom: 8px;
+  }
+
+  .indicatorText {
+    font-size: 10px;
+    color: #909399;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  &-shop-list {
+    padding: 8px;
+  }
+
+  &-brand-list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    &-item {
+      background-color: #FFF;
+      border-radius: 8px;
+      margin-bottom: 8px;
+
+      &-header {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+
+        &-logo {
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 4px;
+          background-color: #FFF;
+          border-width: 0.1px;
+          border-color: #EEF0F3;
+          margin-right: 8px;
+        }
+
+        .shopInfo {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .shopNameWrapper {
+          margin-bottom: 6px;
+        }
+
+        .shopName {
+          font-size: 12px;
+        }
+      }
+      .brand-list {
+        display: flex;
+        padding-bottom: 4px;
+        flex-wrap: wrap;
+
+        &-item {
+          width: 33.3%;
+          margin-bottom: 8px;
+          padding: 0 6px;
+
+          &-body {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FAFBFC;
+          }
+        }
+      }
+    }
+  }
+
+}
+

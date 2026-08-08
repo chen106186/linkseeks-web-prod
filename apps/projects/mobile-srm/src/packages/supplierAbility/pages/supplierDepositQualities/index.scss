@@ -1,0 +1,18 @@
+@import '@/styles/variables.scss';
+
+.supplier-deposit-qualities {
+  &-section {
+    padding: $spacing-v-md;
+    padding-bottom: 100px;
+  }
+
+  &-add {
+    margin-bottom: $spacing-v-md;
+  }
+
+  &-add-icon {
+    padding: 0 $spacing-v-md;
+    position: relative;
+    top: -2px;
+  }
+}

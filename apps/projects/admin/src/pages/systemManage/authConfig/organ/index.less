@@ -1,0 +1,30 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+// 公共的title伪类竖线
+.commonPanelTitle {
+  padding-left: 8px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.42667rem;
+    width: 2px;
+    height: 0.85333rem;
+    background-color: @color-primary;
+    box-shadow: 0 0.14933rem 0.256rem 0 rgba(97, 144, 232, 0.2);
+    border-radius: 1px;
+  }
+}
+
+// 内嵌页公共wrapper
+.common-wrapper {
+  background-color: #fff;
+  padding: 32px 24px;
+  border-radius: 5px;
+}

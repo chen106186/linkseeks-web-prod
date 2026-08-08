@@ -1,0 +1,69 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.attrs-group {
+  padding: $spacing-h-lg;
+
+  &-title {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-grey-0;
+  }
+
+  &-spec {
+    margin: -$spacing-v-xs + 3 -$spacing-h-md;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-itemWrap {
+      padding: $spacing-h-sm - 1 $spacing-h-md;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      @include border-thin(#F4F5F7);
+
+      &__active {
+        border-color: $color-warning;
+        background-color: #FFF7E6;
+      }
+
+      &__disabled {
+        border-color: #d9d9d9;
+        background-color: #f5f5f5;
+      }
+
+      &-imgWrap {
+        padding: $spacing-v-xs $spacing-h-sm;
+        padding-right: 0;
+      }
+
+      &-img {
+        width: 24px;
+        height: 24px;
+        @include border-thin(#F4F5F7);
+      }
+
+      &-name {
+        padding: $spacing-v-lg - 2 $spacing-h-lg;
+        font-size: $font-size-sm;
+        font-weight: 400;
+        color: $color-grey-0;
+
+        &__active {
+          color: $color-warning;
+        }
+
+        &__disabled {
+          color: #00000040;
+        }
+      }
+    }
+  }
+}

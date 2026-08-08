@@ -1,0 +1,26 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+.dtp-picker-container {
+  height: $dtp-container-height;
+}
+
+.dtp-picker-btns {
+  width: 100%;
+  display: flex;
+  padding: 0 $spacing-h-xl;
+  justify-content: space-between;
+  align-items: center;
+  height: $dtp-botton-container-height;
+}
+
+.dtp-picker-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dtp-picker-title {
+  font-size: $font-size-lg;
+  color: $color-text-title;
+}

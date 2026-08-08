@@ -1,0 +1,52 @@
+@import "@/styles/variables.scss";
+.auditLayout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f4f5f7;
+  height: 100%;
+  &-inputBox {
+    height: 200px;
+    border-radius: 8px;
+    margin: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    :global {
+      .at-textarea {
+        height: 100%;
+        color: #252D37;
+      }
+    }
+  }
+  &-btnBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+  }
+  &-touchableOpacity {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0px 12px;
+  }
+  &-primaryBtn {
+    padding: 13px 0px;
+    border-radius: 8px;
+    background-color: $theme-color;
+    display: flex;
+    justify-content: center;
+  }
+  &__disableBtn {
+    background-color: #edeeef;
+  }
+  &-primaryText {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  &__disbaleText {
+    color: #c0c4cc;
+  }
+}

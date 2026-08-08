@@ -1,0 +1,57 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  margin: 8px 0px;
+
+  .fillin {
+
+    &-box {
+      padding: 14px 12px;
+      margin: 0px 8px 8px;
+      border-radius: 8px;
+      background-color: #FFFFFF;
+
+      &-cell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-label {
+          font-size: 14px;
+          color: #252D37;
+          font-weight: 500;
+        }
+
+        &-value {
+          font-size: 20px;
+          color: #1F2C3D;
+          font-weight: 500;
+
+          :global {
+            .at-input {
+              padding: 0px 0px;
+
+              .at-input__input {
+                font-size: 14px;
+                text-align: right;
+              }
+
+              &::after {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .operate {
+    margin: 24px 8px 0px;
+  }
+}

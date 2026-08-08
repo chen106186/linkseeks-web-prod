@@ -1,0 +1,75 @@
+@import '@/styles/variables.scss';
+
+.brandList {
+  height: 100%;
+  display: flex;
+  background-color: #F4F5F7;
+
+  :global{
+    .at-indexes {
+      position: relative;
+
+      &__menu {
+        position: absolute;
+        top: 35%;
+      }
+
+      &__content,
+      &__list {
+        &:last-child {
+          padding-bottom: 20px;
+        }
+
+        &-title {
+          padding-top: $spacing-v-md;
+          padding-bottom: $spacing-v-md;
+          background-color: transparent;
+        }
+
+        &-title + view,
+        &-title + taro-view-core  {
+          margin-left: $spacing-v-md;
+          margin-right: $spacing-h-xl + 4;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .recommend {
+    margin-top: $spacing-v-md;
+    padding-left: $spacing-v-md;
+    padding-right: $spacing-h-xl + 4;
+
+    &-list {
+      margin: -$spacing-v-sm;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        width: 25%;
+        display: flex;
+        padding: $spacing-v-sm;
+        position: relative;
+
+        &-content {
+          flex: 1;
+          padding-bottom: 56.4%;
+          border-radius: 4px;
+          background-color: #F4F5F7;
+          overflow: hidden;
+          position: relative;
+
+          &-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

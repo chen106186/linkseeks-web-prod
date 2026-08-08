@@ -1,0 +1,122 @@
+.swiper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .swiper-view {
+    width: 1200px;
+    overflow: hidden;
+
+    .commodityList {
+      display: flex;
+      flex-direction: row;
+      transition: all 1s;
+
+      .commodity-item {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .swiper-prev,
+  .swiper-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }
+
+  .swiper-prev {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  .swiper-next {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    margin-top: -20px;
+  }
+}
+
+.hot-commodity {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 389px;
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 134px;
+    height: 134px;
+  }
+
+  .hot-commodity-info {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .hot-commodity-info-name {
+      font-size: 14px;
+      line-height: 20px;
+      color: #252d37;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+
+      /*! autoprefixer: off */
+      -webkit-box-orient: vertical;
+    }
+
+    .hot-commodity-info-tags {
+      display: flex;
+      flex-flow: row wrap;
+
+      .hot-commodity-info-tags-item {
+        margin: 4px 4px 0 0;
+      }
+    }
+
+    .hot-commodity-info-price {
+      margin-top: auto;
+    }
+
+    .commodity-info-hasSold {
+      font-size: 12px;
+      color: #91959b;
+      margin-top: 8px;
+    }
+  }
+}
+
+.mask-box {
+  position: absolute;
+  top: 70px;
+  left: 35px;
+  width: 80px;
+  height: 20px;
+  background-color: rgb(48 49 51 / 30%);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

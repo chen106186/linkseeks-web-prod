@@ -1,0 +1,178 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.cp-tree-container {
+  display: flex;
+
+  .cp-menu-tree {
+    flex: 1;
+  }
+}
+
+.cp-menu-tree {
+  background-color: #fff;
+  border-radius: 8px;
+  color: @color-text-2;
+
+  .cp-tree-search-value {
+    color: red;
+  }
+
+  .cp-tree-tools-hide {
+    display: none !important;
+  }
+
+  /* 重置antd tree组件样式 开始 */
+  .ant-tree {
+    .ant-tree-title {
+      display: flex;
+      flex: 1;
+      width: 0;
+
+      &:hover {
+        .cp-tree-tools-hide {
+          display: flex !important;
+        }
+      }
+    }
+
+    .ant-tree-node-content-wrapper {
+      display: flex;
+    }
+
+    .ant-tree-treenode {
+      border-radius: 4px;
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      padding-left: 8px;
+      align-items: center;
+      font-size: 12px;
+
+      &:hover {
+        background-color: @color-primary-100;
+        color: @color-primary;
+
+        .tree-node-circle {
+          background-color: @color-primary;
+        }
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .ant-tree-checkbox {
+      margin: 0;
+    }
+
+    .ant-tree-switcher {
+      width: 20px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-tree-treenode-selected {
+      color: @color-primary;
+      background-color: @color-primary-100;
+
+      .tree-node-circle {
+        background-color: @color-primary;
+      }
+    }
+    // .ant-tree-node-selected {
+    // 	background-color: inherit;
+    // }
+
+    // .ant-tree-node-content-wrapper:hover {
+    // 	background-color: inherit;
+    // }
+    // .ant-tree-switcher {
+    // 	display: flex;
+    // 	justify-content: center;
+    // 	align-items: center;
+    // }
+  }
+
+  /* 重置antd tree组件样式 结束 */
+
+  .tree-self-node {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 0;
+    // padding-right: 16px;
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+    }
+  }
+
+  .tree-input {
+    width: 200px;
+  }
+
+  .tree-node-circle {
+    width: 4px;
+    height: 4px;
+    background-color: @color-text-2;
+    border-radius: 100%;
+    margin-right: 12px;
+  }
+
+  .tree-circle-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .tree-tools {
+    display: flex;
+    align-items: center;
+  }
+
+  .tree-tools-fixed {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tree-tools-more {
+    background-color: inherit;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  .cp-menu-tree-tool {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .cp-menu-tree-tool_item {
+    margin-left: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .cp-menu-check-all {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+  }
+
+  .cp-tree-node-btn {
+    display: flex;
+    align-items: center;
+  }
+}

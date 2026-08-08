@@ -1,0 +1,97 @@
+{
+  "miniprogramRoot": "dist/weapp/",
+  "projectname": "%E7%93%B4%E7%8A%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%26amp%3Bh5",
+  "description": "小程序和h5",
+  "appid": "wxb3458d933c7676dd",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": false,
+    "postcss": false,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false,
+    "ignoreUploadUnusedFiles": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.8.10",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "navigateToMiniProgramAppIdList": ["wx6885acbedba59c14"],
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "找现货",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "找现货商品详情",
+          "pathName": "packages/commodityMerge/pages/stocksSourcing/detail/index",
+          "query": "commodityId=0",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "积分商品详情",
+          "pathName": "packages/commodityMerge/pages/pointsSourcing/detail/index",
+          "query": "commodityId=0",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "售后退货列表",
+          "pathName": "packages/afterService/pages/afterRecords/refundRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "申请售后",
+          "pathName": "packages/afterService/pages/afterTodo/applyAs/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "srcMiniprogramRoot": "dist/weapp/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

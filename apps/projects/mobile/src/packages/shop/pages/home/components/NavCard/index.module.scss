@@ -1,0 +1,70 @@
+@import '@/styles/variables.scss';
+
+.common-nav-card {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 6px 0;
+}
+
+.l {
+  height: 186px;
+}
+
+.mm{
+  height: 170px;
+}
+
+.ss{
+  height: 90px;
+}
+
+.swiper-pagination {
+  padding: 12px 0;
+
+  .swiper-pagination-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .swiper-pagination-item {
+      position: relative;
+      width: 24px;
+      height: 3px;
+      background-color: #eef0f3;
+      border-radius: 3px;
+
+      .actives {
+        background-color: $theme-color;
+      }
+    }
+  }
+}
+
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+
+  .navItem {
+    width: 20%;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .navIcon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+
+    .navText {
+      color: #606266;
+      font-size: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

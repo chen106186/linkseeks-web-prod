@@ -1,0 +1,50 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/extend-click.scss';
+
+.filter-shelf {
+  padding: 0 $spacing-h-lg;
+
+  &-head {
+    display: flex;
+    align-items: center;
+    padding-top: $spacing-v-xl + 7;
+    padding-bottom: $spacing-v-lg + 1;
+    position: relative;
+    &__chubby {
+      padding-bottom: $spacing-v-xl + 2;
+    }
+  }
+
+  &-title {
+    flex: 1;
+    font-size: 14px;
+    color: $color-grey-0;
+    font-weight: 500;
+  }
+
+  &-more {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+    @include extend-click();
+
+    &-text {
+      font-size: 12px;
+      color: $color-grey-2;
+    }
+
+    &-icon {
+      position: relative;
+      top: 0.5px;
+    }
+  }
+
+  &-chain {
+    margin-bottom: $spacing-v-lg;
+    font-size: 12px;
+    color: $color-brand;
+    // color: #91959B;
+  }
+
+  &-body {}
+}

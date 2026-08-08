@@ -1,0 +1,61 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    padding: 8px 14px;
+    width: 549px;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 28px;
+    list-style: none;
+    border: 1px solid #eef0f3;
+    color: #303133;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: @margin-sm;
+    }
+
+    &-desc {
+      color: @text-color-secondary;
+    }
+
+    &.active {
+      border: 1px solid @color-primary;
+      background-color: color(~`colorPalette('@{color-primary}', 0.04) `);
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid @color-primary;
+        border-left: 12px solid transparent;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.more {
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+
+.as-products-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFF;
+
+  &-item {
+    &__notLast {
+      margin-bottom: $spacing-v-lg;
+    }
+
+    &-count {
+      margin-right: $spacing-h-md;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-black-2;
+    }
+  }
+}

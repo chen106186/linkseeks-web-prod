@@ -1,0 +1,26 @@
+export interface PurchaseOrderStoreModel {
+  purchaseList: any,
+  buyNowList: any,
+  loading: boolean,
+  isCheckedAll: boolean,
+  allKeys: string[],
+  checkedProductCount: number,
+  // fetchPurchaselist: () => Promise<any>,
+  checkedKeys: string[],
+  setCheckedKeys: (target: string, children: string[], checked: boolean) => void,
+  checkTotal: number | string, // 总价格
+  changeOrderCount: (key: string, count: number) => void,
+  checkedAll: () => void,
+  generatePurchaseList: (ids: string[]) => void,
+  sourcePurchaseList: any[],
+  clearCheckedKeys: () => void
+  initStockOrder: (list: any, keys: string[], amount: number) => void,
+  setExpandedKeys: (dataIndex: string) => void,
+  expandedKeys: string[],
+  isExpandedAll: boolean,
+  setIsExpandedAll: (flag: boolean) => void,
+  shopMessageStore: any,
+  setShopMessageStore: (message: any) => void,
+  // setShouldNotRefresh: (flag: boolean) => void,
+  // shouldNotRefresh: boolean,
+}

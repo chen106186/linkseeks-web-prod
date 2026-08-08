@@ -1,0 +1,53 @@
+@import '@/styles/variables.scss';
+
+.logistics-company {
+  background-color: #F4F5F7;
+  height: 100%;
+  position: relative;
+
+  &-item {
+    &-titleWrap {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+    }
+
+    &-title {
+      color: $color-grey-0;
+      font-size: $font-size-base;
+    }
+
+    &-icon {
+      padding-left: $spacing-h-md;
+      padding-right: $spacing-h-md;
+    }
+  }
+
+  :global{
+    .at-indexes {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &__list {
+        &:last-child {
+          padding-bottom: 44PX;
+        }
+
+        &-title {
+          padding-top: $spacing-v-md;
+          padding-bottom: $spacing-v-md;
+          background-color: transparent;
+        }
+
+        &-title + view {
+          margin-left: $spacing-v-md;
+          margin-right: $spacing-h-xl + 4;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

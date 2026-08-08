@@ -1,0 +1,72 @@
+.card {
+  margin: 16px 0px;
+  border-radius: 8px;
+  background-color: #fff;
+  .card_title {
+    padding: 17px 16px;
+    font-size: 14px;
+    color: #252d37;
+  }
+  .card_list {
+    padding: 0px 16px;
+    .card_list_item {
+      display: flex;
+      position: relative;
+      padding: 8px 0px;
+      .card_list_item_sort {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        font-size: 14px;
+        .card_list_item_sort_number {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .card_list_item_img {
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid #f5f6f7;
+        box-sizing: border-box;
+        margin-right: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .card_list_item_info {
+        position: absolute;
+        padding-left: 95px;
+        width: 100%;
+        :global {
+          div.ant-typography,
+          .ant-typography p {
+            margin-bottom: 6px;
+          }
+        }
+        .info_icon_style {
+          font-size: 12px;
+          margin: 0 2px;
+        }
+      }
+      .card_list_item_tag {
+        padding: 2px 4px;
+        color: #ef3346;
+        background-color: #fff0f2;
+        border-radius: 2px;
+        position: absolute;
+        bottom: 12px;
+        right: 0;
+      }
+    }
+    .card_list_wran {
+      padding-bottom: 12px;
+      display: block;
+      text-align: center;
+    }
+  }
+}

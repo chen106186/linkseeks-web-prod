@@ -1,0 +1,57 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.logisticsCard {
+  @include border-thin(transparent);
+
+  &-titleWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-title {
+    flex-shrink: 0;
+    margin-right: $spacing-h-sm;
+    font-size: $font-size-base;
+    color: $color-grey-0;
+  }
+
+  &-extra {
+    font-size: $font-size-sm;
+    color: $color-warning;
+  }
+
+  &-cell {
+    margin-bottom: $spacing-v-lg;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-label {
+      flex: 1;
+      flex-direction: row;
+    }
+
+    &-tag {
+      display: inline-block;
+      padding: $spacing-v-sm - 1 $spacing-h-sm + 1;
+      line-height: 1;
+      background-color: $color-bg-light;
+      font-size: $font-size-sm;
+      color: $color-brand;
+      border-radius: 10px;
+    }
+
+    &-arrow {
+      flex-shrink: 0;
+      font-size: $font-size-sm;
+      color: $color-warning;
+    }
+  }
+
+  &-active {
+    border-color: $color-brand;
+  }
+}

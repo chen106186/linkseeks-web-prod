@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+
+.address-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-left {
+    margin-right: $spacing-h-md;
+  }
+
+  &-center {
+    flex: 1;
+    overflow: hidden;
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: $spacing-v-sm;
+    }
+  }
+
+  &-name {
+    font-size: $font-size-base;
+    color: $color-black-1;
+    font-weight: 600;
+  }
+
+  &-phone-num {
+    margin-left: $spacing-h-lg - 2;
+    font-size: $font-size-base;
+    color: $color-black-1;
+    font-weight: 600;
+    margin-right: $spacing-h-md;
+  }
+
+  &-full-address {
+    font-size: $font-size-sm;
+    color: $color-black-3;
+  }
+
+  &-tips {
+    color: $color-grey-2;
+    font-size: $font-size-base;
+  }
+}

@@ -1,0 +1,153 @@
+.formStyle {
+  :global {
+    .ant-input-group {
+      display: flex;
+      .ant-select {
+        width: 50% !important;
+      }
+      .ant-input {
+        width: 100% !important;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.offerStyle {
+  :global {
+    .ant-radio-button-wrapper {
+      height: 24px;
+      line-height: 23px;
+    }
+    .ant-radio-button-wrapper:hover {
+      color: #606266;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: #fff;
+      background: #6b778c;
+      border-color: #6b778c;
+    }
+    .ant-radio-button-wrapper-checked:not(
+        [class*=' ant-radio-button-wrapper-disabled']
+      ).ant-radio-button-wrapper:first-child {
+      border-right-color: #6b778c;
+    }
+    .ant-table-wrapper {
+      margin-top: 24px;
+    }
+    .ant-table-expanded-row td {
+      padding: 0;
+    }
+  }
+}
+.childrenWrap {
+  background-color: #fff;
+  .childrenTitle {
+    height: 100%;
+    background: linear-gradient(to left, #ffffff, #daf2e7);
+    color: #00a98f;
+    p {
+      padding-left: 16px;
+      margin: 0;
+      font-size: 12px;
+      height: 14px;
+      line-height: 14px;
+    }
+    padding: 12px 0;
+  }
+  .childrenContent {
+    margin-top: 8px;
+    p {
+      margin: 0;
+      span {
+        height: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #909399;
+        line-height: 12px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+.editableRow {
+  :global {
+    .ant-form-item-explain {
+      position: absolute;
+      top: 100%;
+      font-size: 12px;
+    }
+  }
+}
+.revise_style {
+  :global {
+    .ant-form-item-label {
+      width: 174px;
+      label {
+        color: #6b778c;
+      }
+    }
+    .ant-form-item-control {
+      width: 500px;
+      .ant-form-item-control-input-content {
+        position: relative;
+        .ant-btn-link {
+          position: absolute;
+          right: -120px;
+        }
+        .ant-picker {
+          width: 100%;
+        }
+      }
+      .ant-input-group-addon {
+        .ant-input-search-button {
+          background-color: #6b778c;
+          border-color: #6b778c;
+        }
+      }
+    }
+    .ant-radio-group-solid {
+      .ant-radio-button-wrapper-checked {
+        background: #6b778c;
+        border-color: #6b778c;
+        &:hover {
+          background: #6b778c;
+          border-color: #6b778c;
+        }
+      }
+    }
+  }
+  .upload_item {
+    padding: 5px 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafbfc;
+
+    .upload_left {
+      display: flex;
+      align-items: center;
+      color: #303133;
+
+      :global {
+        .anticon-file-word {
+          color: #4279df;
+          font-size: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .upload_right {
+      color: #00a98f;
+      cursor: pointer;
+
+      :global {
+        .anticon-delete {
+          margin-left: 19px;
+          color: #c0c4cc;
+        }
+      }
+    }
+  }
+}

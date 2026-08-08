@@ -1,0 +1,60 @@
+@import '@/styles/variables.scss';
+
+.tabBottomH5 {
+  height: 100%;
+}
+.tabBottom {
+  height: 100vh;
+}
+.tabBottom,.tabBottomH5 {
+  display: flex;
+  flex-direction: column;
+  .tabBottom-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f4f5f7;
+  }
+  .tabBottom-tabs {
+		position: relative;
+		z-index: 1;
+    width: 100%;
+    // height: 56px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    .tabBottom-tab-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 12px;
+			position: relative;
+      .activeText {
+        color: $theme-color;
+      }
+      .at-button__text {
+
+        // flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+      }
+    }
+  }
+
+	.bottomText {
+		position:relative;
+	}
+}
+
+.unread-badge {
+	position: absolute;
+	right: -50%;
+	top: -150%;
+}

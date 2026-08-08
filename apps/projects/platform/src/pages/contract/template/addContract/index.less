@@ -1,0 +1,55 @@
+.addcontract_wrap {
+  :global {
+    .ant-form-item {
+      width: 748px;
+
+      .ant-form-item-label {
+        width: 172px;
+        text-align: left;
+        & > label {
+          color: #909399;
+        }
+      }
+
+      .ant-upload-list-item {
+        margin-top: 0px;
+      }
+    }
+  }
+  .upload_item {
+    padding: 5px 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafbfc;
+
+    .upload_left {
+      display: flex;
+      align-items: center;
+      color: #303133;
+
+      :global {
+        .anticon-file-word {
+          color: #4279df;
+          font-size: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .upload_right {
+      color: #00a98f;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      :global {
+        .anticon-delete {
+          color: #c0c4cc;
+        }
+      }
+    }
+  }
+}

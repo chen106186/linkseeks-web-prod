@@ -1,0 +1,229 @@
+@import url('../common.less');
+
+.coupon {
+  background-color: #fff;
+  padding: 0 16px 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+
+  .common_title_icon {
+    cursor: pointer;
+  }
+  // .common_title_icon:hover{
+  //   color: #;
+  // }
+  .raido_group {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height: 530px;
+    overflow: clip auto;
+
+    .list_radio {
+      border: 1px solid #fff;
+      width: 33%;
+      cursor: pointer;
+    }
+
+    .coupon_list {
+      position: relative;
+      margin: 0 -10px;
+      flex-wrap: wrap;
+      display: flex;
+
+      .coupon_list_item {
+        padding: 20px 16px;
+        align-items: center;
+        // height: 72px;
+        background-color: #ffe0e4;
+        margin: 10px;
+        padding-left: 16px;
+        border-radius: 6px;
+        border: 1px solid #ffe0e4;
+
+        :global {
+          .ant-checkbox-checked {
+            .ant-checkbox-inner {
+              background-color: #ef3346;
+              border-color: #ef3346;
+            }
+          }
+        }
+
+        .coupon_money {
+          color: #ef3346;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .coupon_discount {
+          font-size: 12px;
+          color: #252d37;
+        }
+
+        .coupon_range {
+          font-size: 12px;
+          color: #91959b;
+        }
+
+        .coupon_type {
+          font-size: 12px;
+          color: #ef3346;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 16px;
+        }
+
+        &_content {
+          padding-left: 10px;
+
+          &_tag {
+            display: inline-block;
+            background-color: #909399;
+            padding: 0 6px;
+            height: 16px;
+            line-height: 16px;
+            color: #fff;
+            font-size: 12px;
+
+            &.special {
+              background-color: #5377ce;
+            }
+          }
+
+          &_name {
+            display: flex;
+            align-items: center;
+
+            .default {
+              width: 64px;
+              height: 16px;
+              line-height: 16px;
+              text-align: center;
+              background: rgb(238 238 238 / 100%);
+              font-size: 12px;
+              color: #606266;
+            }
+
+            & > span {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        &_btn_group {
+          display: flex;
+          margin-left: auto;
+          line-height: 14px;
+          // height: 14px;
+
+          .coupon_list_item_btn {
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .coupon_list_item:hover {
+        border: 1px solid #ef3346;
+      }
+
+      .integral_list_item {
+        padding: 20px 16px;
+        align-items: center;
+        // height: 72px;
+        background-color: #fef7ee;
+        margin: 10px;
+        padding-left: 16px;
+        border-radius: 6px;
+        border: 1px solid #fef7ee;
+
+        :global {
+          .ant-checkbox-checked {
+            .ant-checkbox-inner {
+              background-color: #e8a044;
+              border-color: #e8a044;
+            }
+          }
+        }
+
+        .integral_money {
+          color: #e8a044;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .integral_discount {
+          font-size: 12px;
+          color: #252d37;
+        }
+
+        .integral_range {
+          font-size: 12px;
+          color: #91959b;
+        }
+
+        .integral_type {
+          font-size: 12px;
+          color: #e8a044;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 16px;
+        }
+
+        &_content {
+          padding-left: 10px;
+
+          &_tag {
+            display: inline-block;
+            background-color: #909399;
+            padding: 0 6px;
+            height: 16px;
+            line-height: 16px;
+            color: #fff;
+            font-size: 12px;
+
+            &.special {
+              background-color: #5377ce;
+            }
+          }
+
+          &_name {
+            display: flex;
+            align-items: center;
+
+            .default {
+              width: 64px;
+              height: 16px;
+              line-height: 16px;
+              text-align: center;
+              background: rgb(238 238 238 / 100%);
+              font-size: 12px;
+              color: #606266;
+            }
+
+            & > span {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        &_btn_group {
+          display: flex;
+          margin-left: auto;
+          line-height: 14px;
+          // height: 14px;
+
+          .integral_list_item_btn {
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .integral_list_item:hover {
+        border: 1px solid #e8a044;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  // min-height: 100vh;
+
+  .Warp {
+    flex: 1;
+		height: 0;
+    padding: 16px 16px 8px 16px;
+
+    .title {
+      font-size: 24px;
+      color: #303133;
+    }
+
+    .shopList {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+
+      .shopListItem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        background-color: #FAFBFC;
+        padding: 12px 24px;
+        border-radius: 8px;
+
+        .name {
+          font-size: 14px;
+          margin-left: 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          flex: 1;
+        }
+
+        .right_icon {
+          margin-left: auto;
+        }
+
+        &.active {
+          background-color: #EBF9F6;
+
+          .name {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom_wrap {
+    margin-top: auto;
+    height: 56px;
+    padding: 8px;
+
+    .btn {
+      border: 1PX solid$theme-color;;
+      background: $theme-color;
+      font-size: 14px;
+      margin: 0 20px;
+    }
+
+  }
+}
+

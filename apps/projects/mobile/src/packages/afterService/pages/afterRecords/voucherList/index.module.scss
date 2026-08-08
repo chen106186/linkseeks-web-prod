@@ -1,0 +1,61 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.voucher {
+  &-list {
+    &-item {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: $spacing-v-lg $spacing-h-lg;
+      margin: $spacing-v-md $spacing-h-md 0 $spacing-h-md;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+  
+      &-left {
+        margin-right: $spacing-h-lg;
+      }
+  
+      &-right {
+        flex: 1;
+        align-items: center;
+        overflow: hidden;
+      }
+  
+      &-fileName {
+        font-size: $font-size-sm;
+        color: $color-grey-2;
+        @include text-overflow();
+      }
+  
+      &-imgWrap {
+        width: 64px;
+        height: 64px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+  
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+  
+      &-iconWrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5F6F7;
+      }
+    }
+  }
+}

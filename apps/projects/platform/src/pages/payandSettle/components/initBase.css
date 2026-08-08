@@ -1,0 +1,18 @@
+.init-img {
+  width: 400px;
+  height: 300px;
+}
+.right {
+  padding: 64px 0 0 64px;
+}
+.right .title {
+  font-size: 32px;
+  font-weight: 600;
+  color: black;
+}
+.right .btn {
+  margin-top: 48px;
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+}

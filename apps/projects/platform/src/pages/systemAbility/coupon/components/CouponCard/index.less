@@ -1,0 +1,69 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../../../global/styles/utils.less';
+
+@card-prefix: coupon-card;
+
+.@{card-prefix} {
+  display: flex;
+  align-items: center;
+  padding: @padding-md;
+  background-color: #ffffff;
+  border-radius: @border-radius-base * 4;
+
+  &-left {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &-right {
+    flex-shrink: 0;
+  }
+
+  &-belong {
+    padding: 0 @padding-xss;
+    border: none;
+  }
+
+  &-name {
+    margin-top: @margin-xss - 2;
+    font-size: @font-size-lg;
+    color: @text-color;
+    .textOverflow();
+  }
+
+  &-date,
+  &-code,
+  &-description,
+  &-webs {
+    margin-top: @margin-xss - 2;
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+  }
+
+  &-description {
+    text-align: right;
+  }
+
+  &-yuanWrap {
+    text-align: right;
+  }
+
+  &-yuan {
+    font-size: @font-size-sm;
+    color: @error-color;
+  }
+
+  &-denomination {
+    font-size: @font-size-sm * 2;
+    color: @error-color;
+  }
+
+  &-webs {
+    .textOverflow();
+  }
+
+  &-actions {
+    margin-top: @margin-xss;
+    text-align: right;
+  }
+}

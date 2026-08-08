@@ -1,0 +1,170 @@
+.lifecycle-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lifecycle-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+
+  .common-icon-box {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+  }
+
+  .edit-box {
+    .common-icon-box;
+    left: 0;
+    top: -24px;
+    width: 168px;
+  }
+
+  .add-box {
+    .common-icon-box;
+    right: 28px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  .box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .lifecycle-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 168px;
+    height: 48px;
+    margin-right: 8px;
+    border: 1px solid #f5f6f7;
+    border-radius: 4px;
+    background-color: #f5f6f7;
+    color: #252d37;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    .box-sort {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      color: #91959b;
+      border-radius: 50%;
+      background-color: #e3e4e5;
+      margin-right: 8px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      border: 1px solid #91959b;
+    }
+  }
+
+  &:hover {
+    .edit-box,
+    .add-box {
+      display: flex;
+    }
+  }
+
+  // &:active {
+  //   .edit-box,
+  //   .add-box {
+  //     display: none;
+  //   }
+  // }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../../assets/imgs/fillRightArrow.png');
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+    .add-box {
+      right: -4px;
+    }
+  }
+}
+
+.active {
+  .lifecycle-box {
+    color: #00a98f;
+    border: 1px solid #00a98f;
+    background-color: rgba(0, 169, 143, 0.04);
+
+    .box-sort {
+      color: #fff;
+      background-color: #00a98f;
+    }
+
+    &:hover {
+      border: 1px solid #00a98f;
+    }
+  }
+
+  .edit-box {
+    display: flex;
+  }
+}
+
+.custom-modalConfirm {
+  font-size: 14px;
+  :global {
+    .ant-modal-content {
+      width: 600px;
+      border-radius: 8px;
+
+      .ant-modal-body {
+        padding: 16px;
+
+        .ant-btn-dangerous {
+          background-color: #e34d59;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.todo {
+  &-title {
+    font-size: @font-size-lg;
+  }
+
+  &-total {
+    font-size: @font-size-base * 2;
+    color: @text-color;
+  }
+
+  &-tag {
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      display: inline-block;
+      padding: @padding-xss + 2 @padding-md;
+      margin-right: @margin-md;
+      margin-bottom: @margin-md;
+      background-color: #ebf9f6;
+      color: @text-color-secondary;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &-active {
+        color: @color-primary;
+      }
+
+      &:hover {
+        background-color: rgba(34, 41, 50, 0.04);
+      }
+
+      &:active {
+        background-color: rgba(37, 45, 55, 0.08);
+      }
+    }
+  }
+
+  &-list {
+    margin-top: @margin-xs;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: @padding-xss;
+
+    &-content {
+      margin-left: -@margin-md;
+      min-height: 184px;
+    }
+
+    &-group {
+      display: inline-block;
+      padding-left: @margin-md;
+      width: 50%;
+      min-height: 184px;
+      vertical-align: middle;
+    }
+
+    &-item {
+      padding: @padding-md - 3 @padding-md;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fafbfc;
+      border-left: 2px solid #5c626a;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: @margin-md;
+      }
+
+      &-name {
+        font-size: @font-size-sm;
+        color: @text-color-secondary;
+      }
+
+      &-total {
+        font-size: @font-size-lg;
+        color: @text-color;
+      }
+
+      &:hover {
+        background-color: rgba(34, 41, 50, 0.04);
+      }
+
+      &:active {
+        background-color: rgba(37, 45, 55, 0.08);
+      }
+    }
+
+    &-noData {
+      margin-top: 20px;
+      color: @text-color-secondary;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.eAccountRecordDetail {
+  background-color: #F4F5F7;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &_container {
+    width: 100%;
+  }
+
+  &_listContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 8px;
+
+    .listContainerBg {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 12px;
+      background-color: #FFF;
+      border-radius: 8px;
+
+      .listHeader {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #FFF;
+        padding: 16px 0;
+        border-radius: 8px;
+      }
+
+      .listHeaderTitle{
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .listHeaderText {
+          .listHeaderTextTitle {
+           padding-left: 8px;
+           font-size: 14px;
+          }
+        }
+
+      }
+      .listItemHeaderAmount {
+        font-size: 24;
+        padding-top: 16px;
+      }
+
+      .listItem {
+        display: flex;
+        width: 100%;
+        background-color: #FFF;
+        padding: 16px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #F4F5F7;
+      }
+      .listItemLast {
+        border-bottom: 1px solid #FFF;
+      }
+      .listItemTextTitle {
+        font-size: 14px;
+        color: #909399;
+      }
+      .listItemRight {
+        display: flex;
+        margin-left: 16px;
+        flex: 1;
+        width: 0;
+        justify-content: flex-end;
+      }
+      .listItemTextAmount {
+        font-size: 14px;
+      }
+    }
+  }
+}

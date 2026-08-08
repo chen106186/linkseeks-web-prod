@@ -1,0 +1,64 @@
+@font-size: 13px;
+@label-color: #909399;
+@margin-top: 50px;
+@margin-lg: 20px;
+@margin-md: 10px;
+.row {
+  margin-bottom: @margin-lg;
+  font-size: @font-size;
+
+  .label {
+    color: @label-color;
+  }
+}
+
+.formHeader {
+  display: flex;
+  margin: 50px 0 @margin-md 0;
+
+  .invoiceNum {
+    width: 170px;
+    margin-right: @margin-md;
+  }
+
+  .invoiceDate {
+    width: 140px;
+    margin-right: @margin-md;
+  }
+}
+
+.originalInvoice {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+
+  .title {
+    font-size: 12px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .defaultWidth {
+    width: 128px;
+    margin-right: 8px;
+  }
+
+  .specialWidth {
+    flex: 1;
+  }
+}

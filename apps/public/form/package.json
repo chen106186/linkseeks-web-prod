@@ -1,0 +1,45 @@
+{
+  "name": "@apps/form",
+  "description": "formilyjs 2.x库",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "engines": {
+    "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "build": "rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "copyfiles -u 1 src/**/*.less lib && tsc --project tsconfig.json --outDir lib",
+    "build:esm": "copyfiles -u 1 src/**/*.less esm && tsc --project tsconfig.json --module es2015 --outDir esm",
+    "build:umd": "rollup --config"
+  },
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "peerDependencies": {
+    "react-eva": "^1.1.7"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom",
+        "webpack",
+        "umi",
+        "@babel/*",
+        "@formily/*",
+        "react-is",
+        "@umijs/*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@form/antd": "npm:@formily/antd@2.2.24",
+    "@form/core": "npm:@formily/core@2.2.24",
+    "@form/react": "npm:@formily/react@2.2.24",
+    "@form/reactive": "npm:@formily/reactive@2.2.24",
+    "@form/shared": "npm:@formily/shared@2.2.24",
+    "@form/validator": "npm:@formily/validator@2.2.24",
+    "react-eva": "^1.1.7"
+  }
+}

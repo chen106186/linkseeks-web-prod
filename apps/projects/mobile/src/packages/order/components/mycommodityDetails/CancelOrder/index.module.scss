@@ -1,0 +1,53 @@
+@import '@/styles/variables.scss';
+
+.Props-box{
+  background-color: #fff;
+  .title{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+		font-weight: 500;
+    padding:  10px 0px;
+    border-bottom: 1px solid #F4F5F7;
+    width: 100%;
+  }
+  .Cell{
+    display: flex;
+    justify-content: space-between;
+		align-items: center;
+		padding: 0 12px;
+		height: 48px;
+    .CellText{
+      font-size: 14px;
+    }
+  }
+  .warpflex{
+    height: 290px;
+		background: '#FAFBFC';
+		border-radius: 16px;
+  }
+  .Props-foot{
+		padding: 0 12px 34px;
+    display: flex;
+    justify-content: space-between;
+    .cancel{
+			flex: 1;
+			line-height: 20px;
+      text-align: center;
+      font-size: 14px;
+      width: 48%;
+      display: inline-block;
+      border-radius: 8px;
+      padding: 15px 0;
+      background-color: #f5f6f7;
+			font-weight: 500;
+    }
+    .confirm{
+      @extend .cancel;
+			margin-left: 8px;
+      background: $theme-color;
+      color: #fff;
+    }
+  }
+
+}

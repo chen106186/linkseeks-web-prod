@@ -1,0 +1,120 @@
+@import '../../../common.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.product_info_coupons_line {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 16px;
+  padding-left: 16px;
+
+  &_label {
+    color: #909399;
+    font-size: 12px;
+    width: 110px;
+    line-height: 18px;
+  }
+
+  &_brief {
+    flex: 1;
+    width: 0;
+
+    .product_coupon_list {
+      &_item {
+        display: flex;
+        align-items: center;
+        color: #252d37;
+        font-size: 12px;
+
+        & > span {
+          margin-left: 4px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        .receive_btn {
+          margin-left: 8px;
+          font-size: 12px;
+          color: @color-primary;
+          cursor: pointer;
+        }
+      }
+
+      .product_promotion_expand {
+        font-size: 12px;
+        color: #91959b;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        padding: 0 8px;
+        height: 24px;
+        line-height: 24px;
+
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #edeeef;
+        }
+
+        &:active {
+          background-color: #f5f6f7;
+        }
+
+        &_icon {
+          font-size: 10px;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+.receive_modal {
+  .receive_modal_content {
+    margin-top: 12px;
+
+    &_line {
+      color: #5c626a;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .coupon_title {
+      color: #ef3346;
+      margin: 0 4px;
+    }
+  }
+
+  :global {
+    .ant-modal-body {
+      padding: 18px 16px 26px 16px;
+    }
+
+    .ant-modal-confirm-title {
+      font-size: 16px;
+    }
+
+    .ant-modal-confirm-content {
+      margin-left: 30px !important;
+    }
+
+    .ant-modal-confirm-btns {
+      // display: none;
+      float: left;
+      margin-left: 22px;
+      margin-top: 16px;
+    }
+  }
+}
+
+.receive_modal_confirm {
+  background: #ebf9f6 !important;
+  color: @color-primary;
+  border-color: #ebf9f6 !important;
+}
+
+.success_icon {
+  color: @color-primary!important;
+  margin-right: 8px !important;
+}

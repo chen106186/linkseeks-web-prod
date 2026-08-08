@@ -1,0 +1,145 @@
+@import '@/styles/variables.scss';
+
+.container {
+  padding: 24px * $hd 24px * $hd 8px * $hd 24px * $hd;
+  background-color: #fff;
+  border-radius: 8px * $hd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .status {
+    font-size: 18px * $hd;
+    margin-bottom: 8px * $hd;
+    color: #000;
+  }
+  .status-success {
+    color: $theme-color;
+  }
+
+  .leftNum,
+  .status-fail {
+    color: #EF3346;
+  }
+
+  .status-tips {
+    font-size: 14px;
+    color: #252D37;
+    text-align: center;
+  }
+
+  .people-list {
+    margin-top: 20px * $hd;
+    margin-bottom: 24px * $hd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 240px * $hd;
+
+    .empty-people {
+      background-color: #F5F6F7;
+      width: 48px * $hd;
+      height: 48px * $hd;
+      border-radius: 24px * $hd;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .people-plus {
+        width: 32px * $hd;
+        height: 32px * $hd;
+      }
+    }
+
+    .people-item-container {
+
+      .imageContainer {
+        position: relative;
+        width: 48px * $hd;
+        height: 48px * $hd;
+        border-radius: 24px * $hd;
+        background-color: #F5F6F7;
+      }
+
+      .master {
+        position: absolute;
+        bottom: -8px * $hd;
+        left: 0;
+        right: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 10px * $hd;
+
+        .master-name {
+          padding: 2px * $hd 4px * $hd;
+          border-radius: 4px * $hd;
+          background-color: $theme-color;
+        }
+      }
+    }
+
+    .people-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 25%;
+      margin-bottom: 12px * $hd;
+
+      &-logo {
+        width: 48px * $hd;
+        height: 48px * $hd;
+        border-radius: 24px * $hd;
+      }
+
+      &-name {
+        font-size: 10px * $hd;
+        color: #252D37;
+        text-align: center;
+        margin-top: 8px * $hd;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .btn {
+    background: $theme-color;
+    color: #fff;
+    width: 100%;
+    border-radius: 8px * $hd;
+    padding: 12px * $hd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+    // font-weight: 600;
+  }
+
+  .btn-share {
+    padding: 0;
+    background: $theme-color;
+    color: #fff;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .btn-success {
+    background-color: $theme-color;
+    margin-bottom: 8px;
+  }
+
+  .btn-default {
+    background-color: #fff;
+    color: #000;
+  }
+}

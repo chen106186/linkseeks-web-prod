@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.pageHeader {
+  background-color: $theme-color;
+}
+.scrollView {
+  background-color: #f4f5f7;
+  display: flex;
+  flex: 1;
+}
+.countContainer {
+  background-color: $theme-color;
+  height: 40px;
+  width: 100%;
+}
+.panel {
+  margin: -30px 8px 0;
+}
+.panelSection {
+  padding: 8px;
+  display: flex;
+  flex: 1;
+  :global{
+    .mellow-card {
+      width: 100% !important;
+    }
+  }
+}
+.tips {
+  color: $color-black-3;
+  margin: 12px 8px 0;
+  line-height: 20px;
+  font-size: 12px;
+}
+.btn {
+  background-color: $theme-color;
+  // width: 100%;
+	margin: 8px;
+}
+.btnText {
+  color: #fff;
+  font-size: 16;
+}

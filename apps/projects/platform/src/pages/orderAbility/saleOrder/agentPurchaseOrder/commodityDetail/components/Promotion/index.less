@@ -1,0 +1,73 @@
+.product_info_promotion_line {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 16px;
+  padding-left: 16px;
+
+  &_label {
+    color: #909399;
+    font-size: 12px;
+    width: 110px;
+  }
+
+  &_brief {
+    flex: 1;
+    width: 0;
+
+    .product_promotion_list {
+      &_item {
+        display: flex;
+        align-items: center;
+        color: #252d37;
+        font-size: 12px;
+        line-height: 12px;
+
+        :global {
+          .activity_tag_list_item {
+            overflow: initial;
+          }
+        }
+
+        & > span {
+          margin-left: 4px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      .product_promotion_expand {
+        font-size: 12px;
+        color: #91959b;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        padding: 0 8px;
+        height: 24px;
+        line-height: 24px;
+
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #edeeef;
+        }
+
+        &:active {
+          background-color: #f5f6f7;
+        }
+
+        &_icon {
+          font-size: 10px;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  .activity_link {
+    color: #91959b;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}

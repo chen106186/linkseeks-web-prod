@@ -1,0 +1,35 @@
+.realChange {
+	display: flex;
+	justify-content: space-between;
+	&-cardFile {
+		width: 156px;
+		display: flex;
+		flex-direction: column;
+	}
+	&-fileLayout {
+		width: 100%;
+		height: 91px;
+		overflow: hidden;
+		border-radius: 8px;
+	}
+	&-fileText {
+		font-size: 12px;
+		text-align: center;
+		color: #5C626A;
+		padding: 10px 0;
+	}
+	&-imageBox {
+		width: 100%;
+		position: relative;
+	}
+	&-clear {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	&-image {
+		width: 156px;
+		height: 91px;
+		border-radius: 4px;
+	}
+}

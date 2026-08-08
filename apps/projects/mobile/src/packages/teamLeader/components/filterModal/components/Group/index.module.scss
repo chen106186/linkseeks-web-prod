@@ -1,0 +1,52 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.filter-query-group {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  &-title {
+    padding-top: 18px;
+    padding-bottom: 12px;
+    color: $color-black-1;
+    font-size: 12px;
+    font-weight: 600px;
+  }
+
+  &-content {
+    display: flex;
+    margin: -4;
+    padding-bottom: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    width: 33.333%;
+    padding: 4px;
+
+    &-main {
+      padding: 10px;
+      background-color: #f4f5f7;
+      border-radius: 4px;
+      @include border-thin(#f4f5f7);
+
+      &__active {
+        border-color: $color-brand;
+      }
+    }
+
+    &-txt {
+      color: $color-black-2;
+      font-size: 12px;
+      font-weight: 400px;
+      text-align: center;
+      @include text-overflow();
+
+      &__active {
+        color: $color-brand;
+      }
+    }
+  }
+}

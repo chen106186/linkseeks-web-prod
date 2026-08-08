@@ -1,0 +1,74 @@
+@import url('@/theme/style/common.less');
+
+@mall-main-color: var(--mall-main-color);
+
+.main_nav {
+  position: relative;
+  background-color: #00a98f;
+  color: #fff;
+
+  &_container {
+    .common_page_container();
+
+    height: 40px;
+    display: flex;
+
+    & > .nav {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      display: flex;
+
+      .nav_item {
+        list-style: none;
+        height: 40px;
+        line-height: 40px;
+        color: #303133;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 24px;
+
+        & > a {
+          display: block;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 0 24px;
+        }
+
+        &:hover {
+          background: rgb(0 0 0 / 8%);
+        }
+
+        &.active {
+          & > {
+            background: rgb(0 0 0 / 8%);
+          }
+        }
+      }
+    }
+  }
+
+  &.shop {
+    background-color: @mall-main-color;
+
+    .main_nav_container > .nav .nav_item {
+      &.active {
+        background-color: var(--nav_active_bg);
+
+        a {
+          color: #fff;
+        }
+      }
+
+      a {
+        color: #fff;
+
+        &:hover {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

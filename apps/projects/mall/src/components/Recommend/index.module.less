@@ -1,0 +1,131 @@
+.recommend-right-warp {
+  background: #fff;
+  padding-bottom: 24px;
+}
+
+.recommend-text {
+  color: #303133;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+
+  span {
+    padding-left: 24px;
+    border-left: 3px solid var(--mall-main-color);
+  }
+}
+
+.recommend-img-warp {
+  padding: 0 24px;
+  position: relative;
+
+  .recommend-img {
+    width: 288px;
+    height: 192px;
+  }
+
+  .recommend-img-title {
+    color: #303133;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px 0 8px;
+  }
+
+  .recommend-img-second-title {
+    color: #909399;
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+.recommend-img-warp:hover .recommend-img-title {
+  color: var(--mall-main-color);
+}
+
+.recommend-content {
+  display: flex;
+  padding: 0 24px;
+  margin-top: 24px;
+  position: relative;
+
+  .recommend-content-img {
+    width: 90px;
+    height: 60px;
+    margin-right: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .recommend-content-right-warp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .recommend-content-title {
+    font-size: 12px;
+    color: #303133;
+  }
+
+  .recommend-content-time {
+    color: #909399;
+    font-size: 12px;
+  }
+}
+
+.recommend-content:hover .recommend-content-title {
+  color: #00a98f;
+}
+
+.recommend-right-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 50px 0 24px;
+}
+
+.recommend-right-content-item {
+  padding: 8px 10px;
+  color: #666;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 126px;
+  position: relative;
+}
+
+.recommend-right-content-item:hover {
+  color: var(--mall-main-color);
+}
+
+.similar-warp {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin-bottom: 24px;
+  position: relative;
+
+  .similar-title {
+    color: #303133;
+    font-size: 12px;
+  }
+
+  .similar-time {
+    color: #909399;
+    font-size: 12px;
+    width: 45px;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+}
+
+.similar-warp:hover .similar-title {
+  color: var(--mall-main-color);
+}
+
+.similar-warp:last-child {
+  margin-bottom: 0;
+}

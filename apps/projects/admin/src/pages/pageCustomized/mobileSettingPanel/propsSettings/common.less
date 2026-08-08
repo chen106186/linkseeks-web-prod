@@ -1,0 +1,316 @@
+@import '../../../../global//styles/utils.less';
+
+.image {
+  margin-top: 8px;
+  width: 100%;
+  position: relative;
+
+  &_body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    cursor: pointer;
+    background-color: #fafbfc;
+    overflow: hidden;
+  }
+
+  .imageIcon {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .uploadImage {
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    right: 0;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    transition: all 0.6s;
+  }
+  &:hover {
+    .uploadImage {
+      transform: translateY(-34px);
+    }
+  }
+}
+
+.setting {
+  .setting_title {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .setting_line {
+    margin-bottom: 24px;
+    display: flex;
+
+    &_main {
+      position: relative;
+      flex: 1;
+    }
+
+    &_addItem {
+      flex: 1;
+      padding: 24px 12px 0 12px;
+
+      .deleteItem {
+        text-align: right;
+        padding-bottom: 8px;
+
+        &_icon {
+          margin-right: 4px;
+        }
+
+        & > label {
+          cursor: pointer;
+        }
+      }
+
+      &_input {
+        width: 100%;
+      }
+
+      &_line {
+        display: flex;
+        margin-bottom: 16px;
+        font-size: 14px;
+
+        &_label {
+          width: 80px;
+          line-height: 32px;
+          color: #909399;
+        }
+
+        &_brief {
+          flex: 1;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &_sort {
+      width: 32px;
+      background-color: #fafbfc;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    &_name {
+      display: flex;
+      flex: 1;
+      font-size: 14px;
+      height: 32px;
+      color: #303133;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #fafbfc;
+      padding: 0 8px;
+
+      .icon {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        font-size: 12px;
+        margin-right: 8px;
+      }
+    }
+
+    &_operation {
+      margin-left: auto;
+
+      &_btn {
+        margin-left: 16px;
+        width: 16px;
+
+        &_icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .hideModule {
+    text-align: right;
+    padding-bottom: 18px;
+  }
+
+  .uploadIconWrap {
+    display: flex;
+    align-items: center;
+
+    .uploadIconBtn {
+      height: 90px;
+      width: 90px;
+      border: 1px dashed #d8dde6;
+      background-color: #fafbfc;
+      margin-left: 16px;
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: #909399;
+      cursor: pointer;
+
+      &.small {
+        width: 100px;
+        height: 32px;
+        margin-left: 0;
+        margin-right: 16px;
+        flex-direction: row;
+        color: #606266;
+
+        .uploadIconBtnIcon {
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+      }
+
+      .uploadIconBtnIcon {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .uploadIconTip {
+    font-size: 12px;
+    color: #909399;
+    margin-right: 16px;
+  }
+
+  .previewIconWrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ebecf0;
+    margin-top: 16px;
+
+    .previewIcon {
+      width: 24px;
+      height: 24px;
+
+      &.large {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .add_btn {
+    width: 100%;
+    border: 1px dashed #dfe1e6;
+  }
+}
+
+.selectInfoBox {
+  position: relative;
+  display: flex;
+  z-index: 3;
+
+  &_delete {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.65);
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 7;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.12);
+    z-index: 5;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+    }
+
+    .selectInfoBox_delete {
+      display: block;
+    }
+  }
+
+  .selectInfo {
+    display: flex;
+    flex: 1;
+    width: 0;
+    font-size: 14px;
+    margin-left: 8px;
+    flex-direction: column;
+
+    &.integral {
+      .selectInfo_price {
+        color: #d69b5d;
+      }
+    }
+
+    &.information {
+      justify-content: center;
+
+      .selectInfo_name {
+        line-height: 22px;
+        .textOverflowMulti2(2);
+      }
+    }
+
+    &.shop {
+      justify-content: center;
+
+      .selectInfo_name {
+        line-height: 22px;
+        margin-bottom: 0;
+        .textOverflowMulti2(1);
+      }
+    }
+
+    &_name {
+      color: #303133;
+      line-height: 14px;
+      margin-bottom: 12px;
+      .textOverflowMulti2(1);
+    }
+
+    &_price {
+      color: #d32f2f;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}

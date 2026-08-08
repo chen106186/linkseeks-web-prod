@@ -1,0 +1,46 @@
+@import "@/styles/utils/modal.scss";
+.page {
+  width: 100%;
+  height: 100vh;
+  .codeText {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .modelWrap {
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    width: 296px;
+    height: 163px;
+    border-radius: 5px;
+    .modelMmian {
+      padding: 0 20px;
+      .title {
+        font-family: PingFangSC-Medium;
+        font-weight: Medium;
+        font-size: 14px;
+        color: #303133;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f4f5f7;
+      }
+      .modeCard {
+        padding-top: 20px;
+      }
+    }
+  }
+  .btn {
+    margin-top: 30px;
+    padding: 10px;
+    .btnText {
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      background-color: #007bfc;
+    }
+  }
+  .pay-model {
+    @include new-at-model;
+  }
+}

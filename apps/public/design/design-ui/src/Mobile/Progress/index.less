@@ -1,0 +1,39 @@
+@import url('../common.less');
+
+.@{prefixCls}-progress-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .@{prefixCls}-progress {
+    background-color: #FFF0F2;
+    position: relative;
+    height: 14px;
+    // width: 100%;
+    flex: 1;
+    border-radius: 7px;
+    overflow: hidden;
+
+    &-percent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      // width: 34%;
+      background-color: '#EF3346';
+      border-radius: 7px;
+    }
+
+    &-percent-text {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      margin-left: 8px;
+      color: #fff;
+      z-index: 99;
+      font-size: 12px;
+    }
+  }
+
+}
+

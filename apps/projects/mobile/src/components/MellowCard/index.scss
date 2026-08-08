@@ -1,0 +1,56 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.mellow-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+
+  &-outerTitle {
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $color-grey-1;
+  }
+
+  &-outerTitleWrap {
+    padding: $spacing-v-lg $spacing-h-lg;
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-v-lg $spacing-h-lg;
+    @include border-thin-bottom($color-bg-grey);
+
+    &-title {
+      font-size: $font-size-base;
+      font-weight: 600;
+      color: $color-grey-0;
+    }
+
+    &-titleWrap {
+      flex: 1;
+      display: flex;
+      position: relative;
+    }
+
+    &-ribbon {
+      position: absolute;
+      top: 2px;
+      left: -12px;
+      width: 4px;
+      height: 14px;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      background-color: $theme-color;
+    }
+
+  }
+
+  &-body {
+    padding: $spacing-v-lg $spacing-h-lg;
+  }
+}
+

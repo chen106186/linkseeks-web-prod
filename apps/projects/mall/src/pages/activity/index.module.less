@@ -1,0 +1,42 @@
+.page {
+  height: 100%;
+  padding-bottom: 20px;
+  min-width: 1300px;
+  // padding: px 0;
+
+  .couponListContainer {
+    width: 1200px;
+    margin: 20px auto;
+
+    .couponList {
+      display: flex;
+      flex-flow: row wrap;
+      margin-right: -8px;
+
+      .couponItem {
+        padding-right: 16px;
+        flex-basis: 25%;
+        margin-bottom: 16px;
+        // &:last-of-type {
+        //   margin-right: 0px;
+        // }
+      }
+    }
+  }
+
+  .commodityList {
+    width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+
+    .commodityItem {
+      margin-right: 16px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

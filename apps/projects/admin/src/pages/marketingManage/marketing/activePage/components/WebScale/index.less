@@ -1,0 +1,51 @@
+.container {
+  padding: 4px 4px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 16px;
+  right: 360px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(3px);
+  user-select: none;
+  transition: right 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 88;
+
+  .select {
+    width: 60px;
+    :global {
+      .ant-select {
+        border: none;
+        .ant-select-selector {
+          border: none;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .ant-select-selection-item {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f4f5f9;
+    }
+  }
+}

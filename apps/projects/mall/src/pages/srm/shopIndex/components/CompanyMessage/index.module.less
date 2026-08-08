@@ -1,0 +1,81 @@
+.company-warp {
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.company-title-bg {
+  background-size: 500% 500%;
+  background-position: center;
+  height: 64px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.company-title-bg-inner {
+  width: 240px;
+  height: 64px;
+  backdrop-filter: blur(3px);
+  background-position: center;
+  border-radius: 5px;
+}
+
+.company-title {
+  line-height: 64px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.company-title::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  filter: blur(30px);
+  z-index: -1;
+}
+
+.company-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #dae4ea;
+  height: 67px;
+
+  .company-key {
+    color: #909399;
+    font-size: 12px;
+  }
+
+  .company-value {
+    color: #303133;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .company-icon-warp {
+    height: 35px;
+  }
+
+  .company-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #dce5eb;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+  }
+}
+
+.company-content:last-child {
+  border-bottom: 0;
+}

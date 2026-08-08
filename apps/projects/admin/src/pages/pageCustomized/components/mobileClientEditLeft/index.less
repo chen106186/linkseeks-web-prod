@@ -1,0 +1,51 @@
+.edit_container {
+  width: 320px;
+  background-color: #fff;
+
+  :global {
+    .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type),
+    .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type),
+    .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type),
+    .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type) {
+      margin: 0;
+    }
+    .ant-tabs-content-holder {
+      flex: 1 !important;
+      height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .ant-tabs-nav-list {
+      width: 100%;
+      .ant-tabs-tab {
+        border: 0;
+        margin: 0;
+        flex: 1;
+        height: 48px;
+        background-color: #fafbfc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8e959d;
+        font-size: 16px;
+      }
+      .ant-tabs-tab-active {
+        background-color: #fff;
+        color: #1f2c3d;
+      }
+    }
+    .ant-tabs-card .ant-tabs-content {
+      margin-top: -16px;
+    }
+
+    .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+      padding: 0;
+      padding-top: 6px;
+      background: #fff;
+    }
+
+    .ant-tabs-card > .ant-tabs-nav::before {
+      display: none;
+    }
+  }
+}

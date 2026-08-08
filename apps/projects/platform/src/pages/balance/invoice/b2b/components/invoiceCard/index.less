@@ -1,0 +1,98 @@
+.itemTitle {
+  font-size: 12px;
+  color: #303133;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: ' ';
+    width: 2px;
+    height: 12px;
+    background-color: #00A98F;
+    border-radius: 1px;
+    margin-right: 6px;
+  }
+}
+
+.baseItem {
+  display: flex;
+  font-size: 12px;
+  margin-bottom: 16px;
+
+  .label {
+    width: 104px;
+    color: #909399;
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .content {
+    flex: 1;
+    margin: 0;
+    word-break: break-all;
+  }
+}
+
+.invoiceList {
+  padding: 14px 32px;
+  background-color: #FAFBFC;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 16px;
+
+  .title {
+    color: #91959B;
+    height: 16px;
+  }
+
+  .content {
+    color: #303133;
+  }
+}
+
+.addInvoice {
+  color: #91959B;
+  margin-bottom: 8px;
+
+  .required {
+    color: #F25767;
+  }
+}
+
+.addInvoiceTable {
+  :global {
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+
+    .ant-input,
+    .ant-picker {
+      background-color: #F5F6F7;
+      border-color: #F5F6F7;
+
+      &:focus {
+        border-color: #F5F6F7;
+        box-shadow: none;
+      }
+
+    }
+
+    .ant-input-focused,
+    .ant-picker-focused {
+      border-color: #F5F6F7;
+      box-shadow: none;
+    }
+  }
+}
+
+.customerButton {
+  background-color: #F5F6F7;
+  border: 0;
+  &:hover{
+    background-color: #F5F6F7;
+  }
+}

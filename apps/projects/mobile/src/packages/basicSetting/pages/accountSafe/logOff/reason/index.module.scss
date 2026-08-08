@@ -1,0 +1,46 @@
+@import "@/styles/variables.scss";
+
+.page {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	padding: 0 8px;
+	&-title{
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		font-size: 24px;
+		color: #1F2C3D;
+		padding: 0 8px;
+		margin-bottom: 12px;
+	}
+	&-scrollView{
+		flex: 1;
+		padding: 0 8px;
+		margin-bottom: 36px;
+	}
+	&-textArea{
+		height: 244px;
+		display: flex;
+		flex-direction: column;
+		background-color: #F5F6F7;
+		border-radius: 8px;
+		taro-textarea-core, Textarea{
+			flex: 1;
+			background-color: #F5F6F7;
+		}
+	}
+	&-bottom{
+		padding-bottom: 8px;
+		display: flex;
+		flex-direction: row;
+	}
+	&-bottom-item{
+		flex: 1;
+	}
+	&-bottom-item-pre{
+		margin-right: 8px;
+		background-color: #F5F6F7;
+		border-color: #F5F6F7;
+		color: #252D37;
+	}
+}

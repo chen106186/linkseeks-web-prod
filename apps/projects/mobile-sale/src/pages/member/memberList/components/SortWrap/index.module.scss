@@ -1,0 +1,35 @@
+@import '@/styles/variables.scss';
+
+.screen-wrap {
+  display: flex;
+  background-color: #FFF;
+
+  .sort-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: $third-text-color;
+
+    .sort-icon {
+      @include flexCol;
+      margin-left: 4px;
+      position: relative;
+
+      :global {
+        .icon-ArrowUpFill {
+          position: absolute;
+          top: -9px;
+        }
+        .icon-ArrowDownFill {
+          position: absolute;
+          bottom: -9px;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: $theme-color;
+  }
+}

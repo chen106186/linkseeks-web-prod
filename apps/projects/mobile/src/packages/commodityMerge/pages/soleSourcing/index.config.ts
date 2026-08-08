@@ -1,0 +1,11 @@
+/*
+ * @Author: XieZhiXiong
+ * @Date: 2021-10-29 18:17:36
+ * @LastEditors: XieZhiXiong
+ * @LastEditTime: 2021-10-29 18:17:37
+ * @Description:
+ */
+export default {
+  navigationBarTitleText: '找供应列表',
+  navigationStyle: 'custom',
+}

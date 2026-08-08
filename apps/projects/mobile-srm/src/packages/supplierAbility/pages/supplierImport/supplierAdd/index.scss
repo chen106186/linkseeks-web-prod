@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.supplier-add {
+  &-nav {
+    background-color: $color-brand;
+
+    .nav-bar {
+      &-left-arrow {
+        .icon {
+          color: $color-white !important;
+        }
+      }
+
+      &-title {
+        color: $color-white;
+      }
+    }
+  }
+}

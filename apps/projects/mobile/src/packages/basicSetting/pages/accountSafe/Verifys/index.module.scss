@@ -1,0 +1,74 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+}
+.scroll-view {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-color: #f4f5f7;
+  border-top-width: 1px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 49px;
+  margin-bottom: 48px;
+}
+.sm-text {
+  color: #303133;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.lg-text {
+  color: #303133;
+  font-size: 24px;
+  font-weight: 900px;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+.head {
+  color: #909399;
+  font-size: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.touch {
+  width: 100%;
+}
+.panel-item {
+  background-color: #fafbfc;
+  padding-left: 12px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+.values {
+  display: flex;
+  flex-direction: column;
+}
+.phone {
+  font-size: 14px;
+  color: #303133;
+  margin-bottom: 6px;
+}
+.type {
+  font-size: 12px;
+  color: #909399;
+}

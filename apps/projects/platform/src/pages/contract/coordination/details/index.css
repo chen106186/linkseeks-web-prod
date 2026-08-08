@@ -1,0 +1,235 @@
+.anchorWrap :global .ant-anchor {
+  display: flex;
+  align-items: center;
+}
+.anchorWrap :global .ant-anchor .ant-anchor-ink {
+  display: none;
+}
+.anchorWrap :global .ant-anchor .ant-anchor-link {
+  padding: 14px 0 !important;
+  margin: 0 16px;
+}
+.anchorWrap :global .ant-anchor .ant-anchor-link .ant-anchor-link-title {
+  font-size: 14px;
+  color: #909399;
+}
+.anchorWrap :global .ant-anchor .ant-anchor-link-active {
+  position: relative;
+  border-bottom: 2px solid #00A98F;
+  box-sizing: border-box;
+}
+.anchorWrap :global .ant-anchor .ant-anchor-link-active .ant-anchor-link-title {
+  font-weight: 500;
+  color: #303133;
+}
+.anchorWrap .titleBox {
+  padding: 8px 16px;
+}
+.anchorWrap .anchorBox {
+  display: flex;
+  padding: 0 16px;
+}
+/** 卡片样式 */
+.card {
+  margin: 24px;
+}
+.card :global .ant-card {
+  margin-bottom: 24px;
+}
+.card :global .ant-card .ant-card-head > .ant-card-head-wrapper {
+  padding: 12px 0;
+}
+.card :global .ant-card .ant-card-extra {
+  padding: 0 0;
+}
+.card :global .ant-card .ant-card-extra .ant-radio-button-wrapper {
+  height: 24px;
+  line-height: 23px;
+}
+.card :global .ant-card .ant-card-extra .ant-radio-button-wrapper:hover {
+  color: #606266;
+}
+.card :global .ant-card .ant-card-extra .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: #fff;
+  background: #6B778C;
+  border-color: #6B778C;
+}
+.card :global .god-table-control {
+  margin-bottom: 0;
+}
+.card .list {
+  display: flex;
+  margin-bottom: 2em;
+}
+.card .list .listLable {
+  flex: 0 0 25%;
+  color: #909399;
+}
+.listItem {
+  display: flex;
+  height: 40px;
+}
+.listItem .label {
+  flex: 0.2;
+  padding: 0 16px;
+  color: #00A98F;
+  background: linear-gradient(270deg, #ffffff 0%, #daf2e7 100%);
+}
+.listItem .text {
+  padding: 0px 0px;
+  flex: 1;
+}
+.listItem p {
+  margin-bottom: 0;
+}
+.warp {
+  display: flex;
+  width: 100%;
+}
+.warp .warp_item {
+  width: 20%;
+  border: 1px solid #F4F5F7;
+  border-radius: 10px;
+  padding: 16px;
+  margin-right: 10px;
+}
+.warp .warp_item .title {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #909399;
+}
+.warp .warp_item .proportion {
+  font-size: 24px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #303133;
+  padding: 12px 0;
+}
+.warp .warp_item .Price {
+  font-size: 16px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #303133;
+}
+.warp .warp_item .warp_List {
+  margin-top: 32px;
+}
+.warp .warp_item .warp_List .warp_ListItem {
+  display: flex;
+  margin-bottom: 16px;
+}
+.warp .warp_item .warp_List .warp_ListItem .label {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #909399;
+  flex: 0.5;
+}
+.warp .warp_item .warp_List .warp_ListItem .text {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #303133;
+  flex: 1;
+}
+.upload_item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.upload_item .upload_left {
+  display: flex;
+  align-items: center;
+  color: #303133;
+  background-color: #fafbfc;
+  cursor: pointer;
+}
+.upload_item .upload_left :global .anticon-file-word {
+  color: #4279df;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.upload_item .upload_right {
+  color: #00A98F;
+  cursor: pointer;
+}
+.upload_item .upload_right :global .anticon-delete {
+  margin-left: 19px;
+  color: #c0c4cc;
+}
+.box :global .ant-table-expanded-row-level-1 .ant-table-cell {
+  padding: 0px !important;
+  background-color: #ffffff;
+}
+.info .infoTitle {
+  border-left: 4px solid #00A98F;
+  padding-left: 8px;
+}
+.info .infoMian {
+  display: flex;
+}
+.info .infoMian .item {
+  flex: 1;
+}
+.info .infoMian .item .box {
+  display: flex;
+  margin-top: 15px;
+}
+.info .infoMian .item .box .lalbel {
+  width: 80px;
+  text-align: left;
+  color: #909399;
+  font-size: 12px;
+}
+.info .infoMian .item .box .text {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #303133;
+}
+/**付款明细弹出样式*/
+.PopupTitle {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #909399;
+  position: relative;
+}
+.PopupTitle::before {
+  content: '';
+  position: absolute;
+  background-color: #00A98F;
+  width: 4px;
+  height: 17px;
+  left: -8px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.menu .memuItem .menuCard {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.menu .memuItem .menuCard .menulabel {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #909399;
+}
+.menu .memuItem .menuCard .card {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #303133;
+}
+.nowrap {
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

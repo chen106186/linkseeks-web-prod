@@ -1,0 +1,66 @@
+@import url('../commonly.less');
+
+.procurement-main {
+  @mainMin();
+
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 12px;
+  line-height: 20px;
+
+  .procurement-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .procurement-identification {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: #e4f7ef;
+      text-align: center;
+      line-height: 32px;
+      color: #00a98f;
+    }
+
+    .procurement-content {
+      padding-left: 8px;
+      width: 320px;
+      font-size: 14px;
+      color: #303133;
+      font-weight: bold;
+    }
+  }
+
+  .procurement-center {
+    width: 340px;
+
+    .procurement-company {
+      font-weight: bold;
+    }
+
+    .procurement-data {
+      color: #909399;
+    }
+  }
+
+  .procurement-right {
+    width: 100px;
+    position: relative;
+
+    .procurement-btn {
+      width: 80px;
+      border: 1px solid #e4e6eb;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      color: #303133;
+    }
+  }
+
+  .operation-icon {
+    font-size: 26px;
+    margin-top: 4px;
+  }
+}

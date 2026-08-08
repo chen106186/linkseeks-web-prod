@@ -1,0 +1,56 @@
+@import url('../common.less');
+
+.delivery {
+  padding-bottom: 16px;
+  border-radius: 8px;
+
+  &_list {
+    display: flex;
+    padding-top: 16px;
+
+    &_item {
+      position: relative;
+      list-style: none;
+      width: 130px;
+      height: 32px;
+      border: 1px solid rgb(238 238 238 / 100%);
+      text-align: center;
+      line-height: 30px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      &.active {
+        border: 1px solid rgb(211 47 47 / 100%);
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-bottom: 12px solid var(--mall-main-color);
+          border-left: 12px solid transparent;
+          bottom: 0;
+          right: 0;
+          z-index: 5;
+        }
+      }
+    }
+  }
+
+  &_info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    &_label {
+      color: #909399;
+      margin-right: 19px;
+    }
+
+    &_brief {
+      & > span {
+        margin-right: 20px;
+      }
+    }
+  }
+}

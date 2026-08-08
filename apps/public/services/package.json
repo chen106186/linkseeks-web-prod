@@ -1,0 +1,17 @@
+{
+  "name": "@apps/services",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tencentcloud/chat": "^3.4.5",
+    "zxcvbn": "4.4.2"
+  }
+}

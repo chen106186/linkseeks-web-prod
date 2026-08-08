@@ -1,0 +1,79 @@
+.add_success {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  border-bottom: 1px dashed #eef0f3;
+
+  &_info {
+    flex: 1;
+
+    &_icon {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url('../../../../assets/icons/success_icon.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      margin-right: 16px;
+    }
+
+    &_title {
+      font-size: 16px;
+      color: #303133;
+      font-weight: bold;
+    }
+
+    &_text {
+      margin-top: 7px;
+      font-size: 12px;
+      color: #606266;
+      padding-left: 48px;
+
+      & > b {
+        font-size: 20px;
+        color: #d32f2f;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &_btn {
+    min-width: 100px;
+    padding: 0 8px;
+    height: 30px;
+    border: 1px solid var(--mall-main-color);
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--mall-main-color);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.primary {
+      background: var(--mall-main-color);
+      color: #fff;
+    }
+  }
+}
+
+.add_success_modal {
+  position: relative;
+
+  :global {
+    .ant-modal-header {
+      background-color: #fafafa;
+    }
+
+    .ant-modal-body {
+      padding: 0 20px;
+    }
+  }
+}

@@ -1,0 +1,239 @@
+.applyModal {
+  position: relative;
+
+  .common-steps-wrap {
+    min-height: 450px;
+
+    .empty-wrap {
+      display: flex;
+      padding-top: 150px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .success {
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  :global {
+    .ant-modal-body {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+  }
+}
+
+.apply-descriptions {
+  margin-bottom: 16px;
+
+  :global {
+    .ant-descriptions-item-label {
+      color: #91959b;
+      width: 120px;
+    }
+
+    .ant-descriptions-item-content {
+      flex: 1;
+      width: 0;
+      overflow: hidden;
+
+      & > span {
+        width: 100%;
+      }
+    }
+
+    .ant-upload-list-item-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+
+.common-card {
+  border-radius: 8px;
+  margin: -24px;
+
+  .common-upload-button {
+    background-color: #f5f6f7;
+    border: none;
+    outline: none;
+
+    &-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-img {
+      margin-top: 8px;
+    }
+
+    &-tip {
+      color: #91959b;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+
+  :global {
+    .ant-card-head {
+      padding: 0 24px;
+      border: none;
+    }
+
+    .ant-card-head-title {
+      font-size: 16px;
+    }
+
+    .ant-input-group-addon {
+      padding: 0;
+      border: none;
+      background-color: #f5f6f7 !important;
+    }
+
+    .ant-picker {
+      border-radius: 4px;
+      background-color: #f5f6f7 !important;
+      border: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .ant-picker-focused {
+      border: none;
+      box-shadow: none;
+    }
+
+    .ant-input {
+      height: 40px;
+      border: none;
+      box-shadow: none;
+      background-color: #f5f6f7 !important;
+
+      &:focus,
+      &:active {
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none !important;
+      }
+    }
+
+    .ant-select-selector {
+      border: none !important;
+      box-shadow: none !important;
+      background-color: #f5f6f7 !important;
+    }
+
+    .ant-input-password {
+      padding: 0 8px;
+      border: none;
+      box-shadow: none;
+      background-color: #f5f6f7 !important;
+    }
+
+    .ant-input-status-error {
+      border: none;
+      box-shadow: none;
+
+      &:focus,
+      &:active {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .common-radio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    & label {
+      height: 32px;
+      display: flex;
+      padding: 0 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 4px;
+      background-color: #f5f6f7;
+      border: 1px solid #f5f6f7;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    :global {
+      .ant-radio {
+        top: 0;
+      }
+
+      .ant-radio-wrapper-checked {
+        border: 1px solid #00a98f;
+        color: #00a98f;
+      }
+    }
+  }
+
+  .common-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    & label {
+      height: 32px;
+      display: flex;
+      padding: 0 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 4px;
+      background-color: #f5f6f7;
+      border: 1px solid #f5f6f7;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    :global {
+      .ant-checkbox {
+        top: 0;
+      }
+
+      .ant-checkbox-wrapper-checked {
+        border: 1px solid #00a98f;
+        color: #00a98f;
+      }
+    }
+  }
+
+  .common-table {
+    &-button {
+      display: flex;
+      background-color: #fafbfc;
+      border: 1px dashed #edeeef;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+
+      &-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    :global {
+      .ant-table-thead > tr > th {
+        background-color: #fafbfc;
+        border-bottom: 1px solid #f5f6f7;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.card-list {
+  margin-top: 24px;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  border: 1px solid #f4f5f7;
+}
+.card-list_title {
+  color: #909399;
+  font-size: 12px;
+}
+
+.headColor {
+  color: #909399;
+  font-weight: 500;
+}
+.rankContainer {
+  .levelCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    color: #909399;
+    text-align: center;
+    background: #ebecf0;
+    border-radius: 50%;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+  }
+  h5 {
+    margin-left: 8px;
+  }
+}
+
+.remarkBidReportWrapper {
+  // 评标委员会
+  .remarkCommitteeContainer {
+    margin-bottom: 24px;
+    .committeeItem {
+      position: relative;
+      display: flex;
+      padding-top: 12px;
+      padding-left: 12px;
+      text-align: center;
+      background-color: #fafbfc;
+      p {
+        align-items: center;
+        height: 56px;
+        line-height: 56px;
+      }
+      .avater {
+        width: 72px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+        p {
+          height: 12px;
+          color: #909399;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+      .status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 12px;
+        padding: 2px 4px;
+        color: #00a98f;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        background-color: #e4f7ef;
+      }
+    }
+  }
+  // 评标记录
+  .remarkRecordContainer {
+    .remarkRecordHead {
+      display: flex;
+      justify-content: space-between;
+    }
+    :global {
+      .ant-radio-button-wrapper:hover {
+        color: #606266;
+      }
+      .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        color: #fff;
+        background: #6b778c;
+        border-color: #6b778c;
+      }
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+        background-color: #6b778c;
+      }
+      .ant-table-thead > tr > th {
+        color: #909399;
+      }
+    }
+  }
+}

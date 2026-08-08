@@ -1,0 +1,68 @@
+
+.recommend-brand-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+
+  &-item {
+    background-color: #FFF;
+    border-radius: 8px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+
+      &-logo {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #FFF;
+        border-width: 0.1px;
+        border-color: #EEF0F3;
+        margin-right: 8px;
+      }
+
+      .shopInfo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .shopNameWrapper {
+        margin-bottom: 6px;
+      }
+
+      .shopName {
+        font-size: 12px;
+      }
+    }
+    .brand-list {
+      display: flex;
+      padding-bottom: 4px;
+      flex-wrap: wrap;
+
+      &-item {
+        width: 33.3%;
+        margin-bottom: 8px;
+        padding: 0 6px;
+
+        &-body {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #FAFBFC;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  color: #C0C4CC;
+  font-size: 12px;
+  justify-content: center;
+  padding: 10px 0;
+}

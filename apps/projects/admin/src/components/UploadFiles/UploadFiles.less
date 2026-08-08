@@ -1,0 +1,74 @@
+@import '../../global/styles/utils.less';
+
+.renderFileContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  .renderFileItemContainer {
+    position: relative;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    .uploadProgress {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      right: 0;
+      display: none;
+    }
+
+    .renderFileItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .fileItem-left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        overflow: hidden;
+
+        .img {
+          width: 16px;
+          height: 16px;
+          margin-right: 12px;
+        }
+
+        .error {
+          color: #ff4d4f;
+        }
+
+        > a {
+          flex: 1;
+          .textOverflow();
+        }
+      }
+    }
+    // &:hover {
+    //   background-color: @secondary-color;
+    //   color: @main-color;
+    // }
+  }
+}
+
+.fileEmpty {
+  margin-bottom: 0;
+}
+
+.uploadContainer {
+  & > span {
+    width: 100%;
+    display: flex;
+
+    :global {
+      .ant-upload {
+        width: 100%;
+      }
+    }
+  }
+}

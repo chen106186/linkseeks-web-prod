@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/秒杀</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF3457" offset="0%"></stop>
+            <stop stop-color="#FF738C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M5.55565,11.50005 C5.49865,11.50005 5.44115,11.49005 5.38465,11.46955 C5.16865,11.39105 5.03365,11.17505 5.05865,10.94655 L5.44265,7.40005 L2.50015,7.40005 C2.31565,7.40005 2.14615,7.29855 2.05915,7.13555 C1.97215,6.97255 1.98215,6.77555 2.08465,6.62205 L6.02865,0.72205 C6.15665,0.53055 6.39865,0.45105 6.61515,0.53055 C6.83165,0.60905 6.96615,0.82505 6.94115,1.05355 L6.55715,4.60005 L9.50015,4.60005 C9.68465,4.60005 9.85415,4.70155 9.94115,4.86455 C10.02765,5.02755 10.01815,5.22455 9.91565,5.37805 L5.97115,11.27805 C5.87665,11.42005 5.71865,11.50005 5.55565,11.50005" id="path-2"></path>
+    </defs>
+    <g id="icon/秒杀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" fill="url(#linearGradient-1)">
+            <circle id="椭圆形" cx="8" cy="8" r="8"></circle>
+        </g>
+        <g id="图标" transform="translate(2.000000, 2.000000)">
+            <rect id="矩形" x="0" y="0" width="12" height="12"></rect>
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="🎨-Icon-Сolor" fill="#FFFFFF" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

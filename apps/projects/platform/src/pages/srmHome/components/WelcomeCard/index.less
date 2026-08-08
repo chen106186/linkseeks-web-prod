@@ -1,0 +1,25 @@
+@import '~antd/es/style/themes/default.less';
+
+.welcome {
+  padding: @padding-md * 2 @padding-lg;
+  background-image: linear-gradient(-66deg, #0095ee 0%, #00bbd0 91%);
+
+  &-head {
+    margin-bottom: @padding-xs;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-user,
+  &-desc {
+    font-size: 20px;
+    font-weight: 500;
+    color: @text-color-inverse;
+  }
+
+  &-date {
+    color: @text-color-inverse;
+    font-size: @font-size-base;
+  }
+}

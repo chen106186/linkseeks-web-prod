@@ -1,0 +1,63 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.list {
+  height: 100%;
+  .scroll-list {
+    height: 100%;
+  }
+}
+
+.item {
+  background-color: #ffffff;
+  color: #979797;
+  font-size: 12px;
+  margin-bottom: 8px;
+  padding: 12px 0;
+  border-radius: 8px;
+  width: 100%;
+
+  .buy-info {
+    font-size: 12px;
+    color: #3D3D3D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #f5f6f7;
+    height: 27px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+
+    .buy-name {
+      font-size: 14px;
+      font-weight: 600; 
+      margin-right: 10px;
+      @include text-overflow();
+    }
+  }
+
+  &-box {
+    margin: 0 16px 0 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+     color: #3d3d3d;
+     font-size: 14px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     .name {
+      flex: 1;
+      @include text-overflow();
+     }
+     .price {
+      margin-left: 20px;
+     }
+  }
+  .mt10 {
+    margin-top: 10px;
+  }
+}

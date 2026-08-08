@@ -1,0 +1,139 @@
+@import url('../common.less');
+
+.shop {
+  padding: 0 8px;
+
+  &.hide {
+    display: none;
+  }
+
+  &-title {
+    font-size: 14px;
+    color: #303133;
+    font-weight: bold;
+    padding: 12px 4px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    &-title {
+      font-size: 16px;
+      color: #252D37;
+      padding: 8px 0 16px;
+      font-weight: 500;
+    }
+
+    &-item {
+      background-color: #FFF;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      padding: 0 12px;
+
+      &-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 224px;
+        font-size: 16px;
+      }
+
+      &-shopheader {
+        display: flex;
+        padding: 12px 0;
+        align-items: center;
+
+        &-shoplogo {
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 4px;
+          border: 1px solid #EEF0F3;
+          background-color: #FFF;
+          margin-right: 8px;
+
+        }
+
+        &-shopinfo {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        &-shopname {
+          font-size: 12px;
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+
+        &-shopdetail {
+          display: flex;
+          border-radius: 2px;
+
+          &-info {
+            background-color: rgb(219 153 84 / 8%);
+            margin-right: 16px;
+            padding-right: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            color: #DB9954;
+
+            &.year {
+              background: rgb(211 47 47 / 8%);
+              color: #D32F2F;
+            }
+
+            &-icon {
+              width: 16px;
+              height: 16px;
+              margin-right: 4px;
+            }
+          }
+        }
+
+        &-enterbtn {
+          border-radius: 4px;
+          height: 24px;
+          width: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: @mainColor;
+          font-size: 12px;
+          border: 1px solid @mainColor;
+        }
+      }
+
+      &-goodslist {
+        display: flex;
+        padding-bottom: 12px;
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          width: 106px;
+          overflow: hidden;
+
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
+
+          &-goodsname {
+            margin-top: 8px;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &-goodsprice {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

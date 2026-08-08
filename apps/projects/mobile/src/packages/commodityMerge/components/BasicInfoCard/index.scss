@@ -1,0 +1,49 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+$hsm: $spacing-h-sm - 1;
+
+.basicInfo-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-h-lg;
+  }
+
+  &-foot {}
+
+  &-name {
+    line-height: 18px;
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $color-grey-0;
+    @include text-overflow-multi-line(2);
+  }
+
+  &-describe {
+    margin-top: $spacing-v-lg;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $color-grey-2;
+    // @include text-overflow();
+  }
+
+  &-tags {
+    display: flex;
+    margin-top: $spacing-v-lg;
+
+    &-item {
+      padding: $spacing-h-sm - 1 calc($hsm / 2);
+      margin-right: $spacing-h-md;
+      color: #D69B5D;
+      font-size: $font-size-sm;
+      background-color: #FCF7F2;
+      border-radius: 4px;
+    }
+  }
+}

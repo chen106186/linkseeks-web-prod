@@ -1,0 +1,119 @@
+.agent-pickup {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	background-color: #F4F5F7;
+	padding-top: 58px;
+}
+.pickup-top {
+  background-color: #00A98F;
+  padding: 8px 0 20px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.pickup-top-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.pickup-box {
+  height: 100%;
+  padding: 8px 8px 100px 8px;
+}
+.scroll-list {
+  height: 100%;
+}
+.pickup-box-commodity {
+	width: 100%;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.commodity-top {
+  display: flex;
+  align-items: center;
+}
+.commodity-top-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.commodity-top-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.info-title {
+  color: #252d37;
+  font-size: 12px;
+  font-weight: 400;
+}
+.info-text {
+  color: #91959b;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.commodity-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.amount-view {
+  display: flex;
+  align-items: center;
+  color: #91959b;
+  font-size: 12px;
+  font-weight: 400;
+}
+.amount-text {
+  color: #252d37;
+  font-size: 12px;
+  font-weight: 500;
+}
+.commodity-progress {
+  width: 100%;
+  margin-top: 12px;
+}
+.commodity-progress-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: -4px;
+}
+.pickup-number {
+  width: 100%;
+  color: #91959b;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.pickup-btm {
+  position: fixed;
+  //bottom: 42px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 8px 42px 8px;
+  background-color: #F4F5F7;
+  z-index: 999;
+}
+.pickup-btm-btn {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #789ffe;
+  background: #00a98f;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto;
+}

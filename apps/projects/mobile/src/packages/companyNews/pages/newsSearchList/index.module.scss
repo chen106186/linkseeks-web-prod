@@ -1,0 +1,44 @@
+.news-search-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f8fa;
+  .header {
+    background-color: #fff;
+    height: 88px;
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .back-btn {
+    margin-right: 10px;
+  }
+  .keyword {
+    flex: 1;
+    display: flex;
+    height: 28px;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 8px;
+    color: #000;
+    .sear-input {
+      padding: unset;
+      .search-field input {
+        font-size: 16px;
+      }
+    }
+    .sear-input-placeholder {
+      background-color: rgba(0, 0, 0, 0.08);
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+  .home-view {
+    flex: 1;
+    padding: 10px;
+    padding-top: unset;
+    overflow: hidden;
+  }
+}

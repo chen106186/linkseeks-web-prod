@@ -1,0 +1,45 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include flexCol;
+  height: 100vh;
+}
+
+.nav-bar {
+  background-color: $theme-color;
+}
+
+.scrollView {
+  flex: 1;
+  overflow: hidden;
+}
+
+.status {
+  height: 72px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFF;
+  background-color: $theme-color;
+}
+
+.info {
+  @include flexCol;
+  padding: 8px;
+  position: relative;
+  top: -24px;
+}
+
+.info-base {
+  @include card;
+
+  .info-base-code {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .info-base-buyer {
+    margin-bottom: 12px;
+  }
+}

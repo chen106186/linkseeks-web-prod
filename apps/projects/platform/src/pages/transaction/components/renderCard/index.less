@@ -1,0 +1,38 @@
+// 变更需要的popover样式
+.popover {
+  .ant-popover-title {
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+
+    .ant-typography {
+      margin-left: 6px;
+      font-size: 14px;
+    }
+  }
+
+  .ant-popover-inner-content {
+    padding: 12px 16px 12px 38px;
+    color: #5c626a;
+    white-space: pre-line;
+  }
+}
+
+.popover-success {
+  :global {
+    .ant-popover-title {
+      display: flex;
+      align-items: center;
+      border-bottom: none;
+      padding: 16px 12px;
+      .ant-typography {
+        margin-left: 6px;
+        font-size: 14px;
+      }
+    }
+
+    .ant-popover-inner-content {
+      display: none;
+    }
+  }
+}

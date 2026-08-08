@@ -1,0 +1,18 @@
+@import '@/styles/variables.scss';
+
+.ticket {
+  padding: $spacing-v-md $spacing-h-md;
+  position: relative;
+  background-color: #FAFBFC;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &-ribbon {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    bottom: 0;
+    width: 4px;
+    background-color: $color-brand;
+  }
+}

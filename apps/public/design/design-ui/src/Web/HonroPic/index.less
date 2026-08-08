@@ -1,0 +1,89 @@
+.hornor_pic_wrap {
+  background-image: url('../CompanyInfo/imgs/company_info_bg.png');
+  background-size: 100% 158px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 374px;
+  margin-top: 96px;
+}
+
+.hornor_pic {
+  width: 1200px;
+  margin: 0 auto;
+  // padding-top: 96px;
+
+  .hornor_pic_title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 48px;
+  }
+
+  &_body {
+    .exhibition_toolbar {
+      position: relative;
+      height: 258px;
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+
+      .exhibition_tool_item {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 0 solid #eef0f3;
+        box-shadow: 0 4px 16px 0 rgb(192 196 204 / 16%);
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 3;
+
+        & > img {
+          width: 16px;
+          height: 16px;
+        }
+
+        &.prev {
+          left: -64px;
+
+          & > img {
+            transform: rotate(180deg);
+          }
+        }
+
+        &.next {
+          right: -64px;
+        }
+      }
+
+      .exhibition_list_contaner {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+
+        .exhibition_list {
+          position: relative;
+          white-space: nowrap;
+          transition: all 0.3s;
+
+          &_item {
+            position: relative;
+            display: inline-block;
+            width: 384px;
+            height: 258px;
+            overflow: hidden;
+            cursor: pointer;
+            margin-right: 24px;
+
+            & > img {
+              height: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

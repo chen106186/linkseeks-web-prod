@@ -1,0 +1,63 @@
+.share-main {
+  position: fixed;
+  width: 64px;
+  height: 188px;
+  background: #fff;
+  left: 50px;
+
+  .share-text {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    color: #909399;
+  }
+
+  .share-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background: #c0c4cc;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .detail-icon {
+    font-size: 25px;
+  }
+
+  .share-weibo {
+    display: none;
+  }
+
+  .share-icon-weChat {
+    margin: 24px auto;
+  }
+
+  .share-icon-weChat:hover {
+    background: var(--mall-main-color);
+  }
+
+  .share-icon-wei:hover {
+    background: #ffd93c;
+
+    .share-weibo-grey {
+      display: none;
+    }
+  }
+
+  .share-icon-wei:hover .share-weibo {
+    display: inline-block;
+  }
+}
+
+:global {
+  .ant-tooltip-inner {
+    background: #fff;
+  }
+}

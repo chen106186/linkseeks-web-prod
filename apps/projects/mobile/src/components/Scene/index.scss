@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+
+.scene {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &-container {}
+
+  &-item {
+    flex-shrink: 0;
+    
+    &-content {
+      &__active {}
+    }
+  }
+}

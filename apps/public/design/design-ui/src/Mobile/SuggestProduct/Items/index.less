@@ -1,0 +1,62 @@
+@import url('../../common.less');
+
+.@{prefixCls}-suggestProduct-items {
+  // width: 25%;
+  flex: 1;
+
+  &.active {
+    .lingxi-suggestProduct-items-wrap {
+      color: #00A98F;
+    }
+  }
+
+  &:not(:last-child) {
+    .lingxi-suggestProduct-items-wrap {
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 1px;
+        height: 16px;
+        background-color: #EBEDF0;
+      }
+    }
+  }
+
+  &-wrap {
+    position: relative;
+    display: flex;
+    height: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #303133;
+    cursor: pointer;
+
+    &-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-explain {
+      font-size: 10px;
+
+    }
+  }
+}
+
+.@{prefixCls}-suggestProduct-items-null {
+  width: 21%;
+  height: 50px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px dashed #C8CACD;
+  margin: 0 2%;
+}

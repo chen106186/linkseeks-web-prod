@@ -1,0 +1,88 @@
+@import '@/styles/variables.scss';
+
+.collage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // justify-content: space-between;
+  padding: $spacing-h-lg 0px;
+
+  &-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px * $hd;
+    color: #252D37;
+    font-weight: 600;
+
+    &-logo {
+      width: 32px * $hd;
+      height: 32px * $hd;
+      border-radius: 50%;
+      margin-right: 8px * $hd;
+    }
+  }
+
+  &-right {
+		display: flex;
+		justify-content: flex-end;
+		flex: 1;
+		width: 0;
+    margin-left: $spacing-h-md;
+    .collage-countdown {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .collage-num-time {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px * $hd;
+        color: #252D37;
+        align-items: center;
+
+        .collage-num {
+          .collage-num-heightlight {
+            color: #EF3346;
+          }
+        }
+
+
+        .collage-time {
+          color: #5C626A;
+        }
+      }
+    }
+
+    .collage-btn-share {
+			width: 96px;
+      background-color: $theme-color;
+      color: #fff;
+      border-radius: 8px * $hd;
+      margin-left: $spacing-h-md;
+      border: none;
+      line-height: 1;
+      padding: 8px * $hd;
+      font-size: 12px * $hd;
+      button {
+        padding: 0;
+      }
+      &::after {
+        border: none;
+        height: 100%;
+      }
+    }
+
+    .collage-btn {
+      background-color: $theme-color;
+      color: #fff;
+      padding: 8px * $hd $spacing-v-xl;
+      border-radius: 8px * $hd;
+      margin-left: $spacing-h-md;
+
+
+    }
+  }
+
+
+}

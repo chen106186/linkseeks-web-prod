@@ -1,0 +1,30 @@
+.container {
+  width: 1200px;
+  margin: 40px auto;
+}
+
+.commodityList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  // justify-content: center;
+  .commodityMealItem {
+    width: 50%;
+    margin-bottom: 16px;
+    padding-right: 16px;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+  .commodityItem {
+    // margin-right: 16px;
+    width: 20%;
+    margin-bottom: 16px;
+    padding-right: 16px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}

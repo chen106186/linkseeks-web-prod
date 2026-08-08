@@ -1,0 +1,6 @@
+<canvas
+	id="{{canvasId}}"
+	canvas-id="{{canvasId}}"
+	type="2d"
+	style="width: {{width}}px; height: {{height}}px; position: absolute; top: -9999px; left: -9999px;"
+/>

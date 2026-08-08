@@ -1,0 +1,31 @@
+@import '@/styles/variables.scss';
+
+.logisticsDetailList {
+  &-item {
+    margin-top: $spacing-v-md;
+  }
+
+  &-quantity {
+    padding: $spacing-v-lg $spacing-h-lg;
+    font-size: $font-size-sm;
+    color: $color-grey-2;
+    text-align: center;
+  }
+
+  &-item {
+    &-desc {
+      display: flex;
+      margin-top: $spacing-v-lg;
+      margin-bottom: $spacing-v-xs;
+      justify-content: space-between;
+    }
+
+    &-left {}
+
+    &-right {}
+
+    &-progress {
+      margin-top: $spacing-v-md;
+    }
+  }
+}

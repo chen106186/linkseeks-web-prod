@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+
+.page-header {
+  padding: $spacing-v-md $spacing-h-lg 32px;
+  background-color: $color-brand;
+
+  &-title {
+    font-size: $font-size-xxl;
+    color: $color-white;
+    height: 28px;
+  }
+}

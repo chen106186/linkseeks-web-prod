@@ -1,0 +1,109 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+
+.evaluate {
+  width: 100%;
+  background-color: #FFFFFF;
+
+  &-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &-avatar {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: #CCCCCC;
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
+  }
+
+  &-nameWrap {
+    flex: 1;
+  }
+
+  &-name {
+    color: $color-grey-0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &-rateWrap {
+    height: 16px;
+    flex: 1;
+    margin-left: 10px;
+    text-align: right;
+  }
+
+	&-content-wrap {
+		position: relative;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-grey-0;
+
+		&__elliptical {
+      @include text-overflow-multi-line(2);
+    }
+	}
+
+  &-content {
+		position: relative;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-grey-0;
+  }
+
+  &-picture {
+    padding-top: $spacing-h-md;
+    margin: -2px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-black-0;
+
+    &-item {
+      width: 25%;
+      padding: 2px;
+
+      &-content {
+        width: 100%;
+        padding-bottom: 100%;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        Image ,taro-image-core {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.evaluate-collapsed {
+	font-size: 12px;
+	color: #00A98F;
+	margin-top: 4px;
+}

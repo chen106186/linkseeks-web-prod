@@ -1,0 +1,44 @@
+@import url('../../global');
+
+.container {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  right: 0;
+  top: 0;
+  flex-direction: row;
+
+  &.setting {
+    .action-btn {
+      background-color: #5c626a;
+    }
+  }
+}
+
+.action-btn {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: @selectColor;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.action-icon {
+  width: 12.5px;
+  height: 12.5px;
+}
+
+.action-icon-edit {
+  width: 16px;
+  height: 16px;
+}

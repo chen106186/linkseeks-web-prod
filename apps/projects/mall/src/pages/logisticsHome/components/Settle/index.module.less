@@ -1,0 +1,87 @@
+.settle-main {
+  background-image: url('./welcome.png');
+  background-size: 100% 100%;
+  // height: 40vw;
+  color: #fff;
+  background-position: center;
+  min-width: 1200px;
+
+  .settle-warp {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .settle-title {
+    padding-top: 134px;
+    font-size: 32px;
+    padding-bottom: 76px;
+    position: relative;
+  }
+
+  .settle-title::after {
+    content: '';
+    width: 56px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 46px;
+  }
+
+  .settle-content {
+    width: 488px;
+    font-size: 24px;
+    line-height: 48px;
+    margin-bottom: 72px;
+  }
+
+  .apply-btn {
+    font-size: 24px;
+    background-color: #667cef;
+    height: 56px;
+    color: #fff;
+    width: 160px;
+    border-color: #667cef;
+  }
+
+  .settle-right {
+    margin-left: 122px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 588px;
+    // height: 460px;
+    justify-content: space-between;
+
+    .settle-item {
+      width: 288px;
+      height: 274px;
+      padding: 25px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #bcbec8;
+
+      img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 20px;
+      }
+
+      .settle-item-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .settle-item-tips {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .settle-item:hover {
+      background-image: linear-gradient(#667cef, #4359d0);
+    }
+  }
+}

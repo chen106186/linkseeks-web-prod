@@ -1,0 +1,45 @@
+@import url('@linkseeks/ui/src/styles/utils.less');
+
+.scrollbar {
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  // background-color: red;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // background: red;
+  overflow: initial;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  // height: calc(100vh - 100px);
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &.no-padding {
+    padding: 0;
+    // height: calc(100vh - 100px);
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    overflow: hidden;
+
+    & > div {
+      flex: 1;
+      height: 0;
+      overflow-y: auto;
+    }
+  }
+
+  & > div {
+    flex: initial;
+    height: auto;
+    overflow-y: initial;
+  }
+}
+// 放到上面不生效
+.silkyScrollbar();

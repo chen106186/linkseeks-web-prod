@@ -1,0 +1,35 @@
+.extra-section {
+  padding: 0 16px;
+}
+
+.extra-list-container {
+  overflow: scroll;
+  height: calc(100vh - 96px);
+  padding-bottom: 24px;
+}
+
+.extra-order-container {
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.extra-order-ctl {
+  display: flex;
+  justify-content: right;
+}
+
+.extra-section {
+  &.modal .extra-list-container {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .extra-list-container {
+    overflow: scroll;
+    height: 400px;
+    padding-bottom: 24px;
+  }
+}

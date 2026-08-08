@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: -12px;
+
+  .simpleItem {
+    padding-right: 12px;
+  }
+}
+
+.simple {
+  :global {
+    .lingxi-originalPrice {
+      line-height: 12px;
+    }
+    .lingxi-commodity .lingxi-commodity-content {
+      line-height: 10px;
+    }
+    .lingxi-price-big {
+      line-height: 16px;
+    }
+  }
+}
+
+.empty {
+  border: 1px dashed #c9c9c9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 143px;
+}

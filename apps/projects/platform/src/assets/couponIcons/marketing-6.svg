@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/满额减</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8469FD" offset="0%"></stop>
+            <stop stop-color="#A4A3FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/满额减" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" fill="url(#linearGradient-1)" cx="8" cy="8" r="8"></circle>
+        <g id="图标" transform="translate(2.000000, 2.000000)">
+            <rect id="矩形" x="0" y="0" width="12" height="12"></rect>
+            <path d="M6,1 C7.38071187,1 8.5,1.67157288 8.5,2.5 C8.5,2.7937507 8.35926857,3.13064613 8.11605229,3.4431549 C9.81948922,4.1851489 11,5.74601553 11,7.25 L10.9970093,7.4429745 C10.9345703,9.42436149 9.875,11 6,11 C2,11 1,9.32106781 1,7.25 C1,5.74601553 2.18051078,4.1851489 3.8844864,3.44313898 C3.64073143,3.13064613 3.5,2.7937507 3.5,2.5 C3.5,1.67157288 4.61928813,1 6,1 Z M8,6 L4,6 L3.91012437,6.00805567 C3.67687516,6.05039163 3.5,6.25454011 3.5,6.5 C3.5,6.77614237 3.72385763,7 4,7 L4,7 L8,7 L8.08987563,6.99194433 C8.32312484,6.94960837 8.5,6.74545989 8.5,6.5 C8.5,6.22385763 8.27614237,6 8,6 L8,6 Z" id="形状结合" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

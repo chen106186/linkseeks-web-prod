@@ -1,0 +1,13 @@
+@import '@/styles/utils/text-overflow-multi-line.scss';
+
+.list {
+  &-item {
+    margin-bottom: $spacing-v-md;
+    
+    &-title {
+      margin-bottom: $spacing-v-lg;
+      font-size: $font-size-sm;
+      color: $color-grey-0;
+    }
+  }
+}

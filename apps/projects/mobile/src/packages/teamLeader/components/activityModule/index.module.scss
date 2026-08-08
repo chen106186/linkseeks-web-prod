@@ -1,0 +1,125 @@
+@import '@/styles/variables.scss';
+
+.activity {
+	width: 100%;
+	border-radius: 8px;
+}
+.activity-box {
+	margin-bottom: 8px;
+	&-top {
+		border-radius: 8px 8px 0 0;
+		padding: 12px 12px 14px 12px;
+		&-bg1 {
+			background: linear-gradient(180deg, #ff2724 0%, #FB5613 60%);
+		}
+		&-bg2 {
+			background: #CECECE;
+		}
+		&-view {
+			display: flex;
+			justify-content: space-between;
+			//align-items: flex-end;
+			margin-bottom: 8px;
+		}
+		&-text {
+			flex: 1;
+			color: #ffffff;
+			font-size: 14px;
+			font-weight: 500;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+		&-text2 {
+			width: 60px;
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: 400;
+			text-align: right;
+		}
+	}
+	&-content {
+		border-radius: 8px;
+		background: #ffffff;
+		padding: 8px 12px 12px 12px;
+		margin-top: -6px;
+		.content-item {
+			display: flex;
+			flex-wrap: wrap;
+			&-view {
+				width: 72px;
+				height: 72px;
+				border-radius: 4px;
+				margin: 0 8px 8px 0;
+				&-img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.content-bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 2px;
+			&-left {
+				display: flex;
+				align-items: center;
+				&-box1 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 40px;
+					height: 28px;
+					border-radius: 4px 0 0 4px;
+					background: linear-gradient(158.8deg, #ef3346 0%, #ff682c 70%);
+					color: #ffffff;
+					font-size: 12px;
+					font-weight: 500;
+					padding: 0 8px;
+					box-sizing: border-box;
+				}
+				&-box2 {
+					display: flex;
+					flex-direction: column;
+					//width: 106px;
+					height: 28px;
+					border-radius: 0 4px 4px 0;
+					background: #ffefef;
+					padding: 0 8px;
+					box-sizing: border-box;
+					&-text1 {
+						color: #ef3346;
+						font-size: 12px;
+						font-weight: 500;
+					}
+					&-text2 {
+						color: #606266;
+						font-size: 10px;
+						font-weight: 400;
+					}
+				}
+			}
+			&-right {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 72px;
+				height: 32px;
+				border-radius: 4px;
+				font-size: 12px;
+				font-weight: 600;
+				&-bg1 {
+					background: #ebf9f6;
+					color: $theme-color;
+				}
+				&-bg2 {
+					background: #F5F6F7;
+					color: #CCCED1;
+				}
+			}
+		}
+	}
+}

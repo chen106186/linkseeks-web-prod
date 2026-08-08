@@ -1,0 +1,48 @@
+@import '@/styles/variables.scss';
+
+.EditRfqOtherInfo{
+	height: 100vh;
+  background-color: #F5F6F7;
+	display: flex;
+	flex-direction: column;
+	&-container{
+		flex: 1;
+		overflow-x: hidden;
+		padding: 8px;
+		&-item{
+			display: flex;
+			justify-content: space-between;
+			background-color: #fff;
+			align-items: center;
+			border-radius: 5px;
+			padding: 5px 8px;
+			margin-bottom: 8px;
+			:global{
+				Input,.at-input {
+					font-size: 14px;
+					flex: 1;
+					text-align: right;
+				}
+			}
+		}
+	}
+
+  &-submit{
+		background-color: #fff;
+		padding: 8px;
+    &-btn{
+			background-color: $theme-color;
+			color: #fff;
+			padding: 10px 0;
+			text-align: center;
+			border-radius: 4px;
+		}
+  }
+}
+
+.field-item-label{
+	font-size: 14px;
+	width: 188px;
+	font-weight: 400;
+	color: #303133;
+}

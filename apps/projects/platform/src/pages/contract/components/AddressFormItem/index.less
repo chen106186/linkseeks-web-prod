@@ -1,0 +1,49 @@
+.addressList {
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    padding: 8px 14px;
+    width: 549px;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 28px;
+    list-style: none;
+    border: 1px solid #EEF0F3;
+    color: #303133;
+    cursor: pointer;
+
+    &-detail {
+      color: #909399;
+    }
+
+    &.active {
+      border: 1px solid #00B382;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid #00A98F;
+        border-left: 12px solid transparent;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.more {
+  text-align: center;
+  cursor: pointer;
+}

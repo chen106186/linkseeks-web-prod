@@ -1,0 +1,17 @@
+{
+  "name": "@apps/mobile-services",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tarojs/taro": "3.6.23",
+    "@tarojs/shared": "3.6.23"
+  }
+}

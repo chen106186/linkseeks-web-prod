@@ -1,0 +1,80 @@
+.warp {
+	padding: 0px 12px;
+	background-color: #fff;
+	border-radius: 8px;
+	margin-bottom: 12px;
+	.warp-item {
+		border-radius: 5px;
+		// padding: 0 20px;
+
+		.warp-title {
+			padding: 10px 0;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+		.wrap-line {
+			height: 20px;
+			width: 4px;
+			background-color: #007bfc;
+			margin-right: 12px;
+			border-radius: 8px;
+		}
+		.form-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.label {
+				font-size: 14px;
+			}
+			.input {
+				flex: 1;
+				text-align: left;
+			}
+			.Code {
+				text-align: left;
+			}
+			.placeholder {
+				color: #000;
+			}
+		}
+		.warp-title-text {
+			font-size: 14px;
+			padding: 4px 0;
+			flex: 1;
+		}
+	}
+	.statusContainer {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+	}
+	.wrapCircle {
+		width: 4px;
+		height: 4px;
+		border-radius: 100%;
+		margin-right: 4px;
+	}
+
+	.status-circle-ready {
+		background-color: #5c626a;
+	}
+
+	.status-circle-success {
+		background-color: #00a98f;
+	}
+
+	.status-circle-error {
+		background-color: #ef3346;
+	}
+
+	.status-text-ready {
+		color: #5c626a;
+	}
+	.status-text-success {
+		color: #00a98f;
+	}
+	.status-text-error {
+		color: #ef3346;
+	}
+}

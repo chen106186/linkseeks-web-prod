@@ -1,0 +1,48 @@
+@import '@/styles/variables.scss';
+
+.info-address {
+  color: $main-text-color;
+  margin-bottom: 16px;
+
+  .address-left-title {
+    color: $third-text-color;
+  }
+
+  .address-type {
+    @include flexBetween;
+    margin-bottom: 16px;
+  }
+
+  .address-receiver {
+    @include flexBetween;
+    margin-bottom: 6px;
+  }
+
+  .address-detail {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.open-close-more {
+  @include flexCenter;
+  margin-top: 12px;
+  color: $third-text-color;
+}
+
+.vendor-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+
+  .logo {
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 4px;
+  }
+}

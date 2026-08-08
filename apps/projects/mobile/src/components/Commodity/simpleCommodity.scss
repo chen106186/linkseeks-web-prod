@@ -1,0 +1,76 @@
+@import '@/styles/variables.scss';
+$rankColor: rgb(253,198,98), rgb(197,195,196), rgb(235,179,136);
+
+
+.simple-commodity {
+  width: 88px * $hd;
+  display: inline-block;
+  margin-right: $spacing-h-lg;
+
+  .simple-commodity-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .simple-commodity-imageContainer {
+      position: relative;
+      overflow: hidden;
+      @each $val in $rankColor {
+        $i:index($rankColor, $val);
+        .ranking-#{$i} {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 16px * $hd;
+          height: 16px * $hd;
+          border-radius: $border-radius-circle;
+          background-color: $val;
+          color: #fff;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-size: $font-size-sm;
+        }
+      }
+      .simple-commodity-image {
+        width: 88px * $hd;
+        height: 88px * $hd;
+      }
+      .simple-commodity-num {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: $font-size-sm;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .simple-commodity-name {
+      display: -webkit-box;
+      font-size: $font-size-sm;
+      color: #252D37;
+      line-height: $line-height-zh;
+      word-break: break-all;
+      text-overflow: ellipsis;  //超出文字用省略号代替
+      overflow: hidden;            //多出部分隐藏
+      -webkit-box-orient: vertical;    //竖直方向的超出和隐藏
+      -webkit-line-clamp: 2;
+    }
+
+    .simple-commodity-tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: auto;
+
+      .row-commodity-labels-tagItem {
+        margin-top: 4px * $hd;
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '../../../../styles/common.scss';
+
+.container-Head {
+  .userInfo {
+    padding: 44px 12px 0;
+    // background-image: url('http://lingxi-frontend-test.oss-cn-hangzhou.aliyuncs.com/images/618srmIndexHead.png');
+    // background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 100% 100%;
+
+    &-head {
+      line-height: 44px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &-warp {
+      padding: 13px 0;
+      display: flex;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-size: 14px;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        font-size: 14px;
+        color: #252d37;
+        margin-bottom: 2px;
+      }
+
+      .account {
+        height: 12px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 12px;
+        color: #91959b;
+        margin-top: 8px;
+      }
+    }
+
+    .Iocn {
+      margin-left: 4px;
+      margin-bottom: 2px;
+      color: #91959b;
+    }
+  }
+
+}
+
+.list_ {
+  height: calc(100vh - 157px);
+  padding: 12px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  &tabs {
+    width: 80px;
+    background-color: #fff;
+
+    &-title {
+      text-align: center;
+      padding: 16px 0;
+      color: #5C626A;
+      background-color: #fff;
+
+      &-img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+
+    &-title_actuve {
+      background-color: #F5F6F7;
+      color: #252D37;
+      border-radius: 8px 0 0 8px;
+    }
+
+    &-title_actuve-1 {
+      border-bottom-right-radius: 8px;
+    }
+
+    &-title_actuve_1 {
+      border-top-right-radius: 8px;
+    }
+
+  }
+
+  &card {
+    padding: 8px;
+    // padding-bottom: unset;
+    margin-bottom: 8px;
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    &-title {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      padding: 6px;
+
+      &-text {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+
+    &-body {
+      margin-top: 8px;
+
+      &-item {
+        padding: 14px;
+        text-align: center;
+        font-size: 12px;
+        color: #252D37;
+        background: #F5F6F7;
+        border-radius: 8px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+.card-box {
+  margin: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  .title-name {
+    font-weight: bold;
+    line-height: 40px;
+  }
+  .content-box {
+    padding: 0 8px;
+    .content-item {
+      line-height: 40px;
+      .item-label {
+        height: 40px;
+      }
+      .item-value {
+        min-height: 40px;
+      }
+    }
+  }
+}

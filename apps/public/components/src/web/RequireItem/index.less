@@ -1,0 +1,25 @@
+.require-item {
+  display: inline-block;
+  color: #909399;
+
+  &-body {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      margin-right: 6px;
+    }
+
+    &.require {
+      &::after {
+        display: inline-block;
+        margin-left: 4px;
+        color: #ff4d4f;
+        font-size: 12px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: '*';
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '@/styles/utils/text-overflow-multi-line.scss';
+
+.list {
+  &-item {
+    margin-bottom: $spacing-v-md;
+
+    &-title {
+      margin-bottom: $spacing-v-lg;
+      font-size: $font-size-sm;
+      color: $color-grey-0;
+    };
+
+    &-flag {
+      padding: $spacing-v-sm - 2 $spacing-h-sm;
+      color: $color-error;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      background-color: #ffe0db;
+      border-radius: 2px;
+    }
+  }
+}

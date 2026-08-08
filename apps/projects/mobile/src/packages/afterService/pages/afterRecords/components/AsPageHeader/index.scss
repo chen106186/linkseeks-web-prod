@@ -1,0 +1,79 @@
+@import '@/styles/variables.scss';
+
+.as-page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+
+  &-nav-bar {
+    position: relative;
+    z-index: 3;
+  }
+
+  &-clone {
+    opacity: 0;
+  }
+
+  &-nav {
+    background-color: $color-brand;
+
+    &-wrap__fix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      opacity: 0;
+    }
+  }
+
+  &-head {
+    padding: $spacing-h-lg $spacing-v-lg $spacing-v-sm * 10 $spacing-v-lg;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-brand;
+
+    &-left {
+      flex: 1
+    }
+
+    &-right {
+      margin-left: $spacing-v-md;
+    }
+  }
+
+  &-title {
+    font-size: $font-size-xxl;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  &-extra {
+    font-size: $font-size-sm;
+    color: #fff;
+  }
+
+  &-content {
+    flex: 1;
+    background-color: #F4F5F7;
+  }
+
+  &-scroll {
+    padding: 0 $spacing-h-md;
+    height: 100%;
+
+    &-wrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      background-color: transparent;
+    }
+  }
+}

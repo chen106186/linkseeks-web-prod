@@ -1,0 +1,20 @@
+{
+  "createBrand": "创建品牌",
+  "createCategory": "创建品类",
+  "createProduct": "创建商品",
+  "createMaterial": "创建物料",
+  "setInventory": "设置库存",
+  "orderCenter": "订单中心",
+  "mallCenter": "店铺中心",
+  "procureCenter": "采购中心",
+  "contractCenter": "合同中心",
+  "productCenter": "商品中心",
+  "zijinzhanghuguanlizhongxin": "资金账户管理中心",
+  "settleCenter": "结算中心",
+  "afterCenter": "售后中心",
+  "logisticsCenter": "物流中心",
+  "memberCenter": "会员中心",
+  "payCenter": "支付中心",
+  "shou-ye": "首页",
+  "gysgl": "供应商管理"
+}

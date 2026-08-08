@@ -1,0 +1,51 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.marketing-campaign-coupons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -($spacing-v-sm - 2);
+
+  &-item {
+    padding: $spacing-v-sm - 2;
+
+    &-wrap {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    &-text {
+      padding: $spacing-v-sm - 1 $spacing-h-sm;
+      font-size: $font-size-xs;
+      color: $color-error;
+      background-color: #FFFFFF;
+    }
+
+    &-circle {
+      position: absolute;
+      z-index: 1;
+      width: 8px;
+      height: 8px;
+      border-radius: 8px;
+      background-color: #FFFFFF;
+      @include border-thin($color-error);
+
+      &__left {
+        top: 6px;
+        left: -4px;
+      }
+
+      &__right {
+        top: 6px;
+        right: -4px;
+      }
+    }
+
+    &-protector {
+      border-radius: 2px;
+      @include border-thin($color-error);
+    }
+  }
+}

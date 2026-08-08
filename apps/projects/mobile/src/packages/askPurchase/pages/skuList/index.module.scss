@@ -1,0 +1,113 @@
+@import '@/styles/variables.scss';
+
+.stocksSourcing {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &-search {
+    padding: 0;
+    margin-right: 10px;
+  }
+
+  .filter {
+    &-extra {
+      &-item {
+        &-name {
+          font-size: 12px;
+          color: $color-grey-2;
+        }
+
+        &-icon {
+          margin-left: $spacing-h-sm - 2;
+          color: $color-grey-2;
+        }
+      }
+    }
+  }
+}
+
+.sku-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+	padding: 8px;
+
+	&-scrollView {
+		flex: 1;
+		height: 0;
+
+		:global {
+			.radio-button-group {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
+		}
+	}
+
+	&-radio-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-item {
+		background-color: #FFF;
+		padding: 12px;
+		border-radius: 8px;
+		display: flex;
+		margin-bottom: 8px;
+		align-items: center;
+
+		&-name {
+			font-size: 14px;
+			color: #333;
+
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			/* 限制行数 */
+			line-clamp: 2;
+			text-overflow: ellipsis;
+			word-wrap: break-word;
+			white-space: pre-line;
+		}
+
+		&-id {
+			color: #909399;
+			font-size: 12px;
+			margin-top: 4px;
+		}
+
+		&-left {
+			margin-right: 8px;
+			position: relative;
+		}
+
+		&-right {
+			flex: 1;
+			width: 0;
+			height: 58px;
+			display: flex;
+			flex-direction: column;
+			margin-right: 8px;
+		}
+	}
+
+	.button-wrap {
+		padding: 8px;
+
+		.add-button {
+			font-size: 14px;
+
+			&:active {
+				opacity: 0.85;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.popup {
+  width: 295px;
+  min-height: 184px;
+  background-color: #FFF;
+
+  .popup-body {
+    padding: 12px;
+  }
+
+  .input-wrap {
+    margin-bottom: 26px;
+
+    :global {
+      .at-input {
+        margin-left: 0;
+        padding: 14px 8px;
+        background-color: $bg-color;
+
+        .at-input__container::after {
+          display: block;
+          content: '%';
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .input-placeholder {
+        font-size: 14px;
+        color: $third-text-color;
+      }
+    }
+  }
+
+  .btn-wrap {
+    @include confirmBtn;
+    margin-bottom: 0;
+  }
+}

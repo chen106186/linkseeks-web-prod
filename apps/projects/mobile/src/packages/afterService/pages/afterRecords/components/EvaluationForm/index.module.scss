@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+
+.as-evaluation-form {
+  &-rate {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+      font-size: $font-size-base;
+      color: $color-grey-2;
+      margin-bottom: $spacing-v-md;
+    }
+  }
+
+  .at-textarea {
+    padding: 0;
+    border: none;
+
+    &__textarea {
+      height: 185px;
+      font-size: $font-size-base;
+      color: #C0C4CC;
+    }
+  }
+}

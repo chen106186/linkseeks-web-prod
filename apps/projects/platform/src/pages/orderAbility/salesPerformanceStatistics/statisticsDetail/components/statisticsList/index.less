@@ -1,0 +1,31 @@
+.tableStyle {
+  :global {
+    .ant-row {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .ant-col-order-2 {
+      flex: 1;
+    }
+
+    .ant-col-order-3 {
+      .ant-row {
+        width: auto;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #343031;
+  }
+}

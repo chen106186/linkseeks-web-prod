@@ -1,0 +1,38 @@
+@import '@/styles/variables.scss';
+
+.marketing-popup {
+  display: flex;
+  flex-direction: column;
+
+  &-scrollWrap {
+    flex: 1;
+    position: relative;
+  }
+  
+  &-scrollView {
+    overflow-y: auto;
+  }
+
+  &-list {
+    padding: 0 $spacing-h-md;
+
+    &-item {
+      &-title {
+        padding: 0 $spacing-h-sm $spacing-v-lg;
+        font-size: $font-size-base;
+        color: $color-grey-0;
+        font-weight: 600;
+      }
+
+      &-promotion {
+        margin-bottom: $spacing-v-lg * 2;
+      }
+    }
+  }
+
+  &-action {
+    flex-shrink: 0;
+    padding: $spacing-v-md;
+    background-color: #FFFFFF;
+  }
+}

@@ -1,0 +1,147 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.package-popup {
+  background-color: $color-border-base;
+
+  &-list {
+    flex: 1;
+    z-index: 1;
+    padding-right: $spacing-h-md;
+    padding-left: $spacing-h-md;
+    background-color: #F4F5F7;
+
+    &-item {
+      margin-bottom: $spacing-v-md;
+
+      &-products {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: $spacing-h-lg;
+
+        &-item {
+          width: 88px;
+          margin-right: $spacing-h-lg;
+
+          &-imgWrap {
+            width: 88px;
+            height: 88px;
+            position: relative;
+            margin-bottom: $spacing-v-md;
+            border-radius: 4px;
+            overflow: hidden;
+          }
+
+          &-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+          &-current {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 4px;
+            background-color: $color-brand;
+            font-size: $font-size-xs;
+            color: #FFFFFF;
+            padding: 1px $spacing-h-sm;
+          }
+
+          &-quantity {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.80);
+            font-size: $font-size-sm;
+            color: $color-black-1;
+            padding: $spacing-v-xs - 2 $spacing-h-sm;
+          }
+
+          &-name {
+            color: $color-black-1;
+            font-size: $font-size-sm;
+            @include text-overflow();
+          }
+
+          &-checkedWrap {
+            padding-top: $spacing-v-xs;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+
+          &-checked {
+            flex: 1;
+            color: $color-black-2;
+            font-size: $font-size-sm;
+            @include text-overflow();
+          }
+
+          &-arrow {
+            margin-right: $spacing-h-sm;
+          }
+        }
+      }
+
+      &-foot {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: $spacing-v-lg;
+        padding-bottom: $spacing-v-lg;
+        @include border-thin-top($color-border-base);
+
+        &-left {
+          flex: 1;
+
+          &-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .label-primary {
+              background-color: #EBF9F6;
+              color: $theme-color;
+              border: none;
+            }
+          }
+        }
+
+        &-right {
+          flex-shrink: 0;
+
+          .at-button__icon {
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+
+      &-total {
+        &-text {
+          color: $color-black-1;
+          font-size: $font-size-sm - 1;
+        }
+      }
+
+      &-quantity {
+        margin-right: $spacing-h-sm;
+        position: relative;
+        top: 1px;
+        color: $color-black-1;
+        font-size: $font-size-sm - 1;
+      }
+
+      &-amount {
+        margin-right: $spacing-h-sm;
+        color: $color-error;
+        font-size: $font-size-lg;
+      }
+    }
+  }
+}

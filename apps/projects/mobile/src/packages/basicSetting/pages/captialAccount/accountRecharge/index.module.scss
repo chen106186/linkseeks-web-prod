@@ -1,0 +1,56 @@
+.AccountRecharge{
+  padding: 8px;
+  background: #F5F6F7;
+  &-Container{
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    &-title{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+    }
+  }
+  .action{
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    background: #007BFC;
+  }
+}
+
+.modelWrap{
+  background-color: #fff;
+  width: 296px;
+  border-radius: 16px;
+  position: relative;
+  z-index: 9;
+
+  .modelMmian{
+    padding: 0 20px;
+
+    .title{
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      font-family: PingFangSC-Medium;
+      font-weight: Medium;
+      font-size: 14px;
+      color: #303133;
+      border-bottom: 1px solid #F4F5F7;
+    }
+
+    .modeCard{
+      padding: 24px 0;
+
+      .codeText{
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+
+  }
+
+}

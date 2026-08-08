@@ -1,0 +1,35 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+
+$filter-extra-prefix: 'filter-extra';
+
+.filter {
+  &-extra {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      padding: $spacing-v-lg - 2 0;
+
+      &-name {
+        font-size: 12px;
+        color: $color-grey-2;
+      }
+
+      &-icon {
+        margin-left: $spacing-h-sm - 2;
+        color: $color-grey-2;
+      }
+
+      &-content {
+        padding: 0 $spacing-h-md;
+      }
+
+      &:not(:last-child) {
+        .#{$filter-extra-prefix}-item-content {
+          @include border-thin-right($color-bg-grey);
+        }
+      }
+    }
+  }
+}

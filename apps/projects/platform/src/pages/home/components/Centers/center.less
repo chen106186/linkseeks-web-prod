@@ -1,0 +1,169 @@
+@import '../../../../global/styles/index.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.ding_tips {
+  background-color: #e4f7ef;
+  color: @primary-color;
+  padding: 8px 12px;
+  font-size: 12;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.centerRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .centerCol {
+    // width: 256px;
+    margin-right: 16px;
+  }
+
+  .wrapTagsItem {
+    margin: @margin-md @margin-md 0px 0;
+  }
+  .tagsItem {
+    min-width: 265px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    background: #fafbfc;
+    align-self: flex-start;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      color: #303133;
+    }
+
+    .badge {
+      margin: 0 0 15px 5px;
+    }
+
+    .hoverLink {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+
+      &:hover {
+        .hoverIconConatiner {
+          display: block;
+        }
+      }
+
+      .hoverIconConatiner {
+        display: none;
+        .hoverIcon {
+          background-color: #c0c4cc;
+          width: 16px;
+          height: 16px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .hoverLink {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .text {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.wrapRow {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0 6px 0;
+  border-bottom: 1px dashed #ffeef0f3;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .rowTitle {
+    font-size: 14px;
+    width: 145px;
+  }
+
+  .rowValues {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+
+    .wrapCol {
+      flex-basis: 16.66%;
+      padding: 0 10px;
+      margin-bottom: 24px;
+
+      .colTitle {
+        font-size: 12px;
+        font-weight: 400;
+        color: #909399;
+        min-height: 36px;
+      }
+
+      .colValue {
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 16px;
+        color: #303133;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+          color: @color-primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .wrapRow {
+    .rowTitle {
+      font-size: 12px;
+      width: 125px;
+    }
+    .rowValues {
+      .wrapCol {
+        flex-basis: 20%;
+        padding: 0 10px;
+      }
+
+      .colValue {
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .centerRow {
+    .tagsItem {
+      min-width: 248px;
+    }
+  }
+}

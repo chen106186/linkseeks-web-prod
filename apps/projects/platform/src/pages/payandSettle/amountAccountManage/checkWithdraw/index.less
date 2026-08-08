@@ -1,0 +1,135 @@
+.repayment {
+  padding: 16px;
+  display: flex;
+  border-radius: 4px;
+  color: #fff;
+  min-height: 128px;
+
+  &-left {
+    flex: 1;
+  }
+
+  &-right {
+    flex-shrink: 0;
+  }
+
+  &-end {
+    margin-top: 16px;
+  }
+
+  &-action {
+    margin-left: 24px;
+  }
+
+  &-time {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #91959b;
+  }
+}
+
+.statistic {
+  &-title {
+    color: #91959b;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  &-amount {
+    color: #1f2c3d;
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 500;
+  }
+  &-input {
+    display: block !important;
+    width: 600px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #252d37 !important;
+    background: #f5f6f7 !important;
+    border: none;
+    outline: none !important;
+  }
+}
+
+.infoRight {
+  .rightTitle {
+    width: 90px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #91959b;
+    line-height: 16px;
+    margin: 8px 0;
+
+    &.width154 {
+      width: 154px;
+    }
+  }
+  .rightInfo {
+    font-size: 12px;
+    font-weight: 400;
+    color: #252d37;
+    line-height: 16px;
+    margin: 8px 0;
+
+    &-input-bottom {
+      margin-top: 8px;
+      display: flex;
+    }
+  }
+}
+
+.repayinfo {
+  background-color: #f5f6f7;
+}
+
+// 账户详情右侧操作按钮
+.rightActions {
+  display: flex;
+
+  .rightAction {
+    width: 74px;
+    height: 40px;
+
+    &:last-child {
+      background-color: #6b778c;
+      color: #fff;
+      margin-left: 16px;
+    }
+  }
+}
+
+// 扫码充值
+.qrCodeImage {
+  text-align: center;
+  width: 224px;
+  height: 224px;
+  margin: 20px auto 42px;
+
+  & > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.scanTips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b778c;
+  margin-bottom: 18px;
+  .scanIcon {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+}
+
+:global {
+  .ant-steps-item-tail {
+    top: -8px !important;
+  }
+}

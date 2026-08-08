@@ -1,0 +1,322 @@
+@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
+
+.box {
+  display: flex;
+  align-items: center;
+	flex-wrap: nowrap;
+}
+.shop-box-wrap {
+	display: flex;
+	flex: 1;
+}
+.shop-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+	flex: 1;
+}
+.store-name {
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  flex: 1;
+	width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+	font-size: 12px;
+	margin-left: 4px;
+
+	&-wrap {
+		flex: 1;
+		display: flex;
+		align-items: center;
+	}
+}
+.color-red {
+  color: red;
+  font-size: 12px;
+	white-space: nowrap;
+}
+.card-warp {
+  flex: 1;
+  flex-direction: column;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  margin-bottom: 0px;
+  overflow: hidden;
+
+	.free-shipping {
+		display: flex;
+		font-size: 12px;
+		margin-top: 10px;
+		align-items: center;
+		padding-left: 30px;
+	}
+}
+.shop-card-title {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.checked {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  border-color: $theme-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $theme-color;
+}
+.unchecked {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  border-color: #cccccc;
+  border-width: 0.5;
+}
+.card-tips-warp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: #ffffff;
+  align-items: center;
+  padding-bottom: 6px;
+}
+.full-minus {
+  background-color: red;
+  padding: 1px;
+  color: #ffffff;
+  font-size: 12px;
+  margin-right: 6px;
+  border-radius: 2px;
+
+	&-warp {
+		display: flex;
+		flex: 1;
+	}
+
+	&-tips {
+		flex: 1;
+		width: 0;
+	}
+
+	&-right {
+		color: #E34D59;
+	}
+}
+.full-minus-em {
+  background-color: #ffffff;
+  padding: 1px;
+  color: red;
+  font-size: 12px;
+  margin-right: 6px;
+  max-width: 60px;
+  border-radius: 2px;
+  overflow: hidden;
+  border-color: red;
+  border-width: 0.5;
+}
+.right-icon {
+  width: 5px;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $theme-color;
+}
+.content-warp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.commodity-image {
+  //   width: 96px;
+  // height: 96px;
+  // background-color: #f3f5f9;
+  margin-left: 12px;
+}
+.card-config-warp {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-number {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.unfold-icon {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.product-red {
+  color: #ef3346;
+  font-size: 12px;
+}
+.commodity-brief {
+  padding-left: 12px;
+  flex: 1;
+}
+.brief-title {
+  font-size: 14px;
+  font-weight: 400px;
+  color: red;
+}
+.product-material {
+  // background-color: #F5F6F7;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.product-material-text {
+  color: #91959b;
+  font-size: 12px;
+  background-color: #f5f6f7;
+}
+.discount {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 2px;
+}
+.discount-tips {
+  border-color: #ef3346;
+  border-width: 0.5;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: #ef3346;
+  font-weight: 300px;
+  margin-right: 4px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+}
+.discount-text {
+  color: #91959b;
+  font-size: 12px;
+}
+.font12 {
+  font-size: 12px;
+}
+.discount-main {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 60vw;
+  font-size: 12px;
+}
+.discount-warp {
+  flex: 1;
+  display: flex;
+}
+.discount-content {
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.commodity-card-content-warp {
+  flex-direction: column;
+	padding: 12px 0;
+}
+.logo-warp {
+  overflow: hidden;
+  border-radius: 26px;
+}
+.countDown-warp {
+  display: flex;
+  flex: 1;
+  font-size: 12px;
+  align-items: center;
+}
+.give-warp {
+  display: flex;
+  justify-content: space-between;
+}
+.seckillWrap {
+  &-end {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0;
+
+    &-title {
+      margin-right: $spacing-h-md;
+      font-size: $font-size-xs;
+      color: $color-error;
+    }
+
+    &-tofu {
+      min-width: 20px;
+      height: 19px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-error;
+      padding: $spacing-h-sm - 1 - 2 $spacing-h-sm - 1 - 1;
+      border-radius: 2px;
+
+      &-text {
+        color: #FFFFFF;
+        font-size: $font-size-xs;
+      }
+    }
+
+    &-splitCode {
+      font-size: $font-size-xs;
+      color: $color-error;
+      margin: 0 $spacing-h-sm - 1;
+      font-weight: 600;
+    }
+  }
+}
+.give-content {
+  width: 60px;
+  flex-shrink: 0;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.exchange-warp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.give-warp {
+  width: 75vw;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

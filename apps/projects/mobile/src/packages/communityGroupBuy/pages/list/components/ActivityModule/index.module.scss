@@ -1,0 +1,112 @@
+.activity {
+	border-radius: 8px;
+}
+
+.activity-box {
+	margin: 8px 8px 0 8px;
+
+	&-top {
+		border-radius: 8px 8px 0 0;
+		padding: 12px 12px 14px 12px;
+		background: linear-gradient(180deg, #ff2724 0%, #f97907 100%);
+
+		&.end {
+			background: #CECECE;
+		}
+
+		&-view {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			margin-bottom: 8px;
+		}
+
+		&-text {
+			flex: 1;
+			margin-right: 12px;
+			color: #ffffff;
+			font-size: 14px;
+			font-weight: 500;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2; // 控制多行的行数
+			-webkit-box-orient: vertical;
+		}
+
+		&-text2 {
+			margin-top: 2px;
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+
+	&-content {
+		border-radius: 8px;
+		background: #ffffff;
+		padding: 8px 12px 12px 12px;
+		margin-top: -8px;
+
+		.content-item {
+			display: flex;
+			flex-wrap: wrap;
+
+			&-view {
+				position: relative;
+				width: 72px;
+				height: 72px;
+				border-radius: 4px;
+				margin-right: 8px;
+				overflow: hidden;
+
+				&-img {
+					width: 100%;
+					height: 100%;
+				}
+
+				&-more {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #ffffff;
+					background-color: rgba($color: #000000, $alpha: .5);
+				}
+			}
+		}
+
+		.content-bottom {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin-top: 8px;
+			font-size: 12px;
+
+			&-text1 {
+				color: #303133;
+			}
+
+			&-text2 {
+				margin: 0 4px;
+				color: #FC5913;
+				font-weight: 500;
+			}
+
+			&-time {
+				margin: 0 4px;
+				width: 20px;
+				line-height: 20px;
+				border-radius: 3px;
+				color: #ffffff;
+				background: #fc5913;
+				text-align: center;
+			}
+		}
+	}
+}

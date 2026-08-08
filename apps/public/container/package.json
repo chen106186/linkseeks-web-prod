@@ -1,0 +1,16 @@
+{
+  "name": "@apps/container",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@feature/container": "workspace:^1.0.0",
+    "@feature/paas": "workspace:^1.0.0"
+  }
+}

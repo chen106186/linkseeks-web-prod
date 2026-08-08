@@ -1,0 +1,87 @@
+@import '@/styles/variables.scss';
+@import '../../../../../styles/common.scss';
+
+.requisitionList {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+
+    :global {
+      .at-input input {
+        color: #C8CACD;
+        font-size: 14px;
+      }
+
+      .at-tabs__item {
+        padding: 12px 8px;
+        margin: 0 12px;
+        font-size: 12px;
+        color: #5C626A;
+      }
+
+      .at-tabs__item--active {
+        color: #232D38 !important;
+        font-weight: 500;
+      }
+
+      .at-tabs__item-underline {
+        height: 2px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &-tabBar {
+    background-color: #FFFFFF;
+
+    .at-tabs__header {
+      text-align: start;
+    }
+  }
+
+  &-scrollView {
+    flex: 1;
+    height: 100%;
+    overflow: scroll;
+    background-color: #F5F6F7;
+    position: relative;
+  }
+
+  &-touchableOpacity {
+    flex: 1;
+  }
+
+  &-flatList {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F6F7;
+
+    // padding-bottom: 56px;
+    .empty__description {
+      margin-top: 24px;
+      color: #969799;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding-right: 8px;
+
+  &-search {
+    flex: 1;
+  }
+}

@@ -1,0 +1,94 @@
+@import '~antd/es/style/themes/default.less';
+
+.upload-modal {
+  &-step1 {
+    text-align: center;
+    padding: 32px 63px;
+  }
+
+  &-step2 {
+    text-align: center;
+    padding: 32px 0 152px;
+  }
+
+  &-step3,
+  &-step4 {
+    text-align: center;
+    padding: 32px 0 80px;
+  }
+
+  &-xls {
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  &-descriptions {
+    width: 262px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    &-circle {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: @margin-xs;
+      background-color: #4787f0;
+      border-radius: 16px;
+      color: @white;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      padding: @padding-xss 0;
+
+      &-txt {
+        margin-bottom: 0;
+        font-size: @font-size-base;
+        color: @text-color-secondary;
+        text-align: left;
+      }
+    }
+  }
+
+  &-download {
+    padding: 0 @padding-xs;
+  }
+
+  &-actions {
+    text-align: center;
+
+    &-chuRiver {
+      margin-top: 40px;
+    }
+  }
+
+  &-spin {
+    padding-bottom: 40px;
+    text-align: center;
+    color: #4787f0;
+
+    &-success {
+      color: #00a98f;
+    }
+
+    &-error {
+      color: #e34d59;
+    }
+  }
+
+  &-step {
+    &-title {
+      margin-bottom: @margin-xss;
+      color: @text-color;
+      font-size: @font-size-base;
+    }
+
+    &-desc {
+      color: @text-color-secondary;
+      font-size: @font-size-base;
+    }
+  }
+}

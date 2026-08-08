@@ -1,0 +1,55 @@
+.door-item {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+
+  &-body {
+    background-color: #ffffff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+
+  &-tag {
+    color: #5c626a;
+    height: 16px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+
+  &-name {
+    color: #303133;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 12px;
+  }
+
+  &-actions {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-btn {
+      background-color: #f5f6f7;
+      color: #252d37;
+      border-color: #f5f6f7;
+
+      &[disabled] {
+        border: none;
+      }
+
+      &:hover {
+        border-color: #f5f6f7;
+        background-color: #f5f6f7;
+        opacity: 0.85;
+      }
+    }
+  }
+}

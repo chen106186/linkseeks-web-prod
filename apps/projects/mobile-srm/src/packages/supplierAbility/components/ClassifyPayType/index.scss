@@ -1,0 +1,38 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.classify-payType-list {
+  &-item {
+    padding: $spacing-v-lg;
+    @include border-thin-bottom($color-bg-base);
+
+    &-title {
+      margin-bottom: $spacing-v-sm;
+      color: $color-black-1;
+      font-size: $font-size-sm;
+      font-weight: 500;
+    }
+
+    .cell-list {
+      padding: 0;
+
+      &-item {
+        &-head {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        &-title {
+          font-size: $font-size-sm;
+          display: block;
+          width: 65%;
+        }
+
+        &-value {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}

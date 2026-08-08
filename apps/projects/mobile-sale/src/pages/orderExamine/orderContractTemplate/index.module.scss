@@ -1,0 +1,32 @@
+@import '@/styles/variables.scss';
+
+.container {
+  @include common-container;
+  position: relative;
+  padding: 8px;
+
+  .choose-wrap {
+    flex: 1;
+
+    .circle-box {
+      width: 24px;
+      height: 24px;
+      @include flexCenter;
+    }
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid $third-text-color;
+    }
+  }
+
+  .btn-wrap {
+    padding: 8px;
+    background-color: #FFF;
+
+    .btn {
+      @include confirmBtn;
+    }
+  }
+}

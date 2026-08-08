@@ -1,0 +1,93 @@
+
+.tabItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F4F5F7;
+  padding: 12px 0;
+  font-size: 14px;
+	:global{
+		.at-input{
+			padding: 0 !important;
+		}
+	}
+}
+.textStyle{
+  text-align: right;
+  font-size: 14px;
+  color:#606266 ;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.OtherList-container{
+  flex: 1;
+  padding: 10px;
+}
+.OtherList-title{
+	flex: 1;
+	font-weight: bold;
+	font-size: 14px;
+}
+.tabConItem{
+	flex: 1;
+	width: 100%;
+	padding: 9px;
+	flex-direction: column;
+}
+.conItem{
+	flex: 1;
+	width: 100%;
+	justify-content: space-between;
+	padding: 3px;
+	border-radius: 4px;
+	margin: 2px;
+	background-color: #F4F5F7;
+}
+
+.product-item-name{
+	flex: 1;
+	font-size: 14px;
+	color: #606266;
+}
+.product-item-quantity{
+	margin-left: 8px;
+	font-size: 14px;
+	color:#606266 ;
+}
+.tabAnnexItem{
+	flex: 1;
+	flex-basis: 1;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.allMain{
+	display: flex;
+	flex-direction: column;
+}
+.allWarp{
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.allContent {
+	display: flex;
+	flex-direction: column;
+	padding-left: 8px;
+	flex: 1;
+	justify-content: space-between;
+};
+.allContentText {
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	font-size: 12px;
+	color: #252D37;
+	line-height: 16px;
+}
+.allContentCount{
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	font-size: 12px;
+	color: #91959B;
+}

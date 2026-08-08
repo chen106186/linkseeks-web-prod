@@ -1,0 +1,53 @@
+@import url('@apps/design-ui/src/Web/theme/styles/colors.less');
+
+@prefixCls: lingxi;
+@mainColor: #00a98f;
+@headerNavDefaultColor: #fff;
+@headerNavScienceColor: #00a98f;
+
+@danger: #ef3346;
+@primary: #4569d4;
+@success: #b7eb8f;
+@warn: #ffe58f;
+@purple: #9100f9;
+
+.textOverflowMulti2(@line: 3) {
+  display: -webkit-box;
+
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+
+  /* autoprefixer: on */
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
+
+@page_body_minWidth: 1200px;
+
+.common_page_container() {
+  position: relative;
+  width: @page_body_minWidth;
+  margin: 0 auto;
+}
+
+.commone_input_placeholder() {
+  input::input-placeholder,
+  textarea::input-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:placeholder,
+  textarea:placeholder {
+    color: #c0c4cc;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #c0c4cc;
+  }
+
+  input:input-placeholder,
+  textarea:input-placeholder {
+    color: #c0c4cc;
+  }
+}

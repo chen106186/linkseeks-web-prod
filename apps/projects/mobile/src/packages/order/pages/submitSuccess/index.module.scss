@@ -1,0 +1,60 @@
+@import "@/styles/variables.scss";
+@import "@/styles/utils/text-overflow-multi-line.scss";
+
+.page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 44px;
+  text-align: center;
+  justify-content: center;
+  background-color: $theme-color;
+  color: #ffffff;
+  font-size: 18px;
+}
+.viewHeader {
+  background-color: $theme-color;
+  justify-content: center;
+  align-items: center;
+}
+.msg {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 86px 24px;
+}
+.btn {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 0 16px;
+  height: 32px;
+  line-height: 32px;
+}
+.recommend{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.recommendTitle {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+.product-list-warp {
+  flex: 1;
+  background-color: #f4f5f7;
+}

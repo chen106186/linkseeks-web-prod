@@ -1,0 +1,28 @@
+.input_number {
+  height: 30px;
+  width: 120px;
+  display: flex;
+  border: 1px solid rgb(235 236 240 / 100%);
+  line-height: 30px;
+
+  &_input {
+    width: 60px;
+    border: none;
+    outline: none;
+    line-height: 30px;
+    text-align: center;
+    border-left: 1px solid rgb(235 236 240 / 100%);
+    border-right: 1px solid rgb(235 236 240 / 100%);
+  }
+
+  &_item {
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #303133;
+
+    &.disable {
+      color: #eef0f3;
+    }
+  }
+}

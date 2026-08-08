@@ -1,0 +1,29 @@
+@page_body_minWidth: 1200px;
+
+.common_page_container() {
+  position: relative;
+  width: @page_body_minWidth;
+  margin: 0 auto;
+}
+
+.commone_input_placeholder() {
+  input::input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:placeholder,
+  textarea:-moz-placeholder {
+    color: #c0c4cc;
+  }
+
+  input::placeholder,
+  textarea::-moz-placeholder {
+    color: #c0c4cc;
+  }
+
+  input:input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #c0c4cc;
+  }
+}

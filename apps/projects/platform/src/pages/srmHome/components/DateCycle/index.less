@@ -1,0 +1,19 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.date-cycle {
+  display: inline-block;
+
+  :global {
+    .ant-btn {
+      border: none;
+      background-color: #f5f6f7;
+    }
+  }
+
+  &-btn {
+    &-active {
+      color: @color-primary;
+    }
+  }
+}

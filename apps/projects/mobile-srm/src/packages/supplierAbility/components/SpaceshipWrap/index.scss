@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+
+.spaceship-wrap {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding: $spacing-v-md $spacing-h-md;
+  background-color: $color-bg;
+
+  &__full {
+    .space-item {
+      flex: 1;
+    }
+  }
+}

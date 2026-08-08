@@ -1,0 +1,40 @@
+@import "@/styles/variables.scss";
+
+.container {
+  background-color: #f4f5f7;
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .filter-box {
+    height: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    .filter-actions {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      .filter-item {
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        .filter-text {
+          color: $color-black-2;
+          font-size: 14px;
+        }
+        .filter-active {
+          color: $color-primary;
+          font-weight: bold;
+        }
+        .filter-arrow-box {
+          display: flex;
+          flex-direction: column;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

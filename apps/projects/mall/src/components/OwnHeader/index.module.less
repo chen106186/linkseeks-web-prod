@@ -1,0 +1,240 @@
+@import url('@/theme/style/common.less');
+@mall-main-color: var(--mall-main-color);
+
+.header {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+
+  :global {
+    .show {
+      transform: translateY(0) !important;
+    }
+  }
+
+  &.float {
+    position: fixed;
+    transform: translateY(-100px);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding-top: 0;
+    transition: all 0.5s;
+
+    &.show {
+      transform: translateY(0) !important;
+    }
+
+    .header_container {
+      padding: 16px 0;
+    }
+
+    .shopping_cart {
+      margin-top: 0 !important;
+    }
+  }
+
+  .header_container {
+    .common_page_container();
+    // height: 110px;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px 0;
+
+    .logo {
+      position: relative;
+      width: 190px;
+      height: 48px;
+      display: inline-block;
+      margin: 0 95px 0 17px;
+      overflow: hidden;
+
+      & > a {
+        display: block;
+      }
+
+      & > img {
+        display: block;
+        margin: 0 auto;
+        height: 50px;
+      }
+    }
+
+    .mall_search {
+      width: 632px;
+      vertical-align: top;
+
+      .mall_search_tags {
+        display: flex;
+        align-items: center;
+
+        .mall_search_tags_item {
+          height: 24px;
+          line-height: 24px;
+          color: #909399;
+          font-size: 12px;
+          cursor: pointer;
+
+          &_split {
+            margin: 0 12px;
+            width: 1px;
+            height: 12px;
+            background-color: #ebecf0;
+          }
+
+          &.active {
+            color: @mall-main-color;
+          }
+        }
+      }
+
+      .mall_search_box {
+        display: flex;
+        .commone_input_placeholder();
+
+        position: relative;
+        width: 100%;
+        border: 2px solid @mall-main-color;
+        height: 40px;
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        .search_type {
+          position: relative;
+
+          &:hover {
+            .more_type {
+              display: block;
+            }
+          }
+
+          &_item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            // width: 70px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 12px;
+            padding: 0 15px;
+            color: #909399;
+            border-right: 1px solid #eef0f3;
+
+            &_text {
+              margin-right: 6px;
+            }
+
+            &_icon {
+              font-size: 10px;
+            }
+          }
+
+          .more_type {
+            position: absolute;
+            display: none;
+            top: 36px;
+            left: -2px;
+            border-top: 2px solid var(--mall-main-color);
+            background: #fff;
+            width: 72px;
+            height: 32px;
+            line-height: 32px;
+            z-index: 9999;
+            font-size: 12px;
+            padding-left: 15px;
+            color: #909399;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--mall-main-color);
+            }
+          }
+        }
+
+        .mall_search_input {
+          display: inline-block;
+          flex: 1;
+          height: 36px;
+          line-height: 36px;
+          outline: none;
+          border: none;
+          box-shadow: none;
+
+          :global {
+            .ant-input {
+              border: none;
+
+              &:active,
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+
+        .search_btn {
+          position: relative;
+          background-color: @mall-main-color;
+          color: #fff;
+          min-width: 76px;
+          padding: 0 8px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 14px;
+          border-radius: 8px;
+          z-index: 1;
+          right: -2px;
+          top: -2px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .shopping_cart {
+      position: relative;
+      display: flex;
+      margin-left: 66px;
+      padding: 0 8px;
+      min-width: 130px;
+      height: 40px;
+      line-height: 38px;
+      color: #252d37;
+      background-color: #f5f6f7;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.mall {
+        margin-top: 24px;
+      }
+
+      .card_icon {
+        margin-right: 8px;
+      }
+
+      .badge {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        border-radius: 50%;
+        overflow: hidden;
+        line-height: 16px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background-color: #ef3346;
+      }
+    }
+  }
+}
+
+:global {
+  .highlight {
+    color: #d32f2f;
+    font-weight: 500;
+    font-size: 13px;
+  }
+}

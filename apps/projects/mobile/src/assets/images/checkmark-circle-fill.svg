@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" class="design-iconfont">
+  <defs>
+    <path d="M14.295,7.605 L9.727,13.605 C9.539,13.852 9.248,13.998 8.938,14 L8.931,14 C8.624,14 8.334,13.858 8.144,13.616 L5.712,10.509 C5.372,10.075 5.448,9.446 5.883,9.106 C6.317,8.765 6.947,8.841 7.287,9.277 L8.92,11.363 L12.704,6.394 C13.038,5.955 13.665,5.869 14.106,6.204 C14.545,6.539 14.63,7.166 14.295,7.605 M10,0 C4.477,0 0,4.477 0,10 C0,15.522 4.477,20 10,20 C15.523,20 20,15.522 20,10 C20,4.477 15.523,0 10,0" id="vv8pdseb5a"/>
+  </defs>
+  <g transform="translate(.0004 .0005)" fill="none" fill-rule="evenodd">
+    <mask id="b4dxxrvo0b" fill="rgba(0,0,0,0)">
+      <use xlink:href="#vv8pdseb5a"/>
+    </mask>
+    <use fill="#00A98F" xlink:href="#vv8pdseb5a"/>
+  </g>
+</svg>

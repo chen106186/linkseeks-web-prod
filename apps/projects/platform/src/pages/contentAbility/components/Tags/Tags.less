@@ -1,0 +1,57 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+.tagContainer {
+  .selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .selectionItem {
+      // height: 24px;
+      font-size: 12px;
+      padding: 0px 7px;
+      margin: 0 16px 16px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #e4f7ef;
+      color: @color-primary;
+      border-radius: 4px;
+
+      .icon {
+        margin-left: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tips {
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #909399;
+    line-height: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: pointer;
+    user-select: none;
+    .tagItem {
+      // height: 28px;
+      padding: 0 6px;
+      background: #f4f5f7;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #606266;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}

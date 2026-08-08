@@ -1,0 +1,39 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+
+.at-badge {
+  display: inline-block;
+  line-height: 1;
+  &__count {
+    z-index: auto;
+    min-width: $at-badge-height;
+    height: $at-badge-height;
+    padding: 0 6px;
+    color: $at-badge-color;
+    font-weight: $at-badge-font-weight;
+    font-size: $at-badge-font-size;
+    line-height: $at-badge-height;
+    white-space: nowrap;
+    text-align: center;
+    background: $at-badge-bg;
+    border-radius: calc($at-badge-height / 2);
+
+    a,
+    a:hover {
+      color: $at-badge-color;
+    }
+  }
+  &-status-primary{
+    background-color: $color-primary;
+  }
+  &-status-error{
+    background-color: $color-error;
+  }
+  &-status-warning{
+    background-color: $color-warning;
+  }
+  &-status-info{
+    background-color: $color-info;
+  }
+}

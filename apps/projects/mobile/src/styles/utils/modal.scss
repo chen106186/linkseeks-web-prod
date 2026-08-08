@@ -1,0 +1,127 @@
+
+  @import "@/styles/variables.scss";
+  @mixin new-at-model {
+    :global {
+      .at-modal__container {
+        width: 80%;
+      }
+
+      .at-modal__header {
+        height: 80px;
+        line-height: 80px;
+      }
+
+      .at-modal__action,
+      .at-modal__footer .at-modal__action > button,
+      .at-modal__footer .at-modal__action > taro-button-core {
+        height: 40px;
+        line-height: 40px;
+        min-width: unset;
+        flex: 1;
+      }
+
+      .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+      .at-modal__footer--simple .at-modal__action > taro-button-core:last-child:nth-child(2),
+      .at-modal__footer .at-modal__action > button:last-child,
+      .at-modal__footer .at-modal__action > taro-button-core:last-child {
+        background-color: $theme-color;
+        color: #fff;
+        margin-top: 0;
+      }
+    }
+  }
+  @mixin new-index-at-model {
+    :global{
+      .at-modal__container {
+        width: 80%;
+      }
+
+      .at-modal__header {
+        // height: 80px;
+        line-height: 40px;
+				white-space: normal;
+      }
+
+      .at-modal__action,
+      .at-modal__footer .at-modal__action > button,
+      .at-modal__footer .at-modal__action > taro-button-core {
+        height: 40px;
+        line-height: 40px;
+        min-width: unset;
+        flex: 1;
+      }
+
+      .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+      .at-modal__footer--simple .at-modal__action > taro-button-core:last-child:nth-child(2)
+      .at-modal__footer .at-modal__action > button:last-child,
+      .at-modal__footer .at-modal__action > taro-button-core:last-child {
+        background-color: $theme-color;
+        color: #fff;
+        margin-top: 0;
+      }
+    }
+  }
+
+	@mixin new-price-at-model {
+    :global{
+      .at-modal__container {
+        width: 80%;
+      }
+
+      .at-modal__header {
+        // height: 80px;
+        line-height: 40px;
+				font-size: 16px;
+				font-weight: bold;
+				white-space: normal;
+				padding-top: 8px;
+				padding-bottom: 0;
+				&::after {
+					border-bottom: none;
+				}
+      }
+
+			.at-modal__content {
+				padding-top: 8px;
+				min-height: 35px;
+				color: #91959B;
+				text-align: center;
+			}
+			.at-modal__action {
+				height: 40px;
+			}
+
+			.at-modal__footer {
+				padding: 10px;
+			}
+
+			.at-modal__footer::before {
+				border-top: none;
+			}
+
+			.at-modal__footer .at-modal__action > button {
+				height: 40px;
+				line-height: 40px;
+				border-radius: 8px;
+				background-color: #00a98f;
+				&:last-child {
+					color: #FFF;
+				}
+			}
+			.at-modal__footer .at-modal__action > taro-button-core  {
+				height: 40px;
+				line-height: 40px;
+				border-radius: 8px;
+				background-color: #00a98f;
+			}
+
+      .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+      .at-modal__footer--simple .at-modal__action > taro-button-core:last-child:nth-child(2)
+      .at-modal__footer .at-modal__action > button:last-child,
+      .at-modal__footer .at-modal__action > taro-button-core:last-child {
+        background-color: $theme-color;
+        color: #fff;
+        margin-top: 0;
+      }
+    }
+  }

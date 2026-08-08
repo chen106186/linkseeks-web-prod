@@ -1,0 +1,57 @@
+@import "@/styles/variables.scss";
+@import "../../../../styles/common.scss";
+
+.materialPopup {
+  padding: 8px;
+  background-color: #f5f6f7;
+  &-container {
+    background-color: #f5f6f7;
+    border-radius: 8px;
+
+
+
+    &-item {
+      background-color: #fff;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      padding: 6px 12px;
+
+      &-row {
+        line-height: 12px;
+        font-size: 12px;
+        padding: 6px 0;
+        display: flex;
+
+        &-label {
+          width: 96px;
+          display: inline-block;
+          color: #909399;
+        }
+        &-text {
+          max-width: 240px;
+          color: #252d37;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.materialDataRow {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &-label {
+    width: 100px;
+    font-size: 12px;
+    color: #909399;
+  }
+  &-text {
+    font-size: 12px;
+    color: #252d37;
+    flex: 1;
+  }
+}

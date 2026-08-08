@@ -1,0 +1,87 @@
+.rightBtnWrap {
+  display: flex;
+  flex-direction: column;
+  :global {
+    .ant-btn {
+      margin: 16px 0;
+      width: 100%;
+    }
+  }
+}
+.setItemWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.setItemLeft {
+  p {
+    font-size: 12px;
+    color: #252d37;
+    &:first-child {
+      font-size: 14px;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+    }
+  }
+}
+.setItemRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    margin-right: 16px;
+  }
+}
+
+.drawerBody {
+  display: flex;
+  flex-direction: column;
+  :global {
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+  .cardMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 19px;
+        margin-right: 16px;
+      }
+      span {
+        font-size: 14px;
+        color: #252d37;
+      }
+    }
+  }
+  .cardBodyMain {
+    border-bottom: 1px solid #f5f6f7;
+    margin-bottom: 16px;
+  }
+  .receiveDay {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    span {
+      font-size: 12px;
+      color: #91959b;
+    }
+  }
+  .deadLine {
+    :global {
+      .ant-space {
+        .ant-space-item {
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '~antd/es/style/themes/default.less';
+
+@member-roles-prefix: member-roles;
+
+.@{member-roles-prefix} {
+  display: block !important;
+  padding: 0 @padding-xs;
+  height: 224px;
+  overflow-y: auto;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @padding-sm - 2 @padding-md;
+    background-color: @background-color-base;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: all .3s;
+
+    &:not(:last-child) {
+      margin-bottom: @margin-md;
+    }
+
+    &:hover {
+      background-color: @white;
+      border-color: @primary-color;
+
+      .@{member-roles-prefix}-item-actions {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+  }
+}

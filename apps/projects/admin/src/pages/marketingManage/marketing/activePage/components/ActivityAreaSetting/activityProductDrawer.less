@@ -1,0 +1,53 @@
+.productImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productName {
+  font-size: 14px;
+  color: #252d37;
+  line-height: 20px;
+}
+
+.priceInfo {
+  font-size: 14px;
+  color: #d32f2f;
+
+  .unit {
+    color: #909399;
+    font-size: 12px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .form {
+  }
+  .table {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .activeItem + .activeItem {
+      margin-left: 8px;
+    }
+  }
+  .expandableTable {
+    margin-top: 16px;
+  }
+  .pagination {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.drawerFooter {
+  display: flex;
+  flex-direction: row-reverse;
+}

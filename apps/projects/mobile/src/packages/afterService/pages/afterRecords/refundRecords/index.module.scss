@@ -1,0 +1,54 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/extend-click.scss';
+
+.refund-records {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f5f7;
+
+  &-nav {
+    display: inline-block;
+  }
+
+  &-scroll {
+    flex: 1;
+    position: relative;
+  }
+
+  &-scrollView {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .at-tabs__header {
+    text-align: left;
+  }
+
+  .nav-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $spacing-h-md;
+    background-color: #FFFFFF;
+
+    &-search {
+      flex: 1;
+    }
+
+    &-filter {
+      @include extend-click();
+    }
+  }
+
+  &-list {
+    &-item {
+      margin-top: $spacing-v-md;
+      margin-left: $spacing-h-md;
+      margin-right: $spacing-h-md;
+    }
+  }
+}

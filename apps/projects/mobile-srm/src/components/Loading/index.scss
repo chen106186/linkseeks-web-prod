@@ -1,0 +1,33 @@
+.components-loading {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  &__vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-icon {}
+
+  &-text {
+    color: #303133;
+    margin-left: 8px;
+
+    &__vertical {
+      margin-left: 0px;
+      margin-top: 8px;
+    }
+  }
+
+  &-empty {
+    &-text {
+      text-align: center;
+      color: #303133;
+    }
+  }
+}

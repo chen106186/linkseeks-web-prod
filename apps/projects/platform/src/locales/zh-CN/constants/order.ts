@@ -1,0 +1,16 @@
+export default {
+  'constants.order.1': '询价采购',
+  'constants.order.2': '需求采购',
+  'constants.order.3': '现货采购',
+  'constants.order.4': '集采',
+  'constants.order.5': '渠道直采',
+  'constants.order.6': '渠道现货',
+  'constants.order.7': '积分兑换',
+  'constants.order.8': '渠道积分兑换',
+  'constants.order.9': '采购询价合同',
+  'constants.order.10': '采购竞价合同',
+  'constants.order.11': '采购招标合同',
+  'constants.order.12': '请购单采购',
+  'constants.order.13': '跨境电商进口',
+  'constants.order.14': '请购单采购合同',
+}

@@ -1,0 +1,10 @@
+.Container {
+  height: 100vh;
+  display: flex;
+  flex-direction: "column";
+  background-color: "#F7F8FA";
+  .scroll {
+    flex: 1;
+    overflow: hidden;
+  }
+}

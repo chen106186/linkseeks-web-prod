@@ -1,0 +1,56 @@
+.additional {
+  padding: 16px 0;
+  border-top: 1px solid #f5f6f7;
+
+  &_row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &_title {
+      width: 104px;
+      color: #91959b;
+    }
+
+    &_content {
+      flex: 1;
+
+      .remark_input {
+        border-radius: 4px;
+        background: #f5f6f7;
+        border: none;
+        box-shadow: none;
+        &:hover,
+        &:active {
+          box-shadow: none;
+        }
+      }
+
+      & > span {
+        color: '#252D37';
+        font-size: 14px;
+      }
+
+      & > input {
+        width: 100%;
+      }
+
+      &_time {
+        padding-right: 16px;
+      }
+
+      &_btn {
+        color: #00a98f;
+        cursor: pointer;
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &_row:last-child {
+    margin-bottom: 0;
+  }
+}

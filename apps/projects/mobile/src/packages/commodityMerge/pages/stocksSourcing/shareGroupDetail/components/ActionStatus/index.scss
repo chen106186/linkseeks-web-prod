@@ -1,0 +1,43 @@
+@import '@/styles/variables.scss';
+
+.action-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px * $hd;
+    // margin-top: 30px * $hd;
+
+    .action-status-fail-icon {
+      width: 24px * $hd;
+      height: 24px * $hd;
+      margin-right: $spacing-h-md;
+    }
+
+    .action-status-icon {
+      background-color: #fff;
+      width: 24px * $hd;
+      height: 24px * $hd;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-right: $spacing-h-md;
+    }
+  }
+
+  &-tips {
+    color: #fff;
+    margin-top: $spacing-v-xl;
+    // margin-bottom: 80px * $hd;
+    font-size: 14px * $hd;
+    margin-bottom: 24px * $hd;
+    text-align: center;
+    padding: 0 16px * $hd;
+  }
+}

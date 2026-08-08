@@ -1,0 +1,57 @@
+.revise_info :global .ant-form-item-label {
+  width: 174px;
+}
+.revise_info :global .ant-form-item-label label {
+  color: #00A98F;
+}
+.revise_info :global .ant-form-item-control {
+  width: 500px;
+}
+.revise_info :global .ant-form-item-control .ant-form-item-control-input-content {
+  position: relative;
+}
+.revise_info :global .ant-form-item-control .ant-form-item-control-input-content .ant-btn-link {
+  position: absolute;
+  right: -120px;
+}
+.revise_info :global .ant-form-item-control .ant-form-item-control-input-content .ant-picker {
+  width: 100%;
+}
+.revise_info :global .ant-form-item-control .ant-input-group-addon .ant-input-search-button {
+  background-color: #00A98F !important;
+  border-color: #00A98F;
+}
+.revise_info :global .ant-radio-group-solid .ant-radio-button-wrapper-checked {
+  background: #00A98F !important;
+  border-color: #00A98F;
+}
+.revise_info :global .ant-radio-group-solid .ant-radio-button-wrapper-checked:hover {
+  background: #00A98F;
+  border-color: #00A98F;
+}
+.revise_info .upload_item {
+  padding: 5px 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFBFC;
+}
+.revise_info .upload_item .upload_left {
+  display: flex;
+  align-items: center;
+  color: #303133;
+}
+.revise_info .upload_item .upload_left :global .anticon-file-word {
+  color: #4279df;
+  font-size: 20px;
+  margin-right: 8px;
+}
+.revise_info .upload_item .upload_right {
+  color: #00A98F;
+  cursor: pointer;
+}
+.revise_info .upload_item .upload_right :global .anticon-delete {
+  margin-left: 19px;
+  color: #C0C4CC;
+}

@@ -1,0 +1,95 @@
+@import '@/styles/variables.scss';
+
+.stocksSourcing-detail {
+  padding: $spacing-v-md 0;
+  position: relative;
+
+  &-anchor {
+    height: 100%;
+
+    &-item {
+      padding: 0 $spacing-h-md;
+    }
+  }
+
+  .product {
+    &-priceWrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      &-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacing-h-md;
+      }
+
+      &-right {}
+    }
+
+    &-price {
+      font-size: $font-size-xxl;
+      font-weight: 500;
+      color: $color-error;
+
+      &__original {
+        font-size: $font-size-sm;
+        color: $color-grey-2;
+      }
+
+      &__through {
+        text-decoration-line: line-through;
+      }
+
+      &__about {
+        position: relative;
+        top: 0.5px;
+        margin-left: $spacing-h-md + 1;
+        font-size: $font-size-sm;
+        color: $color-grey-2;
+      }
+    }
+
+    &-originWrap {
+      margin-bottom: $spacing-v-lg;
+    }
+
+    &-unit {
+      position: relative;
+      top: 0.5px;
+      margin-left: $spacing-h-sm - 3;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-grey-2;
+    }
+  }
+
+  &-fixedWrap {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+
+  &-fixedAction {
+    .at-button {
+      width: 100%;
+      font-size: $font-size-base;
+      border-radius: 8px;
+    }
+
+    .button-elegant {
+      background-color: $color-bg-lighter;
+      border-color: $color-bg-lighter;
+    }
+  }
+
+  .shop-volume {
+    font-size: $font-size-sm;
+    color: $color-grey-2;
+  }
+}

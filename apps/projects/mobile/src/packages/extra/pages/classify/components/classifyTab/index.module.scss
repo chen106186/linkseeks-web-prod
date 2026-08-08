@@ -1,0 +1,195 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.classify {
+  height: 100%;
+
+  &-tab {
+    height: 100%;
+    display: flex;
+
+    &-navWrap {
+      width: 23%;
+      background-color: #FFFFFF;
+    }
+
+    &-nav {
+      &-itemWrap {
+        background-color: #F5F6F7;
+
+        &__active {
+          background-color: #FFFFFF;
+        }
+      }
+
+      &-item {
+        padding: $spacing-v-lg + 2 0;
+        background-color: #FFFFFF;
+
+        &-textWrap {
+          position: relative;
+          text-align: center;
+          padding: $spacing-v-sm - 2 $spacing-h-md $spacing-v-sm - 2 $spacing-h-sm + 1;
+          display: flex;
+        }
+
+        &-text {
+          font-size: $font-size-sm;
+          color: $color-grey-1;
+          text-align: center;
+          flex: 1;
+          display: inline-block;
+          @include text-overflow();
+
+          &__active {
+            font-size: $font-size-sm;
+            color: $color-brand;
+          }
+        }
+
+        &-line {
+          width: 3px;
+          background-color: $color-brand;
+          position: absolute;
+          top: 2px;
+          bottom: 2px;
+          left: 0;
+          border-radius: 3px;
+        }
+
+        &__active {
+          padding-top: $spacing-v-lg + 2;
+          padding-bottom: $spacing-v-lg + 2;
+          background-color: #F5F6F7;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+
+          &-prev {
+            border-bottom-right-radius: 8px;
+          }
+
+          &-next {
+            border-top-right-radius: 8px;
+          }
+        }
+      }
+    }
+
+    &-menuWrap {
+      width: 77%;
+      background-color: #F5F6F7;
+      display: flex;
+    }
+
+    &-menu {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-left: $spacing-h-md;
+      padding-right: $spacing-h-md;
+    }
+  }
+
+  &-list {
+    width: 100%;
+    flex-direction: column;
+
+    &-item {
+      margin-top: $spacing-v-md;
+      margin-bottom: $spacing-v-md;
+    }
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -($spacing-v-sm + 2);
+      margin-bottom: -($spacing-v-sm + 2);
+      margin-left: -$spacing-h-lg;
+      margin-right: -$spacing-h-lg;;
+    }
+
+    &-box {
+      width: 33.333%;
+      padding: $spacing-v-sm + 2 $spacing-h-lg;
+
+      &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-imgWrap {
+          width: 100%;
+          padding-bottom: 100%;
+          margin-bottom: $spacing-v-md;
+          position: relative;
+          background-color: #F4F5F7;
+        }
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+        &-text {
+          font-size: $font-size-sm;
+          color: #303133;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .recommend {
+    margin: $spacing-v-md 0px 0px;
+
+    &-list {
+      margin: -$spacing-v-sm;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        width: 33.333%;
+        display: flex;
+        padding: $spacing-v-sm;
+        position: relative;
+
+        &-content {
+          flex: 1;
+          padding-bottom: 56.4%;
+          border-radius: 4px;
+          background-color: #F4F5F7;
+          overflow: hidden;
+          position: relative;
+
+          &-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+
+        &-titleWrap {
+          display: flex;
+          padding-right: 20px;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        &-title {
+          margin-right: $spacing-h-sm - 2;
+          font-size: $font-size-sm;
+          color: $color-grey-0;
+        }
+      }
+    }
+  }
+}

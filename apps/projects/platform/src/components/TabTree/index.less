@@ -1,0 +1,79 @@
+@import '../../global/styles/theme.less';
+
+.god-tabtree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  color: @main-font-bold-color;
+}
+#root .ant-tree.god-tabtree {
+  .ant-tree-treenode {
+    cursor: pointer;
+    &:hover {
+      .god-tabtree-icons {
+        opacity: 1;
+      }
+    }
+  }
+  .god-tabtree-icons {
+    opacity: 0;
+    transition: 0.3s;
+    &.show {
+      opacity: 1;
+    }
+  }
+  .god-tabtree-select {
+    background: none;
+    border-color: @tree-node-border;
+    &.show {
+      border-color: @main-color;
+      background: @tree-node_hover;
+      .tree-node-circle {
+        background: @main-color;
+      }
+    }
+    &.hide {
+      .tree-node-circle {
+        background: @status-stop;
+      }
+    }
+    .ant-tree-switcher-noop::after {
+      content: '·';
+      display: block;
+      color: transparent;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #c1c7d0;
+      margin: auto;
+      margin-top: 12px;
+    }
+  }
+}
+
+.site-tree-search-value {
+  color: #f50;
+}
+
+.god-tabtree-title > span {
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  & > span {
+    width: 100%;
+
+    & > span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

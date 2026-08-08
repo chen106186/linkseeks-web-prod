@@ -1,0 +1,113 @@
+.eAccountRecord {
+  background-color: #F4F5F7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+
+  &_datePickerWrap {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  &_listHeader {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 12px;
+    background-color: #FFF;
+  }
+
+  &_listHeaderText {
+    flex: 1;
+  }
+
+  &_container {
+    display: flex;
+    flex: 1;
+    height: 0;
+  }
+
+  .record-scrollView {
+    .recordItem {
+      width: 100%;
+      display: flex;
+      padding: 12px;
+      flex-direction: row;
+      background-color: #FFFFFF;
+    }
+
+    .recordIcon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .recordInfoWrap {
+      display: flex;
+      flex: 1;
+      margin-left: 8px;
+      flex-direction: column;
+    }
+
+    .recordLine {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2px;
+    }
+
+    .recordLine_tradeType {
+      flex: 1;
+      font-size: 14px;
+      color: #252D37;
+    }
+
+    .recordLine_chgAmount {
+      font-size: 16px;
+      color: #303133;
+    }
+
+    .recordLine_changeTime {
+      font-size: 12px;
+      color: #91959B;
+      flex: 1;
+    }
+
+    .recordLine_type {
+      font-size: 12px;
+      color: #5C626A;
+    }
+  }
+}
+
+.loading {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0;
+  left: 0;
+
+  &__vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-text {
+    color: #303133;
+    margin-left: 8px;
+
+    &__vertical {
+      margin-left: 0px;
+      margin-top: 8px;
+    }
+  }
+}

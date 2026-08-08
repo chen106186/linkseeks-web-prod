@@ -1,0 +1,151 @@
+.lingxi-advert {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  background-color: #fff;
+
+  :global {
+    .ant-carousel .slick-dots {
+      opacity: 0;
+    }
+  }
+
+  .topAdvert_list {
+    height: 70px;
+
+    &_item {
+      height: 70px;
+      overflow: hidden;
+
+      & > span {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        & > img {
+          height: 100%;
+          width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.lingxi-banner {
+  position: relative;
+  height: 460px;
+
+  .banner_list {
+    .banner_list_item {
+      height: 460px;
+
+      &_img {
+        height: 460px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .banner_list_null {
+      height: 460px;
+      width: 100%;
+      text-align: center;
+      line-height: 460px;
+      font-weight: 500;
+      font-size: 24px;
+      color: #b3b3b3;
+    }
+  }
+
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 460px;
+    overflow: hidden;
+  }
+
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
+}
+
+.lingxi-interact_list {
+  display: flex;
+  // width: 1200px;
+  margin: 16px auto;
+  margin-bottom: 0;
+  justify-content: space-between;
+
+  .interact_list_item {
+    width: 320px;
+    height: 160px;
+    overflow: hidden;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+
+    & > a {
+      outline: none;
+      text-decoration: none;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.lingxi-service_list {
+  display: flex;
+  width: 1200px;
+  margin: 20px auto;
+  margin-bottom: 0;
+  height: 90px;
+
+  .service_list_item {
+    width: 580px;
+    height: 90px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    & > span {
+      outline: none;
+      text-decoration: none;
+
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .service_list_item_null {
+    width: 580px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #d9d9d9;
+    color: #b3b3b3;
+    background-color: #edeeef;
+  }
+}
+
+.lingxi-nav_banner {
+  position: relative;
+  height: 96px;
+
+  .nav_banner_item {
+    height: 96px;
+    overflow: hidden;
+  }
+}

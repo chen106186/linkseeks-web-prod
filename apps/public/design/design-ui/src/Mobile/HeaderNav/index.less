@@ -1,0 +1,233 @@
+@import url('../common.less');
+
+.@{prefixCls}-header-nav {
+  position: relative;
+
+  // 默认样式
+  &.default {
+    background-color: @headerNavDefaultColor;
+    color: #303133;
+
+    .@{prefixCls}-status-bar {
+      background-color: @headerNavDefaultColor;
+    }
+
+    .@{prefixCls}-header-category {
+      &-item {
+        color: #606266;
+
+        &.active {
+          color: @mainColor;
+        }
+      }
+
+      &-icon {
+        color: #606266;
+      }
+    }
+  }
+
+  // 科技类样式
+  &.science {
+    background-color: @headerNavScienceColor;
+    color: #FFF;
+
+    .@{prefixCls}-status-bar {
+      background-color: @headerNavScienceColor;
+    }
+
+    .@{prefixCls}-header-search {
+      &-body {
+        border: none;
+      }
+
+      &-btn {
+        height: 28px;
+        margin-right: 2px;
+      }
+    }
+
+    .@{prefixCls}-header-bg {
+      &::after {
+        background-color: @headerNavScienceColor;
+      }
+    }
+
+    .@{prefixCls}-header-category {
+      &-icon {
+        color: #FFF;
+      }
+    }
+  }
+
+  .@{prefixCls}-status-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 20px;
+
+    &-time {
+      font-size: 15px;
+      width: 54px;
+      text-align: center;
+    }
+
+    &-right {
+      margin-left: auto;
+      font-size: 20px;
+
+      &-icon {
+        margin-left: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .@{prefixCls}-header {
+    display: flex;
+    padding: 0 12px;
+    align-items: center;
+    margin-bottom: 4px;
+
+    &-logoWrap {
+      display: flex;
+      align-items: center;
+      // padding-top: 6px;
+
+      &-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+      }
+
+      &-shopName {
+        // font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+    &-actions {
+      margin-left: auto;
+      display: flex;
+
+      &-item {
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        &-icon {
+          width: 18px;
+          height: 20px;
+          border: none;
+          outline: none;
+        }
+
+        &-text {
+          font-size: 8px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  .@{prefixCls}-header-search {
+    padding: 6px 12px;
+
+    &-body {
+      background-color: #FFF;
+      border-radius: 8px;
+      border: 2px solid @mainColor;
+      height: 32px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      font-size: 20px;
+      color: #909399;
+      margin-right: 10px;
+    }
+
+    &-keyword {
+      flex: 1;
+      font-size: 14px;
+      color: #909399;
+      margin-right: 8px;
+    }
+
+    &-btn {
+      padding: 0 8px;
+      min-width: 52px;
+      height: 32px;
+      background:@mainColor;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #FFF;
+
+    }
+  }
+
+  .@{prefixCls}-header-category {
+    display: flex;
+    padding-right: 12px;
+    align-items: center;
+    height: 40px;
+
+    &-main {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin-right: 12px;
+      overflow: hidden;
+
+      &-body {
+        white-space: nowrap;
+      }
+    }
+
+    &-item {
+      font-size: 14px;
+      padding: 0 12px;
+      display: inline-block;
+      color: rgb(255 255 255 / 60%);
+      font-weight: bold;
+
+      &.active {
+        color: #FFF;
+      }
+    }
+
+    &-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .@{prefixCls}-header-bg {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #FFF;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 40px;
+      left: -10%; //椭圆左边隐藏10%，右边隐藏10%
+      top: 0;
+      border-radius: 0 0 50% 50%; //左上角，右上角，右下角，左下角
+    }
+  }
+}

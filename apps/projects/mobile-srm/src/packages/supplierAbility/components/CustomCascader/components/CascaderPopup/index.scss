@@ -1,0 +1,89 @@
+@import '@/styles/variables.scss';
+
+$cascader-prefix: 'cascader';
+
+.cascader {
+  background-color: #FFFFFF;
+
+  &-popup {
+    background-color: #FFFFFF;
+  }
+
+  &-shortcut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: $spacing-h-lg;
+    padding-left: $spacing-h-lg;
+
+    &-item {
+      padding-right: $spacing-h-xl;
+      padding-top: $spacing-v-xl;
+      padding-bottom: $spacing-v-xl;
+
+      &-name {
+        font-size: $font-size-base;
+        font-weight: 400;
+        color: $color-black-1;
+
+        &__active {
+          color: $color-success;
+        }
+      }
+    }
+  }
+
+  &-group {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &-swiper {
+    background-color: red;
+
+    &-queen {
+      height: 100%;
+    }
+    
+    &-item {}
+  }
+
+  &-item {
+    &-list {
+      overflow-y: auto;
+        
+      &-item {
+        padding: $spacing-h-lg $spacing-v-xl;
+
+        &-titleWrap {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          position: relative;
+        }
+  
+        &-title {
+          color: $color-black-1;
+          font-size: $font-size-base;
+          font-weight: 400;
+        }
+  
+        &-icon {
+          padding-left: $spacing-h-md;
+          padding-right: $spacing-h-md;
+        }
+
+        &__disabled {
+          .#{$cascader-prefix}-item-list-item-title {
+            color: $color-text-disabled;
+          }
+        }
+      }
+    }
+  }
+
+  &-action {
+    padding: $spacing-v-md;
+    background-color: #FFFFFF;
+  }
+}

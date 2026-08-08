@@ -1,0 +1,14 @@
+@import '@/styles/variables.scss';
+
+.shop-list {
+  position: relative;
+  height: 100%;
+
+  &-scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

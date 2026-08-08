@@ -1,0 +1,179 @@
+.commodity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+
+  &-wrap {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 48px;
+    color: #303133;
+  }
+
+  &-item {
+    position: relative;
+    // height: 376px;
+    width: 227px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+
+    &-name {
+      font-size: 14px;
+      color: #252d37;
+      line-height: 20px;
+      min-height: 2 * 20px;
+      font-weight: 400;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
+
+    &-tags {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 8px;
+      min-height: 24px;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      height: 0;
+      padding: 16px;
+    }
+
+    &-sold {
+      font-weight: 400;
+      font-size: 12px;
+      color: #91959b;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+
+    .goods_price_wrap {
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: 8px;
+
+      .goods_activity_price {
+        color: #ef3346;
+        line-height: 18px;
+        font-size: 16px;
+
+        & > i {
+          font-size: 12px;
+          font-style: normal;
+          line-height: 16px;
+        }
+
+        & > label {
+          font-size: 12px;
+        }
+      }
+
+      .goods_original_price {
+        color: #91959b;
+        font-size: 12px;
+        line-height: 16px;
+        margin-left: 8px;
+        text-decoration: line-through;
+
+        & > i {
+          font-size: 12px;
+          font-style: normal;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .goods_price {
+      color: #d32f2f;
+      line-height: 16px;
+      display: flex;
+      font-weight: 500;
+      align-items: flex-end;
+      font-size: 16px;
+      overflow: hidden;
+
+      &.integral {
+        color: #ea8000;
+      }
+
+      & > i {
+        font-style: normal;
+        margin-left: 4px;
+      }
+
+      .currency {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+      }
+
+      .big {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 500;
+      }
+
+      .small {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+      }
+    }
+
+    .inquiry_price {
+      color: #fff;
+      background-color: var(--mall-main-color);
+      font-size: 14px;
+      height: 18px;
+      line-height: 14px;
+      padding: 2px 8px;
+      display: inline-block;
+    }
+  }
+}
+
+.mask-box {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 160px;
+  height: 30px;
+  background-color: rgb(48 49 51 / 30%);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// .mask {
+//   width: 190px;
+//   height: 190px;
+//   background-color: rgb(48 49 51 / 30%);
+//   border-radius: 50%;
+//   border: solid rgb(255 255 255 / 50%) 2px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #e0dbdb;
+// }

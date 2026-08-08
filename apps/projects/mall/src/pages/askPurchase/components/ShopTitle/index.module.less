@@ -1,0 +1,56 @@
+@import url('../commonly.less');
+
+.shop-title-warp {
+  display: flex;
+  padding: @padding;
+  font-size: 12px;
+  background-image: linear-gradient(to right, #fff, #e4f7ef);
+  width: 100%;
+
+  .shop-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #303133;
+  }
+
+  .shop-title-tips {
+    height: 24px;
+    display: inline-block;
+    color: #00a98f;
+    background: #e4f7ef;
+    overflow: hidden;
+    padding: 0 4px 0 0;
+    margin-top: 16px;
+  }
+
+  .shop-title-left {
+    flex: 1;
+  }
+
+  .shop-title-right {
+    width: 470px;
+    color: #00a98f;
+    text-align: right;
+    margin-right: 8px;
+
+    .shop-title-btn {
+      display: inline-block;
+      width: 108px;
+      height: 40px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-align: center;
+      // line-height: 40px;
+    }
+
+    .shop-title-small-btn {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+      background: #00a98f;
+      color: #fff;
+    }
+  }
+}

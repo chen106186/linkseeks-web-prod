@@ -1,0 +1,50 @@
+.particulars {
+  margin-top: 24px;
+  :global {
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      border-top: 1px solid #00a98f;
+      border-bottom: 1px solid #00a98f;
+      background: #fff;
+      &:first-child {
+        border-left: 1px solid #00a98f;
+      }
+      &:last-child {
+        border-right: 1px solid #00a98f;
+      }
+    }
+    .ant-table-expanded-row td {
+      padding: 0;
+    }
+  }
+}
+
+.childrenWrap {
+  background-color: #fff;
+  .childrenTitle {
+    height: 100%;
+    background: linear-gradient(to left, #ffffff, #daf2e7);
+    color: #00a98f;
+    p {
+      padding-left: 16px;
+      margin: 0;
+      font-size: 12px;
+      height: 14px;
+      line-height: 14px;
+    }
+    padding: 12px 0;
+  }
+  .childrenContent {
+    margin-top: 8px;
+    p {
+      margin: 0;
+      span {
+        height: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #909399;
+        line-height: 12px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+
+.top-title {
+  display: flex;
+  position: fixed;
+  text-align: center;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  color: #FFF;
+  background-color: $theme-color;
+  font-family: PingFangSC-Regular;
+  z-index: 10;
+  width: 100%;
+  .icon-back {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}

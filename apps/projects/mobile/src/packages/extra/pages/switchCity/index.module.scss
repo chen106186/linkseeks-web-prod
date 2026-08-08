@@ -1,0 +1,201 @@
+@import '@/styles/variables.scss';
+
+.switchCity {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafbfc;
+  height: 100vh;
+}
+
+.searchWrap {
+  position: relative;
+  padding: 8px 12px,;
+  background-color: #FFF;
+}
+
+.searchList {
+  background-color: #FFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchItem {
+  padding: 14px 18px;
+}
+
+.searchInputWrap {
+  display: flex;
+  align-items: center;
+  background-color: #F7F8FA;
+  padding: 0 8px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.searchInput {
+  margin-left: 4px;
+  padding: 0;
+  width: 100%;
+  font-size: 12px;
+  background-color: #F7F8FA;
+	::placeholder{
+		color: #C8CACD;
+		font-size: 12px;
+	}
+}
+
+.currentLocationText {
+  font-size: 14px;
+  color: #252D37;
+  font-weight: 500;
+}
+
+.cityText {
+  font-size: 14px;
+  color: #252D37;
+}
+
+.hostCityText {
+  font-size: 12px;
+  color: #5C626A;
+}
+
+.cityLineItem {
+  padding: 14px 12px;
+}
+
+.hotCityItem {
+  width: 22%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F6F7;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.sectionItemBottomBorder {
+  border-bottom: 1px solid #F4F5F7 solid;
+}
+
+.sectionListHeader {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 20px;
+}
+
+.sectionListWrap {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sectionList {
+  display: flex;
+  flex: 1;
+  height: 0;
+  position: relative;
+  padding-left: 12px;
+  padding-right: 20px;
+  z-index: 1;
+
+  :global{
+    .at-indexes__list-title {
+      background-color: #F4F5F7;
+    }
+  }
+}
+
+.sectionItemWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.sectionItem {
+  background-color: #FFF;
+  padding: 14px 12px;
+}
+
+.sectionHeader {
+  padding: 8px 12px;
+}
+
+.setionTitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.letterList {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.letterItem {
+  display: flex;
+  padding: 3px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.letterItemText {
+  color: #909399;
+  font-size: 10px;
+}
+.activeText {
+  color: $theme-color;
+}
+.borderTopRadius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.borderBottomRadius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.cardHeader {
+  padding: 12px;
+}
+
+.headerText {
+  font-size: 12px;
+  color: #91959B;
+}
+
+.cardBody {
+  display: flex;
+  background-color: #FFF;
+  border-radius: 8px;
+  padding: 8px 4px;
+  flex-wrap: wrap;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}

@@ -1,0 +1,16 @@
+export default {
+  'menu.home': '首页',
+  'menu.afterService': '售后',
+  'menu.afterService.exchangeManage': '换货申请单管理',
+  'menu.afterService.exchangeManage.query': '换货申请单查询',
+  'menu.afterService.exchangeManage.query.detail': '换货申请单详情',
+  'menu.content': '内容',
+  'menu.logistics': '物流',
+  'menu.marketingManage': '营销',
+  'menu.orderManage': '订单',
+  'menu.systemManage': '系统',
+  'menu.commodityAbility': '商品',
+  'menu.commodityAbility.classAndProperty': '品类及属性',
+  'menu.commodityAbility.classAndProperty.class': '品类',
+  'menu.customerService': '客服',
+}

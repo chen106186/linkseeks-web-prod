@@ -1,0 +1,109 @@
+const packageName = require('../package.json').name
+const path = require('path')
+const config = {
+  projectName: 'god-taro-library',
+  date: '2021-9-10',
+  designWidth: 375,
+  deviceRatio: {
+    640: 2.34 / 2,
+    750: 1,
+    828: 1.81 / 2,
+    375: 2 / 1,
+  },
+  sourceRoot: 'docs',
+  outputRoot: 'docsDist',
+  plugins: [],
+  alias: {
+    '@god/taro-ui': path.resolve(__dirname, '../', 'packages'),
+  },
+  defineConstants: {},
+  copy: {
+    patterns: [],
+    options: {},
+  },
+  framework: 'react',
+  compiler: {
+    type: 'webpack5',
+    // 仅 webpack5 支持依赖预编译配置
+    prebundle: {
+      enable: true,
+    },
+  },
+  mini: {
+    postcss: {
+      pxtransform: {
+        enable: true,
+        config: {},
+      },
+      url: {
+        enable: true,
+        config: {
+          limit: 1024, // 设定转换尺寸上限
+        },
+      },
+      cssModules: {
+        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+        config: {
+          namingPattern: 'module', // 转换模式，取值为 global/module
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
+  },
+  h5: {
+    publicPath: '/',
+    staticDirectory: 'static',
+    postcss: {
+      pxtransform: {
+        enable: true,
+        config: {
+          baseFontSize: 23.4375,
+          replace: false,
+        },
+      },
+      autoprefixer: {
+        enable: true,
+        config: {},
+      },
+      cssModules: {
+        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+        config: {
+          namingPattern: 'module', // 转换模式，取值为 global/module
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
+  },
+}
+
+module.exports = function (merge) {
+  if (process.env.TARO_BUILD_TYPE === 'ui') {
+    Object.assign(config.h5, {
+      enableSourceMap: false,
+      enableExtract: false,
+      enableDll: false,
+    })
+    config.h5.webpackChain = (chain) => {
+      chain.plugins.delete('htmlWebpackPlugin')
+      chain.plugins.delete('addAssetHtmlWebpackPlugin')
+      chain.merge({
+        output: {
+          path: path.join(process.cwd(), 'dist', 'h5'),
+          filename: 'index.js',
+          libraryTarget: 'umd',
+          library: packageName,
+        },
+        externals: {
+          classnames: 'commonjs2 classnames',
+          '@tarojs/components': 'commonjs2 @tarojs/components',
+          '@tarojs/taro-h5': 'commonjs2 @tarojs/taro-h5',
+        },
+      })
+    }
+  }
+
+  if (process.env.NODE_ENV === 'development') {
+    return merge({}, config, require('./dev'))
+  }
+  return merge({}, config, require('./prod'))
+}

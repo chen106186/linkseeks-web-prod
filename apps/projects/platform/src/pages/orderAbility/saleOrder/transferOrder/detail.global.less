@@ -1,0 +1,24 @@
+.ant-anchor {
+  position: relative;
+  display: flex;
+  .ant-anchor-ink {
+    display: none;
+  }
+  .ant-anchor-link {
+    padding: 16px;
+    transition: all 0.375s ease-in-out;
+  }
+  .ant-anchor-link.ant-anchor-link-active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      background-color: rgb(0, 169, 143);
+      height: 2px;
+      width: 100%;
+      left: 0;
+      content: ' ';
+    }
+  }
+}

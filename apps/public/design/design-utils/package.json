@@ -1,0 +1,29 @@
+{
+  "name": "@apps/design-utils",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "license": "MIT",
+  "main": "./src/index",
+  "files": [
+    "design_dist",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "gitHead": "c65fc560a56374d0fa3412fbbad52060524f7baf",
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "qs": "^6.9.6",
+    "moment": "^2.29.4"
+  },
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js",
+    "clean": "../../scripts/clean_package.sh",
+    "dev": "tsc -w & rollup -c rollup.config.js -w",
+    "pub:patch": "node scripts/run.js --patch"
+  }
+}

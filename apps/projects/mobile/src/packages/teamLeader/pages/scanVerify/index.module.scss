@@ -1,0 +1,31 @@
+.scan-verify {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	background-color: #F4F5F7;
+
+	&-top {
+		display: flex;
+		align-items: center;
+		padding: 8px 10px;
+		background-color: #FFFFFF;
+	}
+
+	&-search {
+		flex: 1;
+		height: 32px;
+		border-radius: 290px;
+		background: #f5f6f7;
+		display: flex;
+		align-items: center;
+		padding: 4px 8px;
+	}
+
+	&-icon {
+		width: 32px;
+		height: 32px;
+		margin-left: 10px;
+	}
+
+}

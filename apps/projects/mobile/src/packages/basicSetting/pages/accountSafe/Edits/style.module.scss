@@ -1,0 +1,163 @@
+@import "@/styles/variables.scss";
+$padding-s: 16px;
+$margin-m: 28px;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.header {
+  border-bottom-color: #f4f5f7;
+  border-bottom-width: 0.5;
+}
+.scroll-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.password-text {
+  color: $color-black-1;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  width: 100px;
+  height: 100px;
+  margin-left: -50;
+  margin-top: -50;
+  opacity: 0.8;
+  z-index: 88;
+}
+.input-text {
+  color: #c0c4cc;
+}
+.input-container {
+  border-width: 0px;
+  border-bottom-width: 0.5;
+  flex: 1;
+  border-bottom-color: #f4f5f7;
+}
+.error-style {
+  display: none;
+}
+.comfirm {
+  margin-top: $margin-m;
+  margin-bottom: $margin-m;
+}
+.tips {
+  color: $color-black-3;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.btn {
+  margin-top: 28px;
+  background-color: $color-brand;
+  border-radius: 8px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+	:global{
+    .at-input {
+      flex: 1 !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      background: #F4F4F4;
+    }
+  }
+}
+.get-code-btn {
+  font-size: 12px;
+  color: $color-black-1;
+  padding-left: $padding-s;
+  padding-right: $padding-s;
+  border-left-width: 1px;
+  border-left-color: #eef0f3;
+}
+.picker {
+  justify-content: center;
+  width: 82px;
+  margin-right: 16px;
+  border-right-width: 0.5;
+  border-right-color: #f4f5f7;
+}
+.country-code {
+  font-size: 14px;
+}
+.mobile {
+  height: 24px;
+  flex-direction: row;
+  align-items: center;
+	background-color: #F4F4F4;
+	padding: 0 4px;
+}
+.mobile-icon {
+  width: 16px;
+  height: 16px;
+}
+.solid {
+  background-color: #f4f5f7;
+  width: 1px;
+  height: 100%;
+  margin-left: 8px;
+}
+.border {
+  padding-left: 20px;
+  flex: 1;
+  line-height: 40px;
+  text-align: center;
+  border-left-width: 1px;
+  border-left-color: #f4f5f7;
+}
+
+.fl-right {
+  float: right;
+}
+
+.clear::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.input-after{
+	padding: 12px;
+	border-radius: 8px;
+	Image ,taro-image-core {
+		width: 16px;
+		height: 16px;
+		:global{
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.input-wrap {
+	display: flex;
+	align-items: center;
+	background-color: #F4F4F4;
+	height: 48px;
+	margin-bottom: 16px;
+	border-radius: 8px;
+	padding: 0 12px;
+
+	:global {
+		.at-input {
+			padding: 0;
+		}
+	}
+}

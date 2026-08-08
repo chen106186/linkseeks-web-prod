@@ -1,0 +1,173 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+@import '@/styles/utils/extend-click.scss';
+.inquiryListContainer {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  .nav-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $spacing-h-md;
+    background-color: #FFFFFF;
+
+    &-search {
+      flex: 1;
+    }
+
+    &-filter {
+      @include extend-click();
+    }
+  }
+  &-header {
+    display: flex;
+    flex-direction: column;
+  }
+  &-tabBar {
+    background-color: #FFFFFF;
+    :global{
+      .at-tabs__header {
+        text-align: start;
+      }
+    }
+  }
+  &-scrollView {
+    flex: 1;
+    overflow: scroll;
+    background-color: #F4F5F7;
+  }
+  &-touchableOpacity {
+    flex: 1;
+  }
+  // 列表的样式
+  &-flatList {
+    width: 100%;
+    height: 100%;
+    // padding: 8px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F5F7;
+  }
+  &-boxSizeing {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    margin: 8px 8px 0px;
+    overflow: hidden;
+  }
+  &-boxItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+  &-boxTitlenNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-docsStatus {
+    display: flex;
+    align-items: center;
+  }
+  &-docsItem {
+    width: 6px;
+    height: 6px;
+    margin: 6px;
+    border-radius: 50%;
+    // background-color: green;
+  }
+  &-docsStatusText {
+    font-size: 12px;
+    color: #252D37;
+    @include text-overflow();
+  }
+  &-stateName {
+    font-size: 12px;
+    color: #91959B;
+    @include text-overflow();
+  }
+  &-productTitleBox {
+    padding-top: 8px;
+  }
+  &-productTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #303133;
+    @include text-overflow();
+  }
+  &-productBox {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &-procuctInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  &-timeitem {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+  }
+  &-timeIcons {
+    font-size: 12px !important;
+    margin-right: 5px;
+  }
+  &-inquiryTime {
+    font-size: 12px;
+    color: #909399;
+  }
+  &-corpText {
+    font-size: 12px;
+    color: #909399;
+    @include text-overflow();
+  }
+  &-procuctImage {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #F4F5F7;
+  }
+  &-procuctImageItem {
+    width: 48px;
+    height: 48px;
+  }
+  &-indicatorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0px;
+  }
+  &-indicator {
+    margin-bottom: 8px;
+  }
+  &-indicatorText {
+    font-size: 12px;
+    color: "#909399";
+    text-align: center;
+  }
+  &-optionBox {
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-enterShopBtn {
+    border:  .5px solid $theme-color;
+    border-radius: 4px;
+    height: 24px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-enterShopBtnText {
+    font-size: 12px;
+    color: $theme-color;
+  }
+}

@@ -1,0 +1,403 @@
+@import './constants/styles/_var.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  .god-tabtree {
+    max-height: 700px;
+    overflow-y: scroll;
+  }
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+/*全局高度*/
+.ant-layout {
+  min-height: 100vh !important;
+}
+
+.wrapper-white {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.connectBtn {
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+  background: #909399;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.common-scroll-wrap {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px);
+}
+
+// 内嵌页公共wrapper
+.common-wrapper {
+  background-color: #fff;
+  padding: 32px 24px;
+  border-radius: 5px;
+}
+.common-wrapper-gray {
+  background-color: #f5f6fa;
+  padding: 32px 24px;
+  border-radius: 5px;
+}
+
+// 公共显示隐藏处理
+.commonShowBlock {
+  display: block;
+}
+
+.commonShow {
+  display: inline-block;
+}
+
+.commonHide {
+  display: none;
+}
+
+// 公共着色 主体颜色
+.commonPickColor {
+  color: @main-color;
+  cursor: pointer;
+}
+
+// 公共状态 圆点
+.commonStatus {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.commonStatusStop {
+  .commonStatus();
+  background-color: @status-stop;
+}
+
+.commonStatusModify {
+  .commonStatus();
+  background-color: @status-modify;
+}
+
+.commonStatusValid {
+  .commonStatus();
+  background-color: @status-valid;
+}
+
+.commonStatusInvalid {
+  .commonStatus();
+  background-color: @status-invalid;
+}
+
+// 公共的title伪类竖线
+.commonPanelTitle {
+  padding-left: 8px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.42667rem;
+    width: 2px;
+    height: 0.85333rem;
+    background-color: @main-color;
+    box-shadow: 0 0.14933rem 0.256rem 0 rgba(97, 144, 232, 0.2);
+    border-radius: 1px;
+  }
+}
+
+// 公共间隔
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.ml-50 {
+  margin-left: 50px;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+#root {
+  tbody,
+  tr,
+  th,
+  td {
+    vertical-align: middle;
+  }
+  .ant-pro-global-header {
+    // background: @header-global-nav-bg;
+    background: '#fff';
+  }
+
+  .ant-pro-global-header-trigger:hover {
+    background: '#fff';
+    // background: @header-global-nav-bg;
+  }
+
+  .ant-pro-sider-menu-sider.light .ant-pro-sider-menu-logo {
+    background: @header-global-nav-bg;
+  }
+
+  // 自定义menu
+  .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+    width: 14px;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      background: none;
+      border-right: 2px solid #595959;
+      border-bottom: 2px solid #595959;
+      transform: rotate(-45deg) translateY(-6px);
+      border-radius: 0;
+    }
+
+    &::after {
+      // transform: rotate(-45deg) translateX(-3px) translateY(0);
+      // width: 8px;
+      // background: #595959;
+      display: none;
+    }
+  }
+
+  .ant-menu-submenu-open.ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+    &::before {
+      transform: rotate(45deg) translateY(-2px) translateX(-6px);
+    }
+
+    // &::after {
+    //   transform: rotate(0deg) translateX(0) translateY(0);
+    // }
+  }
+
+  .ant-menu-submenu-selected {
+    background: @menu-select-bg;
+    color: @menu-select-color;
+
+    &.ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+      &::before {
+        border-color: @menu-select-color;
+      }
+    }
+  }
+
+  .ant-menu-sub .lx-menu-item-link {
+    display: block;
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      // border-radius: 50%;
+      border: 1px solid @menu-circle-color;
+      // background: @menu-circle-color;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 0;
+      bottom: 0;
+      left: 0px;
+      margin: auto 0;
+    }
+  }
+
+  // .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  //   background: none;
+  // }
+
+  .ant-menu-sub .ant-menu-item-selected .lx-menu-item-link::before {
+    // background: @main-color;
+    border: 1px solid @main-color;
+  }
+
+  .ant-menu-inline .ant-menu-selected::after,
+  .ant-menu-inline .ant-menu-item-selected::after {
+    display: none;
+  }
+
+  // 处理ant tree组件
+  // .ant-tree-checkbox {
+  //   order: 10;
+  // }
+
+  // .ant-tree .ant-tree-treenode {
+  //   padding-bottom: 0;
+  //   padding-right: 16px;
+  //   background: @tree-node;
+  //   border: 1px solid @tree-node-border;
+  //   margin-bottom: 4px;
+  //   align-items: center;
+  //   height: 32px;
+
+  //   &.ant-tree-treenode-selected {
+  //     border-color: @main-color;
+  //     background: @tree-node_hover;
+  //   }
+
+  //   &.ant-tree-treenode:hover {
+  //     border-color: @main-color;
+  //     background: @tree-node_hover;
+  //   }
+
+  //   &.ant-tree-treenode-selected {
+  //     .tree-node-circle {
+  //       background: @main-color;
+  //     }
+  //   }
+  // }
+
+  // .tree-node-circle {
+  //   width: 4px;
+  //   height: 4px;
+  //   border-radius: 50%;
+  //   margin-right: 12px;
+  //   background: @status-stop;
+  // }
+
+  // .ant-tree .ant-tree-checkbox {
+  //   margin: 0;
+  // }
+
+  // .ant-tree .ant-tree-node-content-wrapper:hover {
+  //   background: none;
+  // }
+
+  // .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  //   background: none;
+  // }
+
+  // .ant-tree .ant-tree-switcher {
+  //   width: 28px;
+  //   height: 28px;
+  //   line-height: 32px;
+  // }
+
+  // .ant-tree .ant-tree-switcher .ant-tree-switcher-icon,
+  // .ant-tree .ant-tree-switcher .ant-select-tree-switcher-icon {
+  //   font-size: 12px;
+  // }
+
+  .black-tabs {
+    &.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+      margin-right: 0;
+    }
+  }
+
+  // 没去掉会导致表格上搜索出现40的高度
+  .god-table-control {
+    // margin-bottom: 0;
+  }
+  .common-descriptions {
+    .ant-descriptions-item-label {
+      flex: 0 0 128px;
+      color: rgba(107, 119, 140, 1);
+    }
+  }
+}
+
+.ant-btn-link {
+  padding-left: unset !important;
+  white-space: normal !important;
+}

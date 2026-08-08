@@ -1,0 +1,67 @@
+@import url('../commonly.less');
+
+.brief-main {
+  @main();
+
+  .brief-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+
+  .brief-item-warp {
+    display: flex;
+    flex-wrap: wrap;
+
+    .brief-item {
+      display: flex;
+      font-size: 12px;
+      width: 224px;
+      margin-bottom: 24px;
+
+      .brief-item-icon {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        background: #f4f5f7;
+        color: #a0a2a7;
+        margin-right: 12px;
+        font-size: 23px;
+        // border: 1px dashed #cccccc;
+      }
+    }
+
+    .enterprises-value {
+      margin-bottom: 8px;
+    }
+  }
+
+  .brief-content {
+    display: flex;
+
+    .brief-content-item {
+      width: 455px;
+      flex-shrink: 0;
+      text-align: justify;
+      display: flex;
+      font-size: 12px;
+
+      .enterprises-key {
+        width: 40px;
+        flex-shrink: 0;
+      }
+
+      .enterprises-value {
+        color: #606266;
+        line-height: 16px;
+      }
+    }
+
+    .brief-content-item:nth-child(1) {
+      margin-right: 40px;
+    }
+  }
+}

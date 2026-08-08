@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 0 16px;
+  .head {
+    text-align: center;
+    .logo {
+      width: 64px;
+      height: 64px;
+    }
+    .Text {
+      text-align: center;
+      font-size: 14px;
+    }
+    .logoTitle {
+      @extend .Text;
+			margin-bottom: 24px;
+    }
+  }
+  .btn {
+    text-align: center;
+    font-size: 14px;
+    background-color: #F5F6F7;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+}

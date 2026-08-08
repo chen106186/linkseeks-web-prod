@@ -1,0 +1,28 @@
+.button-switch {
+  display: inline-block;
+
+  :global {
+    .ant-radio-button-wrapper:hover {
+      color: #6b778c;
+    }
+    .ant-radio-group-solid {
+      .ant-radio-button-wrapper-checked {
+        background: #6b778c;
+        border-color: #6b778c;
+
+        &:hover {
+          background: #6b778c;
+          border-color: #6b778c;
+        }
+
+        &::after {
+          background-color: #6b778c;
+        }
+
+        &::before {
+          background-color: #6b778c;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,418 @@
+.collection_wrap {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  min-height: 74vh;
+  padding: 0 24px;
+
+  .collection_tabs {
+    position: relative;
+
+    :global {
+      .ant-tabs-nav::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.pagination_wrap {
+  text-align: right;
+  margin-top: 24px;
+  padding-bottom: 32px;
+}
+
+.shops_list {
+  &_item {
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px;
+
+    &_item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      &.float_right {
+        align-items: flex-end;
+      }
+
+      &.morehalf {
+        flex: 1.5;
+      }
+
+      .shop_header_info {
+        position: relative;
+        display: flex;
+
+        &_logo {
+          border-radius: 4px;
+          overflow: hidden;
+          width: 40px;
+          height: 40px;
+          margin-right: 12px;
+
+          & > img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        &_content {
+          position: relative;
+
+          &_name {
+            font-size: 12px;
+            color: #303133;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          &_about {
+            display: flex;
+            margin-top: 8px;
+
+            &_item {
+              // flex: 1;
+              display: flex;
+              align-items: center;
+              margin-right: 16px;
+
+              & > span {
+                font-size: 12px;
+                color: #303133;
+                line-height: 20px;
+
+                &.red {
+                  color: #d32f2f;
+                  margin-right: 4px;
+                }
+              }
+
+              & > .icon {
+                position: relative;
+                top: -1px;
+                overflow: hidden;
+                margin-right: 5px;
+
+                & > img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+
+          &_icon {
+            color: #c0c4cc;
+            font-size: 12px;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      .date {
+        color: #909399;
+        font-size: 12px;
+      }
+
+      .rate_wrap {
+        display: flex;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.collection_state {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+  background-color: #daf3ee;
+  font-size: 12px;
+  color: #00a98f;
+  cursor: pointer;
+
+  & > label {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+}
+
+.commodity_list {
+  &_item {
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px;
+
+    &_item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      &.float_right {
+        align-items: flex-end;
+      }
+
+      .commodity_shopname {
+        color: #909399;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+
+      .commodity_price {
+        color: #d32f2f;
+      }
+
+      .commodity_point {
+        color: #ea8000;
+      }
+
+      .commodity_tag {
+        width: 68px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        background-color: #f0f8ff;
+        color: #3f7ed2;
+        font-size: 12px;
+      }
+
+      &.morehalf {
+        flex: 1.5;
+      }
+
+      .shop_header_info {
+        position: relative;
+        display: flex;
+
+        &_logo {
+          border-radius: 4px;
+          overflow: hidden;
+          width: 40px;
+          height: 40px;
+          margin-right: 12px;
+
+          & > img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        &_content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .commodity_name {
+            color: #303133;
+            margin-bottom: 4px;
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+          }
+
+          .tags_list {
+            padding: 0;
+            margin: 0;
+
+            &_item {
+              display: inline-block;
+              list-style: none;
+              color: #909399;
+              font-size: 12px;
+              margin-right: 20px;
+            }
+          }
+
+          &_name {
+            font-size: 12px;
+            color: #303133;
+            font-weight: 500;
+          }
+
+          &_about {
+            display: flex;
+            margin-top: 10px;
+
+            &_item {
+              // flex: 1;
+              display: flex;
+              align-items: center;
+              margin-right: 16px;
+
+              & > span {
+                font-size: 12px;
+                color: #303133;
+                line-height: 20px;
+
+                &.red {
+                  color: #d32f2f;
+                  margin-right: 4px;
+                }
+              }
+
+              & > .icon {
+                position: relative;
+                top: -1px;
+                overflow: hidden;
+                margin-right: 5px;
+
+                & > img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+
+          &_icon {
+            color: #c0c4cc;
+            font-size: 12px;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      .date {
+        color: #909399;
+        font-size: 12px;
+      }
+
+      .collection_state_wrap {
+        display: flex;
+        align-items: center;
+
+        &_btn {
+          margin-left: 28px;
+        }
+      }
+
+      .rate_wrap {
+        font-size: 12px;
+
+        :global {
+          .ant-rate {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .level_icon {
+        width: 54px;
+        height: 16px;
+        margin-bottom: 4px;
+        display: block;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &.level3 {
+          background-image: url('../../../assets/imgs/level2@2x.png');
+        }
+      }
+    }
+  }
+}
+
+.information_list {
+  &_item {
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px;
+
+    &_item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      &.float_right {
+        align-items: flex-end;
+      }
+
+      &.morehalf {
+        flex: 2;
+      }
+
+      .information_header_info {
+        position: relative;
+        display: flex;
+
+        &_logo {
+          border-radius: 4px;
+          overflow: hidden;
+          width: 90px;
+          height: 70px;
+          margin-right: 12px;
+        }
+
+        &_content {
+          position: relative;
+
+          &_name {
+            font-size: 12px;
+            color: #303133;
+            font-weight: 500;
+            height: 44px;
+            line-height: 22px;
+            max-width: 375px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+            word-break: break-all;
+            cursor: pointer;
+          }
+
+          &_about {
+            display: flex;
+            margin-top: 6px;
+
+            &_item {
+              // flex: 1;
+              display: flex;
+              align-items: center;
+              margin-right: 16px;
+              font-size: 12px;
+              color: #909399;
+
+              & > span {
+                margin-left: 4px;
+              }
+            }
+          }
+
+          &_icon {
+            color: #c0c4cc;
+            font-size: 12px;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      .date {
+        color: #909399;
+        font-size: 12px;
+      }
+    }
+  }
+}

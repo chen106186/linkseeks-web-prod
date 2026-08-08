@@ -1,0 +1,26 @@
+.container-List {
+  background-color: #fff;
+  margin-top: 15px;
+  border-radius: 8px;
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #252d37;
+    padding: 10px 12px;
+  }
+  .warp {
+    .warp-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      font-size: 14px;
+      .warp-item-text {
+        color: #5c626a;
+      }
+      .warp-item-price {
+        color: #252d37;
+      }
+    }
+  }
+}

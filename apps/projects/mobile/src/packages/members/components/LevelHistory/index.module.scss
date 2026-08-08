@@ -1,0 +1,28 @@
+.list {
+  flex: 1;
+  width: 100%;
+  // padding-bottom: 96px;
+  background-color: #F4F5F7;
+  padding: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.actions {
+  padding-bottom: 12;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .actions-title {
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 12px;
+    color: #303133;
+  }
+}
+.scroll-list {
+  flex: 1;
+  overflow: hidden;
+}

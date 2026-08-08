@@ -1,0 +1,26 @@
+@import '~antd/es/style/themes/default.less';
+
+.myCoupon {
+  :global {
+    .ant-tabs-top > .ant-tabs-nav {
+      margin: 0;
+
+      &::before {
+        border-bottom: none;
+      }
+    }
+
+    .ant-tabs-tab {
+      font-size: @font-size-lg;
+    }
+  }
+
+  &-list {
+    margin-top: @margin-md;
+  }
+
+  &-loading {
+    padding: 30px 50px;
+    text-align: center;
+  }
+}

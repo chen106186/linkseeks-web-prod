@@ -1,0 +1,172 @@
+.shop_list {
+  position: relative;
+  margin-top: 16px;
+  min-height: 300px;
+
+  &_item {
+    margin-bottom: 8px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    color: #303133;
+
+    &:hover {
+      box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+    }
+
+    .shop_list_left {
+      flex: 1;
+      width: 0;
+      display: flex;
+      flex-direction: column;
+
+      .shop_list_info {
+        display: flex;
+
+        &_imgbox {
+          width: 48px;
+          height: 48px;
+          margin-right: 16px;
+
+          &_img {
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center center;
+          }
+        }
+
+        &_box {
+          width: 100%;
+        }
+
+        &_name {
+          display: flex;
+          line-height: 16px;
+
+          & > a {
+            color: #303133;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+
+        &_city {
+          font-size: 12px;
+          margin-left: auto;
+        }
+
+        &_about {
+          display: flex;
+          margin-top: 12px;
+
+          &_item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+
+            & > span {
+              font-size: 14px;
+              color: #303133;
+              line-height: 20px;
+
+              &.red {
+                color: #d32f2f;
+                margin-right: 4px;
+              }
+            }
+
+            & > .icon {
+              position: relative;
+              top: -1px;
+              overflow: hidden;
+              margin-right: 5px;
+
+              & > img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .shop_satisfaction {
+        font-size: 12px;
+        display: flex;
+        margin-left: auto;
+
+        & > label {
+          font-size: 12px;
+          color: #909399;
+        }
+
+        &_rate {
+          font-size: 16px;
+        }
+      }
+
+      .shop_list_line {
+        display: flex;
+        font-size: 12px;
+        margin-top: 8px;
+        align-items: center;
+
+        &_icon {
+          height: 14px;
+          font-size: 14px;
+          margin-right: 4px;
+        }
+
+        & > label {
+          color: #909399;
+          margin-right: 5px;
+        }
+
+        &_link {
+          color: #303133;
+          margin-right: 15px;
+        }
+
+        &_brief {
+          flex: 1;
+          width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .shop_list_goods {
+      display: flex;
+      width: 300px;
+      justify-content: flex-end;
+
+      &_item {
+        margin-left: 20px;
+
+        .inquiry_price {
+          color: var(--mall-main-color);
+          margin: 10px auto 0;
+          font-size: 14px;
+          height: 18px;
+          line-height: 20px;
+          text-align: center;
+        }
+
+        &_price {
+          color: #ef3346;
+          margin-top: 10px;
+          text-align: center;
+
+          & > .unit {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+// reset.less
+
+// 盒模型重置
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 页面元素重置
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  // 全局设置字体大小将会导致继承失效，所以去掉
+  // font-size: @font-size-base;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+// 块级元素样式重置
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+// 行内元素样式重置
+ol,
+ul {
+  list-style: none;
+}
+
+// a标签样式重置
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// 图片样式重置
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// 表格样式重置
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// 表单元素样式重置
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+// 标题样式重置
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+// 多媒体样式重置
+audio,
+video {
+  display: inline-block;
+}
+
+// 其他样式重置
+canvas,
+progress,
+svg {
+  vertical-align: baseline;
+}
+
+// 若不想使用水波纹效果，可指定该属性
+.ui-dropdown[ant-click-animating-without-extra-node='true']::after {
+  --antd-wave-shadow-color: none !important;
+}

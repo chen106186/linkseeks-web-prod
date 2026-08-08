@@ -1,0 +1,63 @@
+@import '@/styles/variables.scss';
+
+page {
+  background: #f6f6f6;
+}
+
+.main-box {
+  // background: #ffffff;
+  margin: 8px;
+  padding-bottom: 50px;
+}
+
+.info-box {
+  background-color: #ffffff;
+  padding: 8px 16px;
+  line-height: 26px;
+  .info-item1 {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+
+    .info-orgName {
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .info-status {
+      width: 120px;
+      text-align: center;
+      border-radius: 6px;
+      color: #ffffff;
+    }
+  }
+  .info-item2 {
+    display: flex;
+    align-items: center;
+    .info-memberType {
+      flex: 1;
+    }
+    .info-mode {
+      flex: 1;
+    }
+  }
+}
+
+.btn-operates {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  display: flex;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #fff;
+  .btn-operate {
+    flex: 1;
+    margin: 0 8px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $theme-color;
+    border-radius: 8px;
+    color: #ffffff;
+  }
+}

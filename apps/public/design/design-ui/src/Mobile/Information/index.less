@@ -1,0 +1,54 @@
+@import url('../common.less');
+
+.information-card {
+  padding: 8px;
+
+  &-body {
+    background-color: #FFF;
+    border-radius: 8px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+  }
+
+  &-label {
+    color: @mainColor;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    padding-right: 12px;
+    border-right: 1px solid rgb(0 0 0 / 4%);
+    margin-right: 12px;
+  }
+
+  &-title {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+    padding-left: 6px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #303133;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+
+  &-arrow {
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

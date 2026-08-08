@@ -1,0 +1,34 @@
+@import '@/global/styles/global.less';
+
+.policyBox {
+  width: 100%;
+  // height: 100vh;
+  background-color: #fff;
+
+  &_container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  & > h1 {
+    .font-height-color(24, 96, #303133, #F4F5F7);
+    .make-center(text);
+  }
+
+  & article {
+    padding: 50px;
+
+    h4 {
+      width: 96px;
+      .font-height-color(16, 48, #303133);
+      font-weight: 500;
+      margin-top: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      color: rgba(66, 82, 110, 1);
+      line-height: 22px;
+    }
+  }
+}

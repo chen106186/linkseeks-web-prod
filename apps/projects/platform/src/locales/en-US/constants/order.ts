@@ -1,0 +1,16 @@
+export default {
+  'constants.order.1': 'Inquiry Purchase',
+  'constants.order.2': 'Demand Purchasing',
+  'constants.order.3': 'Spot purchase',
+  'constants.order.4': 'Central Purchase',
+  'constants.order.5': 'Channel direct purchase',
+  'constants.order.6': 'Channel spot',
+  'constants.order.7': 'Points redemption',
+  'constants.order.8': 'Channel Points Exchange',
+  'constants.order.9': 'Purchase Request for Quotation Contract',
+  'constants.order.10': 'Purchase auction contract',
+  'constants.order.11': 'Purchase Tender Contract',
+  'constants.order.12': 'Purchase Requisition',
+  'constants.order.13': 'Cross Border',
+  'constants.order.14': 'Purchase Requisition Contract',
+}

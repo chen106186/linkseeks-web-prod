@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.shuttle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  &-describe {
+    margin-right: $spacing-h-sm;
+    font-size: $font-size-base;
+    color: $color-grey-3;
+  }
+}

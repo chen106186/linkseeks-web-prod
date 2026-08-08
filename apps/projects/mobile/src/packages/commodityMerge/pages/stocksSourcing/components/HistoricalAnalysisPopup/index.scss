@@ -1,0 +1,75 @@
+@import '@/styles/variables.scss';
+
+.historical-analysis {
+  background-color: #F4F5F7;
+}
+.historical-analysis-container {
+  display: flex;
+  flex-direction: column;
+}
+.historical-analysis-title {
+  flex-shrink: 0;
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #303133;
+  font-weight: 600;
+}
+.historical-analysis-content {
+  padding: 8px;
+}
+.statistic {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.statistic-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.statistic-name {
+  margin-bottom: 12px;
+  padding-right: 5px;
+  font-size: 12px;
+  color: #909399;
+}
+.statistic-value {
+  font-size: 14px;
+  color: $theme-color;
+}
+.statistic-value__danger {
+  color: rgb(255, 69, 58);
+}
+.statistic-line {
+  margin: 0 18px;
+  width: 1px;
+  height: 42px;
+  background-color: rgb(39, 39, 41, 0.1);
+}
+.tags {
+	position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+	z-index: 99;
+}
+.tags-item {
+  margin-right: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #F5F6F7;
+  background-color: #F5F6F7;
+}
+.tags-item__active {
+  color: $theme-color;
+  border-color: $theme-color;
+}
+.tags-item-name {
+  font-size: 12px;
+  color: #606266;
+}
+.tags-item-name__active {
+  color: $theme-color;
+}

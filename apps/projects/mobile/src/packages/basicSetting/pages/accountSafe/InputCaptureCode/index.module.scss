@@ -1,0 +1,95 @@
+@import "@/styles/variables.scss";
+$padding-m: 16px;
+$margin-m: 28px;
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  padding-bottom: 18px;
+  margin-left: -50;
+  margin-top: -50;
+  opacity: 0.8;
+  z-index: 88;
+}
+.page {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  flex: 1;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.test {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: #303133;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: $margin-m;
+}
+.tips {
+  color: #909399;
+  font-size: 12px;
+}
+.get-code-btn-wrap {
+	margin-top: 12px;
+}
+.get-code-btn {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #C8CACD;
+  margin-left: 16px;
+}
+.other {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: $padding-m;
+
+  .text {
+    background-color: #fff;
+    text-align: center;
+  }
+}
+.text {
+  color: $color-brand;
+  font-size: 14px;
+}
+.box-style {
+  background-color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-color: #c0c4cc;
+}
+.box-style-active {
+  border-bottom-color: #303133;
+}
+.cursor-style {
+  height: 25px;
+  width: 1px;
+  background-color: #303133;
+}
+
+.codeInput {
+  margin: 28px;
+  height: 40px;
+}

@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+
+.MobileView {
+  .Submit {
+    margin-top: 10vh;
+    width: 100%;
+    padding: 16px 0;
+    height: 48px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: $theme-color;
+    border-radius: 8px;
+  }
+}

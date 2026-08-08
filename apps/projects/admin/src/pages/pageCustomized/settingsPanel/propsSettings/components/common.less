@@ -1,0 +1,90 @@
+.setting_line {
+  margin-bottom: 12px;
+  display: flex;
+  background-color: #fff;
+
+  &_main {
+    position: relative;
+    flex: 1;
+  }
+
+  &_addItem {
+    flex: 1;
+    margin-top: 16px;
+
+    &_input {
+      width: 100%;
+    }
+
+    &_line {
+      display: flex;
+      margin-bottom: 16px;
+
+      &_label {
+        width: 80px;
+        font-size: 12px;
+        color: #909399;
+
+        &.height32 {
+          display: flex;
+          height: 32px;
+          align-items: center;
+        }
+      }
+
+      &_brief {
+        flex: 1;
+
+        .select_line {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  &_sort {
+    width: 32px;
+    background-color: #fafbfc;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 8px;
+  }
+
+  &_name {
+    display: flex;
+    flex: 1;
+    height: 32px;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #fafbfc;
+
+    & > .icon {
+      cursor: pointer;
+      // width: 32px;
+      // height: 32px;
+      // line-height: 32px;
+      margin: 0 12px;
+    }
+  }
+
+  &_operation {
+    margin-left: auto;
+    background-color: #fafbfc;
+    height: 32px;
+
+    &_btn {
+      margin-left: 16px;
+      width: 16px;
+
+      &_icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

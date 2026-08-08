@@ -1,0 +1,90 @@
+.advert_setting {
+  .advert_setting_title {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .advert_setting_line {
+    margin-bottom: 12px;
+    display: flex;
+
+    &_main {
+      position: relative;
+      flex: 1;
+    }
+
+    &_addItem {
+      flex: 1;
+      margin-top: 16px;
+
+      &_input {
+        width: 100%;
+      }
+
+      &_line {
+        display: flex;
+        margin-bottom: 16px;
+
+        &_label {
+          width: 80px;
+        }
+
+        &_brief {
+          flex: 1;
+        }
+      }
+    }
+
+    &_sort {
+      width: 32px;
+      background-color: #fafbfc;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    &_name {
+      display: flex;
+      flex: 1;
+      height: 32px;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #fafbfc;
+      padding-left: 12px;
+
+      & > .icon {
+        margin-left: auto;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+
+    &_operation {
+      &_btn {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .add_btn {
+    width: 100%;
+    border: 1px dashed #dfe1e6;
+  }
+}
+
+.line-subtitle {
+  color: #d7d7d7;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+.connect-button {
+  min-width: 80px;
+  margin: 0 -12px;
+}

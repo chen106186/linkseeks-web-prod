@@ -1,0 +1,90 @@
+@import '@/styles/variables.scss';
+@import "@/styles/utils/modal.scss";
+
+.select-option-icon {
+  width: 16px;
+  height: 16px;
+}
+.bottom-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 64px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sub-btn {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 8px;
+  width: 104px;
+  height: 48px;
+  background-color: $theme-color;
+  justify-content: center;
+  align-content: center;
+  border-radius: 6px;
+}
+.sub-un-btn{
+  background-color: #cccccc !important;
+}
+.btn-text {
+  font-size: 16px;
+  font-weight: 600px;
+}
+.price-warp {
+  display: flex;
+  align-items: flex-end;
+}
+.btn-price {
+  color: #ef3346;
+  font-size: 16px;
+	line-height: 16px;
+  font-weight: 600px;
+}
+.btn-price-small {
+  color: #ef3346;
+  font-size: 12px;
+	line-height: 13px;
+}
+.sub-btn-text {
+  line-height: 48px;
+  color: #ffffff;
+}
+.modelWrap{
+  background-color: #fff;
+  width: 296px;
+  height: 153px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 4;
+  .modelMmian{
+    padding: 0 20px;
+  .title{
+    font-family: PingFangSC-Medium;
+    font-weight: Medium;
+    font-size: 14px;
+    color: #303133;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F4F5F7;
+    position: relative;
+  }
+  .modeCard{
+    padding-top: 20px;
+     }
+
+  }
+  .closeIcon{
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    right: -5px;
+  }
+}
+
+.account-model {
+  @include new-index-at-model;
+}

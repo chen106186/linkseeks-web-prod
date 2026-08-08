@@ -1,0 +1,140 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow-multi-line.scss';
+.page {
+  background: #F4F5F7;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.search {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 4px;
+  height: 800px;
+
+  &_product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 8px;
+    width: 175px;
+    height: 265px;
+    margin: 4px;
+
+    &_mask {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 175px;
+      height: 175px;
+      padding-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-color: rgba(#000, 0.3);
+      font-size: 14px;
+      color: #FFF;
+      z-index: 10;
+    }
+
+    &_img {
+      width: 175px;
+      height: 175px;
+      border-radius: 8px;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    &_info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px;
+
+      &_main {
+        &_name {
+          font-size: 12px;
+          margin-bottom: 8px;
+          @include text-overflow-multi-line(2);
+          &:active {
+            opacity: 0.6;
+          }
+        }
+
+        &_frequency {
+          font-size: 12px;
+          color: #606266;
+
+          &_text {
+            padding: 0 4px;
+            border-radius: 4px;
+            background-color: #F4F5F7;
+          }
+        }
+      }
+
+      &_footer {
+        display: flex;
+        justify-content: space-between;
+
+        &_price {
+          display: flex;
+          align-items: flex-end;
+          color: #EF3346;
+          font-size: 16px;
+
+          &_currency {
+            font-size: 12px;
+          }
+        }
+
+        &_btn {
+          height: 24px;
+          line-height: 24px;
+          padding: 0 5px;
+          border-radius: 2px;
+          background-color: $color-success;
+          font-size: 12px;
+          color: #FFF;
+        }
+      }
+    }
+
+    .white_text {
+      font-size: 12px;
+      color: '#FFF',
+    }
+
+    .price {
+      font-size: 14px;
+      color: #EF3346;
+    }
+
+    .unit_color {
+      color: #91959B;
+    }
+  }
+}
+
+

@@ -1,0 +1,130 @@
+@import '@/styles/variables.scss';
+
+.statusLayout {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  background-color: #F4F5F7;
+  &-tabBar {
+    background-color: #FFFFFF;
+  }
+  &-scrollView {
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  &-customStyle {
+    margin-bottom: 8px;
+  }
+  &-cell {
+    display: flex;
+    min-width: 110px;
+    flex-direction: column;
+  }
+  &-dotLineBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  &-line {
+    flex-grow: 1;
+    margin: 0px 4px;
+    height: 1px;
+  }
+  &-cellTextBox {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+  &-cellText {
+    font-size: 12px;
+    color: #606266;
+    @include text-overflow();
+  }
+  &-timeLineBox {
+    // flex: 1;
+    display: flex;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  &-timeLineDot {
+    // position: absolute;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+    margin-top: 3px;
+  }
+  &-timeLineIcon {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #EBEDF0;
+    position: relative;
+    z-index: 999;
+  }
+  &-timeLine {
+    width: 1px;
+    flex-grow: 1;
+    margin-top: -7px;
+    margin-bottom: -11px;
+    background-color: #EBEDF0;
+  }
+  &-timeLineInfoBox {
+    flex: 1;
+    flex-direction: column;
+    padding-left: 12px;
+  }
+  &-timeLineBeforeInfoBox {
+    flex: 1;
+    flex-direction: column;
+    padding-left: 12px;
+  }
+  &-timeLineTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-timeLineTitleAfterStyle {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &-timeLineTitlebeforeStyle {
+    font-size: 12px;
+    // font-weight: 700;
+    color: #909399;
+  }
+  &-timeLineTimeStyle {
+    font-size: 12PX;
+    color: #909399;
+  }
+  &-timeLineInfo {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  &-timeLineInfoAfterStyle {
+    font-size: 12px;
+  }
+  &-timeLineInfobeforeStyle {
+    font-size: 12px;
+    color: #909399;
+  }
+  &-auditOpinion {
+    flex: 1;
+    border-radius: 4px;
+    padding: 6px 8px;
+    background-color: #F7F8FA;
+  }
+  .at-tabs__body {
+    flex: 1;
+    overflow: hidden;
+    background-color: #F5F6F7;
+  }
+}

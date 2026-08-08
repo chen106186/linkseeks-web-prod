@@ -1,0 +1,34 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+.rulesLayout {
+  :global {
+    .ant-radio-button-wrapper {
+      min-width: 80px;
+      // max-width: 80px;
+      text-align: center;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .ant-checkbox {
+      display: none;
+    }
+    .ant-checkbox-wrapper {
+      min-width: 80px;
+      // max-width: 80px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 400;
+      padding: 5.6px 0px;
+      border: 1px solid transparent;
+      // box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+      border-color: #d9d9d9;
+      justify-content: center;
+    }
+    .ant-checkbox-wrapper-checked {
+      color: @color-primary;
+      border-color: @color-primary;
+    }
+    .inputWidth {
+      width: 160px;
+    }
+  }
+}

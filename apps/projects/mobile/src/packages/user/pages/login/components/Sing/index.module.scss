@@ -1,0 +1,92 @@
+@import '@/styles/variables.scss';
+
+.MobileView {
+  :global{
+    .at-input {
+      flex: 1 !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      background: #F4F4F4;
+    }
+    .at-action-sheet__container {
+      border-radius: 25px 25px 0 0 !important;
+      height: 240px;
+    }
+  }
+  .Text {
+    color: #C0C4CC;
+    font-size: 14px;
+  }
+
+  .fromItem {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 12px;
+    background: #F4F4F4;
+    border-radius: 8px;
+
+    .code {
+      font-size: 14px;
+    }
+
+    .placeholderText {
+      @extend .Text;
+    }
+
+    Input {
+      flex: 1;
+      color: #303133;
+      font-size: 14px;
+      border: none !important;
+    }
+
+    .fill {
+      padding: 0 10px;
+      border-right: 1px solid #F4F5F7;
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+
+      Image ,taro-image-core {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .fromFlex {
+    @extend .fromItem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    taro-text-core, Text {
+      border-left: 1px solid #F4F5F7;
+      padding-left: 14px;
+      width: 70px;
+      text-align: center;
+      @extend .Text;
+    }
+
+    .placeholderText {
+      @extend .Text;
+    }
+
+    Image ,taro-image-core {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .Submit {
+    width: 100%;
+    padding: 16px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: $theme-color;
+    border-radius: 8px;
+  }
+}

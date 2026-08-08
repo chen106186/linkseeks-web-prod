@@ -1,0 +1,10 @@
+.check-voucher {
+  background-color: #F4F5F7;
+  position: relative;
+
+  &-item {
+    > Image ,taro-image-core {
+      width: 100% !important;
+    }
+  }
+}

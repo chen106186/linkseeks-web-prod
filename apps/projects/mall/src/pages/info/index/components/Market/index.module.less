@@ -1,0 +1,129 @@
+.market-main {
+  display: flex;
+}
+
+.market-left-warp {
+  width: 288px;
+  padding: 0 24px;
+  background: #fff;
+
+  .market-left-content {
+    position: relative;
+    margin-bottom: 24px;
+    color: #303133;
+
+    .left-time {
+      float: right;
+      color: #909399;
+    }
+  }
+
+  .market-left-content:hover .title-hover {
+    color: var(--mall-main-color);
+  }
+}
+
+.market-right-warp {
+  margin-left: 17px;
+  background: #fff;
+  flex: 1;
+  padding: 0 24px;
+
+  .nav-warp {
+    height: 55px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #f7f8fa;
+
+    .nav-title {
+      color: #303133;
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 2px solid var(--mall-main-color);
+      margin-right: 44px;
+    }
+  }
+
+  .nav-search-warp {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-bottom: 0;
+
+    .nav-search-item {
+      padding: 0 12px;
+      background: #f4f5f7;
+      color: #606266;
+      height: 24px;
+      line-height: 24px;
+      margin-right: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .nav-search-item-select {
+      background: var(--mall-main-color);
+      color: #fff;
+    }
+
+    .nav-search-item:hover {
+      background: var(--mall-main-color);
+      color: #fff;
+    }
+  }
+
+  .nav-search-more {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .newest-message {
+    background: #e4f7ef;
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+    color: #303133;
+    font-size: 14px;
+    padding-right: 16px;
+    margin: 24px auto;
+
+    .newest-message-left {
+      flex: 1;
+    }
+
+    .newest-message-right {
+      color: var(--mall-main-color);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .newest-tips {
+      color: #fff;
+      background: var(--mall-main-color);
+      width: 48px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 16px;
+    }
+  }
+
+  .market-right-content-warp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.newest-message-main {
+  height: 72px;
+  overflow: hidden;
+}
+
+.newest-message-warp {
+  position: relative;
+  top: 0;
+}
+
+.has-transition {
+  transition: 0.35s;
+}

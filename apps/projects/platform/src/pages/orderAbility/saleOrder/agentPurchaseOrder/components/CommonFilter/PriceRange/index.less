@@ -1,0 +1,71 @@
+.filter_price {
+  padding: 0px 16px 16px 0;
+
+  .price_box {
+    display: flex;
+    font-size: 14px;
+    color: #303133;
+    align-items: center;
+    margin-top: 16px;
+
+    .price_box_brief {
+      color: #909399;
+      font-size: 12px;
+    }
+
+    .price_range {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+
+      .price_input {
+        width: 72px;
+        height: 32px;
+      }
+
+      & > .split {
+        width: 24px;
+        text-align: center;
+      }
+    }
+
+    .confirm_btn {
+      background-color: #00a98f;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+
+      &_icon {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      &.disabled {
+        background-color: #edeeef;
+
+        .confirm_btn_icon {
+          color: #dee0e2;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.price_text {
+  & > b {
+    margin-left: 5px;
+    color: #d32f2f;
+  }
+}

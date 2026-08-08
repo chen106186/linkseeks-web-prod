@@ -1,0 +1,70 @@
+.common_title {
+  font-size: 14px;
+  color: #303133;
+  padding: 16px;
+  // border-bottom: 2px solid #EEF0F3;
+  line-height: 14px;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+
+  &_icon {
+    color: #909399;
+    margin-left: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+
+    & > img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  & > span {
+    font-weight: 500;
+  }
+
+  &_amount {
+    margin-left: auto;
+    color: #606266;
+
+    & > span {
+      color: #d32f2f;
+      font-size: 20px;
+      margin: 0 5px;
+    }
+  }
+
+  &_btn {
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.pay_btn {
+  display: block;
+  width: 160px;
+  text-align: center;
+  color: #fff;
+  height: 50px;
+  outline: none;
+  font-size: 16px;
+  border-color: var(--mall-main-color);
+  background-color: var(--mall-main-color);
+  cursor: pointer;
+  margin: 20px auto 0;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.9;
+    border-color: var(--mall-main-color);
+    color: #fff;
+    background-color: var(--mall-main-color);
+  }
+}

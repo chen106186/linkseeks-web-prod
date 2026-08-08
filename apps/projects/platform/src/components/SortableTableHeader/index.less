@@ -1,0 +1,46 @@
+@import '~antd/es/style/themes/default.less';
+
+@draggable-header-prefix: draggable-header;
+
+.sortable-header-cell {
+  cursor: pointer;
+  transition: all .3s !important;
+  position: relative;
+  user-select: none;
+  overflow: visible;
+
+  &__active {
+    &:hover {
+      padding-left: @padding-md * 2;
+      background-color: #EBF9F6;
+      
+      .@{draggable-header-prefix}-handle {
+        opacity: 1;
+      }
+  
+      .resizable-handle {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .@{draggable-header-prefix} {
+    &-handle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: @padding-xs;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      cursor: grabbing;
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+    }
+  }
+}

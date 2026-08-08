@@ -1,0 +1,7 @@
+export default {
+  view: {
+    headerMeta: false,
+    paddingMeta: false,
+    menuMeta: false,
+  },
+}

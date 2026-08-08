@@ -1,0 +1,62 @@
+@import url('../../commonly.less');
+
+.album-main {
+  @main();
+
+  background-color: transparent;
+  padding: 24px 0;
+
+  .album-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .img-warp {
+    display: flex;
+    justify-content: space-between;
+
+    .album-img-item {
+      width: 384px;
+      height: 258px;
+    }
+
+    .album-img-item:nth-child(3n) {
+      margin-right: 0 !important;
+    }
+  }
+
+  .direction-icon {
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #909399;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: 0.35s;
+    border-radius: 50%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .direction-icon-left {
+    left: 8px;
+  }
+
+  .direction-icon-right {
+    right: 8px;
+  }
+
+  .direction-icon:hover {
+    opacity: 1;
+  }
+
+  .carousel-warp {
+    position: relative;
+    padding-top: 24px;
+  }
+}

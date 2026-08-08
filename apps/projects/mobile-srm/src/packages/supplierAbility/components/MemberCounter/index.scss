@@ -1,0 +1,75 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/common.scss';
+
+.member-counter {
+  padding-right: $spacing-h-lg;
+  padding-left: $spacing-h-lg;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-lg 0;
+    @include border-thin-bottom($color-bg-base);
+
+    &-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    &-extra {
+      flex-shrink: 0;
+      margin-left: $spacing-h-lg * 2;
+    }
+  }
+
+  &-name {
+    font-size: $font-size-sm;
+    color: $color-black-1;
+    font-weight: 500;
+    @include text-overflow();
+  }
+
+  &-arrow {
+    margin-left: $spacing-h-sm;
+    font-size: $font-size-sm;
+    color: $color-black-1;
+  }
+
+  &-status {
+    font-size: $font-size-sm;
+    color: $color-black-3;
+  }
+
+  &-body {
+    padding-top: $spacing-v-md;
+  }
+
+  &-amount {
+    font-size: $font-size-lg;
+    color: rgb(255, 59, 48);
+  }
+
+  &-foot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: $spacing-v-lg;
+    padding-bottom: $spacing-v-lg;
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      flex-shrink: 0;
+    }
+  }
+}

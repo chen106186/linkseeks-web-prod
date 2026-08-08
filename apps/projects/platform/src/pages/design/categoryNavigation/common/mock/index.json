@@ -1,0 +1,55 @@
+{
+  "style": 0,
+  "category": [
+    {
+      "id": 1,
+      "visible": false,
+      "name": "家用电器家用电器",
+      "children": {
+        "secondary": {
+          "title": "二级导航",
+          "children": [
+            {
+              "id": 2,
+              "icon": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/67801ffb5b1188be5a260408c77792aa55aeaf3a45d54188abf3d97321ca9956.jpeg",
+              "name": "衣机洗衣机凉凉"
+            },
+            {
+              "id": 3,
+              "icon": "https://shushangyun01.oss-cn-shenzhen.aliyuncs.com/67801ffb5b1188be5a260408c77792aa55aeaf3a45d54188abf3d97321ca9956.jpeg",
+              "name": "热水器"
+            }
+          ]
+        },
+        "flashSale": {
+          "visible": true,
+          "title": "限时抢购",
+          "children": [130]
+        },
+        "saleRanking": {
+          "visible": true,
+          "title": "销量排行榜",
+          "children": [
+            { "id": 341, "sale": 5000 },
+            { "id": 342, "sale": 10000 }
+          ]
+        },
+        "brand": {
+          "visible": true,
+          "title": "精选品牌",
+          "children": [62, 69, 65]
+        },
+        "suggestProduct": {
+          "visible": true,
+          "title": "新品 - 自定义商品(装修那里需要显示商品, 并且可以设置活动标签)",
+          "type": 3,
+          "num": null,
+          "children": [
+            { "id": 341, "label": ["特价", "满299减30"] },
+            { "id": 342, "label": ["特价", "满299减30", "赠帆布袋"] }
+          ]
+        }
+      }
+    }
+  ]
+}

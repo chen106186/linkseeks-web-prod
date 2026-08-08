@@ -1,0 +1,50 @@
+@prefixCls: lingxi;
+@headerNavDefaultColor: #fff;
+@headerNavScienceColor: #3877ff;
+
+.mall_latyout {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #f7f8fa;
+}
+
+.@{prefixCls}-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  width: 375px;
+  left: 0;
+  height: 50px;
+  background-color: #fff;
+
+  &-list {
+    display: flex;
+
+    &-item {
+      flex: 1;
+      display: flex;
+      height: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.hide {
+        display: none;
+      }
+
+      &-icon {
+        width: 24px;
+        margin-bottom: 2px;
+        height: 24px;
+        border: none;
+        outline: none;
+      }
+
+      &-name {
+        font-size: 12px;
+        line-height: 16px;
+        color: #909399;
+      }
+    }
+  }
+}

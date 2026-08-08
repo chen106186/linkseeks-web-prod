@@ -1,0 +1,17 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+.product {
+  &-evaluate-record {
+    margin: 0 $spacing-h-lg;
+
+    &-item {
+      width: 100%;
+      padding: $spacing-v-lg 0;
+
+      &__border {
+        @include border-thin-bottom($color-bg-grey);
+      }
+    }
+  }
+}

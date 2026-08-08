@@ -1,0 +1,217 @@
+.meal_comodity {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 16px;
+
+  .tab {
+    padding: 0 16px;
+
+    .mealGroupPaneWray {
+      position: relative;
+      z-index: 5;
+      flex: 1;
+      overflow: hidden;
+
+      .groupPane {
+        display: flex;
+        flex-direction: row;
+        margin-right: -12px;
+
+        &.meal {
+          position: relative;
+          display: block;
+          margin-right: 0;
+          white-space: nowrap;
+          transition: all 0.3s;
+        }
+
+        .groupCommodityItem {
+          // flex-basis: 33.3%;
+          width: 33.33%;
+          padding-right: 12px;
+          background-color: #fff;
+          cursor: pointer;
+
+          .commodity {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #fff;
+            width: 120px;
+            height: 100%;
+
+            &-image {
+              width: 100%;
+              height: 120px;
+              border: 1px solid #f5f6f7;
+              border-radius: 4px;
+            }
+
+            &-info {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              &-name {
+                font-size: 12px;
+                height: 32px;
+                line-height: 16px;
+                color: #252d37;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                margin: 8px 0;
+                word-break: break-all;
+              }
+
+              &-price {
+                display: flex;
+                align-items: center;
+
+                .originalPrice {
+                  font-size: 14px;
+                  color: #e34d59;
+                  line-height: 20px;
+                  font-weight: 500;
+                }
+              }
+
+              &-num {
+                margin-left: auto;
+                color: #91959b;
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+          }
+
+          &.meal {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            margin-right: 16px;
+            padding-right: 0;
+            white-space: pre-wrap;
+          }
+
+          .productImgPrice {
+            margin-top: 4px;
+            color: #e34d59;
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .arrowButton {
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        font-size: 14px;
+        background: rgb(0 0 0 / 32%);
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.prev {
+          left: -18px;
+          padding-right: 6px;
+        }
+
+        &.next {
+          right: -18px;
+          justify-content: flex-start;
+          padding-left: 6px;
+        }
+      }
+    }
+
+    .meal_price_wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      line-height: 16px;
+
+      .price_space {
+        margin: 0 4px;
+
+        .meal_price {
+          margin: 0 4px;
+          color: #e34d59;
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+
+      span {
+        color: #91959b;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+
+    .hot-commodity {
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 16px;
+
+      img {
+        width: 120px;
+        height: 120px;
+        border: 1px solid #f5f6f7;
+        border-radius: 4px;
+      }
+
+      .hot-commodity-info {
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+
+        .hot-commodity-info-name {
+          font-size: 14px;
+          line-height: 20px;
+          color: #252d37;
+          font-weight: 600;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+
+          /*! autoprefixer: off */
+          -webkit-box-orient: vertical;
+        }
+
+        .hot-commodity-info-price {
+          margin-top: auto;
+
+          .originalPrice {
+            font-size: 16px;
+            color: #e34d59;
+            font-weight: 500;
+          }
+        }
+
+        .commodity-info-hasSold {
+          font-size: 12px;
+          color: #91959b;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

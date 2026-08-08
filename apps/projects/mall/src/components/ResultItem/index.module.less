@@ -1,0 +1,52 @@
+.hotspot-time-main {
+  display: flex;
+  padding: 12px 0 23px;
+}
+
+.hotspot-time-warp {
+  display: flex;
+  color: #909399;
+  align-items: center;
+
+  .hotspot-time-icon {
+    // border: 1px dashed #cccccc;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+}
+
+.hotspot-time-warp:nth-child(2) {
+  margin-left: 16px;
+}
+
+.result-warp {
+  border-bottom: 1px solid #f4f5f7;
+  position: relative;
+}
+
+.result-warp:last-child {
+  border-bottom: 0;
+}
+
+.result-warp:hover .result-title {
+  color: var(--mall-main-color);
+}
+
+.result-title {
+  font-size: 16px;
+  color: #303133;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+.result-second-title {
+  font-size: 14px;
+  color: #606266;
+  margin: 16px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,37 @@
+@import '../../../../global/styles/utils.less';
+
+.contractList {
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    padding: 6px 8px;
+    background: #F4F5F7;
+    border-radius: 4px;
+    list-style: none;
+
+    > a {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 4px;
+      color: #7178EA;
+    }
+
+    &-name {
+      flex: 1;
+      .textOverflow();
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.noData {
+  color: #909399;
+}

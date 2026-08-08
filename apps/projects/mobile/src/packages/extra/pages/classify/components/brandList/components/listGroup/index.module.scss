@@ -1,0 +1,63 @@
+@import '@apps/mobile-ui/packages/styles/mixins/libs/border.scss';
+@import '@/styles/variables.scss';
+
+$list-group-prefix: 'list-group';
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-title {
+    padding: $spacing-v-md 0 $spacing-v-md $spacing-h-sm - 2;
+    font-size: $font-size-sm;
+    color: #303133;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-lg 0;
+
+    &__border {
+      @include border-thin-bottom($color-bg-grey);
+    }
+
+    &-avatar {
+      width: 32px;
+      height: 32px;
+      margin-right: $spacing-h-md;
+      background-color: #FFFFFF;
+      border-radius: 2px;
+      position: relative;
+      @include border-thin($color-bg-grey);
+
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &-name {
+      font-size: $font-size-sm;
+      color: #303133;
+    }
+  }
+
+  &:last-child {
+    .#{$list-group-prefix}-item__border {
+      border-bottom: none;
+    }
+  }
+}

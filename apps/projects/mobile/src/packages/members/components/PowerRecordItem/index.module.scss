@@ -1,0 +1,44 @@
+.list {
+  width: 100%;
+  background-color: #ffffff;
+}
+.list-item {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  border-color: #f4f5f7;
+  background-color: #ffffff;
+}
+.list-item-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.list-item-name {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #303133;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-item-desc {
+  font-size: 14px;
+  color: #909399;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-item-score {
+  font-size: 14px;
+  color: rgb(28, 28, 30);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-item-right {
+  flex-shrink: 0px;
+}

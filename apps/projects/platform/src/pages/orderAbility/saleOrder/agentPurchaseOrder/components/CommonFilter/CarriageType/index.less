@@ -1,0 +1,50 @@
+@import '../../../common.less';
+
+.filter_style {
+  padding: 15px 20px 8px 0;
+
+  :global {
+    .ant-checkbox-group-item {
+      font-size: 12px;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .ant-checkbox {
+      position: relative;
+      top: 3px;
+    }
+
+    .ant-checkbox-wrapper {
+      font-size: 12px;
+    }
+
+    .ant-checkbox-checked::after {
+      border: 1px solid @mainColor;
+    }
+
+    .ant-checkbox-input {
+      &:active,
+      &:hover,
+      &:focus {
+        + .ant-checkbox-inner {
+          border-color: @mainColor;
+        }
+      }
+    }
+
+    .ant-checkbox-group-item {
+      &:hover,
+      &:active {
+        .ant-checkbox-inner {
+          border-color: @mainColor;
+        }
+      }
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @mainColor;
+      border-color: @mainColor;
+    }
+  }
+}

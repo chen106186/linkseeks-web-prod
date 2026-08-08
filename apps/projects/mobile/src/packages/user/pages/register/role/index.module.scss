@@ -1,0 +1,65 @@
+
+@import '@/styles/variables.scss';
+
+.container{
+  padding: 16px 8px;
+  height: 100vh;
+	display: flex;
+  flex-direction: column;
+  .RoleName{
+		padding: 0 16px;
+    font-size: 24px;
+    font-family: PingFangSC-Regular;
+    color: #303133;
+  }
+  .RoleText{
+    font-size: 14px;
+    color: #606266;
+    padding: 5px 16px;
+  }
+  .RoleList{
+		padding: 0 16px;
+    margin-top: 20px;
+		flex: 1;
+		overflow-x: hidden;
+    .RoleListItem{
+      display: flex;
+      align-items: center;
+      background-color: #FAFBFC;
+      padding: 10px;
+      margin-bottom: 20px;
+      Image, taro-image-core {
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      Text{
+        font-size: 16px;
+      }
+    }
+    .RoleListItemAtive{
+      @extend .RoleListItem;
+      background: rgba(0,169,143,0.04);
+      border: 1px solid $theme-color;
+      border-radius: 16px;
+    }
+
+  }
+}
+
+.foot {
+	text-align: center;
+	border-radius: 20px;
+
+	.btn {
+		width: 100%;
+		padding: 16px 0;
+		color: #fff;
+		font-size: 16px;
+		line-height: 16px;
+		text-align: center;
+		background: $theme-color;
+		border-radius: 8px;
+	}
+}

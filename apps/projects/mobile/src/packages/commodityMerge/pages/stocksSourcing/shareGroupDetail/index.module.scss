@@ -1,0 +1,48 @@
+@import '@/styles/variables.scss';
+
+.navBar {
+  background-color: $theme-color;
+  color: #fff !important;
+}
+
+.navBar-title {
+  color: #fff;
+}
+
+.processingNavBar,
+.successNavBar {
+  background: rgba(0, 169, 143, 1);
+}
+
+.failNavBar {
+  background-color: #61666e;
+}
+
+.tips {
+  background-color: $theme-color;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.80) 100%);
+  padding-top: 24px * $hd;
+  padding-bottom: 56px * $hd;
+}
+
+.processing-tips,
+.success-tips {
+  background: rgba(0, 169, 143, 1);
+}
+
+.fail-tips {
+  background-color: #61666e;
+}
+
+.product {
+  margin: -56px * $hd $spacing-h-md 0 $spacing-h-md;
+
+  .slogan {
+    color: #91959B;
+    font-size: 10px * $hd;
+  }
+}
+
+.inTeamPeople {
+  margin: $spacing-h-md $spacing-h-md 0 $spacing-h-md;
+}

@@ -1,0 +1,92 @@
+import { useIntl } from '@linkseeks/i18n'
+import React from 'react'
+import { Image, Button, Typography } from 'antd'
+import { getIntl } from '@linkseeks/i18n'
+const intl = getIntl()
+
+const columns_10 = ({ value, handlCollocation, showExecution, toggle }) => {
+  return [
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.productID' })}`,
+      key: 'productId',
+      dataIndex: 'productId',
+      render: (text) => (
+        <Typography.Link target="_blank" href={`/commodityAbility/commodity/products/detail?id=${text}`}>
+          {text}
+        </Typography.Link>
+      ),
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.commodityImages' })}`,
+      key: 'productImgUrl',
+      dataIndex: 'productImgUrl',
+      render: (text) => <Image width={32} height={32} src={text} />,
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.nameOfCommodity' })}`,
+      key: 'productName',
+      dataIndex: 'productName',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.category' })}`,
+      key: 'category',
+      dataIndex: 'category',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.brand' })}`,
+      key: 'brand',
+      dataIndex: 'brand',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.unit' })}`,
+      key: 'unit',
+      dataIndex: 'unit',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.commodityPrices' })}`,
+      key: 'price',
+      dataIndex: 'price',
+      render: (text) => `${intl.formatMessage({ id: 'common.money' })}${Number(text).toFixed(2)}`,
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.individualPurchaseQuantity' })}`,
+      key: 'restrictNum',
+      dataIndex: 'restrictNum',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.numberPurchasingActivities' })}`,
+      key: 'restrictTotalNum',
+      dataIndex: 'restrictTotalNum',
+    },
+    {
+      title: `${intl.formatMessage({ id: 'marketingAbility.operation' })}`,
+      key: 'operation',
+      dataIndex: 'operation',
+      render: (_text, _record) => (
+        <>
+          {value === 6 && (
+            <Button type="link" onClick={() => handlCollocation(_record)}>
+              {intl.formatMessage({ id: 'marketingAbility.viewTheGift' })}
+            </Button>
+          )}
+          {value === 13 && (
+            <Button type="link" onClick={() => handlCollocation(_record)}>
+              {intl.formatMessage({ id: 'marketingAbility.checkForGoods' })}
+            </Button>
+          )}
+          {value === 15 && (
+            <Button type="link" onClick={() => handlCollocation(_record)}>
+              {intl.formatMessage({ id: 'marketingAbility.viewTheCollocationOfGoods' })}
+            </Button>
+          )}
+          {showExecution && (
+            <Button type="link" style={{ padding: 0 }} onClick={() => toggle(true, _record)}>
+              执行明细
+            </Button>
+          )}
+        </>
+      ),
+    },
+  ]
+}
+export default columns_10

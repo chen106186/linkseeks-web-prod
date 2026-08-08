@@ -1,0 +1,71 @@
+@import '@/styles/variables.scss';
+.category {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 8px;
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 0px;
+  }
+  .title {
+    color: #303133;
+    font-size: 14px;
+    flex: 1;
+    font-weight: bold;
+  }
+  .clearHistoryBtn {
+    color: #909399;
+    font-size: 12px;
+  }
+  .historyList1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -6px;
+    overflow: hidden;
+  }
+  .historyItem {
+    height: 24px;
+    width: 33.33%;
+    margin: 6px 0px;
+    padding: 0px 6px;
+    background-color: #FFF;
+  }
+  .itemBody {
+    background-color: #F4F5F7;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    overflow: hidden;
+    padding: 0px 4px;
+    border-radius: 4px;
+  }
+  .historyItemText {
+    font-size: 12px;
+    color: #606266;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .max_height {
+    max-height: 102px;
+  }
+  .max_height_auto {
+    max-height: auto;
+  }
+  .historyListMore {
+    font-size: 12px;
+    color: #009688;
+    text-align: center;
+    padding: 12px 0px;
+  }
+}

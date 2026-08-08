@@ -1,0 +1,177 @@
+@import url('../common.less');
+
+.information {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  margin-top: 16px;
+
+  .type_list {
+    margin-left: auto;
+    display: flex;
+
+    &_item {
+      width: 56px;
+      font-size: 12px;
+      color: #909399;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        position: relative;
+        color: #303133;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 24px;
+          height: 2px;
+          background-color: var(--mall-main-color);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .type_more {
+    color: #909399;
+    font-size: 12px;
+    width: 84px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .information_body {
+    padding: 24px;
+    display: flex;
+
+    .show_data_box {
+      width: 146px;
+      height: 224px;
+      background-color: #fafbfc;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+
+      .data_name {
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 16px;
+      }
+
+      .data_price {
+        font-size: 18px;
+        color: #d32f2f;
+        line-height: 18px;
+        font-weight: 500;
+      }
+
+      .data_unit {
+        font-size: 12px;
+        color: #909399;
+        line-height: 12px;
+        margin-top: 16px;
+      }
+
+      .data_rate {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+
+        .rate_box {
+          background-color: #ffebe6;
+          padding: 0 4px;
+          height: 16px;
+          line-height: 16px;
+          color: #e63f3b;
+          font-size: 12px;
+          margin-right: 4px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        & > span {
+          color: #909399;
+          font-size: 12px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .chart_box {
+      flex: 1;
+      width: 0;
+      padding: 0 24px;
+    }
+  }
+
+  .purchase_publicity {
+    width: 388px;
+
+    &_title {
+      height: 64px;
+      border: 1px solid #f4f5f7;
+      display: flex;
+      align-items: center;
+      padding: 0 22px;
+    }
+
+    .publicity_type {
+      display: flex;
+      align-items: center;
+
+      &_item {
+        height: 24px;
+        border-radius: 17px;
+        display: flex;
+        align-items: center;
+        background-color: #f4f5f7;
+        padding: 0 12px;
+        margin-right: 8px;
+        color: #606266;
+        font-size: 12px;
+        cursor: pointer;
+
+        &.active {
+          background-color: #e4f7ef;
+          color: #00a98f;
+        }
+      }
+    }
+
+    .purchase_publicity_body {
+      padding: 24px;
+      border-left: 1px solid #f4f5f7;
+
+      .publicity_list {
+        padding-bottom: 24px;
+
+        &_item {
+          color: #303133;
+          font-size: 14px;
+          line-height: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+
+    .publicity_more {
+      color: #909399;
+      font-size: 12px;
+      margin-left: auto;
+    }
+  }
+}

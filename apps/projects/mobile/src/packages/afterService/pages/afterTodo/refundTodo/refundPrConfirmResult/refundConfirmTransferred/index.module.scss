@@ -1,0 +1,35 @@
+@import '@/styles/variables.scss';
+
+.refund-confirm-transferred {
+  &-content {
+    padding: $spacing-v-md $spacing-h-md;
+  }
+  
+  .actions {
+    padding: $spacing-v-md $spacing-h-sm;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+    background-color: #FFFFFF;
+
+    &-item {
+      flex: 1;
+      padding: 0 $spacing-h-sm;
+    }
+  }
+
+  .refundTabWrap {
+    &-item {
+      flex: 1 0 0;
+      
+      &-small {
+        flex: 0 0 327px;
+        padding-right: $spacing-h-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.card-main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.card-warp {
+  display: flex;
+  padding: 12px;
+  background-color: #ffffff;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.shop-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.card-title {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.small-font {
+  font-size: 12px;
+  line-height: 40px;
+}
+.left-titlr {
+  font-size: 14px;
+  color: #91959b;
+  width: 70px;
+}
+.textl {
+  color: red;
+}
+.img-list-main {
+  display: flex;
+  align-items: center;
+}
+.img-list-warp {
+  flex: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.commoduty-img {
+  width: 54px;
+  height: 54px;
+  margin-right: 8px;
+}
+.logistics-warp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.logistics-icon {
+  display: flex;
+  align-items: center;
+}
+.ingpu-warp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ingpu-warp-twp{
+  display: flex;
+  justify-content: space-between;
+	:global{
+    .at-textarea {
+      border: 0;
+    }
+    textarea,.taro-textarea{
+      font-size: 14px;
+      top: 3px;
+			text-align: right;
+    }
+  }
+}
+.ingput-tips {
+  font-size: 12px;
+  margin-right: 6px;
+}
+.input-text {
+  display: flex;
+  width: 240px;
+  margin-left: 3px;
+  align-items: center;
+  font-size: 14px;
+}
+.commoduty-only {
+  display: flex;
+  align-items: center;
+}
+.commoduty-img-only {
+  width: 80px;
+  height: 80px;
+  margin-right: 8px;
+}
+.only-title {
+  color: #252d37;
+  font-size: 12px;
+  font-weight: 400px;
+}
+.commoduty-only-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.content-title {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  flex-wrap: wrap;
+}
+.content-type {
+  font-size: 12px;
+  color: #919598;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+.price-warp {
+  display: flex;
+  justify-content: space-between;
+}
+.price-left {
+  display: flex;
+  align-items: flex-end;
+}
+.icon-tips-size {
+  color: #ef3346;
+  font-size: 12px;
+	line-height: 1;
+}
+.money-size {
+  font-size: 16px;
+	line-height: .9;
+  color: #ef3346;
+}
+.money-uni {
+  font-size: 12px;
+  color: #919598;
+}
+.inputText{
+  height: 40px;
+  font-size: 12px;
+  text-align: right;
+  padding: 0 8px;
+}
+.inputTextIos{
+  height: 40px;
+  font-size: 12px;
+  text-align: right;
+  padding: 0 8px;
+  overflow: hidden;
+	::placeholder{
+		color: #C8CACD;
+	}
+}
+.discount-main {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 60vw;
+  font-size: 12px;
+}
+.discount-warp {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.discount-content {
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.color-red {
+  color: red;
+  font-size: 12px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-tips-warp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: #ffffff;
+  align-items: center;
+  padding-bottom: 6px;
+}

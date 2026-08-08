@@ -1,0 +1,48 @@
+.process-main {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+
+  .process-item-warp {
+    background: #f7f8fa;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px 65px;
+  }
+
+  .process-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #6278ed;
+    text-align: center;
+    line-height: 60px;
+    color: #6278ed;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .process-item:hover {
+    color: #fff;
+    background: #6278ed;
+  }
+
+  .process-tips {
+    color: #303133;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.process-main::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  border-bottom: 1px dashed #6278ed;
+  left: 0;
+  top: 30px;
+}

@@ -1,0 +1,127 @@
+@import "@/styles/variables.scss";
+
+$middlesize: 14px;
+
+.userinfo-container {
+  margin: 0;
+  height: 100%;
+  background-color: #f4f5f7;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.head {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.warp {
+  padding: 8px;
+  width: 100%;
+}
+.left {
+  flex: 1;
+}
+.tag {
+  margin-left: 5px;
+  color: $theme-color;
+  background-color: #e4f7ef;
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 2px;
+}
+.name {
+  flex-direction: row;
+  align-items: center;
+}
+.userinfo-text {
+  font-size: $middlesize;
+}
+.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.loading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin-top: 10px;
+  color: #909399;
+  font-size: $middlesize;
+}
+.mian {
+  background-color: #fff;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-width: 1px;
+  border-bottom-color: #f4f5f7;
+  border-bottom-style: solid;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+.boxleft {
+  font-size: $middlesize;
+  color: #303133;
+}
+.boxright {
+  font-size: $middlesize;
+  color: #909399;
+}
+.logout {
+  margin-top: 5px;
+  width: 100%;
+  background-color: #f4f5f7;
+}
+.logout-btn {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px 15px;
+}
+.logout-text {
+  color: #000;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: 500px;
+  padding-bottom: 12px;
+}
+.foot {
+  // padding-left: 15px;
+  // padding-right: 15px;
+  border-radius: 5px;
+  padding: 15px;
+}

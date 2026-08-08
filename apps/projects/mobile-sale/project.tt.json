@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "业务员小程序",
+  "description": "小程序和h5",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

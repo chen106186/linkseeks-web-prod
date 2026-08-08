@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/砍价</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF3457" offset="0%"></stop>
+            <stop stop-color="#FF738C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/砍价" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标">
+            <circle id="椭圆形" fill="url(#linearGradient-1)" cx="8" cy="8" r="8"></circle>
+            <rect id="矩形" x="2" y="2" width="12" height="12"></rect>
+        </g>
+        <path d="M6,3.5 C6,3.22385763 6.22385763,3 6.5,3 L9.5,3 C9.77614237,3 10,3.22385763 10,3.5 L10,8 L11.7928932,8 C11.9255015,8 12.0526784,8.05267842 12.1464466,8.14644661 C12.3417088,8.34170876 12.3417088,8.65829124 12.1464466,8.85355339 L12.1464466,8.85355339 L8.35355339,12.6464466 C8.15829124,12.8417088 7.84170876,12.8417088 7.64644661,12.6464466 L7.64644661,12.6464466 L3.85355339,8.85355339 C3.7597852,8.7597852 3.70710678,8.63260824 3.70710678,8.5 C3.70710678,8.22385763 3.93096441,8 4.20710678,8 L4.20710678,8 L6,8 L6,3.5 Z" id="形状结合" fill="#FFFFFF"></path>
+    </g>
+</svg>

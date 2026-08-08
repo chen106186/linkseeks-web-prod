@@ -1,0 +1,57 @@
+.methods {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+  }
+  
+  .methodsOptions {
+    display: flex;
+    background: #F5F6F7;
+    flex-direction: row;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 4px;
+
+    .period {
+      padding: 4px 12px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .active {
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(19,33,50,0.04), 0 0 0 1px rgba(19,33,50,0.02);
+      color: #00A98F;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 0;
+
+    .sectionItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 16px;
+
+      .label {
+        margin-right: 8px;
+      }
+
+      .input {
+        width: 128px;
+      }
+    }
+  }
+
+  .tips {
+    color: #91959B;
+    font-size: 12px
+  }
+}

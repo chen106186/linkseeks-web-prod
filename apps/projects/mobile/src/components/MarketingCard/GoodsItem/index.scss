@@ -1,0 +1,84 @@
+.marketingCard-goodsItem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+
+    .marketingCard-goodsItem-container-img {
+      margin-bottom: 0;
+    }
+    .marketingCard-goodsItem-container-price {
+      margin-top: auto;
+    }
+
+    .marketingCard-goodsItem-container-tag {
+      margin-top: 8px;
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+  }
+
+  &-row {
+    margin-left: 8px;
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    height: 92px;
+
+    .marketingCard-goodsItem-container-product-name {
+      font-size: 14px;
+      color: #252D37;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;  // 控制多行的行数
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &-img {
+    position: relative;
+    margin-bottom: 12px;
+  }
+  &-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ef3346;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    &-text {
+      font-size: 10px;
+      color: #ef3346;
+    }
+  }
+  &-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-discountPrice {
+      font-size: 10px;
+      color: #ef3346;
+      &-in {
+        font-size: 16px;
+      }
+    }
+    &-originalPrice {
+      color: #91959b;
+      font-size: 10px;
+      margin-top: 3px;
+      text-decoration: line-through;
+    }
+  }
+}

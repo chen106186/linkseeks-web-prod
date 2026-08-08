@@ -1,0 +1,38 @@
+@import '@/styles/variables.scss';
+
+.shipping-addressList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-v-xl;
+
+    &-left {
+      margin-right: $spacing-h-lg;
+    }
+
+    &-right {
+      flex: 1;
+    }
+
+    &-name {
+      font-size: $font-size-base;
+      font-weight: 500;
+      color: $color-black-1;
+    }
+
+    &-desc {
+      margin-top: $spacing-v-md;
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-black-1;
+    }
+  }
+}

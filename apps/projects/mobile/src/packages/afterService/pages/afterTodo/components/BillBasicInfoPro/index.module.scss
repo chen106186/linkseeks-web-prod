@@ -1,0 +1,36 @@
+@import '@/styles/variables.scss';
+@import '@/styles/utils/text-overflow.scss';
+
+.bill-basic-info {
+  &-titleWrap {
+    position: relative;
+    padding-left: $spacing-h-lg;
+  }
+
+  &-title {
+    font-size: $font-size-lg;
+    color: $color-grey-0;
+    @include text-overflow();
+  }
+
+  &-ribbon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 4px;
+    height: 16px;
+    background-color: $color-brand;
+    border-radius: 4px;
+  }
+
+  .at-input {
+    padding: 0;
+    margin: 0;
+
+    &__input {
+      text-align: right;
+      padding: $spacing-v-sm $spacing-h-md + 2;
+      font-size: $font-size-base;
+    }
+  }
+}

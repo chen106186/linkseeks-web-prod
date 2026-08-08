@@ -1,0 +1,80 @@
+.card-list {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 24px;
+}
+.card-list_title {
+  font-size: 12px;
+  color: #909399;
+}
+.resultFail {
+  font-size: 16px;
+  font-weight: 500;
+  color: #303133;
+}
+.resultFailSubtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: #303133;
+  padding-left: 32px;
+}
+
+@images: '../../../../../assets';
+
+.thankModal {
+  :global {
+    .ant-modal-header {
+      display: none;
+    }
+    .ant-modal-content {
+      height: 440px;
+      background: url('@{images}/thankLetterBg.png') center center no-repeat;
+      // background: url('../../../../assets/imgs/thankLetterBg.png') center center no-repeat;
+    }
+    .ant-modal-footer {
+      display: none;
+    }
+  }
+}
+.thankLetter {
+  // width: 660px;
+  // height: 440px;
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #303133;
+    // height: 36px;
+    // line-height: 36px;
+    padding-top: 20px;
+  }
+  h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #c0c4cc;
+    line-height: 16px;
+    padding: 0 24px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #303133;
+    line-height: 24px;
+    padding: 0 24px;
+  }
+  .name {
+    font-weight: 500;
+    text-align: left;
+    padding: 0 24px;
+  }
+  .company {
+    text-align: right;
+    padding: 0 24px;
+    margin-top: 100px;
+  }
+  .time {
+    text-align: right;
+    padding: 0 24px;
+  }
+}

@@ -1,0 +1,56 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.out-slide {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  background-color: #fafbfc;
+  border-right: 1px solid @border-color-neutral;
+  height: 100%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.slide-list {
+  padding: 24px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slide-item {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #91959b;
+  cursor: pointer;
+  margin: 6px 0;
+
+  &:hover {
+    background-color: @menu-item-active-color;
+    color: @link-color;
+  }
+}
+
+.slide-item-active {
+  background-color: @menu-item-active-color;
+  color: @link-color;
+}
+
+.item-title {
+  margin-top: 4px;
+}

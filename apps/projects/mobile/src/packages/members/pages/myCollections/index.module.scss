@@ -1,0 +1,70 @@
+@import "@/styles/variables.scss";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f8fa;
+}
+
+.collection-container {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.tab-bar-style {
+  elevation: 0px;
+
+  :global{
+    .at-tabs__item--active {
+      border-bottom: 1px solid $color-brand;
+    }
+  }
+}
+
+.label-style {
+  font-size: 14px;
+  color: $color-black-2;
+}
+
+.indicator-style {
+  background-color: $color-brand;
+}
+
+.slip {
+  width: 103px;
+  height: 100%;
+  padding: 0 30px;
+  text-align: center;
+  background-color: #d32f2f;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.slip-box-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  width: 100px;
+  height: 100px;
+  margin-left: -50;
+  margin-top: -50;
+  opacity: 0.8;
+  z-index: 101;
+}
+
+.scrollView{
+  padding: 10px;
+  background-color: #f7f8fa;
+}

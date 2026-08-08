@@ -1,0 +1,19 @@
+.micro-table-required {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: 12px;
+
+  &::after {
+    display: inline-block;
+    margin-left: 4px;
+    color: #ff4d4f;
+    font-weight: 100;
+    font-size: 12px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+  }
+}

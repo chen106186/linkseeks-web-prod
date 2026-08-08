@@ -1,0 +1,201 @@
+@import url('../common.less');
+
+@colors: {
+  danger: @danger;
+  primary: @primary;
+  success: @success;
+  warn: @warn;
+  purple: @purple;
+};
+
+.name() {
+  font-size: 14px;
+  color: #252d37;
+  line-height: 22px;
+  font-weight: 600;
+  word-break: break-all;
+  .textOverflowMulti2(2);
+}
+
+.tagList() {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  & > div {
+    margin-top: 8px;
+    margin-right: 4px;
+  }
+}
+
+.@{prefixCls}-contianer {
+  background-color: #fff;
+}
+
+.@{prefixCls}-horizontal {
+  position: relative;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+
+  &-imageContainer {
+    margin-right: 12px;
+  }
+
+  &-image {
+    width: 115px;
+    height: 115px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &-name {
+      .name();
+    }
+
+    &-taglist {
+      .tagList();
+    }
+
+    &-footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.@{prefixCls}-vertical {
+  position: relative;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // min-height: 270px;
+  // align-items: center;
+  justify-content: center;
+
+  &-imageContainer {
+    margin-bottom: 4px;
+  }
+
+  &-image {
+    // width: 159px;
+    width: 100%;
+    height: 159px;
+    // height: 100%;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &-name {
+      .name();
+    }
+
+    &-taglist {
+      .tagList();
+    }
+
+    &-footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 10px;
+
+  .off {
+    color: #ef3346;
+    margin-right: 2px;
+
+    .scale {
+      font-size: 16px;
+    }
+  }
+
+  .originalPrice {
+    color: #91959b;
+    margin-left: 4px;
+  }
+
+  .soldOut {
+    color: #91959b;
+    margin-left: 12px;
+
+    .sold {
+      color: #ef3346;
+    }
+  }
+}
+
+.btn {
+  padding: 4px 12px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 50px;
+
+  each(@colors, {
+    &-@{key} {
+      background-color: @value;
+    }
+  });
+}
+
+.empty {
+  width: 100%;
+  min-height: 155px;
+  border: 1px dashed #c8cacd;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-horizontal {
+  height: 131px;
+}
+
+.empty-vertical {
+  min-height: 270px;
+}
+
+.ask-commodity-price-text {
+  color: @mainColor;
+  font-size: 12px;
+}
+
+.goods-price-wrap {
+  display: flex;
+  width: 100%;
+  margin-top: 8px;
+  align-items: center;
+
+  .goods-price-unit {
+    color: #303133;
+    font-size: 14px;
+  }
+
+  .goods-price {
+    color: #303133;
+    font-size: 14px;
+  }
+}

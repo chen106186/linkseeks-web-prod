@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 36px 24px;
+  height: 156px;
+  width: 100%;
+  overflow: hidden;
+
+  .infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .image {
+      margin-right: 22px;
+      width: 72px;
+      height: 72px;
+    }
+
+    .details {
+      .title {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 600;
+        color: #172b4d;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      .tips {
+        font-size: 13px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #42526e;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .controls {
+    width: 90px;
+    text-align: right;
+    // cursor: pointer;
+  }
+}

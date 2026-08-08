@@ -1,0 +1,103 @@
+@import '~antd/es/style/themes/default.less';
+
+.qualification {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -@margin-xs;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    width: 33.33%;
+    padding: @padding-xs;
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    &-left {
+      position: relative;
+      width: 175px;
+      height: 120px;
+      margin-right: @margin-sm;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+      }
+
+      &-file {
+        border: 1px solid @border-color-split;
+      }
+    }
+
+    &-right {
+      position: relative;
+      flex: 1;
+      &-icon {
+        margin-left: 5px;
+        color: #4888f1;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0px;
+      right: 8px;
+      cursor: pointer;
+      span {
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.mask {
+  height: 120px;
+  background-color: #000;
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+}
+.tippop {
+  &-title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &-icon {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  }
+}
+.change-btn {
+  &-none {
+    margin-right: 2px;
+    padding: 2px 8px;
+    color: #5c626a;
+    background: #f5f6f7;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &-active {
+    color: #00a98f;
+    background: #ebf9f6;
+  }
+}

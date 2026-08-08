@@ -1,0 +1,31 @@
+@import "@/styles/variables.scss";
+@import "../../../../styles/common.scss";
+
+.relationMaterialPopup {
+  overflow: scroll;
+  background-color: #fff;
+  height: 100%;
+  &-flatList {
+    background-color: #fff;
+    height: 100%;
+    &-item {
+      padding: 17px 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      &-name {
+        flex: 1;
+        font-size: 14px;
+        color: #252d37;
+        margin-right: 40px;
+        @include text-overflow();
+      }
+      &-right {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

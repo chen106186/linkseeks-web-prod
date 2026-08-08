@@ -1,0 +1,82 @@
+.passwordInputTip {
+  color: #909399;
+  padding: 8px 6px;
+  // width: 320px;
+
+  .tipItem {
+    margin-bottom: 4px;
+
+    span {
+      font-size: 14px;
+    }
+
+    .tiptext {
+      padding-left: 8px;
+      font-size: 12px;
+    }
+  }
+}
+
+.pwd-comfirm {
+  :global {
+    .ant-modal-confirm-btns {
+      display: flex;
+      .ant-btn {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.customInput {
+  position: relative;
+  :global {
+    .ant-form-item-explain {
+      position: absolute;
+      top: 40px;
+    }
+  }
+}
+
+.loginInput {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #c8cacd;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 40px;
+  background-color: #f5f6f7 !important;
+
+  input {
+    font-size: 14px;
+    background-color: #f5f6f7;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.scanLoginWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 16px;
+
+  &-title {
+    font-size: 24px;
+    color: #606266;
+    line-height: 32px;
+    font-weight: 400;
+  }
+
+  .qrCodeImage {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+}

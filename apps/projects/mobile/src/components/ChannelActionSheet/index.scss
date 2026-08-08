@@ -1,0 +1,74 @@
+@import '@/styles/variables.scss';
+
+.container {
+  position: relative;
+}
+.modal-action-sheet-modal {
+  width: 295px;
+  border-radius: 16px;
+  background-color: #fff;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-title {
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-bottom-width: 0.5;
+  border-bottom-color: #eef0f3;
+}
+.modal-title-text {
+  color: #303133;
+  font-size: 14px;
+  font-weight: 500px;
+}
+.modal-body {
+  padding-bottom: 24px;
+}
+.modal-confirm-btn {
+  height: 40px;
+  background-color: $theme-color;
+  align-items: center;
+  justify-content: center;
+}
+.modal-confirm-btn-text {
+  color: #fff;
+  font-size: 14px;
+}
+.modal-action-list {
+  padding-left: 12px;
+  padding-right: 12px;
+  flex-direction: column;
+  flex: 1;
+}
+.modal-action-list-item {
+  border-bottom-width: 0.5;
+  width: 100%;
+  border-bottom-color: #eef0f3;
+  height: 55px;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-action-list-item-content {
+  flex: 1;
+  margin-left: 8px;
+}
+.modal-action-list-item-text-active {
+  font-weight: 500px;
+}
+.modal-action-list-item-text {
+  font-size: 14px;
+  color: #303133;
+}
+.input-wrap {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.text-input {
+  width: 100%;
+  height: 42px;
+  border-color: #eef0f3;
+  border-width: 0.5;
+  padding-left: 8px;
+  border-radius: 8px;
+}

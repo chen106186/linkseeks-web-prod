@@ -1,0 +1,151 @@
+@import '@/global/styles/global.less';
+
+.user-layout {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.forget-form {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  .forget-tabs {
+    position: relative;
+
+    :global {
+      .ant-tabs-nav::before {
+        border-bottom: none;
+      }
+      .ant-tabs-tab-active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-sms {
+    display: flex;
+
+    .sms-button {
+      border: none;
+      background: #f5f6f7;
+
+      &:hover {
+        background: rgba(37, 45, 55, 0.08);
+      }
+
+      &:active {
+        background: rgba(37, 45, 55, 0.12);
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  :global {
+    .ui-input {
+      height: 40px;
+    }
+    .ant-input {
+      height: 40px;
+    }
+    .ant-input-password {
+      padding: 0 11px;
+    }
+  }
+}
+
+.telCode {
+  width: 100px;
+  height: 40px;
+
+  :global {
+    .ant-select-selector {
+      height: 40px !important;
+      .ant-select-selection-item {
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.user-bg {
+  width: 100%;
+  flex: 1;
+  background: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.getBackBox {
+  position: relative;
+  padding-top: 60px;
+
+  & > h2 {
+    width: 100%;
+    .make-center(text);
+    .font-height-color(24, 120, #303133);
+  }
+
+  .getBackForm {
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1190px;
+    padding-bottom: 60px;
+    .formBox {
+      width: 320px;
+      .make-center-space(margin, 40, 40);
+
+      .back {
+        width: 100%;
+        .make-center(block);
+        .make-center(text);
+        color: #909399;
+      }
+    }
+  }
+}
+
+.user-footer {
+  padding: 32px 0;
+  font-size: 12px;
+  color: #c0c4cc;
+  text-align: center;
+
+  &.fixed {
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 48px;
+    left: 0;
+  }
+}
+
+.passwordInputTip {
+  color: #909399;
+  padding: 8px 6px;
+  // width: 320px;
+
+  .tipItem {
+    margin-bottom: 4px;
+
+    span {
+      font-size: 14px;
+    }
+
+    .tiptext {
+      padding-left: 8px;
+      font-size: 12px;
+    }
+  }
+}

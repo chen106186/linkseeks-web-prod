@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.verify-popup {
+  &-content {
+    padding: $spacing-v-md $spacing-v-lg;
+    background-color: $color-white;
+
+    .at-textarea {
+      padding: $spacing-v-lg;
+      border: none;
+      border-radius: 8px;
+      background-color: $color-grey-5;
+  
+      &__textarea {
+        height: 160px;
+        font-size: $font-size-base;
+        color: #C0C4CC;
+      }
+    }
+  }
+
+  &-actions {
+    padding: $spacing-v-md $spacing-h-md;
+    background-Color: #FFFFFF;
+  }
+}

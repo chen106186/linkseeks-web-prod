@@ -1,0 +1,87 @@
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.homeGuide {
+  background-color: @color-primary;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  color: white;
+  position: relative;
+  .gridStyle {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    height: 90px;
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      margin-left: 24px;
+      margin-bottom: 0;
+      padding: 0 0 8px 0;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    .firstp {
+      height: 24px;
+      line-height: 24px;
+    }
+    .guideTitle {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .guideIcon {
+      font-size: 14px;
+      margin-right: 27px;
+    }
+    .guideIconFirst {
+      font-size: 24px;
+      vertical-align: bottom;
+    }
+  }
+  .gridStyleFirst {
+    flex: 0 0 16%;
+  }
+  .guideClose {
+    width: 56px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0px 8px 0px 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  &::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #6b778c;
+    content: '';
+    position: absolute;
+    right: 18px;
+    bottom: -7px;
+  }
+}
+
+.giudeMenuBox {
+  border-radius: 5px;
+  padding: 16px;
+  background-color: #fff;
+  flex: 0 0 16%;
+  //重写步骤条
+  :global {
+    .ant-steps-vertical.ant-steps-dot .ant-steps-item .ant-steps-icon-dot {
+      border: 1px solid #dfe1e6;
+      background-color: #fff;
+    }
+    .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after {
+      background-color: #fff;
+      border-right: 1px dashed #dfe1e6;
+    }
+  }
+}

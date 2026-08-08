@@ -1,0 +1,42 @@
+@import '@/styles/variables.scss';
+
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  // background-color: red;
+  margin-bottom: -$spacing-v-sm;
+
+  .navItem {
+    flex-basis: 20%;
+    // padding-right: $spacing-h-lg;
+    margin-bottom: $spacing-v-sm;
+
+    .navContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .iconContainer {
+        width: 40px * $hd;
+        height: 40px * $hd;
+        // border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: $spacing-v-md;
+      }
+      .icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      .name {
+        color: #606266;
+        font-size: $font-size-sm;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+import { ComponentClass } from 'react'
+import GodComponent from './base'
+
+export interface GodDividerProps extends GodComponent {
+  /**
+   * 分隔符文字
+   */
+  content?: string
+  /**
+   * 分隔符高度，会自动转 rem,rpx
+   * @default 112
+   */
+  height?: number | string
+  /**
+   * 文字颜色
+   * @default #6190E8
+   */
+  fontColor?: string
+  /**
+   * 文字大小，会自动转 rem,rpx
+   * @default 32
+   */
+  fontSize?: number | string
+  /**
+   * 分割线颜色
+   * @default #CCC
+   */
+  lineColor?: string
+}
+
+declare const GodDivider: ComponentClass<GodDividerProps>
+
+export default GodDivider

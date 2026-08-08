@@ -1,0 +1,80 @@
+.setting_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+
+  &_item {
+    position: relative;
+    // width: 380px;
+    flex: 0 0 48.6%;
+    height: 136px;
+    border: 1px solid #ffffff;
+    margin: 8px 4px;
+    padding: 8px;
+    cursor: pointer;
+
+    &.hover_active {
+      border: 1px solid #00b382;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid #00a98f;
+        border-left: 12px solid transparent;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+      }
+
+      &:hover {
+        .setting_mask {
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+
+    &.active {
+      border: 1px solid #00b382;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid #00a98f;
+        border-left: 12px solid transparent;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+      }
+    }
+
+    .setting_mask {
+      position: absolute;
+      display: none;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.12);
+      z-index: 8;
+      transition: all 0.3s;
+
+      .setting_deletebtn {
+        float: right;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        background: rgba(0, 0, 0, 0.65);
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

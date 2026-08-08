@@ -1,0 +1,100 @@
+/**
+* @description 布局类
+* @author xjm
+*/
+
+// ------------  容器container  ------------
+.ant-pro-basicLayout-content {
+  .ant-pro-page-header-wrap {
+    margin: 0 !important;
+  }
+}
+.make-container(@pad-x: @padding-lg) {
+  width: 100%;
+  .make-center(block);
+}
+.make-container(@pad-x) when not (@pad-x = none) {
+  padding-left: @pad-x;
+  padding-right: @pad-x;
+}
+
+// ------------  居中相关 center  ------------
+
+.make-center(@type:text) {
+}
+.make-center(@type) when (@type = text) {
+  text-align: center;
+}
+.make-center(@type) when (@type = margin) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.make-center(@type) when (@type = block) {
+  .make-center(center);
+  display: block;
+}
+.make-center(@type) when (@type = flex) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.make-center(@type) when (@type = flexAlign) {
+  display: flex;
+  align-items: center;
+}
+.make-center(@type) when (@type = flexJustify) {
+  display: flex;
+  justify-content: center;
+}
+.make-center(@type) when (@type = absolute), (@type = fixed) {
+  position: @type;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// margin带上下边距居中
+.make-center-space(@type: margin, @top: 0, @bottom: 0) {
+  .make-center(@type);
+  margin-top: unit(@top, px);
+  margin-bottom: unit(@bottom, px);
+}
+
+// position绝对定位
+.ab-position(@_, @_, @num1: 0, @num2: 0) {
+  position: absolute;
+}
+.ab-position(right, bottom, @num1: 0, @num2: 0) {
+  right: @num1 * 1px;
+  bottom: @num2 * 1px;
+}
+.ab-position(right, top, @num1: 0, @num2: 0) {
+  right: @num1 * 1px;
+  top: @num2 * 1px;
+}
+.ab-position(left, bottom, @num1: 0, @num2: 0) {
+  left: @num1 * 1px;
+  bottom: @num2 * 1px;
+}
+.ab-position(left, top, @num1: 0, @num2: 0) {
+  left: @num1 * 1px;
+  top: @num2 * 1px;
+}
+
+// 高 行高等同并混入字体大小 颜色
+.mixinFontSize (@size) when (isnumber(@size)) {
+  font-size: unit(@size, px);
+}
+.mixinFontColor (@color) when (iscolor(@color)) {
+  color: @color;
+}
+.mixinBgColor(@bgcolor) when (iscolor(@bgcolor)) {
+  background-color: @bgcolor;
+}
+.font-height-color (@size: undefined, @height, @color: undefined, @bgcolor: undefined) {
+  .mixinFontSize(@size);
+  height: unit(@height, px);
+  line-height: unit(@height, px);
+  .mixinFontColor(@color);
+  .mixinBgColor(@bgcolor);
+}

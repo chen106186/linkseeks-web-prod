@@ -1,0 +1,22 @@
+@resizable-handle-width: 12px;
+
+.resizable-handle {
+  opacity: 0;
+  height: 100%;
+  width: @resizable-handle-width;
+  margin-left: -(@resizable-handle-width / 2);
+  position: absolute;
+  top: 0;
+  right: -(@resizable-handle-width / 2);
+  bottom: 0;
+  z-index: 1;
+  cursor: col-resize;
+  user-select: none;
+
+  &-line {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #00a98f;
+  }
+}

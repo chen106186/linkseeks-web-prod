@@ -1,0 +1,129 @@
+.container {
+  padding: 24px 24px 8px 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .status {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .status-success {
+    color: #00a98f;
+  }
+
+  .status-fail {
+    color: #ef3346;
+  }
+
+  .status-tips {
+    font-size: 14px;
+    color: #252d37;
+  }
+
+  .people-list {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 240px;
+
+    .empty-people {
+      background-color: #f5f6f7;
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .people-plus {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .people-item-container {
+      .imageContainer {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #f5f6f7;
+      }
+
+      .master {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 8px;
+
+        span {
+          padding: 2px 4px;
+          border-radius: 4px;
+          background-color: #00a98f;
+        }
+      }
+    }
+
+    .people-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 25%;
+      margin-bottom: 12px;
+
+      &-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+      }
+
+      &-name {
+        font-size: 10px;
+        color: #252d37;
+        text-align: center;
+        margin-top: 8px;
+        overflow: hidden;
+        max-width: 48px;
+      }
+    }
+  }
+
+  .btn {
+    background: #00a98f;
+    color: #fff;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    // font-weight: 600;
+  }
+
+  .btn-success {
+    background-color: #00a98f;
+    margin-bottom: 8px;
+  }
+
+  .btn-default {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.highlight {
+  color: red;
+}

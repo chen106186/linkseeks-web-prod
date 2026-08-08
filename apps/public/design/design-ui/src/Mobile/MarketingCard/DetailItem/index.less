@@ -1,0 +1,122 @@
+@import url('../../common.less');
+
+.@{prefixCls}-marketingCard-detailItem {
+  display: flex;
+  flex-direction: row;
+
+  &-img {
+    width: 96px;
+    height: 96px;
+    margin-right: 8px;
+    position: relative;
+
+    img {
+      width: 94px;
+    }
+
+    &-tag {
+      background-image: linear-gradient(90deg, #e0b26c 0%, #f6cf85 100%);
+      color: #fff;
+      font-size: 9px;
+      border-radius: 4px 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &-detail {
+    height: 96px;
+    flex: 1;
+    max-width: calc(100% - 104px);
+
+    &-title {
+      font-size: 14px;
+      color: #252d37;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      color: #91959b;
+      margin-top: 8px;
+
+      &-left {
+        flex: 1;
+        display: flex;
+      }
+
+      .people_tag {
+        display: flex;
+        align-items: center;
+        height: 16px;
+        padding: 0 4px;
+        color: #ef3346;
+        border: 0.2px solid #ef3346;
+        border-radius: 2px;
+      }
+
+      span {
+        color: #ef3346;
+      }
+    }
+
+    &-money {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10px;
+      color: #91959b;
+      margin-top: auto;
+
+      &-discountPrice {
+        color: #ef3346;
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      &-originalPrice {
+        flex: 1;
+        text-decoration: line-through;
+        margin-left: 4px;
+      }
+
+      &-btn {
+        display: inline-block;
+        padding: 0 8px;
+        line-height: 24px;
+        background-image: linear-gradient(90deg, #f87362 0%, #ef3346 100%);
+        border-radius: 12px;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.@{prefixCls}-marketingCard-detailItem-null {
+  height: 92px;
+  border: 1px dashed #c8cacd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giveTag {
+  display: inline-block;
+  padding: 2px;
+  font-size: 10px;
+  color: #ef3346;
+  border: 1px solid #ef3346;
+  border-radius: 8px;
+}

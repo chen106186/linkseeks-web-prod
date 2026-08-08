@@ -1,0 +1,39 @@
+@import '~antd/es/style/themes/default.less';
+@import url('@linkseeks/ui/src/styles/theme/variables.less');
+
+.bookmark {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: -@padding-xss;
+
+  &-itemWrap {
+    padding: @padding-xss;
+  }
+
+  &-item {
+    padding: @padding-xs @padding-md;
+    display: flex;
+    align-items: center;
+    background-color: @background-color-light;
+    color: @text-color-secondary;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &-left {
+      flex-shrink: 0;
+      margin-right: @margin-xs;
+    }
+
+    &-center {
+      flex: 1;
+    }
+
+    &-active,
+    &:hover {
+      background-color: @background-color-base;
+      color: @color-primary;
+    }
+  }
+}

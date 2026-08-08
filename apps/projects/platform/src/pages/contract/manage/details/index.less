@@ -1,0 +1,213 @@
+.anchorWrap {
+  :global {
+    .ant-pro-basicLayout-content {
+      margin: 0 !important;
+    }
+    .ant-anchor {
+      display: flex;
+      align-items: center;
+      .ant-anchor-ink {
+        display: none;
+      }
+      .ant-anchor-link {
+        margin: 0 16px;
+        padding: 14px 0 !important;
+        .ant-anchor-link-title {
+          color: #909399;
+          font-size: 14px;
+        }
+      }
+      .ant-anchor-link-active {
+        position: relative;
+        box-sizing: border-box;
+        border-bottom: 2px solid #00b37a;
+        .ant-anchor-link-title {
+          color: #303133;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .titleBox {
+    padding: 8px 16px;
+  }
+  .anchorBox {
+    display: flex;
+    padding: 0 16px;
+  }
+}
+
+/** 卡片样式 */
+.card {
+  margin: 24px;
+  :global {
+    .ant-card {
+      margin-bottom: 24px;
+      .ant-card-head {
+        > .ant-card-head-wrapper {
+          padding: 12px 0;
+        }
+      }
+      .ant-card-extra {
+        padding: 0 0;
+        .ant-radio-button-wrapper {
+          height: 24px;
+          line-height: 23px;
+        }
+        .ant-radio-button-wrapper:hover {
+          color: #606266;
+        }
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+          color: #fff;
+          background: #6b778c;
+          border-color: #6b778c;
+        }
+      }
+    }
+    .god-table-control {
+      margin-bottom: 0;
+    }
+  }
+  .list {
+    display: flex;
+    h5 {
+      margin-bottom: 2em;
+    }
+    .listLable {
+      flex: 0 0 25%;
+      color: #909399;
+    }
+  }
+}
+
+.listItem {
+  display: flex;
+  .label {
+    flex: 0.2;
+    padding: 0 16px;
+    background: linear-gradient(270deg, #ffffff 0%, #daf2e7 100%);
+  }
+  .text {
+    flex: 1;
+    padding: 0px 0px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.warp {
+  display: flex;
+  width: 100%;
+  .warp_item {
+    width: 20%;
+    margin-right: 10px;
+    padding: 16px;
+    border: 1px solid #f4f5f7;
+    border-radius: 10px;
+    .title {
+      color: #909399;
+      font-weight: 400;
+      font-size: 12px;
+      font-family: PingFangSC-Regular, PingFang SC;
+    }
+    .proportion {
+      padding: 12px 0;
+      color: #303133;
+      font-weight: 500;
+      font-size: 24px;
+      font-family: PingFangSC-Medium, PingFang SC;
+    }
+    .Price {
+      color: #303133;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: PingFangSC-Medium, PingFang SC;
+    }
+    .warp_List {
+      margin-top: 32px;
+      .warp_ListItem {
+        display: flex;
+        margin-bottom: 16px;
+        .label {
+          flex: 0.5;
+          color: #909399;
+          font-weight: 400;
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+        }
+        .text {
+          flex: 1;
+          color: #303133;
+          font-weight: 400;
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+        }
+      }
+    }
+  }
+}
+
+.upload_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  .upload_left {
+    display: flex;
+    align-items: center;
+    color: #303133;
+    background-color: #fafbfc;
+    :global {
+      .anticon-file-word {
+        margin-right: 8px;
+        color: #4279df;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .upload_right {
+    color: #00A98F;
+    cursor: pointer;
+    :global {
+      .anticon-delete {
+        margin-left: 19px;
+        color: #c0c4cc;
+      }
+    }
+  }
+}
+
+.nowrap {
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  .changeBtn {
+    display: flex;
+
+    .btn {
+      width: 52px;
+      height: 24px;
+      margin-right: 4px;
+      color: #5c626a;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      background: #f5f6f7;
+      border-radius: 4px;
+    }
+
+    .active {
+      color: #00a98f;
+      background: #ebf9f6;
+    }
+  }
+}

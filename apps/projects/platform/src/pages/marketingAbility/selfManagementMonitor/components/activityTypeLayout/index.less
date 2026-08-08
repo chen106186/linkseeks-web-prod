@@ -1,0 +1,50 @@
+.list_box {
+  overflow: hidden;
+  margin: 16px 0px;
+  border-radius: 8px;
+  background-color: #fff;
+
+  .list_items {
+    display: flex;
+    align-items: center;
+
+    .list_item_row {
+      width: 320px;
+      padding: 16px;
+      cursor: pointer;
+
+      .list_item_tag {
+        border-radius: 2px;
+        padding: 2px 4px;
+        color: #ef3346;
+        background-color: #fff0f2;
+      }
+
+      .list_item_title {
+        font-size: 14px;
+        margin: 4px 0px;
+      }
+
+      .list_item_date {
+        font-size: 12px;
+        margin: 4px 0px;
+        color: #91959b;
+      }
+
+      :global {
+        .ant-progress-outer {
+          padding-right: 0;
+          .ant-progress-bg {
+            height: 16px !important;
+          }
+        }
+        .ant-progress-text {
+          position: absolute;
+          left: 0;
+          bottom: 2px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

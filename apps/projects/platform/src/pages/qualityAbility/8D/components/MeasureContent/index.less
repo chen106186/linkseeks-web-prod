@@ -1,0 +1,39 @@
+.hasRequired {
+  position: relative;
+  margin-left: 10px;
+}
+.hasRequired::after {
+  content: '*';
+  position: absolute;
+  left: -9px;
+  color: #ff4d4f;
+  font-size: 14px;
+}
+.measureWarp {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-input[disabled] {
+      color: #000000 !important;
+    }
+  }
+}
+
+.editOutlinedwarp {
+  display: flex;
+  align-items: center;
+}
+.textAreaWarp {
+  margin-bottom: 16px !important;
+}
+.deleteIconWarp:hover {
+  .deleteIcon {
+    visibility: visible;
+  }
+}
+.deleteIcon {
+  color: #000000;
+  margin-left: 20px;
+  visibility: hidden;
+}

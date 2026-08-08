@@ -1,0 +1,45 @@
+{
+  "name": "@apps/design-react",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "license": "MIT",
+  "main": "./src/index",
+  "files": [
+    "design_dist",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js",
+    "clean": "../../scripts/clean_package.sh",
+    "dev": "tsc -w & rollup -c rollup.config.js -w",
+    "pub:patch": "node scripts/run.js --patch"
+  },
+  "gitHead": "c65fc560a56374d0fa3412fbbad52060524f7baf",
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.0.0.22:3000/ghua/lingxi-design.git"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.7",
+    "json5": "^2.2.0",
+    "lodash": "^4.17.15",
+    "rc-collapse": "2.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "sortablejs": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/sortablejs": "^1.10.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

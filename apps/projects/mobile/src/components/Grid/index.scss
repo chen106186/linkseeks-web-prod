@@ -1,0 +1,41 @@
+@import '@/styles/variables.scss';
+
+.grid {
+	position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &-item {
+    &-wrap {
+      padding-top: $spacing-v-lg;
+      padding-bottom: $spacing-v-lg;
+      text-align: center;
+      border-top-width: 1px;
+      border-color: #FFF;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    &-left-border {
+      position: absolute;
+      width: 1px;
+      top: $spacing-v-lg;
+      bottom: $spacing-v-lg;
+      left: 0px;
+      background-color: #f4f5f7;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: $spacing-v-md;
+    }
+
+    &-title {
+      font-size: $font-size-xs;
+      color: $color-grey-0;
+      text-align: center;
+    }
+  }
+}

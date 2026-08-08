@@ -1,0 +1,45 @@
+@import url('../theme/variables.less');
+
+/** 专门用来覆盖antd组件的样式变量 **/
+
+@ant-prefix: ant;
+@html-selector: body;
+
+@primary-color: @color-primary;
+@text-color: @color-text-1;
+@link-hover-color: fade(@color-primary, 70);
+
+// layout
+@layout-header-height: @layout-header-height;
+@layout-header-background: @color-white;
+@layout-header-padding: 0 16px;
+
+// button
+// @btn-border-width: 0;
+// @btn-shadow: none;
+
+// input
+// @input-padding-horizontal-base: 8px;
+// @input-placeholder-color: @color-text-4;
+// @input-bg: @bg-content-color;
+
+// menu
+@menu-item-active-bg: fade(@color-primary, 4);
+@menu-item-active-border-width: 0;
+@menu-item-height: 32px;
+@menu-inline-toplevel-item-height: 32px;
+
+// tree
+@tree-node-selected-bg: @color-primary-100;
+@tree-title-height: 32px;
+@tree-directory-selected-color: @color-primary;
+@tree-directory-selected-bg: @color-primary-100;
+@tree-node-hover-bg: @color-primary-100;
+
+// form
+@form-item-margin-bottom: @padding-md;
+
+// radio
+@radio-size: 14px;
+@radio-top: 0.25em;
+@radio-dot-size: @radio-size - 6px;

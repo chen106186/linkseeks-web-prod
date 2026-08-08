@@ -1,0 +1,50 @@
+@import url('./theme/variables.less');
+
+.ui-radio-group {
+  .ant-radio-wrapper {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: @color-neutral-200;
+    border: 1px solid transparent;
+    line-height: 16px;
+  }
+
+  .ant-radio-wrapper-checked {
+    border: 1px solid @border-color-primary;
+    background-color: @color-ctl-active-bg;
+    color: @color-primary;
+  }
+}
+
+.ui-radio-card-container {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: @color-neutral-200;
+  border: 1px solid transparent;
+  padding: 8px;
+  cursor: pointer;
+
+  &.checked {
+    border: 1px solid @border-color-primary;
+    background-color: @color-ctl-active-bg;
+  }
+
+  .ui-radio-card-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+  }
+
+  .ui-radio-card-title {
+    font-size: 14px;
+    color: @color-text-1;
+  }
+
+  .ui-radio-card-desc {
+    font-size: 12px;
+    color: @color-text-2;
+  }
+}

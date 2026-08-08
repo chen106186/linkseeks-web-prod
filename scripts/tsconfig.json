@@ -1,0 +1,27 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "ES6",
+      "moduleResolution": "node",
+      "esModuleInterop": true
+    }
+  },
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "ESNext",
+    "types": ["tsconfig/react-app-env", "vitest/globals", "tsconfig/global", "tsconfig/env"],
+    "lib": ["es2021"],
+    "declaration": false,
+    "outDir": "./dist",
+    "rootDir": "../",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false
+  },
+  "include": ["src/**/*", "../apps/projects/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

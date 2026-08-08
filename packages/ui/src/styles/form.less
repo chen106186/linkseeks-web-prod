@@ -1,0 +1,26 @@
+.ui-form {
+  .ant-form-item-label {
+    position: relative;
+
+    .ant-form-item-required {
+      &::before {
+        position: absolute;
+        right: -12px;
+        top: 11px;
+        color: #f25767 !important;
+        font-size: 12px;
+        line-height: 12px;
+        width: 6px;
+        height: 6px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & > label {
+      color: #91959b;
+    }
+  }
+}

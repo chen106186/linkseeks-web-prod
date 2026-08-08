@@ -1,0 +1,21 @@
+{
+  "name": "@linkseeks/hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.9",
+    "intersection-observer": "^0.7.0",
+    "lodash-es": "^4.17.21",
+    "use-immer": "0.10.0"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.7"
+  }
+}

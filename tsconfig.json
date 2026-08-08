@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/basic.json",
+  "include": ["**/*.ts", "**/*.tsx", "packages/router/src/index.js"],
+  "exclude": ["node_modules"]
+}

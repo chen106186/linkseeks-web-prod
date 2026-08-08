@@ -1,0 +1,73 @@
+{
+  "name": "@linkseeks/standard",
+  "version": "1.0.17",
+  "description": "瓴犀规范配置工具集合",
+  "main": "src/index.js",
+  "repository": "ssh://git@gitlab.shushangyun.com:8122/linkseeks-design/standard.git",
+  "author": "Xujiamin <xujm@shushangyun.com>",
+  "bin": {
+    "standard": "./cli.js"
+  },
+  "files": [
+    "dist",
+    "cli.js"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && tsc --build tsconfig.json && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/.prettierignore ./dist/ && copyfiles -u 1 -a src/tpl/* ./dist/",
+    "deps": "yarn upgrade-interactive --latest",
+    "lib": "cross-env TIMING=1 eslint lib",
+    "lint": "npm run build && cd tsExample && npm run lint",
+    "prettier": "prettier -c --write \"**/*\"",
+    "test": "npm run testTS",
+    "testTS": "npm run build && cd tsExample && npm run lint"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.17.5",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@commitlint/load": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.9.0",
+    "chalk": "^4.1.1",
+    "commitizen": "^4.2.4",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-promise": "^5.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-unicorn": "^20.0.0",
+    "fast-glob": "^3.2.4",
+    "lodash": "^4.17.21",
+    "longest": "^2.0.1",
+    "os-locale": "^5.0.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-two-style-order": "^1.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "typescript": "^4.5.4",
+    "word-wrap": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.24",
+    "commitlint": "^17.0.3",
+    "copyfiles": "^2.4.1",
+    "lint-staged": "^13.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "registry": "http://npm.shushangyun.com"
+  }
+}

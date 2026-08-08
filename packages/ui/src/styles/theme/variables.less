@@ -1,0 +1,110 @@
+@color-primary-900: #005b4d;
+@color-primary-800: #00826e;
+@color-primary-700: #00957e;
+@color-primary-600: #00a98f;
+@color-primary-500: #13bc9d;
+@color-primary-400: #5ad6b7;
+@color-primary-300: #84e3c8;
+@color-primary-200: #b1f0dc;
+@color-primary-100: #ebf9f6;
+
+@baseSize: 2;
+@color-neutral-900: #252d37;
+@color-neutral-800: #5c626a;
+@color-neutral-700: #91959b;
+@color-neutral-600: #acafb3;
+@color-neutral-500: #c8cacd;
+@color-neutral-400: #e3e4e5;
+@color-neutral-300: #edeeef;
+@color-neutral-200: #f5f6f7;
+@color-neutral-100: #fafbfc;
+
+@color-text-1: @color-neutral-900;
+@color-text-2: @color-neutral-800;
+@color-text-3: @color-neutral-700;
+@color-text-4: @color-neutral-500;
+
+@color-primary: @color-primary-600;
+@color-error: #e63f3b;
+@color-state-hover: @color-neutral-200;
+@color-state-disabled: fade(@color-neutral-900, 0.08);
+@color-state-active: fade(@color-neutral-900, 0.08);
+@color-state-focus: fade(@color-neutral-900, 0.08);
+
+@link-color: @color-primary;
+@color-ctl-active-bg: @color-primary-100;
+@color-white: #ffffff;
+
+@bg-content-color: @color-neutral-100;
+
+@layout-container-width: 1200px;
+
+@font-color-regular: @color-text-1;
+@font-size-base: @font-size-small;
+@font-size-small: 12px;
+@font-size-regular: 14px;
+@font-size-title-8: 12px;
+@font-size-title-7: 14px;
+@font-size-title-6: 16px;
+@font-size-title-5: 20px;
+@font-size-title-4: 24px;
+@font-size-title-3: 32px;
+@font-size-title-2: 40px;
+@font-size-title-1: 48px;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-bold: 600;
+@line-height-small: 16px;
+@line-height-medium: 20px;
+@line-height-large: 28px;
+
+@border-color-neutral: @color-neutral-200;
+@border-color-primary: @color-primary;
+@border-width-normal: 1px;
+@border-solid-normal: 1px solid @color-neutral-200;
+@border-radius-base: 4px;
+@border-radius-1: 2px;
+@border-radius-2: 4px;
+@border-radius-3: 8px;
+@border-radius-4: 12px;
+@border-radius-5: 16px;
+@border-radius-6: 24px;
+@border-radius-pill: 999;
+@border-radius-circle: 50%;
+
+@padding-xss: 4px;
+@padding-xs: 8px;
+@padding-sm: 12px;
+@padding-md: 16px;
+@padding-lg: 24px;
+
+@height-base: 32px;
+
+/**************** Component **********************/
+
+@dropdown-color-bg: @color-white;
+@dropdown-default-hover: @color-state-hover;
+@dropdown-menu-padding: @padding-xs;
+@dropdown-item-padding: @padding-xs;
+
+// layout
+@layout-header-height: 48px;
+
+// menu
+@menu-item-inline-padding: 0 @padding-xs;
+@menu-item-radius: @border-radius-base;
+@menu-item-active-color: fade(@link-color, 5);
+
+// status circle color
+@status-stop: #c1c7d0; // 停用
+@status-modify: #669ede; // 已修改、待提交
+@status-valid: #41cc9e; // 已生成，有效、审核通过
+@status-invalid: #ffc400; // 未生成，无效、待审核
+@status-nopass: #ef6260; // 审核不通过
+@status-fail: @color-error;
+
+// component
+
+@tree-node: #fbfcfd;
+@tree-node_hover: #ebf7f2;
+@tree-node-border: rgba(0, 0, 0, 0.04);

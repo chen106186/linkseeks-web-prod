@@ -1,0 +1,8 @@
+packages:
+  - "apps/**"
+  - "packages/**"
+  - "docs/**"
+  - "extension/**"
+  - "scripts/**"
+  - "!**/.next/**"
+  - "!**/dist/**"

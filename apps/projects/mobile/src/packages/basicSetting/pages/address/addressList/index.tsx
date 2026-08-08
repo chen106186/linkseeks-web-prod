@@ -373,7 +373,7 @@ const AddressList = () => {
         ]}
         onClick={handleTabChange}
       >
-        <TabsPane display current={Number(active)} index={0}>
+        <TabsPane current={Number(active)} index={0}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView
@@ -397,14 +397,11 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout
-                image="default"
-                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
-              />
+              <EmptyLayout />
             </View>
           )}
         </TabsPane>
-        <TabsPane display current={Number(active)} index={1}>
+        <TabsPane current={Number(active)} index={1}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView
@@ -428,14 +425,11 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout
-                image="default"
-                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
-              />
+              <EmptyLayout />
             </View>
           )}
         </TabsPane>
-        <TabsPane display current={Number(active)} index={2}>
+        <TabsPane current={Number(active)} index={2}>
           {list.length ? (
             <View className={styles['page']}>
               <ScrollView
@@ -459,10 +453,7 @@ const AddressList = () => {
             </View>
           ) : (
             <View className={styles['address-view']}>
-              <EmptyLayout
-                image="default"
-                description={intl.formatMessage({ id: 'pay.zanwushuju', defaultMessage: '暂无数据' })}
-              />
+              <EmptyLayout />
             </View>
           )}
         </TabsPane>

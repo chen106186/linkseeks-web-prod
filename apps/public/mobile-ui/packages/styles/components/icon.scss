@@ -4,13 +4,7 @@
 */
 @font-face {
   font-family: "iconfont";
-  // src: url('http://shushangyun-lingxi.oss-cn-shenzhen.aliyuncs.com/asserts/iconfont.woff') format('woff'), /* chrome、firefox */
-  src: url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.eot'); /* IE9 */
-  src: url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.woff') format('woff2'),
-  url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.woff') format('woff'), /* chromeã€firefox */
-  url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.ttf') format('truetype'), /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+*/
-  url('https://lingxi-mini.oss-cn-hangzhou.aliyuncs.com/icons/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('../../common/iconfont.woff') format('woff');
 }
 .icon {
   display: inline-block;

@@ -8,11 +8,10 @@ import {
   setStorageSync,
 } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
-import { View, Button, Text, Input, Switch, ScrollView, Toast, Image, TextArea } from '@apps/mobile-ui'
+import { View, Button, Text, Input, Switch, ScrollView, Form, Toast, Image, TextArea } from '@apps/mobile-ui'
 import ModeMobile from '@/components/Modemobile'
 import { PATTERN_MAPS } from '@/constants/regExp'
 import { COUNTRY_PHONE_CODE, COUNTRY_PHONE_LENGTH } from '@/constants'
-import { THEME_COLORS } from '@/constants/theme'
 import { combinationAddress } from '@/utils/dataMerge'
 import { useIntl } from '@linkseeks/i18n'
 import {
@@ -419,9 +418,9 @@ const AddressAdd = () => {
     >
       <View className={styles['page']}>
         <ScrollView className={styles['main']}>
-          <View className={styles['form']}>
+          <Form>
             <View className={styles['address']}>
-              <View className={styles['address-item']}>
+              <Form className={styles['address-item']}>
                 <View className={styles['form-item']}>
                   <Text className={styles['label']}>
                     {params.active === '0'
@@ -454,7 +453,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: THEME_COLORS.borderLight,
+                      borderBottomColor: '#F4F5F7',
                     }}
                     onChange={(e) =>
                       changeInputValue(
@@ -486,7 +485,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: THEME_COLORS.borderLight,
+                      borderBottomColor: '#F4F5F7',
                     }}
                     onChange={(e) => changeInputValue('phone', e)}
                   />
@@ -500,7 +499,7 @@ const AddressAdd = () => {
                   </View>
                 )} */}
                 {params.active !== '2' && isCN && (
-                  <View className={styles['form-item']} onClick={() => setAddressVisible(true)}>
+                  <View className={styles['form-item']}>
                     <Text className={styles['label']}>
                       {params.active === '0'
                         ? intl.formatMessage({
@@ -512,7 +511,10 @@ const AddressAdd = () => {
                             defaultMessage: '发货地区',
                           })}
                     </Text>
-                    <View className={cx(styles['warp-item-box'], styles['clear'])}>
+                    <View
+                      className={cx(styles['warp-item-box'], styles['clear'])}
+                      onClick={() => setAddressVisible(!addressVisible)}
+                    >
                       <Text
                         className={styles['address-text']}
                         style={{
@@ -555,16 +557,16 @@ const AddressAdd = () => {
                         defaultMessage: '请填写详细地址，楼号、门牌号等',
                       })}
                       maxLength={60}
-                      value={formItems.address || ''}
+                      value={formItems.address}
                       className={cx(styles['input'], styles['warpflex'])}
                       placeholderClass={styles['input-placeholder']}
-                      onChange={(value) => changeInputValue('address', value)}
+                      onChange={(e) => changeInputValue('address', e)}
                     />
                   </View>
                 )}
 
                 <View
-                  className={cx(styles['form-item'], styles['justify-content'], styles['set-default'])}
+                  className={cx(styles['from-item'], styles['justify-content'], styles['clear'], styles['set-default'])}
                 >
                   <Text className={styles['label']}>
                     {intl.formatMessage({
@@ -572,11 +574,11 @@ const AddressAdd = () => {
                       defaultMessage: '设为默认',
                     })}
                   </Text>
-                  <View className={styles['switch-btn']}>
-                    <Switch color={THEME_COLORS.primary} checked={isSwitch} onChange={(checked) => setIsSwitch(checked)} />
+                  <View className={cx(styles['switch-btn'], styles['fl-right'])}>
+                    <Switch color="#00A98F" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
                   </View>
                 </View>
-              </View>
+              </Form>
             </View>
 
             {params.active !== '2' && (
@@ -591,7 +593,7 @@ const AddressAdd = () => {
                 </View>
 
                 <View className={styles['address']}>
-                  <View className={styles['address-item']}>
+                  <Form className={styles['address-item']}>
                     <View className={styles['form-item']}>
                       <Text className={styles['label']}>
                         {intl.formatMessage({
@@ -610,7 +612,7 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: THEME_COLORS.borderLight,
+                          borderBottomColor: '#F4F5F7',
                         }}
                         onChange={(e) => changeInputValue('postalCode', e)}
                       />
@@ -634,16 +636,16 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: THEME_COLORS.borderLight,
+                          borderBottomColor: '#F4F5F7',
                         }}
                         onChange={(e) => changeInputValue('tel', e)}
                       />
                     </View>
-                  </View>
+                  </Form>
                 </View>
               </View>
             )}
-          </View>
+          </Form>
           <Button onClick={submit} className={styles['button']}>
             <Text
               style={{

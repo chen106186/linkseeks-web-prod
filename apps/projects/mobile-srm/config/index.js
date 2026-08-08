@@ -51,9 +51,9 @@ const config = {
     miniCssExtractPluginOption: {
       ignoreOrder: true,
     },
-    // 开启智能提取分包依赖
+    // 关闭智能提取分包依赖
     optimizeMainPackage: {
-      enable: true,
+      enable: false,
     },
     // commonChunks: ['taro', 'runtime', 'vendors', 'common'],
     // webpackChain(chain) {

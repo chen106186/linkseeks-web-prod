@@ -4,6 +4,42 @@
   padding: $spacing-v-md 0;
   position: relative;
 
+  .mellow-card,
+  .basicInfo-card,
+  .product-descriptions-line-wrap {
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
+  }
+
+  .businessCard,
+  .bookshelf-item {
+    background-color: $color-card-bg;
+  }
+
+  .commodity-banner-swiper-item {
+    background-color: $color-card-bg;
+  }
+
+  .basicInfo-card-tags-item {
+    color: $color-warning;
+    background-color: $color-bg-light;
+  }
+
+  .historical-bar-title,
+  .product-descriptions-line-label {
+    color: $color-text-placeholder;
+  }
+
+  .product-descriptions-richtext,
+  .product-descriptions-line-breif {
+    color: $color-text-base;
+  }
+
+  .product-descriptions-title-line {
+    background-color: $color-border-base;
+  }
+
   &-anchor {
     height: 100%;
 
@@ -72,7 +108,15 @@
     bottom: 0;
     z-index: 1;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $color-card-bg;
+
+    .goods-action {
+      background-color: $color-card-bg;
+
+      &-icon-text {
+        color: $color-text-base;
+      }
+    }
   }
 
   &-fixedAction {
@@ -84,7 +128,8 @@
 
     .button-elegant {
       background-color: $color-bg-lighter;
-      border-color: $color-bg-lighter;
+      border-color: $color-brand-light;
+      color: $color-brand;
     }
   }
 
@@ -305,5 +350,16 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.9);
     transition: color 0.2s ease;
+  }
+}
+
+.stocksSourcing-detail-anchor {
+  .anchor-scroll {
+    background-color: $color-bg-base;
+  }
+
+  .anchor-tabs,
+  .anchor-tabs-item {
+    background-color: $color-card-bg;
   }
 }

@@ -2,6 +2,24 @@
 
 @import '@apps/mobile-ui/packages/styles/index.scss';
 
+.at-button {
+  color: $color-text-base;
+  border-color: $color-border-base;
+  background-color: $color-card-bg;
+
+  &--primary {
+    color: #FFFFFF;
+    border-color: $color-brand;
+    background-color: $color-brand;
+  }
+
+  &--secondary {
+    color: $color-brand;
+    border-color: $color-brand-light;
+    background-color: $color-bg-lighter;
+  }
+}
+
 body,
 page {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,

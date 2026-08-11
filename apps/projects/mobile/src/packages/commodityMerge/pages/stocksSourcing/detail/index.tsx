@@ -676,6 +676,9 @@ const StocksSourcingDetail: React.FC = () => {
         renderHeader={
           <NavBar
             title="商品详情"
+            titleColor="#5A2A12"
+            backIconColor="#5A2A12"
+            customStyle="background-color: #FCF7F1;"
             back={isFromScene1179 ? () => Router.reLaunch('root/splashView') : handleBack}
             backIconName={isFromScene1179 ? 'Home' : undefined}
           />
@@ -832,7 +835,7 @@ const StocksSourcingDetail: React.FC = () => {
           <GoodsAction.Icon
             text="收藏"
             icon={!isCollected ? 'Star' : 'StarFill'}
-            color={!isCollected ? '#303133' : '#D32F2F'}
+            color={!isCollected ? '#5A2A12' : '#D32F2F'}
             onClick={() => handleCollect(productInfo?.id!, isCollected)}
           />
           <GoodsAction.Icon

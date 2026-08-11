@@ -116,7 +116,7 @@ const BookshelfItem: React.FC<BookshelfItemProps> = (props: BookshelfItemProps) 
           <Icons
             name='ChevronRight'
             size={12}
-            color='#909399'
+            color='#8F7564'
           />
         </View>
       ) : null}

@@ -113,7 +113,7 @@ const DiscountPackage: React.FC<DiscountPackageProps> = (props: DiscountPackageP
                       </View>
                       {goodIndex !== item.goodsList.length - 1 ? (
                         <View className="package-item-products-chain">
-                          <Icons name="Plus" size={12} color="#909399" />
+                          <Icons name="Plus" size={12} color="#8F7564" />
                         </View>
                       ) : null}
                     </View>

@@ -424,8 +424,8 @@ const MyCommodityList: React.FC = () => {
   }
 
   const actStyle = {
-    background: '#ebf9f6',
-    color: '#00A98F',
+    background: '#FFF5EC',
+    color: '#C45124',
   }
   const marginLeftStyle = {
     marginLeft: pxTransform(10),
@@ -957,13 +957,14 @@ const MyCommodityList: React.FC = () => {
       />
 
       <Header
+        customStyle="background-color: #FCF7F1;"
         title={
           <Text
             style={{
               lineHeight: pxTransform(60),
               fontSize: pxTransform(14),
               textAlign: 'center',
-              color: '#000',
+              color: '#5A2A12',
             }}
           >
             {intl.formatMessage({ id: 'order.wodedingdan', defaultMessage: '我的订单' })}
@@ -974,7 +975,7 @@ const MyCommodityList: React.FC = () => {
             <Icons
               name="ChevronLeft"
               size={24}
-              color="#000"
+              color="#5A2A12"
               onClick={() => Router.reLaunch('extra/mine', { hasTab: 'true' })}
             />
           </View>
@@ -991,7 +992,7 @@ const MyCommodityList: React.FC = () => {
           onClear={handleSearchSubmit}
           onSearch={handleSearchSubmit}
           customClassName={styles['page-wrap-Search-key']}
-          innerBackground="#FFF"
+          innerBackground="#FDF9F5"
           shape="round"
           clearable
           showAction

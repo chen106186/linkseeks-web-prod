@@ -1,11 +1,12 @@
 @import "@/styles/utils/modal.scss";
+@import "@/styles/variables.scss";
 .memberPower{
   overflow: hidden;
 }
 .member-power {
   width: 100%;
   flex: 1;
-  background-color: #f4f5f7;
+  background-color: $color-bg-base;
 }
 .head-right {
   color: #fff;
@@ -133,7 +134,9 @@
   justify-content: space-between;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #ffffff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   border-radius: 8px;
   align-items: center;
 }
@@ -203,13 +206,19 @@
 }
 .member-power-integral-introduce-item-name {
   font-size: 16px;
-  color: #1f2c3d;
+  color: $color-text-base;
 }
 .member-power-integral-introduce-item-desc {
   margin-top: 8px;
   font-size: 12px;
   font-weight: 400px;
-  color: #909399;
+  color: $color-text-placeholder;
+}
+
+.member-power-RAI :global(.mellow-card) {
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 
 .member-model {

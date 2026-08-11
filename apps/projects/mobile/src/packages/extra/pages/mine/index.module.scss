@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #F5F6F7;
+  background-color: $color-bg-base;
   &-layoutRight {
     display: flex;
     flex-direction: row;
@@ -18,19 +18,19 @@
     background-color: #fff;
   }
   &-scrollView {
-    background-color: #F4F5F7;
+    background-color: $color-bg-base;
     height: 100%;
 
   }
   &-alwaysUse {
     display: flex;
     flex-direction: column;
-    background-color: #F4F5F7;
+    background-color: $color-bg-base;
   }
   &-setting {
     display: flex;
     flex-direction: column;
-    background-color: #F4F5F7;
+    background-color: $color-bg-base;
     margin-bottom: 16px;
   }
   &-logout {

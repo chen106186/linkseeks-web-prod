@@ -52,7 +52,7 @@ const MemberApply = () => {
       <View
         style={{
           height: '100vh',
-          backgroundColor: '#F5F6F7',
+          backgroundColor: '#FCF7F1',
           paddingTop: pxTransform(1),
         }}
       >

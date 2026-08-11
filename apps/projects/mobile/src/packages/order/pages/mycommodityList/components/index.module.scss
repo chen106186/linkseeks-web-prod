@@ -64,7 +64,7 @@
    .title{
     font-family: PingFangSC-Medium;
     font-size: 12px;
-    color: #252D37;
+    color: $color-text-base;
    }
    .radioBoxCon{
      display: flex;
@@ -76,7 +76,7 @@
       font-size: 12px;
       text-align: center;
       padding: 10px 20px;
-      background-color:#F4F5F7;
+      background-color: $color-bg-base;
       margin-bottom: 10px;
       // margin-right: 10px;
     }
@@ -102,7 +102,7 @@
     .filterBtn{
       // flex: 0.7;
       width:160px;
-      background-color: #F4F5F7;
+      background-color: $color-bg-base;
       text-align: center;
       padding: 10px 0;
       border-radius: 10px;
@@ -116,7 +116,9 @@
 
 }
 .OrderItem{
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   width: 100%;
   border-radius: 8px;
   padding: 10px 12px;
@@ -135,14 +137,14 @@
       align-items: center;
       .label{
         font-size: 12px;
-        color: #252D37;
+        color: $color-text-base;
       }
     }
     .stauts{
       font-size: 12px;
-      color: #91959B;
+      color: $color-text-placeholder;
       &.oringe {
-        color: #FA8C16;
+        color: $color-brand;
       }
     }
   }
@@ -185,15 +187,15 @@
   justify-content: center;
 	padding: 6px 16px;
 	justify-content: space-between;
-	background-color: #fff;
+	background-color: $color-card-bg;
 
 	&-key {
 		flex: 1;
 		padding: 0;
 		margin-right: 10px;
-		border: 1px solid #00a98f;
+		border: 1px solid $color-brand-light;
 		border-radius: 32px;
-		background-color: #fff;
+		background-color: $color-card-bg;
 	}
 
 	&-button {
@@ -201,7 +203,7 @@
 		width: 56px;
 		line-height: 28px;
 		border-radius: 28px;
-		background: #00a98f;
+		background: $color-brand;
 		text-align: center;
 		color: #FFFFFF;
 		font-size: 14px;

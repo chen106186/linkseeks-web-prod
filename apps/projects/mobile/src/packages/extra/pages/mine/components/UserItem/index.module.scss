@@ -4,7 +4,9 @@
 .userItem-card {
   //margin: 8px;
   margin: 0 8px 8px 8px;
-  background-color: #FFFFFF;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -15,6 +17,7 @@
   }
   &-title {
     font-size: 16px;
+    color: $color-text-base;
     // font-weight: bold;
   }
   &-content {
@@ -46,5 +49,6 @@
     font-size: 12px;
     margin-top: 12px;
     text-align: center;
+    color: $color-text-secondary;
   }
 }

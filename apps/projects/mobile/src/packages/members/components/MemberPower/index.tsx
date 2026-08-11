@@ -246,9 +246,9 @@ export const Equity: React.FC<EquityProps> = (props: EquityProps) => {
           extra={
             needIllustrate && (
               <View onClick={() => toEquityRecord()}>
-                <Text style={{ fontSize: pxTransform(12), color: '#91959B' }}>
+                <Text style={{ fontSize: pxTransform(12), color: '#8F7564' }}>
                   {intl.formatMessage({ id: 'member.components.power_equity_extra', defaultMessage: '权益记录' })}
-                  <Icons customStyle={{ marginLeft: pxTransform(6) }} name="ChevronRight" size={14} color="#909399" />
+                  <Icons customStyle={{ marginLeft: pxTransform(6) }} name="ChevronRight" size={14} color="#8F7564" />
                 </Text>
               </View>
             )
@@ -604,8 +604,8 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
             <Grid.Item>
               <Statistic
                 bodyStyle={statistic_bodyStyle}
-                titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                titleStyle={{ color: '#5A2A12', marginBottom: pxTransform(16) }}
+                valueStyle={{ color: '#C45124', fontSize: pxTransform(20) }}
                 title={intl.formatMessage({
                   id: 'member.components.power_level_1',
                   defaultMessage: '累计返现金额(元)',
@@ -635,8 +635,8 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
             >
               <Statistic
                 bodyStyle={statistic_bodyStyle}
-                titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                titleStyle={{ color: '#5A2A12', marginBottom: pxTransform(16) }}
+                valueStyle={{ color: '#C45124', fontSize: pxTransform(20) }}
                 title={intl.formatMessage({ id: 'member.components.power_level_2', defaultMessage: '可用积分' })}
                 value={
                   powerInfo && powerInfo.currentPoint
@@ -660,8 +660,8 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
               >
                 <Statistic
                   bodyStyle={statistic_bodyStyle}
-                  titleStyle={{ color: '#252D37', marginBottom: pxTransform(16) }}
-                  valueStyle={{ color: '#00A98F', fontSize: pxTransform(20) }}
+                  titleStyle={{ color: '#5A2A12', marginBottom: pxTransform(16) }}
+                  valueStyle={{ color: '#C45124', fontSize: pxTransform(20) }}
                   title={intl.formatMessage({ id: 'member.components.power_coupon', defaultMessage: '优惠券' })}
                   value={couponNum}
                 />
@@ -674,7 +674,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
                 }}
                 style={{ position: 'absolute', right: pxTransform(12), bottom: pxTransform(16) }}
               >
-                <Icons name="ChevronRight" size={14} color="#909399" />
+                <Icons name="ChevronRight" size={14} color="#8F7564" />
               </View>
             )}
           </Grid>
@@ -682,7 +682,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
         {isShop && showCoupon && (
           <View className={`${styles['member-power-record']} ${styles['member-power-level-foot1']}`}>
             <View>
-              <Text style={{ fontSize: pxTransform(12), color: '#252D37' }}>
+              <Text style={{ fontSize: pxTransform(12), color: '#5A2A12' }}>
                 {intl.formatMessage({ id: 'member.components.power_level_3', defaultMessage: '可用余额(元)' })}
               </Text>
             </View>
@@ -694,13 +694,13 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
                 })
               }}
             >
-              <Text style={{ fontSize: pxTransform(16), color: '#909399' }}>
+              <Text style={{ fontSize: pxTransform(16), color: '#8F7564' }}>
                 {Number(moneyInfo?.accountBalance - moneyInfo?.lockBalance || 0)
                   .toFixed(2)
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </Text>
-              <Icons name="ChevronRight" size={14} color="#909399" customStyle={{ marginTop: pxTransform(4) }} />
+              <Icons name="ChevronRight" size={14} color="#8F7564" customStyle={{ marginTop: pxTransform(4) }} />
             </View>
           </View>
         )}

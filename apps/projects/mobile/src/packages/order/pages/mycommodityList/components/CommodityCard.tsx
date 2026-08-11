@@ -47,7 +47,7 @@ const CommodityCard = (props: Iprops) => {
                 <Text
                   style={{
                     fontSize: pxTransform(10),
-                    color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+                    color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
                   }}
                 >
                   {intl.formatMessage({ id: 'currency', defaultMessage: '￥' })}
@@ -56,7 +56,7 @@ const CommodityCard = (props: Iprops) => {
               <Text
                 style={{
                   fontSize: pxTransform(16),
-                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
                 }}
               >
                 {products.refPrice.split('.')[0]}.
@@ -64,7 +64,7 @@ const CommodityCard = (props: Iprops) => {
               <Text
                 style={{
                   fontSize: pxTransform(10),
-                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
                 }}
               >
                 {products.refPrice.split('.')[1]}
@@ -72,7 +72,7 @@ const CommodityCard = (props: Iprops) => {
               <Text
                 style={{
                   fontSize: pxTransform(10),
-                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+                  color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
                 }}
               >{`/${
                 Item.orderMode === 10 || Item.orderMode === 11
@@ -135,18 +135,18 @@ const CommodityCard = (props: Iprops) => {
         {Item.products.length === 1 ? first(Item.products[0]) : MultipleLayouts()}
         <View className={styles['Totalprice']}>
           <Text
-            style={{ fontSize: pxTransform(12), color: '#252D37', marginRight: pxTransform(5) }}
+            style={{ fontSize: pxTransform(12), color: '#5A2A12', marginRight: pxTransform(5) }}
           >{`${intl.formatMessage({ id: 'order.gong', defaultMessage: '共' })}${
             Item.products.length
           }${intl.formatMessage({ id: 'order.jianshangpin', defaultMessage: '件商品' })}`}</Text>
-          <Text style={{ fontSize: pxTransform(12), color: '#252D37' }}>
+          <Text style={{ fontSize: pxTransform(12), color: '#5A2A12' }}>
             {intl.formatMessage({ id: 'order.shifu', defaultMessage: '实付：' })}
           </Text>
           {Item.orderMode === 10 || Item.orderMode === 11 ? null : (
             <Text
               style={{
                 fontSize: pxTransform(10),
-                color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+                color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
               }}
             >
               {intl.formatMessage({ id: 'currency', defaultMessage: '¥' })}
@@ -155,7 +155,7 @@ const CommodityCard = (props: Iprops) => {
           <Text
             style={{
               fontSize: pxTransform(16),
-              color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+              color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
             }}
           >
             {Item.totalAmount.split('.')[0]}
@@ -163,11 +163,11 @@ const CommodityCard = (props: Iprops) => {
           <Text
             style={{
               fontSize: pxTransform(10),
-              color: Item.orderMode === 10 || Item.orderMode === 11 ? '#EB9B00' : '#EF3346',
+              color: Item.orderMode === 10 || Item.orderMode === 11 ? '#B97828' : '#C45124',
             }}
           >{`.${Item.totalAmount.split('.')[1]}`}</Text>
           {Item.orderMode === 10 || Item.orderMode === 11 ? (
-            <Text style={{ fontSize: pxTransform(10), color: '#EB9B00' }}>
+            <Text style={{ fontSize: pxTransform(10), color: '#B97828' }}>
               {intl.formatMessage({ id: 'order.jifen', defaultMessage: '积分' })}
             </Text>
           ) : null}

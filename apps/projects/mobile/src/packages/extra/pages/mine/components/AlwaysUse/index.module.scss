@@ -1,6 +1,10 @@
+@import '@/styles/variables.scss';
+
 .use-card {
   margin: 8px;
-  background-color: #FFF;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -11,6 +15,7 @@
   }
   &-title {
     font-size: 16px;
+    color: $color-text-base;
     // font-weight: bold;
   }
   &-content {
@@ -26,6 +31,7 @@
   &-allText {
     margin-right: 6px;
     font-size: 12px;
+    color: $color-text-secondary;
   }
   &-item {
 		position: relative;
@@ -61,5 +67,6 @@
   &-text {
     font-size: 12px;
     margin-top: 12px;
+    color: $color-text-secondary;
   }
 }

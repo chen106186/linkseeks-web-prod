@@ -449,7 +449,7 @@ const FirstItem: React.FC<{}> = () => {
       </View>
       <View className={styles['userItem-card-content']}>
         {userData.map((item) => {
-          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#00a98f')
+          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#C45124')
           return (
             <View
               className={styles['userItem-card-item']}

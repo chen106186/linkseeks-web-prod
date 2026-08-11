@@ -94,7 +94,7 @@ const MyMessage: React.FC<{}> = () => {
       </View>
       <View className={styles['userItem-card-content']}>
         {data.map((item) => {
-          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#00a98f')
+          const xmlSvg = item.icon.replace(/#C0C4CC/g, '#C45124')
           return (
             <View className={styles['userItem-card-item']} key={item.title} onClick={() => goJump(item.url)}>
               <Image src={xmlSvg} className={styles['userItem-card-svg']} />

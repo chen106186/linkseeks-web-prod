@@ -3,7 +3,7 @@ const tokenList = require('./api.config')
 const getConfigMap = (tokens: any[]) =>
   tokens.map((v) => ({
     // serverUrl: 'http://10.0.1.181:7070/',
-    serverUrl: 'http://47.115.168.121:3000/',
+    serverUrl: 'http://192.168.110.15:3000/',
     typesOnly: false,
     reactHooks: {
       enabled: false,

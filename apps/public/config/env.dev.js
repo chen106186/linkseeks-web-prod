@@ -1,7 +1,7 @@
 const env = {
-  BACK_GATEWAY: process.env.BACK_GATEWAY || 'http://192.168.110.137:8100',
+  BACK_GATEWAY: process.env.BACK_GATEWAY || 'http://192.168.110.136:8100',
   YAPI_REQUEST_BACK_GATEWAY:
-    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'http://192.168.110.137:8100',
+    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'http://192.168.110.136:8100',
   SOCKET_URL: process.env.SOCKET_URL || 'ws://lingxi-gateway-test-2023-v3.shushangyun.com:12880',
   SITE_URL: process.env.SITE_URL || 'http://lingxi-www-dev-2023.shushangyun.com:12880',
   MEMBER_URL: process.env.MEMBER_URL || 'http://lingxi-platform-dev-2023.shushangyun.com:12880',

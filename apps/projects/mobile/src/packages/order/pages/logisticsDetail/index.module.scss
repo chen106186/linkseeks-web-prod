@@ -1,0 +1,175 @@
+@import '@/styles/variables.scss';
+
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: $color-bg-base;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.location-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  color: $color-text-secondary;
+  font-size: 12px;
+  background: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px $color-card-shadow;
+}
+
+.location-label {
+  margin-right: 6px;
+  color: $color-brand;
+  font-weight: 600;
+}
+
+.panel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-bottom: 0;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -8px 24px $color-card-shadow;
+  transition: height 0.16s ease-out;
+}
+
+.drag-area {
+  flex-shrink: 0;
+  padding: 8px 14px 12px;
+  border-bottom: 1px solid $color-card-border;
+}
+
+.handle {
+  width: 40px;
+  height: 4px;
+  margin: 0 auto 10px;
+  background: #D8BDAA;
+  border-radius: 4px;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+}
+
+.summary-status {
+  display: block;
+  color: $color-brand;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.summary-description {
+  display: block;
+  max-width: 270px;
+  margin-top: 5px;
+  color: $color-text-secondary;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.timeline {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 14px 24px;
+  box-sizing: border-box;
+}
+
+.timeline-item {
+  display: flex;
+  min-height: 76px;
+}
+
+.timeline-axis {
+  position: relative;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.dot,
+.active-dot {
+  position: relative;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  margin-left: 3px;
+  background: #D8BDAA;
+  border: 2px solid $color-card-bg;
+  border-radius: 50%;
+}
+
+.active-dot {
+  background: $color-brand;
+  box-shadow: 0 0 0 4px rgba(196, 81, 36, 0.12);
+}
+
+.line {
+  position: absolute;
+  top: 15px;
+  bottom: -5px;
+  left: 7px;
+  width: 1px;
+  background: $color-card-border;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-bottom: 16px;
+}
+
+.timeline-title-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.timeline-title,
+.active-title {
+  color: $color-text-secondary;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.active-title {
+  color: $color-brand;
+}
+
+.time {
+  margin-left: 8px;
+  color: $color-text-placeholder;
+  font-size: 11px;
+}
+
+.description {
+  display: block;
+  margin-top: 6px;
+  color: $color-text-secondary;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.mock-tip {
+  display: block;
+  padding: 8px 0 12px;
+  color: $color-text-placeholder;
+  font-size: 11px;
+  text-align: center;
+}

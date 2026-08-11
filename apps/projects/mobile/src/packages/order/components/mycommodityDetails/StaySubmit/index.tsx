@@ -26,6 +26,7 @@ interface Iprops {
   noBtn?: boolean
   totalAmount?: string
   countdown: any
+  hasLogisticsSummary?: boolean
 }
 
 // const { customerServiceInfo } = GlobalConfig.global;
@@ -42,6 +43,7 @@ const StaySubmit = (props: Iprops) => {
     showAfterSale,
     noBtn,
     totalAmount,
+    hasLogisticsSummary,
     countdown = {
       itemList: [],
     },
@@ -358,7 +360,11 @@ const StaySubmit = (props: Iprops) => {
         </View>
       ) : (
         !!dataSource.address && (
-          <View className={styles.address}>
+          <View
+            className={classNames(styles.address, {
+              [styles['address-after-logistics']]: hasLogisticsSummary,
+            })}
+          >
             <Image src={getOssUrlPath(`/Images/map.svg`)} style={{ width: pxTransform(15), height: pxTransform(15) }} />
             <View className={styles['address-flex']}>
               <Text className={styles['address-name']}>

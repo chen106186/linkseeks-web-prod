@@ -72,7 +72,7 @@ const Network = () => {
         </View>
         <View
           style={{
-            backgroundColor: '#00A98F',
+            backgroundColor: '#C45124',
             fontSize: pxTransform(12),
             color: '#fff',
             borderRadius: pxTransform(4),

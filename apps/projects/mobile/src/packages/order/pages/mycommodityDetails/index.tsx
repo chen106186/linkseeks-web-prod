@@ -48,6 +48,7 @@ import Invoice from '../../components/mycommodityDetails/Invoice'
 import { encryptedByAES } from '@linkseeks/crypto'
 import DeliveryTime from '../confirmOrder/components/deliveryTime'
 import PayPopupInput from '../integral/components/PaypopupInput'
+import { MOCK_LOGISTICS_DATA } from '../logisticsDetail/mock'
 
 /*
 outerStatusName 头部名称状态
@@ -68,7 +69,6 @@ const MyCommodityDetails = () => {
   const [visibleTime, setVisibleTime] = useState<boolean>(false)
   const [randTimeData, setRandTimeData] = useState<any>({})
   const fundModeRef = useRef<any>({})
-  const [headText, setHeadText] = useState<boolean>(false)
   const [detailData, setDetailData] = useState<any>()
   const [sendInfo, setSendInfo] = useState<any>({})
   const [payTypeMessage, setPayTypeMessage] = useState<any>({}) // 支付方式
@@ -88,15 +88,6 @@ const MyCommodityDetails = () => {
   const {
     userStore: { shopAndSite },
   } = useStores()
-  /* 头部标题 */
-  const Scroll = (evt: any) => {
-    const { currentTarget } = evt
-    if (currentTarget.scrollTop > currentTarget.offsetTop) {
-      setHeadText(true)
-    } else {
-      setHeadText(false)
-    }
-  }
   /**
    * 隐藏支付方式
    */
@@ -605,16 +596,17 @@ const MyCommodityDetails = () => {
     })
   }
   const showTitle = () => {
-    if (headText) {
-      if (detailData?.outerStatus === 13) {
-        return detailData?.outerStatusName
-      }
-      return sendInfo.outerStatusName
+    if (detailData?.outerStatus === 13) {
+      return detailData?.outerStatusName
     }
-    return ''
+    return sendInfo.outerStatusName || detailData?.outerStatusName || ''
   }
   const dqrTitle = sendInfo.outerStatus === 13
   const dqr = dqrTitle && !noBtnClick
+  const showLogisticsInfo = dqrTitle && !detailData?.pickupPointName
+  const navigateToLogistics = () => {
+    Router.navigateTo('order/logisticsDetail', { orderId: detailData?.orderId || orderId })
+  }
   return (
     <View className={styles.container}>
       <Header
@@ -640,49 +632,50 @@ const MyCommodityDetails = () => {
               name="ChevronLeft"
               size={24}
               color="#FFF"
-              onClick={() =>
-                Router.navigateTo('order/mycommodityList', {
-                  Index: categoryIndex || '0',
-                })
-              }
+              onClick={() => Router.navigateBack()}
             />
           </View>
         }
         customStyle="background:#C45124"
       />
-      <ScrollView scrollY onScroll={Scroll} className={styles['scroll-style']}>
-        <View className={styles['status']}>
-          <Text className={styles['status-txet']}>
-            {detailData?.outerStatus === 13 ? detailData?.outerStatusName : sendInfo.outerStatusName}
-            {detailData?.outerStatus === 1 && '>'}
-          </Text>
-
-          {dqr && !detailData.pickupPointName && (
-            <Text
-              style={{
-                fontSize: pxTransform(12),
-                color: '#fff',
-                marginTop: pxTransform(8),
-              }}
-            >
-              {intl.formatMessage({
-                id: 'order.cidingdanbaohan',
-                defaultMessage: '此订单包含',
-              })}
-              {detailData?.deliveries?.length}{' '}
-              {intl.formatMessage({
-                id: 'order.gewuliudan',
-                defaultMessage: '个物流单',
-              })}
+      <ScrollView scrollY className={styles['scroll-style']}>
+        <View className={styles.status} onClick={showLogisticsInfo ? navigateToLogistics : undefined}>
+          {showLogisticsInfo ? (
+            <>
+              <View className={styles['status-content']}>
+                <Text className={styles['status-title']}>物流信息</Text>
+                <Text className={styles['status-latest']}>{MOCK_LOGISTICS_DATA.latestDescription}</Text>
+                <Text className={styles['status-time']}>{MOCK_LOGISTICS_DATA.traces[0].time}</Text>
+              </View>
+              <Icons name="ChevronRight" size={18} color="#FFF" />
+            </>
+          ) : (
+            <Text className={styles['status-txet']}>
+              {detailData?.outerStatus === 13 ? detailData?.outerStatusName : sendInfo.outerStatusName}
+              {detailData?.outerStatus === 1 && '>'}
             </Text>
           )}
         </View>
         <View
           className={styles.mian}
           style={{
-            marginTop: pxTransform(dqr && detailData?.deliveries ? -30 : 0),
+            marginTop: pxTransform(showLogisticsInfo ? 0 : dqr && detailData?.deliveries ? -30 : 0),
           }}
         >
+          {dqr && !detailData?.pickupPointName && !!detailData?.address && (
+            <View className={styles['detail-address']}>
+              <Image src={getOssUrlPath(`/Images/map.svg`)} style={{ width: pxTransform(15), height: pxTransform(15) }} />
+              <View className={styles['address-flex']}>
+                <Text className={styles['address-name']}>
+                  {detailData.consignee} {detailData.phone}
+                </Text>
+                <Text className={styles['address-text']}>
+                  {detailData.areaName || ''}
+                  {detailData.address}
+                </Text>
+              </View>
+            </View>
+          )}
           {/* 待审核 */}
           {/* <Examine dataSource={detailData}/> */}
           {/* 待提交  */}
@@ -697,6 +690,7 @@ const MyCommodityDetails = () => {
               noBtn={noBtn}
               countdown={countdown}
               totalAmount={totalAmount}
+              hasLogisticsSummary={showLogisticsInfo}
             />
           )}
           {/*  */}

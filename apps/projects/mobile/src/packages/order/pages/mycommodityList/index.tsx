@@ -715,6 +715,18 @@ const MyCommodityList: React.FC = () => {
                   {intl.formatMessage({ id: 'order.detail.del', defaultMessage: '删除订单' })}
                 </View>
               )}
+              {showReceive && !pickupPointName && (
+                <View
+                  className={cx(styles['backBtnText'], styles['logistics-button'])}
+                  style={{ ...marginLeftStyle }}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    Router.navigateTo('order/logisticsDetail', { orderId })
+                  }}
+                >
+                  {intl.formatMessage({ id: 'order.zhakanwuliu', defaultMessage: '查看物流' })}
+                </View>
+              )}
               {showReceive && (
                 <View
                   className={styles['backBtnText']}

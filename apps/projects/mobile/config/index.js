@@ -76,6 +76,10 @@ const config = {
       },
     },
     webpackChain(chain) {
+      // 物流详情页使用 Taro Map，避免生产构建优化时遗漏地图模板。
+      const { componentConfig } = require('@tarojs/webpack5-runner/dist/utils/component')
+      componentConfig.includes.add('map')
+
       chain.merge({
         module: {
           rule: {

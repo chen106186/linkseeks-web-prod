@@ -24,12 +24,39 @@
   padding-right: 10px;
   background: linear-gradient(90deg, $color-brand 0%, $color-brand-light 100%);
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .status-txet {
   font-size: 16px;
   color: #fff;
   font-weight: 900px;
+}
+.status-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding-right: 10px;
+}
+.status-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.status-latest {
+  overflow: hidden;
+  margin-top: 6px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.status-time {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
 }
 .head-text {
   font-size: 20px;
@@ -64,6 +91,17 @@
 }
 .address-text {
   font-size: 12px;
+}
+.detail-address {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 17px 10px;
+  color: $color-text-secondary;
+  background: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .customer {
   margin-top: 10px;

@@ -29,7 +29,9 @@
       display: flex;
       flex-direction: row;
       padding: $spacing-h-md;
-      background-color: #FFFFFF;
+      background-color: $color-card-bg;
+      outline: 1px solid $color-card-border;
+      box-shadow: 0 4px 12px $color-card-shadow;
       border-radius: 8px;
       overflow: hidden;
 

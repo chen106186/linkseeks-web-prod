@@ -172,6 +172,15 @@ function useGetProductDetail(options: OptionsType) {
       try {
         setLoading(true)
         const { data, code, message } = await service[currentMode](mergePostData as any, { headers })
+        console.log('[商品详情] 商品详情接口响应', {
+          mode: currentMode,
+          request: mergePostData,
+          shopId: headers.shopId,
+          code,
+          message,
+          productInfo: data,
+          isPublish: data?.isPublish,
+        })
         if (code !== 1000) {
           Toast.show({
             title: intl.formatMessage({ id: `${code}`, defaultMessage: message }),

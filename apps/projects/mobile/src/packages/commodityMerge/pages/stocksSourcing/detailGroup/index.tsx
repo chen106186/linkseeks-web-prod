@@ -1,5 +1,5 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
-import React, { useState, useEffect, useReducer, useRef, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useReducer, useRef, useMemo } from 'react'
 import { View, Text, Button, Icons, Toast, CountDown } from '@apps/mobile-ui'
 import {
   useRouter,
@@ -9,13 +9,12 @@ import {
   pxTransform,
   getLaunchOptionsSync,
 } from '@apps/mobile-services/utils/taro'
-import Taro from '@tarojs/taro'
 import classNames from 'classnames'
 import useStores from '@/store/useStores'
 import { observer } from 'mobx-react-lite'
 import { useIntl } from '@linkseeks/i18n'
 import { SHOP_PROPERTY, SHOP_TYPE } from '@/constants/const/shop'
-import { getManageContentNoticeFindWithOutContent, getCommodityMobileCameraListByCommodity } from '@apps/apis'
+import { getManageContentNoticeFindWithOutContent } from '@apps/apis'
 import useProductConst from '@/hooks/useProductConst'
 import Router from '@/utils/router'
 import { numFormat, priceFormat } from '@/utils/numberFormat'
@@ -61,31 +60,6 @@ import { IS_WEB } from '@apps/mobile-services/constants'
 import { isWeChat } from '@/utils'
 import { useMobileIntl } from '@apps/locales'
 import useWxConfig from '@/hooks/useWxConfig'
-
-// ========== 摄像头相关类型定义 ==========
-type CameraItem = {
-  id: number
-  cameraId: number
-  cameraName: string
-  coverUrl: string
-  directionName: string
-  sortOrder: number
-  cameraStatus: number
-  videoUrl: {
-    id?: string
-    url?: string
-    expireTime?: string
-    accessToken?: string
-  } | null
-}
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      ezplayer: any
-    }
-  }
-}
 
 type RouteParams = {
   /**
@@ -180,11 +154,6 @@ const StocksSourcingDetail: React.FC = () => {
   const translate = useMobileIntl()
   const { wxConfig } = useWxConfig()
 
-  // ========== 摄像头相关状态 ==========
-  const [cameraList, setCameraList] = useState<CameraItem[]>([])
-  const [activeCameraIndex, setActiveCameraIndex] = useState(0)
-  const [cameraLoading, setCameraLoading] = useState(false)
-  const [videoError, setVideoError] = useState(false)
   // const [marketingCampaign, setMarketingCampaign] = useState<MarketingCampaignData | null>(null);
 
   const {
@@ -292,195 +261,6 @@ const StocksSourcingDetail: React.FC = () => {
     const tempPrice = productReducer?.vipPrice || productReducer.ladderPrice || 0
     return tempPrice.toString().split('.')
   }, [productReducer])
-
-  // ========== 摄像头相关逻辑 ==========
-  useEffect(() => {
-    if (commodityId) {
-      setCameraLoading(true)
-      getCommodityMobileCameraListByCommodity({ commodityId })
-        .then((res: any) => {
-          if (res.code === 1000 && res.data) {
-            const list = Array.isArray(res.data) ? res.data : res.data.cameraList || []
-            if (list.length > 0) {
-              setCameraList(list)
-              const onlineIndex = list.findIndex((item: CameraItem) => item.cameraStatus === 1)
-              setActiveCameraIndex(onlineIndex !== -1 ? onlineIndex : 0)
-            }
-          }
-        })
-        .catch((error: any) => console.error('获取摄像头列表失败:', error))
-        .finally(() => setCameraLoading(false))
-    }
-  }, [commodityId])
-
-  const getAccessToken = useCallback((camera: CameraItem | undefined): string => {
-    if (!camera?.videoUrl?.accessToken) return ''
-    return camera.videoUrl.accessToken
-  }, [])
-
-  const getPlayUrl = useCallback((camera: CameraItem | undefined): string => {
-    if (!camera?.videoUrl?.url) return ''
-    return camera.videoUrl.url
-  }, [])
-
-  const handleSwitchCamera = useCallback(
-    (index: number) => {
-      if (cameraList[index]?.cameraStatus !== 1) {
-        showToast({ title: '当前摄像头不在线', icon: 'none' })
-      }
-      setActiveCameraIndex(index)
-      setVideoError(false)
-    },
-    [cameraList],
-  )
-
-  const getStatusText = useCallback((status: number) => {
-    const map: Record<number, string> = { 0: '未检测', 1: '在线', 2: '离线', 3: '异常' }
-    return map[status] || '未知'
-  }, [])
-
-  const getStatusColor = useCallback((status: number) => {
-    const map: Record<number, string> = { 0: '#ff9800', 1: '#4caf50', 2: '#9e9e9e', 3: '#f44336' }
-    return map[status] || '#999'
-  }, [])
-
-  const handleEzplayerError = useCallback((e: any) => {
-    console.error('播放器错误:', e.detail)
-    setVideoError(true)
-    showToast({ title: '视频播放失败', icon: 'none' })
-  }, [])
-
-  const handleEzplayerControlEvent = useCallback((e: any) => {
-    console.log('控制事件:', e.detail)
-  }, [])
-
-  const renderCameraView = useCallback(() => {
-    if (cameraLoading) {
-      return (
-        <>
-          <Gap />
-          <MellowCard title="视频溯源">
-            <View className="camera-loading">
-              <View className="camera-loading__spinner" />
-              <Text className="camera-loading__text">加载中...</Text>
-            </View>
-          </MellowCard>
-        </>
-      )
-    }
-
-    if (!cameraList.length) return null
-
-    const current = cameraList[activeCameraIndex]
-    const isOnline = current.cameraStatus === 1
-    const playUrl = getPlayUrl(current)
-    const accessToken = getAccessToken(current)
-    const canPlay = isOnline && playUrl && accessToken && !videoError
-    const screenWidth = Taro.getSystemInfoSync().windowWidth
-    const rpxToPx = (rpx: number) => rpx * (screenWidth / 750)
-
-    const width = screenWidth - rpxToPx(80)
-    const height = width * (9 / 16)
-
-    const shouldAutoPlay = canPlay && activeCameraIndex !== 0
-
-    return (
-      <>
-        <Gap />
-        <MellowCard title="基地直播视频溯源">
-          <View className="camera-view">
-            <View className="camera-view__player" style={'height:' + height + 'px'}>
-              {canPlay ? (
-                <View>
-                  <ezplayer
-                    id={`ezplayer_${activeCameraIndex}`}
-                    key={`ezplayer_${activeCameraIndex}`}
-                    width={width}
-                    height={height}
-                    className="camera-view__video"
-                    accessToken={accessToken}
-                    url={playUrl}
-                    plugins=""
-                    theme={{
-                      poster: current.coverUrl,
-                      showCapture: false,
-                      showBottomBar: false,
-                      showDatePicker: false,
-                      showTypeSwitch: false,
-                      showProgress: false,
-                      showPlaybackRate: false,
-                      showDefinition: false,
-                      showVolume: false,
-                      showFullscreen: false,
-                    }}
-                    muted={true}
-                    autoPlay={shouldAutoPlay}
-                    bindhandleerror={handleEzplayerError}
-                    bindoncontrolevent={handleEzplayerControlEvent}
-                  ></ezplayer>
-                </View>
-              ) : (
-                <View className="camera-view__placeholder">
-                  {current.coverUrl && <img src={current.coverUrl} alt="" className="camera-view__cover" />}
-                  <View
-                    className="camera-view__status-overlay"
-                    style={{ backgroundColor: getStatusColor(current.cameraStatus) + 'CC' }}
-                  >
-                    <Text className="camera-view__status-text">
-                      {videoError ? '播放失败' : getStatusText(current.cameraStatus)}
-                    </Text>
-                  </View>
-                  {!isOnline && (
-                    <View className="camera-view__name-overlay">
-                      <Text className="camera-view__name-text">{current.directionName || current.cameraName}</Text>
-                    </View>
-                  )}
-                </View>
-              )}
-              {canPlay && shouldAutoPlay && (
-                <View className="camera-view__live-badge">
-                  <View className="camera-view__live-dot" />
-                  <Text className="camera-view__live-text">LIVE</Text>
-                </View>
-              )}
-            </View>
-
-            {cameraList.length > 1 && (
-              <View className="camera-view__tabs">
-                <View className="camera-view__tabs-scroll">
-                  {cameraList.map((cam, i) => (
-                    <View
-                      key={cam.id}
-                      className={`camera-view__tab ${activeCameraIndex === i ? 'camera-view__tab--active' : ''}`}
-                      onClick={() => handleSwitchCamera(i)}
-                    >
-                      <View
-                        className="camera-view__tab-dot"
-                        style={{ backgroundColor: getStatusColor(cam.cameraStatus) }}
-                      />
-                      <Text className="camera-view__tab-text">{cam.directionName || cam.cameraName}</Text>
-                    </View>
-                  ))}
-                </View>
-              </View>
-            )}
-          </View>
-        </MellowCard>
-      </>
-    )
-  }, [
-    cameraLoading,
-    cameraList,
-    activeCameraIndex,
-    videoError,
-    getPlayUrl,
-    getAccessToken,
-    getStatusText,
-    getStatusColor,
-    handleSwitchCamera,
-    handleEzplayerError,
-    handleEzplayerControlEvent,
-  ])
 
   useEffect(() => {
     if (!h5ShopId) {
@@ -1132,8 +912,6 @@ const StocksSourcingDetail: React.FC = () => {
               })}
               customClassName="stocksSourcing-detail-anchor-item"
             >
-              {/* ========== 视频溯源组件 ========== */}
-              {renderCameraView()}
               {/* 评价 */}
               <Gap />
               <EvaluateRecordCard

@@ -1009,7 +1009,6 @@ const MyCommodityList: React.FC = () => {
         onClick={handleTabClick}
         hideUnderLine
         scroll
-        activeColor="#000"
       />
       <View className={styles['scrollView']}>
         <ScrollView

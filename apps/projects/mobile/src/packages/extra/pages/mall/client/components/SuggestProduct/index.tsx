@@ -150,7 +150,7 @@ const SuggesProduct: React.FC<SuggesProductProps> = (props) => {
         onClick={handleTabClick}
         transparentBg
         hideUnderLine
-        activeColor="#00A98F"
+        activeColor="#C45124"
       />
       {productList && productList.length > 0 && (
         <Swiper

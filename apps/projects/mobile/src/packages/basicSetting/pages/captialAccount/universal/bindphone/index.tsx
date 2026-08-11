@@ -124,7 +124,7 @@ const BindPhoneBlock = () => {
           consentText="阅读并同意"
           customClassName={styles.agreementContent}
           columnType="2"
-          color={'#007bfc'}
+          color={'#C45124'}
         />
       </View>
     </View>

@@ -1,7 +1,7 @@
 export const PRIMARY = 'PRIMARY';
 
 export const COLOR = {
-  [PRIMARY]: '#00A98F'
+  [PRIMARY]: '#C45124'
 }
 
 

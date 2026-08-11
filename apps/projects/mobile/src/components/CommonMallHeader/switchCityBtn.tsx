@@ -27,7 +27,7 @@ const SwitchCityBtn = () => {
   return (
     <View className="actionsItem" onClick={() => Router.navigateTo('extra/switchCity')}>
       <Text className="actionsIteText">{currentCity?.cityName}</Text>
-      <Icons name="ChevronDown" color="#C8CACD" size={12} />
+      <Icons name="ChevronDown" color="#A98F7C" size={12} />
     </View>
   )
 }

@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .mall-recommend {
   position: relative;
-  background-color: #F4F5F7;
+  background-color: $color-bg-base;
   display: flex;
   flex-direction: column;
   z-index: 3;
@@ -12,12 +14,12 @@
     top: -1px;
     transition: all 0.01s;
     z-index: 999;
-    background-color: #F4F5F7;
+    background-color: $color-bg-base;
 
     &.fixed {
-      background-color: #FFF;
-      border-top: 2px solid #EDEEEF;
-      border-bottom: 1px solid #EDEEEF;
+      background-color: $color-bg;
+      border-top: 2px solid $color-border-light;
+      border-bottom: 1px solid $color-border-light;
     }
 
     &__body {
@@ -52,7 +54,7 @@
   // }
 
   .swiper-wrap {
-    background-color: #F4F5F7;
+    background-color: $color-bg-base;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -108,7 +110,7 @@
         right: 0;
         top: 14px;
         width: 0.5px;
-        background-color: #BABCC0;
+        background-color: $color-border-light;
       }
     }
   }
@@ -127,7 +129,7 @@
 
   .tab-fix {
     position: absolute;
-    background-color: #FFF;
+    background-color: $color-bg;
     top: 0;
     left: 0;
     height: 60px;

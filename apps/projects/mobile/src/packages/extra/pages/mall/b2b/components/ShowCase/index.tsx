@@ -105,7 +105,7 @@ const ShowCase: React.FC<ShowCaseProps> = (props) => {
         marginBottom: pxTransform(8),
       }}
       style={{
-        backgroundColor: '#FFF',
+        backgroundColor: '#FDF9F5',
         marginBottom: pxTransform(0),
       }}
       column={2}

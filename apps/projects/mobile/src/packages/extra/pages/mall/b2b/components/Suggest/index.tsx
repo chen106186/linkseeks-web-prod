@@ -141,7 +141,7 @@ const Suggest: React.FC<SuggestProps> = (props) => {
         onClick={handleTabClick}
         transparentBg
         hideUnderLine
-        activeColor="#00A98F"
+        activeColor="#C45124"
       />
       {renderTabPane}
     </View>

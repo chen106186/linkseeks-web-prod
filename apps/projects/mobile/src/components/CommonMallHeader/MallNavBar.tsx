@@ -84,7 +84,7 @@ const MallNavBar: React.FC<MallNavBarProps> = (props) => {
         <Text className="mall_nav_bar_title_text" onClick={handleLink}>
           {title}
           {!shopAndSite?.isSelf && mallList.length > 1 && (
-            <Icons name="ArrowDownFill" size={24} color="#303133" className="exchange_icon" />
+            <Icons name="ArrowDownFill" size={24} color="#5A2A12" className="exchange_icon" />
           )}
         </Text>
         {extra}

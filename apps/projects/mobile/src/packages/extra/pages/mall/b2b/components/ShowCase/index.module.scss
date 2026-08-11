@@ -1,4 +1,6 @@
 
+@import '@/styles/variables.scss';
+
 .container {
   position: relative;
   padding: 0 4px;
@@ -17,7 +19,9 @@
       padding: 0 4px;
 
       .showCaseItemBody {
-        background-color: #FFF;
+        background-color: $color-card-bg;
+        outline: 1px solid $color-card-border;
+        box-shadow: 0 4px 12px $color-card-shadow;
         border-radius: 8px;
       }
     }

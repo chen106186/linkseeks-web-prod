@@ -1,11 +1,15 @@
 
+@import '@/styles/variables.scss';
+
 .recommend-brand-list {
   display: flex;
   flex-direction: column;
   padding: 0 8px;
 
   &-item {
-    background-color: #FFF;
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
     border-radius: 8px;
 
     &-header {
@@ -18,9 +22,9 @@
         height: 40px;
         overflow: hidden;
         border-radius: 4px;
-        background-color: #FFF;
+        background-color: $color-card-bg;
         border-width: 0.1px;
-        border-color: #EEF0F3;
+        border-color: $color-card-border;
         margin-right: 8px;
       }
 
@@ -52,7 +56,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #FAFBFC;
+          background-color: $color-bg-base;
         }
       }
     }

@@ -1,6 +1,10 @@
 
+@import '@/styles/variables.scss';
+
 .brand {
-  background-color: #FFF;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   margin: 0 8px 8px 8px;
   border-radius: 8px;
 
@@ -16,13 +20,13 @@
 
       .title {
         font-size: 16px;
-        color: #252D37;
+      color: $color-text-title;
         font-weight: 500;
       }
 
       .explain {
         font-size: 12px;
-        color: #91959B;
+      color: $color-text-placeholder;
         margin-left: 4px;
       }
     }
@@ -37,7 +41,7 @@
       width: 104px;
       display: flex;
       margin: 0 6px;
-      background-color: #FAFBFC;
+      background-color: $color-bg-base;
       height: 40px;
       align-items: center;
       justify-content: center;

@@ -3,7 +3,9 @@
 .row-commodity {
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   position: relative;
   padding: $spacing-h-md;
   border-radius: 8px * $hd;

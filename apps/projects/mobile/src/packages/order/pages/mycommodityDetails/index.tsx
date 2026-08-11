@@ -648,7 +648,7 @@ const MyCommodityDetails = () => {
             />
           </View>
         }
-        customStyle="background:#00A98F"
+        customStyle="background:#C45124"
       />
       <ScrollView scrollY onScroll={Scroll} className={styles['scroll-style']}>
         <View className={styles['status']}>

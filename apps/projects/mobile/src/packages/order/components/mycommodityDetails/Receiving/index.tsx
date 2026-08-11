@@ -51,7 +51,7 @@ const Receiving = (props: Iprops) => {
           isLogistics
             ? {
                 marginTop: pxTransform(0),
-                backgroundColor: '#00A98F',
+                backgroundColor: '#C45124',
                 padding: `${pxTransform(16)} ${pxTransform(0)}`,
                 display: 'flex',
                 flexDirection: 'column',
@@ -186,7 +186,7 @@ const Receiving = (props: Iprops) => {
                   style={{
                     width: `${(item.received / item.delivered) * 100}%`,
                     height: pxTransform(4),
-                    backgroundColor: '#00A98F',
+                    backgroundColor: '#C45124',
                     borderRadius: pxTransform(10),
                     position: 'relative',
                   }}

@@ -2,7 +2,7 @@
 
 .container {
   height: 100vh;
-  background-color: #f4f5f7;
+  background-color: $color-bg-base;
   display: flex;
   flex-direction: column;
   .scroll-style {
@@ -14,7 +14,7 @@
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $theme-color;
+  background-color: $color-brand;
 }
 .status {
   height: 80px;
@@ -22,7 +22,7 @@
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $theme-color;
+  background: linear-gradient(90deg, $color-brand 0%, $color-brand-light 100%);
   display: flex;
   justify-content: space-between;
 }
@@ -220,7 +220,7 @@
         padding-right: 4px;
         height: 100%;
         box-sizing: content-box;
-        background: #00A98F;
+        background: $color-brand;
         overflow: visible;
         .tag-img{
           position: absolute;

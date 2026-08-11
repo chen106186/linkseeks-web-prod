@@ -5,8 +5,8 @@
   "appid": "wxb3458d933c7676dd",
   "setting": {
     "urlCheck": false,
-    "es6": false,
-    "enhance": false,
+    "es6": true,
+    "enhance": true,
     "postcss": false,
     "preloadBackgroundData": false,
     "minified": true,
@@ -43,7 +43,9 @@
   "libVersion": "3.8.10",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "navigateToMiniProgramAppIdList": ["wx6885acbedba59c14"],
+  "navigateToMiniProgramAppIdList": [
+    "wx6885acbedba59c14"
+  ],
   "condition": {
     "miniprogram": {
       "list": [

@@ -1,6 +1,8 @@
+@import '@/styles/variables.scss';
+
 .AccountDetail{
   height: 100vh;
-  background: #F5F6F7;
+  background: $color-bg-base;
   .warp {
     display: flex;
     padding: 10px;
@@ -10,7 +12,7 @@
       height: 188px;
       border-radius: 8px;
       // background-image: linear-gradient(134deg, #3877FF 0%, #3877FF 100%);
-			background: linear-gradient(45deg, #00a98f 0%, #51d19f 98%);
+			background: linear-gradient(45deg, $color-brand 0%, $color-brand-light 98%);
 
       &-title {
         display: flex;
@@ -18,7 +20,7 @@
         padding: 10px;
         justify-content: space-between;
         // background-image: linear-gradient(82deg, rgba(0,0,0,0.08) 0%, rgba(255,255,255,0.00) 100%);
-				background: linear-gradient(45deg, #00a98f 0%, #51d19f 98%);
+				background: linear-gradient(45deg, $color-brand 0%, $color-brand-light 98%);
 				border-radius: 8px 8px 0px 0px;
        &-left{
         color: #fff;
@@ -58,8 +60,8 @@
         width: 80px;
         height: 30px;
         line-height: 30px;
-        color: #3877FF;
-        background-color: #fff;
+        color: $color-brand;
+        background-color: $color-card-bg;
         border-radius: 18px;
         text-align: center;
         font-size: 14px;
@@ -98,7 +100,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px 7px;
-        border-bottom:1px solid #F5F6F7;
+        border-bottom:1px solid $color-card-border;
         //background: #fff;
         &-left{
           display: flex;
@@ -116,7 +118,7 @@
 
         .rightAllText {
           font-size: 14px;
-          color: #C8CACD;
+          color: $color-text-placeholder;
           margin-right: 8px;
         }
         .rightIcon{
@@ -131,7 +133,7 @@
       display: flex;
       padding: 12px;
       flex-direction: row;
-      background-color: #FFFFFF;
+      background-color: $color-card-bg;
     }
 
     .recordIcon {
@@ -155,23 +157,23 @@
     .recordLine_tradeType {
       flex: 1;
       font-size: 14px;
-      color: #252D37;
+      color: $color-text-base;
     }
 
     .recordLine_chgAmount {
       font-size: 16px;
-      color: #303133;
+      color: $color-text-base;
     }
 
     .recordLine_changeTime {
       font-size: 12px;
-      color: #91959B;
+      color: $color-text-placeholder;
       flex: 1;
     }
 
     .recordLine_type {
       font-size: 12px;
-      color: #5C626A;
+      color: $color-text-secondary;
     }
   }
 }

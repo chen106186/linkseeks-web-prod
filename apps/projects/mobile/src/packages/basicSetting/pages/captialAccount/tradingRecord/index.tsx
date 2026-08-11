@@ -105,7 +105,7 @@ const TradingRecord = () => {
       }),
       operator: '+',
       url: getOssUrlPath('/Images/Recharge.png'),
-      color: '#00A98F',
+      color: '#C45124',
     },
     2: {
       title: intl.formatMessage({
@@ -115,7 +115,7 @@ const TradingRecord = () => {
       operator: '-',
       // url: getOssUrlPath('/Images/pay%402x.png'),
 			url: extractIcon,
-      color: '#EA8000',
+      color: '#B97828',
     },
     3: {
       title: intl.formatMessage({
@@ -125,7 +125,7 @@ const TradingRecord = () => {
       operator: '-',
       // url: getOssUrlPath('/Images/orderIcon.png'),
 			url: paymentIcon,
-      color: '#00A98F',
+      color: '#C45124',
     },
     4: {
       title: intl.formatMessage({
@@ -134,7 +134,7 @@ const TradingRecord = () => {
       }),
       operator: '+',
       url: getOssUrlPath('/Images/pay%402x.png'),
-      color: '#3877FF',
+      color: '#A83F1B',
     },
     5: {
       title: intl.formatMessage({
@@ -144,7 +144,7 @@ const TradingRecord = () => {
       operator: '+',
       // url: getOssUrlPath('/Images/Rebate.png'),
 			url: rebateIcon,
-      color: '#00A98F',
+      color: '#C45124',
     },
 		6: {
 			title: intl.formatMessage({
@@ -153,7 +153,7 @@ const TradingRecord = () => {
 			}),
 			operator: '+',
 			url: rebateIcon,
-			color: '#00A98F',
+			color: '#C45124',
 		},
 		7: {
 			title: intl.formatMessage({
@@ -162,7 +162,7 @@ const TradingRecord = () => {
 			}),
 			operator: '+',
 			url: rebateIcon,
-			color: '#00A98F',
+			color: '#C45124',
 		},
   }
   const [date, setDate] = useState<any>('')

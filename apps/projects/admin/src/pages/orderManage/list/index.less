@@ -1,0 +1,265 @@
+.logisticsDrawer {
+  font-size: 14px;
+
+  :global(.ant-drawer-body) {
+    padding: 24px;
+    background: #fff;
+  }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  :global(.ant-typography) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.logisticsSummary {
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr 1.25fr 0.75fr;
+  padding: 24px 8px;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+}
+
+.summaryItem {
+  min-width: 0;
+  padding: 0 20px;
+  border-right: 1px solid #d9deea;
+
+  :global(.ant-typography) {
+    font-size: 13px;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.summaryValue {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  margin-top: 16px;
+  color: #17213c;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.ztoLogo {
+  margin-right: 10px;
+  color: #1685df;
+  font-weight: 800;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.orderNo {
+  color: #12bfae;
+}
+
+.statusTag {
+  padding: 5px 12px;
+  color: #16a34a;
+  font-size: 14px;
+  background: #dcf8e3;
+  border-radius: 18px;
+}
+
+.trackCard {
+  margin-top: 24px;
+  padding: 26px 24px 4px;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+
+  :global(.ant-typography) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.trackScroll {
+  max-height: 550px;
+  padding: 16px 8px 0 0;
+  overflow-y: auto;
+}
+
+.logisticsTimeline {
+  :global(.ant-timeline-item-label) {
+    width: calc(31% - 12px) !important;
+    color: #53658d;
+    font-size: 13px;
+  }
+
+  :global(.ant-timeline-item-tail),
+  :global(.ant-timeline-item-head) {
+    left: 31% !important;
+  }
+
+  :global(.ant-timeline-item-content) {
+    left: calc(31% - 4px) !important;
+    width: calc(69% - 14px) !important;
+    min-height: 72px;
+  }
+}
+
+.latestTime {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.latestTag {
+  padding: 3px 6px;
+  color: #fff;
+  font-size: 12px;
+  background: #12bfae;
+  border-radius: 5px;
+}
+
+.latestTrack {
+  margin-top: -12px;
+  padding: 14px 18px;
+  background: #effbfa;
+  border-radius: 8px;
+}
+
+.trackItem {
+  padding: 0 18px 16px;
+}
+
+.trackStatus,
+.latestStatus {
+  margin-bottom: 9px;
+  color: #17213c;
+  font-size: 14px;
+}
+
+.latestStatus {
+  color: #12bfae;
+}
+
+.trackDescription {
+  color: #17213c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.infoCard {
+  padding: 22px;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+
+  :global(.ant-typography) {
+    margin-top: 0;
+  }
+
+  :global(h4.ant-typography) {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.receiverIcon,
+.goodsIcon {
+  margin-right: 8px;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.receiverIcon {
+  color: #8b5cf6;
+  background: #f2eaff;
+}
+
+.goodsIcon {
+  color: #52658e;
+  background: #f1f4fa;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+
+  :global(.ant-typography) {
+    font-size: 13px;
+  }
+}
+
+.goodsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 14px;
+
+  > div {
+    min-height: 70px;
+    padding: 4px 18px 16px 0;
+
+    &:nth-child(odd) {
+      border-right: 1px solid #e5e9f2;
+    }
+
+    &:nth-child(even) {
+      padding-left: 18px;
+    }
+
+    &:nth-child(-n + 2) {
+      border-bottom: 1px solid #e5e9f2;
+    }
+
+    div {
+      margin-top: 10px;
+    }
+
+    :global(.ant-typography) {
+      font-size: 13px;
+    }
+  }
+}
+
+.drawerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #1685df;
+  border: 1px solid #1685df;
+  border-radius: 50%;
+}

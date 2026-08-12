@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { Button, Empty, Form, Input, Modal, Space, Typography } from 'antd'
 import { EyeAuthButton, PageHeaderWrapper, StandardFormTable } from '@apps/components'
 import type { RecordColumns, ActionType } from '@apps/components/src/web/StandardFormTable/types'
 import { formatTimeString } from '@/utils'
@@ -106,12 +107,34 @@ const fetchTableData = async (params) => {
   return data
 }
 
+const hasLogisticsInfo = (record: any) =>
+  Boolean(record.logisticsOrderId || record.logisticsId || record.logisticsOrderNo || record.logisticsNo)
+
 // 订单查询
 const OrderList: React.FC = () => {
   const { token } = authService.getAuth() || {}
   const ref = useRef({} as ActionType)
   const fetchParams = useRef<any>({})
-  const secondColumns: any[] = baseOrderListColumns.concat([])
+  const [importVisible, setImportVisible] = useState(false)
+  const [form] = Form.useForm()
+
+  const secondColumns: any[] = baseOrderListColumns.concat([
+    {
+      title: '操作',
+      dataIndex: 'action',
+      key: 'action',
+      fixed: 'right',
+      width: 130,
+      render: (_, record) =>
+        hasLogisticsInfo(record) ? (
+          <Button type="link">查看物流</Button>
+        ) : (
+          <Button type="link" onClick={() => setImportVisible(true)}>
+            导入物流信息
+          </Button>
+        ),
+    },
+  ])
 
   const fetchData = (params) => {
     const payload = { ...params }
@@ -156,6 +179,57 @@ const OrderList: React.FC = () => {
           },
         ]}
       />
+      <Modal
+        title="导入物流订单信息"
+        width={880}
+        visible={importVisible}
+        onCancel={() => setImportVisible(false)}
+        footer={
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Typography.Text type="secondary">查询结果来自快递公司系统，若信息有误请以快递公司数据为准</Typography.Text>
+            <Space>
+              <Button onClick={() => setImportVisible(false)}>取消</Button>
+              <Button disabled type="primary">
+                确认导入
+              </Button>
+            </Space>
+          </div>
+        }
+      >
+        <Form form={form} layout="inline">
+          <Form.Item
+            label="物流订单号"
+            name="logisticsOrderNo"
+            rules={[{ required: true, message: '请输入物流订单号' }]}
+          >
+            <Input placeholder="请输入物流订单号" style={{ width: 420 }} />
+          </Form.Item>
+          <Button type="primary">查询</Button>
+        </Form>
+        <div
+          style={{
+            alignItems: 'center',
+            border: '1px solid #f0f0f0',
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: 24,
+            minHeight: 360,
+          }}
+        >
+          <Empty
+            description={
+              <div>
+                <div style={{ color: '#1f1f1f', fontSize: 18, fontWeight: 500, marginBottom: 8 }}>
+                  请输入物流订单号后进行查询
+                </div>
+                <Typography.Text type="secondary">
+                  查询成功后，将自动带出快递平台、发货人、收货人及物流费用等信息
+                </Typography.Text>
+              </div>
+            }
+          />
+        </div>
+      </Modal>
     </PageHeaderWrapper>
   )
 }

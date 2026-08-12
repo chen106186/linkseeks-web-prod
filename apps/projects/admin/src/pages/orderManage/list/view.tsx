@@ -1,6 +1,18 @@
 import React, { useRef, useState } from 'react'
-import { Button, Drawer, Empty, Form, Input, message, Modal, Space, Timeline, Typography } from 'antd'
-import { CarOutlined, CopyOutlined, InboxOutlined, ReloadOutlined, UserOutlined } from '@ant-design/icons'
+import { Button, Drawer, Form, Input, message, Modal, Space, Timeline, Typography } from 'antd'
+import {
+  CarOutlined,
+  CheckCircleFilled,
+  CheckOutlined,
+  CopyOutlined,
+  DownOutlined,
+  InboxOutlined,
+  InfoCircleOutlined,
+  ReloadOutlined,
+  ScanOutlined,
+  UpOutlined,
+  UserOutlined,
+} from '@ant-design/icons'
 import copy from 'copy-to-clipboard'
 import { EyeAuthButton, PageHeaderWrapper, StandardFormTable } from '@apps/components'
 import type { RecordColumns, ActionType } from '@apps/components/src/web/StandardFormTable/types'
@@ -11,6 +23,32 @@ import { exportFile } from '@apps/utils'
 import styles from './index.less'
 
 const MOCK_LOGISTICS_NO = '75312345678901'
+
+const mainLogisticsCompanies = [
+  { key: 'zto', logo: 'ZTO', name: '中通快递', color: '#1685df' },
+  { key: 'yto', logo: 'YTO', name: '圆通速递', color: '#6c1b8e' },
+  { key: 'sto', logo: 'sto', name: '申通快递', color: '#4f4f4f' },
+  { key: 'yunda', logo: '韵', name: '韵达速递', color: '#202020' },
+  { key: 'sf', logo: 'SF', name: '顺丰速运', color: '#202020' },
+  { key: 'jd', logo: 'JDL', name: '京东物流', color: '#d71920' },
+  { key: 'jt', logo: 'J&T', name: '极兔速递', color: '#e31e24' },
+  { key: 'ems', logo: 'EMS', name: '中国邮政 EMS', color: '#008b4c' },
+  { key: 'deppon', logo: '▣', name: '德邦快递', color: '#1455a0' },
+]
+
+const moreLogisticsCompanies = [
+  { key: 'ky', logo: 'KYE', name: '跨越速运', color: '#5d1789' },
+  { key: 'ane', logo: 'ane', name: '安能物流', color: '#222' },
+  { key: 'best', logo: '◆', name: '百世快递', color: '#174d99' },
+  { key: 'uc', logo: 'UC', name: '优速快递', color: '#6e1e91' },
+  { key: 'zjs', logo: '宅', name: '宅急送', color: '#15905e' },
+  { key: 'suning', logo: 'SUNING', name: '苏宁物流', color: '#1268b3' },
+  { key: 'cainiao', logo: '菜鸟', name: '菜鸟速递', color: '#1889d2' },
+  { key: 'ysdf', logo: '余', name: '余氏东风', color: '#df2726' },
+  { key: 'cre', logo: 'CRE', name: '中铁快运', color: '#174a87' },
+  { key: 'ymdd', logo: '米', name: '壹米滴答', color: '#262626' },
+  { key: 'other', logo: '◇', name: '其他物流', color: '#8c8c8c' },
+]
 
 const mockLogisticsTracks = [
   {
@@ -149,27 +187,33 @@ const OrderList: React.FC = () => {
   const ref = useRef({} as ActionType)
   const fetchParams = useRef<any>({})
   const queryTimer = useRef<number>()
-  const [importVisible, setImportVisible] = useState(false)
+  const [shipmentVisible, setShipmentVisible] = useState(false)
   const [queryLoading, setQueryLoading] = useState(false)
-  const [queryResultVisible, setQueryResultVisible] = useState(false)
+  const [querySuccess, setQuerySuccess] = useState(false)
+  const [selectedCompany, setSelectedCompany] = useState('zto')
+  const [moreCompaniesVisible, setMoreCompaniesVisible] = useState(false)
   const [logisticsDrawerVisible, setLogisticsDrawerVisible] = useState(false)
   const [form] = Form.useForm()
 
-  const closeImportModal = () => {
+  const closeShipmentModal = () => {
     window.clearTimeout(queryTimer.current)
-    setImportVisible(false)
+    setShipmentVisible(false)
     setQueryLoading(false)
-    setQueryResultVisible(false)
+    setQuerySuccess(false)
+    setSelectedCompany('zto')
+    setMoreCompaniesVisible(false)
     form.resetFields()
   }
 
   const handleQuery = () => {
     form.validateFields().then(() => {
+      window.clearTimeout(queryTimer.current)
       setQueryLoading(true)
-      setQueryResultVisible(false)
+      setQuerySuccess(false)
       queryTimer.current = window.setTimeout(() => {
+        form.setFieldsValue({ logisticsOrderNo: MOCK_LOGISTICS_NO })
         setQueryLoading(false)
-        setQueryResultVisible(true)
+        setQuerySuccess(true)
       }, 600)
     })
   }
@@ -196,8 +240,8 @@ const OrderList: React.FC = () => {
             查看物流
           </Button>
         ) : (
-          <Button type="link" onClick={() => setImportVisible(true)}>
-            导入物流信息
+          <Button type="link" onClick={() => setShipmentVisible(true)}>
+            去发货
           </Button>
         ),
     },
@@ -247,100 +291,187 @@ const OrderList: React.FC = () => {
         ]}
       />
       <Modal
-        title="导入物流订单信息"
-        width={880}
-        visible={importVisible}
-        onCancel={closeImportModal}
+        className={styles.shipmentModal}
+        title="去发货"
+        width={1120}
+        visible={shipmentVisible}
+        onCancel={closeShipmentModal}
         footer={
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Typography.Text type="secondary">查询结果来自快递公司系统，若信息有误请以快递公司数据为准</Typography.Text>
+          <div className={styles.shipmentFooter}>
+            <Typography.Text>
+              <InfoCircleOutlined />
+              确认发货后，订单状态将更新为待收货
+            </Typography.Text>
             <Space>
-              <Button onClick={closeImportModal}>取消</Button>
-              <Button disabled={!queryResultVisible} type="primary">
-                确认导入
-              </Button>
+              <Button onClick={closeShipmentModal}>取消</Button>
+              <Button type="primary">确认发货</Button>
             </Space>
           </div>
         }
       >
-        <Form form={form} layout="inline">
-          <Form.Item
-            label="物流订单号"
-            name="logisticsOrderNo"
-            rules={[{ required: true, message: '请输入物流订单号' }]}
-          >
-            <Input placeholder="请输入物流订单号" style={{ width: 420 }} />
-          </Form.Item>
-          <Button loading={queryLoading} type="primary" onClick={handleQuery}>
-            查询
-          </Button>
-        </Form>
-        <Typography.Text type="secondary" style={{ display: 'block', margin: '8px 0 24px 120px' }}>
-          支持主流快递平台单号查询，自动识别并填充订单信息
-        </Typography.Text>
-        {queryResultVisible ? (
-          <Space direction="vertical" size={24} style={{ display: 'flex' }}>
-            <div style={{ border: '1px solid #f0f0f0', borderRadius: 8, padding: 28 }}>
-              <Typography.Title level={4} style={{ marginBottom: 32, marginTop: 0 }}>
-                <CarOutlined style={{ color: '#00bfa5', marginRight: 12 }} />
-                物流信息
-              </Typography.Title>
-              <div style={{ display: 'flex' }}>
-                <div style={{ flex: 1 }}>
-                  <Typography.Text type="secondary">物流平台</Typography.Text>
-                  <div style={{ fontSize: 18, marginTop: 24 }}>
-                    <span style={{ color: '#1478df', fontStyle: 'italic', fontWeight: 700, marginRight: 12 }}>ZTO</span>
-                    中通快递
-                  </div>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <Typography.Text type="secondary">快递单号</Typography.Text>
-                  <div style={{ fontSize: 18, marginTop: 24 }}>75312345678901</div>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <Typography.Text type="secondary">运单状态</Typography.Text>
-                  <div style={{ marginTop: 20 }}>
-                    <span style={{ background: '#e8f9ee', borderRadius: 16, color: '#16a34a', padding: '6px 12px' }}>
-                      运输中
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div style={{ border: '1px solid #f0f0f0', borderRadius: 8, padding: 28 }}>
-              <Typography.Title level={4} style={{ marginBottom: 32, marginTop: 0 }}>
-                <UserOutlined style={{ color: '#8b5cf6', marginRight: 12 }} />
-                收货人信息
-              </Typography.Title>
-              <div style={{ display: 'flex' }}>
-                <div style={{ flex: 1 }}>
-                  <Typography.Text type="secondary">收货人</Typography.Text>
-                  <div style={{ fontSize: 18, marginTop: 24 }}>李四</div>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <Typography.Text type="secondary">手机号</Typography.Text>
-                  <div style={{ fontSize: 18, marginTop: 24 }}>139****5678</div>
-                </div>
-                <div style={{ flex: 2 }}>
-                  <Typography.Text type="secondary">收货地址</Typography.Text>
-                  <div style={{ fontSize: 18, marginTop: 24 }}>上海市浦东新区世纪大道100号 200120</div>
-                </div>
-              </div>
-            </div>
-          </Space>
-        ) : (
-          <div
-            style={{
-              alignItems: 'center',
-              border: '1px solid #f0f0f0',
-              display: 'flex',
-              justifyContent: 'center',
-              minHeight: 360,
-            }}
-          >
-            <Empty description="请输入物流订单号后进行查询" />
+        <div className={styles.shipmentSection}>
+          <div className={styles.shipmentSectionTitle}>
+            <CarOutlined />
+            物流信息
           </div>
-        )}
+          <div className={styles.shipmentFormRow}>
+            <div className={styles.shipmentLabel}>
+              物流公司 <span>*</span>
+            </div>
+            <div className={styles.companyArea}>
+              <div className={styles.companyGrid}>
+                {mainLogisticsCompanies.map((company) => (
+                  <button
+                    key={company.key}
+                    className={`${styles.companyItem} ${selectedCompany === company.key ? styles.companySelected : ''}`}
+                    type="button"
+                    onClick={() => setSelectedCompany(company.key)}
+                  >
+                    <span className={styles.companyLogo} style={{ color: company.color }}>
+                      {company.logo}
+                    </span>
+                    <span>{company.name}</span>
+                    {selectedCompany === company.key && (
+                      <span className={styles.companyCheck}>
+                        <CheckOutlined />
+                      </span>
+                    )}
+                  </button>
+                ))}
+                <button
+                  className={`${styles.companyItem} ${moreCompaniesVisible ? styles.moreCompaniesActive : ''}`}
+                  type="button"
+                  onClick={() => setMoreCompaniesVisible((visible) => !visible)}
+                >
+                  <span>更多物流</span>
+                  {moreCompaniesVisible ? <UpOutlined /> : <DownOutlined />}
+                </button>
+              </div>
+              {moreCompaniesVisible && (
+                <div className={styles.moreCompaniesPanel}>
+                  {moreLogisticsCompanies.map((company) => (
+                    <button
+                      key={company.key}
+                      className={`${styles.companyItem} ${
+                        selectedCompany === company.key ? styles.companySelected : ''
+                      }`}
+                      type="button"
+                      onClick={() => setSelectedCompany(company.key)}
+                    >
+                      <span className={styles.companyLogo} style={{ color: company.color }}>
+                        {company.logo}
+                      </span>
+                      <span>{company.name}</span>
+                      {selectedCompany === company.key && (
+                        <span className={styles.companyCheck}>
+                          <CheckOutlined />
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={styles.shipmentFormRow}>
+            <div className={styles.shipmentLabel}>
+              快递单号 <span>*</span>
+            </div>
+            <div className={styles.expressNumberArea}>
+              <div className={styles.expressNumberRow}>
+                <Form form={form}>
+                  <Form.Item
+                    name="logisticsOrderNo"
+                    normalize={(value) => value?.trim()}
+                    rules={[
+                      { required: true, message: '请输入快递单号' },
+                      { pattern: /^[A-Za-z0-9]{6,32}$/, message: '快递单号应为6-32位英文字母或数字' },
+                    ]}
+                  >
+                    <Input placeholder="请输入快递单号" suffix={<ScanOutlined />} />
+                  </Form.Item>
+                </Form>
+                <Button loading={queryLoading} type="primary" onClick={handleQuery}>
+                  {querySuccess ? '重新查询' : '查询单号'}
+                </Button>
+              </div>
+              {querySuccess ? (
+                <div className={styles.querySuccessTip}>
+                  <CheckCircleFilled />
+                  已识别物流信息，可确认发货
+                </div>
+              ) : (
+                <Typography.Text type="secondary">支持主流物流公司单号查询，自动识别并填充订单信息</Typography.Text>
+              )}
+            </div>
+          </div>
+          {querySuccess && (
+            <div className={styles.logisticsQueryResult}>
+              <div>
+                <Typography.Text type="secondary">物流公司</Typography.Text>
+                <span>
+                  <b className={styles.resultLogo}>ZTO</b>中通快递
+                </span>
+              </div>
+              <div>
+                <Typography.Text type="secondary">快递单号</Typography.Text>
+                <span>{MOCK_LOGISTICS_NO}</span>
+              </div>
+              <div>
+                <Typography.Text type="secondary">运单状态</Typography.Text>
+                <span>
+                  <b className={styles.resultStatus}>运输中</b>
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className={styles.shipmentSection}>
+          <div className={styles.shipmentSectionTitle}>
+            <UserOutlined className={styles.shipmentReceiverIcon} />
+            收货人信息
+          </div>
+          <div className={`${styles.shipmentInfoGrid} ${styles.receiverInfoGrid}`}>
+            <div>
+              <Typography.Text type="secondary">收货人</Typography.Text>
+              <span>李四</span>
+            </div>
+            <div>
+              <Typography.Text type="secondary">手机号</Typography.Text>
+              <span>139****5678</span>
+            </div>
+            <div>
+              <Typography.Text type="secondary">收货地址</Typography.Text>
+              <span>上海市浦东新区世纪大道100号 200120</span>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.shipmentSection}>
+          <div className={styles.shipmentSectionTitle}>
+            <InboxOutlined />
+            订单信息
+          </div>
+          <div className={`${styles.shipmentInfoGrid} ${styles.goodsInfoGrid}`}>
+            <div>
+              <Typography.Text type="secondary">订单摘要</Typography.Text>
+              <span>冻鸡爪_1_1_1</span>
+            </div>
+            <div>
+              <Typography.Text type="secondary">采购会员</Typography.Text>
+              <span>15256279069</span>
+            </div>
+            <div>
+              <Typography.Text type="secondary">下单时间</Typography.Text>
+              <span>2026-08-11 21:04:28</span>
+            </div>
+            <div>
+              <Typography.Text type="secondary">订单总额</Typography.Text>
+              <span className={styles.orderAmount}>￥120.00</span>
+            </div>
+          </div>
+        </div>
       </Modal>
       <Drawer
         className={styles.logisticsDrawer}

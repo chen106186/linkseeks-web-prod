@@ -1,3 +1,335 @@
+.shipmentModal {
+  :global(.ant-modal-header) {
+    padding: 24px 32px 18px;
+    border-bottom: 0;
+  }
+
+  :global(.ant-modal-title) {
+    color: #17213c;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  :global(.ant-modal-close) {
+    top: 10px;
+    right: 12px;
+  }
+
+  :global(.ant-modal-body) {
+    max-height: calc(100vh - 178px);
+    padding: 8px 32px 24px;
+    overflow-y: auto;
+  }
+
+  :global(.ant-modal-footer) {
+    padding: 16px 32px;
+    background: #fbfcfe;
+  }
+
+  :global(.ant-modal-footer .ant-btn) {
+    min-width: 108px;
+    height: 42px;
+  }
+}
+
+.shipmentFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > :global(.ant-typography) {
+    color: #34415d;
+    font-size: 13px;
+
+    :global(.anticon) {
+      margin-right: 8px;
+      color: #1685df;
+      font-size: 17px;
+    }
+  }
+}
+
+.shipmentSection {
+  margin-bottom: 20px;
+  padding: 22px 18px;
+  border: 1px solid #e1e7f0;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.shipmentSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: #17213c;
+  font-weight: 600;
+  font-size: 16px;
+
+  > :global(.anticon) {
+    color: #08b8a9;
+    font-size: 22px;
+  }
+}
+
+.shipmentReceiverIcon {
+  color: #56ad2e !important;
+}
+
+.shipmentFormRow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.shipmentLabel {
+  flex: 0 0 96px;
+  padding-top: 14px;
+  color: #17213c;
+  font-size: 14px;
+
+  span {
+    color: #ff4d4f;
+  }
+}
+
+.companyArea,
+.expressNumberArea {
+  flex: 1;
+  min-width: 0;
+}
+
+.companyGrid,
+.moreCompaniesPanel {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.companyItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  height: 58px;
+  padding: 0 12px;
+  color: #26324b;
+  font-size: 14px;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #dce3ed;
+  border-radius: 7px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #0aafa3;
+    border-color: #0fc0b3;
+    outline: none;
+  }
+}
+
+.companySelected {
+  border-color: #0fc0b3;
+  box-shadow: 0 0 0 1px #0fc0b3 inset;
+}
+
+.companyLogo {
+  flex: 0 0 auto;
+  max-width: 58px;
+  overflow: hidden;
+  font-weight: 800;
+  font-size: 16px;
+  font-style: italic;
+  text-overflow: ellipsis;
+}
+
+.companyCheck {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  font-size: 12px;
+  background: #0fb8aa;
+  border-radius: 16px 0 7px;
+}
+
+.moreCompaniesActive {
+  color: #0aafa3;
+  border-color: #0fc0b3;
+}
+
+.moreCompaniesPanel {
+  position: relative;
+  margin-top: 14px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e1e7f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(31 45 61 / 10%);
+
+  &::before {
+    position: absolute;
+    top: -7px;
+    right: 8%;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-top: 1px solid #e1e7f0;
+    border-left: 1px solid #e1e7f0;
+    transform: rotate(45deg);
+    content: '';
+  }
+
+  .companyItem {
+    height: 46px;
+  }
+}
+
+.expressNumberRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  :global(.ant-form) {
+    flex: 1;
+  }
+
+  :global(.ant-form-item) {
+    margin-bottom: 8px;
+  }
+
+  :global(.ant-input-affix-wrapper),
+  > :global(.ant-btn) {
+    height: 46px;
+  }
+
+  > :global(.ant-btn) {
+    width: 158px;
+  }
+}
+
+.expressNumberArea > :global(.ant-typography) {
+  font-size: 13px;
+}
+
+.querySuccessTip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #52ad2c;
+  font-size: 13px;
+}
+
+.logisticsQueryResult {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.9fr;
+  margin: 18px 0 0;
+  padding: 18px 28px;
+  border: 1px solid #e1e7f0;
+  border-radius: 8px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+    padding: 0 48px;
+    border-right: 1px dashed #d9e0eb;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    :global(.ant-typography) {
+      font-size: 13px;
+    }
+
+    > span {
+      color: #17213c;
+      font-size: 14px;
+    }
+  }
+}
+
+.resultLogo {
+  margin-right: 12px;
+  color: #1685df;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.resultStatus {
+  padding: 5px 10px;
+  color: #52ad2c;
+  font-weight: 400;
+  background: #edf8e8;
+  border-radius: 5px;
+}
+
+.shipmentInfoGrid {
+  display: grid;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    padding: 0 30px;
+    border-right: 1px dashed #d9e0eb;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    :global(.ant-typography) {
+      font-size: 13px;
+    }
+
+    > span:last-child {
+      color: #17213c;
+      font-size: 14px;
+    }
+  }
+}
+
+.receiverInfoGrid {
+  grid-template-columns: 0.9fr 1.1fr 1.8fr;
+}
+
+.goodsInfoGrid {
+  grid-template-columns: 1fr 1fr 1.3fr 0.9fr;
+}
+
+.orderAmount {
+  color: #f5222d !important;
+}
+
 .logisticsDrawer {
   font-size: 14px;
 

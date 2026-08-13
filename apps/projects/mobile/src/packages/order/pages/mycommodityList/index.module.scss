@@ -15,6 +15,10 @@
 			overflow: inherit !important;
 		}
 
+		.at-tabs__header {
+			background-color: $color-card-bg;
+		}
+
 		.at-tabs__item--active {
 			.at-tabs__item-underline {
 				transform: scaleX(0.5);

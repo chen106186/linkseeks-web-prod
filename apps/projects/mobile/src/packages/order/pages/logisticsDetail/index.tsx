@@ -15,6 +15,7 @@ const LogisticsDetail = () => {
   const minPanelHeight = Math.round(windowHeight * 0.46)
   const maxPanelHeight = Math.round(windowHeight * 0.72)
   const [panelHeight, setPanelHeight] = useState(minPanelHeight)
+  const [mapFitPanelHeight, setMapFitPanelHeight] = useState(minPanelHeight)
   const panelHeightRef = useRef(minPanelHeight)
   const dragRef = useRef({ startY: 0, startHeight: minPanelHeight })
   const mapContextRef = useRef<any>()
@@ -38,10 +39,10 @@ const LogisticsDetail = () => {
     fitRouteTimerRef.current = setTimeout(() => {
       mapContextRef.current?.includePoints({
         points: MOCK_LOGISTICS_DATA.route,
-        padding: [72, 28, panelHeight + 24, 28],
+        padding: [72, 28, mapFitPanelHeight + 24, 28],
       })
     }, 16)
-  }, [panelHeight])
+  }, [mapFitPanelHeight])
 
   const markers = [
     {
@@ -88,7 +89,9 @@ const LogisticsDetail = () => {
 
   const handleTouchEnd = () => {
     const middleHeight = (minPanelHeight + maxPanelHeight) / 2
-    updatePanelHeight(panelHeightRef.current >= middleHeight ? maxPanelHeight : minPanelHeight)
+    const targetHeight = panelHeightRef.current >= middleHeight ? maxPanelHeight : minPanelHeight
+    updatePanelHeight(targetHeight)
+    setMapFitPanelHeight(targetHeight)
   }
 
   return (
@@ -115,7 +118,12 @@ const LogisticsDetail = () => {
         <Text className={styles['location-label']}>当前位置</Text>
         <Text>{MOCK_LOGISTICS_DATA.currentLocation}</Text>
       </View>
-      <View className={styles.panel} style={{ height: `${panelHeight}px` }}>
+      <View
+        className={styles.panel}
+        style={{ height: `${panelHeight}px` }}
+        onTouchStart={(event) => event.stopPropagation()}
+        catchMove
+      >
         <View
           className={styles['drag-area']}
           onTouchStart={handleTouchStart}

@@ -21,8 +21,10 @@
 .header-card {
   width: 100%;
   padding: 10px;
-  background-color: #fff;
+  background-color: $color-card-bg;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   display: inline-flex;
   align-items: center;
   flex-direction: column;
@@ -77,13 +79,15 @@
   flex-direction: column;
 }
 .cell {
-  background-color: #fff;
+  background-color: $color-card-bg;
   width: 100%;
   padding: 15px 8px 10px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -114,11 +118,13 @@
 }
 .foot {
   margin-top: 20px;
-  background-color: #fff;
+  background-color: $color-card-bg;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .cellfoot {
   display: flex;
@@ -170,11 +176,13 @@
 }
 .mention{
   padding: 10px 0;
-  background-color: #fff;
+  background-color: $color-card-bg;
   margin: 0 10px;
   margin-top: 10px;
   text-align: center;
   font-size: 12px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .code{
   color: $theme-color;

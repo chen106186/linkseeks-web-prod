@@ -24,13 +24,15 @@
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #fff;
+  background-color: $color-card-bg;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   padding-top: 17px;
   padding-bottom: 17px;
   display: flex;
   align-items: center;
-  margin-top: -30;
+  margin-top: 10px;
 }
 .address-after-logistics {
   margin-top: 10px;
@@ -48,12 +50,14 @@
 }
 .customer {
   margin-top: 10px;
-  background-color: #fff;
+  background-color: $color-card-bg;
   display: flex;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .customer-text {
   font-size: 14px;
@@ -62,8 +66,10 @@
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #fff;
+  background-color: $color-card-bg;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   padding-left: $spacing-h-md;
   padding-right: $spacing-h-md;
   display: flex;
@@ -110,16 +116,20 @@
 	}
 }
 .Collage{
-  background-color: #fff;
+  background-color: $color-card-bg;
   margin-top: 10px;
   border-radius: 10px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   padding: 10px 0;
   text-align: center;
 }
 .Collageflex{
-  background-color: #fff;
+  background-color: $color-card-bg;
   margin-top: 10px;
   border-radius: 10px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   padding: 10px 10px;
 }
 .CollageImg{
@@ -208,8 +218,10 @@ text-align: left;
   margin: 8px 0;
   padding: 16px 0;
   text-align: center;
-  background-color: #fff;
+  background-color: $color-card-bg;
   border-radius: 8px;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 
   &-status {
     color: #252d37;
@@ -236,7 +248,9 @@ text-align: left;
   margin-top: 8px;
   padding: 16px 12px 14px;
   border-radius: 8px;
-  background: #ffffff;
+  background: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   font-size: 12px;
   line-height: 12px;
 

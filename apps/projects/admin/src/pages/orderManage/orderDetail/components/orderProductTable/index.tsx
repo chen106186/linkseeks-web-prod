@@ -14,6 +14,8 @@ import { getOrderVendorDetailCoupon, getOrderVendorDetailPromotion } from '@apps
 import { SRM_ORDER_MODE_LIST } from '@/constants'
 import themeConfig from '@apps/config/lingxi.theme.config'
 import { COLUMNS_ACTION_WIDTH, COLUMNS_LARGE_WIDTH } from '@/constants/const/table'
+import OrderLogisticsAction from '../orderLogisticsAction'
+import styles from './index.less'
 
 export interface OrderProductTableProps {}
 
@@ -381,6 +383,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = (props) => {
   // srm订单
   const isSrmOrder = SRM_ORDER_MODE_LIST.includes(data.orderMode)
   const [checkProduct, setCheckProduct] = useState<any>({}) // 选中的商品id
+  const [selectedProductKeys, setSelectedProductKeys] = useState<React.Key[]>([])
   const warehouseRef = ModalFormTable.useTableRef()
   const couponRef = ModalFormTable.useTableRef()
   const activityRef = ModalFormTable.useTableRef()
@@ -419,6 +422,21 @@ const OrderProductTable: React.FC<OrderProductTableProps> = (props) => {
     activityRef.current.setVisible(true)
     activityRef.current.reload()
   }
+
+  const hasLogisticsInfo = (record) =>
+    record === product.products[0] ||
+    Boolean(record.logisticsOrderId || record.logisticsId || record.logisticsOrderNo || record.logisticsNo)
+
+  const unshippedProducts = product.products.filter((record) => !hasLogisticsInfo(record))
+
+  const rowSelection = {
+    selectedRowKeys: selectedProductKeys,
+    onChange: (selectedRowKeys: React.Key[]) => setSelectedProductKeys(selectedRowKeys),
+    getCheckboxProps: (record) => ({
+      disabled: hasLogisticsInfo(record),
+    }),
+  }
+
   const productInfoColumns: any[] = [
     {
       title: 'ID',
@@ -503,14 +521,15 @@ const OrderProductTable: React.FC<OrderProductTableProps> = (props) => {
       dataIndex: 'record',
       key: 'record',
       render: (_, record) => (
-        <>
+        <div className={styles.actionList}>
           <Button type="link" onClick={() => handlePreviewWarehouse(record)}>
             查看库存记录
           </Button>
           <Button type="link" onClick={() => handlePreviewActivity(record)}>
             查看活动记录
           </Button>
-        </>
+          {hasLogisticsInfo(record) && <OrderLogisticsAction action="view" />}
+        </div>
       ),
       fixed: 'right',
       width: COLUMNS_ACTION_WIDTH,
@@ -681,6 +700,11 @@ const OrderProductTable: React.FC<OrderProductTableProps> = (props) => {
   return (
     <MellowCard
       title={isSrmOrder || contractOrder ? '订单物料' : '订单商品'}
+      extra={
+        !contractOrder && unshippedProducts.length ? (
+          <OrderLogisticsAction action="shipment" disabled={!selectedProductKeys.length} />
+        ) : null
+      }
       style={{
         marginTop: themeConfig['@margin-md'],
       }}
@@ -691,6 +715,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = (props) => {
         dataSource={product.products}
         components={productComponents}
         rowKey="orderProductId"
+        rowSelection={!contractOrder && unshippedProducts.length ? rowSelection : undefined}
         pagination={false}
         scroll={{ x: 1200 }}
       />

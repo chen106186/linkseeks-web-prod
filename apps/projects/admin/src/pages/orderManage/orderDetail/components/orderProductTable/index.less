@@ -9,3 +9,17 @@
   font-size: 12px;
   cursor: pointer;
 }
+
+.actionList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  :global(.ant-btn-link) {
+    height: 26px;
+    padding: 0;
+    line-height: 26px;
+    white-space: nowrap;
+  }
+}

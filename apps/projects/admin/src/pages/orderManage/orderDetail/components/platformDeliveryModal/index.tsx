@@ -27,6 +27,7 @@ export interface PlatformDeliveryModalProps {
   createTime?: string
   selectedAmount?: string | number
   consignee?: {
+    consigneeId?: number
     consignee?: string
     phone?: string
     address?: string
@@ -75,7 +76,6 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
       setProducts(nextProducts)
 
       form.setFieldsValue({
-        deliveryTime: formatTimeString(new Date(), 'YYYY-MM-DD HH:mm:ss'),
         products: nextProducts.map((item) => ({
           ...item,
           deliveryCount: item.leftCount,
@@ -106,8 +106,9 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
       setLoading(true)
       const { code } = await postOrderPlatformManageDeliveryConfirm({
         orderNo,
+        addressId: consignee?.consigneeId,
         address: consignee?.address || '',
-        deliveryTime: values.deliveryTime,
+        deliveryTime: formatTimeString(new Date(), 'YYYY-MM-DD HH:mm:ss'),
         logisticsNo: values.logisticsNo,
         company: companyItem?.company || '',
         companyCode: companyItem?.companyCode || '',
@@ -154,28 +155,18 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
       </div>
 
       <Form form={form} layout="vertical">
-        <Space style={{ display: 'flex' }} size={16} align="start">
-          <Form.Item label="收货地址" style={{ flex: 1 }}>
-            <span>
-              {consignee ? [consignee.consignee, consignee.phone, consignee.address].filter(Boolean).join(' ') : '-'}
-            </span>
-          </Form.Item>
-          <Form.Item
-            name="deliveryTime"
-            label="发货时间"
-            rules={[{ required: true, message: '请输入发货时间' }]}
-            style={{ flex: 1 }}
-          >
-            <Input />
-          </Form.Item>
-        </Space>
+        <Form.Item label="收货地址">
+          <span>
+            {consignee ? [consignee.consignee, consignee.phone, consignee.address].filter(Boolean).join(' ') : '-'}
+          </span>
+        </Form.Item>
 
-        <Space style={{ display: 'flex' }} size={16} align="start">
+        <div style={{ display: 'flex', gap: 16 }}>
           <Form.Item
             name="companyCode"
             label="物流公司"
             rules={[{ required: true, message: '请选择物流公司' }]}
-            style={{ flex: 1 }}
+            style={{ width: 240 }}
           >
             <Select
               showSearch
@@ -195,7 +186,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
           >
             <Input placeholder="请输入物流单号" />
           </Form.Item>
-        </Space>
+        </div>
 
         <Form.List name="products">
           {(fields) => (

@@ -707,7 +707,11 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
         orderDigest={digest}
         buyerMemberName={buyerMemberName}
         createTime={createTime}
-        totalAmount={product?.totalAmount || amount}
+        selectedAmount={
+          product?.products
+            ?.filter((p) => selectedRowKeys.includes(p.orderProductId))
+            ?.reduce((sum, p) => sum + Number(p.amount || p.price || 0), 0) || 0
+        }
         consignee={consignee}
         selectedOrderProductIds={selectedRowKeys.map((item) => Number(item))}
         onClose={() => setDeliveryVisible(false)}

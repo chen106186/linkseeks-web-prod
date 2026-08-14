@@ -2,11 +2,22 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Button, Drawer, Form, Input, Select, Space, Table, message } from 'antd'
 import { formatTimeString } from '@/utils'
 import {
-  getOrderPlatformManageLogisticsCompanyList,
   postOrderPlatformManageDeliveryConfirm,
   postOrderPlatformManageDeliveryProducts,
 } from '../../services/platform'
 import style from './index.less'
+
+const LOGISTICS_COMPANIES = [
+  { company: '邮政速递', companyCode: 'EMS' },
+  { company: '顺丰速运', companyCode: 'SF' },
+  { company: '中通快递', companyCode: 'ZTO' },
+  { company: '圆通速递', companyCode: 'YTO' },
+  { company: '韵达速递', companyCode: 'YD' },
+  { company: '申通快递', companyCode: 'STO' },
+  { company: '京东物流', companyCode: 'JD' },
+  { company: '德邦快递', companyCode: 'DBL' },
+  { company: '极兔速递', companyCode: 'JTSD' },
+]
 
 export interface PlatformDeliveryModalProps {
   visible: boolean
@@ -14,7 +25,7 @@ export interface PlatformDeliveryModalProps {
   orderDigest?: string
   buyerMemberName?: string
   createTime?: string
-  totalAmount?: string | number
+  selectedAmount?: string | number
   consignee?: {
     consignee?: string
     phone?: string
@@ -31,7 +42,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   orderDigest,
   buyerMemberName,
   createTime,
-  totalAmount,
+  selectedAmount,
   consignee,
   selectedOrderProductIds,
   onClose,
@@ -40,17 +51,11 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
   const [products, setProducts] = useState<any[]>([])
-  const [companyOptions, setCompanyOptions] = useState<any[]>([])
 
   const filteredProducts = useMemo(
     () => products.filter((item) => selectedOrderProductIds.includes(item.orderProductId)),
     [products, selectedOrderProductIds],
   )
-
-  const consigneeAddress = useMemo(() => {
-    if (!consignee) return '-'
-    return [consignee.consignee, consignee.phone, consignee.address].filter(Boolean).join(' ')
-  }, [consignee])
 
   useEffect(() => {
     if (visible) {
@@ -63,16 +68,11 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
 
   const loadData = async () => {
     try {
-      const [productResp, companyResp] = await Promise.all([
-        postOrderPlatformManageDeliveryProducts({ orderNo }),
-        getOrderPlatformManageLogisticsCompanyList(),
-      ])
-
+      const productResp = await postOrderPlatformManageDeliveryProducts({ orderNo })
       const nextProducts = (productResp.data || []).filter((item) =>
         selectedOrderProductIds.includes(item.orderProductId),
       )
       setProducts(nextProducts)
-      setCompanyOptions(companyResp.data || [])
 
       form.setFieldsValue({
         deliveryTime: formatTimeString(new Date(), 'YYYY-MM-DD HH:mm:ss'),
@@ -89,7 +89,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   const submit = async () => {
     try {
       const values = await form.validateFields()
-      const companyItem = companyOptions.find((item) => String(item.id) === String(values.companyId))
+      const companyItem = LOGISTICS_COMPANIES.find((item) => item.companyCode === values.companyCode)
       const submitProducts = (values.products || [])
         .filter((item) => Number(item.deliveryCount) > 0)
         .map((item) => ({
@@ -149,14 +149,16 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
         <div className={style.summaryItem}>订单摘要：{orderDigest || '-'}</div>
         <div className={style.summaryItem}>采购会员：{buyerMemberName || '-'}</div>
         <div className={style.summaryItem}>下单时间：{createTime || '-'}</div>
-        <div className={style.summaryItem}>订单总额：{totalAmount ?? '-'}</div>
+        <div className={style.summaryItem}>订单总额：{selectedAmount ?? '-'}</div>
         <div className={style.summaryItem}>本次发货商品数：{filteredProducts.length}</div>
       </div>
 
       <Form form={form} layout="vertical">
         <Space style={{ display: 'flex' }} size={16} align="start">
           <Form.Item label="收货地址" style={{ flex: 1 }}>
-            <Input value={consigneeAddress} disabled />
+            <span>
+              {consignee ? [consignee.consignee, consignee.phone, consignee.address].filter(Boolean).join(' ') : '-'}
+            </span>
           </Form.Item>
           <Form.Item
             name="deliveryTime"
@@ -170,7 +172,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
 
         <Space style={{ display: 'flex' }} size={16} align="start">
           <Form.Item
-            name="companyId"
+            name="companyCode"
             label="物流公司"
             rules={[{ required: true, message: '请选择物流公司' }]}
             style={{ flex: 1 }}
@@ -179,9 +181,9 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
               showSearch
               placeholder="请选择物流公司"
               optionFilterProp="label"
-              options={companyOptions.map((item) => ({
+              options={LOGISTICS_COMPANIES.map((item) => ({
                 label: `${item.company} (${item.companyCode})`,
-                value: String(item.id),
+                value: item.companyCode,
               }))}
             />
           </Form.Item>

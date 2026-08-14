@@ -45,9 +45,17 @@
   margin: 8px;
   padding: 12px;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   margin-bottom: 0px;
   overflow: hidden;
+
+  :global {
+    .at-swipe-action__content {
+      background-color: $color-card-bg;
+    }
+  }
 
 	.free-shipping {
 		display: flex;
@@ -87,7 +95,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
-  background-color: #ffffff;
+  background-color: $color-card-bg;
   align-items: center;
   padding-bottom: 6px;
 }
@@ -114,7 +122,7 @@
 	}
 }
 .full-minus-em {
-  background-color: #ffffff;
+  background-color: $color-card-bg;
   padding: 1px;
   color: red;
   font-size: 12px;

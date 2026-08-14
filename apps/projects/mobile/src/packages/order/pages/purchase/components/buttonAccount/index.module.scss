@@ -14,7 +14,8 @@
   left: 0px;
   width: 100%;
   height: 48px;
-  background-color: #fff;
+  background-color: $color-card-bg;
+  box-shadow: 0 -4px 12px $color-card-shadow;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,5 +1,31 @@
 @import '@/styles/variables.scss';
 
+.search-page {
+  background-color: $color-bg-base;
+
+  :global {
+    .page-layout-head {
+      background-color: $color-card-bg;
+      box-shadow: 0 2px 8px $color-card-shadow;
+    }
+
+    .nav-bar,
+    .tabs__header {
+      background-color: $color-card-bg;
+    }
+
+    .page-layout-content-wrap,
+    .filter,
+    .filter-sort-bar {
+      background-color: $color-bg-base;
+    }
+
+    .filter {
+      border-bottom: 1px solid $color-card-border;
+    }
+  }
+}
+
 .stocksSourcing {
   display: flex;
   flex-direction: column;

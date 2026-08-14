@@ -4,7 +4,9 @@
   flex-direction: column;
   padding: 0px 12px;
   margin: 8px;
-  background-color: #FFFFFF;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   border-radius: 8px;
   .header {
     display: flex;
@@ -45,7 +47,7 @@
   .logoBox {
     width: 48px;
     height: 48px;
-    border: 0.5px solid #F4F5F7;
+    border: 0.5px solid $color-card-border;
     border-radius: 4px;
     overflow: hidden;
   }
@@ -144,7 +146,7 @@
     color: #FFF;
   }
   .rankBox {
-    background-color: #F2F3F5;
+    background-color: $color-bg-light;
     padding: 0px 6px;
     margin-top: 1px;
     margin-left: 8px;

@@ -30,6 +30,8 @@ const ClassifyView: React.FC<{}> = () => {
               placeholder={intl.formatMessage({
                 id: 'classify_header_search_placeholder',
               })}
+              background="#FDF9F5"
+              innerBackground="#FCF7F1"
               editable={false}
               onClick={() =>
                 Router.navigateTo('extra/search', {

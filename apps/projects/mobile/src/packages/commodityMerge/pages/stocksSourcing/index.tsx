@@ -337,7 +337,7 @@ const StocksSourcingIndex: React.FC<StocksSourcingIndexProps> = () => {
   return (
     <MallTabBottom visible={hasTab === 'true'} layoutType={layoutType} activeUrl="commodityMerge/stocksSourcing/index">
       <PageLayout
-        className={hasTab === 'true' ? 'page-layout-mall' : ''}
+        className={`stocksSourcing-theme${hasTab === 'true' ? ' page-layout-mall' : ''}`}
         renderHeader={
           <>
             <NavBar
@@ -345,6 +345,8 @@ const StocksSourcingIndex: React.FC<StocksSourcingIndexProps> = () => {
               title={
                 <Search
                   customClassName="stocksSourcing-search"
+                  background="#FDF9F5"
+                  innerBackground="#FCF7F1"
                   placeholder={intl.formatMessage({
                     id: 'search.qingshurushangpinmingcheng',
                     defaultMessage: '请输入商品名称',

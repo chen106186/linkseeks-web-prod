@@ -8,4 +8,5 @@
 export default {
   navigationBarTitleText: '找现货列表',
   navigationStyle: 'custom',
+  backgroundColor: '#FCF7F1',
 }

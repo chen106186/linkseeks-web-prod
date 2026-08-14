@@ -149,12 +149,15 @@ const SearchPage = () => {
   return (
     <View>
       <PageLayout
+        className={styles['search-page']}
         renderHeader={
           <>
             <NavBar
               title={
                 <Search
                   customClassName={styles['stocksSourcing-search']}
+                  background="#FDF9F5"
+                  innerBackground="#FCF7F1"
                   defaultValue={keyword}
                   onSearch={handleSearch}
                   placeholder={showPlaceHolder()}

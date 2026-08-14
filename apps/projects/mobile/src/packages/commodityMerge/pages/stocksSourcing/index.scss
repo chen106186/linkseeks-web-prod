@@ -5,6 +5,24 @@
   min-height: auto;
 }
 
+.stocksSourcing-theme {
+  background-color: $color-bg-base;
+
+  .nav-bar {
+    background-color: $color-card-bg;
+    box-shadow: 0 2px 8px $color-card-shadow;
+  }
+
+  .filter {
+    background-color: $color-bg-base;
+    border-bottom: 1px solid $color-card-border;
+
+    .filter-sort-bar {
+      background-color: $color-bg-base;
+    }
+  }
+}
+
 .stocksSourcing {
   display: flex;
   flex-direction: column;

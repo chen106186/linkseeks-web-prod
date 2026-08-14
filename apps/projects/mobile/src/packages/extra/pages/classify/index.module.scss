@@ -1,17 +1,31 @@
+@import '@/styles/variables.scss';
+
 .classify-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-color: #ffffff;
+  background-color: $color-bg-base;
 
   :global {
+    .nav-bar {
+      z-index: 1;
+      background-color: $color-card-bg;
+      box-shadow: 0 2px 8px $color-card-shadow;
+    }
+
+    .at-tabs__header,
+    .at-tabs__body {
+      background-color: $color-bg-base;
+    }
+
     .at-tabs {
       flex: 1;
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      background-color: $color-bg-base;
 
       .at-tabs-pane--active {
         height: 100%;

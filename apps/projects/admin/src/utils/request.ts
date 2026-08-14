@@ -95,6 +95,7 @@ baseRequest.interceptors.request.use(
       userId,
       memberId,
       token,
+      accessToken: token,
     }
     return {
       // 前缀如果已经带上api, 跳过自动补前缀

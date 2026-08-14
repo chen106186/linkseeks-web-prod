@@ -1,13 +1,16 @@
 
+@import '@/styles/variables.scss';
+
 .at-action-sheet__container {
   border-radius: 25px 25px 0 0 !important;
+  background-color: $color-card-bg !important;
   // height: 300px;
 }
 .content{
   .title{
     padding: 14px 0;
     font-size: 14px;
-    border-bottom: 1px solid #F4F5F7;
+    border-bottom: 1px solid $color-border-base;
   }
 }
 .customHeight {
@@ -20,13 +23,13 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #F4F5F7;
+    border-bottom: 1px solid $color-border-base;
     .name{
-      color: #00A98F;
+      color: $color-brand;
       padding-right: 5px;
     }
     .text{
-      color: #000;
+      color: $color-text-base;
       padding-right: 5px;
       background-color: transparent !important;
     }

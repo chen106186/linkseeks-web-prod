@@ -4,6 +4,7 @@
     :global {
       .at-modal__container {
         width: 80%;
+        background-color: $color-card-bg;
       }
 
       .at-modal__header {
@@ -34,6 +35,7 @@
     :global{
       .at-modal__container {
         width: 80%;
+        background-color: $color-card-bg;
       }
 
       .at-modal__header {
@@ -64,8 +66,9 @@
 
 	@mixin new-price-at-model {
     :global{
-      .at-modal__container {
+			.at-modal__container {
         width: 80%;
+        background-color: $color-card-bg;
       }
 
       .at-modal__header {
@@ -84,7 +87,7 @@
 			.at-modal__content {
 				padding-top: 8px;
 				min-height: 35px;
-				color: #91959B;
+				color: $color-text-placeholder;
 				text-align: center;
 			}
 			.at-modal__action {
@@ -103,7 +106,7 @@
 				height: 40px;
 				line-height: 40px;
 				border-radius: 8px;
-				background-color: #00a98f;
+				background-color: $theme-color;
 				&:last-child {
 					color: #FFF;
 				}
@@ -112,7 +115,7 @@
 				height: 40px;
 				line-height: 40px;
 				border-radius: 8px;
-				background-color: #00a98f;
+				background-color: $theme-color;
 			}
 
       .at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),

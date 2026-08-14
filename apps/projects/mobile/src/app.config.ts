@@ -56,9 +56,8 @@ export default {
     factoryRouterPackage('communityGroupBuy', communityGroupBuyRouter),
   ],
   window: {
-    backgroundTextStyle: 'dark',
-    backgroundColor: '#FCF7F1',
-    navigationBarBackgroundColor: '#FCF7F1',
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: '云链认养鲜',
     navigationBarTextStyle: 'black',
   },

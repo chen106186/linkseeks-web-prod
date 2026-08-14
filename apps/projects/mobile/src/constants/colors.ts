@@ -1,43 +1,76 @@
 // 颜色列表
-const ColorMaps = {
-  blue: ['#f0f7ff', '#dbebff', '#b3d2ff', '#8ab7ff', '#6198ff', '#3877ff', '#2558d9', '#153db3', '#0a268c', '#061866'],
-  green: ['#daf2e7', '#93e6c0', '#68d9aa', '#41cc97', '#1fbf87', '#00b37a', '#008c65', '#00664d', '#004032', '#001a15'],
-  orange: [
-    '#fff2e9',
-    '#fce9de',
-    '#f2c7ad',
-    '#e59a73',
-    '#d97a4d',
-    '#c45124',
-    '#a83f1b',
-    '#873116',
-    '#66230f',
-    '#451708',
+const ColorMaps =  {
+  "blue": [
+    "#f0f7ff",
+    "#dbebff",
+    "#b3d2ff",
+    "#8ab7ff",
+    "#6198ff",
+    "#3877ff",
+    "#2558d9",
+    "#153db3",
+    "#0a268c",
+    "#061866",
   ],
-  red: ['#fff2f0', '#ffe0db', '#fab6af', '#ed8780', '#e05a55', '#d32f2f', '#ad1d22', '#871018', '#610710', '#3b040b'],
-  violet: [
-    '#e1ddeb',
-    '#d4d1de',
-    '#bdb6d1',
-    '#988bc4',
-    '#7465b8',
-    '#5243aa',
-    '#372d85',
-    '#211b5e',
-    '#100d38',
-    '#040412',
+  "green": [
+    "#daf2e7",
+    "#93e6c0",
+    "#68d9aa",
+    "#41cc97",
+    "#1fbf87",
+    "#00b37a",
+    "#008c65",
+    "#00664d",
+    "#004032",
+    "#001a15",
   ],
-  yellow: [
-    '#fffaf0',
-    '#fffaf0',
-    '#fcf4e6',
-    '#f0d7b4',
-    '#e3b986',
-    '#d69b5d',
-    '#b07843',
-    '#8a572d',
-    '#633a1c',
-    '#3d2211',
+  "orange": [
+    "#fff9eb",
+    "#ffecc2",
+    "#ffdb99",
+    "#ffc870",
+    "#ffb347",
+    "#ff991f",
+    "#d9770f",
+    "#b35804",
+    "#8c3f00",
+    "#662b00",
+  ],
+  "red": [
+    "#fff2f0",
+    "#ffe0db",
+    "#fab6af",
+    "#ed8780",
+    "#e05a55",
+    "#d32f2f",
+    "#ad1d22",
+    "#871018",
+    "#610710",
+    "#3b040b",
+  ],
+  "violet": [
+    "#e1ddeb",
+    "#d4d1de",
+    "#bdb6d1",
+    "#988bc4",
+    "#7465b8",
+    "#5243aa",
+    "#372d85",
+    "#211b5e",
+    "#100d38",
+    "#040412",
+  ],
+  "yellow": [
+    "#fffaf0",
+    "#fffaf0",
+    "#fcf4e6",
+    "#f0d7b4",
+    "#e3b986",
+    "#d69b5d",
+    "#b07843",
+    "#8a572d",
+    "#633a1c",
+    "#3d2211",
   ],
 }
 
@@ -61,7 +94,7 @@ const colorMaps = {
   orange: generate(DESIGN_ORANGE),
   violet: generate(DESIGN_VIOLET),
   yellow: generate(DESIGN_YELLOW),
-  gray: [],
+  gray: []
 }
 
 export const designColors = {
@@ -70,12 +103,12 @@ export const designColors = {
   DESIGN_BLUE,
   DESIGN_ORANGE,
   DESIGN_VIOLET,
-  DESIGN_YELLOW,
+  DESIGN_YELLOW
 }
 
 export interface themeStyle {
-  PRIMARY_COLOR: string
-  SUB_PRIMARY_COLOR: string
+  PRIMARY_COLOR: string,
+  SUB_PRIMARY_COLOR: string,
 }
 
 /**
@@ -88,8 +121,8 @@ export const setTheme = (style: themeStyle) => {
 }
 
 export const COLOR_SYMBOL = {
-  PRIMARY_COLOR: DESIGN_ORANGE,
-  SUB_PRIMARY_COLOR: DESIGN_BLUE,
+  PRIMARY_COLOR: DESIGN_GREEN,
+  SUB_PRIMARY_COLOR: DESIGN_BLUE
 }
 
 export type ColorMapTypes = typeof colorMaps

@@ -112,10 +112,7 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
                     <div>
                       <div>{item.acceptStation || item.remark || TRACK_STATUS_MAP[item.opCode || ''] || '-'}</div>
                       <Text type="secondary">
-                        {[
-                          item.acceptTime ? formatTimeString(item.acceptTime) : '',
-                          TRACK_STATUS_MAP[item.opCode || ''],
-                        ]
+                        {[item.acceptTime ? formatTimeString(item.acceptTime) : '', TRACK_STATUS_MAP[item.opCode || '']]
                           .filter(Boolean)
                           .join('  ')}
                       </Text>

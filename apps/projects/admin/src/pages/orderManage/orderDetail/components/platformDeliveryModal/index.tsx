@@ -159,7 +159,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
             <Select
               placeholder="请选择发货地址"
               options={addressOptions.map((item) => ({
-                label: `${item.consignee || ''} ${item.phone || ''} ${item.fullAddress || ''}`,
+                label: `${item.shipperName || ''} ${item.phone || ''} ${item.fullAddress || ''}`,
                 value: String(item.id),
               }))}
             />

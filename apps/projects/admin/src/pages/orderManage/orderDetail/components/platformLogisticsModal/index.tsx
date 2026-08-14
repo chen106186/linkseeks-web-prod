@@ -1,9 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Drawer, Empty, Select, Timeline, Typography, message } from 'antd'
-import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import { formatTimeString } from '@/utils'
 import { postOrderPlatformManageLogisticsDetail } from '../../services/platform'
-import AmapTrack from './AmapTrack'
 import style from './index.less'
 
 const { Text } = Typography
@@ -34,7 +32,6 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
 }) => {
   const [currentBatchNo, setCurrentBatchNo] = useState<number | undefined>(batchNo)
   const [detail, setDetail] = useState<any>(null)
-  const [routeExpanded, setRouteExpanded] = useState(false)
 
   const options = useMemo(
     () =>
@@ -48,7 +45,6 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
   useEffect(() => {
     if (visible) {
       setCurrentBatchNo(batchNo)
-      setRouteExpanded(false)
     }
   }, [visible, batchNo])
 
@@ -73,10 +69,16 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
   }
 
   const events = detail?.trackingDetail?.events || []
-  const latestEvent = events[0]
 
   return (
-    <Drawer title="查看物流" width={760} open={visible} onClose={onClose} destroyOnClose>
+    <Drawer
+      title="查看物流"
+      width={760}
+      open={visible}
+      onClose={onClose}
+      destroyOnClose
+      bodyStyle={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+    >
       {options.length > 0 ? (
         <div style={{ marginBottom: 16 }}>
           <Text style={{ marginRight: 8 }}>发货批次</Text>
@@ -108,55 +110,33 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
             </div>
           </div>
 
-          <AmapTrack events={events} />
-
           {events.length > 0 ? (
             <div className={style.routeSection}>
-              <div className={style.routeHeader} onClick={() => setRouteExpanded(!routeExpanded)}>
-                <div className={style.routeLatest}>
-                  {latestEvent && (
-                    <>
-                      <span className={style.routeStatus}>
-                        {TRACK_STATUS_MAP[latestEvent.opCode || ''] || '运输中'}
-                      </span>
-                      <span className={style.routeDesc}>{latestEvent.acceptStation || latestEvent.remark || '-'}</span>
-                    </>
-                  )}
-                </div>
-                <span className={style.routeToggle}>
-                  {routeExpanded ? '收起' : '展开'}
-                  {routeExpanded ? (
-                    <UpOutlined style={{ marginLeft: 4 }} />
-                  ) : (
-                    <DownOutlined style={{ marginLeft: 4 }} />
-                  )}
-                </span>
+              <div className={style.routeHeader}>
+                <span className={style.routeTitle}>物流轨迹</span>
               </div>
 
-              {routeExpanded && (
-                <div className={style.timelineWrap}>
-                  <Timeline
-                    items={events.map((item: any, idx: number) => ({
-                      color: idx === 0 ? '#1677ff' : '#d9d9d9',
-                      children: (
-                        <div>
-                          <div className={idx === 0 ? style.timelineTextActive : undefined}>
-                            {item.acceptStation || item.remark || TRACK_STATUS_MAP[item.opCode || ''] || '-'}
-                          </div>
-                          <Text type="secondary" style={{ fontSize: 12 }}>
-                            {[
-                              item.acceptTime ? formatTimeString(item.acceptTime) : '',
-                              TRACK_STATUS_MAP[item.opCode || ''],
-                            ]
-                              .filter(Boolean)
-                              .join('  ')}
-                          </Text>
+              <div className={style.timelineWrap}>
+                <Timeline>
+                  {events.map((item: any, idx: number) => (
+                    <Timeline.Item key={`${item.acceptTime || ''}-${idx}`} color={idx === 0 ? '#1677ff' : '#d9d9d9'}>
+                      <div>
+                        <div className={idx === 0 ? style.timelineTextActive : undefined}>
+                          {item.acceptStation || item.remark || TRACK_STATUS_MAP[item.opCode || ''] || '-'}
                         </div>
-                      ),
-                    }))}
-                  />
-                </div>
-              )}
+                        <Text type="secondary" style={{ fontSize: 12 }}>
+                          {[
+                            item.acceptTime ? formatTimeString(item.acceptTime) : '',
+                            TRACK_STATUS_MAP[item.opCode || ''],
+                          ]
+                            .filter(Boolean)
+                            .join('  ')}
+                        </Text>
+                      </div>
+                    </Timeline.Item>
+                  ))}
+                </Timeline>
+              </div>
             </div>
           ) : (
             <Empty description="暂未获取到物流轨迹" />

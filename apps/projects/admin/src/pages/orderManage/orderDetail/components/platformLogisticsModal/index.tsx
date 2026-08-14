@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Drawer, Empty, Select, Timeline, Typography, message } from 'antd'
 import { formatTimeString } from '@/utils'
 import { postOrderPlatformManageLogisticsDetail } from '../../services/platform'
+import AmapTrack from './AmapTrack'
 import style from './index.less'
 
 const { Text } = Typography
@@ -102,6 +103,8 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
               {detail.trackingDetail?.lastEventTime ? formatTimeString(detail.trackingDetail.lastEventTime) : '-'}
             </div>
           </div>
+
+          <AmapTrack events={events} />
 
           {events.length > 0 ? (
             <div className={style.timelineWrap}>

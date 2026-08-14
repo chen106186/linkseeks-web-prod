@@ -1,9 +1,10 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
 import React, { useEffect, useMemo, useState } from 'react'
 import { getCurrentInstance } from '@apps/mobile-services/utils/taro'
-import { ScrollView } from '@tarojs/components'
+import { Map, ScrollView } from '@tarojs/components'
 import { Text, View } from '@apps/mobile-ui'
 import { getLogisticsMobileTrackingLatest, getOrderMobileBuyerDetail } from '@apps/apis'
+import { IS_WEB } from '@/constants'
 import styles from './index.module.scss'
 
 const STATUS_MAP: Record<string, string> = {
@@ -36,7 +37,9 @@ const LogisticsDetail = () => {
     try {
       const res = await getLogisticsMobileTrackingLatest({
         logisticsOrderId: `${logisticsOrderId}`,
-      })
+        // limit=0 返回全量轨迹事件，用于地图轨迹渲染
+        limit: 0,
+      } as any)
       if (res.code === 1000) {
         setTrackingDetail(res.data || null)
       } else {
@@ -86,13 +89,44 @@ const LogisticsDetail = () => {
   const currentLocation = latestEvent?.acceptStation || trackingDetail?.expressCompanyName || '暂无定位信息'
   const events = trackingDetail?.events || []
 
+  // 带坐标的轨迹点，按时间正序连成运输路线
+  const trackPoints = useMemo(
+    () =>
+      (trackingDetail?.events || [])
+        .filter((item: any) => item.lat != null && item.lng != null)
+        .slice()
+        .sort((a: any, b: any) => String(a.acceptTime || '').localeCompare(String(b.acceptTime || '')))
+        .map((item: any) => ({ latitude: item.lat, longitude: item.lng })),
+    [trackingDetail],
+  )
+  const currentPoint = trackPoints[trackPoints.length - 1]
+  const showRealMap = !IS_WEB && trackPoints.length > 0
+
   return (
     <View className={styles.page}>
       <View className={styles.map}>
-        <View className={styles['map-placeholder']}>
-          <Text className={styles['map-placeholder-title']}>{statusText}</Text>
-          <Text className={styles['map-placeholder-desc']}>{latestDescription}</Text>
-        </View>
+        {showRealMap ? (
+          <Map
+            style={{ width: '100%', height: '100%' }}
+            latitude={currentPoint.latitude}
+            longitude={currentPoint.longitude}
+            scale={7}
+            includePoints={trackPoints}
+            polyline={[
+              {
+                points: trackPoints,
+                color: '#C45124',
+                width: 4,
+                arrowLine: true,
+              },
+            ]}
+          />
+        ) : (
+          <View className={styles['map-placeholder']}>
+            <Text className={styles['map-placeholder-title']}>{statusText}</Text>
+            <Text className={styles['map-placeholder-desc']}>{latestDescription}</Text>
+          </View>
+        )}
       </View>
       <View className={styles['location-tag']}>
         <Text className={styles['location-label']}>当前位置</Text>

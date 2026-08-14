@@ -441,6 +441,7 @@ const AskPurchaseList = () => {
   }
   return (
     <PageLayout
+      className={styles['askpurchase-page']}
       style={{
         height: '100vh',
       }}
@@ -460,13 +461,14 @@ const AskPurchaseList = () => {
           <View className={styles['page-wrap-search']}>
             <Search
               value={keyword}
+              background="#FDF9F5"
               placeholder={translate('mobile.resource.askPurchase.caigouxunyuandanhaoxunyuanzhaiyao')}
               onChange={(value) => {
                 setKeyword(value)
               }}
               onClear={handleSearchSubmit}
               onSearch={handleSearchSubmit}
-              innerBackground="#F7F8FA"
+              innerBackground="#FCF7F1"
               customClassName={styles['page-wrap-search-key']}
               shape="round"
               clearable

@@ -8,12 +8,12 @@ $middlesize: 14px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #f4f5f7;
+  background-color: $color-bg-base;
 }
 .phone {
   display: block;
   margin-top: 10px;
-  color: #909399;
+  color: $color-text-placeholder;
   font-size: $middlesize;
 }
 .left {
@@ -25,7 +25,7 @@ $middlesize: 14px;
 }
 .right-text {
   font-size: 14px;
-  color: #91959b;
+  color: $color-text-secondary;
 }
 .settings-list {
   margin-top: 16px;
@@ -36,7 +36,9 @@ $middlesize: 14px;
   padding-left: 24px;
   padding-right: 24px;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   margin-bottom: 15px;
   border-radius: 4px;
 }
@@ -47,13 +49,13 @@ $middlesize: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $color-card-border;
   border-bottom-width: 2px;
   border-radius: 4px;
 }
 .cell-text {
   font-size: $middlesize;
-  color: #5c626a;
+  color: $color-text-secondary;
 }
 .icon-right {
   width: 16px;
@@ -62,7 +64,10 @@ $middlesize: 14px;
   align-items: center;
 }
 .settings-foot {
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
+  color: $color-brand;
   text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -71,7 +76,9 @@ $middlesize: 14px;
   margin-bottom: 20px;
 }
 .head {
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -91,8 +98,8 @@ $middlesize: 14px;
 }
 .tag {
   margin-left: 5px;
-  color: $theme-color;
-  background-color: #e4f7ef;
+  color: $color-brand;
+  background-color: #FCE9DE;
   font-size: 12px;
   padding-left: 4px;
   padding-right: 4px;
@@ -106,7 +113,8 @@ $middlesize: 14px;
   font-size: $middlesize;
 }
 .text {
-  background-color: #fff;
+  background-color: transparent;
+  color: $color-text-title;
   font-size: 16px;
 }
 .img {
@@ -123,7 +131,7 @@ $middlesize: 14px;
 }
 .title {
   margin-top: 10px;
-  color: #909399;
+  color: $color-text-placeholder;
   font-size: 14px;
 }
 
@@ -136,6 +144,6 @@ $middlesize: 14px;
 
   .localeBoxItem {
     padding: 12px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid $color-card-border;
   }
 }

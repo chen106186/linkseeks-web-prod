@@ -7,6 +7,27 @@
   flex-direction: column;
 }
 
+.askpurchase-page {
+  background-color: $color-bg-base;
+
+  :global {
+    .page-layout-head {
+      background-color: $color-card-bg;
+      box-shadow: 0 2px 8px $color-card-shadow;
+    }
+
+    .nav-bar,
+    .at-tabs,
+    .at-tabs__header {
+      background-color: $color-card-bg;
+    }
+
+    .page-layout-content-wrap {
+      background-color: $color-bg-base;
+    }
+  }
+}
+
 .askpurchase-wrap {
   display: flex;
   flex-direction: column;
@@ -205,7 +226,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 12px;
-  background-color: #FFFFFF;
+  background-color: $color-card-bg;
 
   &-key {
     flex: 1;

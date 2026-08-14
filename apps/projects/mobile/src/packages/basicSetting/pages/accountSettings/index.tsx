@@ -1,5 +1,6 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
 import React, { useState, useEffect, useMemo } from 'react'
+import Taro from '@tarojs/taro'
 import cx from 'classnames'
 import { pxTransform, showModal, showToast } from '@apps/mobile-services/utils/taro'
 import { View, Text, Image, ScrollView, Modal, Toast } from '@apps/mobile-ui'
@@ -130,7 +131,10 @@ const AccountSettings = () => {
     })
   }
   const currentLanguage = useMemo(
-    () => languageList.find((item) => item.key === locale)?.language || '',
+    () =>
+      languageList.find((item) => item.key === locale)?.language ||
+      localeLng.find((item) => item.lng === locale)?.name.split('-')[0] ||
+      locale,
     [languageList, locale],
   )
   const SettingsList = useMemo(() => {
@@ -197,7 +201,7 @@ const AccountSettings = () => {
         // },
       ],
     }
-  }, [locale, version, languageList])
+  }, [currentLanguage, version, intl])
   const getLanguage = async () => {
     const language = await getAsyncStorage(LANGUAGE)
     if (language) {
@@ -216,8 +220,9 @@ const AccountSettings = () => {
     // setNavigationBarTitle({ title: intl.formatMessage({ id: 'user.zhanghushezhi', defaultMessage: '账户设置' }) })
     findAllByColumnType()
     async function getVersion() {
-      const res = await getAsyncStorage(APP_VERSION)
-      setVersion(res)
+      const storageVersion = await getAsyncStorage(APP_VERSION)
+      const accountInfo = !IS_WEB ? Taro.getAccountInfoSync() : undefined
+      setVersion(storageVersion || accountInfo?.miniProgram?.version || accountInfo?.miniProgram?.envVersion || '-')
     }
     getVersion()
   }, [])

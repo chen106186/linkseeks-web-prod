@@ -6,8 +6,13 @@
   height: 100vh;
   flex: 1;
   flex-direction: column;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   :global {
+    .at-tabs__header,
+    .at-tabs__body,
+    .at-tabs-pane {
+      background-color: $color-bg-base;
+    }
     .at-tabs__item {
       width: 50%;
       .at-tabs__item-underline{
@@ -24,7 +29,7 @@
 }
 
 .page {
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   padding: 10px;
   width: 100%;
 }
@@ -40,12 +45,14 @@
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 8px;
+  border: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 
 .address-list-item {
   display: flex;
   width: 100%;
-  background-color: #fff;
+  background-color: $color-card-bg;
   padding: 14px 12px;
   flex-direction: row;
   align-items: center;
@@ -90,7 +97,7 @@
 	display: block;
 	font-size: 12px;
 	text-align: left;
-	color: #91959B;
+	color: $color-text-placeholder;
 	line-height: 12px;
 }
 
@@ -98,6 +105,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-right: 10px;
+  color: $color-text-title;
 }
 
 .color {
@@ -106,7 +114,7 @@
 }
 
 .flag {
-  background-color: #ebf9f6;
+  background-color: $color-bg-light;
   font-size: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -119,7 +127,7 @@
 .address-footer {
   height: 90px;
   padding-top: 8px;
-  background-color: #fff;
+  background-color: $color-bg;
 }
 
 .address-add {
@@ -182,11 +190,13 @@
 		width: 296px;
 		height: 184px;
 		border-radius: 16px;
-		background: #ffffff;
+		background: $color-card-bg;
+		border: 1px solid $color-card-border;
+		box-shadow: 0 4px 12px $color-card-shadow;
 		box-sizing: border-box;
 
 		&-text {
-			color: #303133;
+			color: $color-text-title;
 			text-align: center;
 			font-size: 16px;
 			line-height: 24px;
@@ -206,13 +216,12 @@
 			border-radius: 8px;
 			text-align: center;
 			color: #FFF;
-			background: #00a98f;
+			background: $color-brand;
 
 			&.cancel {
-				color: #252D37;
-				background: #F5F6F7;
+				color: $color-text-secondary;
+				background: $color-bg-light;
 			}
 		}
 	}
 }
-

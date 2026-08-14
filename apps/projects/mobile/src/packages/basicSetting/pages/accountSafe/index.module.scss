@@ -5,17 +5,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   height: 100vh;
 }
 .bar {
-  background-color: #fff;
+  background-color: $color-bg;
 }
 .safe-container {
   width: 100%;
   margin: 0;
   border-top-width: 1px;
-  border-color: #f4f5f7;
+  border-color: $color-card-border;
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fff;
+  background-color: $color-bg;
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 24px;
@@ -32,11 +32,11 @@
 .user-name {
   font-size: 24px;
   font-weight: 600px;
-  color: #303133;
+  color: $color-text-title;
   margin-bottom: 8px;
 }
 .slogen {
-  color: #909399;
+  color: $color-text-placeholder;
   font-size: 12px;
 }
 .safe-score {
@@ -53,12 +53,12 @@
   border-radius: 5px;
 }
 .safe-score-low {
-  background-color: #fcad2e;
-  background-image: linear-gradient(to right, #e6693c, #fcad2e);
+  background-color: $color-brand;
+  background-image: linear-gradient(to right, $color-brand-dark, #e18c59);
 }
 .safe-score-full {
-  background-color: #00b37a;
-  background-image: linear-gradient(to right, #6bcad9, #00b37a);
+  background-color: $color-brand;
+  background-image: linear-gradient(to right, #9a5838, $color-brand);
 }
 .score {
   font-size: 48px;
@@ -93,7 +93,7 @@
   flex-direction: row;
 }
 .select-item {
-  background-color: #fff;
+  background-color: $color-card-bg;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -105,9 +105,12 @@
   padding-right: 12px;
   margin-bottom: 8px;
   border-radius: 5px;
+  border: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .title {
   margin-left: 12px;
+  color: $color-text-title;
 }
 .extra-side {
   align-items: center;
@@ -115,7 +118,7 @@
 .extra-title {
   margin-right: 4px;
   font-size: 12px;
-  color: #909399;
+  color: $color-text-placeholder;
 }
 
 .account-model {

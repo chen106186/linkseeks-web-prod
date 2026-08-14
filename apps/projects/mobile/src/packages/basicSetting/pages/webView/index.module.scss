@@ -1,7 +1,15 @@
+@import "@/styles/variables.scss";
+
+page {
+  background-color: $color-bg-base;
+}
+
 .html {
   flex: 1;
   flex-direction: "column";
   padding: 12px;
+	background-color: $color-bg-base;
+	color: $color-text-base;
 	.taro_html img {
     width: 100% !important;
   }

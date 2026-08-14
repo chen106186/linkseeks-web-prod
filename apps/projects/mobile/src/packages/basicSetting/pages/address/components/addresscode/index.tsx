@@ -230,7 +230,7 @@ const Provinces = (props: AddressPickerProps) => {
           ))}
           {tabList.length !== 4 && (
             <View>
-              <Text style={{ color: '#00A98F' }}>{intl.formatMessage({ id: 'addressPicker_select_btn' })}</Text>
+              <Text style={{ color: '#C45124' }}>{intl.formatMessage({ id: 'addressPicker_select_btn' })}</Text>
             </View>
           )}
         </View>

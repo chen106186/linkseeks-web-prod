@@ -453,7 +453,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: '#F4F5F7',
+                      borderBottomColor: '#F0DED1',
                     }}
                     onChange={(e) =>
                       changeInputValue(
@@ -485,7 +485,7 @@ const AddressAdd = () => {
                     style={{
                       marginLeft: pxTransform(0),
                       paddingLeft: pxTransform(0),
-                      borderBottomColor: '#F4F5F7',
+                      borderBottomColor: '#F0DED1',
                     }}
                     onChange={(e) => changeInputValue('phone', e)}
                   />
@@ -530,7 +530,7 @@ const AddressAdd = () => {
                                 defaultMessage: '请选择发货地区',
                               })
                               ? '#C0C4CC'
-                              : '#303133',
+                              : '#5A2A12',
                         }}
                       >
                         {addressText}
@@ -575,7 +575,7 @@ const AddressAdd = () => {
                     })}
                   </Text>
                   <View className={cx(styles['switch-btn'], styles['fl-right'])}>
-                    <Switch color="#00A98F" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
+                    <Switch color="#C45124" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
                   </View>
                 </View>
               </Form>
@@ -612,7 +612,7 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: '#F4F5F7',
+                          borderBottomColor: '#F0DED1',
                         }}
                         onChange={(e) => changeInputValue('postalCode', e)}
                       />
@@ -636,7 +636,7 @@ const AddressAdd = () => {
                         className={styles['input']}
                         placeholderClass={styles['input-placeholder']}
                         style={{
-                          borderBottomColor: '#F4F5F7',
+                          borderBottomColor: '#F0DED1',
                         }}
                         onChange={(e) => changeInputValue('tel', e)}
                       />

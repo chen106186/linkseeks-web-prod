@@ -1,10 +1,22 @@
+@import "@/styles/variables.scss";
+
+page {
+  background-color: $color-bg-base;
+}
+
 .help_details {
   padding: 12px;
+  background-color: $color-card-bg;
+  color: $color-text-base;
+  border: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
+
   .help_title {
     font-size: 16px;
     line-height: 16px;
     padding-left: 8px;
-    border-left: 3px solid #00a98f;
+    border-left: 3px solid $color-brand;
+    color: $color-text-title;
     margin-bottom: 24px;
     margin-top: 2px;
   }

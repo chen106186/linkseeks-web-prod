@@ -148,7 +148,7 @@ const AccountSafe: React.FC = () => {
                 </View>
                 <View className={styles['extra-side']}>
                   <Text className={styles['extra-title']}>{item.value}</Text>
-                  <Icons name="ChevronRight" size={14} color="#91959B" />
+                  <Icons name="ChevronRight" size={14} color="#8F7564" />
                 </View>
               </View>
             </View>

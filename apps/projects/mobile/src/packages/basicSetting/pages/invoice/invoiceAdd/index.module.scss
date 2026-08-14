@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 
-$gray: #606266;
-$sky-blue: #303133;
+$gray: $color-text-secondary;
+$sky-blue: $color-text-title;
 $small: 10px;
 $default: 12px;
 $importmiddle: 14px;
@@ -12,7 +12,7 @@ $importmiddle: 14px;
   flex: 1;
   flex-direction: column;
   height: 100vh;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   width: 100%;
 }
 .main {
@@ -21,16 +21,18 @@ $importmiddle: 14px;
 }
 .warp {
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $color-card-bg;
   border-radius: 2px;
   padding: 16px 12px;
   padding-bottom: 0px;
+  border: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 
 	:global {
 
 		.weui-input, input {
 			&::placeholder {
-				color: #C8CACD;
+				color: $color-text-placeholder;
 				font-size: 14px;
 				font-weight: normal;
 			}
@@ -58,7 +60,7 @@ $importmiddle: 14px;
 }
 .title {
   font-size: $importmiddle;
-  color: #252D37;
+  color: $color-text-title;
   width: 70px;
   font-weight: bold;
 
@@ -81,14 +83,14 @@ $importmiddle: 14px;
   margin-right: 0;
 }
 .tag-active {
-  background-color: #e4f7ef;
+  background-color: $color-bg-light;
 	border: 0.1px solid $theme-color;
 }
 .tag-active-text {
   color: $theme-color;
 }
 .tag-bg {
-  background-color: #f4f5f7;
+  background-color: $color-bg-light;
 }
 .tag-bg-text {
   color: $sky-blue;
@@ -97,7 +99,7 @@ $importmiddle: 14px;
 	font-family: PingFangSC-Regular;
 	font-weight: 400;
 	font-size: 12px;
-	color: #5C626A;
+	color: $color-text-secondary;
 }
 .from {
   flex-direction: column;
@@ -149,7 +151,7 @@ $importmiddle: 14px;
   padding: 5px;
   width: 150%;
   margin-left: -20;
-  background-color: #f4f5f7;
+  background-color: $color-bg-light;
 }
 .enterprise {
   flex-direction: column;
@@ -157,7 +159,7 @@ $importmiddle: 14px;
 .invoicebtn-group {
   height: 90px;
   padding: 8px;
-  background-color: #fff;
+  background-color: $color-bg;
 }
 .button {
   margin-bottom: 20px;

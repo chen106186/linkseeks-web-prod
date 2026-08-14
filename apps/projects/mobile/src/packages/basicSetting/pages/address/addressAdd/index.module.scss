@@ -1,7 +1,7 @@
 @import "@/styles/variables.scss";
 .container {
   height: 100vh;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   padding: 8px;
   margin: 0;
   flex: 1;
@@ -33,7 +33,7 @@
   height: 100%;
 }
 .box {
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
   flex-direction: row;
   align-items: center;
   padding-top: 5px;
@@ -44,7 +44,7 @@
 .boder {
   padding-left: 5px;
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $color-card-border;
 }
 .textarea {
   border-bottom-width: 0px;
@@ -57,17 +57,19 @@
   flex: 0.9;
 }
 .address {
-  background-color: #fff;
+  background-color: $color-card-bg;
   flex-direction: row;
   border-radius: 8px;
+  border: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
 }
 .addresslable {
-  background-color: #fff;
+  background-color: $color-card-bg;
 }
 .mianlable {
   padding-top: 16px;
   border-bottom-width: 1px;
-  border-bottom-color: #f4f5f7;
+  border-bottom-color: $color-card-border;
   padding-bottom: 16px;
   padding-left: 6px;
   padding-right: 6px;
@@ -80,12 +82,12 @@
   padding-left: 5px;
   border-left-width: 1px;
   padding-right: 10px;
-  border-left-color: #f7f8fa;
+  border-left-color: $color-card-border;
   justify-content: space-between;
 }
 .code {
   font-size: 14px;
-  color: #606266;
+  color: $color-text-secondary;
 }
 .mobile-icon {
   width: 16px;
@@ -107,17 +109,17 @@
 }
 .addres {
   font-size: 14px;
-  color: #c0c4cc;
+  color: $color-text-placeholder;
   padding: 10px;
 }
 .tip {
   font-size: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #909399;
+  color: $color-text-placeholder;
   text-align: left;
   width: 100%;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
 }
 .address-list {
   height: 200px;
@@ -141,13 +143,13 @@
 }
 .addres-text {
   font-size: 14px;
-  color: #c0c4cc;
+  color: $color-text-placeholder;
   padding-left: 10px;
 }
 .error {
   color: red;
   font-size: 14px;
-  background-color: #fff;
+  background-color: $color-card-bg;
 }
 .button {
   margin-top: 40px;
@@ -155,7 +157,7 @@
   background-color: $theme-color;
 }
 .address-item {
-  background-color: #fff;
+  background-color: $color-card-bg;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -194,14 +196,14 @@
       font-family: PingFangSC-Regular;
       font-weight: 400;
       font-size: 14px;
-      color: #C8CACD;
+      color: $color-text-placeholder;
     }
   }
   .input-placeholder {
     font-family: PingFangSC-Regular;
     font-weight: 400;
     font-size: 14px;
-    color: #C8CACD;
+    color: $color-text-placeholder;
   }
 }
 .input {
@@ -216,7 +218,7 @@
   font-family: PingFangSC-Medium;
   font-weight: 500;
   font-size: 14px;
-  color: #303133;
+  color: $color-text-title;
 }
 
 .fl-right {
@@ -252,7 +254,7 @@
     font-family: PingFangSC-Regular;
     font-weight: 400;
     font-size: 14px;
-    color: #C8CACD;
+    color: $color-text-placeholder;
   }
   :global{
     .at-textarea__textarea {
@@ -271,4 +273,3 @@
   overflow: hidden;
   white-space: nowrap;
 }
-

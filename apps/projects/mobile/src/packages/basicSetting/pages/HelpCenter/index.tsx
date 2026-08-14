@@ -86,7 +86,7 @@ const HelpCenter: React.FC<any> = () => {
             helpListData[activeTab].children.map((v) => (
               <View className={styles['help_list_item']} key={v.id} onClick={() => skipDetails(v.id)}>
                 <Text className={styles['help_list_item_text']}>{v.name}</Text>
-                <Icons name="ChevronRight" size={16} color="#303133" />
+                <Icons name="ChevronRight" size={16} color="#8F7564" />
               </View>
             ))}
         </View>

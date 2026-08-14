@@ -84,13 +84,13 @@ const InvoiceAdd = (props: any) => {
               id: 'invoice_bank_please',
               defaultMessage: '请填写开户行',
             })}
-            placeholderTextColor="#C8CACD"
+            placeholderTextColor="#8F7564"
             name="bankOfDeposit"
             maxlength={40}
             value={formItems.bankOfDeposit}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: '#F0DED1',
             }}
             onChange={(e) => changeInputValue('bankOfDeposit', e)}
           />
@@ -108,13 +108,13 @@ const InvoiceAdd = (props: any) => {
               id: 'invoice_account_please',
               defaultMessage: '请填写对应的银行卡号',
             })}
-            placeholderTextColor="#C8CACD"
+            placeholderTextColor="#8F7564"
             name="account"
             maxlength={20}
             value={formItems.account}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: '#F0DED1',
             }}
             onChange={(e) => changeInputValue('account', e)}
           />
@@ -132,13 +132,13 @@ const InvoiceAdd = (props: any) => {
               id: 'invoice_address_please',
               defaultMessage: '请填写收取发票的地址',
             })}
-            placeholderTextColor="#C8CACD"
+            placeholderTextColor="#8F7564"
             name="address"
             className={cx(styles['title'], styles['input-wrap'])}
             maxlength={80}
             value={formItems.address}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: '#F0DED1',
             }}
             onChange={(e) => changeInputValue('address', e)}
           />
@@ -156,12 +156,12 @@ const InvoiceAdd = (props: any) => {
               id: 'invoice_tel_please',
               defaultMessage: '请填写收取发票的电话号码',
             })}
-            placeholderTextColor="#C8CACD"
+            placeholderTextColor="#8F7564"
             name="tel"
             value={formItems.tel}
             className={cx(styles['title'], styles['input-wrap'])}
             style={{
-              borderBottomColor: '#F4F5F7',
+              borderBottomColor: '#F0DED1',
             }}
             onChange={(e) => changeInputValue('tel', e)}
           />
@@ -467,13 +467,13 @@ const InvoiceAdd = (props: any) => {
                 id: 'invoiceTitle_please',
                 defaultMessage: '请输入填写发票抬头',
               })}
-              placeholderTextColor="#C8CACD"
+              placeholderTextColor="#8F7564"
               className={cx(styles['title'], styles['input-wrap'])}
               name="invoiceTitle"
               maxlength={40}
               value={formItems.invoiceTitle}
               style={{
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: '#F0DED1',
               }}
               onChange={(e) => changeInputValue('invoiceTitle', e)}
             />
@@ -491,13 +491,13 @@ const InvoiceAdd = (props: any) => {
                 id: 'taxNo_please',
                 defaultMessage: '请输入纳税号',
               })}
-              placeholderTextColor="#C8CACD"
+              placeholderTextColor="#8F7564"
               name="taxNo"
               maxlength={20}
               value={formItems.taxNo}
               className={cx(styles['title'], styles['input-wrap'])}
               style={{
-                borderBottomColor: '#F4F5F7',
+                borderBottomColor: '#F0DED1',
               }}
               onChange={(e) => changeInputValue('taxNo', e)}
             />
@@ -511,7 +511,7 @@ const InvoiceAdd = (props: any) => {
               })}
             </Text>
             <View className={cx(styles['switch-btn'], styles['fl-right'])}>
-              <Switch color="#00A98F" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
+              <Switch color="#C45124" checked={isSwitch} onChange={() => setIsSwitch(!isSwitch)} />
             </View>
           </View>
         </Form>

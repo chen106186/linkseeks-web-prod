@@ -88,6 +88,8 @@ page {
     .help_list {
       background-color: $color-card-bg;
       border-radius: 8px;
+      border: 1px solid $color-card-border;
+      box-shadow: 0 4px 12px $color-card-shadow;
       overflow: hidden;
       width: 100%;
 			flex: 1;
@@ -106,6 +108,7 @@ page {
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
+					color: $color-text-title;
 				}
       }
     }

@@ -669,8 +669,12 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     <MellowCard
       title={isSrmOrder || contractOrder ? '订单物料' : '订单商品'}
       extra={
-        !contractOrder && hasDeliverableProducts ? (
-          <Button type="primary" disabled={!selectedRowKeys.length} onClick={handleOpenDelivery}>
+        !contractOrder ? (
+          <Button
+            type="primary"
+            disabled={deliveryProductsLoading || !hasDeliverableProducts || !selectedRowKeys.length}
+            onClick={handleOpenDelivery}
+          >
             去发货
           </Button>
         ) : null
@@ -685,7 +689,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
         loading={deliveryProductsLoading}
         rowKey="orderProductId"
         pagination={false}
-        rowSelection={hasDeliverableProducts ? rowSelection : undefined}
+        rowSelection={rowSelection}
         scroll={{ x: 1400 }}
       />
       <MoneyTotalBox

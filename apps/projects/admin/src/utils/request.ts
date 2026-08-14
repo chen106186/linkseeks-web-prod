@@ -47,7 +47,6 @@ const errorMessage: httpStatus = {
 
 const defaultHeaders = {
   'Content-Type': 'Application/json',
-  token: '21954519911775ff2c65fa5887b9b11b',
   environment: '1',
   source: '99',
   site: import.meta.env.OUT_SITEID.toString(),
@@ -88,14 +87,22 @@ const baseRequest = extend({
 baseRequest.interceptors.request.use(
   (url: string, options: RequestOptionsInit): { url: string; options: RequestOptionsInit } => {
     // 判断是否有权限
-    const { userId, memberId, token } = getAuth() || {}
-    const headers = {
+    const authInfo = getAuth() || {}
+    const { userId, memberId } = authInfo
+    const accessToken = authInfo.accessToken || authInfo.token
+    const headers: Record<string, any> = {
       'Accept-Language': requestLanguageMaps[getCurrentLocale() as any] || 'zh',
       ...options.headers,
-      userId,
-      memberId,
-      token,
-      accessToken: token,
+    }
+    if (userId !== undefined && userId !== null) {
+      headers.userId = userId
+    }
+    if (memberId !== undefined && memberId !== null) {
+      headers.memberId = memberId
+    }
+    if (accessToken) {
+      headers.token = accessToken
+      headers.accessToken = accessToken
     }
     return {
       // 前缀如果已经带上api, 跳过自动补前缀

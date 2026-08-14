@@ -39,7 +39,7 @@ export interface AmapTrackProps {
   height?: number
 }
 
-const AmapTrack: React.FC<AmapTrackProps> = ({ events, height = 320 }) => {
+const AmapTrack: React.FC<AmapTrackProps> = ({ events, height = 180 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<any>(null)
 

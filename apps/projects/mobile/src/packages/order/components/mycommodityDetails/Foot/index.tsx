@@ -68,7 +68,10 @@ const Foot = (props: Iprops) => {
   }
   const seeLogistics = () => {
     setAsyncStorage(DELIVERIES_DATA, dataSource?.deliveries)
-    goJump('order/logistics')
+    goJump('order/logisticsDetail', {
+      orderId: dataSource?.orderId,
+      logisticsOrderId: dataSource?.deliveries?.[0]?.logisticsOrderId,
+    })
   }
   const toSubmit = () => {
     const param: any = {

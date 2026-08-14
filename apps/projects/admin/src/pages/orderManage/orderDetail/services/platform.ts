@@ -25,10 +25,12 @@ export interface PlatformLogisticsCompanyItem {
 }
 
 export interface PlatformLogisticsTrackItem {
-  eventTime?: string
-  context?: string
-  status?: string
-  location?: string
+  acceptTime?: string
+  acceptStation?: string
+  remark?: string
+  opCode?: string
+  lat?: number
+  lng?: number
 }
 
 export interface PlatformOrderLogisticsResp {

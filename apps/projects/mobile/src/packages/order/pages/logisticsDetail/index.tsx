@@ -1,160 +1,139 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
-import React, { useEffect, useRef, useState } from 'react'
-import Taro from '@tarojs/taro'
-import { Map, ScrollView } from '@tarojs/components'
+import React, { useEffect, useMemo, useState } from 'react'
+import { getCurrentInstance } from '@apps/mobile-services/utils/taro'
+import { ScrollView } from '@tarojs/components'
 import { Text, View } from '@apps/mobile-ui'
-import { getOssUrlPath } from '@apps/constants'
-import { MOCK_LOGISTICS_DATA } from './mock'
+import { getLogisticsMobileTrackingLatest, getOrderMobileBuyerDetail } from '@apps/apis'
 import styles from './index.module.scss'
 
-const markerIcon = getOssUrlPath('/miniprogram/assets/images/location.png')
-const MAP_ID = 'logistics-detail-map'
+const STATUS_MAP: Record<string, string> = {
+  '0': '运输中',
+  '1': '揽收中',
+  '2': '疑难件',
+  '3': '已签收',
+  '4': '已退签',
+  '5': '派件中',
+}
+
+const SUBSCRIBE_STATUS_MAP: Record<number, string> = {
+  1: '运输中',
+  2: '已签收',
+  3: '订阅失败',
+}
 
 const LogisticsDetail = () => {
-  const windowHeight = Taro.getSystemInfoSync().windowHeight || 667
-  const minPanelHeight = Math.round(windowHeight * 0.46)
-  const maxPanelHeight = Math.round(windowHeight * 0.72)
-  const [panelHeight, setPanelHeight] = useState(minPanelHeight)
-  const [mapFitPanelHeight, setMapFitPanelHeight] = useState(minPanelHeight)
-  const panelHeightRef = useRef(minPanelHeight)
-  const dragRef = useRef({ startY: 0, startHeight: minPanelHeight })
-  const mapContextRef = useRef<any>()
-  const fitRouteTimerRef = useRef<ReturnType<typeof setTimeout>>()
+  const { orderId, logisticsOrderId: routeLogisticsOrderId }: any = getCurrentInstance()?.router?.params || {}
+  const [loading, setLoading] = useState(true)
+  const [trackingDetail, setTrackingDetail] = useState<any>(null)
+
+  const loadTrackingDetail = async (logisticsOrderId?: string | number) => {
+    if (!logisticsOrderId) {
+      setTrackingDetail(null)
+      setLoading(false)
+      return
+    }
+    setLoading(true)
+    try {
+      const res = await getLogisticsMobileTrackingLatest({
+        logisticsOrderId: `${logisticsOrderId}`,
+      })
+      if (res.code === 1000) {
+        setTrackingDetail(res.data || null)
+      } else {
+        setTrackingDetail(null)
+      }
+    } finally {
+      setLoading(false)
+    }
+  }
 
   useEffect(() => {
-    mapContextRef.current = Taro.createMapContext(MAP_ID)
-
-    return () => {
-      if (fitRouteTimerRef.current) {
-        clearTimeout(fitRouteTimerRef.current)
+    const init = async () => {
+      if (routeLogisticsOrderId) {
+        await loadTrackingDetail(routeLogisticsOrderId)
+        return
+      }
+      if (!orderId) {
+        setLoading(false)
+        return
+      }
+      try {
+        const detailRes = await getOrderMobileBuyerDetail({ orderId })
+        if (detailRes.code === 1000) {
+          const firstDelivery = detailRes.data?.deliveries?.find((item: any) => !!item?.logisticsOrderId)
+          await loadTrackingDetail(firstDelivery?.logisticsOrderId)
+          return
+        }
+      } finally {
+        setLoading(false)
       }
     }
-  }, [])
+    init()
+  }, [orderId, routeLogisticsOrderId])
 
-  useEffect(() => {
-    if (fitRouteTimerRef.current) {
-      clearTimeout(fitRouteTimerRef.current)
+  const latestEvent = trackingDetail?.events?.[0]
+  const statusText = useMemo(() => {
+    if (latestEvent?.opCode && STATUS_MAP[latestEvent.opCode]) {
+      return STATUS_MAP[latestEvent.opCode]
     }
-
-    fitRouteTimerRef.current = setTimeout(() => {
-      mapContextRef.current?.includePoints({
-        points: MOCK_LOGISTICS_DATA.route,
-        padding: [72, 28, mapFitPanelHeight + 24, 28],
-      })
-    }, 16)
-  }, [mapFitPanelHeight])
-
-  const markers = [
-    {
-      id: 1,
-      latitude: MOCK_LOGISTICS_DATA.route[0].latitude,
-      longitude: MOCK_LOGISTICS_DATA.route[0].longitude,
-      iconPath: markerIcon,
-      width: 30,
-      height: 36,
-      callout: {
-        content: `${MOCK_LOGISTICS_DATA.status}\n${MOCK_LOGISTICS_DATA.currentLocation}`,
-        color: '#5A2A12',
-        fontSize: 13,
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#EAD9CD',
-        bgColor: '#FDF9F5',
-        padding: 8,
-        display: 'ALWAYS' as const,
-        textAlign: 'center' as const,
-        anchorX: 0,
-        anchorY: -8,
-      },
-    },
-  ]
-
-  const updatePanelHeight = (nextHeight: number) => {
-    const height = Math.max(minPanelHeight, Math.min(maxPanelHeight, nextHeight))
-    panelHeightRef.current = height
-    setPanelHeight(height)
-  }
-
-  const handleTouchStart = (event: any) => {
-    dragRef.current = {
-      startY: event.touches[0].clientY,
-      startHeight: panelHeightRef.current,
+    if (trackingDetail?.subscribeStatus && SUBSCRIBE_STATUS_MAP[trackingDetail.subscribeStatus]) {
+      return SUBSCRIBE_STATUS_MAP[trackingDetail.subscribeStatus]
     }
-  }
+    return '暂无物流信息'
+  }, [latestEvent, trackingDetail])
 
-  const handleTouchMove = (event: any) => {
-    const offsetY = dragRef.current.startY - event.touches[0].clientY
-    updatePanelHeight(dragRef.current.startHeight + offsetY)
-  }
-
-  const handleTouchEnd = () => {
-    const middleHeight = (minPanelHeight + maxPanelHeight) / 2
-    const targetHeight = panelHeightRef.current >= middleHeight ? maxPanelHeight : minPanelHeight
-    updatePanelHeight(targetHeight)
-    setMapFitPanelHeight(targetHeight)
-  }
+  const latestDescription = latestEvent?.acceptStation || latestEvent?.remark || '暂无轨迹更新'
+  const currentLocation = latestEvent?.acceptStation || trackingDetail?.expressCompanyName || '暂无定位信息'
+  const events = trackingDetail?.events || []
 
   return (
     <View className={styles.page}>
-      <Map
-        id={MAP_ID}
-        className={styles.map}
-        latitude={MOCK_LOGISTICS_DATA.center.latitude}
-        longitude={MOCK_LOGISTICS_DATA.center.longitude}
-        scale={9}
-        markers={markers}
-        polyline={[
-          {
-            points: MOCK_LOGISTICS_DATA.route,
-            color: '#C45124CC',
-            width: 5,
-            arrowLine: true,
-          },
-        ]}
-        enableZoom
-        onError={(event) => console.warn('物流地图加载失败', event.detail)}
-      />
+      <View className={styles.map}>
+        <View className={styles['map-placeholder']}>
+          <Text className={styles['map-placeholder-title']}>{statusText}</Text>
+          <Text className={styles['map-placeholder-desc']}>{latestDescription}</Text>
+        </View>
+      </View>
       <View className={styles['location-tag']}>
         <Text className={styles['location-label']}>当前位置</Text>
-        <Text>{MOCK_LOGISTICS_DATA.currentLocation}</Text>
+        <Text>{currentLocation}</Text>
       </View>
-      <View
-        className={styles.panel}
-        style={{ height: `${panelHeight}px` }}
-        onTouchStart={(event) => event.stopPropagation()}
-        catchMove
-      >
-        <View
-          className={styles['drag-area']}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
+      <View className={styles.panel} style={{ height: '58vh' }}>
+        <View className={styles['drag-area']}>
           <View className={styles.handle} />
           <View className={styles['summary-row']}>
             <View>
-              <Text className={styles['summary-status']}>{MOCK_LOGISTICS_DATA.status}</Text>
-              <Text className={styles['summary-description']}>{MOCK_LOGISTICS_DATA.latestDescription}</Text>
+              <Text className={styles['summary-status']}>{statusText}</Text>
+              <Text className={styles['summary-description']}>{latestDescription}</Text>
+              {!!trackingDetail?.mailNo && (
+                <Text className={styles['summary-description']}>
+                  {trackingDetail?.expressCompanyName} | {trackingDetail?.mailNo}
+                </Text>
+              )}
             </View>
           </View>
         </View>
-        <ScrollView scrollY className={styles.timeline} style={{ height: `${Math.max(panelHeight - 108, 180)}px` }}>
-          {MOCK_LOGISTICS_DATA.traces.map((item, index) => (
-            <View className={styles['timeline-item']} key={`${item.time}-${item.status}`}>
-              <View className={styles['timeline-axis']}>
-                <View className={index === 0 ? styles['active-dot'] : styles.dot} />
-                {index < MOCK_LOGISTICS_DATA.traces.length - 1 && <View className={styles.line} />}
-              </View>
-              <View className={styles['timeline-content']}>
-                <View className={styles['timeline-title-row']}>
-                  <Text className={index === 0 ? styles['active-title'] : styles['timeline-title']}>{item.status}</Text>
-                  <Text className={styles.time}>{item.time}</Text>
+        <ScrollView scrollY className={styles.timeline} style={{ height: '100%' }}>
+          {loading && <Text className={styles['mock-tip']}>物流信息加载中...</Text>}
+          {!loading && !events.length && <Text className={styles['mock-tip']}>暂无物流轨迹</Text>}
+          {!loading &&
+            events.map((item: any, index: number) => (
+              <View className={styles['timeline-item']} key={`${item.acceptTime || index}-${item.opCode || ''}`}>
+                <View className={styles['timeline-axis']}>
+                  <View className={index === 0 ? styles['active-dot'] : styles.dot} />
+                  {index < events.length - 1 && <View className={styles.line} />}
                 </View>
-                <Text className={styles.description}>{item.description}</Text>
+                <View className={styles['timeline-content']}>
+                  <View className={styles['timeline-title-row']}>
+                    <Text className={index === 0 ? styles['active-title'] : styles['timeline-title']}>
+                      {STATUS_MAP[item.opCode] || item.remark || '物流更新'}
+                    </Text>
+                    <Text className={styles.time}>{item.acceptTime}</Text>
+                  </View>
+                  <Text className={styles.description}>{item.acceptStation || item.remark || '-'}</Text>
+                </View>
               </View>
-            </View>
-          ))}
-          <Text className={styles['mock-tip']}>当前页面使用 Mock 物流数据，暂未对接后端接口</Text>
+            ))}
         </ScrollView>
       </View>
     </View>

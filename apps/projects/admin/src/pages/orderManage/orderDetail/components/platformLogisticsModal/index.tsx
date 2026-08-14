@@ -6,6 +6,15 @@ import style from './index.less'
 
 const { Text } = Typography
 
+const TRACK_STATUS_MAP: Record<string, string> = {
+  '0': '运输中',
+  '1': '已揽收',
+  '2': '疑难件',
+  '3': '已签收',
+  '4': '已退签',
+  '5': '派件中',
+}
+
 export interface PlatformLogisticsModalProps {
   visible: boolean
   orderNo: string
@@ -101,9 +110,14 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
                   color: 'green',
                   children: (
                     <div>
-                      <div>{item.context || item.status || '-'}</div>
+                      <div>{item.acceptStation || item.remark || TRACK_STATUS_MAP[item.opCode || ''] || '-'}</div>
                       <Text type="secondary">
-                        {[formatTimeString(item.eventTime), item.location].filter(Boolean).join('  ')}
+                        {[
+                          item.acceptTime ? formatTimeString(item.acceptTime) : '',
+                          TRACK_STATUS_MAP[item.opCode || ''],
+                        ]
+                          .filter(Boolean)
+                          .join('  ')}
                       </Text>
                     </div>
                   ),

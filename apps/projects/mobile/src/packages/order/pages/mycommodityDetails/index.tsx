@@ -22,6 +22,7 @@ import { isWeChat } from '@/utils'
 import { getMemberMobileLrcRightPointGet } from '@apps/apis'
 import {
   getOrderMobileBuyerDetail,
+  getLogisticsMobileTrackingLatest,
   getOrderMobileBuyerValidatePayType,
   getOrderMobileCreateFindDeliveryDate,
   postOrderCreateBuyerPay,
@@ -48,7 +49,6 @@ import Invoice from '../../components/mycommodityDetails/Invoice'
 import { encryptedByAES } from '@linkseeks/crypto'
 import DeliveryTime from '../confirmOrder/components/deliveryTime'
 import PayPopupInput from '../integral/components/PaypopupInput'
-import { MOCK_LOGISTICS_DATA } from '../logisticsDetail/mock'
 
 /*
 outerStatusName 头部名称状态
@@ -81,6 +81,7 @@ const MyCommodityDetails = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [payMessageType, setPayMessageType] = useState<any>({})
   const [countdown, setCountdown] = useState<any>({})
+  const [logisticsSummary, setLogisticsSummary] = useState<any>(null)
   const {
     confirmOrderStore: { setOrderMessage },
   } = useStores()
@@ -529,6 +530,20 @@ const MyCommodityDetails = () => {
               }
             })
           }
+          const firstDelivery = res.data?.deliveries?.find((item: any) => !!item?.logisticsOrderId)
+          if (firstDelivery?.logisticsOrderId) {
+            getLogisticsMobileTrackingLatest({
+              logisticsOrderId: firstDelivery.logisticsOrderId,
+            }).then((trackingRes: any) => {
+              if (trackingRes.code === 1000) {
+                setLogisticsSummary(trackingRes.data || null)
+              } else {
+                setLogisticsSummary(null)
+              }
+            })
+          } else {
+            setLogisticsSummary(null)
+          }
         }
       })
     } catch (error) {}
@@ -604,8 +619,15 @@ const MyCommodityDetails = () => {
   const dqrTitle = sendInfo.outerStatus === 13
   const dqr = dqrTitle && !noBtnClick
   const showLogisticsInfo = dqrTitle && !detailData?.pickupPointName
+  const latestLogisticsEvent = logisticsSummary?.events?.[0]
+  const logisticsSummaryText =
+    latestLogisticsEvent?.acceptStation || latestLogisticsEvent?.remark || '暂无物流轨迹'
+  const logisticsSummaryTime = latestLogisticsEvent?.acceptTime || logisticsSummary?.lastEventTime || ''
   const navigateToLogistics = () => {
-    Router.navigateTo('order/logisticsDetail', { orderId: detailData?.orderId || orderId })
+    Router.navigateTo('order/logisticsDetail', {
+      orderId: detailData?.orderId || orderId,
+      logisticsOrderId: detailData?.deliveries?.[0]?.logisticsOrderId,
+    })
   }
   return (
     <View className={styles.container}>
@@ -644,8 +666,8 @@ const MyCommodityDetails = () => {
             <>
               <View className={styles['status-content']}>
                 <Text className={styles['status-title']}>物流信息</Text>
-                <Text className={styles['status-latest']}>{MOCK_LOGISTICS_DATA.latestDescription}</Text>
-                <Text className={styles['status-time']}>{MOCK_LOGISTICS_DATA.traces[0].time}</Text>
+                <Text className={styles['status-latest']}>{logisticsSummaryText}</Text>
+                <Text className={styles['status-time']}>{logisticsSummaryTime}</Text>
               </View>
               <Icons name="ChevronRight" size={18} color="#FFF" />
             </>

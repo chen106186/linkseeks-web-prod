@@ -297,6 +297,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     buyerMemberName,
     createTime,
     amount,
+    consignee,
     deliveryDetails,
   } = data || {}
   const contractOrder = orderKind === OrderKindType.SRM_ORDER
@@ -706,7 +707,8 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
         orderDigest={digest}
         buyerMemberName={buyerMemberName}
         createTime={createTime}
-        amount={amount}
+        totalAmount={product?.totalAmount || amount}
+        consignee={consignee}
         selectedOrderProductIds={selectedRowKeys.map((item) => Number(item))}
         onClose={() => setDeliveryVisible(false)}
         onSuccess={handleDeliverySuccess}

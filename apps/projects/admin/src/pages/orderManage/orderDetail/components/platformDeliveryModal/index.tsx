@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Button, Drawer, Form, Input, Select, Space, Table, message } from 'antd'
 import { formatTimeString } from '@/utils'
-import { getLogisticsSelectListShipperAddress } from '@apps/apis'
 import {
   getOrderPlatformManageLogisticsCompanyList,
   postOrderPlatformManageDeliveryConfirm,
@@ -15,7 +14,12 @@ export interface PlatformDeliveryModalProps {
   orderDigest?: string
   buyerMemberName?: string
   createTime?: string
-  amount?: string
+  totalAmount?: string | number
+  consignee?: {
+    consignee?: string
+    phone?: string
+    address?: string
+  }
   selectedOrderProductIds: number[]
   onClose: () => void
   onSuccess: () => void
@@ -27,7 +31,8 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   orderDigest,
   buyerMemberName,
   createTime,
-  amount,
+  totalAmount,
+  consignee,
   selectedOrderProductIds,
   onClose,
   onSuccess,
@@ -35,13 +40,17 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
   const [products, setProducts] = useState<any[]>([])
-  const [addressOptions, setAddressOptions] = useState<any[]>([])
   const [companyOptions, setCompanyOptions] = useState<any[]>([])
 
   const filteredProducts = useMemo(
     () => products.filter((item) => selectedOrderProductIds.includes(item.orderProductId)),
     [products, selectedOrderProductIds],
   )
+
+  const consigneeAddress = useMemo(() => {
+    if (!consignee) return '-'
+    return [consignee.consignee, consignee.phone, consignee.address].filter(Boolean).join(' ')
+  }, [consignee])
 
   useEffect(() => {
     if (visible) {
@@ -54,9 +63,8 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
 
   const loadData = async () => {
     try {
-      const [productResp, addressResp, companyResp] = await Promise.all([
+      const [productResp, companyResp] = await Promise.all([
         postOrderPlatformManageDeliveryProducts({ orderNo }),
-        getLogisticsSelectListShipperAddress(),
         getOrderPlatformManageLogisticsCompanyList(),
       ])
 
@@ -64,7 +72,6 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
         selectedOrderProductIds.includes(item.orderProductId),
       )
       setProducts(nextProducts)
-      setAddressOptions(addressResp.data || [])
       setCompanyOptions(companyResp.data || [])
 
       form.setFieldsValue({
@@ -82,7 +89,6 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
   const submit = async () => {
     try {
       const values = await form.validateFields()
-      const addressItem = addressOptions.find((item) => String(item.id) === String(values.addressId))
       const companyItem = companyOptions.find((item) => String(item.id) === String(values.companyId))
       const submitProducts = (values.products || [])
         .filter((item) => Number(item.deliveryCount) > 0)
@@ -100,8 +106,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
       setLoading(true)
       const { code } = await postOrderPlatformManageDeliveryConfirm({
         orderNo,
-        addressId: Number(values.addressId),
-        address: addressItem?.fullAddress || '',
+        address: consignee?.address || '',
         deliveryTime: values.deliveryTime,
         logisticsNo: values.logisticsNo,
         company: companyItem?.company || '',
@@ -144,25 +149,14 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
         <div className={style.summaryItem}>订单摘要：{orderDigest || '-'}</div>
         <div className={style.summaryItem}>采购会员：{buyerMemberName || '-'}</div>
         <div className={style.summaryItem}>下单时间：{createTime || '-'}</div>
-        <div className={style.summaryItem}>订单总额：{amount || '-'}</div>
+        <div className={style.summaryItem}>订单总额：{totalAmount ?? '-'}</div>
         <div className={style.summaryItem}>本次发货商品数：{filteredProducts.length}</div>
       </div>
 
       <Form form={form} layout="vertical">
         <Space style={{ display: 'flex' }} size={16} align="start">
-          <Form.Item
-            name="addressId"
-            label="发货地址"
-            rules={[{ required: true, message: '请选择发货地址' }]}
-            style={{ flex: 1 }}
-          >
-            <Select
-              placeholder="请选择发货地址"
-              options={addressOptions.map((item) => ({
-                label: `${item.shipperName || ''} ${item.phone || ''} ${item.fullAddress || ''}`,
-                value: String(item.id),
-              }))}
-            />
+          <Form.Item label="收货地址" style={{ flex: 1 }}>
+            <Input value={consigneeAddress} disabled />
           </Form.Item>
           <Form.Item
             name="deliveryTime"

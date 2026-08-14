@@ -60,9 +60,7 @@ const config = {
       // 避免开发者工具在增量编译时漏注册单独拆出的 Babel 运行时模块。
       exclude: [
         (module) =>
-          /[\\/]@babel[\\/]runtime[\\/]helpers[\\/]esm[\\/]interopRequireWildcard\.js$/.test(
-            module.resource || '',
-          ),
+          /[\\/]@babel[\\/]runtime[\\/]helpers[\\/]esm[\\/]interopRequireWildcard\.js$/.test(module.resource || ''),
       ],
     },
     commonChunks: ['taro', 'runtime', 'vendors', 'common'],
@@ -76,10 +74,6 @@ const config = {
       },
     },
     webpackChain(chain) {
-      // 物流详情页使用 Taro Map，避免生产构建优化时遗漏地图模板。
-      const { componentConfig } = require('@tarojs/webpack5-runner/dist/utils/component')
-      componentConfig.includes.add('map')
-
       chain.merge({
         module: {
           rule: {

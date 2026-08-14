@@ -10,7 +10,6 @@ import {
 } from 'umi-request'
 import responseCode from '@/constants/responseCode'
 import { IRequestError, IRequestSuccess } from '..'
-import { getLocale, history } from 'umi'
 import { message } from 'antd'
 import { getAuth, removeAuth, removeRouters } from './auth'
 import { isDev } from '@/constants'
@@ -60,6 +59,21 @@ const requestLanguageMaps = {
   'ko-KR': 'ko',
 }
 
+const getCurrentLocale = () => {
+  if (typeof window === 'undefined') {
+    return 'zh-CN'
+  }
+
+  const candidates = [
+    window.localStorage?.getItem('umi_locale'),
+    window.localStorage?.getItem('locale'),
+    window.localStorage?.getItem('lang'),
+    window.navigator?.language,
+  ].filter(Boolean)
+
+  return (candidates[0] as string) || 'zh-CN'
+}
+
 /**
  * 配置request请求时的默认参数, 底层使用fetch进行请求
  */
@@ -76,7 +90,7 @@ baseRequest.interceptors.request.use(
     // 判断是否有权限
     const { userId, memberId, token } = getAuth() || {}
     const headers = {
-      'Accept-Language': requestLanguageMaps[getLocale() as any],
+      'Accept-Language': requestLanguageMaps[getCurrentLocale() as any] || 'zh',
       ...options.headers,
       userId,
       memberId,

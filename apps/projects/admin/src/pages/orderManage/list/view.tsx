@@ -19,24 +19,9 @@ const baseOrderListColumns: RecordColumns<any>[] = [
       <EyeAuthButton url={`/orderManage/list/detail?id=${record.orderId}`}>{text}</EyeAuthButton>
     ),
   },
-  {
-    title: '订单摘要',
-    dataIndex: 'digest',
-    key: 'digest',
-    searchField: 'Input',
-  },
-  {
-    title: '采购会员',
-    dataIndex: 'buyerMemberName',
-    key: 'buyerMemberName',
-    searchField: 'Input',
-  },
-  {
-    title: '供应会员',
-    dataIndex: 'vendorMemberName',
-    key: 'vendorMemberName',
-    searchField: 'Input',
-  },
+  { title: '订单摘要', dataIndex: 'digest', key: 'digest', searchField: 'Input' },
+  { title: '采购会员', dataIndex: 'buyerMemberName', key: 'buyerMemberName', searchField: 'Input' },
+  { title: '供应会员', dataIndex: 'vendorMemberName', key: 'vendorMemberName', searchField: 'Input' },
   {
     title: '下单时间',
     dataIndex: 'createTime',
@@ -54,11 +39,10 @@ const baseOrderListColumns: RecordColumns<any>[] = [
     dataIndex: 'amount',
     key: 'amount',
     render: (t, r) => {
-      // 积分兑换订单显示0
       if (r.orderTypeName === '积分兑换') {
         return '0'
       }
-      return r.orderType === 7 || r.orderType === 8 ? t : '￥' + t
+      return r.orderType === 7 || r.orderType === 8 ? t : `¥ ${t}`
     },
   },
   {
@@ -66,39 +50,16 @@ const baseOrderListColumns: RecordColumns<any>[] = [
     dataIndex: 'points',
     key: 'points',
     render: (text, record) => {
-      // 如果是积分兑换订单且总金额为0，积分列显示总金额的值
       if (record.orderTypeName === '积分兑换') {
         return record.amount
       }
       return text || '-'
     },
   },
-  {
-    title: '送货地址',
-    dataIndex: 'deliverAddress',
-    key: 'deliverAddress',
-    width: 164,
-    ellipsis: true,
-  },
-  {
-    title: '订单类型',
-    dataIndex: 'orderTypeName',
-    key: 'orderTypeName',
-  },
-  {
-    title: '外部状态',
-    dataIndex: 'outerStatusName',
-    key: 'outerStatusName',
-    fixed: 'right',
-    width: 110,
-  },
-  {
-    title: '售后情况',
-    dataIndex: 'afterSaleStatusName',
-    key: 'afterSaleStatusName',
-    fixed: 'right',
-    width: 110,
-  },
+  { title: '送货地址', dataIndex: 'deliverAddress', key: 'deliverAddress', width: 164, ellipsis: true },
+  { title: '订单类型', dataIndex: 'orderTypeName', key: 'orderTypeName' },
+  { title: '外部状态', dataIndex: 'outerStatusName', key: 'outerStatusName', fixed: 'right', width: 110 },
+  { title: '售后情况', dataIndex: 'afterSaleStatusName', key: 'afterSaleStatusName', fixed: 'right', width: 110 },
 ]
 
 const fetchTableData = async (params) => {
@@ -106,12 +67,10 @@ const fetchTableData = async (params) => {
   return data
 }
 
-// 订单查询
 const OrderList: React.FC = () => {
-  const { token } = authService.getAuth() || {}
+  authService.getAuth()
   const ref = useRef({} as ActionType)
   const fetchParams = useRef<any>({})
-  const secondColumns: any[] = baseOrderListColumns.concat([])
 
   const fetchData = (params) => {
     const payload = { ...params }
@@ -141,7 +100,7 @@ const OrderList: React.FC = () => {
   return (
     <PageHeaderWrapper>
       <StandardFormTable
-        columns={secondColumns}
+        columns={baseOrderListColumns}
         autoScrollX
         request={(params) => fetchData(params)}
         rowKey="orderNo"

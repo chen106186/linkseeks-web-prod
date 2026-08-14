@@ -298,6 +298,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     createTime,
     amount,
     consignee,
+    deliveries,
     deliveryDetails,
   } = data || {}
   const contractOrder = orderKind === OrderKindType.SRM_ORDER
@@ -332,7 +333,6 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
         setDeliveryProducts(result || [])
       }
     } catch (error) {
-      message.error('获取可发货商品失败')
       setDeliveryProducts([])
     } finally {
       setDeliveryProductsLoading(false)
@@ -345,19 +345,31 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
 
   const productsWithDelivery = useMemo(() => {
     const deliveryProductMap = new Map(deliveryProducts.map((item) => [item.orderProductId, item]))
+    const deliveriesMap = new Map((deliveries || []).map((item) => [item.skuId, item]))
     return (product.products || []).map((item) => {
       const deliveryProduct = deliveryProductMap.get(item.orderProductId)
-      return deliveryProduct
-        ? {
-            ...item,
-            delivered: deliveryProduct.delivered,
-            received: deliveryProduct.received,
-            leftCount: deliveryProduct.leftCount,
-            differCount: deliveryProduct.differCount,
-          }
-        : item
+      if (deliveryProduct) {
+        return {
+          ...item,
+          delivered: deliveryProduct.delivered,
+          received: deliveryProduct.received,
+          leftCount: deliveryProduct.leftCount,
+          differCount: deliveryProduct.differCount,
+        }
+      }
+      const delivery = deliveriesMap.get(item.skuId)
+      if (delivery) {
+        return {
+          ...item,
+          delivered: delivery.delivered,
+          received: delivery.received,
+          leftCount: delivery.leftCount,
+          differCount: delivery.differCount,
+        }
+      }
+      return item
     })
-  }, [deliveryProducts, product.products])
+  }, [deliveryProducts, product.products, deliveries])
 
   const hasDeliverableProducts = productsWithDelivery.some((item) => toNumber(item.leftCount) > 0)
 

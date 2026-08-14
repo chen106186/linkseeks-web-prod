@@ -11,7 +11,8 @@ import {
 import responseCode from '@/constants/responseCode'
 import { IRequestError, IRequestSuccess } from '..'
 import { message } from 'antd'
-import { getAuth, removeAuth, removeRouters } from './auth'
+import { removeAuth, removeRouters } from './auth'
+import useAuth from '@apps/services/auth/useAuth'
 import { isDev } from '@/constants'
 
 export type CtlType = 'none' | 'message'
@@ -87,6 +88,7 @@ const baseRequest = extend({
 baseRequest.interceptors.request.use(
   (url: string, options: RequestOptionsInit): { url: string; options: RequestOptionsInit } => {
     // 判断是否有权限
+    const { getAuth } = useAuth()
     const authInfo = getAuth() || {}
     const { userId, memberId } = authInfo
     const accessToken = authInfo.accessToken || authInfo.token

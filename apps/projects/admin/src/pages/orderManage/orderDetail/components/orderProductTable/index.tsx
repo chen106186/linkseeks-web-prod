@@ -16,6 +16,8 @@ import themeConfig from '@apps/config/lingxi.theme.config'
 import { COLUMNS_ACTION_WIDTH, COLUMNS_LARGE_WIDTH } from '@/constants/const/table'
 import PlatformDeliveryModal from '../platformDeliveryModal'
 import PlatformLogisticsModal from '../platformLogisticsModal'
+import { postOrderPlatformManageDeliveryProducts } from '../../services/platform'
+import type { PlatformDeliveryProductItem } from '../../services/platform'
 
 export interface OrderProductTableProps {}
 
@@ -301,6 +303,8 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
   const isSrmOrder = SRM_ORDER_MODE_LIST.includes(data.orderMode)
   const [checkProduct, setCheckProduct] = useState<any>({})
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([])
+  const [deliveryProducts, setDeliveryProducts] = useState<PlatformDeliveryProductItem[]>([])
+  const [deliveryProductsLoading, setDeliveryProductsLoading] = useState(false)
   const [deliveryVisible, setDeliveryVisible] = useState(false)
   const [logisticsVisible, setLogisticsVisible] = useState(false)
   const [logisticsBatchNo, setLogisticsBatchNo] = useState<number | undefined>(undefined)
@@ -315,6 +319,46 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
       cell: EditableCell,
     },
   }
+
+  const loadDeliveryProducts = useCallback(async () => {
+    if (!orderNo || contractOrder) {
+      return
+    }
+    setDeliveryProductsLoading(true)
+    try {
+      const { code, data: result } = await postOrderPlatformManageDeliveryProducts({ orderNo })
+      if (code === 1000) {
+        setDeliveryProducts(result || [])
+      }
+    } catch (error) {
+      message.error('获取可发货商品失败')
+      setDeliveryProducts([])
+    } finally {
+      setDeliveryProductsLoading(false)
+    }
+  }, [contractOrder, orderNo])
+
+  useEffect(() => {
+    loadDeliveryProducts()
+  }, [loadDeliveryProducts])
+
+  const productsWithDelivery = useMemo(() => {
+    const deliveryProductMap = new Map(deliveryProducts.map((item) => [item.orderProductId, item]))
+    return (product.products || []).map((item) => {
+      const deliveryProduct = deliveryProductMap.get(item.orderProductId)
+      return deliveryProduct
+        ? {
+            ...item,
+            delivered: deliveryProduct.delivered,
+            received: deliveryProduct.received,
+            leftCount: deliveryProduct.leftCount,
+            differCount: deliveryProduct.differCount,
+          }
+        : item
+    })
+  }, [deliveryProducts, product.products])
+
+  const hasDeliverableProducts = productsWithDelivery.some((item) => toNumber(item.leftCount) > 0)
 
   const deliveredBatchMap = useMemo(() => {
     const map = new Map<string, number[]>()
@@ -382,6 +426,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
   const handleDeliverySuccess = () => {
     setDeliveryVisible(false)
     setSelectedRowKeys([])
+    loadDeliveryProducts()
     reloadFormData?.()
   }
 
@@ -624,7 +669,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     <MellowCard
       title={isSrmOrder || contractOrder ? '订单物料' : '订单商品'}
       extra={
-        !contractOrder ? (
+        !contractOrder && hasDeliverableProducts ? (
           <Button type="primary" disabled={!selectedRowKeys.length} onClick={handleOpenDelivery}>
             去发货
           </Button>
@@ -635,11 +680,12 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     >
       <Table
         columns={contractOrder ? materialInfo : columns}
-        dataSource={product.products}
+        dataSource={productsWithDelivery}
         components={productComponents}
+        loading={deliveryProductsLoading}
         rowKey="orderProductId"
         pagination={false}
-        rowSelection={rowSelection}
+        rowSelection={hasDeliverableProducts ? rowSelection : undefined}
         scroll={{ x: 1400 }}
       />
       <MoneyTotalBox

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Button, Drawer, Form, Input, Select, Space, Table, message } from 'antd'
+import { Button, Drawer, Form, Input, InputNumber, Select, Space, Table, message } from 'antd'
 import { formatTimeString } from '@/utils'
 import {
   postOrderPlatformManageDeliveryConfirm,
@@ -216,15 +216,28 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
                     title: '发货数量',
                     key: 'deliveryCount',
                     width: 160,
-                    render: (_, record, index) => (
-                      <Form.Item
-                        style={{ marginBottom: 0 }}
-                        name={['products', index, 'deliveryCount']}
-                        rules={[{ required: true, message: '请输入发货数量' }]}
-                      >
-                        <Input type="number" min={0} max={record.leftCount} />
-                      </Form.Item>
-                    ),
+                    render: (_, record, index) => {
+                      const maxCount = Number(record.leftCount) || 0
+                      return (
+                        <Form.Item
+                          style={{ marginBottom: 0 }}
+                          name={['products', index, 'deliveryCount']}
+                          rules={[
+                            { required: true, message: '请输入发货数量' },
+                            {
+                              validator: (_, value) => {
+                                const num = Number(value)
+                                if (num < 0) return Promise.reject('发货数量不能小于0')
+                                if (num > maxCount) return Promise.reject(`发货数量不能超过未发货数量${maxCount}`)
+                                return Promise.resolve()
+                              },
+                            },
+                          ]}
+                        >
+                          <InputNumber min={0} max={maxCount} precision={0} style={{ width: '100%' }} />
+                        </Form.Item>
+                      )
+                    },
                   },
                 ]}
               />

@@ -33,10 +33,100 @@
   flex: 1;
   min-height: 0;
   overflow: auto;
-  padding: 16px 16px 0;
+  padding: 20px 16px;
+}
+
+.timelineList {
+  min-width: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 112px 52px minmax(0, 1fr);
+  align-items: start;
+  min-height: 96px;
+
+  &:last-child {
+    min-height: 30px;
+  }
+}
+
+.timelineTime {
+  padding-top: 2px;
+  color: #303133;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.timelineMarker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 15px;
+  bottom: -15px;
+  left: 50%;
+  border-left: 1px solid #e5e7eb;
+}
+
+.timelineDot {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #606266;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.timelineEndpoint {
+  position: relative;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  margin-top: 9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+.timelineEndpointStart {
+  color: #a8b0c2;
+  background: #a8b0c2;
+}
+
+.timelineEndpointProcessing {
+  color: #1677ff;
+  background: #1677ff;
+}
+
+.timelineEndpointSuccess {
+  color: #52c41a;
+  background: #52c41a;
+}
+
+.timelineEndpointError {
+  color: #ff4d4f;
+  background: #ff4d4f;
+}
+
+.timelineText {
+  padding-top: 1px;
+  color: #303133;
+  font-size: 14px;
+  line-height: 24px;
+  word-break: break-word;
 }
 
 .timelineTextActive {
   font-weight: 500;
-  color: #1677ff;
 }

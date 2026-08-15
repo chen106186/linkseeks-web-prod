@@ -27,13 +27,12 @@ const CommonOrderDetail: React.FC<CommonOrderDetailProps> = (props) => {
     reloadFormData()
   }, [])
 
-  const reloadFormData = () => {
+  const reloadFormData = async () => {
     if (id) {
-      getOrderPlatformManageDetail({ orderId: id }).then(({ data, code }) => {
-        if (code === 1000) {
-          setFormData(data)
-        }
-      })
+      const { data, code } = await getOrderPlatformManageDetail({ orderId: id })
+      if (code === 1000) {
+        setFormData(data)
+      }
     }
   }
 

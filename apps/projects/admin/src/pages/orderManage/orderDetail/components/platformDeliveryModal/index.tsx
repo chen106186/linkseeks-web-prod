@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Button, Drawer, Form, Input, InputNumber, Select, Space, Table, message } from 'antd'
+import { Button, Drawer, Form, Input, InputNumber, Modal, Select, Space, Table, message } from 'antd'
 import { formatTimeString } from '@/utils'
 import {
   postOrderPlatformManageDeliveryConfirm,
@@ -34,7 +34,7 @@ export interface PlatformDeliveryModalProps {
   }
   selectedOrderProductIds: number[]
   onClose: () => void
-  onSuccess: () => void
+  onSuccess: () => void | Promise<void>
 }
 
 const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
@@ -78,7 +78,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
       form.setFieldsValue({
         products: nextProducts.map((item) => ({
           ...item,
-          deliveryCount: item.leftCount,
+          deliveryCount: Number(item.quantity) || 0,
         })),
       })
     } catch (error) {
@@ -103,27 +103,38 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
         return
       }
 
-      setLoading(true)
-      const { code } = await postOrderPlatformManageDeliveryConfirm({
-        orderNo,
-        addressId: consignee?.consigneeId,
-        address: consignee?.address || '',
-        deliveryTime: formatTimeString(new Date(), 'YYYY-MM-DD HH:mm:ss'),
-        logisticsNo: values.logisticsNo,
-        company: companyItem?.company || '',
-        companyCode: companyItem?.companyCode || '',
-        products: submitProducts,
+      Modal.confirm({
+        title: '确认发货',
+        content: '确认提交当前物流信息并完成发货吗？',
+        okText: '确认发货',
+        cancelText: '取消',
+        onOk: async () => {
+          try {
+            setLoading(true)
+            const { code } = await postOrderPlatformManageDeliveryConfirm({
+              orderNo,
+              addressId: consignee?.consigneeId,
+              address: consignee?.address || '',
+              deliveryTime: formatTimeString(new Date(), 'YYYY-MM-DD HH:mm:ss'),
+              logisticsNo: values.logisticsNo,
+              company: companyItem?.company || '',
+              companyCode: companyItem?.companyCode || '',
+              products: submitProducts,
+            })
+            if (code === 1000) {
+              await onSuccess()
+            }
+          } catch (error) {
+            message.error('发货失败')
+          } finally {
+            setLoading(false)
+          }
+        },
       })
-      if (code === 1000) {
-        onSuccess()
-      }
     } catch (error) {
       if (error?.errorFields) {
         return
       }
-      message.error('发货失败')
-    } finally {
-      setLoading(false)
     }
   }
 
@@ -212,7 +223,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
                       return (
                         <Form.Item
                           style={{ marginBottom: 0 }}
-                          name={['products', index, 'deliveryCount']}
+                          name={[index, 'deliveryCount']}
                           rules={[
                             { required: true, message: '请输入发货数量' },
                             {

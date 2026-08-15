@@ -436,11 +436,14 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     setDeliveryVisible(true)
   }
 
-  const handleDeliverySuccess = () => {
+  const handleDeliverySuccess = async () => {
     setDeliveryVisible(false)
     setSelectedRowKeys([])
-    loadDeliveryProducts()
-    reloadFormData?.()
+    try {
+      await Promise.all([loadDeliveryProducts(), reloadFormData?.()])
+    } catch (error) {
+      message.error('订单商品刷新失败，请手动刷新页面')
+    }
   }
 
   const handleOpenLogistics = (record) => {
@@ -682,10 +685,10 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     <MellowCard
       title={isSrmOrder || contractOrder ? '订单物料' : '订单商品'}
       extra={
-        !contractOrder ? (
+        !contractOrder && hasDeliverableProducts ? (
           <Button
             type="primary"
-            disabled={deliveryProductsLoading || !hasDeliverableProducts || !selectedRowKeys.length}
+            disabled={deliveryProductsLoading || !selectedRowKeys.length}
             onClick={handleOpenDelivery}
           >
             去发货
@@ -702,7 +705,7 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
         loading={deliveryProductsLoading}
         rowKey="orderProductId"
         pagination={false}
-        rowSelection={rowSelection}
+        rowSelection={hasDeliverableProducts ? rowSelection : undefined}
         scroll={{ x: 1400 }}
       />
       <MoneyTotalBox

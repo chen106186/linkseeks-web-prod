@@ -1,19 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Drawer, Empty, Select, Timeline, Typography, message } from 'antd'
+import { Drawer, Empty, Select, Typography, message } from 'antd'
+import { UpOutlined } from '@ant-design/icons'
 import { formatTimeString } from '@/utils'
 import { postOrderPlatformManageLogisticsDetail } from '../../services/platform'
 import style from './index.less'
 
 const { Text } = Typography
-
-const TRACK_STATUS_MAP: Record<string, string> = {
-  '0': '运输中',
-  '1': '已揽收',
-  '2': '疑难件',
-  '3': '已签收',
-  '4': '已退签',
-  '5': '派件中',
-}
 
 export interface PlatformLogisticsModalProps {
   visible: boolean
@@ -69,6 +61,14 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
   }
 
   const events = detail?.trackingDetail?.events || []
+  const subscribeStatus = Number(detail?.trackingDetail?.subscribeStatus)
+  const latestDotClass =
+    subscribeStatus === 2
+      ? style.timelineEndpointSuccess
+      : subscribeStatus === 3
+      ? style.timelineEndpointError
+      : style.timelineEndpointProcessing
+  const latestStatusText = subscribeStatus === 2 ? '已签收' : subscribeStatus === 3 ? '订阅失败' : '运输中'
 
   return (
     <Drawer
@@ -117,25 +117,39 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
               </div>
 
               <div className={style.timelineWrap}>
-                <Timeline>
-                  {events.map((item: any, idx: number) => (
-                    <Timeline.Item key={`${item.acceptTime || ''}-${idx}`} color={idx === 0 ? '#1677ff' : '#d9d9d9'}>
-                      <div>
-                        <div className={idx === 0 ? style.timelineTextActive : undefined}>
-                          {item.acceptStation || item.remark || TRACK_STATUS_MAP[item.opCode || ''] || '-'}
+                <div className={style.timelineList}>
+                  {events.map((item: any, idx: number) => {
+                    const isLatest = idx === 0
+                    const isStart = idx === events.length - 1
+                    return (
+                      <div className={style.timelineItem} key={`${item.acceptTime || ''}-${idx}`}>
+                        <div className={style.timelineTime}>
+                          <div>{item.acceptTime ? formatTimeString(item.acceptTime, 'YYYY-MM-DD') : '-'}</div>
+                          <div>{item.acceptTime ? formatTimeString(item.acceptTime, 'HH:mm:ss') : ''}</div>
                         </div>
-                        <Text type="secondary" style={{ fontSize: 12 }}>
-                          {[
-                            item.acceptTime ? formatTimeString(item.acceptTime) : '',
-                            TRACK_STATUS_MAP[item.opCode || ''],
-                          ]
-                            .filter(Boolean)
-                            .join('  ')}
-                        </Text>
+                        <div className={style.timelineMarker}>
+                          {!isStart ? <span className={style.timelineLine} /> : null}
+                          {isLatest || isStart ? (
+                            <span
+                              aria-label={isLatest ? latestStatusText : '起始节点'}
+                              className={`${style.timelineEndpoint} ${
+                                isLatest ? latestDotClass : style.timelineEndpointStart
+                              }`}
+                              title={isLatest ? latestStatusText : '起始节点'}
+                            />
+                          ) : (
+                            <span className={style.timelineDot}>
+                              <UpOutlined />
+                            </span>
+                          )}
+                        </div>
+                        <div className={`${style.timelineText} ${isLatest ? style.timelineTextActive : ''}`}>
+                          {item.acceptStation || item.remark || '-'}
+                        </div>
                       </div>
-                    </Timeline.Item>
-                  ))}
-                </Timeline>
+                    )
+                  })}
+                </div>
               </div>
             </div>
           ) : (

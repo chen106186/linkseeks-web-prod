@@ -19,6 +19,12 @@ const LOGISTICS_COMPANIES = [
   { company: '极兔速递', companyCode: 'JTSD' },
 ]
 
+export interface PlatformDeliverySubmitProduct {
+  orderProductId: number
+  relationId: number
+  deliveryCount: number
+}
+
 export interface PlatformDeliveryModalProps {
   visible: boolean
   orderNo: string
@@ -34,7 +40,7 @@ export interface PlatformDeliveryModalProps {
   }
   selectedOrderProductIds: number[]
   onClose: () => void
-  onSuccess: () => void | Promise<void>
+  onSuccess: (products: PlatformDeliverySubmitProduct[]) => void | Promise<void>
 }
 
 const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
@@ -122,7 +128,7 @@ const PlatformDeliveryModal: React.FC<PlatformDeliveryModalProps> = ({
               products: submitProducts,
             })
             if (code === 1000) {
-              await onSuccess()
+              await onSuccess(submitProducts)
             }
           } catch (error) {
             message.error('发货失败')

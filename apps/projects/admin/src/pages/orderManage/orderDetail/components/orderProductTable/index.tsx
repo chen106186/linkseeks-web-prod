@@ -15,6 +15,7 @@ import { SRM_ORDER_MODE_LIST } from '@/constants'
 import themeConfig from '@apps/config/lingxi.theme.config'
 import { COLUMNS_ACTION_WIDTH, COLUMNS_LARGE_WIDTH } from '@/constants/const/table'
 import PlatformDeliveryModal from '../platformDeliveryModal'
+import type { PlatformDeliverySubmitProduct } from '../platformDeliveryModal'
 import PlatformLogisticsModal from '../platformLogisticsModal'
 import { postOrderPlatformManageDeliveryProducts } from '../../services/platform'
 import type { PlatformDeliveryProductItem } from '../../services/platform'
@@ -322,22 +323,45 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     },
   }
 
-  const loadDeliveryProducts = useCallback(async () => {
-    if (!orderNo || contractOrder) {
-      return
-    }
-    setDeliveryProductsLoading(true)
-    try {
-      const { code, data: result } = await postOrderPlatformManageDeliveryProducts({ orderNo })
-      if (code === 1000) {
-        setDeliveryProducts(result || [])
+  const loadDeliveryProducts = useCallback(
+    async (expectedLeftCounts?: Map<number, number>) => {
+      if (!orderNo || contractOrder) {
+        return false
       }
-    } catch (error) {
-      setDeliveryProducts([])
-    } finally {
-      setDeliveryProductsLoading(false)
-    }
-  }, [contractOrder, orderNo])
+      setDeliveryProductsLoading(true)
+      try {
+        for (let attempt = 0; attempt < 4; attempt += 1) {
+          const { code, data: result } = await postOrderPlatformManageDeliveryProducts({ orderNo })
+          if (code === 1000) {
+            const nextProducts = result || []
+            const dataUpdated =
+              !expectedLeftCounts ||
+              Array.from(expectedLeftCounts.entries()).every(([orderProductId, expectedLeftCount]) => {
+                const productItem = nextProducts.find((item) => Number(item.orderProductId) === orderProductId)
+                return expectedLeftCount === 0
+                  ? !productItem || toNumber(productItem.leftCount) === 0
+                  : productItem && toNumber(productItem.leftCount) <= expectedLeftCount
+              })
+            if (dataUpdated) {
+              setDeliveryProducts(nextProducts)
+              return true
+            }
+          }
+          if (attempt < 3) {
+            await new Promise((resolve) => window.setTimeout(resolve, 400))
+          }
+        }
+      } catch (error) {
+        if (!expectedLeftCounts) {
+          setDeliveryProducts([])
+        }
+      } finally {
+        setDeliveryProductsLoading(false)
+      }
+      return false
+    },
+    [contractOrder, orderNo],
+  )
 
   useEffect(() => {
     loadDeliveryProducts()
@@ -436,11 +460,30 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
     setDeliveryVisible(true)
   }
 
-  const handleDeliverySuccess = async () => {
+  const handleDeliverySuccess = async (submittedProducts: PlatformDeliverySubmitProduct[]) => {
     setDeliveryVisible(false)
     setSelectedRowKeys([])
+    const deliveryCountMap = new Map(
+      submittedProducts.map((item) => [Number(item.orderProductId), Number(item.deliveryCount)]),
+    )
+    const expectedLeftCounts = new Map<number, number>()
+    const optimisticProducts = productsWithDelivery.map((item) => {
+      const deliveryCount = deliveryCountMap.get(Number(item.orderProductId))
+      if (!deliveryCount) {
+        return item
+      }
+      const leftCount = Math.max(0, toNumber(item.leftCount) - deliveryCount)
+      expectedLeftCounts.set(Number(item.orderProductId), leftCount)
+      return {
+        ...item,
+        delivered: String(toNumber(item.delivered) + deliveryCount),
+        leftCount: String(leftCount),
+      }
+    })
+    setDeliveryProducts(optimisticProducts)
     try {
-      await Promise.all([loadDeliveryProducts(), reloadFormData?.()])
+      await loadDeliveryProducts(expectedLeftCounts)
+      await reloadFormData?.()
     } catch (error) {
       message.error('订单商品刷新失败，请手动刷新页面')
     }
@@ -549,23 +592,27 @@ const OrderProductTable: React.FC<OrderProductTableProps> = () => {
       dataIndex: 'record',
       key: 'record',
       fixed: 'right',
-      width: COLUMNS_ACTION_WIDTH + 60,
+      width: COLUMNS_ACTION_WIDTH + 140,
       render: (_, record) => {
         const delivered = toNumber(record.delivered) > 0
         return (
-          <>
+          <Space size={0} style={{ whiteSpace: 'nowrap' }}>
             {delivered ? (
-              <Button type="link" onClick={() => handleOpenLogistics(record)}>
+              <Button
+                type="link"
+                style={{ padding: '0 4px', color: '#1677ff' }}
+                onClick={() => handleOpenLogistics(record)}
+              >
                 查看物流
               </Button>
             ) : null}
-            <Button type="link" onClick={() => handlePreviewWarehouse(record)}>
+            <Button type="link" style={{ padding: '0 4px' }} onClick={() => handlePreviewWarehouse(record)}>
               查看库存记录
             </Button>
-            <Button type="link" onClick={() => handlePreviewActivity(record)}>
+            <Button type="link" style={{ padding: '0 4px' }} onClick={() => handlePreviewActivity(record)}>
               查看活动记录
             </Button>
-          </>
+          </Space>
         )
       },
     },

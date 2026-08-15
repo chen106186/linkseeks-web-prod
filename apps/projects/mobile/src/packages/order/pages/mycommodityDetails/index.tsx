@@ -620,13 +620,12 @@ const MyCommodityDetails = () => {
   const dqr = dqrTitle && !noBtnClick
   const showLogisticsInfo = dqrTitle && !detailData?.pickupPointName
   const latestLogisticsEvent = logisticsSummary?.events?.[0]
-  const logisticsSummaryText =
-    latestLogisticsEvent?.acceptStation || latestLogisticsEvent?.remark || '暂无物流轨迹'
+  const logisticsSummaryText = latestLogisticsEvent?.acceptStation || latestLogisticsEvent?.remark || '暂无物流轨迹'
   const logisticsSummaryTime = latestLogisticsEvent?.acceptTime || logisticsSummary?.lastEventTime || ''
   const navigateToLogistics = () => {
+    const delivery = detailData?.deliveries?.find((item: any) => !!item?.logisticsOrderId)
     Router.navigateTo('order/logisticsDetail', {
-      orderId: detailData?.orderId || orderId,
-      logisticsOrderId: detailData?.deliveries?.[0]?.logisticsOrderId,
+      logisticsOrderId: delivery?.logisticsOrderId,
     })
   }
   return (
@@ -650,12 +649,7 @@ const MyCommodityDetails = () => {
               flex: 2,
             }}
           >
-            <Icons
-              name="ChevronLeft"
-              size={24}
-              color="#FFF"
-              onClick={() => Router.navigateBack()}
-            />
+            <Icons name="ChevronLeft" size={24} color="#FFF" onClick={() => Router.navigateBack()} />
           </View>
         }
         customStyle="background:#C45124"
@@ -686,7 +680,10 @@ const MyCommodityDetails = () => {
         >
           {dqr && !detailData?.pickupPointName && !!detailData?.address && (
             <View className={styles['detail-address']}>
-              <Image src={getOssUrlPath(`/Images/map.svg`)} style={{ width: pxTransform(15), height: pxTransform(15) }} />
+              <Image
+                src={getOssUrlPath(`/Images/map.svg`)}
+                style={{ width: pxTransform(15), height: pxTransform(15) }}
+              />
               <View className={styles['address-flex']}>
                 <Text className={styles['address-name']}>
                   {detailData.consignee} {detailData.phone}

@@ -721,7 +721,10 @@ const MyCommodityList: React.FC = () => {
                   style={{ ...marginLeftStyle }}
                   onClick={(event) => {
                     event.stopPropagation()
-                    Router.navigateTo('order/logisticsDetail', { orderId })
+                    Router.navigateTo('order/logisticsDetail', {
+                      logisticsOrderId: data.logisticsList?.find((item: any) => !!item?.logisticsOrderId)
+                        ?.logisticsOrderId,
+                    })
                   }}
                 >
                   {intl.formatMessage({ id: 'order.zhakanwuliu', defaultMessage: '查看物流' })}
@@ -1016,13 +1019,7 @@ const MyCommodityList: React.FC = () => {
         />
         <Image src={choice} onClick={() => setVisible(true)} />
       </View>
-      <Tabs
-        current={activeKey}
-        tabList={_renderTabItems}
-        onClick={handleTabClick}
-        hideUnderLine
-        scroll
-      />
+      <Tabs current={activeKey} tabList={_renderTabItems} onClick={handleTabClick} hideUnderLine scroll />
       <View className={styles['scrollView']}>
         <ScrollView
           data={list}

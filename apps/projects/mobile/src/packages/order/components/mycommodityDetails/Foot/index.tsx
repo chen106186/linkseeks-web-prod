@@ -68,9 +68,9 @@ const Foot = (props: Iprops) => {
   }
   const seeLogistics = () => {
     setAsyncStorage(DELIVERIES_DATA, dataSource?.deliveries)
+    const delivery = dataSource?.deliveries?.find((item: any) => !!item?.logisticsOrderId)
     goJump('order/logisticsDetail', {
-      orderId: dataSource?.orderId,
-      logisticsOrderId: dataSource?.deliveries?.[0]?.logisticsOrderId,
+      logisticsOrderId: delivery?.logisticsOrderId,
     })
   }
   const toSubmit = () => {

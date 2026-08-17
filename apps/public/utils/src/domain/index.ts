@@ -37,19 +37,19 @@ export const getCookieDomain = () => {
   if (import.meta.env.SSR) {
     return ''
   }
-  // 获取当前页面的主机名，包括可能的端口号
   const hostname = window.location.hostname
 
-  // 如果主机名是 localhost，则返回 localhost
   if (hostname === 'localhost' || /^127(?:\.[0-9]+){0,2}\.[0-9]+$/.test(hostname)) {
     return 'localhost'
   }
 
-  // 分割主机名为子域和顶级域名
+  // IP 地址直接返回，不做子域名截取
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(hostname)) {
+    return hostname
+  }
+
   const parts = hostname.split('.')
-
   parts.shift()
-
   return parts.join('.')
 }
 

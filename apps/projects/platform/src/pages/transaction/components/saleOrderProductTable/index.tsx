@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import React, { useContext, useState, useRef, useEffect, useCallback, Fragment } from 'react'
-import { Table, Form, Input, Row, Col, Button, Tooltip, Space } from 'antd'
+import React, { useContext, useState, useRef, useEffect, useCallback, Fragment, useMemo } from 'react'
+import { Table, Form, Input, Row, Col, Button, Tooltip, Space, message } from 'antd'
 import { OrderDetailContext } from '../../_public/order/context'
 import { EditOutlined, SettingOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
@@ -14,8 +14,10 @@ import { AddressPop } from '../../../orderAbility/components/addressPop'
 import {
   getOrderVendorDetailCouponPage,
   getOrderVendorDetailPromotion,
+  getOrderVendorValidateDeliveryProduct,
   postOrderVendorValidateSubmitFreightUpdate,
 } from '@apps/apis'
+import type { GetOrderVendorValidateDeliveryProductResponse } from '@apps/apis'
 import { postLogisticsFreightTemplateCalFreightPrice } from '@apps/apis'
 import { getProductPositionDeductionRecordList } from '@apps/apis'
 import { usePageStatus } from '@/hooks/usePageStatus'
@@ -27,6 +29,9 @@ import RadioChangeButtonCard from '../radioChangeButton'
 import { formatContext } from '../../../orderAbility/components/purchaseOrderPreview'
 import { ALTERATION } from '../orderDetailSection'
 import { PromiseTime } from '../../../orderAbility/purchaseOrder/componentSchema'
+import PlatformDeliveryModal from './components/platformDeliveryModal'
+import type { PlatformDeliverySubmitProduct } from './components/platformDeliveryModal'
+import PlatformLogisticsModal from './components/platformLogisticsModal'
 
 const intl = getIntl()
 export interface OrderProductTableProps {}
@@ -51,6 +56,8 @@ const RowStyle = styled((props) => (
     {props.children}
   </Row>
 ))`
+  margin-top: 12px;
+
   .ant-col div:nth-child(1) {
     color: #91959b;
   }
@@ -582,7 +589,20 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
     formContext: { data, reloadFormData },
     versionContext,
   } = useContext(OrderDetailContext)
-  const { product, orderMode, orderKind, orderId, innerStatus } = data || {}
+  const {
+    product,
+    orderMode,
+    orderKind,
+    orderId,
+    innerStatus,
+    orderNo,
+    digest,
+    buyerMemberName,
+    createTime,
+    consignee,
+    deliveries,
+    deliveryDetails,
+  } = data || {}
   const creditsCommodity = orderMode === 10 || orderMode === 25 // @todo 积分或渠道积分下单模式
   // 合同下单模式
   const contractOrder = orderKind === OrderKindType.SRM_ORDER || orderKind === OrderKindType.REQUISITION_ORDER
@@ -590,12 +610,122 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
   const [activityVisible, setActivityVisible] = useState(false)
   const [couponVisible, setCouponVisible] = useState(false)
   const [checkProduct, setCheckProduct] = useState<any>({}) // 选中的商品id
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([])
+  const [deliveryProducts, setDeliveryProducts] = useState<GetOrderVendorValidateDeliveryProductResponse>([])
+  const [deliveryProductsLoading, setDeliveryProductsLoading] = useState(false)
+  const [deliveryVisible, setDeliveryVisible] = useState(false)
+  const [logisticsVisible, setLogisticsVisible] = useState(false)
+  const [logisticsBatchNo, setLogisticsBatchNo] = useState<number | undefined>(undefined)
   const warehouseRef = useRef<any>({})
   const activityRef = useRef<any>({})
   const couponRef = useRef<any>({})
   const { modifyPrice = false, lastTypeParams } = usePageStatus()
   const modifyPriceRef = useRef<any>({})
   const { run: runPrice, loading } = useHttpRequest(postOrderVendorValidateSubmitFreightUpdate)
+
+  const toNumber = (value) => Number(value || 0)
+
+  const loadDeliveryProducts = useCallback(
+    async (expectedLeftCounts?: Map<number, number>) => {
+      if (!orderId || contractOrder) {
+        return false
+      }
+      setDeliveryProductsLoading(true)
+      try {
+        for (let attempt = 0; attempt < 4; attempt += 1) {
+          const { code, data: result } = await getOrderVendorValidateDeliveryProduct({
+            orderId: String(orderId),
+          })
+          if (code === 1000) {
+            const nextProducts = result || []
+            const dataUpdated =
+              !expectedLeftCounts ||
+              Array.from(expectedLeftCounts.entries()).every(([orderProductId, expectedLeftCount]) => {
+                const productItem = nextProducts.find((item) => Number(item.orderProductId) === orderProductId)
+                return expectedLeftCount === 0
+                  ? !productItem || toNumber(productItem.leftCount) === 0
+                  : productItem && toNumber(productItem.leftCount) <= expectedLeftCount
+              })
+            if (dataUpdated) {
+              setDeliveryProducts(nextProducts)
+              return true
+            }
+          }
+          if (attempt < 3) {
+            await new Promise((resolve) => window.setTimeout(resolve, 400))
+          }
+        }
+      } catch (error) {
+        if (!expectedLeftCounts) {
+          setDeliveryProducts([])
+        }
+      } finally {
+        setDeliveryProductsLoading(false)
+      }
+      return false
+    },
+    [contractOrder, orderId],
+  )
+
+  useEffect(() => {
+    loadDeliveryProducts()
+  }, [loadDeliveryProducts])
+
+  const productsWithDelivery = useMemo(() => {
+    const deliveryProductMap = new Map(deliveryProducts.map((item) => [Number(item.orderProductId), item]))
+    const deliveriesMap = new Map((deliveries || []).map((item) => [Number(item.skuId), item]))
+    return (product.products || []).map((item) => {
+      const deliveryProduct = deliveryProductMap.get(Number(item.orderProductId))
+      if (deliveryProduct) {
+        return {
+          ...item,
+          ...deliveryProduct,
+        }
+      }
+      const delivery = deliveriesMap.get(Number(item.skuId))
+      if (delivery) {
+        return {
+          ...item,
+          delivered: delivery.delivered,
+          received: delivery.received,
+          leftCount: delivery.leftCount,
+          differCount: delivery.differCount,
+        }
+      }
+      return item
+    })
+  }, [deliveryProducts, product.products, deliveries])
+
+  const hasDeliverableProducts = productsWithDelivery.some((item) => toNumber(item.leftCount) > 0)
+
+  const deliveredBatchMap = useMemo(() => {
+    const map = new Map<string, number[]>()
+    ;(deliveryDetails || []).forEach((detail) => {
+      ;(detail.products || []).forEach((item) => {
+        const keys = [
+          item.orderProductId ? `op:${item.orderProductId}` : '',
+          item.skuId ? `sku:${item.skuId}` : '',
+        ].filter(Boolean)
+        if (!keys.length) {
+          return
+        }
+        keys.forEach((key) => {
+          const next = map.get(key) || []
+          if (detail.batchNo && !next.includes(detail.batchNo)) {
+            next.push(detail.batchNo)
+          }
+          map.set(key, next)
+        })
+      })
+    })
+    return map
+  }, [deliveryDetails])
+
+  const batchOptions = useMemo(
+    () =>
+      Array.from(new Set((deliveryDetails || []).map((item) => item.batchNo).filter(Boolean))).sort((a, b) => b - a),
+    [deliveryDetails],
+  )
 
   // 判断是否可操作当前表格
   const isEditData = data.innerStatusName === intl.formatMessage({ id: 'transaction_components.daitijiaoshenhe' })
@@ -638,6 +768,50 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
   const handlePreviewActivity = (record) => {
     setCheckProduct(record)
     setActivityVisible(true)
+  }
+
+  const handleOpenDelivery = () => {
+    if (!selectedRowKeys.length) {
+      message.warning('请先选择未发货商品')
+      return
+    }
+    setDeliveryVisible(true)
+  }
+
+  const handleDeliverySuccess = async (submittedProducts: PlatformDeliverySubmitProduct[]) => {
+    setDeliveryVisible(false)
+    setSelectedRowKeys([])
+    const deliveryCountMap = new Map(
+      submittedProducts.map((item) => [Number(item.orderProductId), Number(item.deliveryCount)]),
+    )
+    const expectedLeftCounts = new Map<number, number>()
+    const optimisticProducts = productsWithDelivery.map((item) => {
+      const deliveryCount = deliveryCountMap.get(Number(item.orderProductId))
+      if (!deliveryCount) {
+        return item
+      }
+      const leftCount = Math.max(0, toNumber(item.leftCount) - deliveryCount)
+      expectedLeftCounts.set(Number(item.orderProductId), leftCount)
+      return {
+        ...item,
+        delivered: String(toNumber(item.delivered) + deliveryCount),
+        leftCount: String(leftCount),
+      }
+    })
+    setDeliveryProducts(optimisticProducts)
+    try {
+      await loadDeliveryProducts(expectedLeftCounts)
+      await reloadFormData?.()
+    } catch (error) {
+      message.error('订单商品刷新失败，请手动刷新页面')
+    }
+  }
+
+  const handleOpenLogistics = (record) => {
+    const batches =
+      deliveredBatchMap.get(`op:${record.orderProductId}`) || deliveredBatchMap.get(`sku:${record.skuId}`) || []
+    setLogisticsBatchNo(batches[0])
+    setLogisticsVisible(true)
   }
 
   const handleModifyPrice = (record) => {
@@ -780,12 +954,29 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
       width: 96,
     },
     {
+      title: '已发货',
+      dataIndex: 'delivered',
+      key: 'delivered',
+      width: 96,
+    },
+    {
+      title: '未发货',
+      dataIndex: 'leftCount',
+      key: 'leftCount',
+      width: 96,
+    },
+    {
       title: intl.formatMessage({ id: 'transaction_components.caozuo' }),
       dataIndex: 'opeartion',
       align: 'center',
       key: 'opeartion',
       render: (_, record) => (
         <>
+          {toNumber(record.delivered) > 0 ? (
+            <Button type="link" onClick={() => handleOpenLogistics(record)}>
+              查看物流
+            </Button>
+          ) : null}
           {(modifyPrice || isEditData) && (
             <Button type="link" onClick={() => handleModifyPrice(record)}>
               {intl.formatMessage({ id: 'transaction_components.xiugaidanjia' })}
@@ -800,7 +991,7 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
         </>
       ),
       fixed: 'right',
-      width: COLUMNS_ACTION_WIDTH,
+      width: COLUMNS_ACTION_WIDTH + 100,
     },
   ]
 
@@ -996,6 +1187,21 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
     }
   })
 
+  const rowSelection = contractOrder
+    ? undefined
+    : {
+        selectedRowKeys,
+        onChange: (keys) => setSelectedRowKeys(keys),
+        getCheckboxProps: (record) => ({
+          disabled: toNumber(record.leftCount) <= 0,
+        }),
+      }
+
+  const selectedDeliveryProducts = useMemo(() => {
+    const selectedKeySet = new Set(selectedRowKeys.map((item) => Number(item)))
+    return productsWithDelivery.filter((item) => selectedKeySet.has(Number(item.orderProductId)))
+  }, [productsWithDelivery, selectedRowKeys])
+
   const [dataBo, setDataBo] = useState<any>({})
 
   const handRenderValue = (value) => {
@@ -1038,14 +1244,16 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
         id="orderMaterials"
         extra={
           <Space>
-            <MoneyTotalBox
-              dataSource={data}
-              isEditData={isEditData}
-              versionContext={versionContext}
-              dataBo={dataBo}
-              setCouponModalVisible={setCouponVisible}
-            />
             {versionContext && <RadioChangeButtonCard handleVersions={handleVersions} />}
+            {!contractOrder && hasDeliverableProducts && !versionContext ? (
+              <Button
+                type="primary"
+                disabled={deliveryProductsLoading || !selectedRowKeys.length}
+                onClick={handleOpenDelivery}
+              >
+                去发货
+              </Button>
+            ) : null}
           </Space>
         }
         bodyStyle={{
@@ -1054,11 +1262,46 @@ const SaleOrderProductTable: React.FC<OrderProductTableProps> = () => {
       >
         <Table
           columns={contractOrder ? materialInfo : columns}
-          dataSource={versionContext ? dataBo?.product : product.products}
+          dataSource={versionContext ? dataBo?.product : productsWithDelivery}
           components={productComponents}
+          loading={deliveryProductsLoading}
           rowKey="orderProductId"
           pagination={false}
-          scroll={{ x: 1200 }}
+          rowSelection={!versionContext && hasDeliverableProducts ? rowSelection : undefined}
+          scroll={{ x: 1400 }}
+        />
+
+        <MoneyTotalBox
+          dataSource={data}
+          isEditData={isEditData}
+          versionContext={versionContext}
+          dataBo={dataBo}
+          setCouponModalVisible={setCouponVisible}
+        />
+
+        <PlatformDeliveryModal
+          visible={deliveryVisible}
+          orderId={orderId}
+          orderNo={orderNo}
+          orderDigest={digest}
+          buyerMemberName={buyerMemberName}
+          createTime={createTime}
+          selectedAmount={
+            selectedDeliveryProducts.reduce((sum, item) => sum + Number(item.amount || item.price || 0), 0) || 0
+          }
+          consignee={consignee}
+          selectedOrderProductIds={selectedRowKeys.map((item) => Number(item))}
+          selectedProducts={selectedDeliveryProducts}
+          onClose={() => setDeliveryVisible(false)}
+          onSuccess={handleDeliverySuccess}
+        />
+
+        <PlatformLogisticsModal
+          visible={logisticsVisible}
+          orderNo={orderNo}
+          batchNo={logisticsBatchNo}
+          batchOptions={batchOptions}
+          onClose={() => setLogisticsVisible(false)}
         />
 
         <ModalTable

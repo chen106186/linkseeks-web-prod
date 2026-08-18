@@ -152,15 +152,15 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
             hoverClass="nav-bar-left-arrow__hover"
             onClick={() => Router.navigateBack()}
           >
-            <Icons name="ChevronLeft" size={24} color="#252D37" />
+            <Icons name="ChevronLeft" size={24} color="#5A2A12" />
           </View>
           <View className={styles['search-box']}>
-            <Icons name="Search" size={22.6} color="#999" />
+            <Icons name="Search" size={22.6} color="#8F7564" />
             <Input
               className={styles['input']}
               value={searchWord}
               placeholder={intl.formatMessage({ id: 'communityGroupBuy.list.shuiguo', defaultMessage: '水果' })}
-              placeholderStyle="color: #C8CACD;"
+              placeholderStyle="color: #BFAFA3;"
               onChange={handleSearchWordChange}
               onConfirm={() => {
                 updateSearchForm('productName', searchWord)
@@ -182,7 +182,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
             className={styles['address-left']}
             onClick={() => Router.navigateTo('communityGroupBuy/changeSelfPickupAddress')}
           >
-            <Icons name="Address" size={16} color="#252D37" />
+            <Icons name="Address" size={16} color="#7A5743" />
             <View className={styles['address-name']}>{pickupPointInfo?.pickupPointName || '请选择自提点'}</View>
           </View>
           <View
@@ -190,7 +190,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
             onClick={() => Router.navigateTo('communityGroupBuy/changeSelfPickupAddress')}
           >
             <Text className={styles['switch-text']}>自提点切换</Text>
-            <Icons name="ChevronDown" size={12} color="#00a98f" />
+            <Icons name="ChevronDown" size={12} color="#C45124" />
           </View>
         </View>
         <View className={styles['status-tabs']}>
@@ -236,7 +236,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
           <Icons
             name="Specific"
             size={24}
-            color="#91959B"
+            color="#8F7564"
             onClick={() => {
               setVisibleFilterPopup(true)
             }}
@@ -271,7 +271,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
             />
           ))
         ) : (
-          <View style="background-color: #fff;">
+          <View className={styles['empty']}>
             <EmptyLayout />
           </View>
         )}

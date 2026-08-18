@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 .popularExchange {
   position: relative;
   margin-bottom: 8px;
@@ -10,13 +12,16 @@
     font-weight: 500;
     margin-left: 8px;
     font-size: 16px;
+    color: $color-text-base;
   }
   &-exchange_icon {
     width: 24px;
     height: 24px;
   }
   &-scrollItem {
-    background-color: #FFFFFF;
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -29,7 +34,7 @@
     padding: 0px;
   }
   &-integralPrice {
-    color: #D6985d;
+    color: $color-brand-light;
   }
   &-column {
     display: flex;
@@ -45,13 +50,13 @@
   }
   &-name {
     font-size: 14px;
-    color: #303133;
+    color: $color-text-base;
     font-weight: bold;
     margin-bottom: 8px;
   }
   &-integralName {
     font-size: 14px;
-    color: #303133;
+    color: $color-text-base;
     margin-top: 8px;
   }
   &-commodityPriceWrap {
@@ -59,12 +64,12 @@
     align-items: center;
   }
   &-commodityPrice {
-    color: #FA8C16;
+    color: $color-brand;
     font-size: 14px;
     font-weight: 500;
   }
   &-saleCount {
-    color: #909399;
+    color: $color-text-placeholder;
     font-size: 12px;
   }
   &-saleCountWrap {
@@ -85,7 +90,7 @@
     position: relative;
     height: 4px;
     width: 100%;
-    background-color: #F4F5F7;
+    background-color: $color-card-border;
     border-radius: 2px;
   }
   &-soldRate {
@@ -93,19 +98,19 @@
     left: 0;
     top: 0;
     height: 4px;
-    background-color: #FA8C16;
-    border-radius: 2PX;
+    background-color: $color-brand;
+    border-radius: 2px;
   }
   &-soldCountBox {
     margin-top: 4px;
     display: flex;
   }
   &-soldCount {
-    color: #909399;
+    color: $color-text-placeholder;
     font-size: 12px;
   }
   &-exchangeBtn {
-    background-color: #FF991F;
+    background-color: $color-brand;
     height: 24px;
     display: flex;
     align-items: center;
@@ -113,7 +118,7 @@
     border-radius: 34px;
   }
   &-exchangeBtnText {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 12px;
   }
   &-indicatorContainer {
@@ -127,7 +132,7 @@
   }
   &-indicatorText {
     font-size: 12px;
-    color: #909399;
+    color: $color-text-placeholder;
     display: flex;
     align-items: center;
   }
@@ -143,15 +148,15 @@
     position: absolute;
     height: 2px;
     width: 24px;
-    background-color: #FA8C16;
+    background-color: $color-brand;
     bottom: 0;
   }
   &-tabsItemText {
     font-size: 14px;
-    color: #606266;
+    color: $color-text-secondary;
   }
   &-tabsItemTextActive {
-    color: #303133;
+    color: $color-text-base;
     font-weight: bold;
   }
   &-scrollLable {
@@ -160,20 +165,20 @@
     flex: 1;
   }
   &-scrollLableTitle {
-    color: #303133;
+    color: $color-text-base;
     font-size: 14px;
   }
   &-scrollLableDate {
     font-size: 12px;
-    color: #909399;
+    color: $color-text-placeholder;
     margin-top: 8px;
   }
   &-countText {
-    color: #FA8C16;
+    color: $color-brand;
     font-size: 14px;
     font-weight: 500;
   }
   &-reduceText {
-    color: #303133;
+    color: $color-text-base;
   }
 }

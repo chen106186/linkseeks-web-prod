@@ -6,7 +6,7 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: $color-bg-base;
   .integral-mall {
     flex: 1;
     display: flex;
@@ -14,12 +14,13 @@
     flex-direction: column;
 
     &-navbar {
-      background-color: #FAFBFC;
+      background-color: $color-bg-base;
+      border-bottom: 1px solid $color-card-border;
     }
 
     &-scroll {
       height: 100%;
-      background-color: #FAFBFC;
+      background-color: $color-bg-base;
     }
     &-header {
       display: flex;
@@ -42,13 +43,12 @@
       padding-left: 8px;
       font-size: 14px;
       font-weight: bold;
-      color: #303133;
+      color: $color-text-base;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
-
     }
     &-bannerWrap {
       display: flex;
@@ -57,7 +57,7 @@
     }
     &-body {
       flex: 1;
-      background-color: #FAF8FC;
+      background-color: $color-bg-base;
     }
     &-detailLink {
       display: flex;
@@ -71,7 +71,7 @@
     }
     &-detailLinkText {
       font-size: 12px;
-      color: #303133;
+      color: $color-text-secondary;
     }
     &-detailLinkIcon {
       width: 12px;
@@ -89,9 +89,8 @@
     }
     &-indicatorText {
       font-size: 12px;
-      color: #303133;
+      color: $color-text-secondary;
       text-align: center;
     }
   }
 }
-

@@ -104,7 +104,7 @@ const AreaPopup: React.FC<IProps> = (props: IProps) => {
       }}
       zIndex={101}
       customTitleStyle={{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FDF9F5',
         borderBottom: 'none',
       }}
       onAfterClose={handlePopupAfterClose}

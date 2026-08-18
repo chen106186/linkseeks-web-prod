@@ -42,12 +42,12 @@ const FilterPopup: React.FC<Iprops> = (props: Iprops) => {
         >
           <Icons className={styles['back']} name="ChevronLeft" size={24} onClick={onClose} />
           <View className={styles['search-box']}>
-            <Icons name="Search" size={24} color="#C8CACD" />
+            <Icons name="Search" size={24} color="#8F7564" />
             <Input
               className={styles['input']}
               value={keyword}
               placeholder={intl.formatMessage({ id: 'communityGroupBuy.list.shucai', defaultMessage: '蔬菜' })}
-              placeholderStyle="color: #C8CACD;"
+              placeholderStyle="color: #BFAFA3;"
               onChange={(value) => {
                 setKeyword(String(value))
               }}

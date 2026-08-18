@@ -1,5 +1,5 @@
 export default {
   navigationBarTitleText: '切换自提点',
-  navigationBarBackgroundColor: '#ffffff',
+  navigationBarBackgroundColor: '#FCF7F1',
   navigationBarTextStyle: 'black',
 }

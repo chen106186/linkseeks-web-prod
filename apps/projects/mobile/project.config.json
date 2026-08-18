@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/weapp/",
   "projectname": "%E7%93%B4%E7%8A%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%26amp%3Bh5",
   "description": "小程序和h5",
-  "appid": "wxe463a95c099dd377",
+  "appid": "wx1796a3211128dde2",
   "setting": {
     "urlCheck": false,
     "es6": true,
@@ -51,9 +51,7 @@
   "libVersion": "3.8.10",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "navigateToMiniProgramAppIdList": [
-    "wx6885acbedba59c14"
-  ],
+  "navigateToMiniProgramAppIdList": ["wx6885acbedba59c14"],
   "condition": {
     "miniprogram": {
       "list": [

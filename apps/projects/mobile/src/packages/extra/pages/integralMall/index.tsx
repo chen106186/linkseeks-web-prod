@@ -216,6 +216,9 @@ const PointMall: React.FC<{}> = () => {
           })}
           showBack={hasTab === 'true' ? false : (true as boolean)}
           showExtra={hasTab === 'true' ? false : (true as boolean)}
+          customClassName={styles['integral-mall-navbar']}
+          titleColor="#5A2A12"
+          backIconColor="#5A2A12"
         />
         <View className={styles['integral-mall']}>
           <ScrollView

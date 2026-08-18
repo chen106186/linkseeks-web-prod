@@ -203,6 +203,8 @@ const IngralCommodityList = observer(() => {
         <GlobalHeader
           title={<Text>{decodeURIComponent(categoryName as string)}</Text>}
           customClassName={styles['header']}
+          titleColor="#5A2A12"
+          backIconColor="#5A2A12"
         />
         <View className={styles['filter-box']}>
           <View className={styles['filter-actions']}>
@@ -224,8 +226,8 @@ const IngralCommodityList = observer(() => {
                 })}
               </Text>
               <View className={styles['filter-arrow-box']}>
-                <Icons name="ArrowUpFill" size={10} color={orderType === 4 ? '#00A98F' : '#909399'} />
-                <Icons name="ArrowDownFill" size={10} color={orderType === 3 ? '#00A98F' : '#909399'} />
+                <Icons name="ArrowUpFill" size={10} color={orderType === 4 ? '#C45124' : '#8F7564'} />
+                <Icons name="ArrowDownFill" size={10} color={orderType === 3 ? '#C45124' : '#8F7564'} />
               </View>
             </View>
           </View>
@@ -234,7 +236,7 @@ const IngralCommodityList = observer(() => {
       <ScrollView
         style={{
           flex: 1,
-          backgroundColor: '#F4F5F7',
+          backgroundColor: '#FCF7F1',
           height: 0,
         }}
         contentContainerStyle={{

@@ -2,7 +2,9 @@
 
 .banner-category-container {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   margin: 0px 8px 8px;
   border-radius: 8px;
   padding-top: 8px;
@@ -26,7 +28,7 @@
   }
 
   &-navIcon {
-    background-color: white;
+    background-color: $color-card-bg;
     border-radius: 12px;
     margin-bottom: 4px;
   }
@@ -36,7 +38,7 @@
     font-size: 12px;
     line-height: 14px;
     text-align: center;
-    color: #606266;
+    color: $color-text-secondary;
     margin-top: 4px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,12 +67,12 @@
   &-paginationItem {
     width: 24px;
     height: 3px;
-    background-color: #EEF0F3;
+    background-color: $color-card-border;
     border-radius: 3px;
   }
 
   &-paginationTextActive {
     transition: all 1s;
-    background-color: $theme-color;
+    background-color: $color-brand;
   }
 }

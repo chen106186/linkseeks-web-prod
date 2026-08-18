@@ -94,7 +94,7 @@ const PopularExchange = (props: PopularExchangePropsType) => {
                 height={104}
                 width={104}
                 source={item.mainPic}
-                style={{ border: `${pxTransform(1)} solid #F4F5F7`, borderRadius: pxTransform(4) }}
+                style={{ border: `${pxTransform(1)} solid #EAD9CD`, borderRadius: pxTransform(4) }}
               />
               <View className={styles['popularExchange-commodityInfo']}>
                 <Text className={styles['popularExchange-name']}>{item.name}</Text>
@@ -144,7 +144,11 @@ const PopularExchange = (props: PopularExchangePropsType) => {
       </View>
       <Skeleton.Vertical style={{ padding: `0 ${pxTransform(8)}` }}>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{
+            backgroundColor: '#FDF9F5',
+            height: pxTransform(128),
+            padding: `${pxTransform(12)} ${pxTransform(0)}`,
+          }}
         >
           <Skeleton.Avatar width="{104}" height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>
@@ -154,7 +158,11 @@ const PopularExchange = (props: PopularExchangePropsType) => {
           </Skeleton.Vertical>
         </Skeleton>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{
+            backgroundColor: '#FDF9F5',
+            height: pxTransform(128),
+            padding: `${pxTransform(12)} ${pxTransform(0)}`,
+          }}
         >
           <Skeleton.Avatar width={104} height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>
@@ -164,7 +172,11 @@ const PopularExchange = (props: PopularExchangePropsType) => {
           </Skeleton.Vertical>
         </Skeleton>
         <Skeleton
-          style={{ backgroundColor: '#FFF', height: pxTransform(128), padding: `${pxTransform(12)} ${pxTransform(0)}` }}
+          style={{
+            backgroundColor: '#FDF9F5',
+            height: pxTransform(128),
+            padding: `${pxTransform(12)} ${pxTransform(0)}`,
+          }}
         >
           <Skeleton.Avatar width={104} height={104} style={{ margin: `${pxTransform(0)} ${pxTransform(12)}` }} />
           <Skeleton.Vertical style={{ flex: 1, paddingRight: pxTransform(12) }}>

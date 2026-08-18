@@ -114,17 +114,17 @@ const CommunityGroupBuyChangeSelfPickupAddress: React.FC<{}> = () => {
       <View className={styles['top']}>
         <View className={styles['city']} onClick={() => setVisibleAreaPopup(true)}>
           <View className={styles['city-view']}>
-            <Icons name="Address" size={16} color="#252D37" />
+            <Icons name="Address" size={16} color="#7A5743" />
             <Text className={styles['city-text']}>
               {area?.provinceName}
               {area?.cityName}
               {area?.districtName}
             </Text>
-            <Icons name="ChevronDown" size={12} color="#91959B" />
+            <Icons name="ChevronDown" size={12} color="#8F7564" />
           </View>
         </View>
         <View className={styles['search-box']}>
-          <Icons name="Search" size={20} color="#C8CACD" />
+          <Icons name="Search" size={20} color="#8F7564" />
           <Input
             className={styles['search-box-input']}
             value={searchWord}
@@ -132,7 +132,7 @@ const CommunityGroupBuyChangeSelfPickupAddress: React.FC<{}> = () => {
               id: 'communityGroupBuy.changeSelfPickupAddress.qingshuruzitidianmingcheng',
               defaultMessage: '请输入自提店名称',
             })}
-            placeholderStyle="color: #91959B;"
+            placeholderStyle="color: #BFAFA3;"
             onChange={handleSearchWordChange}
           />
         </View>
@@ -200,7 +200,7 @@ const CommunityGroupBuyChangeSelfPickupAddress: React.FC<{}> = () => {
             </View>
           ))
         ) : (
-          <View style="background-color: #fff;">
+          <View className={styles['empty']}>
             <EmptyLayout />
           </View>
         )}

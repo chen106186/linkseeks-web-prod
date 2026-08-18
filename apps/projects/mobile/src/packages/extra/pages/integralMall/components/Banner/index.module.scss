@@ -1,14 +1,16 @@
+@import '@/styles/variables.scss';
+
 .banner-wrapper {
   height: 120px;
   display: flex;
   &-container {
     border-radius: 8px;
     overflow: hidden;
-    background-color: #F2F2F2;
+    background-color: $color-bg-light;
     flex: 1;
   }
   &-slideItem {
-    background-color: #F2F2F2;
+    background-color: $color-bg-light;
     flex: 1;
   }
   &-image {
@@ -18,7 +20,7 @@
   &-paginationStyle {
     width: 40px;
     height: 16px;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     position: absolute;
     bottom: 12px;
@@ -35,6 +37,6 @@
     margin: 0px 3px;
   }
   &-paginationTextActive {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }

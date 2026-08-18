@@ -1,4 +1,4 @@
-@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 
 .container {
   display: flex;
@@ -7,11 +7,13 @@
   height: 100vh;
   color: $color-text-base;
   font-size: $font-size-base;
-  background-color: #f5f6f7;
+  background-color: $color-bg-base;
 }
 
 .top {
-  background-color: #fff;
+  background-color: $color-card-bg;
+  border-bottom: 1px solid $color-card-border;
+  box-shadow: 0 2px 8px $color-card-shadow;
 }
 
 .nav {
@@ -30,7 +32,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20rpx $spacing-h-md;
-  color: #00a98f;
+  color: $color-brand;
   // background-color: #d3fcf6;
 
   &-left {
@@ -47,7 +49,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #252d37;
+    color: $color-text-base;
     font-size: $font-size-base;
   }
 
@@ -58,12 +60,12 @@
     flex-shrink: 0;
     margin-left: $spacing-h-md;
     cursor: pointer;
-    border: 1px solid #00a98f;
+    border: 1px solid $color-brand-light;
     border-radius: 10px;
     padding: 4px 8px;
 
     .switch-text {
-      color: #00a98f;
+      color: $color-brand;
       font-size: $font-size-base;
       margin-right: 4px;
     }
@@ -88,7 +90,7 @@
     transition: all 0.3s ease;
 
     &.selected {
-      background-color: #00a98f;
+      background-color: $color-brand;
       color: #fff;
     }
   }
@@ -103,7 +105,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: $color-bg-light;
+  border: 1px solid $color-card-border;
   box-sizing: border-box;
   border-radius: 18px;
 
@@ -114,7 +117,7 @@
     line-height: 20px;
     min-height: 20px;
     font-size: 14px;
-    color: #606266;
+    color: $color-text-secondary;
     background-color: transparent;
     border: none !important;
     border-bottom: none !important;
@@ -128,7 +131,7 @@
     padding: 4px 18px;
     line-height: 20px;
     border-radius: 14px;
-    background: #00a98f;
+    background: $color-brand;
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -153,12 +156,12 @@
 
       .item {
         display: inline-block;
-        color: #606266;
+        color: $color-text-secondary;
         margin-right: 24px;
         line-height: 30px;
 
         &.selected {
-          color: #00a98f;
+          color: $color-brand;
         }
       }
     }
@@ -174,4 +177,9 @@
   flex: 1;
   overflow: hidden;
   padding-bottom: 34px;
+  background-color: $color-bg-base;
+}
+
+.empty {
+  background-color: $color-bg-base;
 }

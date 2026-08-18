@@ -1,4 +1,4 @@
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .shop-item {
   width: 100%;
@@ -38,7 +38,7 @@
         .shop-name {
           font-size: 12px;
           overflow: hidden;
-          color: #303133;
+          color: $color-text-base;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
@@ -54,10 +54,10 @@
       padding: 0 8px;
       align-items: center;
       justify-content: center;
-			background-color: $color-bg-light;
+      background-color: $color-bg-light;
       .enter-shop-btn-text {
         font-size: 12px;
-				color: $color-text-title;
+        color: $color-text-title;
         // color: $theme-color;
       }
     }
@@ -75,7 +75,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        color: #303133;
+        color: $color-text-base;
         width: 106px;
         font-size: 12px;
         margin-top: 6px;
@@ -86,11 +86,11 @@
         margin-top: 8px;
         align-items: center;
         .goods-price-unit {
-          color: #303133;
+          color: $color-brand;
           font-size: 14px;
         }
         .goods-price {
-          color: #303133;
+          color: $color-brand;
           font-size: 14px;
         }
       }
@@ -105,7 +105,7 @@
           padding-right: 4px;
           padding-top: 2px;
           padding-bottom: 2px;
-          background-color: #f0f7ff;
+          background-color: $color-bg-light;
           border-radius: 2px;
           display: inherit;
           .ask-commodity-price-text {

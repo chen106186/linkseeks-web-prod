@@ -72,9 +72,9 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
     if (top < 0) {
       setNavBgColor('transparent')
     } else if (top > actionH) {
-      setNavBgColor('#fff')
+      setNavBgColor('#FCF7F1')
     } else {
-      setNavBgColor(`rgba(255, 255, 255, ${top / actionH})`)
+      setNavBgColor(`rgba(252, 247, 241, ${top / actionH})`)
     }
   })
 
@@ -374,7 +374,7 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
       <NavBar
         customRenderLeft={
           <View className={styles['navbar-back']} onClick={handleBack}>
-            <Icons name="ChevronLeft" size={18} color="#252D37" />
+            <Icons name="ChevronLeft" size={18} color="#5A2A12" />
             <Text>
               {intl.formatMessage({ id: 'communityGroupBuy.activity.xuanzezitidian', defaultMessage: '选择自提点' })}
             </Text>
@@ -458,8 +458,8 @@ const CommunityGroupBuyList: React.FC<{}> = () => {
               handleVisibleCartPopup(true)
             }}
           >
-            <Icons name="ShoppingCart" size={24} color="#00A98F" />
-            <Badge className={styles['footer-content-cart-badge']} count={cartStat?.totalCount} color="#E34D59" />
+            <Icons name="ShoppingCart" size={24} color="#C45124" />
+            <Badge className={styles['footer-content-cart-badge']} count={cartStat?.totalCount} color="#C45124" />
           </View>
           <View className={styles['footer-content-price']}>
             <View className={styles['footer-content-price-total']}>

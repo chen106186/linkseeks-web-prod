@@ -6,7 +6,9 @@
   /** 删除 **/
   // margin: $spacing-h-lg;
   // padding: $spacing-h-lg;
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   border-radius: 8px * $hd;
   padding: $spacing-h-lg;
 
@@ -14,8 +16,8 @@
     // display: ;
     padding: 0;
     .product-tag {
-      background-color: #EF3346;
-      color: #fff;
+      background-color: $color-brand;
+      color: $color-bg;
       font-size: $font-size-sm;
       padding: $spacing-h-sm $spacing-h-sm;
       border-bottom-right-radius: 8px;
@@ -27,7 +29,6 @@
 
     .at-tabs__header {
       text-align: left;
-
     }
     .at-tabs__underline {
       height: 0px;
@@ -53,7 +54,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 0 0 0;
-    border-top: 1px solid #F4F5F7;
+    border-top: 1px solid $color-card-border;
     margin-top: 12px;
   }
 }

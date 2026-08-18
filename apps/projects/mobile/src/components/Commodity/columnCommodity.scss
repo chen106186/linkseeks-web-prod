@@ -13,7 +13,6 @@
   }
 }
 
-
 .commodity {
   display: flex;
   flex-direction: column;
@@ -45,7 +44,7 @@
     padding: 0 $spacing-h-md;
 
     .commodityName {
-      color: #303133;
+      color: $color-text-base;
       font-size: $font-size-sm;
       line-height: $line-height-zh;
       overflow: hidden;
@@ -75,12 +74,12 @@
     flex-direction: row;
 
     .sale {
-      color: #91959B;
+      color: $color-text-placeholder;
       margin-left: 12px;
       font-size: 13px;
 
       .saleNumber {
-        color: #EF3346;
+        color: $color-brand;
       }
     }
   }
@@ -97,5 +96,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white
+  color: white;
 }

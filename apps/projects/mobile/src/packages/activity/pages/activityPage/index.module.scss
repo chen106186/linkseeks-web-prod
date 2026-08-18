@@ -1,7 +1,12 @@
 @import '@/styles/variables.scss';
 
 .pageLayout {
-  // background-color: #DD3041;
+  background-color: $color-bg-base;
+}
+
+.activity-navbar {
+  background-color: $color-bg-base;
+  border-bottom: 1px solid $color-card-border;
 }
 
 .activity-page {

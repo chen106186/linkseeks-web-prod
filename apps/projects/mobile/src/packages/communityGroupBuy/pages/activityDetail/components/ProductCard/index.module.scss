@@ -1,105 +1,109 @@
+@import '@/styles/variables.scss';
+
 .card {
-    margin: 8px;
-    padding: 8px;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &-image {
+    width: 115px;
+    height: 115px;
     border-radius: 4px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    overflow: hidden;
+  }
 
-    &-image {
-        width: 115px;
-        height: 115px;
-        border-radius: 4px;
-        overflow: hidden;
+  &-info {
+    flex: 1;
+    margin-left: 12px;
+    overflow: hidden;
+
+    &-name {
+      height: 40px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      overflow: hidden;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
-    &-info {
+    &-tags {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 16px;
+
+      &-item {
+        margin-right: 4px;
+        padding: 0 4px;
+        font-size: 10px;
+        line-height: 14px;
+        color: $color-brand;
+        border-radius: 2px;
+        border: 0.5px solid $color-brand;
+      }
+    }
+
+    &-volume {
+      margin-top: 8px;
+      line-height: 18px;
+      color: $color-text-placeholder;
+      font-size: 12px;
+
+      &-black {
+        color: $color-text-base;
+      }
+    }
+
+    &-footer {
+      margin-top: 4px;
+      display: flex;
+
+      &-price {
         flex: 1;
-        margin-left: 12px;
-        overflow: hidden;
+        font-size: 12px;
 
-        &-name {
-            height: 40px;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            overflow: hidden;
-            word-break: break-all;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
+        &-red {
+          color: $color-brand;
         }
 
-        &-tags {
-            margin-top: 4px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 16px;
-
-            &-item {
-                margin-right: 4px;
-                padding: 0 4px;
-                font-size: 10px;
-                line-height: 14px;
-                color: #EF3346;
-                border-radius: 2px;
-                border: 0.5px solid #EF3346;
-            }
+        &-large {
+          font-size: 16px;
+          font-weight: 500;
+          vertical-align: baseline;
         }
 
-        &-volume {
-            margin-top: 8px;
-            line-height: 18px;
-            color: #91959B;
-            font-size: 12px;
-
-            &-black {
-                color: #303133;
-            }
+        &-original {
+          margin-left: 4px;
+          text-decoration: line-through;
+          color: $color-text-placeholder;
         }
+      }
 
-        &-footer {
-            margin-top: 4px;
-            display: flex;
+      &-button {
+        width: 24px;
+        height: 24px;
+        border-radius: 534px;
+        background: $color-brand;
+        color: $color-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            &-price {
-                flex: 1;
-                font-size: 12px;
-
-                &-red {
-                    color: #EF3346;
-                }
-
-                &-large {
-                    font-size: 16px;
-                    font-weight: 500;
-                    vertical-align: baseline;
-                }
-
-                &-original {
-                    margin-left: 4px;
-                    text-decoration: line-through;
-                    color: #91959B;
-                }
-            }
-
-            &-button {
-                width: 24px;
-                height: 24px;
-                border-radius: 534px;
-                background: #00a98f;
-                color: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &.disabled {
-                    background: #C8CACD;
-                }
-            }
+        &.disabled {
+          background: $color-text-disabled;
         }
+      }
     }
+  }
 }

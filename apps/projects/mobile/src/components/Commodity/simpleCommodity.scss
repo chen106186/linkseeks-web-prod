@@ -1,6 +1,5 @@
 @import '@/styles/variables.scss';
-$rankColor: rgb(253,198,98), rgb(197,195,196), rgb(235,179,136);
-
+$rankColor: rgb(253, 198, 98), rgb(197, 195, 196), rgb(235, 179, 136);
 
 .simple-commodity {
   width: 88px * $hd;
@@ -15,7 +14,7 @@ $rankColor: rgb(253,198,98), rgb(197,195,196), rgb(235,179,136);
       position: relative;
       overflow: hidden;
       @each $val in $rankColor {
-        $i:index($rankColor, $val);
+        $i: index($rankColor, $val);
         .ranking-#{$i} {
           position: absolute;
           top: 0px;
@@ -53,12 +52,12 @@ $rankColor: rgb(253,198,98), rgb(197,195,196), rgb(235,179,136);
     .simple-commodity-name {
       display: -webkit-box;
       font-size: $font-size-sm;
-      color: #252D37;
+      color: $color-text-base;
       line-height: $line-height-zh;
       word-break: break-all;
-      text-overflow: ellipsis;  //超出文字用省略号代替
-      overflow: hidden;            //多出部分隐藏
-      -webkit-box-orient: vertical;    //竖直方向的超出和隐藏
+      text-overflow: ellipsis; //超出文字用省略号代替
+      overflow: hidden; //多出部分隐藏
+      -webkit-box-orient: vertical; //竖直方向的超出和隐藏
       -webkit-line-clamp: 2;
     }
 

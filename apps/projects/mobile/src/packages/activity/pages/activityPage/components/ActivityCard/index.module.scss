@@ -14,9 +14,8 @@
 
     &-title {
       font-size: $font-size-xl;
-      font-weight: "600";
-      color: #fff
-    };
-  };
-
-};
+      font-weight: '600';
+      color: $color-text-title;
+    }
+  }
+}

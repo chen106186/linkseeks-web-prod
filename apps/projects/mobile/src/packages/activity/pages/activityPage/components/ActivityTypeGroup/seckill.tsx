@@ -227,8 +227,8 @@ const SeckillItem: React.FC<Iprops> = (props: Iprops) => {
     return (
       <View className={styles.progress}>
         <Progress
-          strokeColor="#EF3346"
-          trailColor="#FFF0F2"
+          strokeColor="#C45124"
+          trailColor="#FFF5EC"
           strokeWidth={6}
           percent={percent}
           customRenderText={

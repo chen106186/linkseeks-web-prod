@@ -6,7 +6,9 @@
   /** 删除 **/
   // margin: $spacing-h-lg;
   // padding: $spacing-h-lg;
-  background-color: #fff;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
   border-radius: 8px * $hd;
   padding: $spacing-h-lg;
 
@@ -15,8 +17,8 @@
     padding: 0;
 
     .product-tag {
-      background-color: #EF3346;
-      color: #fff;
+      background-color: $color-brand;
+      color: $color-bg;
       font-size: $font-size-sm;
     }
   }
@@ -35,7 +37,7 @@
 
       .at-tabs__item {
         font-size: 12px * $hd;
-        color: #252D37;
+        color: $color-text-base;
         padding: 12px * $hd 12px * $hd;
         font-weight: 600;
       }
@@ -44,7 +46,7 @@
         .at-tabs__item-underline {
           transform: scaleX(0.5);
           height: 3px * $hd;
-          background-color: #ef3346;
+          background-color: $color-brand;
         }
       }
     }
@@ -62,7 +64,7 @@
       width: 98px * $hd;
       overflow: hidden;
       margin-top: $spacing-h-lg;
-      background-color: #FFF0F2;
+      background-color: $color-bg-light;
       display: flex;
       flex-direction: column;
       margin-right: $spacing-h-sm;
@@ -73,12 +75,12 @@
       flex-shrink: 0;
 
       .coupon-amount {
-        color: #EF3346;
+        color: $color-brand;
         font-size: 18px * $hd;
       }
 
       .coupon-condition {
-        color: #EF3346;
+        color: $color-brand;
         font-size: $font-size-xs;
         margin-top: $spacing-v-md;
         margin-bottom: $spacing-v-xl;
@@ -86,15 +88,15 @@
       }
 
       .coupon-type {
-        background-image: linear-gradient(90deg, #F87362 0%, #EF3346 100%);
+        background-image: linear-gradient(90deg, $color-brand-light 0%, $color-brand 100%);
         padding: 4px $spacing-h-md;
-        color: #fff;
+        color: $color-bg;
         border-radius: 50px;
         font-size: $font-size-sm;
         width: 72px * $hd;
         overflow: hidden;
-        white-space:nowrap;
-        text-overflow:ellipsis;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         text-align: center;
       }
     }
@@ -106,7 +108,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 0 0 0;
-    border-top: 1px solid #F4F5F7;
+    border-top: 1px solid $color-card-border;
     margin-top: 12px;
   }
 }

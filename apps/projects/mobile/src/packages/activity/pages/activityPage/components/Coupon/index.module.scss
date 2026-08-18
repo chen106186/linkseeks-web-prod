@@ -15,7 +15,7 @@
     margin-bottom: 8px;
     display: flex;
     flex-direction: column;
-  };
+  }
 
   .coupon-small-action {
     padding-top: 2px;
@@ -24,22 +24,21 @@
     padding-right: 8px;
     width: 28px;
 
-		&.auto-width {
-			width: auto;
-		}
+    &.auto-width {
+      width: auto;
+    }
   }
   .coupon-small-action-text {
     display: block;
     font-size: $font-size-sm;
     line-height: 1.3;
-    color: #ef3346;
+    color: $color-brand;
     font-weight: 600px;
-    word-wrap: break-word;/*英文的时候需要加上这句，自动换行*/
-    word-break:break-all;
+    word-wrap: break-word; /*英文的时候需要加上这句，自动换行*/
+    word-break: break-all;
   }
 
   .coupon-disabled {
     opacity: 0.4;
   }
-
-};
+}

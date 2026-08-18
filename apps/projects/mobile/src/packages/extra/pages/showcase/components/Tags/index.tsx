@@ -51,8 +51,8 @@ export const TagsItem: React.FC<TagsItemProps> = (props: TagsItemProps) => {
   return (
     <View
       style={{
-        color: data === '社区团购' ? '#04ad71' : undefined,
-        borderColor: data === '社区团购' ? '#04ad71' : undefined,
+        color: data === '社区团购' ? '#C45124' : undefined,
+        borderColor: data === '社区团购' ? '#C45124' : undefined,
       }}
       className={classNames('produtct-tags-item', size && `produtct-tags-item__${size}`)}
     >

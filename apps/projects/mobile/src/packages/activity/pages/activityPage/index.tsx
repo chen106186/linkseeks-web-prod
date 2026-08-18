@@ -50,15 +50,10 @@ const Activity = () => {
     locationStore: { currentCity },
     userStore: { userInfo },
   } = useStores()
-  const { activityData, layout, info } = useActivityLayout(+id, { currentCity: currentCity!, userInfo: userInfo })
-  const background = layout?.themeStyle?.props?.color
-  const backgroundColorStyle = layout
-    ? {
-        background: background,
-      }
-    : {
-        background: '#red',
-      }
+  const { activityData, info } = useActivityLayout(+id, { currentCity: currentCity!, userInfo: userInfo })
+  const backgroundColorStyle = {
+    background: '#FCF7F1',
+  }
 
   usePageInit()
   useShareAppMessage((res) =>
@@ -68,7 +63,14 @@ const Activity = () => {
     <PageLayout
       className={styles['pageLayout']}
       style={backgroundColorStyle}
-      renderHeader={<NavBar title={info?.name} />}
+      renderHeader={
+        <NavBar
+          customClassName={styles['activity-navbar']}
+          title={info?.name}
+          titleColor="#5A2A12"
+          backIconColor="#5A2A12"
+        />
+      }
     >
       {activityData.map((_item: any, _index: number) => {
         const componentName =

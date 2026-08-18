@@ -1,7 +1,8 @@
-@import '@apps/mobile-ui/packages/styles/variables/default.scss';
+@import '@/styles/variables.scss';
 
 .swtich-btn {
   padding: $spacing-v-xs - 2 $spacing-h-sm - 2;
   display: inline-block;
   line-height: 1;
+  color: $color-text-placeholder;
 }

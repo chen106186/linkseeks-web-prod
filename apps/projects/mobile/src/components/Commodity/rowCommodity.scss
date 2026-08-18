@@ -1,4 +1,4 @@
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .row-commodity {
   display: flex;
@@ -34,7 +34,7 @@
     &-productName {
       line-height: 20px * $hd;
       font-size: $font-size-base;
-      color: #252D37;
+      color: $color-text-base;
     }
 
     &-middleArea {

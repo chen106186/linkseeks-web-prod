@@ -58,7 +58,7 @@ const SwitchButton: React.FC<SwitchButtonProps> = (props: SwitchButtonProps) => 
 
   return (
     <View className="swtich-btn" onClick={handleSwitch}>
-      <Icons name={ICON_MAP[listType]} size={16} color="#91959B" />
+      <Icons name={ICON_MAP[listType]} size={16} color="#8F7564" />
     </View>
   )
 }

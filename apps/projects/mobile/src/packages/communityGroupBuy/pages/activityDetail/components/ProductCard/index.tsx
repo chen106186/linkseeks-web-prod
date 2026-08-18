@@ -114,7 +114,7 @@ const ProductCard: React.FC<Iprops> = (props: Iprops) => {
               onAdd?.(data)
             }}
           >
-            <Icons name="Plus" size={16} color="#fff" />
+            <Icons name="Plus" size={16} color="#FFFCF8" />
           </View>
         </View>
       </View>

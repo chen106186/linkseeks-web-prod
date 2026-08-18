@@ -1,17 +1,16 @@
 @import '@/styles/variables.scss';
 
-$first: (#FDD382, #FDA41A);
-$second: (#D3D1D2, #A7A5A6);
-$third: (#F0C198, #DD8E5F);
+$first: (#fdd382, #fda41a);
+$second: (#d3d1d2, #a7a5a6);
+$third: (#f0c198, #dd8e5f);
 
 $linearColor: (
-  "1": $first,
-  "2": $second,
-  "3": $third,
+  '1': $first,
+  '2': $second,
+  '3': $third,
 );
 
 .topLabelContainer {
-
   @each $key, $primary in $linearColor {
     .product-tag-#{$key} {
       background-image: linear-gradient(135deg, nth($primary, 1) 0%, nth($primary, 2) 100%);
@@ -32,7 +31,6 @@ $linearColor: (
 }
 
 .progress {
-
   &-container {
     display: flex;
     flex-direction: row;
@@ -41,7 +39,7 @@ $linearColor: (
 
     .progress-remain {
       font-size: 10px;
-      color: #91959B;
+      color: $color-text-placeholder;
     }
   }
 
@@ -50,12 +48,11 @@ $linearColor: (
     flex-direction: row;
     align-items: center;
     margin-left: $spacing-h-md;
-    color: #919598;
+    color: $color-text-placeholder;
     font-size: $font-size-sm;
 
     &-highlight {
-      color: #ef3346;
+      color: $color-brand;
     }
   }
 }
-

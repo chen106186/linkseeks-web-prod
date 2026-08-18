@@ -332,6 +332,9 @@ const PointsSourcingDetail: React.FC = () => {
         renderHeader={
           <>
             <NavBar
+              customClassName="pointsSourcing-detail-navbar"
+              titleColor="#5A2A12"
+              backIconColor="#5A2A12"
               title={intl.formatMessage({
                 id: 'commodityMerge.pointsSourcing.pointsSourcingDetail.nav',
                 defaultMessage: '积分商品详情',

@@ -6,21 +6,21 @@
   align-items: flex-end;
 
   .discount {
-    color: #EF3346;
+    color: $color-brand;
     line-height: 16px;
     .currency {
       font-size: $font-size-sm;
     }
 
     .inquiry {
-			font-size: 14px;
-			color: $color-brand;
-		}
+      font-size: 14px;
+      color: $color-brand;
+    }
 
-		.integral {
-			color: $color-warning;
-			font-size: 14px;
-		}
+    .integral {
+      color: $color-warning;
+      font-size: 14px;
+    }
 
     .big {
       font-size: $font-size-lg;
@@ -32,7 +32,7 @@
 
   .originalPrice {
     font-size: $font-size-xs;
-    color: #91959B;
+    color: $color-text-placeholder;
     text-decoration: line-through;
     margin-left: $spacing-v-sm;
     // margin-bottom: $spacing-v-xs;

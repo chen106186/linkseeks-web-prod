@@ -361,7 +361,7 @@ const ShowCase: React.FC = () => {
           customRenderLeft={<Icons name="ArrowLeft" size={24} color="#FFF" />}
         />
         <View animation={animationData} className={styles['showcase-header-nav-wrap__fix']}>
-          <NavBar title={name} titleColor="#252D37" back={handleBack} />
+          <NavBar title={name} titleColor="#5A2A12" backIconColor="#5A2A12" back={handleBack} />
         </View>
       </View>
       <ScrollView

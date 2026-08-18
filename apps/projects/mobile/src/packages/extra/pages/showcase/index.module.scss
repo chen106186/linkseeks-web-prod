@@ -1,9 +1,11 @@
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .showcase {
   height: 100vh;
+  background-color: $color-bg-base;
+
   &-header-scroll {
-    background-color: #F7F8FA;
+    background-color: $color-bg-base;
   }
 
   .showcase-header {
@@ -36,6 +38,8 @@
     right: 0;
     z-index: 9;
     opacity: 0;
+    background-color: $color-bg-base;
+    border-bottom: 1px solid $color-card-border;
   }
 
   .indicatorContainer {
@@ -51,7 +55,7 @@
 
   .indicatorText {
     font-size: 10px;
-    color: #909399;
+    color: $color-text-placeholder;
     text-align: center;
     margin-top: 8px;
   }
@@ -66,7 +70,9 @@
     padding: 8px;
 
     &-item {
-      background-color: #FFF;
+      background-color: $color-card-bg;
+      outline: 1px solid $color-card-border;
+      box-shadow: 0 4px 12px $color-card-shadow;
       border-radius: 8px;
       margin-bottom: 8px;
 
@@ -80,9 +86,9 @@
           height: 40px;
           overflow: hidden;
           border-radius: 4px;
-          background-color: #FFF;
+          background-color: $color-bg;
           border-width: 0.1px;
-          border-color: #EEF0F3;
+          border-color: $color-card-border;
           margin-right: 8px;
         }
 
@@ -114,12 +120,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #FAFBFC;
+            background-color: $color-bg-light;
+            outline: 1px solid $color-card-border;
           }
         }
       }
     }
   }
-
 }
-

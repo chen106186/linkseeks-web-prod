@@ -4,10 +4,44 @@
 
 $hsm: $spacing-h-sm - 1;
 
-
 .pointsSourcing-detail {
   padding: $spacing-v-md 0;
   position: relative;
+
+  &-navbar {
+    background-color: $color-bg-base;
+    border-bottom: 1px solid $color-card-border;
+  }
+
+  .mellow-card,
+  .product-descriptions-line-wrap {
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
+  }
+
+  .businessCard,
+  .bookshelf-item {
+    background-color: $color-card-bg;
+  }
+
+  .commodity-banner-swiper-item {
+    background-color: $color-card-bg;
+  }
+
+  .historical-bar-title,
+  .product-descriptions-line-label {
+    color: $color-text-placeholder;
+  }
+
+  .product-descriptions-richtext,
+  .product-descriptions-line-breif {
+    color: $color-text-base;
+  }
+
+  .product-descriptions-title-line {
+    background-color: $color-border-base;
+  }
 
   &-anchor {
     height: 100%;
@@ -24,7 +58,17 @@ $hsm: $spacing-h-sm - 1;
     bottom: 0;
     z-index: 1;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $color-card-bg;
+    border-top: 1px solid $color-card-border;
+    box-shadow: 0 -4px 12px $color-card-shadow;
+
+    .goods-action {
+      background-color: $color-card-bg;
+
+      &-icon-text {
+        color: $color-text-base;
+      }
+    }
   }
 
   &-fixedAction {
@@ -34,8 +78,8 @@ $hsm: $spacing-h-sm - 1;
       border-radius: 8px;
 
       &--primary {
-        background: $color-warning;
-        border-color: $color-warning;
+        background: $color-brand;
+        border-color: $color-brand;
       }
     }
   }
@@ -43,53 +87,52 @@ $hsm: $spacing-h-sm - 1;
   .shop-volume {
     font-size: $font-size-sm;
     color: $color-grey-2;
-  };
+  }
 }
 
-
 .product {
-	&-priceWrap {
-		flex: 1;
-		display: flex;
-		align-items: center;
-		margin-bottom: $spacing-v-md;
-	}
+  &-priceWrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-v-md;
+  }
 
-	&-price {
-		font-size: $font-size-xxl;
-		font-weight: 500;
-		color: $color-warning;
-	}
+  &-price {
+    font-size: $font-size-xxl;
+    font-weight: 500;
+    color: $color-brand;
+  }
 
-	&-unit {
-		margin-left: $spacing-h-sm - 2;
-		font-size: $font-size-xl;
-		font-weight: 400;
-		color: $color-warning;
-	}
+  &-unit {
+    margin-left: $spacing-h-sm - 2;
+    font-size: $font-size-xl;
+    font-weight: 400;
+    color: $color-brand;
+  }
 
-	&-name {
-		line-height: $font-size-xl;
-		font-size: $font-size-base;
-		font-weight: 500;
-		color: $color-grey-0;
-	}
+  &-name {
+    line-height: $font-size-xl;
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $color-grey-0;
+  }
 
-	&-describe {
-		margin-top: $spacing-v-lg;
-		margin-bottom: $spacing-v-md;
-		font-size: $font-size-sm;
-		font-weight: 400;
-		color: $color-grey-2;
-	}
+  &-describe {
+    margin-top: $spacing-v-lg;
+    margin-bottom: $spacing-v-md;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $color-grey-2;
+  }
 
-	&-tags {
-		&-item {
-			padding: $spacing-h-sm - 1 calc($hsm / 2);
-			margin-right: $spacing-h-md;
-			color: #D69B5D;
-			font-size: 12px;
-			background-color: #FCF7F2;
-		}
-	}
+  &-tags {
+    &-item {
+      padding: $spacing-h-sm - 1 calc($hsm / 2);
+      margin-right: $spacing-h-md;
+      color: $color-brand;
+      font-size: 12px;
+      background-color: $color-bg-light;
+    }
+  }
 }

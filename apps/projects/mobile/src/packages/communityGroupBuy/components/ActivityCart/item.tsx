@@ -165,7 +165,7 @@ const Item = (props: IProps) => {
                 name="Minus"
                 size={16}
                 color={
-                  !data.isPublish || data.count <= data?.purchaseSkuResp?.commodity?.minOrder ? '#C8CACD' : '#252D37'
+                  !data.isPublish || data.count <= data?.purchaseSkuResp?.commodity?.minOrder ? '#BFAFA3' : '#5A2A12'
                 }
                 className={styles['list-item-content-more-count-btn']}
                 onClick={() => {
@@ -187,7 +187,7 @@ const Item = (props: IProps) => {
               <Icons
                 name="Plus"
                 size={16}
-                color={!data.isPublish || data.count >= stockCount ? '#C8CACD' : '#252D37'}
+                color={!data.isPublish || data.count >= stockCount ? '#BFAFA3' : '#5A2A12'}
                 className={styles['list-item-content-more-count-btn']}
                 onClick={() => {
                   let value = data.count + 1

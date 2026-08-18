@@ -542,8 +542,9 @@ const ActivityCart = React.forwardRef<ActivityCartRefHandle, IProps>((props: IPr
       zIndex={101}
       customTitleStyle={{
         paddingLeft: '12px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FDF9F5',
         borderBottom: 'none',
+        color: '#5A2A12',
         textAlign: 'left',
         fontSize: '16px',
         fontWeight: '500',

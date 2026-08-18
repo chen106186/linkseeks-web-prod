@@ -1,12 +1,12 @@
 const env = {
-  BACK_GATEWAY: process.env.BACK_GATEWAY || 'http://gateway.yuanxiaozhixianfang.com:5443',
+  BACK_GATEWAY: process.env.BACK_GATEWAY || 'http://123.57.50.231:8100',
   YAPI_REQUEST_BACK_GATEWAY:
-    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'http://gateway.yuanxiaozhixianfang.com:5443',
-  SOCKET_URL: process.env.SOCKET_URL || 'ws://lingxi-gateway-demo.shushangyun.com:12880',
-  SITE_URL: process.env.SITE_URL || 'http://lingxi-www-demo.shushangyun.com:12880',
-  MEMBER_URL: process.env.MEMBER_URL || 'http://lingxi-platform-demo.shushangyun.com:12880',
+    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'http://123.57.50.231:8100',
+  SOCKET_URL: process.env.SOCKET_URL || 'ws://123.57.50.231:8100',
+  SITE_URL: process.env.SITE_URL || 'http://123.57.50.231',
+  MEMBER_URL: process.env.MEMBER_URL || 'http://123.57.50.231',
   REQUEST_HEADER: process.env.REQUEST_HEADER || 'http://',
-  IM_URL: process.env.IM_URL || 'http://lingxi-im-demo.shushangyun.com:12880',
+  IM_URL: process.env.IM_URL || 'http://123.57.50.231',
   MALL_ONLY_CLIENT: process.env.MALL_ONLY_CLIENT || false,
 }
 

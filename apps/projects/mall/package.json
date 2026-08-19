@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "node server",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "build:client": "vite build --ssrManifest --outDir dist-mall/client",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-mall/server",
     "prod": "cross-env NODE_ENV=production OUT_TERMINAL=mall LX_PM2_SCRIPT_NAME=lingxi-mall LX_PM2_SCRIPT=./server.js node pm2Build.js",
-    "preview": "cross-env NODE_ENV=production cd dist && node server"
+    "preview": "cross-env NODE_ENV=production cd dist-mall && node server"
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",

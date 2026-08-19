@@ -31,6 +31,7 @@ yarn-error.log*
 
 # create-react-app
 dist
+dist-*
 docsDist
 
 # swc

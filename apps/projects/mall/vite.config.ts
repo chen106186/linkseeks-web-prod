@@ -29,7 +29,7 @@ export default ({ mode }) => {
             targets: [
               {
                 src: ['./server.js', './pm2Build.js', './package.json', './fileCache.js', './logger.js'],
-                dest: 'dist',
+                dest: 'dist-mall',
               },
             ],
           }),

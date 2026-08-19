@@ -4,7 +4,7 @@ import { Button, message, Tag } from 'antd'
 import { PageHeaderWrapper, StandardFormTable, ImageBox } from '@apps/components'
 import type { RecordColumns, ActionType } from '@apps/components/src/web/StandardFormTable/types'
 import { formatTimeString } from '@/utils'
-import { getMarketingPlatformCbgTeamLeaderChangePage } from '@apps/apis'
+import { getMarketingPlatformCbgTeamLeaderPage } from '@apps/apis'
 import useSelectOptions from './services/hooks/useSelectOptions'
 import { Form, Input, Radio, Modal, Space } from '@linkseeks/ui'
 import { Link } from '@linkseeks/router-core'
@@ -132,7 +132,7 @@ const CbgTeamLeaderChange: React.FC = () => {
     const payload = { ...arg }
 
     return new Promise((resolve) => {
-      getMarketingPlatformCbgTeamLeaderChangePage({ ...payload, status: activeKey }).then((res) => {
+      getMarketingPlatformCbgTeamLeaderPage({ ...payload, status: activeKey }).then((res) => {
         if (res.code === 1000) {
           resolve(res.data)
         }

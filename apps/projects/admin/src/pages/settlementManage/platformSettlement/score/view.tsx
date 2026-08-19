@@ -9,7 +9,7 @@ import {
   postSettlementPlatformScoreSettlementAllInPay,
   postSettlementPlatformScoreSettlementPay,
 } from '@apps/apis'
-import { postReportSettlementScoreManualSettlement } from '@apps/apis'
+import { postSettlementJobScoreManualSettlement } from '@apps/apis'
 import { usePageStatus } from '@/hooks/usePageStatus'
 import OtherPayModal from '../components/OtherPayModal'
 import UploadVoucherModal from '../components/UploadVoucherModal'
@@ -81,7 +81,7 @@ const SettlementList: React.FC = () => {
    * @param params 手动结算
    */
   const handleManualsettlement = (id) => {
-    postReportSettlementScoreManualSettlement({ id: id }).then(({ data, code }) => {
+    postSettlementJobScoreManualSettlement({ id: id }).then(({ data, code }) => {
       if (code === 1000) {
         ref.current.reload()
       }

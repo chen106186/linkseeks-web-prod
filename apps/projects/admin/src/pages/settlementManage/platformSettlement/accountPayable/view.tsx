@@ -12,7 +12,7 @@ import {
   postSettlementPlatformSettlementCommunicationPay,
   postSettlementPlatformSettlementPay,
 } from '@apps/apis'
-import { postReportSettlementPlatformManualSettlement } from '@apps/apis'
+import { postSettlementJobPlatformManualSettlement } from '@apps/apis'
 import useHandleSettlementList from './useHandleSettlementList'
 import ViewUniversalPay from '../components/ViewUniversalPay'
 import OtherPayModal from '../components/OtherPayModal'
@@ -64,7 +64,7 @@ const SettlementList: React.FC = () => {
    * @param params 手动结算
    */
   const handleManualsettlement = async (id: number) => {
-    const { code } = await postReportSettlementPlatformManualSettlement({ id: id })
+    const { code } = await postSettlementJobPlatformManualSettlement({ id: id })
     if (code === 1000) {
       handleClose('manualSettlement')
       ref.current.reload()

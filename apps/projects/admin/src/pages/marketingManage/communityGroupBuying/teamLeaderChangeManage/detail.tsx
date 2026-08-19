@@ -5,7 +5,7 @@ import { BraftEditor, ImageBox, PageHeaderWrapper, type RecordColumns, StandardF
 import { usePageStatus } from '@/hooks/usePageStatus'
 import { history } from '@linkseeks/router-manager'
 import { usePrompt } from '@linkseeks/router-core'
-import { getMarketingPlatformCbgTeamLeaderChangeGet, postMarketingPlatformCbgTeamLeaderChangeExamine } from '@apps/apis'
+import { getMarketingPlatformCbgTeamLeaderGet, postMarketingPlatformCbgTeamLeaderExamine } from '@apps/apis'
 import { formatTimeString } from '@/utils'
 import type { ActionType } from '@apps/components/src/web/StandardFormTable/types'
 import { SaveOutlined } from '@ant-design/icons'
@@ -26,7 +26,7 @@ const CbgTeamLeaderChangeDetail = () => {
   const [checkForm] = Form.useForm()
 
   useEffect(() => {
-    getMarketingPlatformCbgTeamLeaderChangeGet({
+    getMarketingPlatformCbgTeamLeaderGet({
       id: id,
     }).then((res) => {
       if (res.code !== 1000) {
@@ -54,7 +54,7 @@ const CbgTeamLeaderChangeDetail = () => {
 
   const handleOK = () => {
     checkForm.validateFields().then((values) => {
-      postMarketingPlatformCbgTeamLeaderChangeExamine({ ...values }).then((res) => {
+      postMarketingPlatformCbgTeamLeaderExamine({ ...values }).then((res) => {
         if (res.code === 1000) {
           setVisibleModal(false)
           history.replace('/marketingManage/communityGroupBuying/teamLeaderChangeManage')

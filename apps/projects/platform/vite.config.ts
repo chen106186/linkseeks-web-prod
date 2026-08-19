@@ -15,6 +15,7 @@ export default ({ mode }) => {
   console.log('代理的api网关：', BACK_GATEWAY)
 
   return defineConfig({
+    base: mode === 'production' ? '/platform/' : '/',
     build: {
       // rollupOptions: {
       //   output: {

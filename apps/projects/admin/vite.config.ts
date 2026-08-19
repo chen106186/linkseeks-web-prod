@@ -14,6 +14,7 @@ export default ({ mode }) => {
   const BACK_GATEWAY = defaultDefine.OUT_BACK_GATEWAY
   console.log('代理的api网关：', BACK_GATEWAY)
   return defineConfig({
+    base: mode === 'production' ? '/admin/' : '/',
     build: {
       // rollupOptions: {
       //   output: {

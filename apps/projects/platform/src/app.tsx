@@ -3,6 +3,7 @@ import { Router, RouterManager } from '@linkseeks/router-manager'
 import { authService } from '@apps/services'
 import NoPermissionPage from './pages/403/view'
 export default defineConfig({
+  baseRoutePrefix: import.meta.env.PROD ? '/platform' : '',
   indexRouter: '/home',
 
   notFoundRouter: '/',

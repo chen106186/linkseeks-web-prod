@@ -5,6 +5,7 @@ import NoPermissionPage from './pages/403/view'
 
 const whiteList = ['/user/login', '/user/forget']
 export default defineConfig({
+  baseRoutePrefix: import.meta.env.PROD ? '/admin' : '',
   indexRouter: '/home',
 
   notFoundRouter: '/404',

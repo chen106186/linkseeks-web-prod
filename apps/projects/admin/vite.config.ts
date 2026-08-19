@@ -16,6 +16,7 @@ export default ({ mode }) => {
   return defineConfig({
     base: mode === 'production' ? '/admin/' : '/',
     build: {
+      outDir: 'dist-admin',
       // rollupOptions: {
       //   output: {
       //     // 疑似可以解决线上环境 构建后会出现文件404情况

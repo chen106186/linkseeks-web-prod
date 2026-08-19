@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const fileDir = path.join(__dirname, '../dist/index.html')
+const fileDir = path.join(__dirname, '../dist-platform/index.html')
 fs.readFile(fileDir, 'UTF-8', function (err, data) {
   if (err) {
     throw err

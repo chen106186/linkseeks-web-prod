@@ -6,7 +6,7 @@ import { history } from '@linkseeks/router-manager'
 import { usePrompt } from '@linkseeks/router-core'
 import {
   getOrderSocialDistributionParamGet,
-  postCommodityWebShopWebAll,
+  getCommodityWebShopWebAll,
   postProductMerchantSocialDistributionGoodsSave,
 } from '@apps/apis'
 import { formatTimeString } from '@/utils'
@@ -35,7 +35,7 @@ const SocialDistributionGoods = () => {
     setConfigRate(initialValue.rate)
   }, [initialValue])
   useEffect(() => {
-    postCommodityWebShopWebAll({ isMemberType: true }, { ctlType: 'none' }).then((res) => {
+    getCommodityWebShopWebAll({ isMemberType: true }, { ctlType: 'none' }).then((res) => {
       if (res.code !== 1000) {
         return
       }

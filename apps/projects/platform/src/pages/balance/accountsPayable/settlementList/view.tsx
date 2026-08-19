@@ -29,7 +29,7 @@ import {
   postSettlementMemberSettlementBatchPay,
   getSettlementCommonGetExportFlag,
 } from '@apps/apis'
-import { postReportSettlementMemberManualSettlement } from '@apps/apis'
+import { postSettlementJobMemberManualSettlement } from '@apps/apis'
 import OtherPayModal from '../components/OtherPayModal'
 import useHandleSettlementList from './hooks/useHandleSettlementList'
 import ViewUniversalPay from '../../components/ViewUniversalPay'
@@ -141,7 +141,7 @@ const SettlementList = () => {
    * 手动结算
    */
   const fetchManualSettlement = useCallback(async (id: number) => {
-    const { code, data } = await postReportSettlementMemberManualSettlement({ id })
+    const { code, data } = await postSettlementJobMemberManualSettlement({ id })
     if (code === 1000) {
       handleClose('manualSettlement')
       formActions.submit()

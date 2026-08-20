@@ -23,7 +23,7 @@ const TeamLeaderApplySuccess: React.FC<{}> = () => {
         title=""
         back={handleBack}
         titleColor="#fff"
-        backIconColor="#fff"
+        backIconColor="#5A2A12"
         customClassName={styles['nav-bar-custom']}
         customStyle="background-color: #00A98F;"
         showBack={true}

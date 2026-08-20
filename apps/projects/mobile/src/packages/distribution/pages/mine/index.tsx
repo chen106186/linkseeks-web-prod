@@ -574,7 +574,7 @@ const MinePage = () => {
       <NavBar
         customRenderLeft={
           <View style={{ flex: 0.7 }}>
-            <Icons name="ChevronLeft" size={24} color={isSticky ? '#ffffff' : '#ffffff'} onClick={() => backPage()} />
+            <Icons name="ChevronLeft" size={24} color="#5A2A12" onClick={() => backPage()} />
           </View>
         }
         customClassName={styles['header-nav']}

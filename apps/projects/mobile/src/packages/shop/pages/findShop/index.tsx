@@ -244,7 +244,7 @@ const FindShop = () => {
               </Text>
             }
             customClassName={styles['custom-nav']}
-            backIconColor="#FFF"
+            backIconColor="#5A2A12"
           />
           <View className={styles['search-container']}>
             <View className={styles['search-body']}>

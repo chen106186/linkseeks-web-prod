@@ -60,7 +60,9 @@ const Header: React.FC<HeaderProps> = (props) => {
       </View>
       <View className={styles['shop-header-body']}>
         <NavBar
-          customRenderLeft={<Icons name="ChevronLeft" size={24} color="#FFF" onClick={() => Router.navigateBack()} />}
+          customRenderLeft={
+            <Icons name="ChevronLeft" size={24} color="#5A2A12" onClick={() => Router.navigateBack()} />
+          }
           customClassName={styles['shop-header-nav']}
           title={
             <View className={styles['shop-header-search']}>

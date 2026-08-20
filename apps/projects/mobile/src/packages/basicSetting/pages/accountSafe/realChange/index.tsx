@@ -208,7 +208,7 @@ const RealNameChange: React.FC<{}> = (props: any) => {
         >
           <View className={styles['realChange-backLayout']}>
             <View className={styles['realChange-icons']} onClick={() => Router.navigateBack()}>
-              <Icons name="ChevronLeft" size={24} color="#FFF" />
+              <Icons name="ChevronLeft" size={24} color="#5A2A12" />
             </View>
             <View className={styles['realChange-tipsView']}>
               <Text className={styles['realChange-text']}>

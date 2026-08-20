@@ -40,10 +40,12 @@ const DetailPage = () => {
       setLoading(false)
     } else {
       showToast({
-        title: res.message || intl.formatMessage({
-          id: 'distribution.huoqushujushibai',
-          defaultMessage: '获取数据失败',
-        }),
+        title:
+          res.message ||
+          intl.formatMessage({
+            id: 'distribution.huoqushujushibai',
+            defaultMessage: '获取数据失败',
+          }),
         icon: 'none',
       })
       setLoading(false)
@@ -81,7 +83,7 @@ const DetailPage = () => {
         <NavBar
           customRenderLeft={
             <View style={{ flex: 2 }}>
-              <Icons name="ChevronLeft" size={24} color="#fff" onClick={() => Router.navigateBack()} />
+              <Icons name="ChevronLeft" size={24} color="#5A2A12" onClick={() => Router.navigateBack()} />
             </View>
           }
           customClassName={styles['header-nav']}

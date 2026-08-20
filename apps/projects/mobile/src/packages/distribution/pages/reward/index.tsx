@@ -193,7 +193,7 @@ const RewardPage = () => {
         <NavBar
           customRenderLeft={
             <View style={{ flex: 0.7 }}>
-              <Icons name="ChevronLeft" size={24} color="#fff" onClick={() => Router.navigateBack()} />
+              <Icons name="ChevronLeft" size={24} color="#5A2A12" onClick={() => Router.navigateBack()} />
             </View>
           }
           customClassName={styles['header-nav']}

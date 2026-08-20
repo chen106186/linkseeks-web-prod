@@ -649,7 +649,7 @@ const MyCommodityDetails = () => {
               flex: 2,
             }}
           >
-            <Icons name="ChevronLeft" size={24} color="#FFF" onClick={() => Router.navigateBack()} />
+            <Icons name="ChevronLeft" size={24} color="#5A2A12" onClick={() => Router.navigateBack()} />
           </View>
         }
         customStyle="background:#C45124"

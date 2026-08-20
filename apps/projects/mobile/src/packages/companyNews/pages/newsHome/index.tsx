@@ -253,7 +253,7 @@ const HomeView = () => {
     <NewsTab mySel="newsHome">
       {/* 头部 */}
       <Header
-        backIconColor="#FFF"
+        backIconColor="#5A2A12"
         showExtra={IS_WEB ? false : true}
         title={
           <View className={styles['news-key-word']} onClick={jmnp}>

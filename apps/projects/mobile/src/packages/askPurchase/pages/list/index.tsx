@@ -213,7 +213,7 @@ const AskPurchaseList = () => {
         <>
           <NavBar
             customStyle="background:#00a98f"
-            backIconColor="#FFFFFF"
+            backIconColor="#5A2A12"
             title={
               <Text
                 style={{

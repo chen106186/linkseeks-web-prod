@@ -467,7 +467,7 @@ const MemberPower: React.FC<MemberPowerProps> = (props: MemberPowerProps) => {
             }
             customRenderLeft={
               <View style={{ flex: 2 }} onClick={handleBack}>
-                <Icons name="ChevronLeft" size={24} color="#FFF" />
+                <Icons name="ChevronLeft" size={24} color="#5A2A12" />
               </View>
             }
             customStyle="background:rgba(0,0,0,0)"

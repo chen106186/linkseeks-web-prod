@@ -146,7 +146,7 @@ const TeamLeaderApply: React.FC<{}> = () => {
         <View className={styles['header-top']}>
           <Header
             back={handleBack}
-            backIconColor="#FFF"
+            backIconColor="#5A2A12"
             titleColor="#FFF"
             customStyle="background: transparent"
             title={

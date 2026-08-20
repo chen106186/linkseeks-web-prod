@@ -292,7 +292,7 @@ const TeamLeaderMine: React.FC<{}> = () => {
       <View className={styles['header']}>
         <View className={styles['header-top']}>
           <Header
-            backIconColor="#FFF"
+            backIconColor="#5A2A12"
             titleColor="#FFF"
             customStyle="background: transparent"
             title={

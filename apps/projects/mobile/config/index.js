@@ -69,7 +69,7 @@ const config = {
         output: {
           // 微信开发者工具会将 `?.1` 误解析为可选链语法
           keep_numbers: true,
-          beautify: true,
+          beautify: false,
         },
       },
     },
@@ -110,7 +110,7 @@ const config = {
                   output: {
                     // 微信开发者工具会将 `?.1` 误解析为可选链语法
                     keep_numbers: true,
-                    beautify: true,
+                    beautify: false,
                   },
                   // mangle: false,
                   keep_classnames: true, // 不改变class名称

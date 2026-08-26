@@ -505,7 +505,7 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
    * 结算
    */
   let isLoading = false
-  const confirmOrder = () => {
+  const confirmOrder = async () => {
     if (isLoading) {
       return
     }
@@ -526,16 +526,14 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
     }
     isLoading = true
     try {
-      requestSubscribeMessage({
+      await requestSubscribeMessage({
         tmplIds: ['avrvgioBqCEEsyxSo_s1_LySA88hjkkgLWmit4Vh4Bs'],
         entityIds: [],
-        complete: () => {
-          fnJumpPay(params)
-        },
       })
     } catch (e) {
-      fnJumpPay(params)
+      // 订阅失败不阻断支付
     }
+    fnJumpPay(params)
   }
   const fnJumpPay = async (params) => {
     if (!IS_WEB) {

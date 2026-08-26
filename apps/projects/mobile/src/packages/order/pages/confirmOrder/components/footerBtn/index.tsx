@@ -527,11 +527,7 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
     isLoading = true
     try {
       requestSubscribeMessage({
-        tmplIds: [
-          '5lBn5Zue8RXLmJ0Yy3hAVnuP386SJNMAjjKo5A4hZwQ',
-          '_T449zFDpevGxPUcW5p0Duo-tNDXyz1ZtuaA0pxzvRI',
-          'qNjK-bSgSjAc7nQUYL9fEzP7UMI5l5L_gmAXvaK6NXM',
-        ],
+        tmplIds: ['avrvgioBqCEEsyxSo_s1_LySA88hjkkgLWmit4Vh4Bs'],
         entityIds: [],
         complete: () => {
           fnJumpPay(params)

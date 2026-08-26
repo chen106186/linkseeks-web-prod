@@ -525,17 +525,21 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
       return
     }
     isLoading = true
-    requestSubscribeMessage({
-      tmplIds: [
-        '5lBn5Zue8RXLmJ0Yy3hAVnuP386SJNMAjjKo5A4hZwQ',
-        '_T449zFDpevGxPUcW5p0Duo-tNDXyz1ZtuaA0pxzvRI',
-        'qNjK-bSgSjAc7nQUYL9fEzP7UMI5l5L_gmAXvaK6NXM',
-      ],
-      entityIds: [],
-      complete: () => {
-        fnJumpPay(params)
-      },
-    })
+    try {
+      requestSubscribeMessage({
+        tmplIds: [
+          '5lBn5Zue8RXLmJ0Yy3hAVnuP386SJNMAjjKo5A4hZwQ',
+          '_T449zFDpevGxPUcW5p0Duo-tNDXyz1ZtuaA0pxzvRI',
+          'qNjK-bSgSjAc7nQUYL9fEzP7UMI5l5L_gmAXvaK6NXM',
+        ],
+        entityIds: [],
+        complete: () => {
+          fnJumpPay(params)
+        },
+      })
+    } catch (e) {
+      fnJumpPay(params)
+    }
   }
   const fnJumpPay = async (params) => {
     if (!IS_WEB) {

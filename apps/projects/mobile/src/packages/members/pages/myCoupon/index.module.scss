@@ -1,8 +1,29 @@
+@import '@/styles/variables.scss';
+
 .page {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #F4F5F7;
+  background-color: $color-bg-base;
+
+  :global {
+    .at-tabs__header {
+      background-color: $color-card-bg;
+    }
+
+    .at-tabs__item {
+      color: $color-text-secondary;
+    }
+
+    .at-tabs__item--active {
+      color: $color-brand;
+    }
+
+    .at-tabs__body,
+    .at-tabs-pane {
+      background-color: $color-bg-base;
+    }
+  }
 }
 .padd {
   width: 100%;

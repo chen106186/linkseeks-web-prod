@@ -402,8 +402,8 @@ const MyCollections: React.FC = () => {
           display: 'flex',
           width: '100%',
           flexDirection: 'column',
-          backgroundColor: '#F4F5F7',
-          borderTopColor: '#F4F5F7',
+          backgroundColor: '#FCF7F1',
+          borderTopColor: '#EAD9CD',
           borderTopWidth: 0.5,
         }}
       >

@@ -1,4 +1,4 @@
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .page {
   display: flex;
@@ -6,7 +6,7 @@
   flex: 1;
   width: 100%;
   height: 100vh;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
 }
 
 .collection-container {
@@ -15,12 +15,32 @@
   margin-top: 8px;
   overflow: hidden;
   border-radius: 8px;
+  background-color: $color-card-bg;
+  outline: 1px solid $color-card-border;
+  box-shadow: 0 4px 12px $color-card-shadow;
+
+  :global(.mellow-card) {
+    background-color: $color-card-bg;
+  }
 }
 
 .tab-bar-style {
   elevation: 0px;
+  background-color: $color-card-bg;
 
-  :global{
+  :global {
+    .at-tabs__header {
+      background-color: $color-card-bg;
+    }
+
+    .at-tabs__item {
+      color: $color-text-secondary;
+    }
+
+    .at-tabs__item--active {
+      color: $color-brand;
+    }
+
     .at-tabs__item--active {
       border-bottom: 1px solid $color-brand;
     }
@@ -41,7 +61,7 @@
   height: 100%;
   padding: 0 30px;
   text-align: center;
-  background-color: #d32f2f;
+  background-color: $color-brand;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -64,7 +84,7 @@
   z-index: 101;
 }
 
-.scrollView{
+.scrollView {
   padding: 10px;
-  background-color: #f7f8fa;
+  background-color: $color-bg-base;
 }

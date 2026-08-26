@@ -1,6 +1,6 @@
 @import '@/styles/variables.scss';
 .card-bg-color {
-  background-color: rgb(255, 255, 255);
+  background-color: $color-card-bg;
   .card-column {
     display: flex;
     flex-direction: column;
@@ -10,11 +10,11 @@
       align-items: center;
       text-align: center;
       .font-black1 {
-        color: #303133;
+        color: $color-text-base;
         font-weight: 800px;
       }
       .font-black2 {
-        color: #909399;
+        color: $color-text-placeholder;
       }
       .font-black3 {
         color: #ffffff;

@@ -13,7 +13,10 @@
     -moz-border-radius: $border-radius-lg;
     -ms-border-radius: $border-radius-lg;
     -o-border-radius: $border-radius-lg;
-}
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
+  }
   .page-body {
     background-color: $color-bg-grey;
     overflow: hidden;

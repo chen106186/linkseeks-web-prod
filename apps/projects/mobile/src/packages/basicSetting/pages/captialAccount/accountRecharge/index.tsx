@@ -108,7 +108,7 @@ const AccountRecharge = () => {
                 // 微信支付
                 requestPayment({
                   nonceStr: payParam?.nonceStr,
-                  package: payParam?.package,
+                  package: payParam?.packageValue ?? payParam?.package,
                   paySign: payParam?.paySign,
                   timeStamp: payParam?.timeStamp,
                   signType: payParam?.signType,

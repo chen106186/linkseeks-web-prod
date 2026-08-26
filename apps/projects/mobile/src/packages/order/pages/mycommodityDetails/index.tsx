@@ -228,7 +228,7 @@ const MyCommodityDetails = () => {
       requestPayment({
         timeStamp: codeUrl.timeStamp,
         nonceStr: codeUrl.nonceStr,
-        package: codeUrl.package,
+        package: codeUrl.packageValue ?? codeUrl.package,
         signType: codeUrl.signType,
         paySign: codeUrl.paySign,
         success: function () {

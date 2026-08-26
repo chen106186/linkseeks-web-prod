@@ -44,7 +44,7 @@ const Pay = () => {
         const tradeCode = res.data.tradeCode
         requestPayment({
           nonceStr: payParam?.nonceStr,
-          package: payParam?.package,
+          package: payParam?.packageValue ?? payParam?.package,
           paySign: payParam?.paySign,
           timeStamp: payParam?.timeStamp,
           signType: payParam?.signType,
@@ -115,7 +115,7 @@ const Pay = () => {
               requestPayment({
                 timeStamp: codeUrl.timeStamp,
                 nonceStr: codeUrl.nonceStr,
-                package: codeUrl.package,
+                package: codeUrl.packageValue ?? codeUrl.package,
                 signType: codeUrl.signType,
                 paySign: codeUrl.paySign,
                 success: function () {

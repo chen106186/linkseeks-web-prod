@@ -395,7 +395,7 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
               })
             },
             fail: function (res) {
-              // Toast.show({ title: res, icon: 'none' })
+              console.error('[requestPayment fail]', JSON.stringify(res))
             },
           })
         } else {

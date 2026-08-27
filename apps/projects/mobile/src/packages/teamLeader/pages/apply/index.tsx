@@ -134,7 +134,7 @@ const TeamLeaderApply: React.FC<{}> = () => {
     <span style="font-size: 15px">1.丰厚的佣金：获得订单实际价格比例的佣金</span>
 </p>
 <p style="margin-bottom: 11px; font-family: 等线; font-size: 15px; line-height: normal;">
-    <span style="font-size: 15px">2.优质的培训：云链认养鲜为您提供专业的社区团购经验分享</span>
+    <span style="font-size: 15px">2.优质的培训：云净链为您提供专业的社区团购经验分享</span>
 </p>
 <p class="" data-tools-id="22431">
     <br/>

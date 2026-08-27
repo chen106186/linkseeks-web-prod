@@ -23,6 +23,7 @@ import { useTelCode } from '@apps/services'
 import { usePageInit } from '@/hooks/usePageInit'
 import { useMobileIntl } from '@apps/locales'
 import { getOssUrlPath } from '@apps/constants'
+import { LOCAL_LEGAL_AGREEMENTS } from '@/constants/legalAgreements'
 const fill = getOssUrlPath('/miniprogram/assets/images/arrow-down-fill@2x.png')
 const EyeOff = getOssUrlPath('/miniprogram/assets/images/EyeOff.png')
 const Eye = getOssUrlPath('/miniprogram/assets/images/eye.png')
@@ -284,11 +285,17 @@ const Register = () => {
   const findAllByColumnType = () => {
     getManageContentNoticeFindAllByColumnType({
       columnType: '2',
-    }).then((res: any) => {
-      if (res.code === 1000) {
-        setColumnTypeList(res.data)
-      }
     })
+      .then((res: any) => {
+        if (res.code === 1000 && res.data?.length) {
+          setColumnTypeList(res.data)
+        } else {
+          setColumnTypeList(LOCAL_LEGAL_AGREEMENTS as any)
+        }
+      })
+      .catch(() => {
+        setColumnTypeList(LOCAL_LEGAL_AGREEMENTS as any)
+      })
   }
   usePageInit()
   useEffect(() => {
@@ -299,6 +306,8 @@ const Register = () => {
     Router.navigateTo('basicSetting/webView', {
       id: items.id,
       type: 'sign',
+      columnType: items.columnType,
+      title: items.title,
     })
   }
 

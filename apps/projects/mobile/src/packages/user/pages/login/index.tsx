@@ -73,6 +73,8 @@ const Login = () => {
     Router.navigateTo('basicSetting/webView', {
       id: item.id,
       type: 'sign',
+      columnType: item.columnType,
+      title: item.title,
     })
   }
   return (
@@ -111,7 +113,7 @@ const Login = () => {
                 })}
               ,
             </View>
-            <View className={styles['logoTitle']}>欢迎来到云链认养鲜</View>
+            <View className={styles['logoTitle']}>欢迎来到云净链</View>
           </View>
           {/* 登录方式 */}
           <View className={styles['LoginType']}>
@@ -138,7 +140,7 @@ const Login = () => {
               </Text>
             </View>
           ) : (
-            <View className={styles['tips']}>未注册用户，自动注册创建云链认养鲜账号</View>
+            <View className={styles['tips']}>未注册用户，自动注册创建云净链账号</View>
           )}
 
           <ModeMobile toggle={toggle} onConfirm={onConfirm} onClose={onClose} />

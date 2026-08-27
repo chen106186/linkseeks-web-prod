@@ -41,7 +41,7 @@ const Privacy: React.FC<PrivacyProps> = ({ onAgree, onDisagree, privacyContractN
       <View className="privacy-container">
         <View className="privacy-container-title">用户隐私保护提示</View>
         <View className="privacy-container-box">
-          <View className="privacy-container-text">感谢您使用云链认养鲜小程序，您在使用该服务前，请仔细阅读</View>
+          <View className="privacy-container-text">感谢您使用云净链小程序，您在使用该服务前，请仔细阅读</View>
           <View
             className="privacy-container-privacy-text"
             onClick={() => {

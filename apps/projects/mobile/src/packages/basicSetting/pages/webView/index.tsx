@@ -13,12 +13,13 @@ const tagStyle = {
 /* 外部网页 */
 const WebInfo = () => {
   const {
-    params: { id, type, columnType, isMember, memberId, roleId },
+    params: { id, type, columnType, title, isMember, memberId, roleId },
   } = useRouter()
   const { columnTypeList } = useWebView(
     id,
     type,
     columnType,
+    title,
     isMember
       ? {
           memberId,

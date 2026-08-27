@@ -14,6 +14,7 @@ import { useMobileIntl } from '@apps/locales'
 import { postMemberMobileWeixinMiniAppLogin } from '@apps/apis'
 import { getStorageSync } from '@apps/mobile-services/utils/taro'
 import { DISTRIBUTION_INVITER_ACCOUNT } from '@/constants/storage'
+import { LOCAL_LEGAL_AGREEMENTS } from '@/constants/legalAgreements'
 
 type FunctionItem = {
   /**
@@ -57,11 +58,17 @@ const useLogin = () => {
 
   /* 协议 */
   const findAllByColumnType = () => {
-    getManageContentNoticeFindWithOutContent({ columnType: '2' }).then((res: any) => {
-      if (res.code === 1000) {
-        setColumnTypeList(res.data)
-      }
-    })
+    getManageContentNoticeFindWithOutContent({ columnType: '2' })
+      .then((res: any) => {
+        if (res.code === 1000 && res.data?.length) {
+          setColumnTypeList(res.data)
+        } else {
+          setColumnTypeList(LOCAL_LEGAL_AGREEMENTS as any)
+        }
+      })
+      .catch(() => {
+        setColumnTypeList(LOCAL_LEGAL_AGREEMENTS as any)
+      })
   }
 
   /* 选择区号回调 */

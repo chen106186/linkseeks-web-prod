@@ -371,6 +371,7 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
       ...newOrderMessage,
       weChatCode,
     })
+    console.log({ pendingOrderPayRes })
     if (pendingOrderPayRes.code != 1000) {
       Toast.show({
         title: pendingOrderPayRes.message,
@@ -381,23 +382,28 @@ const FooterBtn: React.FC<Iprops> = (props: Iprops) => {
       try {
         const weChatPayParams = pendingOrderPayRes.data
         const codeUrl = JSON.parse(weChatPayParams.codeUrl)
+        console.log({ codeUrl })
         if (!IS_WEB) {
-          requestPayment({
-            timeStamp: codeUrl.timeStamp,
-            nonceStr: codeUrl.nonceStr,
-            package: codeUrl.packageValue ?? codeUrl.package,
-            signType: codeUrl.signType,
-            paySign: codeUrl.paySign,
-            success: function (res) {
-              Router.redirectTo('order/SubmitSuccess', {
-                orderId: newOrderMessage.orderIds[0],
-                storeId: otherObj.storeId,
-              })
-            },
-            fail: function (res) {
-              console.error('[requestPayment fail]', JSON.stringify(res))
-            },
-          })
+          try {
+            requestPayment({
+              timeStamp: codeUrl.timeStamp,
+              nonceStr: codeUrl.nonceStr,
+              package: codeUrl.packageValue ?? codeUrl.package,
+              signType: codeUrl.signType,
+              paySign: codeUrl.paySign,
+              success: function (res) {
+                Router.redirectTo('order/SubmitSuccess', {
+                  orderId: newOrderMessage.orderIds[0],
+                  storeId: otherObj.storeId,
+                })
+              },
+              fail: function (res) {
+                console.error('[requestPayment fail]', JSON.stringify(res))
+              },
+            })
+          } catch (e) {
+            console.error('error====', e)
+          }
         } else {
           Router.navigateTo('order/payResult', {
             type: SOURCE_TYPE.ORDER,

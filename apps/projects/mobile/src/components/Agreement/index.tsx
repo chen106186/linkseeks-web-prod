@@ -4,6 +4,7 @@ import { Checkbox, View, Text } from '@apps/mobile-ui'
 import cx from 'classnames'
 import Router from '@/utils/router'
 import { getManageContentNoticeFindWithOutContent } from '@apps/apis'
+import { LOCAL_LEGAL_AGREEMENTS, LOCAL_LEGAL_AGREEMENT_COLUMN_TYPE } from '@/constants/legalAgreements'
 import './index.scss'
 
 interface AgreementProps {
@@ -31,11 +32,19 @@ const AgreementLayout: React.FC<AgreementProps> = (props: AgreementProps) => {
   }
 
   const findAllByColumnType = async () => {
-    const { code, data, message } = await getManageContentNoticeFindWithOutContent({ columnType })
-    if (code === 1000) {
-      setAgrList(data)
-    } else {
-      showToast({ title: message, icon: 'none' })
+    try {
+      const { code, data, message } = await getManageContentNoticeFindWithOutContent({ columnType })
+      if (code === 1000 && data?.length) {
+        setAgrList(data)
+      } else if (String(columnType) === LOCAL_LEGAL_AGREEMENT_COLUMN_TYPE) {
+        setAgrList(LOCAL_LEGAL_AGREEMENTS)
+      } else {
+        showToast({ title: message, icon: 'none' })
+      }
+    } catch (e) {
+      if (String(columnType) === LOCAL_LEGAL_AGREEMENT_COLUMN_TYPE) {
+        setAgrList(LOCAL_LEGAL_AGREEMENTS)
+      }
     }
   }
 
@@ -48,7 +57,12 @@ const AgreementLayout: React.FC<AgreementProps> = (props: AgreementProps) => {
   }, [active])
 
   const webView = (item: any) => {
-    Router.navigateTo('basicSetting/webView', { id: item.id, type: 'sign', columnType: item.columnType })
+    Router.navigateTo('basicSetting/webView', {
+      id: item.id,
+      type: 'sign',
+      columnType: item.columnType,
+      title: item.title,
+    })
   }
 
   return (

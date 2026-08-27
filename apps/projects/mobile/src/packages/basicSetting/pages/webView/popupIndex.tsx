@@ -14,11 +14,12 @@ const tagStyle = {
 
 /* 外部网页 */
 const WebInfo = (props) => {
-  const { id, type = 'sign', columnType, isMember, memberId, roleId } = props
+  const { id, type = 'sign', columnType, title, isMember, memberId, roleId } = props
   const { columnTypeList } = useWebView(
     id,
     type,
     columnType,
+    title,
     isMember
       ? {
           memberId,

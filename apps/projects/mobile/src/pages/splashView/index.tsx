@@ -1,33 +1,17 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
-import React, { useEffect, useState } from 'react'
-import Manifest from '@/constants/manifest'
+import React, { useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
 import { CountDown, View, Text, Image } from '@apps/mobile-ui'
-import { getManageContentImageStartAndGuide } from '@apps/apis'
 import useJmpHome from '@/hooks/useJmpHome'
 import { createSelectorQuery, setNavigationBarTitle } from '@apps/mobile-services/utils/taro'
 import { IS_WEB, PRIVACY_POP } from '@/constants'
-import indexIcon from '@/assets/images/index.png'
+import yunjinglianImage from '@/assets/images/yunjinglian.jpg'
 import styles from './index.module.scss'
 import { getValueByLanguage } from '@/utils'
 import useParameterValue from '@/hooks/useParameterValue'
 const SplashView: React.FC = () => {
-  const [splashImage, setSplashImage] = useState('')
-  const { loading, parameterValue } = useParameterValue()
+  const { parameterValue } = useParameterValue()
   const { jmpDefaultHome } = useJmpHome()
-  useEffect(() => {
-    console.log('Enter SplashView')
-    getManageContentImageStartAndGuide(
-      {},
-      {
-        timeout: 5000,
-      },
-    ).then((res) => {
-      if (res.code === 1000) {
-        setSplashImage(res.data.startUrl)
-      }
-    })
-  }, [])
 
   useEffect(() => {
     if (parameterValue) {
@@ -70,14 +54,10 @@ const SplashView: React.FC = () => {
             )}
           </CountDown>
         </View>
-        {(splashImage && <Image src={splashImage} className={styles.img} />) || null}
-      </View>
-      <View className={styles.bottom}>
-        <Image src={parameterValue?.logo} className={styles.logo} />
-        {/* <View className={styles.appName}>
-          <Text className={styles.name}>{Manifest.APP_NAME}</Text>
-          <Text className={styles.text}>{Manifest.SLOGEN}</Text>
-        </View> */}
+        <View className={styles.content}>
+          <Image src={yunjinglianImage} className={styles.img} mode="aspectFit" />
+          <Text className={styles.name}>云净链</Text>
+        </View>
       </View>
     </View>
   )

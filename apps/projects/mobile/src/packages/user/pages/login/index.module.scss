@@ -1,5 +1,5 @@
 @import '@/styles/variables.scss';
-@import "@/styles/utils/modal.scss";
+@import '@/styles/utils/modal.scss';
 
 .container {
   padding: 0px 23px;
@@ -55,7 +55,7 @@
     }
 
     .ative::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -5px;
       width: 24px;
@@ -126,9 +126,15 @@
     color: #909399;
   }
 
+  &-separator {
+    font-size: 12px;
+    color: #909399;
+  }
+
   &-signRight {
     font-size: 12px;
-    color: #252D37;
+    color: $theme-color;
+    text-decoration: underline;
   }
 }
 

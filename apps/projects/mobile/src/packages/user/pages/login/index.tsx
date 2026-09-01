@@ -18,10 +18,7 @@ import OnClickView from './components/OnClick'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
 import { useMobileIntl } from '@apps/locales'
-import { getOssUrlPath } from '@apps/constants'
-import useParameterValue from '@/hooks/useParameterValue'
-import { getValueByLanguage } from '@/utils'
-import logoPng from '@/assets/images/logo.png'
+import loginLogo from '@/assets/images/login-logo.jpg'
 const Login = () => {
   const intl = useIntl()
   const { updatePwdToggle, loginData, dayCount, setUpdatePwdToggle, setLoginData, setDayCount } = useLoginInit()
@@ -49,7 +46,6 @@ const Login = () => {
   const {
     userStore: { shopAndSite },
   } = useStores()
-  const { loading, parameterValue } = useParameterValue()
 
   const renderComponentByType = () => {
     switch (current) {
@@ -104,13 +100,12 @@ const Login = () => {
           }}
         >
           <View className={styles['head']}>
-            <Image src={parameterValue?.logo || logoPng} className={styles['logo']} />
+            <Image src={loginLogo} className={styles['logo']} />
             <View className={styles['logoTitle']}>
-              {getValueByLanguage(parameterValue?.welcomeCall) ||
-                intl.formatMessage({
-                  id: 'user.nihao',
-                  defaultMessage: '你好',
-                })}
+              {intl.formatMessage({
+                id: 'user.nihao',
+                defaultMessage: '你好',
+              })}
               ,
             </View>
             <View className={styles['logoTitle']}>欢迎来到云净链</View>
@@ -186,17 +181,19 @@ const Login = () => {
               {/* {translate('mobile.resource.user.denglujidaibiao')} */}
               已阅读并同意
             </Text>
-            {columnTypeList.map((items: any) => (
-              <Text
-                key={items.id}
-                className={styles['agrbox-signRight']}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  webView(items)
-                }}
-              >
-                {`《${items.title}》`}
-              </Text>
+            {columnTypeList.map((items: any, index: number) => (
+              <React.Fragment key={items.id}>
+                {index > 0 && <Text className={styles['agrbox-separator']}>、</Text>}
+                <Text
+                  className={styles['agrbox-signRight']}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    webView(items)
+                  }}
+                >
+                  {`《${items.title}》`}
+                </Text>
+              </React.Fragment>
             ))}
           </View>
         </View>

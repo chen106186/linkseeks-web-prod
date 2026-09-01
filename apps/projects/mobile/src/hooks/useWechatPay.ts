@@ -7,32 +7,36 @@ type WechatParamsType = {
   timestamp: string
   prepayid: string
   sign: string
+  signType?: 'MD5' | 'RSA' | 'HMAC-SHA256'
 }
 
 function useWechatPay() {
   const wxPay = async (params: WechatParamsType, callBack: Function) => {
-    const { partnerid, prepayid, sign, timestamp, noncestr } = params
+    const { prepayid, sign, timestamp, noncestr, signType } = params
 
-    console.log({
+    // 根据签名长度自动判定：V3 RSA 签名 Base64 约 344 字符；V2 MD5 是 32 位 hex
+    const finalSignType = signType || (sign && sign.length > 64 ? 'RSA' : 'MD5')
+
+    const payParams = {
       timeStamp: timestamp,
       nonceStr: noncestr,
       package: `prepay_id=${prepayid}`,
-      signType: 'MD5',
+      signType: finalSignType,
       paySign: sign,
-    })
+    }
+    console.log('========== requestPayment params ==========', JSON.stringify(payParams))
+
     requestPayment({
-      // partnerId: partnerid,
-      timeStamp: timestamp,
-      nonceStr: noncestr,
-      package: `prepay_id=${prepayid}`,
-      signType: 'MD5',
-      paySign: sign,
+      ...payParams,
       success: function (res) {
-        console.log(res, 'res')
+        console.log('========== requestPayment SUCCESS ==========', res)
         callBack(res)
       },
       fail: function (err) {
-        console.log('🚀 ~ file: useWechatPay.ts ~ line 27 ~ wxPay ~ err', err)
+        console.error('========== requestPayment FAIL ==========')
+        console.error('errMsg =', err?.errMsg)
+        console.error('errCode =', err?.errCode)
+        console.error('raw =', JSON.stringify(err))
       },
     })
   }

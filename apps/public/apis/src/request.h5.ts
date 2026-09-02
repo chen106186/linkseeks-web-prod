@@ -70,8 +70,9 @@ request.interceptors.request.use((config) => {
   }
   config.headers['showError'] = config?.showError
 
-  const _language = getI18n()?.language
-  config.headers['Accept-Language'] = _language ? _language : 'zh-CN'
+  // 强制中文，避免用户浏览器语言为英文时后端返回英文枚举名
+  // 如果之后要开放多语言，改回 getI18n()?.language 即可
+  config.headers['Accept-Language'] = 'zh-CN'
   return config
 })
 

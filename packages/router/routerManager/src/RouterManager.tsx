@@ -32,10 +32,17 @@ export class RouterManager {
     if (path.startsWith(bn + '/')) return path.slice(bn.length)
     return path
   }
+
   /**
-   * 路由跳转，会往路由堆栈中推入一个路由信息
-   * 注意：React Router 的 basename 已在 createBrowserRouter 内自动前置，
-   * 这里不能再手动拼接 basename，否则会出现 /platform/platform/xxx 双前缀。
+   * 统一站内跳转的浏览器路径，保证 Nginx 能命中 /admin/ 或 /platform/ 的 SPA 回退规则。
+   */
+  toBrowserPath(path: string) {
+    const cleanPath = this.stripBasename(this.prefixPath(path))
+    return this.basename ? `${this.basename}${cleanPath}` : cleanPath
+  }
+
+  /**
+   * 路由跳转，会往路由堆栈中推入一个路由信息。
    */
   push(path: string, opts?: RouterNavigationOptions) {
     const { query, ...state } = opts || {}
@@ -46,16 +53,15 @@ export class RouterManager {
       }
       _queryStr = _queryStr.replace(/&/, '?')
     }
-    const cleanPath = this.stripBasename(this.prefixPath(path))
-    this.router.navigate(`${cleanPath}${_queryStr}`, { state })
+    const browserPath = this.toBrowserPath(path)
+    this.router.navigate(`${browserPath}${_queryStr}`, { state })
   }
 
   /**
    * 重定向
    */
   redirect(path: string) {
-    const cleanPath = this.stripBasename(this.prefixPath(path))
-    this.router.navigate(cleanPath, { replace: true })
+    this.router.navigate(this.toBrowserPath(path), { replace: true })
   }
 
   /**
@@ -63,7 +69,7 @@ export class RouterManager {
    * @param path
    */
   replace(path: string, domain: string = '') {
-    const url = `${domain}${this.basename}${this.prefixPath(path)}`
+    const url = `${domain}${this.toBrowserPath(path)}`
     location.replace(url)
   }
 
@@ -81,14 +87,11 @@ export class RouterManager {
 
   goHome(replace = false) {
     console.log('go home')
-    const homePath = RouterManager.homePath
-    // homePath 有时是后端返回的菜单第一项 path，可能已带 basename，需要清洗
-    const cleanHome = this.stripBasename(this.prefixPath(homePath || '/'))
+    const homePath = RouterManager.homePath || '/'
     if (replace) {
-      // window.location 需要带上 basename
-      location.replace(`${this.basename}${cleanHome}`)
+      location.replace(this.toBrowserPath(homePath))
     } else {
-      this.redirect(cleanHome)
+      this.redirect(homePath)
     }
   }
 
@@ -99,17 +102,17 @@ export class RouterManager {
 
   open(url: string, isWindow = true) {
     if (isWindow) {
-      window.open(this.basename + url)
+      window.open(this.toBrowserPath(url))
     } else {
-      this.push(this.basename + url)
+      this.push(url)
     }
   }
 
   jump(url: string, isWindow = true) {
     if (isWindow) {
-      window.location.href = this.basename + url
+      window.location.href = this.toBrowserPath(url)
     } else {
-      this.push(this.basename + url)
+      this.push(url)
     }
   }
 

@@ -3,9 +3,12 @@ import { RouterManager, Router } from '@linkseeks/router-manager'
 import { authService } from '@apps/services'
 import NoPermissionPage from './pages/403/view'
 
+// 与 Vite 的 base 配置共用同一个部署前缀：生产环境为 /admin，开发环境为根路径。
+const baseRoutePrefix = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 const whiteList = ['/user/login', '/user/forget']
 export default defineConfig({
-  baseRoutePrefix: import.meta.env.PROD ? '/admin' : '',
+  baseRoutePrefix,
   indexRouter: '/home',
 
   notFoundRouter: '/404',

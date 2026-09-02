@@ -2,8 +2,12 @@ import { defineConfig } from '@linkseeks/router-core'
 import { Router, RouterManager } from '@linkseeks/router-manager'
 import { authService } from '@apps/services'
 import NoPermissionPage from './pages/403/view'
+
+// 与 Vite 的 base 配置共用同一个部署前缀：生产环境为 /platform，开发环境为根路径。
+const baseRoutePrefix = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 export default defineConfig({
-  baseRoutePrefix: import.meta.env.PROD ? '/platform' : '',
+  baseRoutePrefix,
   indexRouter: '/home',
 
   notFoundRouter: '/',

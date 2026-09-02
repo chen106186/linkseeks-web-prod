@@ -10,7 +10,7 @@ import { getAsyncStorage, setAsyncStorage } from '@apps/mobile-services/utils/st
 import Store from '@/store'
 import { StoreProvider } from '@/store/useStores'
 import axios from 'axios'
-// import '@/components/Privacy'
+import '@/components/Privacy'
 import './app.scss'
 // import * as newLocales from '@apps/locales/mobile'
 import { ShopInfoType } from './store/userStore/model'

@@ -19,6 +19,19 @@ export class RouterManager {
   prefixPath(path: string) {
     return path.startsWith('/') ? path : `/${path}`
   }
+
+  /**
+   * 剥掉传入路径开头多余的 basename，防止 React Router 再前置一次导致双前缀。
+   * 例如 basename=/platform 时，'/platform/user/login' -> '/user/login'
+   * 兼容后端菜单表存了带 basename 的 path 的情况。
+   */
+  stripBasename(path: string) {
+    if (!this.basename || !path) return path
+    const bn = this.basename
+    if (path === bn) return '/'
+    if (path.startsWith(bn + '/')) return path.slice(bn.length)
+    return path
+  }
   /**
    * 路由跳转，会往路由堆栈中推入一个路由信息
    * 注意：React Router 的 basename 已在 createBrowserRouter 内自动前置，
@@ -33,14 +46,16 @@ export class RouterManager {
       }
       _queryStr = _queryStr.replace(/&/, '?')
     }
-    this.router.navigate(`${this.prefixPath(path)}${_queryStr}`, { state })
+    const cleanPath = this.stripBasename(this.prefixPath(path))
+    this.router.navigate(`${cleanPath}${_queryStr}`, { state })
   }
 
   /**
    * 重定向
    */
   redirect(path: string) {
-    this.router.navigate(this.prefixPath(path), { replace: true })
+    const cleanPath = this.stripBasename(this.prefixPath(path))
+    this.router.navigate(cleanPath, { replace: true })
   }
 
   /**
@@ -66,10 +81,14 @@ export class RouterManager {
 
   goHome(replace = false) {
     console.log('go home')
+    const homePath = RouterManager.homePath
+    // homePath 有时是后端返回的菜单第一项 path，可能已带 basename，需要清洗
+    const cleanHome = this.stripBasename(this.prefixPath(homePath || '/'))
     if (replace) {
-      location.replace(RouterManager.homePath)
+      // window.location 需要带上 basename
+      location.replace(`${this.basename}${cleanHome}`)
     } else {
-      this.redirect(RouterManager.homePath)
+      this.redirect(cleanHome)
     }
   }
 

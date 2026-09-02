@@ -55,9 +55,17 @@ const initLoginContextDispatch = () => {
       RouterManager.setHomePath(authList[0].path)
     }
     if (redirect) {
-      location.replace(decodeURIComponent(decodeURLBase64(redirect)))
+      // 同源 redirect 统一交给 RouterManager，避免后端菜单路径绕过 /platform 前缀。
+      const decoded = decodeURIComponent(decodeURLBase64(redirect))
+      const redirectUrl = new URL(decoded, window.location.origin)
+      if (redirectUrl.origin !== window.location.origin) {
+        location.replace(decoded)
+      } else {
+        RouterManager.setHomePath(`${redirectUrl.pathname}${redirectUrl.search}${redirectUrl.hash}`)
+        history.goHome(true)
+      }
     } else {
-      history.goHome()
+      history.goHome(true)
     }
   }
 

@@ -21,6 +21,8 @@ export class RouterManager {
   }
   /**
    * 路由跳转，会往路由堆栈中推入一个路由信息
+   * 注意：React Router 的 basename 已在 createBrowserRouter 内自动前置，
+   * 这里不能再手动拼接 basename，否则会出现 /platform/platform/xxx 双前缀。
    */
   push(path: string, opts?: RouterNavigationOptions) {
     const { query, ...state } = opts || {}
@@ -31,23 +33,23 @@ export class RouterManager {
       }
       _queryStr = _queryStr.replace(/&/, '?')
     }
-    this.router.navigate(`${this.basename}${this.prefixPath(path)}${_queryStr}`, { state })
+    this.router.navigate(`${this.prefixPath(path)}${_queryStr}`, { state })
   }
 
   /**
    * 重定向
    */
   redirect(path: string) {
-    this.router.navigate(`${this.basename}${this.prefixPath(path)}`, { replace: true })
+    this.router.navigate(this.prefixPath(path), { replace: true })
   }
 
   /**
-   * location 重定向
+   * location 重定向（走 window.location，需要手动带 basename）
    * @param path
    */
   replace(path: string, domain: string = '') {
     const url = `${domain}${this.basename}${this.prefixPath(path)}`
-    location.replace(this.basename + url)
+    location.replace(url)
   }
 
   /**

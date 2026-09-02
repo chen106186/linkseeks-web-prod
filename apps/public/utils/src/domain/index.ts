@@ -49,6 +49,12 @@ export const getCookieDomain = () => {
   }
 
   const parts = hostname.split('.')
+  // 两段域名（如 yunjinglian.com）直接返回本身，不能 shift 成 TLD "com"，
+  // 否则浏览器拒绝给顶级域名设 cookie，导致登录态存不下来。
+  // 三段及以上（sub.example.com）去掉最左边子域名，返回上一级 example.com。
+  if (parts.length <= 2) {
+    return hostname
+  }
   parts.shift()
   return parts.join('.')
 }

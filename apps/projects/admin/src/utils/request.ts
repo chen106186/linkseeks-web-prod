@@ -93,7 +93,8 @@ baseRequest.interceptors.request.use(
     const { userId, memberId } = authInfo
     const accessToken = authInfo.accessToken || authInfo.token
     const headers: Record<string, any> = {
-      'Accept-Language': requestLanguageMaps[getCurrentLocale() as any] || 'zh',
+      // 强制中文；开放多语言时改回 requestLanguageMaps[getCurrentLocale() as any] || 'zh'
+      'Accept-Language': 'zh-CN',
       ...options.headers,
     }
     if (userId !== undefined && userId !== null) {

@@ -31,7 +31,7 @@ export async function get<T>(url: string, options?: IApiRequest): Promise<IReque
   const language = CacheManager.get('language') as string
   const headers = {
     ...options?.headers,
-    'Accept-Language': language || 'zh-CN',
+    'Accept-Language': 'zh-CN',
     source: 1,
     environment: '1',
   }
@@ -75,7 +75,7 @@ export async function post<T>(url: string, body: any, options?: IApiRequest): Pr
 
   const headers = {
     'Content-Type': 'application/json',
-    'Accept-Language': language || 'zh-CN',
+    'Accept-Language': 'zh-CN',
     accessToken,
     source: 1,
     environment: '1',

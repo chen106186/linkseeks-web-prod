@@ -47,11 +47,9 @@ request.interceptors.request.use((config) => {
 
   try {
     const authInfo = getAuth()
-    const language = localesStorage.getItem()
-    // 注意 平台后台不需要国际化
-    if (language && process.env.OUT_SOURCE != '99') {
-      config.headers['Accept-Language'] = language
-    }
+    // 强制中文，避免用户浏览器语言为英文时后端返回英文枚举名
+    // 如果之后要开放多语言，改回 localesStorage.getItem() 的取值逻辑
+    config.headers['Accept-Language'] = 'zh-CN'
 
     if (process.env.OUT_IM) {
       if (t) {

@@ -50,3 +50,4 @@ cache.json
 apps/projects/mall/logs
 
 basicConfig.json
+apps/public/apis/yapi_hashmaps.json

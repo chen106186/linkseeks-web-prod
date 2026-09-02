@@ -1,12 +1,12 @@
 const env = {
-  BACK_GATEWAY: process.env.BACK_GATEWAY || 'http://yunjinglian.com:8100',
+  BACK_GATEWAY: process.env.BACK_GATEWAY || 'https://yunjinglian.com/api',
   YAPI_REQUEST_BACK_GATEWAY:
-    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'http://yunjinglian.com:8100',
-  SOCKET_URL: process.env.SOCKET_URL || 'ws://yunjinglian.com:8100',
-  SITE_URL: process.env.SITE_URL || 'http://yunjinglian.com',
-  MEMBER_URL: process.env.MEMBER_URL || 'http://yunjinglian.com',
-  REQUEST_HEADER: process.env.REQUEST_HEADER || 'http://',
-  IM_URL: process.env.IM_URL || 'http://yunjinglian.com',
+    process.env.YAPI_REQUEST_BACK_GATEWAY || process.env.BACK_GATEWAY || 'https://yunjinglian.com/api',
+  SOCKET_URL: process.env.SOCKET_URL || 'ws://yunjinglian.com',
+  SITE_URL: process.env.SITE_URL || 'https://yunjinglian.com',
+  MEMBER_URL: process.env.MEMBER_URL || 'https://yunjinglian.com',
+  REQUEST_HEADER: process.env.REQUEST_HEADER || 'https://',
+  IM_URL: process.env.IM_URL || 'https://yunjinglian.com',
   MALL_ONLY_CLIENT: process.env.MALL_ONLY_CLIENT || false,
 }
 

@@ -34,7 +34,7 @@ export const getAppShopTypeSelect = (): Promise<GetCommodityMobileShopMobileShop
 
 const useJmpHome = () => {
   const { userStore } = useStores()
-  const { setShopAndSite, mallList } = userStore
+  const { setShopAndSite, setMallList, mallList } = userStore
 
   const jmpHome = async (info?: ShopInfoType) => {
     let shopInfo: ShopInfoType
@@ -71,10 +71,16 @@ const useJmpHome = () => {
   const jmpDefaultHome = async (): Promise<boolean> => {
     try {
       // 移动端默认商城 1为联营商城 2为自营商城
-      // const { shopDefaultType, shopSelectList = [] } = await getAppShopTypeSelect()
       const cacheShopInfo = (await getAsyncStorage(SHOP_AND_SITE)) as ShopInfoType
-      const shopSelectList = mallList
-      const shopDefaultType = mallList && mallList.length > 0 ? (mallList[0].isSelf ? '2' : '1') : '1'
+      let shopSelectList = mallList || []
+      let shopDefaultType = shopSelectList.length > 0 ? (shopSelectList[0].isSelf ? '2' : '1') : '1'
+
+      if (!shopSelectList.length) {
+        const data = await getAppShopTypeSelect()
+        shopSelectList = data.shopSelectList || []
+        shopDefaultType = data.shopDefaultType || shopDefaultType
+        setMallList(shopSelectList)
+      }
 
       // 默认取第一个商城作为默认商城
       if (shopSelectList.length > 0) {
@@ -99,11 +105,12 @@ const useJmpHome = () => {
             break
         }
       } else {
-        // 没有商城信息跳转选择商城设置页
-        showToast({
-          title: '暂无商城可访问～',
-          icon: 'none',
-        })
+        if (cacheShopInfo) {
+          setShopAndSite(cacheShopInfo)
+          jmpHome(cacheShopInfo)
+        } else {
+          Router.redirectTo('user/login')
+        }
       }
       return false
     } catch (error) {

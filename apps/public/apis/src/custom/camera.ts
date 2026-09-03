@@ -42,6 +42,8 @@ export type CommodityCameraMobileResp = {
   directionName?: string
   sortOrder?: number
   cameraStatus: 0 | 1 | 2 | 3
+  deviceSerial?: string
+  channelNo?: number
   videoUrl?: {
     id?: string
     url: string

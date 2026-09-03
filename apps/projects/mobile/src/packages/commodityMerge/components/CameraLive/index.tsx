@@ -9,8 +9,6 @@ interface CameraLiveProps {
   cameras: CommodityCameraMobileResp[]
 }
 
-const EzPlayer = 'ezplayer' as unknown as React.FC<Record<string, any>>
-
 const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   const [activeIdx, setActiveIdx] = useState(0)
 
@@ -26,19 +24,26 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   const accessToken = active.videoUrl?.accessToken?.trim()
   const isPlayable = active.cameraStatus === 1 && !!playUrl && !!accessToken
 
+  // 萤石 ezplayer 插件官方属性均为 kebab-case（access-token / device-serial / camera-no）
+  // 用 React.createElement 显式传属性名，避免 JSX 编译层把 kebab-case 转成 camelCase 或反之
+  const renderEzPlayer = () =>
+    React.createElement('ezplayer', {
+      id: `ezplayer-${active.cameraId}`,
+      'access-token': accessToken || '',
+      'device-serial': active.deviceSerial || '',
+      'camera-no': active.channelNo || 1,
+      url: playUrl || '',
+      poster: active.coverUrl,
+      autoplay: true,
+      class: 'camera-live-player__inner',
+    })
+
   return (
     <MellowCard title="基地直播视频溯源" className="camera-live-card">
       <View className="camera-live">
         <View className="camera-live-player">
           {isPlayable ? (
-            <EzPlayer
-              id={`ezplayer-${active.cameraId}`}
-              url={playUrl}
-              accessToken={accessToken}
-              poster={active.coverUrl}
-              autoPlay
-              className="camera-live-player__inner"
-            />
+            renderEzPlayer()
           ) : (
             <View className="camera-live-offline">
               {active.coverUrl ? <ImageBox source={active.coverUrl} className="camera-live-offline__cover" /> : null}

@@ -14,24 +14,29 @@ const EzPlayer = 'ezplayer' as unknown as React.FC<Record<string, any>>
 const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   const [activeIdx, setActiveIdx] = useState(0)
 
-  const onlineCameras = useMemo(() => cameras.filter((c) => c.cameraStatus === 1 && c.videoUrl?.url), [cameras])
+  const playableCameras = useMemo(
+    () => cameras.filter((c) => c.cameraStatus === 1 && c.videoUrl?.url && c.videoUrl?.accessToken),
+    [cameras],
+  )
 
   if (!cameras.length) return null
 
   const active = cameras[activeIdx] || cameras[0]
-  const isOnline = active.cameraStatus === 1 && !!active.videoUrl?.url
+  const playUrl = active.videoUrl?.url?.trim()
+  const accessToken = active.videoUrl?.accessToken?.trim()
+  const isPlayable = active.cameraStatus === 1 && !!playUrl && !!accessToken
 
   return (
-    <MellowCard bodyStyle={{ padding: 0 }} className="camera-live-card">
+    <MellowCard title="基地直播视频溯源" className="camera-live-card">
       <View className="camera-live">
         <View className="camera-live-player">
-          {isOnline ? (
+          {isPlayable ? (
             <EzPlayer
               id={`ezplayer-${active.cameraId}`}
-              url={active.videoUrl!.url}
-              access-token={active.videoUrl!.accessToken}
+              url={playUrl}
+              accessToken={accessToken}
               poster={active.coverUrl}
-              autoplay
+              autoPlay
               className="camera-live-player__inner"
             />
           ) : (
@@ -61,9 +66,9 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
           </View>
         )}
 
-        {onlineCameras.length === 0 && (
+        {playableCameras.length === 0 && (
           <View className="camera-live-empty-hint">
-            <Text>当前所有摄像头均离线</Text>
+            <Text>暂无可用直播画面</Text>
           </View>
         )}
       </View>

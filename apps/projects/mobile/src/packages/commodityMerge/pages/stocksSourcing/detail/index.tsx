@@ -692,12 +692,6 @@ const StocksSourcingDetail: React.FC = () => {
           <View className="stocksSourcing-detail">
             <Anchor.Item title="商品" customClassName="stocksSourcing-detail-anchor-item">
               <Banner banner={banner} />
-              {liveCameras.length > 0 && (
-                <>
-                  <Gap />
-                  <CameraLive cameras={liveCameras} />
-                </>
-              )}
               <Gap />
               {activityType !== `${ACTIVITY_SECKILL_NUMBER}` && !marketingCampaign?.seckillStartTime ? (
                 <BasicInfoCard
@@ -803,6 +797,12 @@ const StocksSourcingDetail: React.FC = () => {
                     skuId={currentSku.skuId}
                     onJump={() => handleVisibleDiscountPackagePopup(true)}
                   />
+                </>
+              )}
+              {liveCameras.length > 0 && (
+                <>
+                  <Gap />
+                  <CameraLive cameras={liveCameras} />
                 </>
               )}
             </Anchor.Item>

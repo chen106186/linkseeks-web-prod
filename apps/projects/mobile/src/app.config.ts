@@ -37,13 +37,12 @@ export default {
     factoryRouterPackage('afterService', afterServiceRouter),
     factoryRouterPackage('companyNews', companyNewsRouter),
     factoryRouterPackage('members', membersRouter),
-    factoryRouterPackage('commodityMerge', commodityMergeRouter),
-    // factoryRouterPackage('commodityMerge', commodityMergeRouter, {
-    //   ezplayer: {
-    //     version: 'latest',
-    //     provider: 'wxf2b3a0262975d8c2',
-    //   },
-    // }),
+    factoryRouterPackage('commodityMerge', commodityMergeRouter, {
+      ezplayer: {
+        version: 'latest',
+        provider: 'wxf2b3a0262975d8c2',
+      },
+    }),
     factoryRouterPackage('contract', contractRouter),
     factoryRouterPackage('shop', shopRouter),
     factoryRouterPackage('categoryNavigation', categoryNavigation),

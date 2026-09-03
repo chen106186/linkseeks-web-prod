@@ -33,3 +33,27 @@ export const getCommodityWebCameraPage = async (params?: CameraRequest, config?:
     ctlType: 'none',
     ...config,
   })
+
+export type CommodityCameraMobileResp = {
+  id: number
+  cameraId: number
+  cameraName: string
+  coverUrl?: string
+  directionName?: string
+  sortOrder?: number
+  cameraStatus: 0 | 1 | 2 | 3
+  videoUrl?: {
+    id?: string
+    url: string
+    expireTime?: string
+    accessToken?: string
+  } | null
+}
+
+export const getCommodityMobileCameraListByCommodity = async (params: { commodityId: number | string }, config?: any) =>
+  request<CommodityCameraMobileResp[]>('/commodity/mobile/camera/listByCommodity', {
+    params,
+    method: 'GET',
+    ctlType: 'none',
+    ...config,
+  })

@@ -23,11 +23,12 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   const playUrl = active.videoUrl?.url?.trim()
   const accessToken = active.videoUrl?.accessToken?.trim()
 
-  // 从 ezopen:// URL 兜底解析出 deviceSerial 和 channel，防止后端字段缺失
-  // 例：ezopen://open.ys7.com/GV6073093/1.live → deviceSerial=GV6073093, channel=1
+  // 从 ezopen:// 或 rtmp:// URL 兜底解析 deviceSerial 和 channel，防止后端字段缺失
+  // ezopen://open.ys7.com/GV6073093/1.live → sn=GV6073093, ch=1
+  // rtmp://open.ys7.com/GV6073093/1/live   → sn=GV6073093, ch=1
   const parseFromUrl = (url?: string): { sn: string; ch: number } => {
     if (!url) return { sn: '', ch: 1 }
-    const m = url.match(/ezopen:\/\/[^/]+\/([^/]+)\/(\d+)(?:\.|$)/i)
+    const m = url.match(/(?:ezopen|rtmp|rtsp|hls):\/\/[^/]+\/([A-Za-z0-9]+)[/.](\d+)/i)
     return { sn: m?.[1] || '', ch: m?.[2] ? Number(m[2]) : 1 }
   }
   const parsed = parseFromUrl(playUrl)
@@ -38,18 +39,31 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   // 萤石 ezplayer 插件官方属性均为 kebab-case（access-token / device-serial / camera-no / type）
   // 用 React.createElement 显式传属性名，避免 JSX 编译层把 kebab-case 转成 camelCase 或反之
   // type: 1=预览(live) 2=回放(playback)，必填
-  const renderEzPlayer = () =>
-    React.createElement('ezplayer', {
+  const renderEzPlayer = () => {
+    // 打印实际传入插件的参数，方便排查
+    console.log('[CameraLive] ezplayer props', {
+      accessToken,
+      deviceSerial,
+      cameraNo,
+      playUrl,
+      raw: active,
+    })
+    return React.createElement('ezplayer', {
       id: `ezplayer-${active.cameraId}`,
       type: 1,
+      // 同时传 kebab-case 和 camelCase，兼容不同版本插件
       'access-token': accessToken || '',
+      accessToken: accessToken || '',
       'device-serial': deviceSerial,
+      deviceSerial,
       'camera-no': cameraNo,
+      cameraNo,
       url: playUrl || '',
       poster: active.coverUrl,
       autoplay: true,
       class: 'camera-live-player__inner',
     })
+  }
 
   return (
     <MellowCard title="基地直播视频溯源" className="camera-live-card">

@@ -45,7 +45,9 @@ import useGetTradeRecord from '../../../hooks/useGetTradeRecord'
 import useGetEvaluateRecord from '../../../hooks/useGetEvaluateRecord'
 import useGetMarketingCampaign from '../../../hooks/useGetMarketingCampaign'
 import useStockAddress from '../../../hooks/useStockAddress'
+import useCommodityCamera from '../../../hooks/useCommodityCamera'
 import Banner from '../../../components/Banner'
+import CameraLive from '../../../components/CameraLive'
 import Bookshelf from '../../../components/Bookshelf'
 import EvaluateRecordCard from '../../../components/EvaluateRecordCard'
 import TransactionRecordCard from '../../../components/TransactionRecordCard'
@@ -180,6 +182,8 @@ const StocksSourcingDetail: React.FC = () => {
     skuId: skuId ? +skuId : undefined,
     channelMemberId: +channelMemberId!,
   })
+
+  const { cameras: liveCameras } = useCommodityCamera({ commodityId: +commodityId })
 
   const {
     visibleStockAddressPopup,
@@ -688,6 +692,12 @@ const StocksSourcingDetail: React.FC = () => {
           <View className="stocksSourcing-detail">
             <Anchor.Item title="商品" customClassName="stocksSourcing-detail-anchor-item">
               <Banner banner={banner} />
+              {liveCameras.length > 0 && (
+                <>
+                  <Gap />
+                  <CameraLive cameras={liveCameras} />
+                </>
+              )}
               <Gap />
               {activityType !== `${ACTIVITY_SECKILL_NUMBER}` && !marketingCampaign?.seckillStartTime ? (
                 <BasicInfoCard

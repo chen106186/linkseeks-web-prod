@@ -10,7 +10,7 @@ export default {
   navigationStyle: 'custom',
   enableShareAppMessage: true,
   enableShareTimeline: true,
-  // usingComponents: {
-  //   ezplayer: 'plugin://ezplayer/ezplayer',
-  // },
+  usingComponents: {
+    ezplayer: 'plugin://ezplayer/ezplayer',
+  },
 }

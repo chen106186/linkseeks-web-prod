@@ -207,10 +207,13 @@ const CommonNavCard: React.FC<CommonNavCardProps> = (props) => {
           break
         // 外部链接跳转
         case 'extra/webview':
+          if (!info.url) return
           preload({
             url: info.url,
             title: info.name,
           })
+          // 直接传参，避免 preloadData 在部分小程序场景下丢失导致白屏
+          param.webUrl = info.url
           break
         default:
           break

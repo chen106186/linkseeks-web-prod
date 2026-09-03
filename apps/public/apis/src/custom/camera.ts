@@ -34,6 +34,45 @@ export const getCommodityWebCameraPage = async (params?: CameraRequest, config?:
     ...config,
   })
 
+export const getCommodityWebCameraAvailableList = async (config?: any) =>
+  request('/commodity/web/camera/availableList', {
+    method: 'GET',
+    ctlType: 'none',
+    ...config,
+  })
+
+export const getCommodityWebCameraBindListByCommodity = async (params?: CameraRequest, config?: any) =>
+  request('/commodity/web/camera/bindListByCommodity', {
+    params,
+    method: 'GET',
+    ctlType: 'none',
+    ...config,
+  })
+
+export const postCommodityWebCameraBind = async (params?: CameraRequest, config?: any) =>
+  request('/commodity/web/camera/bind', {
+    data: params,
+    method: 'POST',
+    ctlType: 'message',
+    ...config,
+  })
+
+export const postCommodityWebCameraUnbind = async (params?: CameraRequest, config?: any) =>
+  request('/commodity/web/camera/unbind', {
+    data: params,
+    method: 'POST',
+    ctlType: 'message',
+    ...config,
+  })
+
+export const postCommodityWebCameraCheckConnection = async (params?: CameraRequest, config?: any) =>
+  request('/commodity/web/camera/checkConnection', {
+    data: params,
+    method: 'POST',
+    ctlType: 'none',
+    ...config,
+  })
+
 export type CommodityCameraMobileResp = {
   id: number
   cameraId: number

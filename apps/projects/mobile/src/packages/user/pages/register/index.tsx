@@ -1,7 +1,7 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
 import React, { useEffect, useState } from 'react'
 import { Input as TaroInput } from '@tarojs/components'
-import { View, Text, Image, Input, Modal } from '@apps/mobile-ui'
+import { View, Text, Image, Input, Modal, Checkbox } from '@apps/mobile-ui'
 import usePasswordVerify from '@apps/services/verify/usePasswordVerify'
 import { showToast, setNavigationBarTitle, pxTransform, getCurrentPages } from '@apps/mobile-services/utils/taro'
 import { setAsyncStorage } from '@apps/mobile-services/utils/storage'
@@ -27,8 +27,6 @@ import { LOCAL_LEGAL_AGREEMENTS } from '@/constants/legalAgreements'
 const fill = getOssUrlPath('/miniprogram/assets/images/arrow-down-fill@2x.png')
 const EyeOff = getOssUrlPath('/miniprogram/assets/images/EyeOff.png')
 const Eye = getOssUrlPath('/miniprogram/assets/images/eye.png')
-const CheckedIcon = getOssUrlPath('/miniprogram/assets/images/Checked-@2x.png')
-const DefaultIcon = getOssUrlPath('/miniprogram/assets/images/Default@2x.png')
 type MobileParamsType = {
   phone: string
   smsCode: string
@@ -373,7 +371,10 @@ const Register = () => {
             })}
             onChange={(e) => setKey(e, 'smsCode')}
           />
-          <Text onClick={getCode} className={styles['codeNumber']}>
+          <Text
+            onClick={getCode}
+            className={`${styles['codeNumber']} ${btnDisabled ? styles['codeNumber-disabled'] : ''}`}
+          >
             {btnContent}{' '}
           </Text>
         </View>
@@ -419,7 +420,7 @@ const Register = () => {
           />
         </View>
         <View className={styles['sign']}>
-          <Image src={select ? CheckedIcon : DefaultIcon} onClick={() => setSelect(!select)} />
+          <Checkbox checked={select} size={18} onChange={(checked) => setSelect(checked)} />
           <View className={styles['signFlex']}>
             <Text className={styles['signText']} onClick={() => setSelect(!select)}>
               {intl.formatMessage({
@@ -427,10 +428,13 @@ const Register = () => {
                 defaultMessage: '阅读并同意',
               })}
             </Text>
-            {columnTypeList.map((items: any) => (
-              <Text key={items.id} className={styles['signRight']} onClick={() => webView(items)}>
-                《{items.title}》{' '}
-              </Text>
+            {columnTypeList.map((items: any, index: number) => (
+              <React.Fragment key={items.id}>
+                {index > 0 && <Text className={styles['signSeparator']}>、</Text>}
+                <Text className={styles['signRight']} onClick={() => webView(items)}>
+                  {`《${items.title}》`}
+                </Text>
+              </React.Fragment>
             ))}
           </View>
         </View>

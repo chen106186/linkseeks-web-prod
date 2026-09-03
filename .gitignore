@@ -51,3 +51,5 @@ apps/projects/mall/logs
 
 basicConfig.json
 apps/public/apis/yapi_hashmaps.json
+build-prod-admin-platform.bat
+run-build-pro.bat

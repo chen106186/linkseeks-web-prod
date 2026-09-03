@@ -110,18 +110,12 @@
 	}
   .sign {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-top: 10px;
-
-    Image ,taro-image-core {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      // margin-top: 12px;
-    }
 
     .signFlex {
       flex: 1;
+      margin-left: 6px;
     }
 
     .signText {
@@ -129,9 +123,15 @@
       color: #909399;
     }
 
-    .signRight {
-      color: #000;
+    .signSeparator {
       font-size: 12px;
+      color: #909399;
+    }
+
+    .signRight {
+      color: $theme-color;
+      font-size: 12px;
+      text-decoration: underline;
     }
   }
 
@@ -176,6 +176,10 @@
    width: 80px !important;
    text-align: center;
    padding: 8px 0 !important;
+}
+
+.codeNumber-disabled {
+   background: #C0C4CC;
 }
 
 .register-model {

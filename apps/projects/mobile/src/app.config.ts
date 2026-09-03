@@ -68,7 +68,6 @@ export default {
   },
   requiredPrivateInfos: [
     'getLocation', // 获取精确地理位置
-    'getPhoneNumber', // 微信手机号授权，用于一键登录和注册
   ],
   __usePrivacyCheck__: true, //开启隐私校验
 }

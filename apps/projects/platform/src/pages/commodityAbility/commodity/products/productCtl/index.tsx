@@ -8,7 +8,7 @@ import ProductDetail from './blocks/productDetail'
 import ProductAttr from './blocks/productAttr'
 import ProductSetting from './blocks/productSetting'
 import SpecsSetting from './blocks/specsSetting'
-// import CameraBinding from './blocks/cameraBinding'
+import CameraBinding from './blocks/cameraBinding'
 import {
   postProductCommodityDraftSaveOrUpdateCommodityDraft,
   postProductCommoditySaveOrUpdateCommodity,
@@ -138,7 +138,7 @@ const ProductCtlWrapper = () => {
           <ProductSetting />
           <ProductAttr />
           <SpecsSetting />
-          {/* <CameraBinding /> */}
+          <CameraBinding />
           <ProductDetail />
           <LogisticInfo />
           <OtherInfo />

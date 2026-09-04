@@ -81,7 +81,7 @@ const PlatformLogisticsModal: React.FC<PlatformLogisticsModalProps> = ({
       open={visible}
       onClose={onClose}
       destroyOnClose
-      bodyStyle={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+      bodyStyle={{ display: 'flex', flexDirection: 'column' }}
     >
       {options.length > 0 ? (
         <div style={{ marginBottom: 16 }}>

@@ -34,20 +34,29 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
   const parsed = parseFromUrl(playUrl)
   const deviceSerial = (active.deviceSerial || parsed.sn || '').trim()
   const cameraNo = active.channelNo || parsed.ch || 1
+  const pluginUrl = deviceSerial ? `rtmp://open.ys7.com/${deviceSerial}/${cameraNo}/live` : ''
   const isPlayable = active.cameraStatus === 1 && !!accessToken && !!deviceSerial
+
+  console.log('[CameraLive] diagnostics', {
+    activeIdx,
+    cameraId: active.cameraId,
+    cameraStatus: active.cameraStatus,
+    apiDeviceSerial: active.deviceSerial || '',
+    urlDeviceSerial: parsed.sn,
+    resolvedDeviceSerial: deviceSerial,
+    apiChannelNo: active.channelNo,
+    urlChannelNo: parsed.ch,
+    resolvedCameraNo: cameraNo,
+    playUrl,
+    pluginUrl,
+    hasAccessToken: !!accessToken,
+    isPlayable,
+  })
 
   // 萤石 ezplayer 插件官方属性均为 kebab-case（access-token / device-serial / camera-no / type）
   // 用 React.createElement 显式传属性名，避免 JSX 编译层把 kebab-case 转成 camelCase 或反之
   // type: 1=预览(live) 2=回放(playback)，必填
   const renderEzPlayer = () => {
-    // 打印实际传入插件的参数，方便排查
-    console.log('[CameraLive] ezplayer props', {
-      accessToken,
-      deviceSerial,
-      cameraNo,
-      playUrl,
-      raw: active,
-    })
     return React.createElement('ezplayer', {
       id: `ezplayer-${active.cameraId}`,
       type: 1,
@@ -58,7 +67,7 @@ const CameraLive: React.FC<CameraLiveProps> = ({ cameras }) => {
       deviceSerial,
       'camera-no': cameraNo,
       cameraNo,
-      url: playUrl || '',
+      url: pluginUrl,
       poster: active.coverUrl,
       autoplay: true,
       class: 'camera-live-player__inner',

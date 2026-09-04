@@ -1,5 +1,8 @@
 const path = require('path')
 const AppConfig = require('@apps/config')
+// Taro 3.6.23 未自动收集 web-view，需在构建配置加载时同步注册。
+const { componentConfig } = require('@tarojs/webpack5-runner/dist/utils/component')
+componentConfig.includes.add('web-view')
 const defaultDefine = AppConfig.getEnvDefine()
 const BACK_GATEWAY = defaultDefine.OUT_BACK_GATEWAY
 const IM_URL = process.env.IM_URL || defaultDefine.IM_URL

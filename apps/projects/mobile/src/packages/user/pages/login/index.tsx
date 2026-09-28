@@ -108,7 +108,7 @@ const Login = () => {
               })}
               ,
             </View>
-            <View className={styles['logoTitle']}>欢迎来到云净链</View>
+            <View className={styles['logoTitle']}>欢迎来到淳物寻源</View>
           </View>
           {/* 登录方式 */}
           <View className={styles['LoginType']}>
@@ -135,7 +135,7 @@ const Login = () => {
               </Text>
             </View>
           ) : (
-            <View className={styles['tips']}>未注册用户，自动注册创建云净链账号</View>
+            <View className={styles['tips']}>未注册用户，自动注册创建淳物寻源账号</View>
           )}
 
           <ModeMobile toggle={toggle} onConfirm={onConfirm} onClose={onClose} />

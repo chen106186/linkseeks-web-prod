@@ -5,7 +5,7 @@ import { CountDown, View, Text, Image } from '@apps/mobile-ui'
 import useJmpHome from '@/hooks/useJmpHome'
 import { createSelectorQuery, setNavigationBarTitle } from '@apps/mobile-services/utils/taro'
 import { IS_WEB, PRIVACY_POP } from '@/constants'
-import yunjinglianImage from '@/assets/images/yunjinglian.jpg'
+import yunjinglianImage from '@/assets/images/yunjinglian.png'
 import styles from './index.module.scss'
 import { getValueByLanguage } from '@/utils'
 import useParameterValue from '@/hooks/useParameterValue'
@@ -56,7 +56,7 @@ const SplashView: React.FC = () => {
         </View>
         <View className={styles.content}>
           <Image src={yunjinglianImage} className={styles.img} mode="aspectFit" />
-          <Text className={styles.name}>云净链</Text>
+          <Text className={styles.name}>淳物寻源</Text>
         </View>
       </View>
     </View>

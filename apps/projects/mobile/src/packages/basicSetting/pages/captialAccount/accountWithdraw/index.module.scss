@@ -3,9 +3,15 @@
   font-size: 14px;
 }
 .AccountWithdrawWarp{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
   background: $color-bg-base;
   padding: 8px;
   .AccountWithdraw{
+    flex-shrink: 0;
     padding: 0px 10px;
     margin-bottom: 20px;
     background-color: $color-card-bg;
@@ -53,8 +59,42 @@
       color: $color-brand;
     }
   }
+  .withdraw-rule {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    background-color: $color-card-bg;
+    outline: 1px solid $color-card-border;
+    box-shadow: 0 4px 12px $color-card-shadow;
+    border-radius: 5px;
+  }
+  .withdraw-rule-title {
+    display: block;
+    padding: 15px 0 10px;
+    font-family: PingFangSC-Medium;
+    @extend .size;
+    color: $color-text-base;
+  }
+  .withdraw-rule-content {
+    flex: 1;
+    min-height: 0;
+    height: 0;
+    padding-bottom: 10px;
+  }
+  .withdraw-rule-item {
+    display: block;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-text-secondary;
+    word-break: break-all;
+  }
   .action{
-    margin-top: 40px;
+    flex-shrink: 0;
+    margin-top: 20px;
     color: #fff;
     text-align: center;
     // padding: 10px 0;
@@ -62,11 +102,4 @@
     background: $color-brand;
     border-color: $color-brand;
   }
-  .tip{
-    margin-top: 20px;
-    font-family: PingFangSC-Regular;
-    font-size: 12px;
-     color: $color-text-placeholder;
-  }
-
 }

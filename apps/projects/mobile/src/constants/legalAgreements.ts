@@ -13,11 +13,11 @@ export const USER_SERVICE_AGREEMENT_ID = 'yunjinglian-user-service-agreement'
 export const PRIVACY_POLICY_ID = 'yunjinglian-privacy-policy'
 
 const serviceAgreementContent = `
-<h1>云净链用户服务协议</h1>
+<h1>淳物寻源用户服务协议</h1>
 <p><strong>生效日期：2026 年 8 月 27 日</strong></p>
 <p><strong>更新日期：2026 年 8 月 27 日</strong></p>
 <h2>特别提示</h2>
-<p>欢迎您使用“云净链”微信小程序（以下简称“本小程序”或“我们”）。本小程序由 <strong>合肥新航程跨境科技有限公司</strong>（以下简称“运营方”）运营，主要提供 <strong>农产品展示、农产品认养、商品选购、线上下单、订单履约、售后咨询</strong> 等服务。</p>
+<p>欢迎您使用“淳物寻源”微信小程序（以下简称“本小程序”或“我们”）。本小程序由 <strong>合肥新航程跨境科技有限公司</strong>（以下简称“运营方”）运营，主要提供 <strong>农产品展示、农产品认养、商品选购、线上下单、订单履约、售后咨询</strong> 等服务。</p>
 <p>在您注册、登录或使用本小程序服务前，请您仔细阅读、充分理解本《用户服务协议》（以下简称“本协议”）的全部内容，<strong>特别是以粗体或下划线标注的条款</strong>。您勾选同意并点击“登录”或“注册”按钮，或以任何方式使用本小程序服务，均视为您已阅读并同意接受本协议的约束。</p>
 <p><strong>若您不同意本协议全部或部分条款，请立即停止注册或使用本小程序服务。</strong></p>
 <p>如您为未满 18 周岁的未成年人，请在监护人陪同下阅读本协议，并在监护人明示同意后使用本小程序服务。</p>
@@ -51,11 +51,11 @@ const serviceAgreementContent = `
 `
 
 const privacyPolicyContent = `
-<h1>云净链隐私政策</h1>
+<h1>淳物寻源隐私政策</h1>
 <p><strong>生效日期：2026 年 8 月 27 日</strong></p>
 <p><strong>更新日期：2026 年 8 月 27 日</strong></p>
 <h2>引言</h2>
-<p>欢迎使用“云净链”微信小程序（以下简称“本小程序”或“我们”）。本小程序由 <strong>合肥新航程跨境科技有限公司</strong> 运营，主要提供 <strong>农产品展示、农产品认养、商品选购、线上下单、订单履约、售后咨询、企业电子签章</strong> 等服务。</p>
+<p>欢迎使用“淳物寻源”微信小程序（以下简称“本小程序”或“我们”）。本小程序由 <strong>合肥新航程跨境科技有限公司</strong> 运营，主要提供 <strong>农产品展示、农产品认养、商品选购、线上下单、订单履约、售后咨询、企业电子签章</strong> 等服务。</p>
 <p>我们深知个人信息对您的重要性，将严格按照《中华人民共和国网络安全法》《中华人民共和国个人信息保护法》《中华人民共和国数据安全法》《信息安全技术 个人信息安全规范》等法律法规及相关规范性文件的要求，保护您的个人信息安全与合法权益。</p>
 <p>本隐私政策旨在向您清晰说明：<strong>我们如何收集、使用、存储、共享、转让、公开披露您的个人信息，以及您如何行使查询、更正、删除、撤回同意、注销账号等权利</strong>。</p>
 <p><strong>请您在使用本小程序前，仔细阅读并充分理解本政策全部内容。您勾选“同意并继续”，或以任何方式访问、使用本小程序服务，即视为您已阅读、理解并同意本政策全部内容。</strong></p>
@@ -117,13 +117,13 @@ const privacyPolicyContent = `
 <ul><li><strong>客服电话</strong>：15856978130</li><li><strong>联系人</strong>：客服部</li><li><strong>工作时间</strong>：工作日 9:00 - 18:00</li></ul>
 <p>我们将在收到您的请求后 <strong>15 个工作日内</strong>给予答复。若您对我们的答复不满意，或认为您的合法权益受到侵害，您可以向网信、市场监管、公安等主管部门投诉举报，或通过司法途径寻求救济。</p>
 <h2>附则</h2>
-<ol><li>本政策的解释权归“云净链”运营方所有。</li><li>本政策的订立、执行、解释及争议解决适用中华人民共和国法律。</li><li>本政策与您所在国家/地区法律法规存在冲突的，以法律法规为准。</li></ol>
+<ol><li>本政策的解释权归“淳物寻源”运营方所有。</li><li>本政策的订立、执行、解释及争议解决适用中华人民共和国法律。</li><li>本政策与您所在国家/地区法律法规存在冲突的，以法律法规为准。</li></ol>
 `
 
 export const LOCAL_LEGAL_AGREEMENTS: LocalLegalAgreement[] = [
   {
     id: USER_SERVICE_AGREEMENT_ID,
-    title: '云净链用户服务协议',
+    title: '淳物寻源用户服务协议',
     columnType: LOCAL_LEGAL_AGREEMENT_COLUMN_TYPE,
     content: serviceAgreementContent,
     status: '1',
@@ -131,7 +131,7 @@ export const LOCAL_LEGAL_AGREEMENTS: LocalLegalAgreement[] = [
   },
   {
     id: PRIVACY_POLICY_ID,
-    title: '云净链隐私政策',
+    title: '淳物寻源隐私政策',
     columnType: LOCAL_LEGAL_AGREEMENT_COLUMN_TYPE,
     content: privacyPolicyContent,
     status: '1',

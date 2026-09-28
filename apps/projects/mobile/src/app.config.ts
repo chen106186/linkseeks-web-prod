@@ -57,7 +57,7 @@ export default {
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: '云净链',
+    navigationBarTitleText: '淳物寻源',
     navigationBarTextStyle: 'black',
   },
   permission: {

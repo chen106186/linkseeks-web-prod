@@ -9,7 +9,7 @@ const IM_URL = process.env.IM_URL || defaultDefine.IM_URL
 console.log('代理的api网关：', BACK_GATEWAY)
 console.log(process.env.IM_URL, defaultDefine.IM_URL)
 const config = {
-  projectName: '瓴犀小程序&amp;h5',
+  projectName: '淳物寻源',
   date: '2021-9-9',
   designWidth: 375,
   deviceRatio: {

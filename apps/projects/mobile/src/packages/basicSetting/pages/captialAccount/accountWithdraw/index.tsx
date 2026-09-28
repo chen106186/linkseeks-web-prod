@@ -1,7 +1,7 @@
 import GlobalWrapper from '@/components/GlobalWrapper'
 import React, { useEffect, useState, useRef, useMemo } from 'react'
 import cx from 'classnames'
-import { View, Text, Button, Input, Toast, Icons } from '@apps/mobile-ui'
+import { View, ScrollView, Text, Button, Input, Toast, Icons } from '@apps/mobile-ui'
 import { getCurrentInstance, preload, useDidShow, setNavigationBarTitle } from '@apps/mobile-services/utils/taro'
 import Router from '@/utils/router'
 import { useIntl } from '@linkseeks/i18n'
@@ -23,6 +23,7 @@ interface RouteParams {
   accountBalance: number
   lockBalance: number
 }
+const MAX_WITHDRAW_AMOUNT = 50000
 const AccountWithdraw = () => {
   // const { acccountId, memberId, memberRoleId, accountBalance, lockBalance, upperMemberId, upperRoleId }: RouteParams = getCurrentInstance()?.router?.params;
   const {
@@ -99,6 +100,16 @@ const AccountWithdraw = () => {
         title: intl.formatMessage({
           id: 'pay.zanwutixianjine',
           defaultMessage: '暂无提现金额',
+        }),
+        icon: 'none',
+      })
+      return
+    }
+    if (Number(value) > MAX_WITHDRAW_AMOUNT) {
+      Toast.show({
+        title: intl.formatMessage({
+          id: 'pay.tixianzuidajine',
+          defaultMessage: '单笔提现金额最高为50000元',
         }),
         icon: 'none',
       })
@@ -183,7 +194,7 @@ const AccountWithdraw = () => {
   const handleAllWithdraw = () => {
     // const amount = `${(accountBalance * 100 - lockBalance * 100) / 100}`
     setValue(accountBalance)
-    setDisabled(false)
+    setDisabled(Number(accountBalance) > MAX_WITHDRAW_AMOUNT)
   }
   const handleGetBlamkInfo = () => {
     if (bizUserId) {
@@ -211,7 +222,7 @@ const AccountWithdraw = () => {
     handleRefresh()
   })
   const handleChange = (e) => {
-    if (Number(e) > Number(accountBalance)) {
+    if (e && (Number(e) > MAX_WITHDRAW_AMOUNT || Number(e) > Number(accountBalance))) {
       setDisabled(true)
     } else {
       setDisabled(false)
@@ -319,18 +330,41 @@ const AccountWithdraw = () => {
           </View>
         </View>
       </View>
+      <View className={styles['withdraw-rule']}>
+        <Text className={styles['withdraw-rule-title']}>提现规则</Text>
+        <ScrollView scrollY className={styles['withdraw-rule-content']}>
+          <Text className={styles['withdraw-rule-item']}>
+            1. 提现条件：用户需完成账户认证并绑定本人银行卡或企业对公账户。通联电子账户还需完成提现协议签约。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>
+            2. 提现金额：提现金额须大于0元，单笔提现金额不得超过当前页面显示的可提现余额。单笔最高金额为50000元。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>
+            3. 提现次数：每日最多可提现20次，具体以平台及支付机构风控限制为准。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>4. 提现时间：每日00:00—24:00均可提交提现申请。</Text>
+          <Text className={styles['withdraw-rule-item']}>
+            5. 审核处理：普通资金账户提交申请后进入平台审核，平台将在3个工作日内完成审核。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>
+            6.
+            到账时间：普通资金账户审核通过后预计7个工作日到账；通联电子账户默认采用D0方式，通常当日发起到账处理。实际到账时间以银行处理结果为准。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>
+            7. 提现手续费：当前平台不收取提现手续费，银行或支付机构产生的费用以实际提示为准。
+          </Text>
+          <Text className={styles['withdraw-rule-item']}>
+            8.
+            温馨提示：提现申请提交成功仅代表申请已受理，不代表资金已经到账。审核不通过或支付失败时，请以系统通知及页面处理结果为准。
+          </Text>
+        </ScrollView>
+      </View>
       <Button type="primary" disabled={!blank || disabled} className={styles['action']} onClick={() => Withdrawal()}>
         {intl.formatMessage({
           id: 'pay.querentixian',
           defaultMessage: '确认提现',
         })}{' '}
       </Button>
-      <View className={styles['tip']}>
-        {intl.formatMessage({
-          id: 'pay.zhushenqingtixianhouxu',
-          defaultMessage: '注：申请提现后需要对提现申请进行审核，审核通过后会转入您的银行卡账户',
-        })}
-      </View>
     </View>
   )
 }

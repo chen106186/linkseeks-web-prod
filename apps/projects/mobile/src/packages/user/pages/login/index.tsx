@@ -18,7 +18,7 @@ import OnClickView from './components/OnClick'
 import styles from './index.module.scss'
 import { usePageInit } from '@/hooks/usePageInit'
 import { useMobileIntl } from '@apps/locales'
-import loginLogo from '@/assets/images/login-logo.jpg'
+import loginLogo from '@/assets/images/login-logo.png'
 const Login = () => {
   const intl = useIntl()
   const { updatePwdToggle, loginData, dayCount, setUpdatePwdToggle, setLoginData, setDayCount } = useLoginInit()
